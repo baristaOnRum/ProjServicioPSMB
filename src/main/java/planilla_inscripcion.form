@@ -1,0 +1,2038 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="root" alignment="1" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="root" alignment="1" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="root">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="dat_ni&#xf1;">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Datos Ni&#xf1;@s">
+                <Property name="tabTitle" type="java.lang.String" value="Datos Ni&#xf1;@s"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_procedencia" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label_medidas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="label_peso" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_peso" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="label_estatura" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_estatura" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="label_tallas" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_otros" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="check_hogar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="check_mismo_plantel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="chec_otro_plantel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="check_multihogar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="check_hogar_cuidado" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="check_guarderia" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="label_edad" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_nombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="text_nombre" max="32767" attributes="0"/>
+                                          <Component id="text_edad" min="-2" pref="70" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="label_apellido" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_apellido" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="label_sexo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="check_masc" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="check_fem" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="label_camisa" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_tall_camisa" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="label_tall_pantalon" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_tall_pantalon" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="label_tall_zapato" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_tall_zapato" min="-2" pref="70" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="label_estado" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_lugar_nac" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="text_lugar_nac" pref="70" max="32767" attributes="0"/>
+                                          <Component id="text_estado" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="label_mun_nac" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="text_munic" min="-2" pref="71" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="label_nacionalidad" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="text_nacionalidad" min="-2" pref="71" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="293" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_sexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_masc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_fem" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_lugar_nac" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_lugar_nac" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_munic" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_mun_nac" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_estado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_nacionalidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nacionalidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_estado" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_procedencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="check_hogar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_mismo_plantel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chec_otro_plantel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="check_multihogar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_hogar_cuidado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_guarderia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="check_otros" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="label_tallas" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_camisa" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_tall_camisa" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_tall_pantalon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_tall_pantalon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_tall_zapato" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_tall_zapato" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="label_medidas" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_peso" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_peso" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_estatura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_estatura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="109" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_nombre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_nombre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_nombreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_apellido">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Apellido"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_apellido">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_apellidoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_edad">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Edad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_edad">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_sexo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sexo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_masc">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Masculino"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_mascActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_fem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Femenino"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_estado">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estado"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_estado">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_mun_nac">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Municipio"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_munic">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_lugar_nac">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_lugar_nac">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_lugar_nacActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nacionalidad">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nacionalidad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_nacionalidad">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_procedencia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Procedencia:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_hogar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hogar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_hogarActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_mismo_plantel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Del Mismo Plantel"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_mismo_plantelActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="chec_otro_plantel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="De otro Plantel"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chec_otro_plantelActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_multihogar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Multihogar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_multihogarActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_hogar_cuidado">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hogar de Cuidado"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_hogar_cuidadoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_guarderia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Guarderia"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_guarderiaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_otros">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Otros"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_otrosActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_tallas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tallas:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_camisa">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Camisa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_tall_camisa">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tall_camisaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_tall_pantalon">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pantalon"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_tall_pantalon">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_tall_zapato">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Zapato"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_tall_zapato">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_medidas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Medidas Antropometricas:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_peso">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Peso"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_peso">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_pesoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_estatura">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estatura"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_estatura">
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jRadioButton1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jRadioButton2"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="dat_madre">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Datos Madre">
+                <Property name="tabTitle" type="java.lang.String" value="Datos Madre"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="label_ocupacion_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_ocupacion_madre" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_direc_trabaj_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_direc_trabj_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="label_estadociv_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="check_s_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_c_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_d_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_v_madre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_correo_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_correo_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_tlf_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_tlf_madre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_grado_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_no_bachiller_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="chec_bachiller_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_tsu_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_superior_madre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_direc_hab_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_direc_hab_madre" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_apellido_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_apellidos_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_nombes_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_nombres_madre" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_ci_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_ci_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_fec_nac_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_fec_nac_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edad_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_edad_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_lugar_nac_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_lugar_nac_madre" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_nacionalidad_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ven_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ext_madre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="351" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_apellidos_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_apellido_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_nombres_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nombes_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_ci_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ci_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_estadociv_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_s_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_c_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_d_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_v_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_edad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_edad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_fec_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_fec_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_lugar_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_lugar_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nacionalidad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ven_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ext_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_direc_hab_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_direc_hab_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_grado_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_no_bachiller_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chec_bachiller_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_tsu_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_superior_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_ocupacion_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ocupacion_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_direc_trabaj_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_direc_trabj_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="label_tlf_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_tlf_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="label_correo_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_correo_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="232" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_apellido_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Apellidos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_apellidos_madre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_apellidos_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nombes_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombres"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_nombres_madre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_nombres_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ci_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C.I"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_ci_madre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_estadociv_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estado Civil"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_s_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="S"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_s_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_c_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_c_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_d_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="D"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_d_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_v_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="V"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_v_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_fec_nac_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_fec_nac_madre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_edad_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Edad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_edad_madre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_lugar_nac_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_lugar_nac_madre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_lugar_nac_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nacionalidad_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nacionalidad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ven_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="V"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_ven_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ext_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="E"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_ext_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_direc_hab_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion de Habitacion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_direc_hab_madre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_direc_hab_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_grado_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Grado de instruccion:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_no_bachiller_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No Bachiller"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_no_bachiller_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="chec_bachiller_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bachiller"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chec_bachiller_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_tsu_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TSU"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_tsu_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_superior_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Superior"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_superior_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ocupacion_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ocupacion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_ocupacion_madre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_direc_trabaj_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion de Trabajo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_direc_trabj_madre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_correo_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Correo Electronico"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_correo_madre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_correo_madreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_tlf_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TLF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_tlf_madre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tlf_madreActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="dat_padre">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Datos Padre">
+                <Property name="tabTitle" type="java.lang.String" value="Datos Padre"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_ocupacion_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_ocupacion_padre" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_direc_trabaj_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_direc_trabj_padre" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_estadociv_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="check_s_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_c_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_d_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_v_padre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_correo_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_correo_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_tlf_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_tlf_padre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_grado_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_no_bachiller_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="chec_bachiller_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_tsu_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_superior_padre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_direc_hab_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_direc_hab_padre" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_apellido_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_apellidos_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_nombes_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_nombres_padre" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_ci_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_ci_padre" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_fec_nac_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_fec_nac_padre" min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edad_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_edad_padre" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_lugar_nac_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_lugar_nac_padre" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_nacionalidad_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ven_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ext_padre" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="351" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_apellidos_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_apellido_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_nombres_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nombes_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_ci_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ci_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_estadociv_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_s_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_c_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_d_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_v_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nacionalidad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ven_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ext_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_direc_hab_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_direc_hab_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_grado_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_no_bachiller_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chec_bachiller_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_tsu_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_superior_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_ocupacion_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ocupacion_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_direc_trabaj_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_direc_trabj_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_correo_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_correo_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_tlf_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_tlf_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="232" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_apellido_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Apellidos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_apellidos_padre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_apellidos_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nombes_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombres"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_nombres_padre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_nombres_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ci_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C.I"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_ci_padre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_estadociv_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estado Civil"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_s_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="S"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_s_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_c_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_c_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_d_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="D"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_d_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_v_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="V"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_v_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_fec_nac_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_fec_nac_padre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_edad_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Edad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_edad_padre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_lugar_nac_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_lugar_nac_padre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_lugar_nac_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nacionalidad_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nacionalidad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ven_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="V"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_ven_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ext_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="E"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_ext_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_direc_hab_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion de Habitacion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_direc_hab_padre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_direc_hab_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_grado_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Grado de instruccion:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_no_bachiller_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No Bachiller"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_no_bachiller_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="chec_bachiller_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bachiller"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chec_bachiller_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_tsu_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TSU"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_tsu_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_superior_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Superior"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_superior_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ocupacion_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ocupacion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_ocupacion_padre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_direc_trabaj_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion de Trabajo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_direc_trabj_padre">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_correo_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Correo Electronico"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_correo_padre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_correo_padreActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_tlf_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TLF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_tlf_padre">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tlf_padreActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="dat_rep">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Datos Representante">
+                <Property name="tabTitle" type="java.lang.String" value="Datos Representante"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_ocupacion_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_ocupacion_rep" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_direc_trabaj_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_direc_trabj_rep" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_estadociv_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="check_s_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_c_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_d_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_v_rep" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_correo_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_correo_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_tlf_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_tlf_rep" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_grado_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_no_bachiller_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="chec_bachiller_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_tsu_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_superior_rep" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_direc_hab_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_direc_hab_rep" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_apellido_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_apellidos_rep" min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_nombes_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_nombres_rep" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_ci_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_ci_rep" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_fec_nac_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_fec_nac_rep" min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edad_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_edad_rep" min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_lugar_nac_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_lugar_nac_rep" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_nacionalidad_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ven_rep" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ext_rep" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="351" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_apellidos_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_apellido_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_nombres_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nombes_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_ci_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ci_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_estadociv_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_s_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_c_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_d_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_v_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_edad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_edad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_fec_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_fec_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_lugar_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_lugar_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nacionalidad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ven_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ext_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_direc_hab_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_direc_hab_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_grado_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_no_bachiller_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chec_bachiller_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_tsu_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_superior_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="text_ocupacion_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_ocupacion_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_direc_trabaj_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_direc_trabj_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_correo_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_correo_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_tlf_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_tlf_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="232" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_apellido_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Apellidos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_apellidos_rep">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_apellidos_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nombes_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombres"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_nombres_rep">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_nombres_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ci_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C.I"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_ci_rep">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_estadociv_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estado Civil"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_s_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="S"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_s_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_c_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_c_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_d_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="D"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_d_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_v_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="V"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_v_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_fec_nac_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_fec_nac_rep">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_edad_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Edad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_edad_rep">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_lugar_nac_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lugar de Nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_lugar_nac_rep">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_lugar_nac_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_nacionalidad_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nacionalidad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ven_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="V"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_ven_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ext_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="E"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_ext_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_direc_hab_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion de Habitacion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_direc_hab_rep">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_direc_hab_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_grado_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Grado de instruccion:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_no_bachiller_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No Bachiller"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_no_bachiller_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="chec_bachiller_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bachiller"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chec_bachiller_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_tsu_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TSU"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_tsu_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_superior_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Superior"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_superior_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_ocupacion_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ocupacion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_ocupacion_rep">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_direc_trabaj_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Direccion de Trabajo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_direc_trabj_rep">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_correo_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Correo Electronico"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_correo_rep">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_correo_repActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_tlf_rep">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TLF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_tlf_rep">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tlf_repActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="dat_diag">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Diagnostico Ni&#xf1;@s">
+                <Property name="tabTitle" type="java.lang.String" value="Diagnostico Ni&#xf1;@s"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="label_alergia" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_alergia_si" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="check_alergia_no" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="label_alergia_cual" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_alergia_cual" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="label_problema_desarr" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="label_problema" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_problema_si" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_problema_no" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_problema_cual" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_problema_cual" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label_motor" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_lenguaje" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_cognitivo" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="check_cognitivo_si" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_lenguaje_si" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_motor_si" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="check_cognitivo_no" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="label_cognitivo_cual" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_cognitivo_cual" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="check_lenguaje_no" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="label_lenguaje_cual" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_lenguaje_cual" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="check_motor_no" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="label_motor_cual" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_motor_cual" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="label_condicion_cual" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="text_condicion_cual" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="label_condicion" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_condicion_si" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="check_condicion_no" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="168" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_problema" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_problema_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_problema_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_problema_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_problema_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_problema_desarr" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="label_motor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_motor_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_motor_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_motor_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_motor_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="check_lenguaje_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_lenguaje_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_lenguaje_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_lenguaje_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_lenguaje" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="check_cognitivo_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_cognitivo_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_cognitivo_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_cognitivo_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_cognitivo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="check_alergia_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_alergia_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_alergia_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_alergia_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_alergia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="check_condicion_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_condicion_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_condicion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_condicion_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_condicion_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="282" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_problema">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Presento algun problema durante el parto:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_problema_si">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Si"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_problema_no">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_problema_cual">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cual?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_problema_cual">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_problema_desarr">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Presento problemas durante su desarrollo:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_motor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Motor"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_motor_si">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Si"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_motor_siActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_motor_no">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_motor_cual">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cual?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_motor_cual">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_lenguaje">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lenguaje"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_lenguaje_si">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Si"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_lenguaje_no">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_lenguaje_cual">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cual?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_lenguaje_cual">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_cognitivo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cognitivo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_cognitivo_si">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Si"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_cognitivo_no">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_cognitivo_cual">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cual?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_cognitivo_cual">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_alergia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Es alergico a algun medicamento:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_alergia_si">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Si"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_alergia_siActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_alergia_no">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_alergia_cual">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cual?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_alergia_cual">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_condicion">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Presenta su ni&#xf1;o(a) actualmente alguna condicion que amerite del conocimiento del docente:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_condicion_si">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Si"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_condicion_siActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_condicion_no">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_condicion_cual">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cual?"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_condicion_cual">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="dat_doc">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Documentos Presentados">
+                <Property name="tabTitle" type="java.lang.String" value="Documentos Presentados"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="label_originales" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_originales" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label_copias" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_copias" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label_partida" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_partida" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label_vacunas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_vacunas" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="scroll_observaciones" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="label_cedula" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_ci_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_ci_padre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_ci_representante" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_responsable" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_responsable" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_persona" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_persona" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_fecha" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_fecha" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="label_observaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="236" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_originales" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_originales" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_copias" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_copias" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_partida" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_partida" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_vacunas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_vacunas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_cedula" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ci_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ci_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_ci_representante" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_responsable" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_responsable" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_persona" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_persona" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="label_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="label_observaciones" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="scroll_observaciones" min="-2" pref="65" max="-2" attributes="0"/>
+                      <EmptySpace pref="286" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="label_originales">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Originales"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_originales">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_copias">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Copias"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_copias">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_partida">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Partidas de nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_partida">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_vacunas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Certificado de Vacunas"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_vacunas">
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_cedula">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cedulas de Identidad:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ci_madre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Madre"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ci_padre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Padre"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="check_ci_representante">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Representante"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_responsable">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Persona responsable en la instirucion en realizar la inscripcion:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_responsable">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_responsableActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_persona">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Persona que inscribe al ni&#xf1;o o ni&#xf1;a"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_persona">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_personaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_fecha">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de incripcicion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="text_fecha">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_fechaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_observaciones">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Observaciones"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="scroll_observaciones">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextPane" name="text_observaciones">
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
