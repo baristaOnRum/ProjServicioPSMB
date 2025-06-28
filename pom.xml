@@ -13,6 +13,11 @@
             <artifactId>docx4j-core</artifactId>
             <version>8.3.14</version>
         </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.3.0</version>
+        </dependency>
     </dependencies>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
