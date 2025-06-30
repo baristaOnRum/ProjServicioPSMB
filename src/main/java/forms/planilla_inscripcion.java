@@ -255,6 +255,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         generoNiñ.add(radio_masc_niñ);
         radio_masc_niñ.setText("Masculino");
+        radio_masc_niñ.setToolTipText("");
 
         generoNiñ.add(radio_fem_niñ);
         radio_fem_niñ.setText("Femenino");
@@ -277,7 +278,6 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         procedenciaNiñ.add(radio_hogar_niñ);
         radio_hogar_niñ.setText("Hogar");
-        radio_hogar_niñ.setActionCommand("Hogar\n");
         radio_hogar_niñ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radio_hogar_niñActionPerformed(evt);

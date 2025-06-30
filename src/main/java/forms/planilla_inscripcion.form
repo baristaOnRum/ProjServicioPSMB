@@ -279,6 +279,7 @@
                   <ComponentRef name="generoNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Masculino"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="radio_fem_ni&#xf1;">
@@ -334,7 +335,6 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hogar"/>
-                <Property name="actionCommand" type="java.lang.String" value="Hogar&#xa;"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_hogar_ni&#xf1;ActionPerformed"/>
