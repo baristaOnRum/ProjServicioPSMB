@@ -1,12 +1,15 @@
 import java.sql.*;
 
 public class ConnectDB {
+
+    //Definir parámetros de conexión
     String url;
     String user;
     String pass;
     Connection conexion;
     String sql;
-    public void paramsinit(){
+    //Definir funciones
+    public void connparamsinit(){
         url = "jdbc:mysql://localhost:3306/mydb";
         user = "root";
         pass = "xxx";
@@ -52,8 +55,6 @@ public class ConnectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-
-
         }
         catch(SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -70,9 +71,12 @@ public class ConnectDB {
         }
 
     }
-    public static void main(String args[]) throws SQLException{
+
+    //Main
+    public void main(String args[]) throws SQLException{
         
-    paramsinit();
+        connparamsinit();
+        sendRepresentante();
 
     }
 }
