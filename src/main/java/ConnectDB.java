@@ -1,26 +1,34 @@
 import java.sql.*;
 
 public class ConnectDB {
-    public static void main(String args[]) throws SQLException{
-        
-        String url = "jdbc:mysql://localhost:3306/mydb";
-        String user = "root";
-        String pass = "xxx";
-        Connection conexion = null;
-        String sql = "INSERT INTO representante (" +
+
+    //Definir parámetros de conexión
+    String url;
+    String user;
+    String pass;
+    Connection conexion;
+    String sql;
+    //Definir funciones
+    public void connparamsinit(){
+        url = "jdbc:mysql://localhost:3306/mydb";
+        user = "root";
+        pass = "xxx";
+        conexion = null;
+        sql = "INSERT INTO representante (" +
                 "cirepresentante, apellidos, nombres, estdciv, " +
                 "`lugar(nac)`, `fecha(nac)`, nacionalidad, edad, " +
                 "`direccion(hab)`, `grado(estudios)`, ocupacion, " +
                 "`direccion(trabj)`, tlf, correo, parentesco, " +
                 "`niños menores de 6`) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
+    }
+    public void sendRepresentante(){
 
         try {
             conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            
+
             query.setInt(1, 28123456); // cirepresentante
             query.setString(2, "González Pérez"); // apellidos
             query.setString(3, "Carlos Eduardo"); // nombres
@@ -38,7 +46,7 @@ public class ConnectDB {
             query.setString(15, "Padre"); // parentesco
             query.setString(16, "1"); // niños menores de 6
 
-                        // --- Ejecución de la consulta ---
+            // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
 
             // --- Verificación del resultado ---
@@ -47,8 +55,6 @@ public class ConnectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-            
-
         }
         catch(SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -64,5 +70,13 @@ public class ConnectDB {
             }
         }
 
-            }
-        }
+    }
+
+    //Main
+    public void main(String args[]) throws SQLException{
+        
+        connparamsinit();
+        sendRepresentante();
+
+    }
+}
