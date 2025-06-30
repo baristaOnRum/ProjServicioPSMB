@@ -5,7 +5,7 @@ public class ConnectDB {
         
         String url = "jdbc:mysql://localhost:3306/mydb";
         String user = "root";
-        String pass = "xxx";
+        String pass = "bandidito10";
         Connection conexion = null;
         String sql = "INSERT INTO representante (" +
                 "cirepresentante, apellidos, nombres, estdciv, " +
