@@ -256,9 +256,10 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         generoNiñ.add(radio_masc_niñ);
         radio_masc_niñ.setText("Masculino");
         radio_masc_niñ.setToolTipText("");
+        radio_masc_niñ.setActionCommand("masculino");
 
         generoNiñ.add(radio_fem_niñ);
-        radio_fem_niñ.setText("Femenino");
+        radio_fem_niñ.setText("femenino");
 
         label_estado_niñ.setText("Estado");
 
@@ -278,6 +279,8 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         procedenciaNiñ.add(radio_hogar_niñ);
         radio_hogar_niñ.setText("Hogar");
+        radio_hogar_niñ.setToolTipText("");
+        radio_hogar_niñ.setActionCommand("hogar");
         radio_hogar_niñ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radio_hogar_niñActionPerformed(evt);
@@ -286,12 +289,15 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         procedenciaNiñ.add(radio_multihogar_niñ);
         radio_multihogar_niñ.setText("Multihogar");
+        radio_multihogar_niñ.setActionCommand("multihogar");
 
         procedenciaNiñ.add(radio_hogar_cuidado_niñ);
         radio_hogar_cuidado_niñ.setText("Hogar de cuidado");
+        radio_hogar_cuidado_niñ.setActionCommand("hogar de cuidado");
 
         procedenciaNiñ.add(radio_mismo_plantel_niñ);
         radio_mismo_plantel_niñ.setText("Del mismo plantel");
+        radio_mismo_plantel_niñ.setActionCommand("del mismo plantel");
         radio_mismo_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radio_mismo_plantel_niñActionPerformed(evt);
@@ -300,6 +306,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         procedenciaNiñ.add(radio_otro_plantel_niñ);
         radio_otro_plantel_niñ.setText("De otro plantel");
+        radio_otro_plantel_niñ.setActionCommand("de otro plantel");
         radio_otro_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radio_otro_plantel_niñActionPerformed(evt);
@@ -308,9 +315,11 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         procedenciaNiñ.add(radio_guarderia_niñ);
         radio_guarderia_niñ.setText("Guarderia");
+        radio_guarderia_niñ.setActionCommand("guarderia");
 
         procedenciaNiñ.add(radio_otros_niñ);
         radio_otros_niñ.setText("Otros");
+        radio_otros_niñ.setActionCommand("otros");
 
         label_tallas_niñ.setText("Tallas:");
 
@@ -426,7 +435,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(radio_otros_niñ))
                             .addComponent(radio_guarderia_niñ))))
-                .addGap(363, 363, Short.MAX_VALUE))
+                .addGap(365, 365, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_niñLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_aceptar)
@@ -1912,11 +1921,11 @@ public class planilla_inscripcion extends javax.swing.JFrame {
       String nombre_niñ = text_nombre_niñ.getText().trim();
       String apellido_niñ = text_apellido_niñ.getText().trim();
       int edad_niñ = Integer.parseInt(text_edad_niñ.getText());
-      String tall_camisa_niñ = text_tall_camisa_niñ.getText().trim();
-      String tall_pantalon_niñ = text_tall_pantalon_niñ.getText().trim();
-      String tall_zapato_niñ = text_tall_zapato_niñ.getText().trim();
-      String peso_niñ = text_peso_niñ.getText().trim();
-      String estatura_niñ = text_estatura_niñ.getText().trim();
+      int tall_camisa_niñ = Integer.parseInt(text_tall_camisa_niñ.getText());
+      int tall_pantalon_niñ = Integer.parseInt(text_tall_pantalon_niñ.getText());
+      int tall_zapato_niñ = Integer.parseInt(text_tall_zapato_niñ.getText());
+      int peso_niñ = Integer.parseInt(text_peso_niñ.getText());
+      int estatura_niñ = Integer.parseInt(text_estatura_niñ.getText());
      
       
       

@@ -150,7 +150,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="566" pref="363" max="32767" attributes="0"/>
+                      <EmptySpace min="566" pref="365" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -280,6 +280,7 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Masculino"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="actionCommand" type="java.lang.String" value="masculino"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="radio_fem_ni&#xf1;">
@@ -290,7 +291,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="generoNi&#xf1;"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Femenino"/>
+                <Property name="text" type="java.lang.String" value="femenino"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="label_estado_ni&#xf1;">
@@ -335,6 +336,8 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hogar"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="actionCommand" type="java.lang.String" value="hogar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_hogar_ni&#xf1;ActionPerformed"/>
@@ -346,6 +349,7 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Multihogar"/>
+                <Property name="actionCommand" type="java.lang.String" value="multihogar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="radio_hogar_cuidado_ni&#xf1;">
@@ -354,6 +358,7 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hogar de cuidado"/>
+                <Property name="actionCommand" type="java.lang.String" value="hogar de cuidado"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="radio_mismo_plantel_ni&#xf1;">
@@ -362,6 +367,7 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Del mismo plantel"/>
+                <Property name="actionCommand" type="java.lang.String" value="del mismo plantel"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_mismo_plantel_ni&#xf1;ActionPerformed"/>
@@ -373,6 +379,7 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="De otro plantel"/>
+                <Property name="actionCommand" type="java.lang.String" value="de otro plantel"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radio_otro_plantel_ni&#xf1;ActionPerformed"/>
@@ -384,6 +391,7 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Guarderia"/>
+                <Property name="actionCommand" type="java.lang.String" value="guarderia"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="radio_otros_ni&#xf1;">
@@ -392,6 +400,7 @@
                   <ComponentRef name="procedenciaNi&#xf1;"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Otros"/>
+                <Property name="actionCommand" type="java.lang.String" value="otros"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="label_tallas_ni&#xf1;">
