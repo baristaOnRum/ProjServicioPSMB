@@ -9,9 +9,17 @@ import java.io.*;
 
 public class docGen {
 
-    public static void main(String args[]){
+    public static final ObjectFactory fabObjetos = Context.getWmlObjectFactory();
 
-        ObjectFactory fabObjetos = Context.getWmlObjectFactory();
+    private static void addTextToParagraph(P paragraph, String text) {
+        R run = fabObjetos.createR();
+        Text textElement = fabObjetos.createText();
+        textElement.setValue(text);
+        run.getContent().add(textElement);
+        paragraph.getContent().add(run);
+    }
+
+    public static void main(String args[]){
 
         try {
             //Definimos el paquete word
