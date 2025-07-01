@@ -37,7 +37,7 @@ public class inicion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        label1.setText("inicio de secion");
+        label1.setText("inicio de sesion");
 
         button1.setLabel("iniciar");
         button1.addActionListener(new java.awt.event.ActionListener() {

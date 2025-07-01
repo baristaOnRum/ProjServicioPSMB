@@ -75,7 +75,7 @@
   <SubComponents>
     <Component class="java.awt.Label" name="label1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="inicio de secion"/>
+        <Property name="text" type="java.lang.String" value="inicio de sesion"/>
       </Properties>
     </Component>
     <Component class="java.awt.Button" name="button1">
