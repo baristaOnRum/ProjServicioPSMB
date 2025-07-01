@@ -76,7 +76,7 @@ private void initComponents() {
     btnRepresentantesAutorizados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/representantes.png"))); // NOI18N
     btnRepresentantesAutorizados.setText("Representantes /Autorizados");
     btnRepresentantesAutorizados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-    btnRepresentantesAutorizados.       addActionListener(new java.awt.event.ActionListener() {
+    btnRepresentantesAutorizados.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             btnRepresentantesAutorizadosActionPerformed(evt);
         }
