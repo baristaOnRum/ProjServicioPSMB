@@ -28,45 +28,6 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         procedenciaNiñ = new javax.swing.ButtonGroup();
         generoNiñ = new javax.swing.ButtonGroup();
         root = new javax.swing.JTabbedPane();
-        dat_niñ = new javax.swing.JPanel();
-        label_nombre_niñ = new javax.swing.JLabel();
-        text_nombre_niñ = new javax.swing.JTextField();
-        label_apellido_niñ = new javax.swing.JLabel();
-        text_apellido_niñ = new javax.swing.JTextField();
-        label_edad_niñ = new javax.swing.JLabel();
-        text_edad_niñ = new javax.swing.JTextField();
-        label_sexo_niñ = new javax.swing.JLabel();
-        radio_masc_niñ = new javax.swing.JRadioButton();
-        radio_fem_niñ = new javax.swing.JRadioButton();
-        label_estado_niñ = new javax.swing.JLabel();
-        text_estado_niñ = new javax.swing.JTextField();
-        label_mun_nac_niñ = new javax.swing.JLabel();
-        text_munic_niñ = new javax.swing.JTextField();
-        label_lugar_nac_niñ = new javax.swing.JLabel();
-        text_lugar_nac_niñ = new javax.swing.JTextField();
-        label_nacionalidad_niñ = new javax.swing.JLabel();
-        text_nacionalidad_niñ = new javax.swing.JTextField();
-        label_procedencia_niñ = new javax.swing.JLabel();
-        radio_hogar_niñ = new javax.swing.JRadioButton();
-        radio_multihogar_niñ = new javax.swing.JRadioButton();
-        radio_hogar_cuidado_niñ = new javax.swing.JRadioButton();
-        radio_mismo_plantel_niñ = new javax.swing.JRadioButton();
-        radio_otro_plantel_niñ = new javax.swing.JRadioButton();
-        radio_guarderia_niñ = new javax.swing.JRadioButton();
-        radio_otros_niñ = new javax.swing.JRadioButton();
-        label_tallas_niñ = new javax.swing.JLabel();
-        label_camisa_niñ = new javax.swing.JLabel();
-        text_tall_camisa_niñ = new javax.swing.JTextField();
-        label_tall_pantalon_niñ = new javax.swing.JLabel();
-        text_tall_pantalon_niñ = new javax.swing.JTextField();
-        label_tall_zapato_niñ = new javax.swing.JLabel();
-        text_tall_zapato_niñ = new javax.swing.JTextField();
-        label_medidas_niñ = new javax.swing.JLabel();
-        label_peso_niñ = new javax.swing.JLabel();
-        text_peso_niñ = new javax.swing.JTextField();
-        label_estatura_niñ = new javax.swing.JLabel();
-        text_estatura_niñ = new javax.swing.JTextField();
-        btn_aceptar = new javax.swing.JButton();
         dat_madre = new javax.swing.JPanel();
         label_apellido_madre = new javax.swing.JLabel();
         text_apellidos_madre = new javax.swing.JTextField();
@@ -229,285 +190,50 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         label_observaciones = new javax.swing.JLabel();
         scroll_observaciones = new javax.swing.JScrollPane();
         text_observaciones = new javax.swing.JTextPane();
+        dat_niñ = new javax.swing.JPanel();
+        label_nombre_niñ = new javax.swing.JLabel();
+        text_nombre_niñ = new javax.swing.JTextField();
+        label_apellido_niñ = new javax.swing.JLabel();
+        text_apellido_niñ = new javax.swing.JTextField();
+        label_edad_niñ = new javax.swing.JLabel();
+        text_edad_niñ = new javax.swing.JTextField();
+        label_sexo_niñ = new javax.swing.JLabel();
+        radio_masc_niñ = new javax.swing.JRadioButton();
+        radio_fem_niñ = new javax.swing.JRadioButton();
+        label_estado_niñ = new javax.swing.JLabel();
+        text_estado_niñ = new javax.swing.JTextField();
+        label_mun_nac_niñ = new javax.swing.JLabel();
+        text_munic_niñ = new javax.swing.JTextField();
+        label_lugar_nac_niñ = new javax.swing.JLabel();
+        text_lugar_nac_niñ = new javax.swing.JTextField();
+        label_nacionalidad_niñ = new javax.swing.JLabel();
+        text_nacionalidad_niñ = new javax.swing.JTextField();
+        label_procedencia_niñ = new javax.swing.JLabel();
+        radio_hogar_niñ = new javax.swing.JRadioButton();
+        radio_multihogar_niñ = new javax.swing.JRadioButton();
+        radio_hogar_cuidado_niñ = new javax.swing.JRadioButton();
+        radio_mismo_plantel_niñ = new javax.swing.JRadioButton();
+        radio_otro_plantel_niñ = new javax.swing.JRadioButton();
+        radio_guarderia_niñ = new javax.swing.JRadioButton();
+        radio_otros_niñ = new javax.swing.JRadioButton();
+        label_tallas_niñ = new javax.swing.JLabel();
+        label_camisa_niñ = new javax.swing.JLabel();
+        text_tall_camisa_niñ = new javax.swing.JTextField();
+        label_tall_pantalon_niñ = new javax.swing.JLabel();
+        text_tall_pantalon_niñ = new javax.swing.JTextField();
+        label_tall_zapato_niñ = new javax.swing.JLabel();
+        text_tall_zapato_niñ = new javax.swing.JTextField();
+        label_medidas_niñ = new javax.swing.JLabel();
+        label_peso_niñ = new javax.swing.JLabel();
+        text_peso_niñ = new javax.swing.JTextField();
+        label_estatura_niñ = new javax.swing.JLabel();
+        text_estatura_niñ = new javax.swing.JTextField();
+        btn_aceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        label_nombre_niñ.setText("Nombre");
-
-        text_nombre_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_nombre_niñActionPerformed(evt);
-            }
-        });
-
-        label_apellido_niñ.setText("Apellido");
-
-        text_apellido_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_apellido_niñActionPerformed(evt);
-            }
-        });
-
-        label_edad_niñ.setText("Edad");
-
-        label_sexo_niñ.setText("Sexo");
-
-        generoNiñ.add(radio_masc_niñ);
-        radio_masc_niñ.setText("Masculino");
-        radio_masc_niñ.setToolTipText("");
-        radio_masc_niñ.setActionCommand("masculino");
-
-        generoNiñ.add(radio_fem_niñ);
-        radio_fem_niñ.setText("femenino");
-
-        label_estado_niñ.setText("Estado");
-
-        label_mun_nac_niñ.setText("Municipio");
-
-        label_lugar_nac_niñ.setText("Lugar de Nacimiento");
-
-        text_lugar_nac_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_lugar_nac_niñActionPerformed(evt);
-            }
-        });
-
-        label_nacionalidad_niñ.setText("Nacionalidad");
-
-        label_procedencia_niñ.setText("Procedencia:");
-
-        procedenciaNiñ.add(radio_hogar_niñ);
-        radio_hogar_niñ.setText("Hogar");
-        radio_hogar_niñ.setToolTipText("");
-        radio_hogar_niñ.setActionCommand("hogar");
-        radio_hogar_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radio_hogar_niñActionPerformed(evt);
-            }
-        });
-
-        procedenciaNiñ.add(radio_multihogar_niñ);
-        radio_multihogar_niñ.setText("Multihogar");
-        radio_multihogar_niñ.setActionCommand("multihogar");
-
-        procedenciaNiñ.add(radio_hogar_cuidado_niñ);
-        radio_hogar_cuidado_niñ.setText("Hogar de cuidado");
-        radio_hogar_cuidado_niñ.setActionCommand("hogar de cuidado");
-
-        procedenciaNiñ.add(radio_mismo_plantel_niñ);
-        radio_mismo_plantel_niñ.setText("Del mismo plantel");
-        radio_mismo_plantel_niñ.setActionCommand("del mismo plantel");
-        radio_mismo_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radio_mismo_plantel_niñActionPerformed(evt);
-            }
-        });
-
-        procedenciaNiñ.add(radio_otro_plantel_niñ);
-        radio_otro_plantel_niñ.setText("De otro plantel");
-        radio_otro_plantel_niñ.setActionCommand("de otro plantel");
-        radio_otro_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radio_otro_plantel_niñActionPerformed(evt);
-            }
-        });
-
-        procedenciaNiñ.add(radio_guarderia_niñ);
-        radio_guarderia_niñ.setText("Guarderia");
-        radio_guarderia_niñ.setActionCommand("guarderia");
-
-        procedenciaNiñ.add(radio_otros_niñ);
-        radio_otros_niñ.setText("Otros");
-        radio_otros_niñ.setActionCommand("otros");
-
-        label_tallas_niñ.setText("Tallas:");
-
-        label_camisa_niñ.setText("Camisa");
-
-        text_tall_camisa_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_tall_camisa_niñActionPerformed(evt);
-            }
-        });
-
-        label_tall_pantalon_niñ.setText("Pantalon");
-
-        label_tall_zapato_niñ.setText("Zapato");
-
-        label_medidas_niñ.setText("Medidas Antropometricas:");
-
-        label_peso_niñ.setText("Peso");
-
-        text_peso_niñ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_peso_niñActionPerformed(evt);
-            }
-        });
-
-        label_estatura_niñ.setText("Estatura");
-
-        btn_aceptar.setText("ACEPTAR");
-        btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_aceptarActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout dat_niñLayout = new javax.swing.GroupLayout(dat_niñ);
-        dat_niñ.setLayout(dat_niñLayout);
-        dat_niñLayout.setHorizontalGroup(
-            dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_niñLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label_procedencia_niñ)
-                    .addComponent(label_medidas_niñ)
-                    .addGroup(dat_niñLayout.createSequentialGroup()
-                        .addComponent(label_peso_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(label_estatura_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(label_tallas_niñ)
-                    .addGroup(dat_niñLayout.createSequentialGroup()
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label_edad_niñ)
-                            .addComponent(label_nombre_niñ))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(text_nombre_niñ)
-                            .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(label_apellido_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(label_sexo_niñ)
-                        .addGap(18, 18, 18)
-                        .addComponent(radio_masc_niñ)
-                        .addGap(18, 18, 18)
-                        .addComponent(radio_fem_niñ))
-                    .addGroup(dat_niñLayout.createSequentialGroup()
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label_estado_niñ)
-                            .addComponent(label_lugar_nac_niñ))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                            .addComponent(text_estado_niñ))
-                        .addGap(18, 18, 18)
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(dat_niñLayout.createSequentialGroup()
-                                .addComponent(label_mun_nac_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(dat_niñLayout.createSequentialGroup()
-                                .addComponent(label_nacionalidad_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(dat_niñLayout.createSequentialGroup()
-                        .addComponent(label_camisa_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(label_tall_pantalon_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)
-                        .addComponent(label_tall_zapato_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_niñLayout.createSequentialGroup()
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(radio_mismo_plantel_niñ)
-                            .addComponent(radio_hogar_niñ))
-                        .addGap(18, 18, 18)
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(radio_otro_plantel_niñ)
-                            .addComponent(radio_multihogar_niñ))
-                        .addGap(18, 18, 18)
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dat_niñLayout.createSequentialGroup()
-                                .addComponent(radio_hogar_cuidado_niñ)
-                                .addGap(18, 18, 18)
-                                .addComponent(radio_otros_niñ))
-                            .addComponent(radio_guarderia_niñ))))
-                .addGap(365, 365, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_niñLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_aceptar)
-                .addGap(129, 129, 129))
-        );
-        dat_niñLayout.setVerticalGroup(
-            dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_niñLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_nombre_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_sexo_niñ)
-                    .addComponent(label_nombre_niñ)
-                    .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_apellido_niñ)
-                    .addComponent(radio_masc_niñ)
-                    .addComponent(radio_fem_niñ))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_edad_niñ))
-                .addGap(34, 34, 34)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_lugar_nac_niñ)
-                    .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_mun_nac_niñ))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_estado_niñ)
-                    .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_nacionalidad_niñ)
-                    .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(label_procedencia_niñ)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dat_niñLayout.createSequentialGroup()
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(radio_hogar_niñ)
-                            .addComponent(radio_hogar_cuidado_niñ)
-                            .addComponent(radio_otros_niñ))
-                        .addGap(3, 3, 3)
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(radio_mismo_plantel_niñ)
-                            .addComponent(radio_guarderia_niñ)
-                            .addComponent(radio_otro_plantel_niñ)))
-                    .addComponent(radio_multihogar_niñ))
-                .addGap(18, 18, 18)
-                .addComponent(label_tallas_niñ)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_camisa_niñ)
-                    .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_tall_pantalon_niñ)
-                    .addComponent(label_tall_zapato_niñ)
-                    .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(label_medidas_niñ)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_peso_niñ)
-                    .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_estatura_niñ))
-                .addGap(18, 18, 18)
-                .addComponent(btn_aceptar)
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
-
-        root.addTab("Datos Niñ@s", dat_niñ);
+        root.setPreferredSize(new java.awt.Dimension(800, 450));
 
         label_apellido_madre.setText("Apellidos");
 
@@ -720,7 +446,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_madre)))
-                .addContainerGap(439, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
         );
         dat_madreLayout.setVerticalGroup(
             dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -778,7 +504,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(label_correo_madre)
                         .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Madre", dat_madre);
@@ -994,7 +720,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_padre)))
-                .addContainerGap(439, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
         );
         dat_padreLayout.setVerticalGroup(
             dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1050,7 +776,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_padre)
                     .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Padre", dat_padre);
@@ -1266,7 +992,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_rep)))
-                .addContainerGap(439, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
         );
         dat_repLayout.setVerticalGroup(
             dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1322,7 +1048,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_correo_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_rep)
                     .addComponent(text_tlf_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Representante", dat_rep);
@@ -1461,7 +1187,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_condicion_si)
                         .addGap(18, 18, 18)
                         .addComponent(check_condicion_no)))
-                .addContainerGap(256, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
         dat_diagLayout.setVerticalGroup(
             dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1515,7 +1241,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addGroup(dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_condicion_cual)
                     .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
         root.addTab("Diagnostico Niñ@s", dat_diag);
@@ -1613,7 +1339,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                                     .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(label_observaciones))
                             .addGap(127, 127, 127))))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(238, Short.MAX_VALUE))
         );
         dat_docLayout.setVerticalGroup(
             dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1650,20 +1376,298 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addComponent(label_observaciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(286, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         root.addTab("Documentos Presentados", dat_doc);
+
+        dat_niñ.setMinimumSize(new java.awt.Dimension(800, 800));
+        dat_niñ.setPreferredSize(new java.awt.Dimension(800, 800));
+
+        label_nombre_niñ.setText("Nombre");
+
+        text_nombre_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_nombre_niñActionPerformed(evt);
+            }
+        });
+
+        label_apellido_niñ.setText("Apellido");
+
+        text_apellido_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_apellido_niñActionPerformed(evt);
+            }
+        });
+
+        label_edad_niñ.setText("Edad");
+
+        label_sexo_niñ.setText("Sexo");
+
+        generoNiñ.add(radio_masc_niñ);
+        radio_masc_niñ.setText("Masculino");
+        radio_masc_niñ.setToolTipText("");
+        radio_masc_niñ.setActionCommand("masculino");
+
+        generoNiñ.add(radio_fem_niñ);
+        radio_fem_niñ.setText("femenino");
+
+        label_estado_niñ.setText("Estado");
+
+        label_mun_nac_niñ.setText("Municipio");
+
+        label_lugar_nac_niñ.setText("Lugar de Nacimiento");
+
+        text_lugar_nac_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_lugar_nac_niñActionPerformed(evt);
+            }
+        });
+
+        label_nacionalidad_niñ.setText("Nacionalidad");
+
+        label_procedencia_niñ.setText("Procedencia:");
+
+        procedenciaNiñ.add(radio_hogar_niñ);
+        radio_hogar_niñ.setText("Hogar");
+        radio_hogar_niñ.setToolTipText("");
+        radio_hogar_niñ.setActionCommand("hogar");
+        radio_hogar_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radio_hogar_niñActionPerformed(evt);
+            }
+        });
+
+        procedenciaNiñ.add(radio_multihogar_niñ);
+        radio_multihogar_niñ.setText("Multihogar");
+        radio_multihogar_niñ.setActionCommand("multihogar");
+
+        procedenciaNiñ.add(radio_hogar_cuidado_niñ);
+        radio_hogar_cuidado_niñ.setText("Hogar de cuidado");
+        radio_hogar_cuidado_niñ.setActionCommand("hogar de cuidado");
+
+        procedenciaNiñ.add(radio_mismo_plantel_niñ);
+        radio_mismo_plantel_niñ.setText("Del mismo plantel");
+        radio_mismo_plantel_niñ.setActionCommand("del mismo plantel");
+        radio_mismo_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radio_mismo_plantel_niñActionPerformed(evt);
+            }
+        });
+
+        procedenciaNiñ.add(radio_otro_plantel_niñ);
+        radio_otro_plantel_niñ.setText("De otro plantel");
+        radio_otro_plantel_niñ.setActionCommand("de otro plantel");
+        radio_otro_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radio_otro_plantel_niñActionPerformed(evt);
+            }
+        });
+
+        procedenciaNiñ.add(radio_guarderia_niñ);
+        radio_guarderia_niñ.setText("Guarderia");
+        radio_guarderia_niñ.setActionCommand("guarderia");
+
+        procedenciaNiñ.add(radio_otros_niñ);
+        radio_otros_niñ.setText("Otros");
+        radio_otros_niñ.setActionCommand("otros");
+
+        label_tallas_niñ.setText("Tallas:");
+
+        label_camisa_niñ.setText("Camisa");
+
+        text_tall_camisa_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_tall_camisa_niñActionPerformed(evt);
+            }
+        });
+
+        label_tall_pantalon_niñ.setText("Pantalon");
+
+        label_tall_zapato_niñ.setText("Zapato");
+
+        label_medidas_niñ.setText("Medidas Antropometricas:");
+
+        label_peso_niñ.setText("Peso");
+
+        text_peso_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_peso_niñActionPerformed(evt);
+            }
+        });
+
+        label_estatura_niñ.setText("Estatura");
+
+        btn_aceptar.setText("ACEPTAR");
+        btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aceptarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dat_niñLayout = new javax.swing.GroupLayout(dat_niñ);
+        dat_niñ.setLayout(dat_niñLayout);
+        dat_niñLayout.setHorizontalGroup(
+            dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_niñLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label_procedencia_niñ)
+                    .addComponent(label_medidas_niñ)
+                    .addComponent(label_tallas_niñ)
+                    .addGroup(dat_niñLayout.createSequentialGroup()
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label_edad_niñ)
+                            .addComponent(label_nombre_niñ))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(text_nombre_niñ)
+                            .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(label_apellido_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_sexo_niñ)
+                        .addGap(18, 18, 18)
+                        .addComponent(radio_masc_niñ)
+                        .addGap(18, 18, 18)
+                        .addComponent(radio_fem_niñ))
+                    .addGroup(dat_niñLayout.createSequentialGroup()
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label_estado_niñ)
+                            .addComponent(label_lugar_nac_niñ))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                            .addComponent(text_estado_niñ))
+                        .addGap(18, 18, 18)
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(dat_niñLayout.createSequentialGroup()
+                                .addComponent(label_mun_nac_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_niñLayout.createSequentialGroup()
+                                .addComponent(label_nacionalidad_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(dat_niñLayout.createSequentialGroup()
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(radio_mismo_plantel_niñ)
+                            .addComponent(radio_hogar_niñ))
+                        .addGap(18, 18, 18)
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(radio_otro_plantel_niñ)
+                            .addComponent(radio_multihogar_niñ))
+                        .addGap(18, 18, 18)
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(radio_guarderia_niñ)
+                            .addGroup(dat_niñLayout.createSequentialGroup()
+                                .addComponent(radio_hogar_cuidado_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_otros_niñ))))
+                    .addGroup(dat_niñLayout.createSequentialGroup()
+                        .addComponent(label_peso_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(label_estatura_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_niñLayout.createSequentialGroup()
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btn_aceptar)
+                            .addGroup(dat_niñLayout.createSequentialGroup()
+                                .addComponent(label_camisa_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(label_tall_pantalon_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(25, 25, 25)
+                        .addComponent(label_tall_zapato_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(280, Short.MAX_VALUE))
+        );
+        dat_niñLayout.setVerticalGroup(
+            dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_niñLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_nombre_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_sexo_niñ)
+                    .addComponent(label_nombre_niñ)
+                    .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_apellido_niñ)
+                    .addComponent(radio_masc_niñ)
+                    .addComponent(radio_fem_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_niñ))
+                .addGap(34, 34, 34)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_lugar_nac_niñ)
+                    .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_mun_nac_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_estado_niñ)
+                    .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_nacionalidad_niñ)
+                    .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(label_procedencia_niñ)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_niñLayout.createSequentialGroup()
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(radio_hogar_niñ)
+                            .addComponent(radio_hogar_cuidado_niñ)
+                            .addComponent(radio_otros_niñ))
+                        .addGap(3, 3, 3)
+                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(radio_mismo_plantel_niñ)
+                            .addComponent(radio_guarderia_niñ)
+                            .addComponent(radio_otro_plantel_niñ)))
+                    .addComponent(radio_multihogar_niñ))
+                .addGap(18, 18, 18)
+                .addComponent(label_tallas_niñ)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_camisa_niñ)
+                    .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_tall_pantalon_niñ)
+                    .addComponent(label_tall_zapato_niñ)
+                    .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(label_medidas_niñ)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_peso_niñ)
+                    .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_estatura_niñ))
+                .addGap(18, 18, 18)
+                .addComponent(btn_aceptar)
+                .addContainerGap(344, Short.MAX_VALUE))
+        );
+
+        root.addTab("Datos Niñ@s", dat_niñ);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(root)
+            .addComponent(root, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(root)
+            .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 533, Short.MAX_VALUE)
         );
 
         pack();
