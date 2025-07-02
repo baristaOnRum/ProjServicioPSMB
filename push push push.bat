@@ -1,2 +1,2 @@
-git pull origin master
+git pull
 git push origin master
