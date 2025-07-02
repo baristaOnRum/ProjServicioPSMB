@@ -49,11 +49,6 @@ public void createConfPanel(){
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
-        MenuItemConfiguracion = new javax.swing.JMenuItem();
-        MenuItemSalir = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -121,41 +116,6 @@ public void createConfPanel(){
 
         jLabel5.setText("icon");
 
-        jMenu2.setText("Opciones");
-        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu2MouseClicked(evt);
-            }
-        });
-
-        MenuItemConfiguracion.setText("Configuracion");
-        MenuItemConfiguracion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MenuItemConfiguracionMouseClicked(evt);
-            }
-        });
-        jMenu2.add(MenuItemConfiguracion);
-
-        MenuItemSalir.setText("Salir");
-        MenuItemSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuItemSalirActionPerformed(evt);
-            }
-        });
-        jMenu2.add(MenuItemSalir);
-
-        jMenuItem3.setText("testItem");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem3);
-
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -204,7 +164,7 @@ public void createConfPanel(){
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnProfesorasObreros, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         pack();
@@ -221,18 +181,6 @@ private void btnRepresentantesAutorizadosActionPerformed(java.awt.event.ActionEv
 private void btnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesActionPerformed
     // TODO add your handling code here:
 }//GEN-LAST:event_btnReportesActionPerformed
-
-    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu2MouseClicked
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        createConfPanel(); // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void MenuItemConfiguracionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuItemConfiguracionMouseClicked
-        createConfPanel(); // TODO add your handling code here:
-    }//GEN-LAST:event_MenuItemConfiguracionMouseClicked
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {                                              
 
@@ -273,8 +221,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem MenuItemConfiguracion;
-    private javax.swing.JMenuItem MenuItemSalir;
     private javax.swing.JButton btnEstudiantes;
     private javax.swing.JButton btnProfesorasObreros;
     private javax.swing.JButton btnReportes;
@@ -285,12 +231,9 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPopupMenu jPopupMenu1;
     // End of variables declaration//GEN-END:variables
 }
