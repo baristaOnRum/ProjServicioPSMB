@@ -106,7 +106,7 @@ public class busqueda_estudiante extends javax.swing.JFrame {
         jButton7.setMinimumSize(new java.awt.Dimension(80, 20));
         jButton7.setPreferredSize(new java.awt.Dimension(80, 20));
 
-        jButton8.setText("Editor");
+        jButton8.setText("Editar");
         jButton8.setMaximumSize(new java.awt.Dimension(80, 20));
         jButton8.setMinimumSize(new java.awt.Dimension(80, 20));
         jButton8.setPreferredSize(new java.awt.Dimension(80, 20));
