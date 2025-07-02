@@ -21,6 +21,11 @@ public Menu_Principal() {
     initComponents();
 }
 
+public void createConfPanel(){
+    conf_frame conf_main = new conf_frame();
+    conf_main.setVisible(true);
+}
+
 /**
  * This method is called from within the constructor to initialize the form.
  * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,6 +49,7 @@ public Menu_Principal() {
         jMenu2 = new javax.swing.JMenu();
         MenuItemConfiguracion = new javax.swing.JMenuItem();
         MenuItemSalir = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -59,13 +65,11 @@ public Menu_Principal() {
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 36)); // NOI18N
         jLabel1.setText("Menu Principal");
 
-        btnEstudiantes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/Estudiantes.png"))); // NOI18N
         btnEstudiantes.setText("Estudiantes");
         btnEstudiantes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnEstudiantes.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnEstudiantes.setIconTextGap(25);
 
-        btnProfesorasObreros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/Profesores.png"))); // NOI18N
         btnProfesorasObreros.setText("Profesoras / Obreros");
         btnProfesorasObreros.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnProfesorasObreros.setIconTextGap(10);
@@ -75,7 +79,6 @@ public Menu_Principal() {
             }
         });
 
-        btnRepresentantesAutorizados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/representantes.png"))); // NOI18N
         btnRepresentantesAutorizados.setText("Representantes /Autorizados");
         btnRepresentantesAutorizados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnRepresentantesAutorizados.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +87,6 @@ public Menu_Principal() {
             }
         });
 
-        btnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/reportes 2.png"))); // NOI18N
         btnReportes.setText("Reportes");
         btnReportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnReportes.setIconTextGap(30);
@@ -94,19 +96,21 @@ public Menu_Principal() {
             }
         });
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/opcion-de-lista.png"))); // NOI18N
         jMenu2.setText("Opciones");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
 
-        MenuItemConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/configuraciones.png"))); // NOI18N
         MenuItemConfiguracion.setText("Configuracion");
-        MenuItemConfiguracion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //MenuItemConfiguracionActionPerformed(evt);
+        MenuItemConfiguracion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuItemConfiguracionMouseClicked(evt);
             }
         });
         jMenu2.add(MenuItemConfiguracion);
 
-        MenuItemSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forms/iconos/boton-x.png"))); // NOI18N
         MenuItemSalir.setText("Salir");
         MenuItemSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +118,14 @@ public Menu_Principal() {
             }
         });
         jMenu2.add(MenuItemSalir);
+
+        jMenuItem3.setText("testItem");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
 
@@ -124,13 +136,13 @@ public Menu_Principal() {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 83, Short.MAX_VALUE)
+                .addGap(0, 109, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnProfesorasObreros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnEstudiantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRepresentantesAutorizados, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -149,7 +161,7 @@ public Menu_Principal() {
                 .addComponent(btnProfesorasObreros, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         pack();
@@ -166,6 +178,18 @@ private void btnRepresentantesAutorizadosActionPerformed(java.awt.event.ActionEv
 private void btnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesActionPerformed
     // TODO add your handling code here:
 }//GEN-LAST:event_btnReportesActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        createConfPanel(); // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void MenuItemConfiguracionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuItemConfiguracionMouseClicked
+        createConfPanel(); // TODO add your handling code here:
+    }//GEN-LAST:event_MenuItemConfiguracionMouseClicked
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {                                              
 
@@ -219,6 +243,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPopupMenu jPopupMenu1;
     // End of variables declaration//GEN-END:variables
 }
