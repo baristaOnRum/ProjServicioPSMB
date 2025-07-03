@@ -59,6 +59,7 @@ public void createConfPanel(){
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 450));
         setResizable(false);
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 255));
@@ -73,7 +74,6 @@ public void createConfPanel(){
         btnEstudiantes.setPreferredSize(new java.awt.Dimension(100, 40));
 
         btnProfesorasObreros.setText("Profesoras / Obreros");
-        btnProfesorasObreros.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnProfesorasObreros.setIconTextGap(10);
         btnProfesorasObreros.setMaximumSize(new java.awt.Dimension(100, 40));
         btnProfesorasObreros.setMinimumSize(new java.awt.Dimension(100, 40));
@@ -84,8 +84,7 @@ public void createConfPanel(){
             }
         });
 
-        btnRepresentantesAutorizados.setText("Representantes /Autorizados");
-        btnRepresentantesAutorizados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnRepresentantesAutorizados.setText("Representantes - Autorizados");
         btnRepresentantesAutorizados.setMaximumSize(new java.awt.Dimension(100, 40));
         btnRepresentantesAutorizados.setMinimumSize(new java.awt.Dimension(100, 40));
         btnRepresentantesAutorizados.setPreferredSize(new java.awt.Dimension(100, 40));
@@ -96,7 +95,6 @@ public void createConfPanel(){
         });
 
         btnReportes.setText("Reportes");
-        btnReportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnReportes.setIconTextGap(30);
         btnReportes.setMaximumSize(new java.awt.Dimension(100, 40));
         btnReportes.setMinimumSize(new java.awt.Dimension(100, 40));
@@ -107,13 +105,13 @@ public void createConfPanel(){
             }
         });
 
-        jLabel2.setText("icon");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/estudiantes.png"))); // NOI18N
 
-        jLabel3.setText("icon");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/representantes.png"))); // NOI18N
 
-        jLabel4.setText("icon");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/profesores.png"))); // NOI18N
 
-        jLabel5.setText("icon");
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/reportes.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,20 +128,19 @@ public void createConfPanel(){
                 .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(129, 129, 129)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(jLabel2)
-                        .addGap(142, 142, 142)
+                        .addGap(8, 8, 8)
                         .addComponent(jLabel3)
-                        .addGap(169, 169, 169)
+                        .addGap(144, 144, 144)
                         .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)))
-                .addGap(108, 108, 108))
+                        .addGap(128, 128, 128)
+                        .addComponent(jLabel5))
+                    .addComponent(jLabel1))
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,7 +162,7 @@ public void createConfPanel(){
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnProfesorasObreros, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         pack();
