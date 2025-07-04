@@ -41,6 +41,7 @@ public class busqueda_representante extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -75,6 +76,9 @@ public class busqueda_representante extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
+        jButton2.setBackground(new java.awt.Color(27, 120, 101));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(250, 247, 239));
         jButton2.setText("Añadir Estudiante");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +86,9 @@ public class busqueda_representante extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(62, 181, 157));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(250, 247, 239));
         jButton3.setText("Exportar");
         jButton3.setMaximumSize(new java.awt.Dimension(75, 25));
         jButton3.setMinimumSize(new java.awt.Dimension(75, 25));
@@ -92,7 +99,9 @@ public class busqueda_representante extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(139, 208, 194));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(250, 247, 239));
         jButton5.setText("Ver");
         jButton5.setMaximumSize(new java.awt.Dimension(100, 20));
         jButton5.setMinimumSize(new java.awt.Dimension(100, 20));
@@ -103,7 +112,9 @@ public class busqueda_representante extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setBackground(new java.awt.Color(139, 208, 194));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(250, 247, 239));
         jButton6.setText("Ver Est.");
         jButton6.setMaximumSize(new java.awt.Dimension(100, 20));
         jButton6.setMinimumSize(new java.awt.Dimension(100, 20));
@@ -114,13 +125,17 @@ public class busqueda_representante extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(139, 208, 194));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(250, 247, 239));
         jButton7.setText("Eliminar");
         jButton7.setMaximumSize(new java.awt.Dimension(100, 20));
         jButton7.setMinimumSize(new java.awt.Dimension(100, 20));
         jButton7.setPreferredSize(new java.awt.Dimension(100, 20));
 
+        jButton8.setBackground(new java.awt.Color(139, 208, 194));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(250, 247, 239));
         jButton8.setText("Editor");
         jButton8.setMaximumSize(new java.awt.Dimension(100, 20));
         jButton8.setMinimumSize(new java.awt.Dimension(100, 20));
@@ -160,6 +175,9 @@ public class busqueda_representante extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
+        jButton4.setBackground(new java.awt.Color(62, 181, 157));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(250, 247, 239));
         jButton4.setText("Importar");
         jButton4.setMaximumSize(new java.awt.Dimension(75, 25));
         jButton4.setMinimumSize(new java.awt.Dimension(75, 25));
@@ -169,6 +187,17 @@ public class busqueda_representante extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
+        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel5.setAlignmentY(0.0F);
+        jLabel5.setAutoscrolls(true);
+        jLabel5.setFocusable(false);
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIconTextGap(0);
+        jLabel5.setRequestFocusEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,14 +214,6 @@ public class busqueda_representante extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 975, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -205,7 +226,20 @@ public class busqueda_representante extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addComponent(jLabel4)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(60, 60, 60))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,6 +256,9 @@ public class busqueda_representante extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -232,10 +269,9 @@ public class busqueda_representante extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(292, 363, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addComponent(jLabel5)
+                        .addGap(52, 52, 52))))
         );
 
         pack();
@@ -318,6 +354,7 @@ public class busqueda_representante extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
