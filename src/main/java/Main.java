@@ -4,9 +4,9 @@ import forms.*;
 
 public class Main {
     public static void main(String[] args) {
-        Menu_Principal main = new Menu_Principal();
+        menu_principal main = new menu_principal();
         //planilla_inscripcion main = new planilla_inscripcion();
-        //busqueda_estudiante main = new busqueda_estudiante();
+        //busqueda_representante main = new busqueda_representante();
         //res_busqueda_est main = new res_busqueda_est();
         //res_busqueda_obr main = new res_busqueda_obr();
         
