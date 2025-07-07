@@ -82,7 +82,12 @@ public class docGen {
         Desde {fecha_inic}, hasta {fecha_fin}.
 
         *_DATOS DEL SUPLENTE_*
-
+        __________________________________________
+        |Nombres y Apellidos | Cédula de Identidad|
+        |                    |                    |
+        |Observación:                             |
+        |                                         |
+        |_________________________________________|
             {firma}              {firma}
         Docente/Obrero          Suplente
 
