@@ -1,4 +1,7 @@
+package subsystems;
+
 import java.sql.*;
+import subsystems.docGen;
 
 public class ConnectDB {
 
@@ -9,6 +12,8 @@ public class ConnectDB {
     Connection conexion;
     String sql;
     //Definir funciones
+
+    //Inicialización de variables (no estáticas)
     public void connparamsinit(){
         url = "jdbc:mysql://localhost:3306/mydb";
         user = "root";
@@ -22,6 +27,9 @@ public class ConnectDB {
                 "`niños menores de 6`) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     }
+
+    //Definición de funciones de envío de datos
+
     public void sendRepresentante(){
 
         try {
@@ -69,6 +77,13 @@ public class ConnectDB {
                 }
             }
         }
+
+    }
+
+    public void sendEstudiante(){
+
+    }
+    public void sendObrero(){
 
     }
 

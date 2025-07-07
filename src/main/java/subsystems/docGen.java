@@ -1,0 +1,109 @@
+package subsystems;
+
+import org.docx4j.jaxb.Context;
+import org.docx4j.openpackaging.exceptions.*;
+import org.docx4j.openpackaging.packages.*;
+import org.docx4j.openpackaging.parts.WordprocessingML.*;
+import org.docx4j.wml.*;
+
+public class docGen {
+
+    public static final ObjectFactory fabObjetos = Context.getWmlObjectFactory();
+
+    private static void addTextToParagraph(P paragraph, String text) {
+        R run = fabObjetos.createR();
+        Text textElement = fabObjetos.createText();
+        textElement.setValue(text);
+        run.getContent().add(textElement);
+        paragraph.getContent().add(run);
+    }
+    private static void generarConstanciaEstudios(){
+        /*TEXTO:
+        Quien suscribe, {Directora} (E) del C.E.I "Arnoldo Gabaldón", que funciona dentro de las
+        instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua,
+        Municipio Autónomo Maturín - Estado Monagas, hace constancia que el alumno {estudinate}
+        ; portador de la Cédula Escolar Nº: V.-{CE}, nacido el {fecha_nac}, en {lug_nac}; cursó el {grado},
+        {grado}, de la etapa Preescolar {etapa}, *Maternal* {nombre_maternal}, en su {fecha?}, hasta el {fecha}
+        en esta institución; correspondiente al periodo escolar {periodo_escolar}.
+
+        Constancia que se expide a petición de parte interesada, a los {parte interesada}
+
+        {firma}
+
+        Profa. Cruzmary Yepez
+        Directora (E)
+
+        Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
+        Teléfono: 0291 6436911
+         */
+    }
+
+    private static void generarConstanciaConducta(){
+        /*
+        TEXTO:
+        Quien suscribe, {Directora/Profesora} del Centro de Educación Inicial [(C.E.I)] "Arnoldo Gabaldón", que funciona
+        en el Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Autónomo Maturín - Estado Monagas,
+        hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac/nacionalidad}
+        cursó el {grado} Grupo de la etapa preescolar en este plantel, presentando *_BUENA CONDUCTA_*.
+
+        Constancia que se expide de parte interesada a los {dias} del mes {mes} de {año}.
+
+        {firma}   {firma}
+        Docente Directora (E)
+        Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
+        Teléfono: 0291 6436911
+         */
+    }
+    private static void generarConstanciaRetiro(){
+        /*
+        TEXTO:
+        Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
+        en las instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas,
+        hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac}
+        cursó el {grado} Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar {periodo_escolar}.
+        Es retirado por su representante {nom_representante}. C.I.: {cirepresentante} alegando motivos de {motivo}.
+
+        Constancia que se expide de parte interesada a los {dias} del mes {mes} de {año}.
+
+        {firma}   {firma}
+        Docente   Director
+        Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
+        Teléfono: 0291 6436911
+         */
+    }
+    private static void generarLicenciaMedica(){
+        /*
+        TEXTO:
+        A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
+        Plantel o dependencia: {nombre_plantel} //C.E.I Arnoldo Gabaldón
+        Lugar: {estado} //Monagas, Municipio: {municipio} //Maturín
+        Distrito: {distrito} //Boquerón Duración de la licencia: {duracíon_solicitud} días, Motivo: {Motivo}
+
+        Desde {fecha_inic}, hasta {fecha_fin}.
+
+        *_DATOS DEL SUPLENTE_*
+
+            {firma}              {firma}
+        Docente/Obrero          Suplente
+
+        {firma}
+        Director
+         */
+    }
+    public static void main(String args[]){
+
+        //montar documento
+
+        try {
+            //Definimos el paquete word
+            WordprocessingMLPackage packWord = WordprocessingMLPackage.createPackage();
+            //Definimos la seccion principal del Documento
+            MainDocumentPart mainDoc = packWord.getMainDocumentPart();
+        }
+        catch (InvalidFormatException e){
+            e.printStackTrace();
+        }
+
+        //crear documento
+    }
+}
