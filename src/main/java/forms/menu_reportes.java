@@ -32,8 +32,11 @@ public class menu_reportes extends javax.swing.JFrame {
         ReqPanelRep = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -43,7 +46,6 @@ public class menu_reportes extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(668, 400));
 
         ReqPanelRep.setBackground(new java.awt.Color(197, 232, 225));
 
@@ -51,16 +53,40 @@ public class menu_reportes extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel4.setText("Requerimientos");
 
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("jRadioButton1");
-        jRadioButton1.setEnabled(false);
-
         jCheckBox1.setBackground(new java.awt.Color(27, 120, 101));
         jCheckBox1.setForeground(new java.awt.Color(27, 120, 101));
         jCheckBox1.setSelected(true);
         jCheckBox1.setText("jCheckBox1");
         jCheckBox1.setContentAreaFilled(false);
         jCheckBox1.setEnabled(false);
+
+        jCheckBox2.setBackground(new java.awt.Color(27, 120, 101));
+        jCheckBox2.setForeground(new java.awt.Color(27, 120, 101));
+        jCheckBox2.setSelected(true);
+        jCheckBox2.setText("jCheckBox1");
+        jCheckBox2.setContentAreaFilled(false);
+        jCheckBox2.setEnabled(false);
+
+        jCheckBox3.setBackground(new java.awt.Color(27, 120, 101));
+        jCheckBox3.setForeground(new java.awt.Color(27, 120, 101));
+        jCheckBox3.setSelected(true);
+        jCheckBox3.setText("jCheckBox1");
+        jCheckBox3.setContentAreaFilled(false);
+        jCheckBox3.setEnabled(false);
+
+        jCheckBox4.setBackground(new java.awt.Color(27, 120, 101));
+        jCheckBox4.setForeground(new java.awt.Color(27, 120, 101));
+        jCheckBox4.setSelected(true);
+        jCheckBox4.setText("jCheckBox1");
+        jCheckBox4.setContentAreaFilled(false);
+        jCheckBox4.setEnabled(false);
+
+        jCheckBox5.setBackground(new java.awt.Color(27, 120, 101));
+        jCheckBox5.setForeground(new java.awt.Color(27, 120, 101));
+        jCheckBox5.setSelected(true);
+        jCheckBox5.setText("jCheckBox1");
+        jCheckBox5.setContentAreaFilled(false);
+        jCheckBox5.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -70,8 +96,11 @@ public class menu_reportes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jCheckBox1))
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox2)
+                    .addComponent(jCheckBox3)
+                    .addComponent(jCheckBox4)
+                    .addComponent(jCheckBox5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -79,11 +108,17 @@ public class menu_reportes extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCheckBox2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jCheckBox1)
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox5)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout ReqPanelRepLayout = new javax.swing.GroupLayout(ReqPanelRep);
@@ -129,8 +164,10 @@ public class menu_reportes extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel2.setText("Nombre:");
 
+        jTextField1.setEditable(false);
         jTextField1.setText("Nombre Apellido");
 
+        jTextField2.setEditable(false);
         jTextField2.setText("123456789");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -162,13 +199,14 @@ public class menu_reportes extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ReqPanelRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
@@ -205,6 +243,10 @@ public class menu_reportes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ReqPanelRep;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -212,7 +254,6 @@ public class menu_reportes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
