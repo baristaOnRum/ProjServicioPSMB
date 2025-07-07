@@ -130,7 +130,6 @@ public void createConfPanel(){
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/file-fill_240.png"))); // NOI18N
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/talent_256.png"))); // NOI18N
-        jLabel7.setPreferredSize(new java.awt.Dimension(256, 256));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/tools_240.png"))); // NOI18N
         jLabel8.setToolTipText("");
@@ -235,7 +234,7 @@ public void createConfPanel(){
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
                     .addComponent(btnEstudiantes2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +267,7 @@ public void createConfPanel(){
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
