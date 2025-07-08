@@ -6,17 +6,33 @@ import org.docx4j.openpackaging.packages.*;
 import org.docx4j.openpackaging.parts.WordprocessingML.*;
 import org.docx4j.wml.*;
 
-public class docGen {
+import java.io.File;
 
+public class docGen {
+    //Global variables
     public static final ObjectFactory fabObjetos = Context.getWmlObjectFactory();
 
+
+    //Back-end Functions
+
     private static void addTextToParagraph(P paragraph, String text) {
+        System.out.print("Añadiendo párrafo.");
         R run = fabObjetos.createR();
+        System.out.print("Run creada.");
         Text textElement = fabObjetos.createText();
         textElement.setValue(text);
+        System.out.print("Text creado.");
         run.getContent().add(textElement);
+        System.out.print("Text añadido.");
         paragraph.getContent().add(run);
+        System.out.print("Párrafo añadido exiosamente.");
     }
+
+
+
+    //Generators
+
+
     private static void generarConstanciaEstudios(){
         /*TEXTO:
         Quien suscribe, {Directora} (E) del C.E.I "Arnoldo Gabaldón", que funciona dentro de las
@@ -71,7 +87,24 @@ public class docGen {
         Teléfono: 0291 6436911
          */
     }
-    private static void generarLicenciaMedica(){
+    private static void generarLicenciaMedica(MainDocumentPart doc){
+        P paragraph = fabObjetos.createP();
+        addTextToParagraph(paragraph, """
+        Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
+        en las instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas,
+        hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac}
+        cursó el {grado} Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar {periodo_escolar}.
+        Es retirado por su representante {nom_representante}. C.I.: {cirepresentante} alegando motivos de {motivo}.
+
+        Constancia que se expide de parte interesada a los {dias} del mes {mes} de {año}.
+
+        {firma}   {firma}
+        Docente   Director
+        Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
+        Teléfono: 0291 6436911""");
+
+        doc.getContent().add(paragraph);
+
         /*
         TEXTO:
         A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
@@ -104,8 +137,15 @@ public class docGen {
             WordprocessingMLPackage packWord = WordprocessingMLPackage.createPackage();
             //Definimos la seccion principal del Documento
             MainDocumentPart mainDoc = packWord.getMainDocumentPart();
+            //TODO: Añadimos encabezado y footer
+            //Añadimos contenido
+            generarLicenciaMedica(mainDoc);
+
+            //Exportamos un archivo
+            File outputFile = new File("textdoc.docx");
+            packWord.save(outputFile);
         }
-        catch (InvalidFormatException e){
+        catch (Exception e){
             e.printStackTrace();
         }
 

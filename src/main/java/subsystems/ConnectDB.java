@@ -33,7 +33,7 @@ public class ConnectDB {
 
     public void sendRepresentante(Integer ci, String rep_apellidos, String rep_nombres,
                                   String estado_civil, String lugar_nac, String fecha_nac, String nacionalidad,
-                                  Integer edad, String direccion_hab, String grado_estudios, String ocupación,
+                                  Integer edad, String direccion_hab, String grado_estudios, String ocupacion,
                                   String direccion_trabj, Long celular, String correo, String rol, Integer menores_6){
 
         try {
@@ -47,16 +47,16 @@ public class ConnectDB {
             query.setString(4, estado_civil); // estdciv
             query.setString(5, lugar_nac); // lugar_nac
             query.setString(6, fecha_nac); // fecha_nac (formato YYYY-MM-DD es estándar)
-            query.setString(7, "Venezolana"); // nacionalidad
-            query.setString(8, "38"); // edad
-            query.setString(9, "Av. Libertador,"); // direccion_hab
-            query.setString(10, "Licenciado en Administración"); // grado_estudios
-            query.setString(11, "Administrador"); // ocupacion
-            query.setString(12, "Zona Industrial, Calle Princ"); // direccion_trabj
-            query.setString(13, "0416-6921122"); // tlf
-            query.setString(14, "carlos.gonzalez.test@email.com"); // correo
-            query.setString(15, "Padre"); // parentesco
-            query.setString(16, "1"); // niños menores de 6
+            query.setString(7, nacionalidad); // nacionalidad
+            query.setInt(8, edad); // edad
+            query.setString(9, direccion_hab); // direccion_hab
+            query.setString(10, grado_estudios); // grado_estudios
+            query.setString(11, ocupacion); // ocupacion
+            query.setString(12, direccion_trabj); // direccion_trabj
+            query.setLong(13, celular); // tlf
+            query.setString(14, correo); // correo
+            query.setString(15, rol); // parentesco
+            query.setInt(16, menores_6); // niños menores de 6
 
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
