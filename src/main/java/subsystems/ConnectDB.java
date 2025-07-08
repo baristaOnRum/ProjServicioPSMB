@@ -94,8 +94,8 @@ public class ConnectDB {
     //Main
     public void main(String args[]) throws SQLException{
 
-        connparamsinit();
-        sendRepresentante();
+        //connparamsinit();
+        //sendRepresentante();
 
     }
 }
