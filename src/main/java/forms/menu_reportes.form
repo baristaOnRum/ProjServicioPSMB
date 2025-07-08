@@ -5,7 +5,7 @@
     <Container class="javax.swing.JPanel" name="panel_permiso_medico">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="33" red="0" type="rgb"/>
+          <Color blue="e1" green="e8" red="c5" type="rgb"/>
         </Property>
       </Properties>
 
@@ -158,7 +158,7 @@
     <Container class="javax.swing.JPanel" name="panel_vacio">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="ff" type="rgb"/>
+          <Color blue="e1" green="e8" red="c5" type="rgb"/>
         </Property>
       </Properties>
 

@@ -45,7 +45,7 @@ public class menu_reportes extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
 
-        panel_permiso_medico.setBackground(new java.awt.Color(0, 51, 204));
+        panel_permiso_medico.setBackground(new java.awt.Color(197, 232, 225));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -136,7 +136,7 @@ public class menu_reportes extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        panel_vacio.setBackground(new java.awt.Color(255, 153, 153));
+        panel_vacio.setBackground(new java.awt.Color(197, 232, 225));
 
         javax.swing.GroupLayout panel_vacioLayout = new javax.swing.GroupLayout(panel_vacio);
         panel_vacio.setLayout(panel_vacioLayout);
@@ -241,14 +241,10 @@ public class menu_reportes extends javax.swing.JFrame {
         if (jComboBox1.getSelectedItem() == "Vacio"){
             panel.removeAll();
             panel.add(panel_vacio);
-            panel.repaint();
-            panel.revalidate();
         }
         if (jComboBox1.getSelectedItem() == "Permiso Medico"){
             panel.removeAll();
             panel.add(panel_permiso_medico);
-            panel.repaint();
-            panel.revalidate();
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
