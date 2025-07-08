@@ -1,6 +1,7 @@
 package subsystems;
 
 import java.sql.*;
+import java.time.*;
 import subsystems.docGen;
 
 public class ConnectDB {
@@ -30,19 +31,22 @@ public class ConnectDB {
 
     //Definición de funciones de envío de datos
 
-    public void sendRepresentante(){
+    public void sendRepresentante(Integer ci, String rep_apellidos, String rep_nombres,
+                                  String estado_civil, String lugar_nac, String fecha_nac, String nacionalidad,
+                                  Integer edad, String direccion_hab, String grado_estudios, String ocupación,
+                                  String direccion_trabj, Long celular, String correo, String rol, Integer menores_6){
 
         try {
             conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
-            query.setInt(1, 28123456); // cirepresentante
-            query.setString(2, "González Pérez"); // apellidos
-            query.setString(3, "Carlos Eduardo"); // nombres
-            query.setString(4, "Casado"); // estdciv
-            query.setString(5, "Maturín, Monagas"); // lugar_nac
-            query.setString(6, "1985-10-20"); // fecha_nac (formato YYYY-MM-DD es estándar)
+            query.setInt(1, ci); // cirepresentante
+            query.setString(2, rep_apellidos); // apellidos
+            query.setString(3, rep_nombres); // nombres
+            query.setString(4, estado_civil); // estdciv
+            query.setString(5, lugar_nac); // lugar_nac
+            query.setString(6, fecha_nac); // fecha_nac (formato YYYY-MM-DD es estándar)
             query.setString(7, "Venezolana"); // nacionalidad
             query.setString(8, "38"); // edad
             query.setString(9, "Av. Libertador,"); // direccion_hab
@@ -89,7 +93,7 @@ public class ConnectDB {
 
     //Main
     public void main(String args[]) throws SQLException{
-        
+
         connparamsinit();
         sendRepresentante();
 
