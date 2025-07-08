@@ -27,6 +27,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         procedenciaNiñ = new javax.swing.ButtonGroup();
         generoNiñ = new javax.swing.ButtonGroup();
+        btn_aceptar = new javax.swing.JButton();
         root = new javax.swing.JTabbedPane();
         dat_madre = new javax.swing.JPanel();
         label_apellido_madre = new javax.swing.JLabel();
@@ -228,10 +229,16 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         text_peso_niñ = new javax.swing.JTextField();
         label_estatura_niñ = new javax.swing.JLabel();
         text_estatura_niñ = new javax.swing.JTextField();
-        btn_aceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+
+        btn_aceptar.setText("ACEPTAR");
+        btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aceptarActionPerformed(evt);
+            }
+        });
 
         root.setPreferredSize(new java.awt.Dimension(800, 450));
 
@@ -446,7 +453,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_madre)))
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addContainerGap(272, Short.MAX_VALUE))
         );
         dat_madreLayout.setVerticalGroup(
             dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -504,7 +511,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(label_correo_madre)
                         .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Madre", dat_madre);
@@ -720,7 +727,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_padre)))
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addContainerGap(272, Short.MAX_VALUE))
         );
         dat_padreLayout.setVerticalGroup(
             dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -776,7 +783,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_padre)
                     .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Padre", dat_padre);
@@ -992,7 +999,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_rep)))
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addContainerGap(272, Short.MAX_VALUE))
         );
         dat_repLayout.setVerticalGroup(
             dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1048,7 +1055,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_correo_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_rep)
                     .addComponent(text_tlf_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Representante", dat_rep);
@@ -1187,7 +1194,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_condicion_si)
                         .addGap(18, 18, 18)
                         .addComponent(check_condicion_no)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         dat_diagLayout.setVerticalGroup(
             dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1241,7 +1248,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addGroup(dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_condicion_cual)
                     .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         root.addTab("Diagnostico Niñ@s", dat_diag);
@@ -1339,7 +1346,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                                     .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(label_observaciones))
                             .addGap(127, 127, 127))))
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
         dat_docLayout.setVerticalGroup(
             dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1376,7 +1383,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addComponent(label_observaciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
         );
 
         root.addTab("Documentos Presentados", dat_doc);
@@ -1498,13 +1505,6 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         label_estatura_niñ.setText("Estatura");
 
-        btn_aceptar.setText("ACEPTAR");
-        btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_aceptarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout dat_niñLayout = new javax.swing.GroupLayout(dat_niñ);
         dat_niñ.setLayout(dat_niñLayout);
         dat_niñLayout.setHorizontalGroup(
@@ -1575,21 +1575,18 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dat_niñLayout.createSequentialGroup()
-                        .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_aceptar)
-                            .addGroup(dat_niñLayout.createSequentialGroup()
-                                .addComponent(label_camisa_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(label_tall_pantalon_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(label_camisa_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(label_tall_pantalon_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25)
                         .addComponent(label_tall_zapato_niñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(280, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
         dat_niñLayout.setVerticalGroup(
             dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1652,9 +1649,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_estatura_niñ))
-                .addGap(18, 18, 18)
-                .addComponent(btn_aceptar)
-                .addContainerGap(344, Short.MAX_VALUE))
+                .addContainerGap(385, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Niñ@s", dat_niñ);
@@ -1663,11 +1658,19 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(root, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(635, Short.MAX_VALUE)
+                .addComponent(btn_aceptar)
+                .addContainerGap())
+            .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 533, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_aceptar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
