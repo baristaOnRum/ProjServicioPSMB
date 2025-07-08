@@ -89,19 +89,7 @@ public class docGen {
     }
     private static void generarLicenciaMedica(MainDocumentPart doc){
         P paragraph = fabObjetos.createP();
-        addTextToParagraph(paragraph, """
-        Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
-        en las instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas,
-        hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac}
-        cursó el {grado} Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar {periodo_escolar}.
-        Es retirado por su representante {nom_representante}. C.I.: {cirepresentante} alegando motivos de {motivo}.
-
-        Constancia que se expide de parte interesada a los {dias} del mes {mes} de {año}.
-
-        {firma}   {firma}
-        Docente   Director
-        Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
-        Teléfono: 0291 6436911""");
+        addTextToParagraph(paragraph, "2");
 
         doc.getContent().add(paragraph);
 
