@@ -1,11 +1,14 @@
 package subsystems;
 
 import org.docx4j.jaxb.Context;
+import org.docx4j.model.properties.run.Underline;
 import org.docx4j.openpackaging.exceptions.*;
 import org.docx4j.openpackaging.packages.*;
+import org.docx4j.openpackaging.parts.TrueTypeFontPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.*;
 import org.docx4j.wml.*;
 
+import java.util.Optional;
 import java.io.File;
 
 public class docGen {
@@ -14,6 +17,51 @@ public class docGen {
 
 
     //Back-end Functions
+
+    private static void addStylizedTextToParagraph(P paragraph, String text, Optional<Boolean> bold,
+                                                   Optional<Boolean> italic,
+                                                   Optional<Integer> underline, Optional<Boolean> strikethrough){
+        //Definir variables de función
+        System.out.println("Definidos estilos.\n");
+        BooleanDefaultTrue bStyle = fabObjetos.createBooleanDefaultTrue();
+        bold.ifPresentOrElse(a -> bStyle.setVal(bold.get()), () -> bStyle.setVal(false));
+        BooleanDefaultTrue iStyle = fabObjetos.createBooleanDefaultTrue();
+        italic.ifPresentOrElse(a -> iStyle.setVal(italic.get()), () -> iStyle.setVal(false));
+        BooleanDefaultTrue sStyle = fabObjetos.createBooleanDefaultTrue();
+        strikethrough.ifPresentOrElse(a -> sStyle.setVal(strikethrough.get()), () -> sStyle.setVal(false));
+
+        System.out.print("Añadiendo párrafo\n");
+        R run = fabObjetos.createR();
+        System.out.print("Creando estilo\n");
+        RPr style = fabObjetos.createRPr();
+        System.out.print("Definiendo estilo\n");
+        style.setB(bStyle);
+        style.setDstrike(sStyle);
+        style.setI(iStyle);
+        U ul = fabObjetos.createU();
+        if (underline.isPresent()){ try {
+                if (underline.equals(Integer.parseInt("1"))){
+                    ul.setVal(UnderlineEnumeration.SINGLE);
+                } else if (underline.equals(Integer.parseInt("2"))){
+                    ul.setVal(UnderlineEnumeration.THICK);
+                }
+            } catch (Exception e){
+                e.printStackTrace();
+                }
+            } else {
+            ul.setVal(UnderlineEnumeration.NONE);
+        }
+        style.setU(ul);
+
+        Text textElement = fabObjetos.createText();
+        textElement.setValue(text);
+        System.out.print("Añadiendo texto.\n");
+        run.getContent().add(textElement);
+        System.out.print("Aplicando estilo.\n");
+        run.setRPr(style);
+        System.out.print("Añadiendo párrafo.\n");
+        paragraph.getContent().add(run);
+    }
 
     private static void addTextToParagraph(P paragraph, String text) {
         System.out.print("Añadiendo párrafo.\n");
@@ -89,7 +137,7 @@ public class docGen {
     }
     private static void generarLicenciaMedica(MainDocumentPart doc){
         P paragraph = fabObjetos.createP();
-        addTextToParagraph(paragraph, """
+        addStylizedTextToParagraph(paragraph, """
                 Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
                 en las instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas,
                 hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac}
@@ -101,7 +149,9 @@ public class docGen {
                 {firma}   {firma}
                 Docente   Director
                 Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
-                Teléfono: 0291 6436911""");
+                Teléfono: 0291 6436911""",
+                Optional.of(Boolean.TRUE),Optional.of(Boolean.TRUE),
+                Optional.of(Boolean.FALSE),Optional.of(Integer.valueOf(1)));
 
         doc.getContent().add(paragraph);
 
