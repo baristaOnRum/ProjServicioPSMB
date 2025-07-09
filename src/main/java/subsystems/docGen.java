@@ -151,7 +151,7 @@ public class docGen {
                 Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
                 Teléfono: 0291 6436911""",
                 Optional.of(Boolean.TRUE),Optional.of(Boolean.TRUE),
-                Optional.of(Boolean.FALSE),Optional.of(Integer.valueOf(1)));
+                Optional.of(Integer.valueOf(1)),Optional.of(Boolean.FALSE));
 
         doc.getContent().add(paragraph);
 
