@@ -77,6 +77,8 @@ public class docGen {
 
         agregarParrafoCEstilo(paragraph, text, false,false,1,false,18);
 
+
+        header.getContent().add(paragraph);
         return header;
     }
 
@@ -189,6 +191,10 @@ public class docGen {
         try {
             //Definimos el paquete word
             WordprocessingMLPackage packWord = WordprocessingMLPackage.createPackage();
+            //Definimos variables
+            Relationship relacion;
+
+
             //Definimos la seccion principal del Documento
             MainDocumentPart mainDoc = packWord.getMainDocumentPart();;
             //Añadimos contenido
@@ -198,7 +204,10 @@ public class docGen {
 
             //Encabezado
             HeaderPart headerDoc = new HeaderPart();
-            //Hdr header = crearHeader("Socorro");
+            Hdr header = crearHeader("Socorro");
+
+            headerDoc.setJaxbElement(header);
+            relacion = mainDoc.getContents().getBody().getSectPr();
 
 
             //Exportamos un archivo
