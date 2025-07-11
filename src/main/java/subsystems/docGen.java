@@ -13,11 +13,33 @@ import java.io.File;
 import java.math.BigInteger;
 
 public class docGen {
+
     //Global variables
     public static final ObjectFactory fabObjetos = Context.getWmlObjectFactory();
 
-
     //Back-end Functions
+    private static void agregarBr(MainDocumentPart parte){
+        //Variables de un solo uso
+        P paragraph = fabObjetos.createP();
+        R textRun = fabObjetos.createR();
+        Br lBreak = fabObjetos.createBr();
+
+        textRun.getContent().add(lBreak);
+
+        paragraph.getContent().add(textRun);
+        parte.getContent().add(paragraph);
+    }
+
+    //Inicializa el documento con encabezado y pie de página
+    private static WordprocessingMLPackage initDoc(){
+        WordprocessingMLPackage packWord = null;
+        try {
+            packWord = WordprocessingMLPackage.createPackage();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return packWord;
+    }
 
     private static void agregarParrafoCEstilo(P paragraph, String text, boolean bold,
                                                    boolean italic,
@@ -82,8 +104,7 @@ public class docGen {
         return header;
     }
 
-    //Generators
-
+    //Generadores
 
     private static void generarConstanciaEstudios(){
         /*TEXTO:
@@ -158,8 +179,12 @@ public class docGen {
                 Teléfono: 0291 6436911""",
                 true,true,
                 1,false, 24);
-        agregarParrafo(paragraph, "\nhola");
+
         doc.getContent().add(paragraph);
+
+        agregarBr(doc);
+
+        agregarParrafo(paragraph,"Whenhola");
 
         /*
         TEXTO:
@@ -184,7 +209,8 @@ public class docGen {
         Director
          */
     }
-    public static void main(String args[]){
+
+    public static void generarDoc(){
 
         //montar documento
 
@@ -229,6 +255,6 @@ public class docGen {
             e.printStackTrace();
         }
 
-        //crear documento
     }
+
 }

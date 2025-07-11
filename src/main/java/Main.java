@@ -15,5 +15,6 @@ public class Main {
         //menu_reportes main = new menu_reportes();
 
         //main.setVisible(true);
+        docGen.generarDoc();
     }
 }
