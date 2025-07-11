@@ -331,11 +331,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconos/set1/user-line_240.png"/>
-        </Property>
-      </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
@@ -437,9 +432,6 @@
           <Font name="Segoe UI" size="4" style="0"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="11"/>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconos/logo_inst_256.png"/>
-        </Property>
         <Property name="verticalAlignment" type="int" value="1"/>
         <Property name="alignmentY" type="float" value="0.0"/>
         <Property name="autoscrolls" type="boolean" value="true"/>
