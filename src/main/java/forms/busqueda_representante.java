@@ -79,7 +79,7 @@ public class busqueda_representante extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(27, 120, 101));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jButton2.setForeground(new java.awt.Color(250, 247, 239));
-        jButton2.setText("AÃ±adir Estudiante");
+        jButton2.setText("Añadir Estudiante");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -141,9 +141,7 @@ public class busqueda_representante extends javax.swing.JFrame {
         jButton8.setMinimumSize(new java.awt.Dimension(100, 20));
         jButton8.setPreferredSize(new java.awt.Dimension(100, 20));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CÃ©dula", "Nombre", "Apellido", "Estado Civil", "Grado de Estudios", "OcupaciÃ³n", "Tiene niÃ±os menores de 6 aÃ±os", "Ninguno" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula", "Nombre", "Apellido", "Estado Civil", "Grado de Estudios", "Ocupación", "Tiene niños menores de 6 años", "Ninguno" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -190,7 +188,6 @@ public class busqueda_representante extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
         jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel5.setAlignmentY(0.0F);
         jLabel5.setAutoscrolls(true);
