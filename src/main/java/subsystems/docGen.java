@@ -72,11 +72,12 @@ public class docGen {
 
     private static Hdr crearHeader(String text){
         //Definimos variables
+        Hdr header = fabObjetos.createHdr();
         P paragraph = fabObjetos.createP();
 
         agregarParrafoCEstilo(paragraph, text, false,false,1,false,18);
 
-        return
+        return header;
     }
 
     //Generators
