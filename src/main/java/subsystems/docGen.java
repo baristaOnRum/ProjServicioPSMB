@@ -207,7 +207,6 @@ public class docGen {
             Hdr header = crearHeader("Socorro");
 
             headerDoc.setJaxbElement(header);
-            relacion = mainDoc.getContents().getBody().getSectPr();
 
 
             //Exportamos un archivo

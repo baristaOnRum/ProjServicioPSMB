@@ -186,7 +186,10 @@ public class busqueda_estudiante extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        res_busqueda_est estudiante = new res_busqueda_est();
+        estudiante.setAlwaysOnTop(rootPaneCheckingEnabled);
+        estudiante.setLocationRelativeTo(null);
+        estudiante.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
