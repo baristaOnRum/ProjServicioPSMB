@@ -196,7 +196,7 @@ public void createConfPanel(){
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/talent_256.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/tools_240.png"))); // NOI18N
         jLabel9.setAlignmentY(0.0F);
         jLabel9.setAutoscrolls(true);
         jLabel9.setFocusable(false);
@@ -238,9 +238,9 @@ public void createConfPanel(){
                             .addComponent(jLabel10)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(427, 427, 427)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(btnEstudiantes5, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnEstudiantes5, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(185, 185, 185))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -267,9 +267,9 @@ public void createConfPanel(){
                             .addComponent(btnEstudiantes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEstudiantes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnEstudiantes4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -286,23 +286,38 @@ public void createConfPanel(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEstudiantes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes1ActionPerformed
-        // TODO add your handling code here:
+        busqueda_representante representante = new busqueda_representante();
+        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
+        representante.setLocationRelativeTo(null);
+        representante.setVisible(true);
     }//GEN-LAST:event_btnEstudiantes1ActionPerformed
 
     private void btnEstudiantes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes2ActionPerformed
-        // TODO add your handling code here:
+        busqueda_representante representante = new busqueda_representante();
+        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
+        representante.setLocationRelativeTo(null);
+        representante.setVisible(true);
     }//GEN-LAST:event_btnEstudiantes2ActionPerformed
 
     private void btnEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantesActionPerformed
-        // TODO add your handling code here:
+        busqueda_estudiante estudiante = new busqueda_estudiante();
+        estudiante.setAlwaysOnTop(rootPaneCheckingEnabled);
+        estudiante.setLocationRelativeTo(null);
+        estudiante.setVisible(true);
     }//GEN-LAST:event_btnEstudiantesActionPerformed
 
     private void btnEstudiantes4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes4ActionPerformed
-        // TODO add your handling code here:
+        busqueda_obrero obrero = new busqueda_obrero();
+        obrero.setAlwaysOnTop(rootPaneCheckingEnabled);
+        obrero.setLocationRelativeTo(null);
+        obrero.setVisible(true);
     }//GEN-LAST:event_btnEstudiantes4ActionPerformed
 
     private void btnEstudiantes5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes5ActionPerformed
-        // TODO add your handling code here:
+        conf_frame conf = new conf_frame();
+        conf.setAlwaysOnTop(rootPaneCheckingEnabled);
+        conf.setLocationRelativeTo(null);
+        conf.setVisible(true);
     }//GEN-LAST:event_btnEstudiantes5ActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
