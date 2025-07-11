@@ -191,12 +191,19 @@ public class docGen {
         try {
             //Definimos el paquete word
             WordprocessingMLPackage packWord = WordprocessingMLPackage.createPackage();
+            //Definimos la seccion principal del Documento
+            MainDocumentPart mainDoc = packWord.getMainDocumentPart();
+
             //Definimos variables
             Relationship relacion;
+            SectPr propiedades = mainDoc.getContents().getBody().getSectPr(); //Propiedades de SECCION
+            if (propiedades == null) {
+                propiedades = fabObjetos.createSectPr();
+                mainDoc.getContents().getBody().setSectPr(propiedades);
+            }
+            HeaderReference refHeader = fabObjetos.createHeaderReference(); refHeader.setType(HdrFtrRef.DEFAULT);
 
 
-            //Definimos la seccion principal del Documento
-            MainDocumentPart mainDoc = packWord.getMainDocumentPart();;
             //Añadimos contenido
             generarLicenciaMedica(mainDoc);
 
@@ -207,7 +214,11 @@ public class docGen {
             Hdr header = crearHeader("Socorro");
 
             headerDoc.setJaxbElement(header);
-            relacion = mainDoc.getContents().getBody().getSectPr();
+            relacion = mainDoc.addTargetPart(headerDoc);
+            refHeader.setId(relacion.getId()); // definimos la relacion del header con el documento
+
+            //Añadimos la referencia puntero del encabezado al documento
+            propiedades.getEGHdrFtrReferences().add(refHeader);
 
 
             //Exportamos un archivo

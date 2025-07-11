@@ -79,7 +79,7 @@ public class busqueda_representante extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(27, 120, 101));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jButton2.setForeground(new java.awt.Color(250, 247, 239));
-        jButton2.setText("Añadir Estudiante");
+        jButton2.setText("AÃ±adir Estudiante");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -141,7 +141,7 @@ public class busqueda_representante extends javax.swing.JFrame {
         jButton8.setMinimumSize(new java.awt.Dimension(100, 20));
         jButton8.setPreferredSize(new java.awt.Dimension(100, 20));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula", "Nombre", "Apellido", "Estado Civil", "Grado de Estudios", "Ocupación", "Tiene niños menores de 6 años", "Ninguno" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CÃ©dula", "Nombre", "Apellido", "Estado Civil", "Grado de Estudios", "OcupaciÃ³n", "Tiene niÃ±os menores de 6 aÃ±os", "Ninguno" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -276,7 +276,10 @@ public class busqueda_representante extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        res_busqueda_rep representante = new res_busqueda_rep();
+        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
+        representante.setLocationRelativeTo(null);
+        representante.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
