@@ -4,11 +4,11 @@ import org.docx4j.jaxb.Context;
 import org.docx4j.model.properties.run.Underline;
 import org.docx4j.openpackaging.exceptions.*;
 import org.docx4j.openpackaging.packages.*;
-import org.docx4j.openpackaging.parts.TrueTypeFontPart;
+import org.docx4j.openpackaging.parts.WordprocessingML.HeaderPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.*;
+import org.docx4j.relationships.Relationship;
 import org.docx4j.wml.*;
 
-import java.util.Optional;
 import java.io.File;
 
 public class docGen {
@@ -18,39 +18,30 @@ public class docGen {
 
     //Back-end Functions
 
-    private static void addStylizedTextToParagraph(P paragraph, String text, Optional<Boolean> bold,
-                                                   Optional<Boolean> italic,
-                                                   Optional<Integer> underline, Optional<Boolean> strikethrough){
+    private static void addStylizedTextToParagraph(P paragraph, String text, boolean bold,
+                                                   boolean italic,
+                                                   int underline, boolean strikethrough){
         //Definir variables de función
-        System.out.println("Definidos estilos.\n");
-        BooleanDefaultTrue bStyle = fabObjetos.createBooleanDefaultTrue();
-        bold.ifPresentOrElse(a -> bStyle.setVal(bold.get()), () -> bStyle.setVal(false));
-        BooleanDefaultTrue iStyle = fabObjetos.createBooleanDefaultTrue();
-        italic.ifPresentOrElse(a -> iStyle.setVal(italic.get()), () -> iStyle.setVal(false));
-        BooleanDefaultTrue sStyle = fabObjetos.createBooleanDefaultTrue();
-        strikethrough.ifPresentOrElse(a -> sStyle.setVal(strikethrough.get()), () -> sStyle.setVal(false));
+        BooleanDefaultTrue sBold = fabObjetos.createBooleanDefaultTrue(); sBold.setVal(bold);
+        BooleanDefaultTrue sStrike = fabObjetos.createBooleanDefaultTrue(); sStrike.setVal(strikethrough);
+        BooleanDefaultTrue sItal = fabObjetos.createBooleanDefaultTrue(); sItal.setVal(italic);
 
-        System.out.print("Añadiendo párrafo\n");
+        System.out.print("Creando párrafo\n");
         R run = fabObjetos.createR();
         System.out.print("Creando estilo\n");
         RPr style = fabObjetos.createRPr();
         System.out.print("Definiendo estilo\n");
-        style.setB(bStyle);
-        style.setDstrike(sStyle);
-        style.setI(iStyle);
+        style.setB(sBold);
+        style.setDstrike(sStrike);
+        style.setI(sItal);
         U ul = fabObjetos.createU();
-        if (underline.isPresent()){ try {
-                if (underline.equals(Integer.parseInt("1"))){
-                    ul.setVal(UnderlineEnumeration.SINGLE);
-                } else if (underline.equals(Integer.parseInt("2"))){
-                    ul.setVal(UnderlineEnumeration.THICK);
-                }
-            } catch (Exception e){
-                e.printStackTrace();
-                }
+        if (underline == 1){
+            ul.setVal(UnderlineEnumeration.SINGLE);
+            } else if (underline == 2){
+                ul.setVal(UnderlineEnumeration.THICK);
             } else {
-            ul.setVal(UnderlineEnumeration.NONE);
-        }
+        ul.setVal(UnderlineEnumeration.NONE);
+    }
         style.setU(ul);
 
         Text textElement = fabObjetos.createText();
@@ -118,6 +109,7 @@ public class docGen {
         Teléfono: 0291 6436911
          */
     }
+
     private static void generarConstanciaRetiro(){
         /*
         TEXTO:
@@ -135,6 +127,7 @@ public class docGen {
         Teléfono: 0291 6436911
          */
     }
+
     private static void generarLicenciaMedica(MainDocumentPart doc){
         P paragraph = fabObjetos.createP();
         addStylizedTextToParagraph(paragraph, """
@@ -150,8 +143,8 @@ public class docGen {
                 Docente   Director
                 Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
                 Teléfono: 0291 6436911""",
-                Optional.of(Boolean.TRUE),Optional.of(Boolean.TRUE),
-                Optional.of(Integer.valueOf(1)),Optional.of(Boolean.FALSE));
+                true,true,
+                1,false);
 
         doc.getContent().add(paragraph);
 
@@ -186,10 +179,16 @@ public class docGen {
             //Definimos el paquete word
             WordprocessingMLPackage packWord = WordprocessingMLPackage.createPackage();
             //Definimos la seccion principal del Documento
-            MainDocumentPart mainDoc = packWord.getMainDocumentPart();
-            //TODO: Añadimos encabezado y footer
+            MainDocumentPart mainDoc = packWord.getMainDocumentPart();;
             //Añadimos contenido
             generarLicenciaMedica(mainDoc);
+
+            //TODO: Añadimos encabezado y footer
+
+            //Encabezado
+            HeaderPart headerDoc = new HeaderPart();
+            Hdr header = crearHeader()
+
 
             //Exportamos un archivo
             File outputFile = new File("textdoc.docx");
