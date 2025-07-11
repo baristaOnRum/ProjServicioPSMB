@@ -141,49 +141,8 @@ public class docGen {
          */
     }
 
-    private static void generarLicenciaMedica(MainDocumentPart doc){
-        P paragraph = fabObjetos.createP();
-        agregarParrafoCEstilo(paragraph, """
-                Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
-                en las instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas,
-                hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac}
-                cursó el {grado} Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar {periodo_escolar}.
-                Es retirado por su representante {nom_representante}. C.I.: {cirepresentante} alegando motivos de {motivo}.
-                
-                Constancia que se expide de parte interesada a los {dias} del mes {mes} de {año}.
-                
-                {firma}   {firma}
-                Docente   Director
-                Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
-                Teléfono: 0291 6436911""",
-                true,true,
-                1,false, 24);
-        agregarParrafo(paragraph, "\nhola");
-        doc.getContent().add(paragraph);
+    private static void generarLicenciaMedica(MainDocumentPart doc)
 
-        /*
-        TEXTO:
-        A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
-        Plantel o dependencia: {nombre_plantel} //C.E.I Arnoldo Gabaldón
-        Lugar: {estado} //Monagas, Municipio: {municipio} //Maturín
-        Distrito: {distrito} //Boquerón Duración de la licencia: {duracíon_solicitud} días, Motivo: {Motivo}
-
-        Desde {fecha_inic}, hasta {fecha_fin}.
-
-        *_DATOS DEL SUPLENTE_*
-        __________________________________________
-        |Nombres y Apellidos | Cédula de Identidad|
-        |                    |                    |
-        |Observación:                             |
-        |                                         |
-        |_________________________________________|
-            {firma}              {firma}
-        Docente/Obrero          Suplente
-
-        {firma}
-        Director
-         */
-    }
     public static void main(String args[]){
 
         //montar documento
@@ -191,12 +150,19 @@ public class docGen {
         try {
             //Definimos el paquete word
             WordprocessingMLPackage packWord = WordprocessingMLPackage.createPackage();
+            //Definimos la seccion principal del Documento
+            MainDocumentPart mainDoc = packWord.getMainDocumentPart();
+
             //Definimos variables
             Relationship relacion;
+            SectPr propiedades = mainDoc.getContents().getBody().getSectPr(); //Propiedades de SECCION
+            if (propiedades == null) {
+                propiedades = fabObjetos.createSectPr();
+                mainDoc.getContents().getBody().setSectPr(propiedades);
+            }
+            HeaderReference refHeader = fabObjetos.createHeaderReference(); refHeader.setType(HdrFtrRef.DEFAULT);
 
 
-            //Definimos la seccion principal del Documento
-            MainDocumentPart mainDoc = packWord.getMainDocumentPart();;
             //Añadimos contenido
             generarLicenciaMedica(mainDoc);
 
@@ -207,7 +173,11 @@ public class docGen {
             Hdr header = crearHeader("Socorro");
 
             headerDoc.setJaxbElement(header);
-            relacion = mainDoc.getContents().getBody().getSectPr();
+            relacion = mainDoc.addTargetPart(headerDoc);
+            refHeader.setId(relacion.getId()); // definimos la relacion del header con el documento
+
+            //Añadimos la referencia puntero del encabezado al documento
+            propiedades.getEGHdrFtrReferences().add(refHeader);
 
 
             //Exportamos un archivo
