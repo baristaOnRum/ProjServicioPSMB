@@ -10,6 +10,7 @@ import org.docx4j.relationships.Relationship;
 import org.docx4j.wml.*;
 
 import java.io.File;
+import java.math.BigInteger;
 
 public class docGen {
     //Global variables
@@ -18,10 +19,11 @@ public class docGen {
 
     //Back-end Functions
 
-    private static void addStylizedTextToParagraph(P paragraph, String text, boolean bold,
+    private static void agregarParrafoCEstilo(P paragraph, String text, boolean bold,
                                                    boolean italic,
-                                                   int underline, boolean strikethrough){
+                                                   int underline, boolean strikethrough, int fSize){
         //Definir variables de función
+        HpsMeasure sSz = fabObjetos.createHpsMeasure(); sSz.setVal(BigInteger.valueOf(fSize));
         BooleanDefaultTrue sBold = fabObjetos.createBooleanDefaultTrue(); sBold.setVal(bold);
         BooleanDefaultTrue sStrike = fabObjetos.createBooleanDefaultTrue(); sStrike.setVal(strikethrough);
         BooleanDefaultTrue sItal = fabObjetos.createBooleanDefaultTrue(); sItal.setVal(italic);
@@ -34,6 +36,7 @@ public class docGen {
         style.setB(sBold);
         style.setDstrike(sStrike);
         style.setI(sItal);
+        style.setSz(sSz);
         U ul = fabObjetos.createU();
         if (underline == 1){
             ul.setVal(UnderlineEnumeration.SINGLE);
@@ -54,7 +57,7 @@ public class docGen {
         paragraph.getContent().add(run);
     }
 
-    private static void addTextToParagraph(P paragraph, String text) {
+    private static void agregarParrafo(P paragraph, String text) {
         System.out.print("Añadiendo párrafo.\n");
         R run = fabObjetos.createR();
         System.out.print("Run creada.\n");
@@ -67,7 +70,14 @@ public class docGen {
         System.out.print("Párrafo añadido exiosamente.\n");
     }
 
+    private static Hdr crearHeader(String text){
+        //Definimos variables
+        P paragraph = fabObjetos.createP();
 
+        agregarParrafoCEstilo(paragraph, text, false,false,1,false,18);
+
+        return
+    }
 
     //Generators
 
@@ -76,7 +86,7 @@ public class docGen {
         /*TEXTO:
         Quien suscribe, {Directora} (E) del C.E.I "Arnoldo Gabaldón", que funciona dentro de las
         instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua,
-        Municipio Autónomo Maturín - Estado Monagas, hace constancia que el alumno {estudinate}
+        Municipio Autónomo Maturín - Estado Monagas, hace constancia que el alumno {estudiante}
         ; portador de la Cédula Escolar Nº: V.-{CE}, nacido el {fecha_nac}, en {lug_nac}; cursó el {grado},
         {grado}, de la etapa Preescolar {etapa}, *Maternal* {nombre_maternal}, en su {fecha?}, hasta el {fecha}
         en esta institución; correspondiente al periodo escolar {periodo_escolar}.
@@ -130,7 +140,7 @@ public class docGen {
 
     private static void generarLicenciaMedica(MainDocumentPart doc){
         P paragraph = fabObjetos.createP();
-        addStylizedTextToParagraph(paragraph, """
+        agregarParrafoCEstilo(paragraph, """
                 Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
                 en las instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas,
                 hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac}
@@ -144,8 +154,8 @@ public class docGen {
                 Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
                 Teléfono: 0291 6436911""",
                 true,true,
-                1,false);
-
+                1,false, 24);
+        agregarParrafo(paragraph, "\nhola");
         doc.getContent().add(paragraph);
 
         /*
@@ -187,7 +197,7 @@ public class docGen {
 
             //Encabezado
             HeaderPart headerDoc = new HeaderPart();
-            Hdr header = crearHeader()
+            //Hdr header = crearHeader("Socorro");
 
 
             //Exportamos un archivo
