@@ -302,7 +302,10 @@ public class busqueda_estudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        planilla_inscripcion inscripcion = new planilla_inscripcion();
+        inscripcion.setAlwaysOnTop(rootPaneCheckingEnabled);
+        inscripcion.setLocationRelativeTo(null);
+        inscripcion.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
