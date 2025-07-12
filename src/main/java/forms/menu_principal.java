@@ -10,6 +10,12 @@ package forms;
  */
 public class menu_principal extends javax.swing.JFrame {
 
+    public conf_frame conf = null;
+    public busqueda_estudiante estudiante = null;
+    public busqueda_representante representante = null;
+    public busqueda_obrero obrero = null;
+    
+    
 private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(menu_principal.class.getName());
 
 /**
@@ -17,6 +23,7 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
  */
 public menu_principal() {
     initComponents();
+    
 }
 
 public void createConfPanel(){
@@ -263,9 +270,9 @@ public void createConfPanel(){
                             .addComponent(jLabel5)
                             .addComponent(jLabel10))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnEstudiantes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnEstudiantes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnEstudiantes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEstudiantes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -286,35 +293,61 @@ public void createConfPanel(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEstudiantes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes1ActionPerformed
-        busqueda_representante representante = new busqueda_representante();
+        if (representante == null) {
+            representante = new busqueda_representante();
+        } else {
+        representante.dispose();
+        representante.setVisible(true);
+        }
         representante.setAlwaysOnTop(rootPaneCheckingEnabled);
         representante.setLocationRelativeTo(null);
         representante.setVisible(true);
     }//GEN-LAST:event_btnEstudiantes1ActionPerformed
 
     private void btnEstudiantes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes2ActionPerformed
-        busqueda_representante representante = new busqueda_representante();
+        if (representante == null) {
+            representante = new busqueda_representante();
+        } else {
+        representante.dispose();
+        representante.setVisible(true);
+        }
         representante.setAlwaysOnTop(rootPaneCheckingEnabled);
         representante.setLocationRelativeTo(null);
         representante.setVisible(true);
     }//GEN-LAST:event_btnEstudiantes2ActionPerformed
 
     private void btnEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantesActionPerformed
-        busqueda_estudiante estudiante = new busqueda_estudiante();
+        if (estudiante == null) {
+            estudiante = new busqueda_estudiante();
+        } else {
+        estudiante.dispose();
+        estudiante.setVisible(true);
+        }
         estudiante.setAlwaysOnTop(rootPaneCheckingEnabled);
         estudiante.setLocationRelativeTo(null);
         estudiante.setVisible(true);
     }//GEN-LAST:event_btnEstudiantesActionPerformed
 
     private void btnEstudiantes4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes4ActionPerformed
-        busqueda_obrero obrero = new busqueda_obrero();
+        if (obrero == null) {
+            obrero = new busqueda_obrero();
+        } else {
+        obrero.dispose();
+        obrero.setVisible(true);
+        }
         obrero.setAlwaysOnTop(rootPaneCheckingEnabled);
         obrero.setLocationRelativeTo(null);
         obrero.setVisible(true);
     }//GEN-LAST:event_btnEstudiantes4ActionPerformed
 
     private void btnEstudiantes5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes5ActionPerformed
-        conf_frame conf = new conf_frame();
+
+        if (conf == null){
+            conf = new conf_frame();
+        } else {
+        conf.dispose();
+        conf.setVisible(true);
+        }
         conf.setAlwaysOnTop(rootPaneCheckingEnabled);
         conf.setLocationRelativeTo(null);
         conf.setVisible(true);

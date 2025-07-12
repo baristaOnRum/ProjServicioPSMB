@@ -5,7 +5,7 @@ import subsystems.*;
 
 public class Main {
     public static void main(String[] args) {
-        //menu_principal main = new menu_principal();
+        menu_principal main = new menu_principal();
         //planilla_inscripcion main = new planilla_inscripcion();
         //busqueda_representante main = new busqueda_representante();
         //res_busqueda_rep main = new res_busqueda_rep();
@@ -14,7 +14,7 @@ public class Main {
         //conf_users main = new conf_users();
         //menu_reportes main = new menu_reportes();
 
-        //main.setVisible(true);
-        docGen.generarDoc();
+        main.setVisible(true);
+        //docGen.generarDoc();
     }
 }

@@ -37,7 +37,7 @@ public class conf_frame extends javax.swing.JFrame {
         jToggleButton4 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(180, 250));
+        setMinimumSize(new java.awt.Dimension(200, 280));
         setPreferredSize(new java.awt.Dimension(200, 280));
 
         jButton1.setBackground(new java.awt.Color(255, 51, 51));

@@ -17,6 +17,10 @@ public class docGen {
     //Global variables
     public static final ObjectFactory fabObjetos = Context.getWmlObjectFactory();
 
+    /*TODO: Añadir: Función vinculadora de header, Función creadora de Footer, Función vinculadora de Footer,
+            Crear arreglo para índice de BD.
+     */
+
     //Back-end Functions
     private static void agregarBr(MainDocumentPart parte){
         //Variables de un solo uso
@@ -104,9 +108,9 @@ public class docGen {
         return header;
     }
 
-    //Generadores
+    //Generadores públicos
 
-    private static void generarConstanciaEstudios(){
+    public static void generarConstanciaEstudios(){
         /*TEXTO:
         Quien suscribe, {Directora} (E) del C.E.I "Arnoldo Gabaldón", que funciona dentro de las
         instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua,
@@ -127,7 +131,7 @@ public class docGen {
          */
     }
 
-    private static void generarConstanciaConducta(){
+    public static void generarConstanciaConducta(){
         /*
         TEXTO:
         Quien suscribe, {Directora/Profesora} del Centro de Educación Inicial [(C.E.I)] "Arnoldo Gabaldón", que funciona
@@ -144,7 +148,7 @@ public class docGen {
          */
     }
 
-    private static void generarConstanciaRetiro(){
+    public static void generarConstanciaRetiro(){
         /*
         TEXTO:
         Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
@@ -162,7 +166,7 @@ public class docGen {
          */
     }
 
-    private static void generarLicenciaMedica(MainDocumentPart doc){
+    public static void generarLicenciaMedica(MainDocumentPart doc){
         P paragraph = fabObjetos.createP();
         agregarParrafoCEstilo(paragraph, """
                 Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
@@ -210,6 +214,8 @@ public class docGen {
          */
     }
 
+    //TODO: Eliminar
+
     public static void generarDoc(){
 
         //montar documento
@@ -233,7 +239,7 @@ public class docGen {
             //Añadimos contenido
             generarLicenciaMedica(mainDoc);
 
-            //TODO: Añadimos encabezado y footer
+            //TODO: Añadir footer; Convertir a función
 
             //Encabezado
             HeaderPart headerDoc = new HeaderPart();

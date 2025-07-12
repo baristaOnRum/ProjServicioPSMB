@@ -231,6 +231,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         text_estatura_niñ = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(600, 450));
         setResizable(false);
 
         btn_aceptar.setText("ACEPTAR");
@@ -241,6 +242,9 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         });
 
         root.setPreferredSize(new java.awt.Dimension(800, 450));
+
+        dat_madre.setPreferredSize(new java.awt.Dimension(600, 420));
+        dat_madre.setRequestFocusEnabled(false);
 
         label_apellido_madre.setText("Apellidos");
 
@@ -453,7 +457,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_madre)))
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         dat_madreLayout.setVerticalGroup(
             dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -511,10 +515,12 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(label_correo_madre)
                         .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Madre", dat_madre);
+
+        dat_padre.setPreferredSize(new java.awt.Dimension(600, 450));
 
         label_apellido_padre.setText("Apellidos");
 
@@ -727,7 +733,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_padre)))
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         dat_padreLayout.setVerticalGroup(
             dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -783,10 +789,12 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_padre)
                     .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Padre", dat_padre);
+
+        dat_rep.setPreferredSize(new java.awt.Dimension(600, 420));
 
         label_apellido_rep.setText("Apellidos");
 
@@ -999,7 +1007,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(check_ven_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_rep)))
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         dat_repLayout.setVerticalGroup(
             dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1055,10 +1063,12 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_correo_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_rep)
                     .addComponent(text_tlf_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Representante", dat_rep);
+
+        dat_diag.setPreferredSize(new java.awt.Dimension(600, 4200));
 
         label_problema.setText("Presento algun problema durante el parto:");
 
@@ -1112,7 +1122,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
 
         label_alergia_cual.setText("Cual?");
 
-        label_condicion.setText("Presenta su niño(a) actualmente alguna condicion que amerite del conocimiento del docente:");
+        label_condicion.setText("<html>Presenta su niño(a) actualmente alguna condicion<br>\nque amerite del conocimiento del docente:\n</html>");
 
         check_condicion_si.setText("Si");
         check_condicion_si.addActionListener(new java.awt.event.ActionListener() {
@@ -1189,12 +1199,12 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                                 .addComponent(label_condicion_cual)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(text_condicion_cual))
-                            .addComponent(label_condicion))
+                            .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_condicion_si)
                         .addGap(18, 18, 18)
                         .addComponent(check_condicion_no)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dat_diagLayout.setVerticalGroup(
             dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1243,15 +1253,18 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addGroup(dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(check_condicion_si)
                     .addComponent(check_condicion_no)
-                    .addComponent(label_condicion))
+                    .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_condicion_cual)
                     .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         root.addTab("Diagnostico Niñ@s", dat_diag);
+
+        dat_doc.setPreferredSize(new java.awt.Dimension(600, 420));
+        dat_doc.setRequestFocusEnabled(false);
 
         label_originales.setText("Originales");
 
@@ -1304,6 +1317,28 @@ public class planilla_inscripcion extends javax.swing.JFrame {
             .addGroup(dat_docLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addComponent(label_cedula)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ci_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ci_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ci_representante))
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addComponent(label_responsable)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addComponent(label_persona)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addComponent(label_fecha)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_observaciones)
                     .addGroup(dat_docLayout.createSequentialGroup()
                         .addComponent(label_originales)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1319,34 +1354,8 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_vacunas)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_vacunas))
-                    .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(scroll_observaciones)
-                        .addGroup(dat_docLayout.createSequentialGroup()
-                            .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(dat_docLayout.createSequentialGroup()
-                                    .addComponent(label_cedula)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(check_ci_madre)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(check_ci_padre)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(check_ci_representante))
-                                .addGroup(dat_docLayout.createSequentialGroup()
-                                    .addComponent(label_responsable)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(dat_docLayout.createSequentialGroup()
-                                    .addComponent(label_persona)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(dat_docLayout.createSequentialGroup()
-                                    .addComponent(label_fecha)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(label_observaciones))
-                            .addGap(127, 127, 127))))
-                .addContainerGap(157, Short.MAX_VALUE))
+                        .addComponent(check_vacunas)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         dat_docLayout.setVerticalGroup(
             dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1381,9 +1390,9 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_observaciones)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         root.addTab("Documentos Presentados", dat_doc);
@@ -1659,7 +1668,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(635, Short.MAX_VALUE)
+                .addContainerGap(502, Short.MAX_VALUE)
                 .addComponent(btn_aceptar)
                 .addContainerGap())
             .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
