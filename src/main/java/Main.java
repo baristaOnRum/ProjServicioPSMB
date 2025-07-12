@@ -5,7 +5,8 @@ import subsystems.*;
 
 public class Main {
     public static void main(String[] args) {
-        menu_principal main = new menu_principal();
+        //menu_principal main = new menu_principal();
+        file_picker main = new file_picker();
         //planilla_inscripcion main = new planilla_inscripcion();
         //busqueda_representante main = new busqueda_representante();
         //res_busqueda_rep main = new res_busqueda_rep();
