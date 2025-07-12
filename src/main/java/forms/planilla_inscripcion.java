@@ -1258,7 +1258,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addGroup(dat_diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_condicion_cual)
                     .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         root.addTab("Diagnostico Niñ@s", dat_diag);
@@ -1392,13 +1392,13 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addComponent(label_observaciones)
                 .addGap(18, 18, 18)
                 .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         root.addTab("Documentos Presentados", dat_doc);
 
         dat_niñ.setMinimumSize(new java.awt.Dimension(800, 800));
-        dat_niñ.setPreferredSize(new java.awt.Dimension(800, 800));
+        dat_niñ.setPreferredSize(new java.awt.Dimension(600, 450));
 
         label_nombre_niñ.setText("Nombre");
 
@@ -1595,7 +1595,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                         .addComponent(label_tall_zapato_niñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addContainerGap(222, Short.MAX_VALUE))
         );
         dat_niñLayout.setVerticalGroup(
             dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1613,7 +1613,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                 .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_edad_niñ))
-                .addGap(34, 34, 34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_lugar_nac_niñ)
@@ -1625,7 +1625,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_nacionalidad_niñ)
                     .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_procedencia_niñ)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1640,7 +1640,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                             .addComponent(radio_guarderia_niñ)
                             .addComponent(radio_otro_plantel_niñ)))
                     .addComponent(radio_multihogar_niñ))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_tallas_niñ)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1650,7 +1650,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(label_tall_pantalon_niñ)
                     .addComponent(label_tall_zapato_niñ)
                     .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_medidas_niñ)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_niñLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1658,7 +1658,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
                     .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_estatura_niñ))
-                .addContainerGap(385, Short.MAX_VALUE))
+                .addContainerGap(427, Short.MAX_VALUE))
         );
 
         root.addTab("Datos Niñ@s", dat_niñ);
