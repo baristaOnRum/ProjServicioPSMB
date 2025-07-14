@@ -280,7 +280,7 @@ public class busqueda_representante extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        res_busqueda_rep representante = new res_busqueda_rep();
+        resultado_representante representante = new resultado_representante();
         representante.setAlwaysOnTop(rootPaneCheckingEnabled);
         representante.setLocationRelativeTo(null);
         representante.setVisible(true);
