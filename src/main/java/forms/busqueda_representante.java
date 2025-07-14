@@ -156,8 +156,6 @@ public class busqueda_representante extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("jTextField1");
-
         jPanel1.setBackground(new java.awt.Color(27, 120, 101));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
