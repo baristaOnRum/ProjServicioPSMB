@@ -40,318 +40,337 @@ public void createConfPanel(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        headder = new javax.swing.JPanel();
-        txtMenuPrincipal = new javax.swing.JLabel();
-        imgEstudiante = new javax.swing.JLabel();
-        btnEstudiantes = new javax.swing.JButton();
-        imgFamilia = new javax.swing.JLabel();
-        btnRepresentantes = new javax.swing.JButton();
-        imgAutorizado = new javax.swing.JLabel();
-        btnAutorizados = new javax.swing.JButton();
-        imgMaletin = new javax.swing.JLabel();
-        btnPlantel = new javax.swing.JButton();
-        imgHerramienta = new javax.swing.JLabel();
-        btnConfiguracion = new javax.swing.JButton();
-        logoPreescolar = new javax.swing.JLabel();
+        busquedaEstudiantes = new javax.swing.JPanel();
+        busquedaNomina = new javax.swing.JPanel();
+        busquedaRepresentante = new javax.swing.JPanel();
+        menuPrincipal = new javax.swing.JPanel();
+        imgMaletin1 = new javax.swing.JLabel();
+        btnPlantel1 = new javax.swing.JButton();
+        imgHerramienta1 = new javax.swing.JLabel();
+        btnConfiguracion1 = new javax.swing.JButton();
+        logoPreescolar1 = new javax.swing.JLabel();
+        imgEstudiante1 = new javax.swing.JLabel();
+        btnEstudiantes1 = new javax.swing.JButton();
+        imgFamilia1 = new javax.swing.JLabel();
+        btnRepresentantes1 = new javax.swing.JButton();
+        imgAutorizado1 = new javax.swing.JLabel();
+        btnAutorizados1 = new javax.swing.JButton();
+        headder1 = new javax.swing.JPanel();
+        txtMenuPrincipal1 = new javax.swing.JLabel();
+        panel = new javax.swing.JPanel();
+
+        javax.swing.GroupLayout busquedaEstudiantesLayout = new javax.swing.GroupLayout(busquedaEstudiantes);
+        busquedaEstudiantes.setLayout(busquedaEstudiantesLayout);
+        busquedaEstudiantesLayout.setHorizontalGroup(
+            busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        busquedaEstudiantesLayout.setVerticalGroup(
+            busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout busquedaNominaLayout = new javax.swing.GroupLayout(busquedaNomina);
+        busquedaNomina.setLayout(busquedaNominaLayout);
+        busquedaNominaLayout.setHorizontalGroup(
+            busquedaNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        busquedaNominaLayout.setVerticalGroup(
+            busquedaNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout busquedaRepresentanteLayout = new javax.swing.GroupLayout(busquedaRepresentante);
+        busquedaRepresentante.setLayout(busquedaRepresentanteLayout);
+        busquedaRepresentanteLayout.setHorizontalGroup(
+            busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        busquedaRepresentanteLayout.setVerticalGroup(
+            busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        imgMaletin1.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        imgMaletin1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgMaletin1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/suitcase_256.png"))); // NOI18N
+        imgMaletin1.setToolTipText("");
+        imgMaletin1.setAlignmentY(0.0F);
+        imgMaletin1.setAutoscrolls(true);
+        imgMaletin1.setFocusable(false);
+        imgMaletin1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imgMaletin1.setIconTextGap(0);
+        imgMaletin1.setRequestFocusEnabled(false);
+
+        btnPlantel1.setBackground(new java.awt.Color(62, 181, 157));
+        btnPlantel1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        btnPlantel1.setForeground(new java.awt.Color(250, 247, 239));
+        btnPlantel1.setText("PLANTEL");
+        btnPlantel1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnPlantel1.setIconTextGap(25);
+        btnPlantel1.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnPlantel1.setMinimumSize(new java.awt.Dimension(250, 56));
+        btnPlantel1.setPreferredSize(new java.awt.Dimension(250, 56));
+        btnPlantel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlantel1ActionPerformed(evt);
+            }
+        });
+
+        imgHerramienta1.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        imgHerramienta1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgHerramienta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/tools_240.png"))); // NOI18N
+        imgHerramienta1.setAlignmentY(0.0F);
+        imgHerramienta1.setAutoscrolls(true);
+        imgHerramienta1.setFocusable(false);
+        imgHerramienta1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imgHerramienta1.setIconTextGap(0);
+        imgHerramienta1.setRequestFocusEnabled(false);
+
+        btnConfiguracion1.setBackground(new java.awt.Color(62, 181, 157));
+        btnConfiguracion1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        btnConfiguracion1.setForeground(new java.awt.Color(250, 247, 239));
+        btnConfiguracion1.setText("CONFIG");
+        btnConfiguracion1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnConfiguracion1.setIconTextGap(25);
+        btnConfiguracion1.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnConfiguracion1.setMinimumSize(new java.awt.Dimension(250, 56));
+        btnConfiguracion1.setPreferredSize(new java.awt.Dimension(250, 56));
+        btnConfiguracion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracion1ActionPerformed(evt);
+            }
+        });
+
+        logoPreescolar1.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        logoPreescolar1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        logoPreescolar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
+        logoPreescolar1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        logoPreescolar1.setAlignmentY(0.0F);
+        logoPreescolar1.setAutoscrolls(true);
+        logoPreescolar1.setFocusable(false);
+        logoPreescolar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        logoPreescolar1.setIconTextGap(0);
+        logoPreescolar1.setRequestFocusEnabled(false);
+
+        imgEstudiante1.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        imgEstudiante1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgEstudiante1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/kid_256.png"))); // NOI18N
+        imgEstudiante1.setToolTipText("");
+        imgEstudiante1.setAlignmentY(0.0F);
+        imgEstudiante1.setAutoscrolls(true);
+        imgEstudiante1.setFocusable(false);
+        imgEstudiante1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imgEstudiante1.setIconTextGap(0);
+        imgEstudiante1.setRequestFocusEnabled(false);
+
+        btnEstudiantes1.setBackground(new java.awt.Color(62, 181, 157));
+        btnEstudiantes1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        btnEstudiantes1.setForeground(new java.awt.Color(250, 247, 239));
+        btnEstudiantes1.setText("ESTUDIANTES");
+        btnEstudiantes1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnEstudiantes1.setIconTextGap(25);
+        btnEstudiantes1.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnEstudiantes1.setMinimumSize(new java.awt.Dimension(250, 56));
+        btnEstudiantes1.setPreferredSize(new java.awt.Dimension(256, 56));
+        btnEstudiantes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstudiantes1ActionPerformed(evt);
+            }
+        });
+
+        imgFamilia1.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        imgFamilia1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgFamilia1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/family_256.png"))); // NOI18N
+        imgFamilia1.setAlignmentY(0.0F);
+        imgFamilia1.setAutoscrolls(true);
+        imgFamilia1.setFocusable(false);
+        imgFamilia1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imgFamilia1.setIconTextGap(0);
+        imgFamilia1.setRequestFocusEnabled(false);
+
+        btnRepresentantes1.setBackground(new java.awt.Color(62, 181, 157));
+        btnRepresentantes1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        btnRepresentantes1.setForeground(new java.awt.Color(250, 247, 239));
+        btnRepresentantes1.setText("REPRESENTANTES");
+        btnRepresentantes1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnRepresentantes1.setIconTextGap(25);
+        btnRepresentantes1.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnRepresentantes1.setMinimumSize(new java.awt.Dimension(250, 56));
+        btnRepresentantes1.setPreferredSize(new java.awt.Dimension(250, 56));
+        btnRepresentantes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRepresentantes1ActionPerformed(evt);
+            }
+        });
+
+        imgAutorizado1.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        imgAutorizado1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgAutorizado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/talent_256.png"))); // NOI18N
+        imgAutorizado1.setAlignmentY(0.0F);
+        imgAutorizado1.setAutoscrolls(true);
+        imgAutorizado1.setFocusable(false);
+        imgAutorizado1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imgAutorizado1.setIconTextGap(0);
+        imgAutorizado1.setRequestFocusEnabled(false);
+
+        btnAutorizados1.setBackground(new java.awt.Color(62, 181, 157));
+        btnAutorizados1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        btnAutorizados1.setForeground(new java.awt.Color(250, 247, 239));
+        btnAutorizados1.setText("AUTORIZADOS");
+        btnAutorizados1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnAutorizados1.setIconTextGap(25);
+        btnAutorizados1.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnAutorizados1.setMinimumSize(new java.awt.Dimension(250, 56));
+        btnAutorizados1.setPreferredSize(new java.awt.Dimension(250, 56));
+        btnAutorizados1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAutorizados1ActionPerformed(evt);
+            }
+        });
+
+        headder1.setBackground(new java.awt.Color(27, 120, 101));
+
+        txtMenuPrincipal1.setBackground(new java.awt.Color(204, 204, 255));
+        txtMenuPrincipal1.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
+        txtMenuPrincipal1.setForeground(new java.awt.Color(250, 247, 239));
+        txtMenuPrincipal1.setText("Menu Principal");
+
+        javax.swing.GroupLayout headder1Layout = new javax.swing.GroupLayout(headder1);
+        headder1.setLayout(headder1Layout);
+        headder1Layout.setHorizontalGroup(
+            headder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headder1Layout.createSequentialGroup()
+                .addGap(406, 406, 406)
+                .addComponent(txtMenuPrincipal1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        headder1Layout.setVerticalGroup(
+            headder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headder1Layout.createSequentialGroup()
+                .addGap(0, 8, Short.MAX_VALUE)
+                .addComponent(txtMenuPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout menuPrincipalLayout = new javax.swing.GroupLayout(menuPrincipal);
+        menuPrincipal.setLayout(menuPrincipalLayout);
+        menuPrincipalLayout.setHorizontalGroup(
+            menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPlantel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addComponent(imgMaletin1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(4, 4, 4))
+                    .addComponent(btnEstudiantes1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(imgEstudiante1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(imgFamilia1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnRepresentantes1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(logoPreescolar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(30, 30, 30)))
+                .addGap(113, 113, 113)
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAutorizados1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(imgAutorizado1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(imgHerramienta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnConfiguracion1, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE))
+                        .addGap(15, 15, 15)))
+                .addGap(128, 128, 128))
+            .addComponent(headder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        menuPrincipalLayout.setVerticalGroup(
+            menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                .addComponent(headder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPrincipalLayout.createSequentialGroup()
+                            .addComponent(imgAutorizado1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btnAutorizados1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(menuPrincipalLayout.createSequentialGroup()
+                            .addComponent(imgFamilia1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btnRepresentantes1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addComponent(imgEstudiante1)
+                        .addGap(9, 9, 9)
+                        .addComponent(btnEstudiantes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addComponent(imgMaletin1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnPlantel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(logoPreescolar1)
+                        .addGroup(menuPrincipalLayout.createSequentialGroup()
+                            .addComponent(imgHerramienta1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btnConfiguracion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(35, 35, 35))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IM");
         setBackground(new java.awt.Color(197, 232, 225));
         setMinimumSize(new java.awt.Dimension(1280, 800));
 
-        headder.setBackground(new java.awt.Color(27, 120, 101));
-
-        txtMenuPrincipal.setBackground(new java.awt.Color(204, 204, 255));
-        txtMenuPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
-        txtMenuPrincipal.setForeground(new java.awt.Color(250, 247, 239));
-        txtMenuPrincipal.setText("Menu Principal");
-
-        javax.swing.GroupLayout headderLayout = new javax.swing.GroupLayout(headder);
-        headder.setLayout(headderLayout);
-        headderLayout.setHorizontalGroup(
-            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(headderLayout.createSequentialGroup()
-                .addGap(417, 417, 417)
-                .addComponent(txtMenuPrincipal)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
+        panel.setLayout(panelLayout);
+        panelLayout.setHorizontalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1336, Short.MAX_VALUE)
         );
-        headderLayout.setVerticalGroup(
-            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(headderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+        panelLayout.setVerticalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
-
-        imgEstudiante.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        imgEstudiante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgEstudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/kid_256.png"))); // NOI18N
-        imgEstudiante.setToolTipText("");
-        imgEstudiante.setAlignmentY(0.0F);
-        imgEstudiante.setAutoscrolls(true);
-        imgEstudiante.setFocusable(false);
-        imgEstudiante.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imgEstudiante.setIconTextGap(0);
-        imgEstudiante.setRequestFocusEnabled(false);
-
-        btnEstudiantes.setBackground(new java.awt.Color(62, 181, 157));
-        btnEstudiantes.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        btnEstudiantes.setForeground(new java.awt.Color(250, 247, 239));
-        btnEstudiantes.setText("ESTUDIANTES");
-        btnEstudiantes.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnEstudiantes.setIconTextGap(25);
-        btnEstudiantes.setMaximumSize(new java.awt.Dimension(100, 40));
-        btnEstudiantes.setMinimumSize(new java.awt.Dimension(250, 56));
-        btnEstudiantes.setPreferredSize(new java.awt.Dimension(256, 56));
-        btnEstudiantes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstudiantesActionPerformed(evt);
-            }
-        });
-
-        imgFamilia.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        imgFamilia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgFamilia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/family_256.png"))); // NOI18N
-        imgFamilia.setAlignmentY(0.0F);
-        imgFamilia.setAutoscrolls(true);
-        imgFamilia.setFocusable(false);
-        imgFamilia.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imgFamilia.setIconTextGap(0);
-        imgFamilia.setRequestFocusEnabled(false);
-
-        btnRepresentantes.setBackground(new java.awt.Color(62, 181, 157));
-        btnRepresentantes.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        btnRepresentantes.setForeground(new java.awt.Color(250, 247, 239));
-        btnRepresentantes.setText("REPRESENTANTES");
-        btnRepresentantes.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnRepresentantes.setIconTextGap(25);
-        btnRepresentantes.setMaximumSize(new java.awt.Dimension(100, 40));
-        btnRepresentantes.setMinimumSize(new java.awt.Dimension(250, 56));
-        btnRepresentantes.setPreferredSize(new java.awt.Dimension(250, 56));
-        btnRepresentantes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRepresentantesActionPerformed(evt);
-            }
-        });
-
-        imgAutorizado.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        imgAutorizado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgAutorizado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/talent_256.png"))); // NOI18N
-        imgAutorizado.setAlignmentY(0.0F);
-        imgAutorizado.setAutoscrolls(true);
-        imgAutorizado.setFocusable(false);
-        imgAutorizado.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imgAutorizado.setIconTextGap(0);
-        imgAutorizado.setRequestFocusEnabled(false);
-
-        btnAutorizados.setBackground(new java.awt.Color(62, 181, 157));
-        btnAutorizados.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        btnAutorizados.setForeground(new java.awt.Color(250, 247, 239));
-        btnAutorizados.setText("AUTORIZADOS");
-        btnAutorizados.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnAutorizados.setIconTextGap(25);
-        btnAutorizados.setMaximumSize(new java.awt.Dimension(100, 40));
-        btnAutorizados.setMinimumSize(new java.awt.Dimension(250, 56));
-        btnAutorizados.setPreferredSize(new java.awt.Dimension(250, 56));
-        btnAutorizados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAutorizadosActionPerformed(evt);
-            }
-        });
-
-        imgMaletin.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        imgMaletin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgMaletin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/suitcase_256.png"))); // NOI18N
-        imgMaletin.setToolTipText("");
-        imgMaletin.setAlignmentY(0.0F);
-        imgMaletin.setAutoscrolls(true);
-        imgMaletin.setFocusable(false);
-        imgMaletin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imgMaletin.setIconTextGap(0);
-        imgMaletin.setRequestFocusEnabled(false);
-
-        btnPlantel.setBackground(new java.awt.Color(62, 181, 157));
-        btnPlantel.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        btnPlantel.setForeground(new java.awt.Color(250, 247, 239));
-        btnPlantel.setText("PLANTEL");
-        btnPlantel.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnPlantel.setIconTextGap(25);
-        btnPlantel.setMaximumSize(new java.awt.Dimension(100, 40));
-        btnPlantel.setMinimumSize(new java.awt.Dimension(250, 56));
-        btnPlantel.setPreferredSize(new java.awt.Dimension(250, 56));
-        btnPlantel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlantelActionPerformed(evt);
-            }
-        });
-
-        imgHerramienta.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        imgHerramienta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgHerramienta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/tools_240.png"))); // NOI18N
-        imgHerramienta.setAlignmentY(0.0F);
-        imgHerramienta.setAutoscrolls(true);
-        imgHerramienta.setFocusable(false);
-        imgHerramienta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imgHerramienta.setIconTextGap(0);
-        imgHerramienta.setRequestFocusEnabled(false);
-
-        btnConfiguracion.setBackground(new java.awt.Color(62, 181, 157));
-        btnConfiguracion.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        btnConfiguracion.setForeground(new java.awt.Color(250, 247, 239));
-        btnConfiguracion.setText("CONFIG");
-        btnConfiguracion.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnConfiguracion.setIconTextGap(25);
-        btnConfiguracion.setMaximumSize(new java.awt.Dimension(100, 40));
-        btnConfiguracion.setMinimumSize(new java.awt.Dimension(250, 56));
-        btnConfiguracion.setPreferredSize(new java.awt.Dimension(250, 56));
-        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfiguracionActionPerformed(evt);
-            }
-        });
-
-        logoPreescolar.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        logoPreescolar.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        logoPreescolar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
-        logoPreescolar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        logoPreescolar.setAlignmentY(0.0F);
-        logoPreescolar.setAutoscrolls(true);
-        logoPreescolar.setFocusable(false);
-        logoPreescolar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        logoPreescolar.setIconTextGap(0);
-        logoPreescolar.setRequestFocusEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(headder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(204, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(imgMaletin)
-                    .addComponent(btnPlantel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imgEstudiante))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnRepresentantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(imgFamilia, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE))
-                        .addGap(66, 66, 66)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(imgAutorizado)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(427, 427, 427)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnConfiguracion, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                            .addComponent(imgHerramienta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(185, 185, 185))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(546, Short.MAX_VALUE)
-                    .addComponent(logoPreescolar)
-                    .addGap(534, 534, 534)))
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(headder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(imgEstudiante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(imgFamilia)
-                            .addComponent(imgAutorizado))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(imgHerramienta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPlantel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(489, Short.MAX_VALUE)
-                    .addComponent(logoPreescolar)
-                    .addGap(55, 55, 55)))
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAutorizadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAutorizadosActionPerformed
-        if (representante == null) {
-            representante = new busqueda_representante();
-        } else {
-        representante.dispose();
-        representante.setVisible(true);
-        }
-        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
-        representante.setLocationRelativeTo(null);
-        representante.setVisible(true);
-    }//GEN-LAST:event_btnAutorizadosActionPerformed
+    private void btnPlantel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlantel1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPlantel1ActionPerformed
 
-    private void btnRepresentantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepresentantesActionPerformed
-        if (representante == null) {
-            representante = new busqueda_representante();
-        } else {
-        representante.dispose();
-        representante.setVisible(true);
-        }
-        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
-        representante.setLocationRelativeTo(null);
-        representante.setVisible(true);
-    }//GEN-LAST:event_btnRepresentantesActionPerformed
+    private void btnConfiguracion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracion1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfiguracion1ActionPerformed
 
-    private void btnEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantesActionPerformed
-        if (estudiante == null) {
-            estudiante = new busqueda_estudiante();
-        } else {
-        estudiante.dispose();
-        estudiante.setVisible(true);
-        }
-        estudiante.setAlwaysOnTop(rootPaneCheckingEnabled);
-        estudiante.setLocationRelativeTo(null);
-        estudiante.setVisible(true);
-    }//GEN-LAST:event_btnEstudiantesActionPerformed
+    private void btnEstudiantes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEstudiantes1ActionPerformed
 
-    private void btnPlantelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlantelActionPerformed
-        if (obrero == null) {
-            obrero = new busqueda_obrero();
-        } else {
-        obrero.dispose();
-        obrero.setVisible(true);
-        }
-        obrero.setAlwaysOnTop(rootPaneCheckingEnabled);
-        obrero.setLocationRelativeTo(null);
-        obrero.setVisible(true);
-    }//GEN-LAST:event_btnPlantelActionPerformed
+    private void btnRepresentantes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepresentantes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRepresentantes1ActionPerformed
 
-    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
-
-        if (conf == null){
-            conf = new conf_frame();
-        } else {
-        conf.dispose();
-        conf.setVisible(true);
-        }
-        conf.setAlwaysOnTop(rootPaneCheckingEnabled);
-        conf.setLocationRelativeTo(null);
-        conf.setVisible(true);
-    }//GEN-LAST:event_btnConfiguracionActionPerformed
+    private void btnAutorizados1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAutorizados1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAutorizados1ActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -392,18 +411,23 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAutorizados;
-    private javax.swing.JButton btnConfiguracion;
-    private javax.swing.JButton btnEstudiantes;
-    private javax.swing.JButton btnPlantel;
-    private javax.swing.JButton btnRepresentantes;
-    private javax.swing.JPanel headder;
-    private javax.swing.JLabel imgAutorizado;
-    private javax.swing.JLabel imgEstudiante;
-    private javax.swing.JLabel imgFamilia;
-    private javax.swing.JLabel imgHerramienta;
-    private javax.swing.JLabel imgMaletin;
-    private javax.swing.JLabel logoPreescolar;
-    private javax.swing.JLabel txtMenuPrincipal;
+    private javax.swing.JButton btnAutorizados1;
+    private javax.swing.JButton btnConfiguracion1;
+    private javax.swing.JButton btnEstudiantes1;
+    private javax.swing.JButton btnPlantel1;
+    private javax.swing.JButton btnRepresentantes1;
+    private javax.swing.JPanel busquedaEstudiantes;
+    private javax.swing.JPanel busquedaNomina;
+    private javax.swing.JPanel busquedaRepresentante;
+    private javax.swing.JPanel headder1;
+    private javax.swing.JLabel imgAutorizado1;
+    private javax.swing.JLabel imgEstudiante1;
+    private javax.swing.JLabel imgFamilia1;
+    private javax.swing.JLabel imgHerramienta1;
+    private javax.swing.JLabel imgMaletin1;
+    private javax.swing.JLabel logoPreescolar1;
+    private javax.swing.JPanel menuPrincipal;
+    private javax.swing.JPanel panel;
+    private javax.swing.JLabel txtMenuPrincipal1;
     // End of variables declaration//GEN-END:variables
 }
