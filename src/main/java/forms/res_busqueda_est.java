@@ -48,7 +48,7 @@ public class res_busqueda_est extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(850, 200));
-        setPreferredSize(new java.awt.Dimension(1000, 200));
+        setPreferredSize(new java.awt.Dimension(1000, 290));
         setResizable(false);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -219,7 +219,7 @@ public class res_busqueda_est extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel7)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(12, Short.MAX_VALUE))))
         );
 
         getAccessibleContext().setAccessibleName("800");

@@ -231,8 +231,7 @@ public class planilla_inscripcion extends javax.swing.JFrame {
         text_estatura_niñ = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 450));
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(600, 550));
 
         btn_aceptar.setText("ACEPTAR");
         btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
