@@ -8,12 +8,12 @@ package forms;
  *
  * @author Uzer
  */
-public class resultado_busqueda_niño extends javax.swing.JFrame {
+public class resultado_trabajador extends javax.swing.JFrame {
 
     /**
      * Creates new form inscripcion_niño
      */
-    public resultado_busqueda_niño() {
+    public resultado_trabajador() {
         initComponents();
     }
 
@@ -2037,21 +2037,23 @@ public class resultado_busqueda_niño extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(resultado_busqueda_niño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resultado_trabajador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(resultado_busqueda_niño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resultado_trabajador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(resultado_busqueda_niño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resultado_trabajador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(resultado_busqueda_niño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(resultado_trabajador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new resultado_busqueda_niño().setVisible(true);
+                new resultado_trabajador().setVisible(true);
             }
         });
     }
