@@ -29,6 +29,30 @@ public class inscripcion_niño extends javax.swing.JFrame {
         imgEstudiante = new javax.swing.JLabel();
         headder = new javax.swing.JPanel();
         txtHeadder = new javax.swing.JLabel();
+        dat_doc = new javax.swing.JPanel();
+        label_originales = new javax.swing.JLabel();
+        check_originales = new javax.swing.JCheckBox();
+        label_copias = new javax.swing.JLabel();
+        check_copias = new javax.swing.JCheckBox();
+        label_partida = new javax.swing.JLabel();
+        check_partida = new javax.swing.JCheckBox();
+        label_vacunas = new javax.swing.JLabel();
+        check_vacunas = new javax.swing.JCheckBox();
+        label_cedula = new javax.swing.JLabel();
+        check_ci_madre = new javax.swing.JCheckBox();
+        check_ci_padre = new javax.swing.JCheckBox();
+        check_ci_representante = new javax.swing.JCheckBox();
+        label_responsable = new javax.swing.JLabel();
+        text_responsable = new javax.swing.JTextField();
+        label_persona = new javax.swing.JLabel();
+        text_persona = new javax.swing.JTextField();
+        label_fecha = new javax.swing.JLabel();
+        text_fecha = new javax.swing.JTextField();
+        label_observaciones = new javax.swing.JLabel();
+        scroll_observaciones = new javax.swing.JScrollPane();
+        text_observaciones = new javax.swing.JTextPane();
+        btn_aceptar2 = new javax.swing.JButton();
+        panelDatos = new javax.swing.JTabbedPane();
         datos = new javax.swing.JPanel();
         label_nombre_niñ = new javax.swing.JLabel();
         text_nombre_niñ = new javax.swing.JTextField();
@@ -101,6 +125,7 @@ public class inscripcion_niño extends javax.swing.JFrame {
         label_condicion = new javax.swing.JLabel();
         label_condicion_cual = new javax.swing.JLabel();
         text_condicion_cual = new javax.swing.JTextField();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         dat_madre = new javax.swing.JPanel();
         label_apellido_madre = new javax.swing.JLabel();
         text_apellidos_madre = new javax.swing.JTextField();
@@ -209,29 +234,6 @@ public class inscripcion_niño extends javax.swing.JFrame {
         text_correo_rep = new javax.swing.JTextField();
         label_tlf_rep = new javax.swing.JLabel();
         text_tlf_rep = new javax.swing.JTextField();
-        dat_doc = new javax.swing.JPanel();
-        label_originales = new javax.swing.JLabel();
-        check_originales = new javax.swing.JCheckBox();
-        label_copias = new javax.swing.JLabel();
-        check_copias = new javax.swing.JCheckBox();
-        label_partida = new javax.swing.JLabel();
-        check_partida = new javax.swing.JCheckBox();
-        label_vacunas = new javax.swing.JLabel();
-        check_vacunas = new javax.swing.JCheckBox();
-        label_cedula = new javax.swing.JLabel();
-        check_ci_madre = new javax.swing.JCheckBox();
-        check_ci_padre = new javax.swing.JCheckBox();
-        check_ci_representante = new javax.swing.JCheckBox();
-        label_responsable = new javax.swing.JLabel();
-        text_responsable = new javax.swing.JTextField();
-        label_persona = new javax.swing.JLabel();
-        text_persona = new javax.swing.JTextField();
-        label_fecha = new javax.swing.JLabel();
-        text_fecha = new javax.swing.JTextField();
-        label_observaciones = new javax.swing.JLabel();
-        scroll_observaciones = new javax.swing.JScrollPane();
-        text_observaciones = new javax.swing.JTextPane();
-        btn_aceptar2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 51));
@@ -258,6 +260,156 @@ public class inscripcion_niño extends javax.swing.JFrame {
         headderLayout.setVerticalGroup(
             headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtHeadder, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        dat_doc.setPreferredSize(new java.awt.Dimension(600, 420));
+        dat_doc.setRequestFocusEnabled(false);
+
+        label_originales.setText("Originales");
+
+        label_copias.setText("Copias");
+
+        label_partida.setText("Partidas de nacimiento");
+
+        label_vacunas.setText("Certificado de Vacunas");
+
+        label_cedula.setText("Cedulas de Identidad:");
+
+        check_ci_madre.setText("Madre");
+
+        check_ci_padre.setText("Padre");
+
+        check_ci_representante.setText("Representante");
+
+        label_responsable.setText("Persona responsable en la instirucion en realizar la inscripcion:");
+
+        text_responsable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_responsableActionPerformed(evt);
+            }
+        });
+
+        label_persona.setText("Persona que inscribe al niño o niña");
+
+        text_persona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_personaActionPerformed(evt);
+            }
+        });
+
+        label_fecha.setText("Fecha de incripcicion");
+
+        text_fecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_fechaActionPerformed(evt);
+            }
+        });
+
+        label_observaciones.setText("Observaciones");
+
+        scroll_observaciones.setViewportView(text_observaciones);
+
+        btn_aceptar2.setText("ACEPTAR");
+        btn_aceptar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aceptar2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dat_docLayout = new javax.swing.GroupLayout(dat_doc);
+        dat_doc.setLayout(dat_docLayout);
+        dat_docLayout.setHorizontalGroup(
+            dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_docLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_cedula)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_madre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_representante))
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_responsable)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_persona)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_originales)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_originales)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_copias)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_copias)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_partida)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_partida)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_vacunas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_vacunas)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_observaciones)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(224, Short.MAX_VALUE))
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addComponent(label_fecha)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_aceptar2))))
+        );
+        dat_docLayout.setVerticalGroup(
+            dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_docLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_originales)
+                                .addComponent(check_originales)
+                                .addComponent(label_copias)
+                                .addComponent(check_copias)
+                                .addComponent(label_partida)
+                                .addComponent(check_partida)
+                                .addComponent(label_vacunas)
+                                .addComponent(check_vacunas))
+                            .addComponent(label_observaciones))
+                        .addGap(9, 9, 9)
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_cedula)
+                            .addComponent(check_ci_madre)
+                            .addComponent(check_ci_padre)
+                            .addComponent(check_ci_representante))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_responsable)
+                            .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_persona)
+                            .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(scroll_observaciones))
+                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_fecha)
+                            .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(12, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_docLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_aceptar2))))
         );
 
         datos.setBackground(new java.awt.Color(255, 255, 204));
@@ -389,69 +541,8 @@ public class inscripcion_niño extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(datosLayout.createSequentialGroup()
-                        .addComponent(label_sexo_niñ)
-                        .addGap(18, 18, 18)
-                        .addComponent(radio_masc_niñ)
-                        .addGap(18, 18, 18)
-                        .addComponent(radio_fem_niñ)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, datosLayout.createSequentialGroup()
-                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(datosLayout.createSequentialGroup()
-                                .addComponent(label_nombre_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_nombre_niñ, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_apellido_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_edad_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_edad_niñ1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(datosLayout.createSequentialGroup()
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(datosLayout.createSequentialGroup()
-                                        .addComponent(label_lugar_nac_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_lugar_nac_niñ))
-                                    .addGroup(datosLayout.createSequentialGroup()
-                                        .addComponent(label_estado_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_estado_niñ)))
-                                .addGap(18, 18, 18)
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(datosLayout.createSequentialGroup()
-                                        .addComponent(label_nacionalidad_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(text_nacionalidad_niñ))
-                                    .addGroup(datosLayout.createSequentialGroup()
-                                        .addComponent(label_mun_nac_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap())
-                    .addGroup(datosLayout.createSequentialGroup()
                         .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_procedencia_niñ)
-                            .addGroup(datosLayout.createSequentialGroup()
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(radio_mismo_plantel_niñ)
-                                    .addComponent(radio_hogar_niñ))
-                                .addGap(18, 18, 18)
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(radio_otro_plantel_niñ)
-                                    .addComponent(radio_multihogar_niñ))
-                                .addGap(18, 18, 18)
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(radio_guarderia_niñ)
-                                    .addGroup(datosLayout.createSequentialGroup()
-                                        .addComponent(radio_hogar_cuidado_niñ)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(radio_otros_niñ))))
                             .addGroup(datosLayout.createSequentialGroup()
                                 .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(label_tallas_niñ)
@@ -477,8 +568,64 @@ public class inscripcion_niño extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(label_estatura_niñ)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addComponent(label_edad_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_edad_niñ1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_lugar_nac_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(label_estado_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_mun_nac_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_nacionalidad_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(datosLayout.createSequentialGroup()
+                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addComponent(label_nombre_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_nombre_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_apellido_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_sexo_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_masc_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_fem_niñ))
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addComponent(radio_hogar_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_multihogar_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_hogar_cuidado_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radio_mismo_plantel_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_otro_plantel_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_guarderia_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radio_otros_niñ)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         datosLayout.setVerticalGroup(
             datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,45 +636,40 @@ public class inscripcion_niño extends javax.swing.JFrame {
                     .addComponent(label_nombre_niñ)
                     .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_apellido_niñ)
-                    .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_edad_niñ)
-                    .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_edad_niñ1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_sexo_niñ)
                     .addComponent(radio_masc_niñ)
                     .addComponent(radio_fem_niñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_niñ)
+                    .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_niñ1)
                     .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_lugar_nac_niñ)
-                    .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_mun_nac_niñ))
+                    .addComponent(label_lugar_nac_niñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_estado_niñ)
+                    .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_mun_nac_niñ)
                     .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_nacionalidad_niñ)
-                    .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_nacionalidad_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(label_procedencia_niñ)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(radio_hogar_niñ)
+                        .addComponent(radio_hogar_cuidado_niñ)
+                        .addComponent(radio_mismo_plantel_niñ)
+                        .addComponent(radio_guarderia_niñ)
+                        .addComponent(radio_otro_plantel_niñ)
+                        .addComponent(radio_otros_niñ))
+                    .addComponent(radio_multihogar_niñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(datosLayout.createSequentialGroup()
-                        .addComponent(label_procedencia_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(datosLayout.createSequentialGroup()
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(radio_hogar_niñ)
-                                    .addComponent(radio_hogar_cuidado_niñ)
-                                    .addComponent(radio_otros_niñ))
-                                .addGap(3, 3, 3)
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(radio_mismo_plantel_niñ)
-                                    .addComponent(radio_guarderia_niñ)
-                                    .addComponent(radio_otro_plantel_niñ)))
-                            .addComponent(radio_multihogar_niñ))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_tallas_niñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -545,8 +687,10 @@ public class inscripcion_niño extends javax.swing.JFrame {
                             .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(label_estatura_niñ))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
+
+        panelDatos.addTab("Datos", datos);
 
         diag.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -622,17 +766,13 @@ public class inscripcion_niño extends javax.swing.JFrame {
             .addGroup(diagLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label_problema_desarr)
-                    .addGroup(diagLayout.createSequentialGroup()
-                        .addComponent(label_problema)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_problema_si)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_problema_no)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diagLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(check_motor_no)
                         .addGap(18, 18, 18)
-                        .addComponent(label_problema_cual)
+                        .addComponent(label_motor_cual)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(diagLayout.createSequentialGroup()
                         .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_motor)
@@ -650,95 +790,111 @@ public class inscripcion_niño extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(label_cognitivo_cual)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_cognitivo_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(text_cognitivo_cual))
                             .addGroup(diagLayout.createSequentialGroup()
                                 .addComponent(check_lenguaje_no)
                                 .addGap(18, 18, 18)
                                 .addComponent(label_lenguaje_cual)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_lenguaje_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(text_lenguaje_cual))))
+                    .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(label_problema_desarr)
                             .addGroup(diagLayout.createSequentialGroup()
-                                .addComponent(check_motor_no)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_motor_cual)
+                                .addComponent(label_problema)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(check_problema_si)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_problema_no)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_problema_cual)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addComponent(label_alergia)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_alergia_si)
+                                .addGap(18, 18, 18)
+                                .addComponent(check_alergia_no)
+                                .addGap(12, 12, 12)
+                                .addComponent(label_alergia_cual)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_alergia_cual)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(103, 103, 103)
+                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(diagLayout.createSequentialGroup()
                         .addComponent(label_condicion_cual)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(diagLayout.createSequentialGroup()
-                        .addComponent(label_alergia)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_alergia_si)
-                        .addGap(18, 18, 18)
-                        .addComponent(check_alergia_no)
-                        .addGap(12, 12, 12)
-                        .addComponent(label_alergia_cual)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_alergia_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_condicion_cual))
                     .addGroup(diagLayout.createSequentialGroup()
                         .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_condicion_si)
                         .addGap(18, 18, 18)
                         .addComponent(check_condicion_no)))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addGap(55, 55, 55))
         );
         diagLayout.setVerticalGroup(
             diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(diagLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_problema)
-                    .addComponent(check_problema_si)
-                    .addComponent(check_problema_no)
-                    .addComponent(label_problema_cual)
-                    .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_problema)
+                            .addComponent(check_problema_si)
+                            .addComponent(check_problema_no)
+                            .addComponent(label_problema_cual)
+                            .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_problema_desarr)
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_motor)
+                                    .addComponent(check_motor_si)))
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_motor_cual)
+                                    .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(check_motor_no))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(check_lenguaje_no)
+                                    .addComponent(label_lenguaje_cual)
+                                    .addComponent(text_lenguaje_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(check_lenguaje_si)
+                                    .addComponent(label_lenguaje))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(check_cognitivo_no)
+                                    .addComponent(label_cognitivo_cual)
+                                    .addComponent(text_cognitivo_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(check_cognitivo_si)
+                                    .addComponent(label_cognitivo))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_motor)
-                            .addComponent(check_motor_si)
-                            .addComponent(check_motor_no)
-                            .addComponent(label_motor_cual)
-                            .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(check_alergia_si)
+                            .addComponent(check_alergia_no)
+                            .addComponent(label_alergia_cual)
+                            .addComponent(text_alergia_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_alergia)))
                     .addGroup(diagLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
                         .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(check_lenguaje_no)
-                            .addComponent(label_lenguaje_cual)
-                            .addComponent(text_lenguaje_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(check_lenguaje_si)
-                            .addComponent(label_lenguaje))
+                            .addComponent(check_condicion_si)
+                            .addComponent(check_condicion_no)
+                            .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(check_cognitivo_no)
-                            .addComponent(label_cognitivo_cual)
-                            .addComponent(text_cognitivo_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(check_cognitivo_si)
-                            .addComponent(label_cognitivo))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(check_alergia_si)
-                    .addComponent(check_alergia_no)
-                    .addComponent(label_alergia_cual)
-                    .addComponent(text_alergia_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_alergia))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(check_condicion_si)
-                    .addComponent(check_condicion_no)
-                    .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_condicion_cual)
-                    .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(label_condicion_cual)
+                            .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
+
+        panelDatos.addTab("Antecedentes de Salud", diag);
 
         dat_madre.setBackground(new java.awt.Color(255, 204, 204));
         dat_madre.setPreferredSize(new java.awt.Dimension(600, 420));
@@ -883,34 +1039,8 @@ public class inscripcion_niño extends javax.swing.JFrame {
         dat_madreLayout.setHorizontalGroup(
             dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_madreLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap()
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dat_madreLayout.createSequentialGroup()
-                        .addComponent(label_ocupacion_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(label_direc_trabaj_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_madreLayout.createSequentialGroup()
-                        .addComponent(label_estadociv_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(check_s_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_c_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_d_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_v_madre))
-                    .addGroup(dat_madreLayout.createSequentialGroup()
-                        .addComponent(label_correo_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(label_tlf_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dat_madreLayout.createSequentialGroup()
                         .addComponent(label_grado_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -921,6 +1051,22 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addComponent(check_tsu_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_superior_madre))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_ocupacion_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_direc_trabaj_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_correo_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_tlf_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dat_madreLayout.createSequentialGroup()
                         .addComponent(label_direc_hab_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -936,7 +1082,17 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(label_ci_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_ci_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_ci_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(label_estadociv_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(check_s_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_c_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_d_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_v_madre))
                     .addGroup(dat_madreLayout.createSequentialGroup()
                         .addComponent(label_fec_nac_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -944,8 +1100,8 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_edad_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_edad_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(text_edad_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_lugar_nac_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_lugar_nac_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -955,7 +1111,7 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addComponent(check_ven_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_madre)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(616, Short.MAX_VALUE))
         );
         dat_madreLayout.setVerticalGroup(
             dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -967,39 +1123,35 @@ public class inscripcion_niño extends javax.swing.JFrame {
                     .addComponent(text_nombres_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_nombes_madre)
                     .addComponent(text_ci_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_ci_madre))
-                .addGap(18, 18, 18)
-                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_ci_madre)
                     .addComponent(label_estadociv_madre)
                     .addComponent(check_s_madre)
                     .addComponent(check_c_madre)
                     .addComponent(check_d_madre)
                     .addComponent(check_v_madre))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_edad_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_edad_madre)
                     .addComponent(text_fec_nac_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_fec_nac_madre))
-                .addGap(18, 18, 18)
-                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_fec_nac_madre)
                     .addComponent(text_lugar_nac_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_lugar_nac_madre)
                     .addComponent(label_nacionalidad_madre)
                     .addComponent(check_ven_madre)
                     .addComponent(check_ext_madre))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_direc_hab_madre)
                     .addComponent(text_direc_hab_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_madre)
                     .addComponent(check_no_bachiller_madre)
                     .addComponent(chec_bachiller_madre)
                     .addComponent(check_tsu_madre)
                     .addComponent(check_superior_madre))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_ocupacion_madre)
@@ -1013,8 +1165,10 @@ public class inscripcion_niño extends javax.swing.JFrame {
                     .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(label_correo_madre)
                         .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
+                .addGap(138, 138, 138))
         );
+
+        jTabbedPane1.addTab("Datos Madre", dat_madre);
 
         dat_padre.setBackground(new java.awt.Color(204, 255, 255));
         dat_padre.setPreferredSize(new java.awt.Dimension(600, 450));
@@ -1158,7 +1312,7 @@ public class inscripcion_niño extends javax.swing.JFrame {
         dat_padreLayout.setHorizontalGroup(
             dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_padreLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap()
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dat_padreLayout.createSequentialGroup()
                         .addComponent(label_ocupacion_padre)
@@ -1168,16 +1322,6 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addComponent(label_direc_trabaj_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_direc_trabj_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_padreLayout.createSequentialGroup()
-                        .addComponent(label_estadociv_padre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(check_s_padre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_c_padre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_d_padre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_v_padre))
                     .addGroup(dat_padreLayout.createSequentialGroup()
                         .addComponent(label_correo_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1211,7 +1355,17 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(label_ci_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_estadociv_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(check_s_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_c_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_d_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_v_padre))
                     .addGroup(dat_padreLayout.createSequentialGroup()
                         .addComponent(label_fec_nac_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1219,8 +1373,8 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_edad_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_lugar_nac_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1230,51 +1384,47 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addComponent(check_ven_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_padre)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(616, Short.MAX_VALUE))
         );
         dat_padreLayout.setVerticalGroup(
             dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_padreLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_apellido_padre)
                     .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_nombes_padre)
                     .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_ci_padre))
-                .addGap(18, 18, 18)
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_ci_padre)
                     .addComponent(label_estadociv_padre)
                     .addComponent(check_s_padre)
                     .addComponent(check_c_padre)
                     .addComponent(check_d_padre)
                     .addComponent(check_v_padre))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_edad_padre)
                     .addComponent(text_fec_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_fec_nac_padre))
-                .addGap(18, 18, 18)
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_fec_nac_padre)
                     .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_lugar_nac_padre)
                     .addComponent(label_nacionalidad_padre)
                     .addComponent(check_ven_padre)
                     .addComponent(check_ext_padre))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_direc_hab_padre)
                     .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_padre)
                     .addComponent(check_no_bachiller_padre)
                     .addComponent(chec_bachiller_padre)
                     .addComponent(check_tsu_padre)
                     .addComponent(check_superior_padre))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_ocupacion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_ocupacion_padre)
@@ -1286,8 +1436,10 @@ public class inscripcion_niño extends javax.swing.JFrame {
                     .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_padre)
                     .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
+
+        jTabbedPane1.addTab("Datos Padre", dat_padre);
 
         dat_rep.setBackground(new java.awt.Color(204, 204, 255));
         dat_rep.setPreferredSize(new java.awt.Dimension(600, 420));
@@ -1408,6 +1560,12 @@ public class inscripcion_niño extends javax.swing.JFrame {
 
         label_ocupacion_rep.setText("Ocupacion");
 
+        text_ocupacion_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_ocupacion_repActionPerformed(evt);
+            }
+        });
+
         label_direc_trabaj_rep.setText("Direccion de Trabajo");
 
         label_correo_rep.setText("Correo Electronico");
@@ -1431,7 +1589,7 @@ public class inscripcion_niño extends javax.swing.JFrame {
         dat_repLayout.setHorizontalGroup(
             dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_repLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addContainerGap()
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dat_repLayout.createSequentialGroup()
                         .addComponent(label_ocupacion_rep)
@@ -1441,16 +1599,6 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addComponent(label_direc_trabaj_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_direc_trabj_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_repLayout.createSequentialGroup()
-                        .addComponent(label_estadociv_rep)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(check_s_rep)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_c_rep)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_d_rep)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_v_rep))
                     .addGroup(dat_repLayout.createSequentialGroup()
                         .addComponent(label_correo_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1484,7 +1632,17 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(label_ci_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_ci_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_ci_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_estadociv_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(check_s_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_c_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_d_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_v_rep))
                     .addGroup(dat_repLayout.createSequentialGroup()
                         .addComponent(label_fec_nac_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1492,8 +1650,8 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_edad_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_edad_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_repLayout.createSequentialGroup()
+                        .addComponent(text_edad_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_lugar_nac_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_lugar_nac_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1503,51 +1661,47 @@ public class inscripcion_niño extends javax.swing.JFrame {
                         .addComponent(check_ven_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ext_rep)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(616, Short.MAX_VALUE))
         );
         dat_repLayout.setVerticalGroup(
             dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_repLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_apellidos_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_apellido_rep)
                     .addComponent(text_nombres_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_nombes_rep)
                     .addComponent(text_ci_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_ci_rep))
-                .addGap(18, 18, 18)
-                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_ci_rep)
                     .addComponent(label_estadociv_rep)
                     .addComponent(check_s_rep)
                     .addComponent(check_c_rep)
                     .addComponent(check_d_rep)
                     .addComponent(check_v_rep))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_edad_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_edad_rep)
                     .addComponent(text_fec_nac_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_fec_nac_rep))
-                .addGap(18, 18, 18)
-                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_fec_nac_rep)
                     .addComponent(text_lugar_nac_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_lugar_nac_rep)
                     .addComponent(label_nacionalidad_rep)
                     .addComponent(check_ven_rep)
                     .addComponent(check_ext_rep))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_direc_hab_rep)
                     .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_rep)
                     .addComponent(check_no_bachiller_rep)
                     .addComponent(chec_bachiller_rep)
                     .addComponent(check_tsu_rep)
                     .addComponent(check_superior_rep))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_ocupacion_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_ocupacion_rep)
@@ -1559,178 +1713,25 @@ public class inscripcion_niño extends javax.swing.JFrame {
                     .addComponent(text_correo_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_tlf_rep)
                     .addComponent(text_tlf_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        dat_doc.setPreferredSize(new java.awt.Dimension(600, 420));
-        dat_doc.setRequestFocusEnabled(false);
-
-        label_originales.setText("Originales");
-
-        label_copias.setText("Copias");
-
-        label_partida.setText("Partidas de nacimiento");
-
-        label_vacunas.setText("Certificado de Vacunas");
-
-        label_cedula.setText("Cedulas de Identidad:");
-
-        check_ci_madre.setText("Madre");
-
-        check_ci_padre.setText("Padre");
-
-        check_ci_representante.setText("Representante");
-
-        label_responsable.setText("Persona responsable en la instirucion en realizar la inscripcion:");
-
-        text_responsable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_responsableActionPerformed(evt);
-            }
-        });
-
-        label_persona.setText("Persona que inscribe al niño o niña");
-
-        text_persona.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_personaActionPerformed(evt);
-            }
-        });
-
-        label_fecha.setText("Fecha de incripcicion");
-
-        text_fecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_fechaActionPerformed(evt);
-            }
-        });
-
-        label_observaciones.setText("Observaciones");
-
-        scroll_observaciones.setViewportView(text_observaciones);
-
-        javax.swing.GroupLayout dat_docLayout = new javax.swing.GroupLayout(dat_doc);
-        dat_doc.setLayout(dat_docLayout);
-        dat_docLayout.setHorizontalGroup(
-            dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_docLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dat_docLayout.createSequentialGroup()
-                        .addComponent(label_fecha)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_docLayout.createSequentialGroup()
-                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dat_docLayout.createSequentialGroup()
-                                .addComponent(label_cedula)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_representante))
-                            .addGroup(dat_docLayout.createSequentialGroup()
-                                .addComponent(label_responsable)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(dat_docLayout.createSequentialGroup()
-                                .addComponent(label_persona)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(dat_docLayout.createSequentialGroup()
-                                .addComponent(label_originales)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_originales)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_copias)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_copias)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_partida)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_partida)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_vacunas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_vacunas)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_observaciones)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        dat_docLayout.setVerticalGroup(
-            dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_docLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(dat_docLayout.createSequentialGroup()
-                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(label_originales)
-                                .addComponent(check_originales)
-                                .addComponent(label_copias)
-                                .addComponent(check_copias)
-                                .addComponent(label_partida)
-                                .addComponent(check_partida)
-                                .addComponent(label_vacunas)
-                                .addComponent(check_vacunas))
-                            .addComponent(label_observaciones))
-                        .addGap(9, 9, 9)
-                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_cedula)
-                            .addComponent(check_ci_madre)
-                            .addComponent(check_ci_padre)
-                            .addComponent(check_ci_representante))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_responsable)
-                            .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_persona)
-                            .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(scroll_observaciones))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_fecha)
-                    .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        btn_aceptar2.setText("ACEPTAR");
-        btn_aceptar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_aceptar2ActionPerformed(evt);
-            }
-        });
+        jTabbedPane1.addTab("Datos Representante Legal", dat_rep);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(headder, javax.swing.GroupLayout.DEFAULT_SIZE, 1388, Short.MAX_VALUE)
+            .addComponent(headder, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTabbedPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(imgEstudiante)
                         .addGap(18, 18, 18)
-                        .addComponent(datos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(diag, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(dat_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dat_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dat_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(dat_doc, javax.swing.GroupLayout.PREFERRED_SIZE, 1106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_aceptar2)
-                        .addGap(79, 79, 79)))
+                        .addComponent(panelDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(dat_doc, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1740,21 +1741,12 @@ public class inscripcion_niño extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(imgEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(datos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(diag, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelDatos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(dat_madre, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
-                    .addComponent(dat_padre, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
-                    .addComponent(dat_rep, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dat_doc, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(btn_aceptar2)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dat_doc, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         pack();
@@ -2020,6 +2012,10 @@ public class inscripcion_niño extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_aceptar2ActionPerformed
 
+    private void text_ocupacion_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_ocupacion_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_ocupacion_repActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2056,8 +2052,6 @@ public class inscripcion_niño extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_aceptar;
-    private javax.swing.JButton btn_aceptar1;
     private javax.swing.JButton btn_aceptar2;
     private javax.swing.JCheckBox chec_bachiller_madre;
     private javax.swing.JCheckBox chec_bachiller_padre;
@@ -2116,6 +2110,7 @@ public class inscripcion_niño extends javax.swing.JFrame {
     private javax.swing.JPanel diag;
     private javax.swing.JPanel headder;
     private javax.swing.JLabel imgEstudiante;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel label_alergia;
     private javax.swing.JLabel label_alergia_cual;
     private javax.swing.JLabel label_apellido_madre;
@@ -2197,6 +2192,7 @@ public class inscripcion_niño extends javax.swing.JFrame {
     private javax.swing.JLabel label_tlf_padre;
     private javax.swing.JLabel label_tlf_rep;
     private javax.swing.JLabel label_vacunas;
+    private javax.swing.JTabbedPane panelDatos;
     private javax.swing.JRadioButton radio_fem_niñ;
     private javax.swing.JRadioButton radio_guarderia_niñ;
     private javax.swing.JRadioButton radio_hogar_cuidado_niñ;
