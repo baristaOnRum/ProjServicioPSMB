@@ -31,10 +31,8 @@ public class ConnectDB {
 
     //Definición de funciones de envío de datos
 
-    public void sendRepresentante(Integer ci, String rep_apellidos, String rep_nombres,
-                                  String estado_civil, String lugar_nac, String fecha_nac, String nacionalidad,
-                                  Integer edad, String direccion_hab, String grado_estudios, String ocupacion,
-                                  String direccion_trabj, Long celular, String correo, String rol, Integer menores_6){
+/*
+    public void sendRepresentante(){
 
         try {
             conexion = DriverManager.getConnection(url, user, pass);
@@ -83,13 +81,37 @@ public class ConnectDB {
         }
 
     }
+*//**/
 
     public void sendEstudiante(){
 
     }
-    public void sendObrero(){
+
+    public void removerEstudiante(){}
+
+    public void sendNomina(){
 
     }
+
+    public void removerNomina(){}
+
+    public void sendNominaMaestra(){}
+
+    public void removerNominaMaestra(){}
+
+    public void sendAutorizado(){
+
+    }
+
+    public void removerAutorizado(){}
+
+    public void sendDiagnostico(){}
+
+    public void apprendRepresentado(){}
+
+    public void crearUsuario(){}
+
+
 
     //Main
     public void main(String args[]) throws SQLException{
