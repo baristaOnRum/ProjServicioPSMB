@@ -83,6 +83,8 @@ public class ConnectDB {
     }
 *//**/
 
+    public void removerRepresentante(){}
+
     public void sendEstudiante(){
 
     }
@@ -107,10 +109,17 @@ public class ConnectDB {
 
     public void sendDiagnostico(){}
 
-    public void apprendRepresentado(){}
+    public void removerDiagnostico(){}
+
+    public void setRelRepresentado(){}
+
+    public void setRelAutorizado(){}
 
     public void crearUsuario(){}
 
+    public void removerUsuario(){}
+
+    public void aromoverAño(){}
 
 
     //Main
