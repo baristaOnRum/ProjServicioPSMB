@@ -1,5 +1,6 @@
 package subsystems;
 
+import org.apache.commons.io.input.ClassLoaderObjectInputStream;
 import org.checkerframework.checker.formatter.qual.InvalidFormat;
 import org.docx4j.jaxb.Context;
 import org.docx4j.model.properties.run.Underline;
@@ -15,6 +16,8 @@ import java.io.FileInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.math.BigInteger;
+
+import subsystems.utils;
 
 public class docGen {
 
@@ -33,180 +36,192 @@ public class docGen {
     }
 
     private static void agregarLogos(){
-        String rutaLogoInst;
-        String rutaLogoMin;
+        String rutaLogoInst = "/iconos/logo_inst_256.png";
+        String rutaLogoMin = "/minppe_225x88.png";
 
         //obtenemos el IS del logo del CEI
-        try {InputStream isInst = docGen.class.getResourceAsStream(rutaLogoInst);
+        try {InputStream isInst = docGen.class.getResourceAsStream(rutaLogoInst); //docGen.class.getResourceAsStream(rutaLogoInst
             if (isInst == null) {
                 System.out.println("Archivo no encontrado: " + rutaLogoInst);
             }
-
-
-        }
-
-    }
-
-    private static void agregarFirmas(int caso){
-
-    }
-
-    private static void agregarParrafoCEstilo(P paragraph, String text, boolean bold,
-                                              boolean italic,
-                                              int underline, boolean strikethrough, int fSize){
-        //Definir variables de función
-        HpsMeasure sSz = fabObjetos.createHpsMeasure(); sSz.setVal(BigInteger.valueOf(fSize));
-        BooleanDefaultTrue sBold = fabObjetos.createBooleanDefaultTrue(); sBold.setVal(bold);
-        BooleanDefaultTrue sStrike = fabObjetos.createBooleanDefaultTrue(); sStrike.setVal(strikethrough);
-        BooleanDefaultTrue sItal = fabObjetos.createBooleanDefaultTrue(); sItal.setVal(italic);
-
-        System.out.print("Creando párrafo\n");
-        R run = fabObjetos.createR();
-        System.out.print("Creando estilo\n");
-        RPr style = fabObjetos.createRPr();
-        System.out.print("Definiendo estilo\n");
-        style.setB(sBold);
-        style.setDstrike(sStrike);
-        style.setI(sItal);
-        style.setSz(sSz);
-        U ul = fabObjetos.createU();
-        if (underline == 1){
-            ul.setVal(UnderlineEnumeration.SINGLE);
-        } else if (underline == 2){
-            ul.setVal(UnderlineEnumeration.THICK);
-        } else {
-            ul.setVal(UnderlineEnumeration.NONE);
-        }
-        style.setU(ul);
-
-        Text textElement = fabObjetos.createText();
-        textElement.setValue(text);
-        System.out.print("Añadiendo texto.\n");
-        run.getContent().add(textElement);
-        System.out.print("Aplicando estilo.\n");
-        run.setRPr(style);
-        System.out.print("Añadiendo párrafo.\n");
-        paragraph.getContent().add(run);
-    }
-
-    private static void agregarParrafo(P paragraph, String text) {
-        System.out.print("Añadiendo párrafo.\n");
-        R run = fabObjetos.createR();
-        System.out.print("Run creada.\n");
-        Text textElement = fabObjetos.createText();
-        textElement.setValue(text);
-        System.out.print("Text creado.\n");
-        run.getContent().add(textElement);
-        System.out.print("Text añadido.\n");
-        paragraph.getContent().add(run);
-        System.out.print("Párrafo añadido exiosamente.\n");
-    }
-
-    private static Hdr crearHeader(String text1, String text2, String text3,
-                                   String text4, String text5){
-        //Definimos variables
-        Hdr header = fabObjetos.createHdr();
-        P paragraph = fabObjetos.createP();
-
-        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text3, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text4, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text5, false,false,1,false,18);
-
-        header.getContent().add(paragraph);
-        return header;
-    }
-
-    private static Ftr crearFooter(String text1, String text2){
-        //Definimos variables
-        Ftr footer = fabObjetos.createFtr();
-        P paragraph = fabObjetos.createP();
-
-        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
-
-        footer.getContent().add(paragraph);
-        return footer;
-    }
-
-    private static void setRelHeader(MainDocumentPart docMain, Hdr header){
-        Relationship relacion;
-        try {
-            HeaderPart headerpart = new HeaderPart();
-
-            SectPr propiedades = docMain.getContents().getBody().getSectPr(); //Propiedades de SECCION
-            if (propiedades == null) {
-                propiedades = fabObjetos.createSectPr();
-                docMain.getContents().getBody().setSectPr(propiedades);
+            //obtenemos el IS del logo del MINPPE
+            InputStream isMin = docGen.class.getResourceAsStream(rutaLogoMin);
+            if (isMin == null) {
+                System.out.println("Archivo no encontrado: " + rutaLogoMin);
             }
-            HeaderReference refHeader = fabObjetos.createHeaderReference(); refHeader.setType(HdrFtrRef.DEFAULT);
+            //Guardamos ambos streams como arreglos de bytes
+            byte[] arrInst = utils.leerISAByteArr(isInst);
+            byte[] arrMin = utils.leerISAByteArr(isMin);
 
-            headerpart.setJaxbElement(header);
-            relacion = docMain.addTargetPart(headerpart);
-            refHeader.setId(relacion.getId()); // definimos la relacion del header con el documento
-
-            propiedades.getEGHdrFtrReferences().add(refHeader);
-            System.out.println("Relación de encabezado establecida EXITOSAMENTE");
-        } catch (Docx4JException e){
-            e.printStackTrace();
-            System.out.println("Creación de relación de encabezado FALLIDA");
-        }
-
-    }
-
-    private static void setRelFooter(MainDocumentPart docMain, Ftr footer){
-        Relationship relacion;
-        try {
-            FooterPart footerpart = new FooterPart();
-
-            SectPr propiedades = docMain.getContents().getBody().getSectPr(); //Propiedades de SECCION
-            if (propiedades == null) {
-                propiedades = fabObjetos.createSectPr();
-                docMain.getContents().getBody().setSectPr(propiedades);
-            }
-            FooterReference refFooter = fabObjetos.createFooterReference(); refFooter.setType(HdrFtrRef.DEFAULT);
-
-            footerpart.setJaxbElement(footer);
-            relacion = docMain.addTargetPart(footerpart);
-            refFooter.setId(relacion.getId()); // definimos la relacion del header con el documento
-
-            propiedades.getEGHdrFtrReferences().add(refFooter);
-            System.out.println("Relación de pie de página establecida EXITOSAMENTE");
-
-        } catch (Docx4JException e){
-            e.printStackTrace();
-            System.out.println("Creación de relación de pie de página FALLIDA");
-        }
-
-    }
-
-    private static void guardarArchivo(WordprocessingMLPackage packWord, String nombreYTipo){
-        File outputFile = new File(nombreYTipo);
-        try {packWord.save(outputFile);} catch (Docx4JException e) {e.printStackTrace();}
-    }
-
-    //Inicializa el documento
-    private static WordprocessingMLPackage initDoc(){
-        WordprocessingMLPackage packWord = null;
-        try {
-            packWord = WordprocessingMLPackage.createPackage();
-        } catch (Exception e) {
-            System.out.println("Inicialización de documento FALLIDA");
+            isInst.close();
+            isMin.close();
+        } catch (java.io.IOException e){
             e.printStackTrace();
         }
-        return packWord;
+
     }
 
 
-    //Generadores públicos
+private static void agregarFirmas(int caso){
 
-    public static void generarConstanciaEstudios(){
+}
+
+private static void agregarParrafoCEstilo(P paragraph, String text, boolean bold,
+                                          boolean italic,
+                                          int underline, boolean strikethrough, int fSize){
+    //Definir variables de función
+    HpsMeasure sSz = fabObjetos.createHpsMeasure(); sSz.setVal(BigInteger.valueOf(fSize));
+    BooleanDefaultTrue sBold = fabObjetos.createBooleanDefaultTrue(); sBold.setVal(bold);
+    BooleanDefaultTrue sStrike = fabObjetos.createBooleanDefaultTrue(); sStrike.setVal(strikethrough);
+    BooleanDefaultTrue sItal = fabObjetos.createBooleanDefaultTrue(); sItal.setVal(italic);
+
+    System.out.print("Creando párrafo\n");
+    R run = fabObjetos.createR();
+    System.out.print("Creando estilo\n");
+    RPr style = fabObjetos.createRPr();
+    System.out.print("Definiendo estilo\n");
+    style.setB(sBold);
+    style.setDstrike(sStrike);
+    style.setI(sItal);
+    style.setSz(sSz);
+    U ul = fabObjetos.createU();
+    if (underline == 1){
+        ul.setVal(UnderlineEnumeration.SINGLE);
+    } else if (underline == 2){
+        ul.setVal(UnderlineEnumeration.THICK);
+    } else {
+        ul.setVal(UnderlineEnumeration.NONE);
+    }
+    style.setU(ul);
+
+    Text textElement = fabObjetos.createText();
+    textElement.setValue(text);
+    System.out.print("Añadiendo texto.\n");
+    run.getContent().add(textElement);
+    System.out.print("Aplicando estilo.\n");
+    run.setRPr(style);
+    System.out.print("Añadiendo párrafo.\n");
+    paragraph.getContent().add(run);
+}
+
+private static void agregarParrafo(P paragraph, String text) {
+    System.out.print("Añadiendo párrafo.\n");
+    R run = fabObjetos.createR();
+    System.out.print("Run creada.\n");
+    Text textElement = fabObjetos.createText();
+    textElement.setValue(text);
+    System.out.print("Text creado.\n");
+    run.getContent().add(textElement);
+    System.out.print("Text añadido.\n");
+    paragraph.getContent().add(run);
+    System.out.print("Párrafo añadido exiosamente.\n");
+}
+
+private static Hdr crearHeader(String text1, String text2, String text3,
+                               String text4, String text5){
+    //Definimos variables
+    Hdr header = fabObjetos.createHdr();
+    P paragraph = fabObjetos.createP();
+
+    agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
+    agregarBr(paragraph);
+    agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
+    agregarBr(paragraph);
+    agregarParrafoCEstilo(paragraph, text3, false,false,1,false,18);
+    agregarBr(paragraph);
+    agregarParrafoCEstilo(paragraph, text4, false,false,1,false,18);
+    agregarBr(paragraph);
+    agregarParrafoCEstilo(paragraph, text5, false,false,1,false,18);
+
+    header.getContent().add(paragraph);
+    return header;
+}
+
+private static Ftr crearFooter(String text1, String text2){
+    //Definimos variables
+    Ftr footer = fabObjetos.createFtr();
+    P paragraph = fabObjetos.createP();
+
+    agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
+    agregarBr(paragraph);
+    agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
+
+    footer.getContent().add(paragraph);
+    return footer;
+}
+
+private static void setRelHeader(MainDocumentPart docMain, Hdr header){
+    Relationship relacion;
+    try {
+        HeaderPart headerpart = new HeaderPart();
+
+        SectPr propiedades = docMain.getContents().getBody().getSectPr(); //Propiedades de SECCION
+        if (propiedades == null) {
+            propiedades = fabObjetos.createSectPr();
+            docMain.getContents().getBody().setSectPr(propiedades);
+        }
+        HeaderReference refHeader = fabObjetos.createHeaderReference(); refHeader.setType(HdrFtrRef.DEFAULT);
+
+        headerpart.setJaxbElement(header);
+        relacion = docMain.addTargetPart(headerpart);
+        refHeader.setId(relacion.getId()); // definimos la relacion del header con el documento
+
+        propiedades.getEGHdrFtrReferences().add(refHeader);
+        System.out.println("Relación de encabezado establecida EXITOSAMENTE");
+    } catch (Docx4JException e){
+        e.printStackTrace();
+        System.out.println("Creación de relación de encabezado FALLIDA");
+    }
+
+}
+
+private static void setRelFooter(MainDocumentPart docMain, Ftr footer){
+    Relationship relacion;
+    try {
+        FooterPart footerpart = new FooterPart();
+
+        SectPr propiedades = docMain.getContents().getBody().getSectPr(); //Propiedades de SECCION
+        if (propiedades == null) {
+            propiedades = fabObjetos.createSectPr();
+            docMain.getContents().getBody().setSectPr(propiedades);
+        }
+        FooterReference refFooter = fabObjetos.createFooterReference(); refFooter.setType(HdrFtrRef.DEFAULT);
+
+        footerpart.setJaxbElement(footer);
+        relacion = docMain.addTargetPart(footerpart);
+        refFooter.setId(relacion.getId()); // definimos la relacion del header con el documento
+
+        propiedades.getEGHdrFtrReferences().add(refFooter);
+        System.out.println("Relación de pie de página establecida EXITOSAMENTE");
+
+    } catch (Docx4JException e){
+        e.printStackTrace();
+        System.out.println("Creación de relación de pie de página FALLIDA");
+    }
+
+}
+
+private static void guardarArchivo(WordprocessingMLPackage packWord, String nombreYTipo){
+    File outputFile = new File(nombreYTipo);
+    try {packWord.save(outputFile);} catch (Docx4JException e) {e.printStackTrace();}
+}
+
+//Inicializa el documento
+private static WordprocessingMLPackage initDoc(){
+    WordprocessingMLPackage packWord = null;
+    try {
+        packWord = WordprocessingMLPackage.createPackage();
+    } catch (Exception e) {
+        System.out.println("Inicialización de documento FALLIDA");
+        e.printStackTrace();
+    }
+    return packWord;
+}
+
+
+//Generadores públicos
+
+public static void generarConstanciaEstudios(){
         /*TEXTO:
         Quien suscribe, {Directora} (E) del C.E.I "Arnoldo Gabaldón", que funciona dentro de las
         instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua,
@@ -225,9 +240,9 @@ public class docGen {
         Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
         Teléfono: 0291 6436911
          */
-    }
+}
 
-    public static void generarConstanciaConducta(){
+public static void generarConstanciaConducta(){
         /*
         TEXTO:
         Quien suscribe, {Directora/Profesora} del Centro de Educación Inicial [(C.E.I)] "Arnoldo Gabaldón", que funciona
@@ -242,9 +257,9 @@ public class docGen {
         Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
         Teléfono: 0291 6436911
          */
-    }
+}
 
-    public static void generarConstanciaRetiro(){
+public static void generarConstanciaRetiro(){
         /*
         TEXTO:
         Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
@@ -260,26 +275,28 @@ public class docGen {
         Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
         Teléfono: 0291 6436911
          */
-    }
+}
 
-    public static void generarLicenciaMedica(){
-        WordprocessingMLPackage packWord = initDoc();
+public static void generarLicenciaMedica(){
+    WordprocessingMLPackage packWord = initDoc();
 
-        //Definiciones
-        MainDocumentPart docMain = packWord.getMainDocumentPart();
-        Hdr header = crearHeader("Ministerio del poder popular para la educación",
-                "Distrito escolar 8-B Sector 02","Maturin, Estado Monagas",
-                "Código DEA O D02231608, Código Estadístico: 16100",
-                "Código Administrativo: 004170601");
-        setRelHeader(docMain, header);
+    agregarLogos();
 
-        Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
-                "Teléfono: 0291 6436911");
+    //Definiciones
+    MainDocumentPart docMain = packWord.getMainDocumentPart();
+    Hdr header = crearHeader("Ministerio del poder popular para la educación",
+            "Distrito escolar 8-B Sector 02","Maturin, Estado Monagas",
+            "Código DEA O D02231608, Código Estadístico: 16100",
+            "Código Administrativo: 004170601");
+    setRelHeader(docMain, header);
 
-        setRelFooter(docMain, footer);
+    Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
+            "Teléfono: 0291 6436911");
 
-        P paragraph = fabObjetos.createP();
-        agregarParrafoCEstilo(paragraph, """
+    setRelFooter(docMain, footer);
+
+    P paragraph = fabObjetos.createP();
+    agregarParrafoCEstilo(paragraph, """
                 TEXTO:
                 A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
                 Plantel o dependencia: {nombre_plantel} //C.E.I Arnoldo Gabaldón
@@ -288,12 +305,12 @@ public class docGen {
 
                 {firma}   {firma}
                 Docente   Director""",
-                true,true,
-                1,false, 24);
+            true,true,
+            1,false, 24);
 
-        docMain.getContent().add(paragraph);
+    docMain.getContent().add(paragraph);
 
-        guardarArchivo(packWord, "pruebafase2.docx");
+    guardarArchivo(packWord, "pruebafase2.docx");
 
         /*
         TEXTO:
@@ -317,10 +334,10 @@ public class docGen {
         {firma}
         Director
          */
-    }
+}
 
-    public static void main(String args[]){
-        generarLicenciaMedica();
-    }
+public static void main(String args[]){
+    generarLicenciaMedica();
+}
 
 }
