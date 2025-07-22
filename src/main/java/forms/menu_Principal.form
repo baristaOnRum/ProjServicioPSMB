@@ -1864,13 +1864,13 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="headder" alignment="0" pref="1336" max="32767" attributes="0"/>
+              <Component id="headderEstudiante" alignment="0" pref="1336" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="imgEstudiante1" min="-2" max="-2" attributes="0"/>
+                          <Component id="img_infEstudiante" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="panelDatos" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -1887,10 +1887,10 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="headder" min="-2" max="-2" attributes="0"/>
+                  <Component id="headderEstudiante" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="imgEstudiante1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="img_infEstudiante" alignment="0" max="32767" attributes="0"/>
                       <Component id="panelDatos" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -1905,7 +1905,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="headder">
+        <Container class="javax.swing.JPanel" name="headderEstudiante">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="65" green="78" red="1b" type="rgb"/>
@@ -1920,19 +1920,19 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="txtHeadder" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_headderEstudiante" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="502" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtHeadder" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_headderEstudiante" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="txtHeadder">
+            <Component class="javax.swing.JLabel" name="lbl_headderEstudiante">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -1945,7 +1945,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="imgEstudiante1">
+        <Component class="javax.swing.JLabel" name="img_infEstudiante">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -2012,31 +2012,31 @@
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="label_edad_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_edadNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_edad_niñ" min="-2" pref="102" max="-2" attributes="0"/>
+                                          <Component id="txt_edadNiñ" min="-2" pref="102" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="label_edad_niñ1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="text_edad_niñ1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="label_lugar_nac_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_lugarNacNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_lugar_nac_niñ" min="-2" pref="257" max="-2" attributes="0"/>
+                                          <Component id="txt_lugarNacNiñ" min="-2" pref="257" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                          <Component id="label_estado_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_estadoNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_estado_niñ" min="-2" pref="259" max="-2" attributes="0"/>
+                                          <Component id="txt_estadoNiñ" min="-2" pref="259" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="label_mun_nac_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_munNacNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_munic_niñ" min="-2" pref="180" max="-2" attributes="0"/>
+                                          <Component id="txt_municNiñ" min="-2" pref="180" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="label_nacionalidad_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_nacionalidadNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="text_nacionalidad_niñ" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <Component id="txt_nacionalidadNiñ" min="-2" pref="158" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -2044,19 +2044,19 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="label_nombre_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_nombreNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_nombre_niñ" min="-2" pref="324" max="-2" attributes="0"/>
+                                          <Component id="txt_nombreNiñ" min="-2" pref="324" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="label_apellido_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_apellidoNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_apellido_niñ" min="-2" pref="264" max="-2" attributes="0"/>
+                                          <Component id="txt_apellidoNiñ" min="-2" pref="264" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="label_sexo_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_sexoNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="radio_masc_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdb_mascNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="radio_fem_niñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdb_femNiñ" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="radio_hogar_niñ" min="-2" max="-2" attributes="0"/>
@@ -2085,31 +2085,31 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="text_nombre_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_nombre_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_apellido_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_apellido_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_sexo_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="radio_masc_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="radio_fem_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_nombreNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_nombreNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_apellidoNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_apellidoNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_sexoNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_mascNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_femNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="text_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_edadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_edadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="text_edad_niñ1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="label_edad_niñ1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_lugar_nac_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_lugar_nac_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="label_estado_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_estado_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_munic_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_mun_nac_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_nacionalidad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_nacionalidad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_estadoNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_estadoNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_municNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_munNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_nacionalidadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_nacionalidadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="label_procedencia_niñ" min="-2" max="-2" attributes="0"/>
@@ -2156,83 +2156,83 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="label_nombre_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_nombreNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nombre"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_nombre_ni&#xf1;">
+                <Component class="javax.swing.JTextField" name="txt_nombreNi&#xf1;">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_nombre_ni&#xf1;ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_nombreNi&#xf1;ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_apellido_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_apellidoNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Apellido"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_apellido_ni&#xf1;">
+                <Component class="javax.swing.JTextField" name="txt_apellidoNi&#xf1;">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_apellido_ni&#xf1;ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_apellidoNi&#xf1;ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_edad_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_edadNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_edad_ni&#xf1;">
+                <Component class="javax.swing.JTextField" name="txt_edadNi&#xf1;">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_edad_ni&#xf1;ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_edadNi&#xf1;ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_sexo_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_sexoNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Sexo"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="radio_masc_ni&#xf1;">
+                <Component class="javax.swing.JRadioButton" name="rdb_mascNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Masculino"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="actionCommand" type="java.lang.String" value="masculino"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="radio_fem_ni&#xf1;">
+                <Component class="javax.swing.JRadioButton" name="rdb_femNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="femenino"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_lugar_nac_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_lugarNacNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Lugar de Nacimiento"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_lugar_nac_ni&#xf1;">
+                <Component class="javax.swing.JTextField" name="txt_lugarNacNi&#xf1;">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_lugar_nac_ni&#xf1;ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_lugarNacNi&#xf1;ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_mun_nac_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_munNacNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Municipio"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_munic_ni&#xf1;">
+                <Component class="javax.swing.JTextField" name="txt_municNi&#xf1;">
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_estado_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_estadoNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Estado"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_estado_ni&#xf1;">
+                <Component class="javax.swing.JTextField" name="txt_estadoNi&#xf1;">
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_nacionalidad_ni&#xf1;">
+                <Component class="javax.swing.JLabel" name="lbl_nacionalidadNi&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nacionalidad"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_nacionalidad_ni&#xf1;">
+                <Component class="javax.swing.JTextField" name="txt_nacionalidadNi&#xf1;">
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_edad_ni&#xf1;1">
                   <Properties>
@@ -4010,7 +4010,7 @@
                       <Component id="docNomina" alignment="0" pref="1324" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="btn_aceptar3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_aceptarNomina" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -4049,7 +4049,7 @@
                   <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                   <Component id="docNomina" min="-2" pref="144" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btn_aceptar3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_aceptarNomina" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="82" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -4551,7 +4551,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbl_nivelNominaMaestra" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_seccionNominaMaestra" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_cant1x10Nomina1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_estatusNomina" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_turnoNomina" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -4559,14 +4559,14 @@
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                               <Component id="txt_seccionNominaMaestra" alignment="0" max="32767" attributes="0"/>
                               <Component id="txt_nivelNominaMaestra" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_cant1x10Nomina1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt_estatusNomina" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="txt_turnoNomina" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lbl_cant1x10Nomina2" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_fechIngresoNomina" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txt_cant1x10Nomina2" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txt_fechaIngresoNomina" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
@@ -4582,8 +4582,8 @@
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="txt_turnoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="3" groupAlignment="3" attributes="0">
-                                  <Component id="lbl_cant1x10Nomina2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_cant1x10Nomina2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_fechIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_fechaIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -4599,8 +4599,8 @@
                       </Group>
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_cant1x10Nomina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_cant1x10Nomina1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_estatusNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_estatusNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
@@ -4629,19 +4629,19 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txt_seccionNominaMaestra">
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_cant1x10Nomina1">
+            <Component class="javax.swing.JLabel" name="lbl_estatusNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Estatus"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_cant1x10Nomina1">
+            <Component class="javax.swing.JTextField" name="txt_estatusNomina">
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_cant1x10Nomina2">
+            <Component class="javax.swing.JLabel" name="lbl_fechIngresoNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fecha de Ingreso"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_cant1x10Nomina2">
+            <Component class="javax.swing.JTextField" name="txt_fechaIngresoNomina">
             </Component>
           </SubComponents>
         </Container>
@@ -4841,12 +4841,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="btn_aceptar3">
+        <Component class="javax.swing.JButton" name="btn_aceptarNomina">
           <Properties>
             <Property name="text" type="java.lang.String" value="ACEPTAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_aceptar3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_aceptarNominaActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
