@@ -4014,11 +4014,11 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="dat_madre4" alignment="0" pref="1318" max="32767" attributes="0"/>
+                              <Component id="datGubNomina" alignment="0" pref="1318" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="imgNomina" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="datosPers" min="-2" max="-2" attributes="0"/>
+                                  <Component id="datosPersNomina" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
@@ -4035,10 +4035,10 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="imgNomina" min="-2" max="-2" attributes="0"/>
-                      <Component id="datosPers" min="-2" max="-2" attributes="0"/>
+                      <Component id="datosPersNomina" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="dat_madre4" min="-2" pref="174" max="-2" attributes="0"/>
+                  <Component id="datGubNomina" min="-2" pref="174" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                   <Component id="dat_doc1" min="-2" pref="144" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -4097,7 +4097,7 @@
             </Property>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="datosPers">
+        <Container class="javax.swing.JPanel" name="datosPersNomina">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="ff" red="ff" type="rgb"/>
@@ -4361,7 +4361,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="dat_madre4">
+        <Container class="javax.swing.JPanel" name="datGubNomina">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="ff" type="rgb"/>
@@ -4379,11 +4379,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_votoNomina" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_siNomina" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_noNomina" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -4423,9 +4423,9 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_votoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdb_siNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rdb_noNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="63" max="32767" attributes="0"/>
                   </Group>
@@ -4454,17 +4454,17 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txt_centrVotNomina">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
+            <Component class="javax.swing.JLabel" name="lbl_votoNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ya ha votado?"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+            <Component class="javax.swing.JRadioButton" name="rdb_siNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Si"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+            <Component class="javax.swing.JRadioButton" name="rdb_noNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="No"/>
               </Properties>

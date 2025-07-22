@@ -326,7 +326,7 @@ public void createConfPanel(){
         headderInfNomina = new javax.swing.JPanel();
         lbl_headderInfNomina = new javax.swing.JLabel();
         imgNomina = new javax.swing.JLabel();
-        datosPers = new javax.swing.JPanel();
+        datosPersNomina = new javax.swing.JPanel();
         lbl_ciNomina = new javax.swing.JLabel();
         txt_ciNomina = new javax.swing.JTextField();
         lbl_rifNomina = new javax.swing.JLabel();
@@ -354,16 +354,16 @@ public void createConfPanel(){
         txt_munResNomina2 = new javax.swing.JTextField();
         lbl_munResNomina3 = new javax.swing.JLabel();
         txt_munResNomina3 = new javax.swing.JTextField();
-        dat_madre4 = new javax.swing.JPanel();
+        datGubNomina = new javax.swing.JPanel();
         lbl_munVotNomina = new javax.swing.JLabel();
         txt_munVotNomina = new javax.swing.JTextField();
         lbl_parrqVotNomina = new javax.swing.JLabel();
         txt_parrqVotNomina = new javax.swing.JTextField();
         lbl_centrVotNomina = new javax.swing.JLabel();
         txt_centrVotNomina = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        lbl_votoNomina = new javax.swing.JLabel();
+        rdb_siNomina = new javax.swing.JRadioButton();
+        rdb_noNomina = new javax.swing.JRadioButton();
         dat_doc1 = new javax.swing.JPanel();
         label_originales1 = new javax.swing.JLabel();
         check_originales1 = new javax.swing.JCheckBox();
@@ -2983,7 +2983,7 @@ public void createConfPanel(){
         imgNomina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imgNomina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
 
-        datosPers.setBackground(new java.awt.Color(255, 255, 204));
+        datosPersNomina.setBackground(new java.awt.Color(255, 255, 204));
 
         lbl_ciNomina.setText("C.I");
 
@@ -3047,16 +3047,16 @@ public void createConfPanel(){
 
         lbl_munResNomina3.setText("Calle Residencia");
 
-        javax.swing.GroupLayout datosPersLayout = new javax.swing.GroupLayout(datosPers);
-        datosPers.setLayout(datosPersLayout);
-        datosPersLayout.setHorizontalGroup(
-            datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(datosPersLayout.createSequentialGroup()
+        javax.swing.GroupLayout datosPersNominaLayout = new javax.swing.GroupLayout(datosPersNomina);
+        datosPersNomina.setLayout(datosPersNominaLayout);
+        datosPersNominaLayout.setHorizontalGroup(
+            datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosPersNominaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(datosPersLayout.createSequentialGroup()
-                        .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(datosPersLayout.createSequentialGroup()
+                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datosPersNominaLayout.createSequentialGroup()
+                        .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_fechNacimNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_fechNacimNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3064,13 +3064,13 @@ public void createConfPanel(){
                                 .addComponent(lbl_edadNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_edadNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(datosPersLayout.createSequentialGroup()
+                            .addGroup(datosPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_ciNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_ciNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(lbl_rifNomina))
-                            .addGroup(datosPersLayout.createSequentialGroup()
+                            .addGroup(datosPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_munResNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3087,12 +3087,12 @@ public void createConfPanel(){
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_munResNomina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 15, Short.MAX_VALUE))
-                    .addGroup(datosPersLayout.createSequentialGroup()
-                        .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(datosPersLayout.createSequentialGroup()
-                                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(datosPersNominaLayout.createSequentialGroup()
+                        .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosPersNominaLayout.createSequentialGroup()
+                                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(txt_rifNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, datosPersLayout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, datosPersNominaLayout.createSequentialGroup()
                                         .addComponent(lbl_nombreNomina)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txt_nombreNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -3106,27 +3106,27 @@ public void createConfPanel(){
                                 .addComponent(rdb_mascNomina)
                                 .addGap(18, 18, 18)
                                 .addComponent(rdb_femNomina))
-                            .addGroup(datosPersLayout.createSequentialGroup()
+                            .addGroup(datosPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_tlfNomina2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_tlfNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(datosPersLayout.createSequentialGroup()
+                            .addGroup(datosPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_tlfNomina1)
                                 .addGap(18, 18, 18)
                                 .addComponent(txt_tlfNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-        datosPersLayout.setVerticalGroup(
-            datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(datosPersLayout.createSequentialGroup()
+        datosPersNominaLayout.setVerticalGroup(
+            datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosPersNominaLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_ciNomina)
                     .addComponent(txt_ciNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_rifNomina)
                     .addComponent(txt_rifNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_nombreNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombreNomina)
                     .addComponent(txt_apellidoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3135,36 +3135,36 @@ public void createConfPanel(){
                     .addComponent(rdb_mascNomina)
                     .addComponent(rdb_femNomina))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_fechNacimNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_fechNacimNomina)
                     .addComponent(txt_edadNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_edadNomina))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_munResNomina)
                     .addComponent(txt_munResNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_munResNomina1)
                     .addComponent(txt_munResNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_munResNomina2)
-                    .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txt_munResNomina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_munResNomina3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_tlfNomina1)
                     .addComponent(txt_tlfNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_tlfNomina2)
                     .addComponent(txt_tlfNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        dat_madre4.setBackground(new java.awt.Color(255, 204, 204));
-        dat_madre4.setPreferredSize(new java.awt.Dimension(600, 420));
-        dat_madre4.setRequestFocusEnabled(false);
+        datGubNomina.setBackground(new java.awt.Color(255, 204, 204));
+        datGubNomina.setPreferredSize(new java.awt.Dimension(600, 420));
+        datGubNomina.setRequestFocusEnabled(false);
 
         lbl_munVotNomina.setText("Municipio Eleccion");
 
@@ -3172,57 +3172,57 @@ public void createConfPanel(){
 
         lbl_centrVotNomina.setText("Centro de Votacion");
 
-        jLabel16.setText("Ya ha votado?");
+        lbl_votoNomina.setText("Ya ha votado?");
 
-        jRadioButton1.setText("Si");
+        rdb_siNomina.setText("Si");
 
-        jRadioButton2.setText("No");
+        rdb_noNomina.setText("No");
 
-        javax.swing.GroupLayout dat_madre4Layout = new javax.swing.GroupLayout(dat_madre4);
-        dat_madre4.setLayout(dat_madre4Layout);
-        dat_madre4Layout.setHorizontalGroup(
-            dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_madre4Layout.createSequentialGroup()
+        javax.swing.GroupLayout datGubNominaLayout = new javax.swing.GroupLayout(datGubNomina);
+        datGubNomina.setLayout(datGubNominaLayout);
+        datGubNominaLayout.setHorizontalGroup(
+            datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datGubNominaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dat_madre4Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
+                .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datGubNominaLayout.createSequentialGroup()
+                        .addComponent(lbl_votoNomina)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton1)
+                        .addComponent(rdb_siNomina)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2))
-                    .addGroup(dat_madre4Layout.createSequentialGroup()
-                        .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(rdb_noNomina))
+                    .addGroup(datGubNominaLayout.createSequentialGroup()
+                        .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_munVotNomina)
                             .addComponent(lbl_parrqVotNomina)
                             .addComponent(lbl_centrVotNomina))
                         .addGap(23, 23, 23)
-                        .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_centrVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_munVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_parrqVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        dat_madre4Layout.setVerticalGroup(
-            dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_madre4Layout.createSequentialGroup()
+        datGubNominaLayout.setVerticalGroup(
+            datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datGubNominaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_munVotNomina)
                     .addComponent(txt_munVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_parrqVotNomina)
                     .addComponent(txt_parrqVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_centrVotNomina)
                     .addComponent(txt_centrVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_votoNomina)
+                    .addComponent(rdb_siNomina)
+                    .addComponent(rdb_noNomina))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
@@ -3377,11 +3377,11 @@ public void createConfPanel(){
                         .addComponent(btn_aceptar3))
                     .addGroup(informacionNominaLayout.createSequentialGroup()
                         .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(dat_madre4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1318, Short.MAX_VALUE)
+                            .addComponent(datGubNomina, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1318, Short.MAX_VALUE)
                             .addGroup(informacionNominaLayout.createSequentialGroup()
                                 .addComponent(imgNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(datosPers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(datosPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 6, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -3392,9 +3392,9 @@ public void createConfPanel(){
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(imgNomina)
-                    .addComponent(datosPers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datosPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dat_madre4, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datGubNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68)
                 .addComponent(dat_doc1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -4001,17 +4001,17 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JCheckBox check_ven_madre3;
     private javax.swing.JCheckBox check_ven_padre;
     private javax.swing.JCheckBox check_ven_rep;
+    private javax.swing.JPanel datGubNomina;
     private javax.swing.JPanel dat_doc;
     private javax.swing.JPanel dat_doc1;
     private javax.swing.JPanel dat_madre;
     private javax.swing.JPanel dat_madre1;
     private javax.swing.JPanel dat_madre2;
     private javax.swing.JPanel dat_madre3;
-    private javax.swing.JPanel dat_madre4;
     private javax.swing.JPanel dat_padre;
     private javax.swing.JPanel dat_rep;
     private javax.swing.JPanel datos;
-    private javax.swing.JPanel datosPers;
+    private javax.swing.JPanel datosPersNomina;
     private javax.swing.JPanel diag;
     private javax.swing.JPanel headder;
     private javax.swing.JPanel headderAut;
@@ -4055,7 +4055,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -4064,8 +4063,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -4230,6 +4227,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_sexoNomina;
     private javax.swing.JLabel lbl_tlfNomina1;
     private javax.swing.JLabel lbl_tlfNomina2;
+    private javax.swing.JLabel lbl_votoNomina;
     private javax.swing.JLabel logoPreescolar;
     private javax.swing.JPanel menuPrincipal;
     private javax.swing.JPanel panel;
@@ -4245,6 +4243,8 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JRadioButton radio_otros_niñ;
     private javax.swing.JRadioButton rdb_femNomina;
     private javax.swing.JRadioButton rdb_mascNomina;
+    private javax.swing.JRadioButton rdb_noNomina;
+    private javax.swing.JRadioButton rdb_siNomina;
     private javax.swing.JScrollPane scroll_observaciones;
     private javax.swing.JTextField text_alergia_cual;
     private javax.swing.JTextField text_apellido_niñ;
