@@ -4007,18 +4007,22 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="dat_doc1" alignment="0" pref="1324" max="32767" attributes="0"/>
+                      <Component id="docNomina" alignment="0" pref="1324" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="btn_aceptar3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="datGubNomina" alignment="0" pref="1318" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="imgNomina" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="datosPersNomina" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="datGubNomina" min="-2" pref="683" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="datPlantelNomina" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
@@ -4038,12 +4042,15 @@
                       <Component id="datosPersNomina" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="datGubNomina" min="-2" pref="174" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                  <Component id="dat_doc1" min="-2" pref="144" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="datGubNomina" pref="131" max="32767" attributes="0"/>
+                      <Component id="datPlantelNomina" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                  <Component id="docNomina" min="-2" pref="144" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btn_aceptar3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="95" max="32767" attributes="0"/>
+                  <EmptySpace pref="82" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -4215,16 +4222,18 @@
                           <Component id="lbl_edadNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txt_munResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_munResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_munResNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_munResNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_munResNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_munResNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="txt_munResNomina3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_munResNomina3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txt_munResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_munResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_munResNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_munResNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_munResNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_munResNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -4379,13 +4388,6 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="lbl_votoNomina" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rdb_siNomina" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rdb_noNomina" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lbl_munVotNomina" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="lbl_parrqVotNomina" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4393,11 +4395,32 @@
                               </Group>
                               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_centrVotNomina" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_munVotNomina" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_parrqVotNomina" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_munVotNomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_parrqVotNomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_centrVotNomina" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_votoNomina" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rdb_siNomina" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rdb_noNomina" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbl_jefComNomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_ciJefComNomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_1x10Nomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_cant1x10Nomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txt_ciJefComNomina" pref="100" max="32767" attributes="0"/>
+                          <Component id="txt_jefComNomina" max="32767" attributes="0"/>
+                          <Component id="txt_1x10Nomina" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_cant1x10Nomina" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -4410,24 +4433,38 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lbl_munVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txt_munVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_jefComNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_jefComNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lbl_parrqVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txt_parrqVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_ciJefComNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_ciJefComNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txt_1x10Nomina" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_votoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rdb_siNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rdb_noNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_votoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_siNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_noNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="lbl_cant1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_cant1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="63" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4469,9 +4506,146 @@
                 <Property name="text" type="java.lang.String" value="No"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JLabel" name="lbl_jefComNomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre del Jefe de la Comunidad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_jefComNomina">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_ciJefComNomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C.I del Jefe de la Comunidad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_ciJefComNomina">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_1x10Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Posee el 1x10"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_1x10Nomina">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_cant1x10Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cantidad de personas en el 1x10"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_cant1x10Nomina">
+            </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="dat_doc1">
+        <Container class="javax.swing.JPanel" name="datPlantelNomina">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbl_nivelNominaMaestra" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_seccionNominaMaestra" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_cant1x10Nomina1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_turnoNomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txt_seccionNominaMaestra" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_nivelNominaMaestra" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_cant1x10Nomina1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txt_turnoNomina" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lbl_cant1x10Nomina2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txt_cant1x10Nomina2" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbl_turnoNomina" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="txt_turnoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                  <Component id="lbl_cant1x10Nomina2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_cant1x10Nomina2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_nivelNominaMaestra" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_nivelNominaMaestra" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_seccionNominaMaestra" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_seccionNominaMaestra" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_cant1x10Nomina1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_cant1x10Nomina1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lbl_turnoNomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turno"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_turnoNomina">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_nivelNominaMaestra">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nivel"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_nivelNominaMaestra">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_seccionNominaMaestra">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Seccion"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_seccionNominaMaestra">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_cant1x10Nomina1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estatus"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_cant1x10Nomina1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_cant1x10Nomina2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de Ingreso"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_cant1x10Nomina2">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="docNomina">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[600, 420]"/>
