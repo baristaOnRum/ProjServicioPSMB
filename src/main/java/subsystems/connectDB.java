@@ -1,10 +1,8 @@
 package subsystems;
 
 import java.sql.*;
-import java.time.*;
-import subsystems.docGen;
 
-public class ConnectDB {
+public class connectDB {
 
     //Definir parámetros de conexión
     String url;
@@ -119,7 +117,7 @@ public class ConnectDB {
 
     public void removerUsuario(){}
 
-    public void aromoverAño(){}
+    public void promoverAño(){}
 
 
     //Main
