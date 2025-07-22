@@ -113,6 +113,278 @@ public void createConfPanel(){
         jButton15 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
         jComboBox2 = new javax.swing.JComboBox<>();
+        informacionEstudiante = new javax.swing.JPanel();
+        headder = new javax.swing.JPanel();
+        txtHeadder = new javax.swing.JLabel();
+        imgEstudiante1 = new javax.swing.JLabel();
+        panelDatos = new javax.swing.JTabbedPane();
+        datos = new javax.swing.JPanel();
+        label_nombre_niñ = new javax.swing.JLabel();
+        text_nombre_niñ = new javax.swing.JTextField();
+        label_apellido_niñ = new javax.swing.JLabel();
+        text_apellido_niñ = new javax.swing.JTextField();
+        label_edad_niñ = new javax.swing.JLabel();
+        text_edad_niñ = new javax.swing.JTextField();
+        label_sexo_niñ = new javax.swing.JLabel();
+        radio_masc_niñ = new javax.swing.JRadioButton();
+        radio_fem_niñ = new javax.swing.JRadioButton();
+        label_lugar_nac_niñ = new javax.swing.JLabel();
+        text_lugar_nac_niñ = new javax.swing.JTextField();
+        label_mun_nac_niñ = new javax.swing.JLabel();
+        text_munic_niñ = new javax.swing.JTextField();
+        label_estado_niñ = new javax.swing.JLabel();
+        text_estado_niñ = new javax.swing.JTextField();
+        label_nacionalidad_niñ = new javax.swing.JLabel();
+        text_nacionalidad_niñ = new javax.swing.JTextField();
+        label_edad_niñ1 = new javax.swing.JLabel();
+        text_edad_niñ1 = new javax.swing.JTextField();
+        label_procedencia_niñ = new javax.swing.JLabel();
+        radio_hogar_niñ = new javax.swing.JRadioButton();
+        radio_mismo_plantel_niñ = new javax.swing.JRadioButton();
+        radio_multihogar_niñ = new javax.swing.JRadioButton();
+        radio_otro_plantel_niñ = new javax.swing.JRadioButton();
+        radio_hogar_cuidado_niñ = new javax.swing.JRadioButton();
+        radio_guarderia_niñ = new javax.swing.JRadioButton();
+        radio_otros_niñ = new javax.swing.JRadioButton();
+        label_tallas_niñ = new javax.swing.JLabel();
+        label_camisa_niñ = new javax.swing.JLabel();
+        text_tall_camisa_niñ = new javax.swing.JTextField();
+        label_tall_pantalon_niñ = new javax.swing.JLabel();
+        text_tall_pantalon_niñ = new javax.swing.JTextField();
+        label_tall_zapato_niñ = new javax.swing.JLabel();
+        text_tall_zapato_niñ = new javax.swing.JTextField();
+        label_medidas_niñ = new javax.swing.JLabel();
+        label_peso_niñ = new javax.swing.JLabel();
+        text_peso_niñ = new javax.swing.JTextField();
+        label_estatura_niñ = new javax.swing.JLabel();
+        text_estatura_niñ = new javax.swing.JTextField();
+        diag = new javax.swing.JPanel();
+        label_problema = new javax.swing.JLabel();
+        check_problema_si = new javax.swing.JCheckBox();
+        check_problema_no = new javax.swing.JCheckBox();
+        label_problema_cual = new javax.swing.JLabel();
+        text_problema_cual = new javax.swing.JTextField();
+        label_problema_desarr = new javax.swing.JLabel();
+        label_motor = new javax.swing.JLabel();
+        check_motor_si = new javax.swing.JCheckBox();
+        check_motor_no = new javax.swing.JCheckBox();
+        label_motor_cual = new javax.swing.JLabel();
+        text_motor_cual = new javax.swing.JTextField();
+        text_lenguaje_cual = new javax.swing.JTextField();
+        label_lenguaje_cual = new javax.swing.JLabel();
+        check_lenguaje_no = new javax.swing.JCheckBox();
+        check_lenguaje_si = new javax.swing.JCheckBox();
+        label_lenguaje = new javax.swing.JLabel();
+        label_cognitivo = new javax.swing.JLabel();
+        check_cognitivo_si = new javax.swing.JCheckBox();
+        check_cognitivo_no = new javax.swing.JCheckBox();
+        label_cognitivo_cual = new javax.swing.JLabel();
+        text_cognitivo_cual = new javax.swing.JTextField();
+        label_alergia = new javax.swing.JLabel();
+        check_alergia_si = new javax.swing.JCheckBox();
+        check_alergia_no = new javax.swing.JCheckBox();
+        label_alergia_cual = new javax.swing.JLabel();
+        text_alergia_cual = new javax.swing.JTextField();
+        check_condicion_no = new javax.swing.JCheckBox();
+        check_condicion_si = new javax.swing.JCheckBox();
+        label_condicion = new javax.swing.JLabel();
+        label_condicion_cual = new javax.swing.JLabel();
+        text_condicion_cual = new javax.swing.JTextField();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        dat_madre = new javax.swing.JPanel();
+        label_apellido_madre = new javax.swing.JLabel();
+        text_apellidos_madre = new javax.swing.JTextField();
+        label_nombes_madre = new javax.swing.JLabel();
+        text_nombres_madre = new javax.swing.JTextField();
+        label_ci_madre = new javax.swing.JLabel();
+        text_ci_madre = new javax.swing.JTextField();
+        label_estadociv_madre = new javax.swing.JLabel();
+        check_s_madre = new javax.swing.JCheckBox();
+        check_c_madre = new javax.swing.JCheckBox();
+        check_d_madre = new javax.swing.JCheckBox();
+        check_v_madre = new javax.swing.JCheckBox();
+        label_fec_nac_madre = new javax.swing.JLabel();
+        text_fec_nac_madre = new javax.swing.JTextField();
+        label_edad_madre = new javax.swing.JLabel();
+        text_edad_madre = new javax.swing.JTextField();
+        label_lugar_nac_madre = new javax.swing.JLabel();
+        text_lugar_nac_madre = new javax.swing.JTextField();
+        label_nacionalidad_madre = new javax.swing.JLabel();
+        check_ven_madre = new javax.swing.JCheckBox();
+        check_ext_madre = new javax.swing.JCheckBox();
+        label_direc_hab_madre = new javax.swing.JLabel();
+        text_direc_hab_madre = new javax.swing.JTextField();
+        label_grado_madre = new javax.swing.JLabel();
+        check_no_bachiller_madre = new javax.swing.JCheckBox();
+        chec_bachiller_madre = new javax.swing.JCheckBox();
+        check_tsu_madre = new javax.swing.JCheckBox();
+        check_superior_madre = new javax.swing.JCheckBox();
+        label_ocupacion_madre = new javax.swing.JLabel();
+        text_ocupacion_madre = new javax.swing.JTextField();
+        label_direc_trabaj_madre = new javax.swing.JLabel();
+        text_direc_trabj_madre = new javax.swing.JTextField();
+        label_correo_madre = new javax.swing.JLabel();
+        text_correo_madre = new javax.swing.JTextField();
+        label_tlf_madre = new javax.swing.JLabel();
+        text_tlf_madre = new javax.swing.JTextField();
+        dat_padre = new javax.swing.JPanel();
+        label_apellido_padre = new javax.swing.JLabel();
+        text_apellidos_padre = new javax.swing.JTextField();
+        label_nombes_padre = new javax.swing.JLabel();
+        text_nombres_padre = new javax.swing.JTextField();
+        label_ci_padre = new javax.swing.JLabel();
+        text_ci_padre = new javax.swing.JTextField();
+        label_estadociv_padre = new javax.swing.JLabel();
+        check_s_padre = new javax.swing.JCheckBox();
+        check_c_padre = new javax.swing.JCheckBox();
+        check_d_padre = new javax.swing.JCheckBox();
+        check_v_padre = new javax.swing.JCheckBox();
+        label_fec_nac_padre = new javax.swing.JLabel();
+        text_fec_nac_padre = new javax.swing.JTextField();
+        label_edad_padre = new javax.swing.JLabel();
+        text_edad_padre = new javax.swing.JTextField();
+        label_lugar_nac_padre = new javax.swing.JLabel();
+        text_lugar_nac_padre = new javax.swing.JTextField();
+        label_nacionalidad_padre = new javax.swing.JLabel();
+        check_ven_padre = new javax.swing.JCheckBox();
+        check_ext_padre = new javax.swing.JCheckBox();
+        label_direc_hab_padre = new javax.swing.JLabel();
+        text_direc_hab_padre = new javax.swing.JTextField();
+        label_grado_padre = new javax.swing.JLabel();
+        check_no_bachiller_padre = new javax.swing.JCheckBox();
+        chec_bachiller_padre = new javax.swing.JCheckBox();
+        check_tsu_padre = new javax.swing.JCheckBox();
+        check_superior_padre = new javax.swing.JCheckBox();
+        label_ocupacion_padre = new javax.swing.JLabel();
+        text_ocupacion_padre = new javax.swing.JTextField();
+        label_direc_trabaj_padre = new javax.swing.JLabel();
+        text_direc_trabj_padre = new javax.swing.JTextField();
+        label_correo_padre = new javax.swing.JLabel();
+        text_correo_padre = new javax.swing.JTextField();
+        label_tlf_padre = new javax.swing.JLabel();
+        text_tlf_padre = new javax.swing.JTextField();
+        dat_rep = new javax.swing.JPanel();
+        label_apellido_rep = new javax.swing.JLabel();
+        text_apellidos_rep = new javax.swing.JTextField();
+        label_nombes_rep = new javax.swing.JLabel();
+        text_nombres_rep = new javax.swing.JTextField();
+        label_ci_rep = new javax.swing.JLabel();
+        text_ci_rep = new javax.swing.JTextField();
+        label_estadociv_rep = new javax.swing.JLabel();
+        check_s_rep = new javax.swing.JCheckBox();
+        check_c_rep = new javax.swing.JCheckBox();
+        check_d_rep = new javax.swing.JCheckBox();
+        check_v_rep = new javax.swing.JCheckBox();
+        label_fec_nac_rep = new javax.swing.JLabel();
+        text_fec_nac_rep = new javax.swing.JTextField();
+        label_edad_rep = new javax.swing.JLabel();
+        text_edad_rep = new javax.swing.JTextField();
+        label_lugar_nac_rep = new javax.swing.JLabel();
+        text_lugar_nac_rep = new javax.swing.JTextField();
+        label_nacionalidad_rep = new javax.swing.JLabel();
+        check_ven_rep = new javax.swing.JCheckBox();
+        check_ext_rep = new javax.swing.JCheckBox();
+        label_direc_hab_rep = new javax.swing.JLabel();
+        text_direc_hab_rep = new javax.swing.JTextField();
+        label_grado_rep = new javax.swing.JLabel();
+        check_no_bachiller_rep = new javax.swing.JCheckBox();
+        chec_bachiller_rep = new javax.swing.JCheckBox();
+        check_tsu_rep = new javax.swing.JCheckBox();
+        check_superior_rep = new javax.swing.JCheckBox();
+        label_ocupacion_rep = new javax.swing.JLabel();
+        text_ocupacion_rep = new javax.swing.JTextField();
+        label_direc_trabaj_rep = new javax.swing.JLabel();
+        text_direc_trabj_rep = new javax.swing.JTextField();
+        label_correo_rep = new javax.swing.JLabel();
+        text_correo_rep = new javax.swing.JTextField();
+        label_tlf_rep = new javax.swing.JLabel();
+        text_tlf_rep = new javax.swing.JTextField();
+        dat_doc = new javax.swing.JPanel();
+        label_originales = new javax.swing.JLabel();
+        check_originales = new javax.swing.JCheckBox();
+        label_copias = new javax.swing.JLabel();
+        check_copias = new javax.swing.JCheckBox();
+        label_partida = new javax.swing.JLabel();
+        check_partida = new javax.swing.JCheckBox();
+        label_vacunas = new javax.swing.JLabel();
+        check_vacunas = new javax.swing.JCheckBox();
+        label_cedula = new javax.swing.JLabel();
+        check_ci_madre = new javax.swing.JCheckBox();
+        check_ci_padre = new javax.swing.JCheckBox();
+        check_ci_representante = new javax.swing.JCheckBox();
+        label_responsable = new javax.swing.JLabel();
+        text_responsable = new javax.swing.JTextField();
+        label_persona = new javax.swing.JLabel();
+        text_persona = new javax.swing.JTextField();
+        label_fecha = new javax.swing.JLabel();
+        text_fecha = new javax.swing.JTextField();
+        label_observaciones = new javax.swing.JLabel();
+        scroll_observaciones = new javax.swing.JScrollPane();
+        text_observaciones = new javax.swing.JTextPane();
+        btn_aceptar2 = new javax.swing.JButton();
+        informacionNomina = new javax.swing.JPanel();
+        headderInfNomina = new javax.swing.JPanel();
+        lbl_headderInfNomina = new javax.swing.JLabel();
+        imgNomina = new javax.swing.JLabel();
+        datosPers = new javax.swing.JPanel();
+        lbl_ciNomina = new javax.swing.JLabel();
+        txt_ciNomina = new javax.swing.JTextField();
+        lbl_rifNomina = new javax.swing.JLabel();
+        txt_rifNomina = new javax.swing.JTextField();
+        lbl_nombreNomina = new javax.swing.JLabel();
+        txt_nombreNomina = new javax.swing.JTextField();
+        lbl_apellidoNomina = new javax.swing.JLabel();
+        txt_apellidoNomina = new javax.swing.JTextField();
+        lbl_sexoNomina = new javax.swing.JLabel();
+        rdb_mascNomina = new javax.swing.JRadioButton();
+        rdb_femNomina = new javax.swing.JRadioButton();
+        lbl_fechNacimNomina = new javax.swing.JLabel();
+        txt_fechNacimNomina = new javax.swing.JTextField();
+        lbl_edadNomina = new javax.swing.JLabel();
+        txt_edadNomina = new javax.swing.JTextField();
+        lbl_munResNomina = new javax.swing.JLabel();
+        txt_munResNomina = new javax.swing.JTextField();
+        lbl_tlfNomina1 = new javax.swing.JLabel();
+        txt_tlfNomina1 = new javax.swing.JTextField();
+        lbl_tlfNomina2 = new javax.swing.JLabel();
+        txt_tlfNomina2 = new javax.swing.JTextField();
+        lbl_munResNomina1 = new javax.swing.JLabel();
+        txt_munResNomina1 = new javax.swing.JTextField();
+        lbl_munResNomina2 = new javax.swing.JLabel();
+        txt_munResNomina2 = new javax.swing.JTextField();
+        lbl_munResNomina3 = new javax.swing.JLabel();
+        txt_munResNomina3 = new javax.swing.JTextField();
+        dat_madre4 = new javax.swing.JPanel();
+        lbl_munVotNomina = new javax.swing.JLabel();
+        txt_munVotNomina = new javax.swing.JTextField();
+        lbl_parrqVotNomina = new javax.swing.JLabel();
+        txt_parrqVotNomina = new javax.swing.JTextField();
+        lbl_centrVotNomina = new javax.swing.JLabel();
+        txt_centrVotNomina = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        dat_doc1 = new javax.swing.JPanel();
+        label_originales1 = new javax.swing.JLabel();
+        check_originales1 = new javax.swing.JCheckBox();
+        label_copias1 = new javax.swing.JLabel();
+        check_copias1 = new javax.swing.JCheckBox();
+        label_partida1 = new javax.swing.JLabel();
+        check_partida1 = new javax.swing.JCheckBox();
+        label_vacunas1 = new javax.swing.JLabel();
+        check_vacunas1 = new javax.swing.JCheckBox();
+        label_cedula1 = new javax.swing.JLabel();
+        check_ci_madre1 = new javax.swing.JCheckBox();
+        check_ci_padre1 = new javax.swing.JCheckBox();
+        check_ci_representante1 = new javax.swing.JCheckBox();
+        label_responsable1 = new javax.swing.JLabel();
+        text_responsable1 = new javax.swing.JTextField();
+        label_persona1 = new javax.swing.JLabel();
+        text_persona1 = new javax.swing.JTextField();
+        label_fecha1 = new javax.swing.JLabel();
+        text_fecha1 = new javax.swing.JTextField();
+        label_observaciones1 = new javax.swing.JLabel();
+        btn_aceptar3 = new javax.swing.JButton();
         panel = new javax.swing.JPanel();
 
         headderMenu.setBackground(new java.awt.Color(27, 120, 101));
@@ -1177,6 +1449,1959 @@ public void createConfPanel(){
                         .addGap(30, 30, 30))))
         );
 
+        headder.setBackground(new java.awt.Color(27, 120, 101));
+        headder.setPreferredSize(new java.awt.Dimension(1000, 32));
+
+        txtHeadder.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        txtHeadder.setForeground(new java.awt.Color(250, 247, 239));
+        txtHeadder.setText("INFORMACION");
+
+        javax.swing.GroupLayout headderLayout = new javax.swing.GroupLayout(headder);
+        headder.setLayout(headderLayout);
+        headderLayout.setHorizontalGroup(
+            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtHeadder)
+                .addGap(502, 502, 502))
+        );
+        headderLayout.setVerticalGroup(
+            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtHeadder, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        imgEstudiante1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgEstudiante1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
+
+        datos.setBackground(new java.awt.Color(255, 255, 204));
+
+        label_nombre_niñ.setText("Nombre");
+
+        text_nombre_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_nombre_niñActionPerformed(evt);
+            }
+        });
+
+        label_apellido_niñ.setText("Apellido");
+
+        text_apellido_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_apellido_niñActionPerformed(evt);
+            }
+        });
+
+        label_edad_niñ.setText("Fecha Nacimiento");
+
+        text_edad_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_edad_niñActionPerformed(evt);
+            }
+        });
+
+        label_sexo_niñ.setText("Sexo");
+
+        radio_masc_niñ.setText("Masculino");
+        radio_masc_niñ.setToolTipText("");
+        radio_masc_niñ.setActionCommand("masculino");
+
+        radio_fem_niñ.setText("femenino");
+
+        label_lugar_nac_niñ.setText("Lugar de Nacimiento");
+
+        text_lugar_nac_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_lugar_nac_niñActionPerformed(evt);
+            }
+        });
+
+        label_mun_nac_niñ.setText("Municipio");
+
+        label_estado_niñ.setText("Estado");
+
+        label_nacionalidad_niñ.setText("Nacionalidad");
+
+        label_edad_niñ1.setText("Edad");
+
+        text_edad_niñ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_edad_niñ1ActionPerformed(evt);
+            }
+        });
+
+        label_procedencia_niñ.setText("Procedencia:");
+
+        radio_hogar_niñ.setText("Hogar");
+        radio_hogar_niñ.setToolTipText("");
+        radio_hogar_niñ.setActionCommand("hogar");
+        radio_hogar_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radio_hogar_niñActionPerformed(evt);
+            }
+        });
+
+        radio_mismo_plantel_niñ.setText("Del mismo plantel");
+        radio_mismo_plantel_niñ.setActionCommand("del mismo plantel");
+        radio_mismo_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radio_mismo_plantel_niñActionPerformed(evt);
+            }
+        });
+
+        radio_multihogar_niñ.setText("Multihogar");
+        radio_multihogar_niñ.setActionCommand("multihogar");
+
+        radio_otro_plantel_niñ.setText("De otro plantel");
+        radio_otro_plantel_niñ.setActionCommand("de otro plantel");
+        radio_otro_plantel_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radio_otro_plantel_niñActionPerformed(evt);
+            }
+        });
+
+        radio_hogar_cuidado_niñ.setText("Hogar de cuidado");
+        radio_hogar_cuidado_niñ.setActionCommand("hogar de cuidado");
+
+        radio_guarderia_niñ.setText("Guarderia");
+        radio_guarderia_niñ.setActionCommand("guarderia");
+
+        radio_otros_niñ.setText("Otros");
+        radio_otros_niñ.setActionCommand("otros");
+
+        label_tallas_niñ.setText("Tallas:");
+
+        label_camisa_niñ.setText("Camisa");
+
+        text_tall_camisa_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_tall_camisa_niñActionPerformed(evt);
+            }
+        });
+
+        label_tall_pantalon_niñ.setText("Pantalon");
+
+        label_tall_zapato_niñ.setText("Zapato");
+
+        label_medidas_niñ.setText("Medidas Antropometricas:");
+
+        label_peso_niñ.setText("Peso");
+
+        text_peso_niñ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_peso_niñActionPerformed(evt);
+            }
+        });
+
+        label_estatura_niñ.setText("Estatura");
+
+        javax.swing.GroupLayout datosLayout = new javax.swing.GroupLayout(datos);
+        datos.setLayout(datosLayout);
+        datosLayout.setHorizontalGroup(
+            datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datosLayout.createSequentialGroup()
+                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label_procedencia_niñ)
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(label_tallas_niñ)
+                                    .addGroup(datosLayout.createSequentialGroup()
+                                        .addComponent(label_camisa_niñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(label_tall_pantalon_niñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(label_tall_zapato_niñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(label_medidas_niñ)
+                                    .addGroup(datosLayout.createSequentialGroup()
+                                        .addComponent(label_peso_niñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(label_estatura_niñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addComponent(label_edad_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_edad_niñ1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_lugar_nac_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(label_estado_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_mun_nac_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_nacionalidad_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(datosLayout.createSequentialGroup()
+                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addComponent(label_nombre_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_nombre_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_apellido_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_sexo_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_masc_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_fem_niñ))
+                            .addGroup(datosLayout.createSequentialGroup()
+                                .addComponent(radio_hogar_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_multihogar_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_hogar_cuidado_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radio_mismo_plantel_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_otro_plantel_niñ)
+                                .addGap(18, 18, 18)
+                                .addComponent(radio_guarderia_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radio_otros_niñ)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        datosLayout.setVerticalGroup(
+            datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_nombre_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_nombre_niñ)
+                    .addComponent(text_apellido_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_apellido_niñ)
+                    .addComponent(label_sexo_niñ)
+                    .addComponent(radio_masc_niñ)
+                    .addComponent(radio_fem_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_niñ)
+                    .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_niñ1)
+                    .addComponent(text_lugar_nac_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_lugar_nac_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_estado_niñ)
+                    .addComponent(text_estado_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_munic_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_mun_nac_niñ)
+                    .addComponent(text_nacionalidad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_nacionalidad_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(label_procedencia_niñ)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(radio_hogar_niñ)
+                        .addComponent(radio_hogar_cuidado_niñ)
+                        .addComponent(radio_mismo_plantel_niñ)
+                        .addComponent(radio_guarderia_niñ)
+                        .addComponent(radio_otro_plantel_niñ)
+                        .addComponent(radio_otros_niñ))
+                    .addComponent(radio_multihogar_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(datosLayout.createSequentialGroup()
+                        .addComponent(label_tallas_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_camisa_niñ)
+                            .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_tall_pantalon_niñ)
+                            .addComponent(label_tall_zapato_niñ)
+                            .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(datosLayout.createSequentialGroup()
+                        .addComponent(label_medidas_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_peso_niñ)
+                            .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_estatura_niñ))))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
+        panelDatos.addTab("Datos", datos);
+
+        diag.setBackground(new java.awt.Color(204, 255, 204));
+
+        label_problema.setText("Presento algun problema durante el parto:");
+
+        check_problema_si.setText("Si");
+
+        check_problema_no.setText("No");
+
+        label_problema_cual.setText("Cual?");
+
+        label_problema_desarr.setText("Presento problemas durante su desarrollo:");
+
+        label_motor.setText("Motor");
+
+        check_motor_si.setText("Si");
+        check_motor_si.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_motor_siActionPerformed(evt);
+            }
+        });
+
+        check_motor_no.setText("No");
+
+        label_motor_cual.setText("Cual?");
+
+        label_lenguaje_cual.setText("Cual?");
+
+        check_lenguaje_no.setText("No");
+
+        check_lenguaje_si.setText("Si");
+
+        label_lenguaje.setText("Lenguaje");
+
+        label_cognitivo.setText("Cognitivo");
+
+        check_cognitivo_si.setText("Si");
+
+        check_cognitivo_no.setText("No");
+
+        label_cognitivo_cual.setText("Cual?");
+
+        label_alergia.setText("Es alergico a algun medicamento:");
+
+        check_alergia_si.setText("Si");
+        check_alergia_si.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_alergia_siActionPerformed(evt);
+            }
+        });
+
+        check_alergia_no.setText("No");
+
+        label_alergia_cual.setText("Cual?");
+
+        check_condicion_no.setText("No");
+
+        check_condicion_si.setText("Si");
+        check_condicion_si.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_condicion_siActionPerformed(evt);
+            }
+        });
+
+        label_condicion.setText("<html>Presenta su niño(a) actualmente alguna condicion<br>\nque amerite del conocimiento del docente:\n</html>");
+
+        label_condicion_cual.setText("Cual?");
+
+        javax.swing.GroupLayout diagLayout = new javax.swing.GroupLayout(diag);
+        diag.setLayout(diagLayout);
+        diagLayout.setHorizontalGroup(
+            diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(diagLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diagLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(check_motor_no)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_motor_cual)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label_motor)
+                            .addComponent(label_lenguaje)
+                            .addComponent(label_cognitivo))
+                        .addGap(27, 27, 27)
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(check_cognitivo_si)
+                            .addComponent(check_lenguaje_si)
+                            .addComponent(check_motor_si))
+                        .addGap(18, 18, 18)
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addComponent(check_cognitivo_no)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_cognitivo_cual)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_cognitivo_cual))
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addComponent(check_lenguaje_no)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_lenguaje_cual)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_lenguaje_cual))))
+                    .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(label_problema_desarr)
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addComponent(label_problema)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_problema_si)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_problema_no)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_problema_cual)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addComponent(label_alergia)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_alergia_si)
+                                .addGap(18, 18, 18)
+                                .addComponent(check_alergia_no)
+                                .addGap(12, 12, 12)
+                                .addComponent(label_alergia_cual)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_alergia_cual)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(103, 103, 103)
+                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(diagLayout.createSequentialGroup()
+                        .addComponent(label_condicion_cual)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_condicion_cual))
+                    .addGroup(diagLayout.createSequentialGroup()
+                        .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_condicion_si)
+                        .addGap(18, 18, 18)
+                        .addComponent(check_condicion_no)))
+                .addGap(55, 55, 55))
+        );
+        diagLayout.setVerticalGroup(
+            diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(diagLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_problema)
+                            .addComponent(check_problema_si)
+                            .addComponent(check_problema_no)
+                            .addComponent(label_problema_cual)
+                            .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_problema_desarr)
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_motor)
+                                    .addComponent(check_motor_si)))
+                            .addGroup(diagLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_motor_cual)
+                                    .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(check_motor_no))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(check_lenguaje_no)
+                                    .addComponent(label_lenguaje_cual)
+                                    .addComponent(text_lenguaje_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(check_lenguaje_si)
+                                    .addComponent(label_lenguaje))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(check_cognitivo_no)
+                                    .addComponent(label_cognitivo_cual)
+                                    .addComponent(text_cognitivo_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(check_cognitivo_si)
+                                    .addComponent(label_cognitivo))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(check_alergia_si)
+                            .addComponent(check_alergia_no)
+                            .addComponent(label_alergia_cual)
+                            .addComponent(text_alergia_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_alergia)))
+                    .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(check_condicion_si)
+                            .addComponent(check_condicion_no)
+                            .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_condicion_cual)
+                            .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        panelDatos.addTab("Antecedentes de Salud", diag);
+
+        dat_madre.setBackground(new java.awt.Color(255, 204, 204));
+        dat_madre.setPreferredSize(new java.awt.Dimension(600, 420));
+        dat_madre.setRequestFocusEnabled(false);
+
+        label_apellido_madre.setText("Apellidos");
+
+        text_apellidos_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_apellidos_madreActionPerformed(evt);
+            }
+        });
+
+        label_nombes_madre.setText("Nombres");
+
+        text_nombres_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_nombres_madreActionPerformed(evt);
+            }
+        });
+
+        label_ci_madre.setText("C.I");
+
+        label_estadociv_madre.setText("Estado Civil");
+
+        check_s_madre.setText("S");
+        check_s_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_s_madreActionPerformed(evt);
+            }
+        });
+
+        check_c_madre.setText("C");
+        check_c_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_c_madreActionPerformed(evt);
+            }
+        });
+
+        check_d_madre.setText("D");
+        check_d_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_d_madreActionPerformed(evt);
+            }
+        });
+
+        check_v_madre.setText("V");
+        check_v_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_v_madreActionPerformed(evt);
+            }
+        });
+
+        label_fec_nac_madre.setText("Fecha Nacimiento");
+
+        label_edad_madre.setText("Edad");
+
+        label_lugar_nac_madre.setText("Lugar de Nacimiento");
+
+        text_lugar_nac_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_lugar_nac_madreActionPerformed(evt);
+            }
+        });
+
+        label_nacionalidad_madre.setText("Nacionalidad");
+
+        check_ven_madre.setText("V");
+        check_ven_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ven_madreActionPerformed(evt);
+            }
+        });
+
+        check_ext_madre.setText("E");
+        check_ext_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ext_madreActionPerformed(evt);
+            }
+        });
+
+        label_direc_hab_madre.setText("Direccion de Habitacion");
+
+        text_direc_hab_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_direc_hab_madreActionPerformed(evt);
+            }
+        });
+
+        label_grado_madre.setText("Grado de instruccion:");
+
+        check_no_bachiller_madre.setText("No Bachiller");
+        check_no_bachiller_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_no_bachiller_madreActionPerformed(evt);
+            }
+        });
+
+        chec_bachiller_madre.setText("Bachiller");
+        chec_bachiller_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chec_bachiller_madreActionPerformed(evt);
+            }
+        });
+
+        check_tsu_madre.setText("TSU");
+        check_tsu_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_tsu_madreActionPerformed(evt);
+            }
+        });
+
+        check_superior_madre.setText("Superior");
+        check_superior_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_superior_madreActionPerformed(evt);
+            }
+        });
+
+        label_ocupacion_madre.setText("Ocupacion");
+
+        label_direc_trabaj_madre.setText("Direccion de Trabajo");
+
+        label_correo_madre.setText("Correo Electronico");
+
+        text_correo_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_correo_madreActionPerformed(evt);
+            }
+        });
+
+        label_tlf_madre.setText("TLF");
+
+        text_tlf_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_tlf_madreActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dat_madreLayout = new javax.swing.GroupLayout(dat_madre);
+        dat_madre.setLayout(dat_madreLayout);
+        dat_madreLayout.setHorizontalGroup(
+            dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_madreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_grado_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_no_bachiller_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chec_bachiller_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_tsu_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_superior_madre))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_ocupacion_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_direc_trabaj_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_correo_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_tlf_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_direc_hab_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_hab_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_apellido_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_apellidos_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_nombes_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_nombres_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_ci_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ci_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(label_estadociv_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(check_s_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_c_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_d_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_v_madre))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_fec_nac_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_fec_nac_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_edad_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_edad_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_lugar_nac_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_lugar_nac_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_nacionalidad_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ven_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ext_madre)))
+                .addContainerGap(616, Short.MAX_VALUE))
+        );
+        dat_madreLayout.setVerticalGroup(
+            dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_madreLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_apellidos_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_apellido_madre)
+                    .addComponent(text_nombres_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_nombes_madre)
+                    .addComponent(text_ci_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_ci_madre)
+                    .addComponent(label_estadociv_madre)
+                    .addComponent(check_s_madre)
+                    .addComponent(check_c_madre)
+                    .addComponent(check_d_madre)
+                    .addComponent(check_v_madre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_edad_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_madre)
+                    .addComponent(text_fec_nac_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_fec_nac_madre)
+                    .addComponent(text_lugar_nac_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_lugar_nac_madre)
+                    .addComponent(label_nacionalidad_madre)
+                    .addComponent(check_ven_madre)
+                    .addComponent(check_ext_madre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_direc_hab_madre)
+                    .addComponent(text_direc_hab_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_grado_madre)
+                    .addComponent(check_no_bachiller_madre)
+                    .addComponent(chec_bachiller_madre)
+                    .addComponent(check_tsu_madre)
+                    .addComponent(check_superior_madre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_ocupacion_madre)
+                    .addComponent(label_direc_trabaj_madre)
+                    .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(label_tlf_madre)
+                        .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(label_correo_madre)
+                        .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(138, 138, 138))
+        );
+
+        jTabbedPane1.addTab("Datos Madre", dat_madre);
+
+        dat_padre.setBackground(new java.awt.Color(204, 255, 255));
+        dat_padre.setPreferredSize(new java.awt.Dimension(600, 450));
+
+        label_apellido_padre.setText("Apellidos");
+
+        text_apellidos_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_apellidos_padreActionPerformed(evt);
+            }
+        });
+
+        label_nombes_padre.setText("Nombres");
+
+        text_nombres_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_nombres_padreActionPerformed(evt);
+            }
+        });
+
+        label_ci_padre.setText("C.I");
+
+        label_estadociv_padre.setText("Estado Civil");
+
+        check_s_padre.setText("S");
+        check_s_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_s_padreActionPerformed(evt);
+            }
+        });
+
+        check_c_padre.setText("C");
+        check_c_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_c_padreActionPerformed(evt);
+            }
+        });
+
+        check_d_padre.setText("D");
+        check_d_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_d_padreActionPerformed(evt);
+            }
+        });
+
+        check_v_padre.setText("V");
+        check_v_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_v_padreActionPerformed(evt);
+            }
+        });
+
+        label_fec_nac_padre.setText("Fecha Nacimiento");
+
+        label_edad_padre.setText("Edad");
+
+        label_lugar_nac_padre.setText("Lugar de Nacimiento");
+
+        text_lugar_nac_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_lugar_nac_padreActionPerformed(evt);
+            }
+        });
+
+        label_nacionalidad_padre.setText("Nacionalidad");
+
+        check_ven_padre.setText("V");
+        check_ven_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ven_padreActionPerformed(evt);
+            }
+        });
+
+        check_ext_padre.setText("E");
+        check_ext_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ext_padreActionPerformed(evt);
+            }
+        });
+
+        label_direc_hab_padre.setText("Direccion de Habitacion");
+
+        text_direc_hab_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_direc_hab_padreActionPerformed(evt);
+            }
+        });
+
+        label_grado_padre.setText("Grado de instruccion:");
+
+        check_no_bachiller_padre.setText("No Bachiller");
+        check_no_bachiller_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_no_bachiller_padreActionPerformed(evt);
+            }
+        });
+
+        chec_bachiller_padre.setText("Bachiller");
+        chec_bachiller_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chec_bachiller_padreActionPerformed(evt);
+            }
+        });
+
+        check_tsu_padre.setText("TSU");
+        check_tsu_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_tsu_padreActionPerformed(evt);
+            }
+        });
+
+        check_superior_padre.setText("Superior");
+        check_superior_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_superior_padreActionPerformed(evt);
+            }
+        });
+
+        label_ocupacion_padre.setText("Ocupacion");
+
+        label_direc_trabaj_padre.setText("Direccion de Trabajo");
+
+        label_correo_padre.setText("Correo Electronico");
+
+        text_correo_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_correo_padreActionPerformed(evt);
+            }
+        });
+
+        label_tlf_padre.setText("TLF");
+
+        text_tlf_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_tlf_padreActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dat_padreLayout = new javax.swing.GroupLayout(dat_padre);
+        dat_padre.setLayout(dat_padreLayout);
+        dat_padreLayout.setHorizontalGroup(
+            dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_padreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(label_ocupacion_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ocupacion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_direc_trabaj_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_trabj_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(label_correo_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_tlf_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(label_grado_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_no_bachiller_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chec_bachiller_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_tsu_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_superior_padre))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(label_direc_hab_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(label_apellido_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_nombes_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_ci_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_estadociv_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(check_s_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_c_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_d_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_v_padre))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(label_fec_nac_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_fec_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_edad_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_lugar_nac_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_nacionalidad_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ven_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ext_padre)))
+                .addContainerGap(616, Short.MAX_VALUE))
+        );
+        dat_padreLayout.setVerticalGroup(
+            dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_padreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_apellido_padre)
+                    .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_nombes_padre)
+                    .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_ci_padre)
+                    .addComponent(label_estadociv_padre)
+                    .addComponent(check_s_padre)
+                    .addComponent(check_c_padre)
+                    .addComponent(check_d_padre)
+                    .addComponent(check_v_padre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_padre)
+                    .addComponent(text_fec_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_fec_nac_padre)
+                    .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_lugar_nac_padre)
+                    .addComponent(label_nacionalidad_padre)
+                    .addComponent(check_ven_padre)
+                    .addComponent(check_ext_padre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_direc_hab_padre)
+                    .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_grado_padre)
+                    .addComponent(check_no_bachiller_padre)
+                    .addComponent(chec_bachiller_padre)
+                    .addComponent(check_tsu_padre)
+                    .addComponent(check_superior_padre))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_ocupacion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_ocupacion_padre)
+                    .addComponent(label_direc_trabaj_padre)
+                    .addComponent(text_direc_trabj_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_correo_padre)
+                    .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_tlf_padre)
+                    .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Datos Padre", dat_padre);
+
+        dat_rep.setBackground(new java.awt.Color(204, 204, 255));
+        dat_rep.setPreferredSize(new java.awt.Dimension(600, 420));
+
+        label_apellido_rep.setText("Apellidos");
+
+        text_apellidos_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_apellidos_repActionPerformed(evt);
+            }
+        });
+
+        label_nombes_rep.setText("Nombres");
+
+        text_nombres_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_nombres_repActionPerformed(evt);
+            }
+        });
+
+        label_ci_rep.setText("C.I");
+
+        label_estadociv_rep.setText("Estado Civil");
+
+        check_s_rep.setText("S");
+        check_s_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_s_repActionPerformed(evt);
+            }
+        });
+
+        check_c_rep.setText("C");
+        check_c_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_c_repActionPerformed(evt);
+            }
+        });
+
+        check_d_rep.setText("D");
+        check_d_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_d_repActionPerformed(evt);
+            }
+        });
+
+        check_v_rep.setText("V");
+        check_v_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_v_repActionPerformed(evt);
+            }
+        });
+
+        label_fec_nac_rep.setText("Fecha Nacimiento");
+
+        label_edad_rep.setText("Edad");
+
+        label_lugar_nac_rep.setText("Lugar de Nacimiento");
+
+        text_lugar_nac_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_lugar_nac_repActionPerformed(evt);
+            }
+        });
+
+        label_nacionalidad_rep.setText("Nacionalidad");
+
+        check_ven_rep.setText("V");
+        check_ven_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ven_repActionPerformed(evt);
+            }
+        });
+
+        check_ext_rep.setText("E");
+        check_ext_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ext_repActionPerformed(evt);
+            }
+        });
+
+        label_direc_hab_rep.setText("Direccion de Habitacion");
+
+        text_direc_hab_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_direc_hab_repActionPerformed(evt);
+            }
+        });
+
+        label_grado_rep.setText("Grado de instruccion:");
+
+        check_no_bachiller_rep.setText("No Bachiller");
+        check_no_bachiller_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_no_bachiller_repActionPerformed(evt);
+            }
+        });
+
+        chec_bachiller_rep.setText("Bachiller");
+        chec_bachiller_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chec_bachiller_repActionPerformed(evt);
+            }
+        });
+
+        check_tsu_rep.setText("TSU");
+        check_tsu_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_tsu_repActionPerformed(evt);
+            }
+        });
+
+        check_superior_rep.setText("Superior");
+        check_superior_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_superior_repActionPerformed(evt);
+            }
+        });
+
+        label_ocupacion_rep.setText("Ocupacion");
+
+        text_ocupacion_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_ocupacion_repActionPerformed(evt);
+            }
+        });
+
+        label_direc_trabaj_rep.setText("Direccion de Trabajo");
+
+        label_correo_rep.setText("Correo Electronico");
+
+        text_correo_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_correo_repActionPerformed(evt);
+            }
+        });
+
+        label_tlf_rep.setText("TLF");
+
+        text_tlf_rep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_tlf_repActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dat_repLayout = new javax.swing.GroupLayout(dat_rep);
+        dat_rep.setLayout(dat_repLayout);
+        dat_repLayout.setHorizontalGroup(
+            dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_repLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_repLayout.createSequentialGroup()
+                        .addComponent(label_ocupacion_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ocupacion_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_direc_trabaj_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_trabj_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_repLayout.createSequentialGroup()
+                        .addComponent(label_correo_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_correo_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_tlf_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tlf_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_repLayout.createSequentialGroup()
+                        .addComponent(label_grado_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_no_bachiller_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chec_bachiller_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_tsu_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_superior_rep))
+                    .addGroup(dat_repLayout.createSequentialGroup()
+                        .addComponent(label_direc_hab_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_repLayout.createSequentialGroup()
+                        .addComponent(label_apellido_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_apellidos_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_nombes_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_nombres_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_ci_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ci_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_estadociv_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(check_s_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_c_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_d_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_v_rep))
+                    .addGroup(dat_repLayout.createSequentialGroup()
+                        .addComponent(label_fec_nac_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_fec_nac_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_edad_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_edad_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_lugar_nac_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_lugar_nac_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_nacionalidad_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ven_rep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ext_rep)))
+                .addContainerGap(616, Short.MAX_VALUE))
+        );
+        dat_repLayout.setVerticalGroup(
+            dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_repLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_apellidos_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_apellido_rep)
+                    .addComponent(text_nombres_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_nombes_rep)
+                    .addComponent(text_ci_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_ci_rep)
+                    .addComponent(label_estadociv_rep)
+                    .addComponent(check_s_rep)
+                    .addComponent(check_c_rep)
+                    .addComponent(check_d_rep)
+                    .addComponent(check_v_rep))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_edad_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_rep)
+                    .addComponent(text_fec_nac_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_fec_nac_rep)
+                    .addComponent(text_lugar_nac_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_lugar_nac_rep)
+                    .addComponent(label_nacionalidad_rep)
+                    .addComponent(check_ven_rep)
+                    .addComponent(check_ext_rep))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_direc_hab_rep)
+                    .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_grado_rep)
+                    .addComponent(check_no_bachiller_rep)
+                    .addComponent(chec_bachiller_rep)
+                    .addComponent(check_tsu_rep)
+                    .addComponent(check_superior_rep))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_ocupacion_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_ocupacion_rep)
+                    .addComponent(label_direc_trabaj_rep)
+                    .addComponent(text_direc_trabj_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_correo_rep)
+                    .addComponent(text_correo_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_tlf_rep)
+                    .addComponent(text_tlf_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Datos Representante Legal", dat_rep);
+
+        dat_doc.setPreferredSize(new java.awt.Dimension(600, 420));
+        dat_doc.setRequestFocusEnabled(false);
+
+        label_originales.setText("Originales");
+
+        label_copias.setText("Copias");
+
+        label_partida.setText("Partidas de nacimiento");
+
+        label_vacunas.setText("Certificado de Vacunas");
+
+        label_cedula.setText("Cedulas de Identidad:");
+
+        check_ci_madre.setText("Madre");
+
+        check_ci_padre.setText("Padre");
+
+        check_ci_representante.setText("Representante");
+
+        label_responsable.setText("Persona responsable en la instirucion en realizar la inscripcion:");
+
+        text_responsable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_responsableActionPerformed(evt);
+            }
+        });
+
+        label_persona.setText("Persona que inscribe al niño o niña");
+
+        text_persona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_personaActionPerformed(evt);
+            }
+        });
+
+        label_fecha.setText("Fecha de incripcicion");
+
+        text_fecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_fechaActionPerformed(evt);
+            }
+        });
+
+        label_observaciones.setText("Observaciones");
+
+        scroll_observaciones.setViewportView(text_observaciones);
+
+        javax.swing.GroupLayout dat_docLayout = new javax.swing.GroupLayout(dat_doc);
+        dat_doc.setLayout(dat_docLayout);
+        dat_docLayout.setHorizontalGroup(
+            dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_docLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_cedula)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_madre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_representante))
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_responsable)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_persona)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_docLayout.createSequentialGroup()
+                                .addComponent(label_originales)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_originales)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_copias)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_copias)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_partida)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_partida)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_vacunas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_vacunas)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_observaciones)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(224, Short.MAX_VALUE))
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addComponent(label_fecha)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        dat_docLayout.setVerticalGroup(
+            dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_docLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(dat_docLayout.createSequentialGroup()
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_originales)
+                                .addComponent(check_originales)
+                                .addComponent(label_copias)
+                                .addComponent(check_copias)
+                                .addComponent(label_partida)
+                                .addComponent(check_partida)
+                                .addComponent(label_vacunas)
+                                .addComponent(check_vacunas))
+                            .addComponent(label_observaciones))
+                        .addGap(9, 9, 9)
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_cedula)
+                            .addComponent(check_ci_madre)
+                            .addComponent(check_ci_padre)
+                            .addComponent(check_ci_representante))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_responsable)
+                            .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_persona)
+                            .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(scroll_observaciones))
+                .addGroup(dat_docLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_fecha)
+                    .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        btn_aceptar2.setText("ACEPTAR");
+        btn_aceptar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aceptar2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout informacionEstudianteLayout = new javax.swing.GroupLayout(informacionEstudiante);
+        informacionEstudiante.setLayout(informacionEstudianteLayout);
+        informacionEstudianteLayout.setHorizontalGroup(
+            informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(headder, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
+            .addGroup(informacionEstudianteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTabbedPane1)
+                    .addGroup(informacionEstudianteLayout.createSequentialGroup()
+                        .addComponent(imgEstudiante1)
+                        .addGap(18, 18, 18)
+                        .addComponent(panelDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(dat_doc, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionEstudianteLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_aceptar2)))
+                .addContainerGap())
+        );
+        informacionEstudianteLayout.setVerticalGroup(
+            informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(informacionEstudianteLayout.createSequentialGroup()
+                .addComponent(headder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(imgEstudiante1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelDatos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dat_doc, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_aceptar2)
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+
+        headderInfNomina.setBackground(new java.awt.Color(27, 120, 101));
+        headderInfNomina.setPreferredSize(new java.awt.Dimension(1000, 32));
+
+        lbl_headderInfNomina.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbl_headderInfNomina.setForeground(new java.awt.Color(250, 247, 239));
+        lbl_headderInfNomina.setText("INFORMACION NOMINA");
+
+        javax.swing.GroupLayout headderInfNominaLayout = new javax.swing.GroupLayout(headderInfNomina);
+        headderInfNomina.setLayout(headderInfNominaLayout);
+        headderInfNominaLayout.setHorizontalGroup(
+            headderInfNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderInfNominaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_headderInfNomina)
+                .addGap(502, 502, 502))
+        );
+        headderInfNominaLayout.setVerticalGroup(
+            headderInfNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbl_headderInfNomina, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        imgNomina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgNomina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
+
+        datosPers.setBackground(new java.awt.Color(255, 255, 204));
+
+        lbl_ciNomina.setText("C.I");
+
+        txt_ciNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_ciNominaActionPerformed(evt);
+            }
+        });
+
+        lbl_rifNomina.setText("R.I.F");
+
+        lbl_nombreNomina.setText("Nombre");
+
+        txt_nombreNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_nombreNominaActionPerformed(evt);
+            }
+        });
+
+        lbl_apellidoNomina.setText("Apellido");
+
+        txt_apellidoNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_apellidoNominaActionPerformed(evt);
+            }
+        });
+
+        lbl_sexoNomina.setText("Sexo");
+
+        rdb_mascNomina.setText("Masculino");
+        rdb_mascNomina.setToolTipText("");
+        rdb_mascNomina.setActionCommand("masculino");
+
+        rdb_femNomina.setText("femenino");
+
+        lbl_fechNacimNomina.setText("Fecha Nacimiento");
+
+        txt_fechNacimNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_fechNacimNominaActionPerformed(evt);
+            }
+        });
+
+        lbl_edadNomina.setText("Edad");
+
+        txt_edadNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_edadNominaActionPerformed(evt);
+            }
+        });
+
+        lbl_munResNomina.setText("Municipio Residencia");
+
+        lbl_tlfNomina1.setText("Telefono Principal");
+
+        lbl_tlfNomina2.setText("Telefono Secundario");
+
+        lbl_munResNomina1.setText("Parroquia Residencia");
+
+        lbl_munResNomina2.setText("Comunidad Residencia");
+
+        lbl_munResNomina3.setText("Calle Residencia");
+
+        javax.swing.GroupLayout datosPersLayout = new javax.swing.GroupLayout(datosPers);
+        datosPers.setLayout(datosPersLayout);
+        datosPersLayout.setHorizontalGroup(
+            datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosPersLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datosPersLayout.createSequentialGroup()
+                        .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosPersLayout.createSequentialGroup()
+                                .addComponent(lbl_fechNacimNomina)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_fechNacimNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_edadNomina)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_edadNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(datosPersLayout.createSequentialGroup()
+                                .addComponent(lbl_ciNomina)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_ciNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lbl_rifNomina))
+                            .addGroup(datosPersLayout.createSequentialGroup()
+                                .addComponent(lbl_munResNomina)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_munResNomina1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_munResNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_munResNomina2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_munResNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_munResNomina3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_munResNomina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 15, Short.MAX_VALUE))
+                    .addGroup(datosPersLayout.createSequentialGroup()
+                        .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosPersLayout.createSequentialGroup()
+                                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txt_rifNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, datosPersLayout.createSequentialGroup()
+                                        .addComponent(lbl_nombreNomina)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_nombreNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_apellidoNomina)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_apellidoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_sexoNomina)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdb_mascNomina)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdb_femNomina))
+                            .addGroup(datosPersLayout.createSequentialGroup()
+                                .addComponent(lbl_tlfNomina2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_tlfNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(datosPersLayout.createSequentialGroup()
+                                .addComponent(lbl_tlfNomina1)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_tlfNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        datosPersLayout.setVerticalGroup(
+            datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosPersLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_ciNomina)
+                    .addComponent(txt_ciNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_rifNomina)
+                    .addComponent(txt_rifNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_nombreNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_nombreNomina)
+                    .addComponent(txt_apellidoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_apellidoNomina)
+                    .addComponent(lbl_sexoNomina)
+                    .addComponent(rdb_mascNomina)
+                    .addComponent(rdb_femNomina))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_fechNacimNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_fechNacimNomina)
+                    .addComponent(txt_edadNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_edadNomina))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_munResNomina)
+                    .addComponent(txt_munResNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_munResNomina1)
+                    .addComponent(txt_munResNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_munResNomina2)
+                    .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txt_munResNomina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_munResNomina3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_tlfNomina1)
+                    .addComponent(txt_tlfNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosPersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_tlfNomina2)
+                    .addComponent(txt_tlfNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        dat_madre4.setBackground(new java.awt.Color(255, 204, 204));
+        dat_madre4.setPreferredSize(new java.awt.Dimension(600, 420));
+        dat_madre4.setRequestFocusEnabled(false);
+
+        lbl_munVotNomina.setText("Municipio Eleccion");
+
+        lbl_parrqVotNomina.setText("Parroquia de Eleccion");
+
+        lbl_centrVotNomina.setText("Centro de Votacion");
+
+        jLabel16.setText("Ya ha votado?");
+
+        jRadioButton1.setText("Si");
+
+        jRadioButton2.setText("No");
+
+        javax.swing.GroupLayout dat_madre4Layout = new javax.swing.GroupLayout(dat_madre4);
+        dat_madre4.setLayout(dat_madre4Layout);
+        dat_madre4Layout.setHorizontalGroup(
+            dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_madre4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_madre4Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton2))
+                    .addGroup(dat_madre4Layout.createSequentialGroup()
+                        .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_munVotNomina)
+                            .addComponent(lbl_parrqVotNomina)
+                            .addComponent(lbl_centrVotNomina))
+                        .addGap(23, 23, 23)
+                        .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_centrVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_munVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_parrqVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        dat_madre4Layout.setVerticalGroup(
+            dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_madre4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_munVotNomina)
+                    .addComponent(txt_munVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_parrqVotNomina)
+                    .addComponent(txt_parrqVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_centrVotNomina)
+                    .addComponent(txt_centrVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_madre4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addContainerGap(63, Short.MAX_VALUE))
+        );
+
+        dat_doc1.setPreferredSize(new java.awt.Dimension(600, 420));
+        dat_doc1.setRequestFocusEnabled(false);
+
+        label_originales1.setText("Originales");
+
+        label_copias1.setText("Copias");
+
+        label_partida1.setText("Partidas de nacimiento");
+
+        label_vacunas1.setText("Certificado de Vacunas");
+
+        label_cedula1.setText("Cedulas de Identidad:");
+
+        check_ci_madre1.setText("Madre");
+
+        check_ci_padre1.setText("Padre");
+
+        check_ci_representante1.setText("Representante");
+
+        label_responsable1.setText("Persona responsable en la instirucion en realizar la inscripcion:");
+
+        text_responsable1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_responsable1ActionPerformed(evt);
+            }
+        });
+
+        label_persona1.setText("Persona que inscribe al niño o niña");
+
+        text_persona1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_persona1ActionPerformed(evt);
+            }
+        });
+
+        label_fecha1.setText("Fecha de incripcicion");
+
+        text_fecha1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_fecha1ActionPerformed(evt);
+            }
+        });
+
+        label_observaciones1.setText("Observaciones");
+
+        javax.swing.GroupLayout dat_doc1Layout = new javax.swing.GroupLayout(dat_doc1);
+        dat_doc1.setLayout(dat_doc1Layout);
+        dat_doc1Layout.setHorizontalGroup(
+            dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_doc1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_doc1Layout.createSequentialGroup()
+                        .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_doc1Layout.createSequentialGroup()
+                                .addComponent(label_cedula1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_madre1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_padre1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_ci_representante1))
+                            .addGroup(dat_doc1Layout.createSequentialGroup()
+                                .addComponent(label_responsable1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_responsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_doc1Layout.createSequentialGroup()
+                                .addComponent(label_persona1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_persona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_doc1Layout.createSequentialGroup()
+                                .addComponent(label_originales1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_originales1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_copias1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_copias1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_partida1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_partida1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_vacunas1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_vacunas1)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_observaciones1)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(dat_doc1Layout.createSequentialGroup()
+                        .addComponent(label_fecha1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_fecha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        dat_doc1Layout.setVerticalGroup(
+            dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_doc1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(label_originales1)
+                        .addComponent(check_originales1)
+                        .addComponent(label_copias1)
+                        .addComponent(check_copias1)
+                        .addComponent(label_partida1)
+                        .addComponent(check_partida1)
+                        .addComponent(label_vacunas1)
+                        .addComponent(check_vacunas1))
+                    .addComponent(label_observaciones1))
+                .addGap(9, 9, 9)
+                .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_cedula1)
+                    .addComponent(check_ci_madre1)
+                    .addComponent(check_ci_padre1)
+                    .addComponent(check_ci_representante1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_responsable1)
+                    .addComponent(text_responsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_persona1)
+                    .addComponent(text_persona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(dat_doc1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_fecha1)
+                    .addComponent(text_fecha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        btn_aceptar3.setText("ACEPTAR");
+        btn_aceptar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aceptar3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout informacionNominaLayout = new javax.swing.GroupLayout(informacionNomina);
+        informacionNomina.setLayout(informacionNominaLayout);
+        informacionNominaLayout.setHorizontalGroup(
+            informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(headderInfNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
+            .addGroup(informacionNominaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dat_doc1, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionNominaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_aceptar3))
+                    .addGroup(informacionNominaLayout.createSequentialGroup()
+                        .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(dat_madre4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1318, Short.MAX_VALUE)
+                            .addGroup(informacionNominaLayout.createSequentialGroup()
+                                .addComponent(imgNomina)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(datosPers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 6, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        informacionNominaLayout.setVerticalGroup(
+            informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(informacionNominaLayout.createSequentialGroup()
+                .addComponent(headderInfNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(imgNomina)
+                    .addComponent(datosPers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dat_madre4, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addComponent(dat_doc1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_aceptar3)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IM");
         setBackground(new java.awt.Color(197, 232, 225));
@@ -1239,72 +3464,51 @@ public void createConfPanel(){
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        resultado_representante representante = new resultado_representante();
-        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
-        representante.setLocationRelativeTo(null);
-        representante.setVisible(true);
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        resultado_representante representante = new resultado_representante();
-        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
-        representante.setLocationRelativeTo(null);
-        representante.setVisible(true);
+
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        inscripcion_trabajador inscribirTrabajador = new inscripcion_trabajador();
-        inscribirTrabajador.setAlwaysOnTop(rootPaneCheckingEnabled);
-        inscribirTrabajador.setLocationRelativeTo(null);
-        inscribirTrabajador.setVisible(true);
+
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void btnVerEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerEstudianteActionPerformed
-        resultado_niño res_niño = new resultado_niño();
-        res_niño.setAlwaysOnTop(rootPaneCheckingEnabled);
-        res_niño.setLocationRelativeTo(null);
-        res_niño.setVisible(true);
+
     }//GEN-LAST:event_btnVerEstudianteActionPerformed
 
     private void btnInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInscripcionActionPerformed
-        inscripcion_niño inscripcion_niño = new inscripcion_niño();
-        inscripcion_niño.setAlwaysOnTop(rootPaneCheckingEnabled);
-        inscripcion_niño.setLocationRelativeTo(null);
-        inscripcion_niño.setVisible(true);
+
     }//GEN-LAST:event_btnInscripcionActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        resultado_representante representante = new resultado_representante();
-        representante.setAlwaysOnTop(rootPaneCheckingEnabled);
-        representante.setLocationRelativeTo(null);
-        representante.setVisible(true);
+
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        inscripcion_niño inscripcion = new inscripcion_niño();
-        inscripcion.setAlwaysOnTop(rootPaneCheckingEnabled);
-        inscripcion.setLocationRelativeTo(null);
-        inscripcion.setVisible(true);
+
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
@@ -1350,6 +3554,306 @@ public void createConfPanel(){
     private void btnCerrarRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarRepActionPerformed
         dispose();
     }//GEN-LAST:event_btnCerrarRepActionPerformed
+
+    private void btn_aceptar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_aceptar2ActionPerformed
+
+    private void text_apellidos_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_apellidos_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_apellidos_madreActionPerformed
+
+    private void text_nombres_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nombres_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_nombres_madreActionPerformed
+
+    private void check_s_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_s_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_s_madreActionPerformed
+
+    private void check_c_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_c_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_c_madreActionPerformed
+
+    private void check_d_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_d_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_d_madreActionPerformed
+
+    private void check_v_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_v_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_v_madreActionPerformed
+
+    private void text_lugar_nac_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_lugar_nac_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_lugar_nac_madreActionPerformed
+
+    private void check_ven_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ven_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_ven_madreActionPerformed
+
+    private void check_ext_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ext_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_ext_madreActionPerformed
+
+    private void text_direc_hab_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_direc_hab_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_direc_hab_madreActionPerformed
+
+    private void check_no_bachiller_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_no_bachiller_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_no_bachiller_madreActionPerformed
+
+    private void chec_bachiller_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chec_bachiller_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chec_bachiller_madreActionPerformed
+
+    private void check_tsu_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_tsu_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_tsu_madreActionPerformed
+
+    private void check_superior_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_superior_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_superior_madreActionPerformed
+
+    private void text_correo_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_correo_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_correo_madreActionPerformed
+
+    private void text_tlf_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_tlf_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_tlf_madreActionPerformed
+
+    private void text_apellidos_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_apellidos_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_apellidos_padreActionPerformed
+
+    private void text_nombres_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nombres_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_nombres_padreActionPerformed
+
+    private void check_s_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_s_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_s_padreActionPerformed
+
+    private void check_c_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_c_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_c_padreActionPerformed
+
+    private void check_d_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_d_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_d_padreActionPerformed
+
+    private void check_v_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_v_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_v_padreActionPerformed
+
+    private void text_lugar_nac_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_lugar_nac_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_lugar_nac_padreActionPerformed
+
+    private void check_ven_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ven_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_ven_padreActionPerformed
+
+    private void check_ext_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ext_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_ext_padreActionPerformed
+
+    private void text_direc_hab_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_direc_hab_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_direc_hab_padreActionPerformed
+
+    private void check_no_bachiller_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_no_bachiller_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_no_bachiller_padreActionPerformed
+
+    private void chec_bachiller_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chec_bachiller_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chec_bachiller_padreActionPerformed
+
+    private void check_tsu_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_tsu_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_tsu_padreActionPerformed
+
+    private void check_superior_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_superior_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_superior_padreActionPerformed
+
+    private void text_correo_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_correo_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_correo_padreActionPerformed
+
+    private void text_tlf_padreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_tlf_padreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_tlf_padreActionPerformed
+
+    private void text_apellidos_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_apellidos_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_apellidos_repActionPerformed
+
+    private void text_nombres_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nombres_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_nombres_repActionPerformed
+
+    private void check_s_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_s_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_s_repActionPerformed
+
+    private void check_c_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_c_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_c_repActionPerformed
+
+    private void check_d_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_d_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_d_repActionPerformed
+
+    private void check_v_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_v_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_v_repActionPerformed
+
+    private void text_lugar_nac_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_lugar_nac_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_lugar_nac_repActionPerformed
+
+    private void check_ven_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ven_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_ven_repActionPerformed
+
+    private void check_ext_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ext_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_ext_repActionPerformed
+
+    private void text_direc_hab_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_direc_hab_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_direc_hab_repActionPerformed
+
+    private void check_no_bachiller_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_no_bachiller_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_no_bachiller_repActionPerformed
+
+    private void chec_bachiller_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chec_bachiller_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chec_bachiller_repActionPerformed
+
+    private void check_tsu_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_tsu_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_tsu_repActionPerformed
+
+    private void check_superior_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_superior_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_superior_repActionPerformed
+
+    private void text_ocupacion_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_ocupacion_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_ocupacion_repActionPerformed
+
+    private void text_correo_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_correo_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_correo_repActionPerformed
+
+    private void text_tlf_repActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_tlf_repActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_tlf_repActionPerformed
+
+    private void text_nombre_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nombre_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_nombre_niñActionPerformed
+
+    private void text_apellido_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_apellido_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_apellido_niñActionPerformed
+
+    private void text_edad_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_edad_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_edad_niñActionPerformed
+
+    private void text_lugar_nac_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_lugar_nac_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_lugar_nac_niñActionPerformed
+
+    private void text_edad_niñ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_edad_niñ1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_edad_niñ1ActionPerformed
+
+    private void radio_hogar_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_hogar_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radio_hogar_niñActionPerformed
+
+    private void radio_mismo_plantel_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_mismo_plantel_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radio_mismo_plantel_niñActionPerformed
+
+    private void radio_otro_plantel_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_otro_plantel_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radio_otro_plantel_niñActionPerformed
+
+    private void text_tall_camisa_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_tall_camisa_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_tall_camisa_niñActionPerformed
+
+    private void text_peso_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_peso_niñActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_peso_niñActionPerformed
+
+    private void check_motor_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_motor_siActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_motor_siActionPerformed
+
+    private void check_alergia_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_alergia_siActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_alergia_siActionPerformed
+
+    private void check_condicion_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_condicion_siActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_check_condicion_siActionPerformed
+
+    private void text_responsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_responsableActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_responsableActionPerformed
+
+    private void text_personaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_personaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_personaActionPerformed
+
+    private void text_fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_fechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_fechaActionPerformed
+
+    private void btn_aceptar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_aceptar3ActionPerformed
+
+    private void text_fecha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_fecha1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_fecha1ActionPerformed
+
+    private void text_persona1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_persona1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_persona1ActionPerformed
+
+    private void text_responsable1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_responsable1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_responsable1ActionPerformed
+
+    private void txt_edadNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_edadNominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_edadNominaActionPerformed
+
+    private void txt_fechNacimNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fechNacimNominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_fechNacimNominaActionPerformed
+
+    private void txt_apellidoNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_apellidoNominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_apellidoNominaActionPerformed
+
+    private void txt_nombreNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombreNominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_nombreNominaActionPerformed
+
+    private void txt_ciNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ciNominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_ciNominaActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -1405,20 +3909,126 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btnVolverEst;
     private javax.swing.JButton btnVolverNomina;
     private javax.swing.JButton btnVolverRep;
+    private javax.swing.JButton btn_aceptar2;
+    private javax.swing.JButton btn_aceptar3;
     private javax.swing.JPanel busquedaAutorizados;
     private javax.swing.JPanel busquedaEstudiantes;
     private javax.swing.JPanel busquedaNomina;
     private javax.swing.JPanel busquedaRepresentante;
+    private javax.swing.JCheckBox chec_bachiller_madre;
+    private javax.swing.JCheckBox chec_bachiller_madre1;
+    private javax.swing.JCheckBox chec_bachiller_madre2;
+    private javax.swing.JCheckBox chec_bachiller_madre3;
+    private javax.swing.JCheckBox chec_bachiller_padre;
+    private javax.swing.JCheckBox chec_bachiller_rep;
+    private javax.swing.JCheckBox check_alergia_no;
+    private javax.swing.JCheckBox check_alergia_si;
+    private javax.swing.JCheckBox check_c_madre;
+    private javax.swing.JCheckBox check_c_madre1;
+    private javax.swing.JCheckBox check_c_madre2;
+    private javax.swing.JCheckBox check_c_madre3;
+    private javax.swing.JCheckBox check_c_padre;
+    private javax.swing.JCheckBox check_c_rep;
+    private javax.swing.JCheckBox check_ci_madre;
+    private javax.swing.JCheckBox check_ci_madre1;
+    private javax.swing.JCheckBox check_ci_padre;
+    private javax.swing.JCheckBox check_ci_padre1;
+    private javax.swing.JCheckBox check_ci_representante;
+    private javax.swing.JCheckBox check_ci_representante1;
+    private javax.swing.JCheckBox check_cognitivo_no;
+    private javax.swing.JCheckBox check_cognitivo_si;
+    private javax.swing.JCheckBox check_condicion_no;
+    private javax.swing.JCheckBox check_condicion_si;
+    private javax.swing.JCheckBox check_copias;
+    private javax.swing.JCheckBox check_copias1;
+    private javax.swing.JCheckBox check_d_madre;
+    private javax.swing.JCheckBox check_d_madre1;
+    private javax.swing.JCheckBox check_d_madre2;
+    private javax.swing.JCheckBox check_d_madre3;
+    private javax.swing.JCheckBox check_d_padre;
+    private javax.swing.JCheckBox check_d_rep;
+    private javax.swing.JCheckBox check_ext_madre;
+    private javax.swing.JCheckBox check_ext_madre1;
+    private javax.swing.JCheckBox check_ext_madre2;
+    private javax.swing.JCheckBox check_ext_madre3;
+    private javax.swing.JCheckBox check_ext_padre;
+    private javax.swing.JCheckBox check_ext_rep;
+    private javax.swing.JCheckBox check_lenguaje_no;
+    private javax.swing.JCheckBox check_lenguaje_si;
+    private javax.swing.JCheckBox check_motor_no;
+    private javax.swing.JCheckBox check_motor_si;
+    private javax.swing.JCheckBox check_no_bachiller_madre;
+    private javax.swing.JCheckBox check_no_bachiller_madre1;
+    private javax.swing.JCheckBox check_no_bachiller_madre2;
+    private javax.swing.JCheckBox check_no_bachiller_madre3;
+    private javax.swing.JCheckBox check_no_bachiller_padre;
+    private javax.swing.JCheckBox check_no_bachiller_rep;
+    private javax.swing.JCheckBox check_originales;
+    private javax.swing.JCheckBox check_originales1;
+    private javax.swing.JCheckBox check_partida;
+    private javax.swing.JCheckBox check_partida1;
+    private javax.swing.JCheckBox check_problema_no;
+    private javax.swing.JCheckBox check_problema_si;
+    private javax.swing.JCheckBox check_s_madre;
+    private javax.swing.JCheckBox check_s_madre1;
+    private javax.swing.JCheckBox check_s_madre2;
+    private javax.swing.JCheckBox check_s_madre3;
+    private javax.swing.JCheckBox check_s_padre;
+    private javax.swing.JCheckBox check_s_rep;
+    private javax.swing.JCheckBox check_superior_madre;
+    private javax.swing.JCheckBox check_superior_madre1;
+    private javax.swing.JCheckBox check_superior_madre2;
+    private javax.swing.JCheckBox check_superior_madre3;
+    private javax.swing.JCheckBox check_superior_padre;
+    private javax.swing.JCheckBox check_superior_rep;
+    private javax.swing.JCheckBox check_tsu_madre;
+    private javax.swing.JCheckBox check_tsu_madre1;
+    private javax.swing.JCheckBox check_tsu_madre2;
+    private javax.swing.JCheckBox check_tsu_madre3;
+    private javax.swing.JCheckBox check_tsu_padre;
+    private javax.swing.JCheckBox check_tsu_rep;
+    private javax.swing.JCheckBox check_v_madre;
+    private javax.swing.JCheckBox check_v_madre1;
+    private javax.swing.JCheckBox check_v_madre2;
+    private javax.swing.JCheckBox check_v_madre3;
+    private javax.swing.JCheckBox check_v_padre;
+    private javax.swing.JCheckBox check_v_rep;
+    private javax.swing.JCheckBox check_vacunas;
+    private javax.swing.JCheckBox check_vacunas1;
+    private javax.swing.JCheckBox check_ven_madre;
+    private javax.swing.JCheckBox check_ven_madre1;
+    private javax.swing.JCheckBox check_ven_madre2;
+    private javax.swing.JCheckBox check_ven_madre3;
+    private javax.swing.JCheckBox check_ven_padre;
+    private javax.swing.JCheckBox check_ven_rep;
+    private javax.swing.JPanel dat_doc;
+    private javax.swing.JPanel dat_doc1;
+    private javax.swing.JPanel dat_madre;
+    private javax.swing.JPanel dat_madre1;
+    private javax.swing.JPanel dat_madre2;
+    private javax.swing.JPanel dat_madre3;
+    private javax.swing.JPanel dat_madre4;
+    private javax.swing.JPanel dat_padre;
+    private javax.swing.JPanel dat_rep;
+    private javax.swing.JPanel datos;
+    private javax.swing.JPanel datosPers;
+    private javax.swing.JPanel diag;
+    private javax.swing.JPanel headder;
     private javax.swing.JPanel headderAut;
     private javax.swing.JPanel headderEst;
+    private javax.swing.JPanel headderInfNomina;
     private javax.swing.JPanel headderMenu;
     private javax.swing.JPanel headderNomina;
     private javax.swing.JPanel headderRep;
     private javax.swing.JLabel imgAutorizado;
     private javax.swing.JLabel imgEstudiante;
+    private javax.swing.JLabel imgEstudiante1;
     private javax.swing.JLabel imgFamilia;
     private javax.swing.JLabel imgHerramienta;
     private javax.swing.JLabel imgMaletin;
+    private javax.swing.JLabel imgNomina;
+    private javax.swing.JPanel informacionEstudiante;
+    private javax.swing.JPanel informacionNomina;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
@@ -1445,6 +4055,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1453,10 +4064,15 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
@@ -1465,9 +4081,279 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JLabel label_alergia;
+    private javax.swing.JLabel label_alergia_cual;
+    private javax.swing.JLabel label_apellido_madre;
+    private javax.swing.JLabel label_apellido_madre1;
+    private javax.swing.JLabel label_apellido_madre2;
+    private javax.swing.JLabel label_apellido_madre3;
+    private javax.swing.JLabel label_apellido_niñ;
+    private javax.swing.JLabel label_apellido_padre;
+    private javax.swing.JLabel label_apellido_rep;
+    private javax.swing.JLabel label_camisa_niñ;
+    private javax.swing.JLabel label_cedula;
+    private javax.swing.JLabel label_cedula1;
+    private javax.swing.JLabel label_ci_madre;
+    private javax.swing.JLabel label_ci_madre1;
+    private javax.swing.JLabel label_ci_madre2;
+    private javax.swing.JLabel label_ci_madre3;
+    private javax.swing.JLabel label_ci_padre;
+    private javax.swing.JLabel label_ci_rep;
+    private javax.swing.JLabel label_cognitivo;
+    private javax.swing.JLabel label_cognitivo_cual;
+    private javax.swing.JLabel label_condicion;
+    private javax.swing.JLabel label_condicion_cual;
+    private javax.swing.JLabel label_copias;
+    private javax.swing.JLabel label_copias1;
+    private javax.swing.JLabel label_correo_madre;
+    private javax.swing.JLabel label_correo_madre1;
+    private javax.swing.JLabel label_correo_madre2;
+    private javax.swing.JLabel label_correo_madre3;
+    private javax.swing.JLabel label_correo_padre;
+    private javax.swing.JLabel label_correo_rep;
+    private javax.swing.JLabel label_direc_hab_madre;
+    private javax.swing.JLabel label_direc_hab_madre1;
+    private javax.swing.JLabel label_direc_hab_madre2;
+    private javax.swing.JLabel label_direc_hab_madre3;
+    private javax.swing.JLabel label_direc_hab_padre;
+    private javax.swing.JLabel label_direc_hab_rep;
+    private javax.swing.JLabel label_direc_trabaj_madre;
+    private javax.swing.JLabel label_direc_trabaj_madre1;
+    private javax.swing.JLabel label_direc_trabaj_madre2;
+    private javax.swing.JLabel label_direc_trabaj_madre3;
+    private javax.swing.JLabel label_direc_trabaj_padre;
+    private javax.swing.JLabel label_direc_trabaj_rep;
+    private javax.swing.JLabel label_edad_madre;
+    private javax.swing.JLabel label_edad_madre1;
+    private javax.swing.JLabel label_edad_madre2;
+    private javax.swing.JLabel label_edad_madre3;
+    private javax.swing.JLabel label_edad_niñ;
+    private javax.swing.JLabel label_edad_niñ1;
+    private javax.swing.JLabel label_edad_padre;
+    private javax.swing.JLabel label_edad_rep;
+    private javax.swing.JLabel label_estado_niñ;
+    private javax.swing.JLabel label_estadociv_madre;
+    private javax.swing.JLabel label_estadociv_madre1;
+    private javax.swing.JLabel label_estadociv_madre2;
+    private javax.swing.JLabel label_estadociv_madre3;
+    private javax.swing.JLabel label_estadociv_padre;
+    private javax.swing.JLabel label_estadociv_rep;
+    private javax.swing.JLabel label_estatura_niñ;
+    private javax.swing.JLabel label_fec_nac_madre;
+    private javax.swing.JLabel label_fec_nac_madre1;
+    private javax.swing.JLabel label_fec_nac_madre2;
+    private javax.swing.JLabel label_fec_nac_madre3;
+    private javax.swing.JLabel label_fec_nac_padre;
+    private javax.swing.JLabel label_fec_nac_rep;
+    private javax.swing.JLabel label_fecha;
+    private javax.swing.JLabel label_fecha1;
+    private javax.swing.JLabel label_grado_madre;
+    private javax.swing.JLabel label_grado_madre1;
+    private javax.swing.JLabel label_grado_madre2;
+    private javax.swing.JLabel label_grado_madre3;
+    private javax.swing.JLabel label_grado_padre;
+    private javax.swing.JLabel label_grado_rep;
+    private javax.swing.JLabel label_lenguaje;
+    private javax.swing.JLabel label_lenguaje_cual;
+    private javax.swing.JLabel label_lugar_nac_madre;
+    private javax.swing.JLabel label_lugar_nac_madre1;
+    private javax.swing.JLabel label_lugar_nac_madre2;
+    private javax.swing.JLabel label_lugar_nac_madre3;
+    private javax.swing.JLabel label_lugar_nac_niñ;
+    private javax.swing.JLabel label_lugar_nac_padre;
+    private javax.swing.JLabel label_lugar_nac_rep;
+    private javax.swing.JLabel label_medidas_niñ;
+    private javax.swing.JLabel label_motor;
+    private javax.swing.JLabel label_motor_cual;
+    private javax.swing.JLabel label_mun_nac_niñ;
+    private javax.swing.JLabel label_nacionalidad_madre;
+    private javax.swing.JLabel label_nacionalidad_madre1;
+    private javax.swing.JLabel label_nacionalidad_madre2;
+    private javax.swing.JLabel label_nacionalidad_madre3;
+    private javax.swing.JLabel label_nacionalidad_niñ;
+    private javax.swing.JLabel label_nacionalidad_padre;
+    private javax.swing.JLabel label_nacionalidad_rep;
+    private javax.swing.JLabel label_nombes_madre;
+    private javax.swing.JLabel label_nombes_madre1;
+    private javax.swing.JLabel label_nombes_madre2;
+    private javax.swing.JLabel label_nombes_madre3;
+    private javax.swing.JLabel label_nombes_padre;
+    private javax.swing.JLabel label_nombes_rep;
+    private javax.swing.JLabel label_nombre_niñ;
+    private javax.swing.JLabel label_observaciones;
+    private javax.swing.JLabel label_observaciones1;
+    private javax.swing.JLabel label_ocupacion_madre;
+    private javax.swing.JLabel label_ocupacion_madre1;
+    private javax.swing.JLabel label_ocupacion_madre2;
+    private javax.swing.JLabel label_ocupacion_madre3;
+    private javax.swing.JLabel label_ocupacion_padre;
+    private javax.swing.JLabel label_ocupacion_rep;
+    private javax.swing.JLabel label_originales;
+    private javax.swing.JLabel label_originales1;
+    private javax.swing.JLabel label_partida;
+    private javax.swing.JLabel label_partida1;
+    private javax.swing.JLabel label_persona;
+    private javax.swing.JLabel label_persona1;
+    private javax.swing.JLabel label_peso_niñ;
+    private javax.swing.JLabel label_problema;
+    private javax.swing.JLabel label_problema_cual;
+    private javax.swing.JLabel label_problema_desarr;
+    private javax.swing.JLabel label_procedencia_niñ;
+    private javax.swing.JLabel label_responsable;
+    private javax.swing.JLabel label_responsable1;
+    private javax.swing.JLabel label_sexo_niñ;
+    private javax.swing.JLabel label_tall_pantalon_niñ;
+    private javax.swing.JLabel label_tall_zapato_niñ;
+    private javax.swing.JLabel label_tallas_niñ;
+    private javax.swing.JLabel label_tlf_madre;
+    private javax.swing.JLabel label_tlf_madre1;
+    private javax.swing.JLabel label_tlf_madre2;
+    private javax.swing.JLabel label_tlf_madre3;
+    private javax.swing.JLabel label_tlf_padre;
+    private javax.swing.JLabel label_tlf_rep;
+    private javax.swing.JLabel label_vacunas;
+    private javax.swing.JLabel label_vacunas1;
+    private javax.swing.JLabel lbl_apellidoNomina;
+    private javax.swing.JLabel lbl_centrVotNomina;
+    private javax.swing.JLabel lbl_ciNomina;
+    private javax.swing.JLabel lbl_edadNomina;
+    private javax.swing.JLabel lbl_fechNacimNomina;
+    private javax.swing.JLabel lbl_headderInfNomina;
+    private javax.swing.JLabel lbl_munResNomina;
+    private javax.swing.JLabel lbl_munResNomina1;
+    private javax.swing.JLabel lbl_munResNomina2;
+    private javax.swing.JLabel lbl_munResNomina3;
+    private javax.swing.JLabel lbl_munVotNomina;
+    private javax.swing.JLabel lbl_nombreNomina;
+    private javax.swing.JLabel lbl_parrqVotNomina;
+    private javax.swing.JLabel lbl_rifNomina;
+    private javax.swing.JLabel lbl_sexoNomina;
+    private javax.swing.JLabel lbl_tlfNomina1;
+    private javax.swing.JLabel lbl_tlfNomina2;
     private javax.swing.JLabel logoPreescolar;
     private javax.swing.JPanel menuPrincipal;
     private javax.swing.JPanel panel;
+    private javax.swing.JTabbedPane panelDatos;
+    private javax.swing.JRadioButton radio_fem_niñ;
+    private javax.swing.JRadioButton radio_guarderia_niñ;
+    private javax.swing.JRadioButton radio_hogar_cuidado_niñ;
+    private javax.swing.JRadioButton radio_hogar_niñ;
+    private javax.swing.JRadioButton radio_masc_niñ;
+    private javax.swing.JRadioButton radio_mismo_plantel_niñ;
+    private javax.swing.JRadioButton radio_multihogar_niñ;
+    private javax.swing.JRadioButton radio_otro_plantel_niñ;
+    private javax.swing.JRadioButton radio_otros_niñ;
+    private javax.swing.JRadioButton rdb_femNomina;
+    private javax.swing.JRadioButton rdb_mascNomina;
+    private javax.swing.JScrollPane scroll_observaciones;
+    private javax.swing.JTextField text_alergia_cual;
+    private javax.swing.JTextField text_apellido_niñ;
+    private javax.swing.JTextField text_apellidos_madre;
+    private javax.swing.JTextField text_apellidos_madre1;
+    private javax.swing.JTextField text_apellidos_madre2;
+    private javax.swing.JTextField text_apellidos_madre3;
+    private javax.swing.JTextField text_apellidos_padre;
+    private javax.swing.JTextField text_apellidos_rep;
+    private javax.swing.JTextField text_ci_madre;
+    private javax.swing.JTextField text_ci_madre1;
+    private javax.swing.JTextField text_ci_madre2;
+    private javax.swing.JTextField text_ci_madre3;
+    private javax.swing.JTextField text_ci_padre;
+    private javax.swing.JTextField text_ci_rep;
+    private javax.swing.JTextField text_cognitivo_cual;
+    private javax.swing.JTextField text_condicion_cual;
+    private javax.swing.JTextField text_correo_madre;
+    private javax.swing.JTextField text_correo_madre1;
+    private javax.swing.JTextField text_correo_madre2;
+    private javax.swing.JTextField text_correo_madre3;
+    private javax.swing.JTextField text_correo_padre;
+    private javax.swing.JTextField text_correo_rep;
+    private javax.swing.JTextField text_direc_hab_madre;
+    private javax.swing.JTextField text_direc_hab_madre1;
+    private javax.swing.JTextField text_direc_hab_madre2;
+    private javax.swing.JTextField text_direc_hab_madre3;
+    private javax.swing.JTextField text_direc_hab_padre;
+    private javax.swing.JTextField text_direc_hab_rep;
+    private javax.swing.JTextField text_direc_trabj_madre;
+    private javax.swing.JTextField text_direc_trabj_madre1;
+    private javax.swing.JTextField text_direc_trabj_madre2;
+    private javax.swing.JTextField text_direc_trabj_madre3;
+    private javax.swing.JTextField text_direc_trabj_padre;
+    private javax.swing.JTextField text_direc_trabj_rep;
+    private javax.swing.JTextField text_edad_madre;
+    private javax.swing.JTextField text_edad_madre1;
+    private javax.swing.JTextField text_edad_madre2;
+    private javax.swing.JTextField text_edad_madre3;
+    private javax.swing.JTextField text_edad_niñ;
+    private javax.swing.JTextField text_edad_niñ1;
+    private javax.swing.JTextField text_edad_padre;
+    private javax.swing.JTextField text_edad_rep;
+    private javax.swing.JTextField text_estado_niñ;
+    private javax.swing.JTextField text_estatura_niñ;
+    private javax.swing.JTextField text_fec_nac_madre;
+    private javax.swing.JTextField text_fec_nac_madre1;
+    private javax.swing.JTextField text_fec_nac_madre2;
+    private javax.swing.JTextField text_fec_nac_madre3;
+    private javax.swing.JTextField text_fec_nac_padre;
+    private javax.swing.JTextField text_fec_nac_rep;
+    private javax.swing.JTextField text_fecha;
+    private javax.swing.JTextField text_fecha1;
+    private javax.swing.JTextField text_lenguaje_cual;
+    private javax.swing.JTextField text_lugar_nac_madre;
+    private javax.swing.JTextField text_lugar_nac_madre1;
+    private javax.swing.JTextField text_lugar_nac_madre2;
+    private javax.swing.JTextField text_lugar_nac_madre3;
+    private javax.swing.JTextField text_lugar_nac_niñ;
+    private javax.swing.JTextField text_lugar_nac_padre;
+    private javax.swing.JTextField text_lugar_nac_rep;
+    private javax.swing.JTextField text_motor_cual;
+    private javax.swing.JTextField text_munic_niñ;
+    private javax.swing.JTextField text_nacionalidad_niñ;
+    private javax.swing.JTextField text_nombre_niñ;
+    private javax.swing.JTextField text_nombres_madre;
+    private javax.swing.JTextField text_nombres_madre1;
+    private javax.swing.JTextField text_nombres_madre2;
+    private javax.swing.JTextField text_nombres_madre3;
+    private javax.swing.JTextField text_nombres_padre;
+    private javax.swing.JTextField text_nombres_rep;
+    private javax.swing.JTextPane text_observaciones;
+    private javax.swing.JTextField text_ocupacion_madre;
+    private javax.swing.JTextField text_ocupacion_madre1;
+    private javax.swing.JTextField text_ocupacion_madre2;
+    private javax.swing.JTextField text_ocupacion_madre3;
+    private javax.swing.JTextField text_ocupacion_padre;
+    private javax.swing.JTextField text_ocupacion_rep;
+    private javax.swing.JTextField text_persona;
+    private javax.swing.JTextField text_persona1;
+    private javax.swing.JTextField text_peso_niñ;
+    private javax.swing.JTextField text_problema_cual;
+    private javax.swing.JTextField text_responsable;
+    private javax.swing.JTextField text_responsable1;
+    private javax.swing.JTextField text_tall_camisa_niñ;
+    private javax.swing.JTextField text_tall_pantalon_niñ;
+    private javax.swing.JTextField text_tall_zapato_niñ;
+    private javax.swing.JTextField text_tlf_madre;
+    private javax.swing.JTextField text_tlf_madre1;
+    private javax.swing.JTextField text_tlf_madre2;
+    private javax.swing.JTextField text_tlf_madre3;
+    private javax.swing.JTextField text_tlf_padre;
+    private javax.swing.JTextField text_tlf_rep;
+    private javax.swing.JLabel txtHeadder;
     private javax.swing.JLabel txtMenuPrincipal1;
+    private javax.swing.JTextField txt_apellidoNomina;
+    private javax.swing.JTextField txt_centrVotNomina;
+    private javax.swing.JTextField txt_ciNomina;
+    private javax.swing.JTextField txt_edadNomina;
+    private javax.swing.JTextField txt_fechNacimNomina;
+    private javax.swing.JTextField txt_munResNomina;
+    private javax.swing.JTextField txt_munResNomina1;
+    private javax.swing.JTextField txt_munResNomina2;
+    private javax.swing.JTextField txt_munResNomina3;
+    private javax.swing.JTextField txt_munVotNomina;
+    private javax.swing.JTextField txt_nombreNomina;
+    private javax.swing.JTextField txt_parrqVotNomina;
+    private javax.swing.JTextField txt_rifNomina;
+    private javax.swing.JTextField txt_tlfNomina1;
+    private javax.swing.JTextField txt_tlfNomina2;
     // End of variables declaration//GEN-END:variables
 }
