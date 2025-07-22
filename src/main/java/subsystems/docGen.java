@@ -32,7 +32,20 @@ public class docGen {
         paragraph.getContent().add(textRun);
     }
 
-    private static void agregarLogo(){}
+    private static void agregarLogos(){
+        String rutaLogoInst;
+        String rutaLogoMin;
+
+        //obtenemos el IS del logo del CEI
+        try {InputStream isInst = docGen.class.getResourceAsStream(rutaLogoInst);
+            if (isInst == null) {
+                System.out.println("Archivo no encontrado: " + rutaLogoInst);
+            }
+
+
+        }
+
+    }
 
     private static void agregarFirmas(int caso){
 
