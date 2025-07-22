@@ -1,5 +1,6 @@
 package subsystems;
 
+import org.checkerframework.checker.formatter.qual.InvalidFormat;
 import org.docx4j.jaxb.Context;
 import org.docx4j.model.properties.run.Underline;
 import org.docx4j.openpackaging.exceptions.*;
@@ -17,10 +18,6 @@ public class docGen {
     //Global variables
     public static final ObjectFactory fabObjetos = Context.getWmlObjectFactory();
 
-    /*TODO: Añadir: Función vinculadora de header, Función creadora de Footer, Función vinculadora de Footer,
-            Crear arreglo para índice de BD.
-     */
-
     //Back-end Functions
     private static void agregarBr(MainDocumentPart parte){
         //Variables de un solo uso
@@ -34,12 +31,13 @@ public class docGen {
         parte.getContent().add(paragraph);
     }
 
-    //Inicializa el documento con encabezado y pie de página
+    //Inicializa el documento
     private static WordprocessingMLPackage initDoc(){
         WordprocessingMLPackage packWord = null;
         try {
             packWord = WordprocessingMLPackage.createPackage();
         } catch (Exception e) {
+            System.out.println("Inicialización de documento FALLIDA");
             e.printStackTrace();
         }
         return packWord;
@@ -108,6 +106,73 @@ public class docGen {
         return header;
     }
 
+    private static Ftr crearFooter(String text){
+        //Definimos variables
+        Ftr footer = fabObjetos.createFtr();
+        P paragraph = fabObjetos.createP();
+
+        agregarParrafoCEstilo(paragraph, text, false,false,1,false,18);
+
+        footer.getContent().add(paragraph);
+        return footer;
+    }
+
+    private static void setRelHeader(MainDocumentPart docMain, Hdr header){
+        Relationship relacion;
+        try {
+            HeaderPart headerpart = new HeaderPart();
+
+            SectPr propiedades = docMain.getContents().getBody().getSectPr(); //Propiedades de SECCION
+            if (propiedades == null) {
+                propiedades = fabObjetos.createSectPr();
+                docMain.getContents().getBody().setSectPr(propiedades);
+            }
+            HeaderReference refHeader = fabObjetos.createHeaderReference(); refHeader.setType(HdrFtrRef.DEFAULT);
+
+            headerpart.setJaxbElement(header);
+            relacion = docMain.addTargetPart(headerpart);
+            refHeader.setId(relacion.getId()); // definimos la relacion del header con el documento
+
+            propiedades.getEGHdrFtrReferences().add(refHeader);
+            System.out.println("Relación de encabezado establecida EXITOSAMENTE");
+        } catch (Docx4JException e){
+            e.printStackTrace();
+            System.out.println("Creación de relación de encabezado FALLIDA");
+        }
+
+    }
+
+    private static void setRelFooter(MainDocumentPart docMain, Ftr footer){
+        Relationship relacion;
+        try {
+            FooterPart footerpart = new FooterPart();
+
+            SectPr propiedades = docMain.getContents().getBody().getSectPr(); //Propiedades de SECCION
+            if (propiedades == null) {
+                propiedades = fabObjetos.createSectPr();
+                docMain.getContents().getBody().setSectPr(propiedades);
+            }
+            FooterReference refFooter = fabObjetos.createFooterReference(); refFooter.setType(HdrFtrRef.DEFAULT);
+
+            footerpart.setJaxbElement(footer);
+            relacion = docMain.addTargetPart(footerpart);
+            refFooter.setId(relacion.getId()); // definimos la relacion del header con el documento
+
+            propiedades.getEGHdrFtrReferences().add(refFooter);
+            System.out.println("Relación de pie de página establecida EXITOSAMENTE");
+
+        } catch (Docx4JException e){
+            e.printStackTrace();
+            System.out.println("Creación de relación de pie de página FALLIDA");
+        }
+
+    }
+
+    private static void guardarArchivo(WordprocessingMLPackage packWord, String nombreYTipo){
+        File outputFile = new File(nombreYTipo);
+        try {packWord.save(outputFile);} catch (Docx4JException e) {e.printStackTrace();}
+    }
+
     //Generadores públicos
 
     public static void generarConstanciaEstudios(){
@@ -166,17 +231,18 @@ public class docGen {
          */
     }
 
-    public static void generarLicenciaMedica(MainDocumentPart doc){
+    public static void generarLicenciaMedica(WordprocessingMLPackage doc){
+        //Definiciones
+        MainDocumentPart docMain = doc.getMainDocumentPart();
+
         P paragraph = fabObjetos.createP();
         agregarParrafoCEstilo(paragraph, """
-                Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
-                en las instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas,
-                hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac}
-                cursó el {grado} Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar {periodo_escolar}.
-                Es retirado por su representante {nom_representante}. C.I.: {cirepresentante} alegando motivos de {motivo}.
-                
-                Constancia que se expide de parte interesada a los {dias} del mes {mes} de {año}.
-                
+                TEXTO:
+                A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
+                Plantel o dependencia: {nombre_plantel} //C.E.I Arnoldo Gabaldón
+                Lugar: {estado} //Monagas, Municipio: {municipio} //Maturín
+                Distrito: {distrito} //Boquerón Duración de la licencia: {duracíon_solicitud} días, Motivo: {Motivo}
+
                 {firma}   {firma}
                 Docente   Director
                 Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
@@ -184,11 +250,9 @@ public class docGen {
                 true,true,
                 1,false, 24);
 
-        doc.getContent().add(paragraph);
+        docMain.getContent().add(paragraph);
 
-        agregarBr(doc);
-
-        agregarParrafo(paragraph,"Whenhola");
+        agregarBr(docMain);
 
         /*
         TEXTO:
@@ -214,54 +278,6 @@ public class docGen {
          */
     }
 
-    //TODO: Eliminar
-
-    public static void generarDoc(){
-
-        //montar documento
-
-        try {
-            //Definimos el paquete word
-            WordprocessingMLPackage packWord = WordprocessingMLPackage.createPackage();
-            //Definimos la seccion principal del Documento
-            MainDocumentPart mainDoc = packWord.getMainDocumentPart();
-
-            //Definimos variables
-            Relationship relacion;
-            SectPr propiedades = mainDoc.getContents().getBody().getSectPr(); //Propiedades de SECCION
-            if (propiedades == null) {
-                propiedades = fabObjetos.createSectPr();
-                mainDoc.getContents().getBody().setSectPr(propiedades);
-            }
-            HeaderReference refHeader = fabObjetos.createHeaderReference(); refHeader.setType(HdrFtrRef.DEFAULT);
-
-
-            //Añadimos contenido
-            generarLicenciaMedica(mainDoc);
-
-            //TODO: Añadir footer; Convertir a función
-
-            //Encabezado
-            HeaderPart headerDoc = new HeaderPart();
-            Hdr header = crearHeader("Socorro");
-
-            headerDoc.setJaxbElement(header);
-            relacion = mainDoc.addTargetPart(headerDoc);
-            refHeader.setId(relacion.getId()); // definimos la relacion del header con el documento
-
-            //Añadimos la referencia puntero del encabezado al documento
-            propiedades.getEGHdrFtrReferences().add(refHeader);
-
-
-            //Exportamos un archivo
-            File outputFile = new File("textdoc.docx");
-            packWord.save(outputFile);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
     public static void main(String args[]){
         System.out.print("WhenHola");
     }
