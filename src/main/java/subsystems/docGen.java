@@ -11,6 +11,9 @@ import org.docx4j.relationships.Relationship;
 import org.docx4j.wml.*;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.math.BigInteger;
 
 public class docGen {
@@ -19,33 +22,25 @@ public class docGen {
     public static final ObjectFactory fabObjetos = Context.getWmlObjectFactory();
 
     //Back-end Functions
-    private static void agregarBr(MainDocumentPart parte){
+    private static void agregarBr(P paragraph){
         //Variables de un solo uso
-        P paragraph = fabObjetos.createP();
         R textRun = fabObjetos.createR();
         Br lBreak = fabObjetos.createBr();
 
         textRun.getContent().add(lBreak);
 
         paragraph.getContent().add(textRun);
-        parte.getContent().add(paragraph);
     }
 
-    //Inicializa el documento
-    private static WordprocessingMLPackage initDoc(){
-        WordprocessingMLPackage packWord = null;
-        try {
-            packWord = WordprocessingMLPackage.createPackage();
-        } catch (Exception e) {
-            System.out.println("Inicialización de documento FALLIDA");
-            e.printStackTrace();
-        }
-        return packWord;
+    private static void agregarLogo(){}
+
+    private static void agregarFirmas(int caso){
+
     }
 
     private static void agregarParrafoCEstilo(P paragraph, String text, boolean bold,
-                                                   boolean italic,
-                                                   int underline, boolean strikethrough, int fSize){
+                                              boolean italic,
+                                              int underline, boolean strikethrough, int fSize){
         //Definir variables de función
         HpsMeasure sSz = fabObjetos.createHpsMeasure(); sSz.setVal(BigInteger.valueOf(fSize));
         BooleanDefaultTrue sBold = fabObjetos.createBooleanDefaultTrue(); sBold.setVal(bold);
@@ -64,11 +59,11 @@ public class docGen {
         U ul = fabObjetos.createU();
         if (underline == 1){
             ul.setVal(UnderlineEnumeration.SINGLE);
-            } else if (underline == 2){
-                ul.setVal(UnderlineEnumeration.THICK);
-            } else {
-        ul.setVal(UnderlineEnumeration.NONE);
-    }
+        } else if (underline == 2){
+            ul.setVal(UnderlineEnumeration.THICK);
+        } else {
+            ul.setVal(UnderlineEnumeration.NONE);
+        }
         style.setU(ul);
 
         Text textElement = fabObjetos.createText();
@@ -94,24 +89,34 @@ public class docGen {
         System.out.print("Párrafo añadido exiosamente.\n");
     }
 
-    private static Hdr crearHeader(String text){
+    private static Hdr crearHeader(String text1, String text2, String text3,
+                                   String text4, String text5){
         //Definimos variables
         Hdr header = fabObjetos.createHdr();
         P paragraph = fabObjetos.createP();
 
-        agregarParrafoCEstilo(paragraph, text, false,false,1,false,18);
-
+        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph, text3, false,false,1,false,18);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph, text4, false,false,1,false,18);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph, text5, false,false,1,false,18);
 
         header.getContent().add(paragraph);
         return header;
     }
 
-    private static Ftr crearFooter(String text){
+    private static Ftr crearFooter(String text1, String text2){
         //Definimos variables
         Ftr footer = fabObjetos.createFtr();
         P paragraph = fabObjetos.createP();
 
-        agregarParrafoCEstilo(paragraph, text, false,false,1,false,18);
+        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
 
         footer.getContent().add(paragraph);
         return footer;
@@ -173,6 +178,19 @@ public class docGen {
         try {packWord.save(outputFile);} catch (Docx4JException e) {e.printStackTrace();}
     }
 
+    //Inicializa el documento
+    private static WordprocessingMLPackage initDoc(){
+        WordprocessingMLPackage packWord = null;
+        try {
+            packWord = WordprocessingMLPackage.createPackage();
+        } catch (Exception e) {
+            System.out.println("Inicialización de documento FALLIDA");
+            e.printStackTrace();
+        }
+        return packWord;
+    }
+
+
     //Generadores públicos
 
     public static void generarConstanciaEstudios(){
@@ -231,9 +249,21 @@ public class docGen {
          */
     }
 
-    public static void generarLicenciaMedica(WordprocessingMLPackage doc){
+    public static void generarLicenciaMedica(){
+        WordprocessingMLPackage packWord = initDoc();
+
         //Definiciones
-        MainDocumentPart docMain = doc.getMainDocumentPart();
+        MainDocumentPart docMain = packWord.getMainDocumentPart();
+        Hdr header = crearHeader("Ministerio del poder popular para la educación",
+                "Distrito escolar 8-B Sector 02","Maturin, Estado Monagas",
+                "Código DEA O D02231608, Código Estadístico: 16100",
+                "Código Administrativo: 004170601");
+        setRelHeader(docMain, header);
+
+        Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
+                "Teléfono: 0291 6436911");
+
+        setRelFooter(docMain, footer);
 
         P paragraph = fabObjetos.createP();
         agregarParrafoCEstilo(paragraph, """
@@ -244,15 +274,13 @@ public class docGen {
                 Distrito: {distrito} //Boquerón Duración de la licencia: {duracíon_solicitud} días, Motivo: {Motivo}
 
                 {firma}   {firma}
-                Docente   Director
-                Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
-                Teléfono: 0291 6436911""",
+                Docente   Director""",
                 true,true,
                 1,false, 24);
 
         docMain.getContent().add(paragraph);
 
-        agregarBr(docMain);
+        guardarArchivo(packWord, "pruebafase2.docx");
 
         /*
         TEXTO:
@@ -279,7 +307,7 @@ public class docGen {
     }
 
     public static void main(String args[]){
-        System.out.print("WhenHola");
+        generarLicenciaMedica();
     }
 
 }
