@@ -7,6 +7,20 @@ public class utils {
 
     public static byte[] leerISAByteArr(InputStream is){
 
+        byte finalData[];
+
+        try (is) {
+            finalData = is.readAllBytes();
+            return finalData;
+        } catch (java.io.IOException e){
+            e.printStackTrace();
+        }
+
+        finalData = new byte[0];
+
+        return finalData;
+
+/*
         ByteArrayInputStream buffer = new ByteArrayInputStream(new byte[0]);
 
         byte[] data = new byte[4096];
@@ -27,6 +41,7 @@ public class utils {
 
         finalData = buffer.readAllBytes();
         return finalData;
+*/
 
     }
 

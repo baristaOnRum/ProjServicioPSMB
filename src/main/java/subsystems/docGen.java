@@ -2,6 +2,7 @@ package subsystems;
 
 import org.apache.commons.io.input.ClassLoaderObjectInputStream;
 import org.checkerframework.checker.formatter.qual.InvalidFormat;
+import org.docx4j.dml.wordprocessingDrawing.Inline;
 import org.docx4j.jaxb.Context;
 import org.docx4j.model.properties.run.Underline;
 import org.docx4j.openpackaging.exceptions.*;
@@ -35,7 +36,7 @@ public class docGen {
         paragraph.getContent().add(textRun);
     }
 
-    private static void agregarLogos(){
+    private static void agregarLogos(WordprocessingMLPackage packWord, P paragraph){
         String rutaLogoInst = "/iconos/logo_inst_256.png";
         String rutaLogoMin = "/minppe_225x88.png";
 
@@ -43,21 +44,62 @@ public class docGen {
         try {InputStream isInst = docGen.class.getResourceAsStream(rutaLogoInst); //docGen.class.getResourceAsStream(rutaLogoInst
             if (isInst == null) {
                 System.out.println("Archivo no encontrado: " + rutaLogoInst);
-            }
+            } else {System.out.println("Recurso encontrado");}
             //obtenemos el IS del logo del MINPPE
             InputStream isMin = docGen.class.getResourceAsStream(rutaLogoMin);
             if (isMin == null) {
                 System.out.println("Archivo no encontrado: " + rutaLogoMin);
-            }
+            } else {System.out.println("Recurso encontrado");}
             //Guardamos ambos streams como arreglos de bytes
             byte[] arrInst = utils.leerISAByteArr(isInst);
             byte[] arrMin = utils.leerISAByteArr(isMin);
 
+            /* DEBUG: Checkeo de arreglos
+            int i = arrMin.length;
+            int j = 0;
+            for (j = 0; j < i; j++){
+                System.out.print(arrMin[j]);
+            };
+            */
+
             isInst.close();
             isMin.close();
+
+            // Definimos las variables del sistema para insertar los bitmaps al documento
+            BinaryPartAbstractImage imgPartInst = BinaryPartAbstractImage.createImagePart(packWord, arrInst);
+            BinaryPartAbstractImage imgPartMin = BinaryPartAbstractImage.createImagePart(packWord, arrMin);
+
+            R run = fabObjetos.createR();
+            Drawing drawing = fabObjetos.createDrawing();
+
+
+         ;   /* Las medidas usadas para la imagen usan EMU (English Metric Units), para las que:
+                1 pulgada: 914400 EMU
+                Definimos 1 pixel como un valor arbitrario; séase 9525:
+             */
+            Inline inline1 = imgPartInst.createImageInline("logoInst","logo de la institución",
+                    0,1,false,(256 * 9525));
+            Inline inline2 = imgPartMin.createImageInline("logoInst","logo del MPPE",
+                    2,3,false,(225 * 9525));
+
+            //Añadimos las imágenes a una run y al párrafo
+
+            run.getContent().add(drawing);
+            drawing.getAnchorOrInline().add(inline1);
+            drawing.getAnchorOrInline().add(inline2);
+            paragraph.getContent().add(run);
+
+            System.out.println("Imagenes añadidas con éxito");
+
+
+
         } catch (java.io.IOException e){
             e.printStackTrace();
+        } catch (java.lang.Exception e1){
+            e1.printStackTrace();
         }
+
+
 
     }
 
@@ -118,10 +160,12 @@ private static void agregarParrafo(P paragraph, String text) {
 }
 
 private static Hdr crearHeader(String text1, String text2, String text3,
-                               String text4, String text5){
+                               String text4, String text5, WordprocessingMLPackage packWord){
     //Definimos variables
     Hdr header = fabObjetos.createHdr();
     P paragraph = fabObjetos.createP();
+
+    agregarLogos(packWord,paragraph);
 
     agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
     agregarBr(paragraph);
@@ -280,14 +324,12 @@ public static void generarConstanciaRetiro(){
 public static void generarLicenciaMedica(){
     WordprocessingMLPackage packWord = initDoc();
 
-    agregarLogos();
-
     //Definiciones
     MainDocumentPart docMain = packWord.getMainDocumentPart();
     Hdr header = crearHeader("Ministerio del poder popular para la educación",
             "Distrito escolar 8-B Sector 02","Maturin, Estado Monagas",
             "Código DEA O D02231608, Código Estadístico: 16100",
-            "Código Administrativo: 004170601");
+            "Código Administrativo: 004170601", packWord);
     setRelHeader(docMain, header);
 
     Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
