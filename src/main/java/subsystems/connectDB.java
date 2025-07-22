@@ -1,10 +1,8 @@
 package subsystems;
 
 import java.sql.*;
-import java.time.*;
-import subsystems.docGen;
 
-public class ConnectDB {
+public class connectDB {
 
     //Definir parámetros de conexión
     String url;
@@ -31,10 +29,8 @@ public class ConnectDB {
 
     //Definición de funciones de envío de datos
 
-    public void sendRepresentante(Integer ci, String rep_apellidos, String rep_nombres,
-                                  String estado_civil, String lugar_nac, String fecha_nac, String nacionalidad,
-                                  Integer edad, String direccion_hab, String grado_estudios, String ocupacion,
-                                  String direccion_trabj, Long celular, String correo, String rol, Integer menores_6){
+/*
+    public void sendRepresentante(){
 
         try {
             conexion = DriverManager.getConnection(url, user, pass);
@@ -83,13 +79,46 @@ public class ConnectDB {
         }
 
     }
+*//**/
+
+    public void removerRepresentante(){}
 
     public void sendEstudiante(){
 
     }
-    public void sendObrero(){
+
+    public void removerEstudiante(){}
+
+    public void sendNomina(){
 
     }
+
+    public void removerNomina(){}
+
+    public void sendNominaMaestra(){}
+
+    public void removerNominaMaestra(){}
+
+    public void sendAutorizado(){
+
+    }
+
+    public void removerAutorizado(){}
+
+    public void sendDiagnostico(){}
+
+    public void removerDiagnostico(){}
+
+    public void setRelRepresentado(){}
+
+    public void setRelAutorizado(){}
+
+    public void crearUsuario(){}
+
+    public void removerUsuario(){}
+
+    public void promoverAño(){}
+
 
     //Main
     public void main(String args[]) throws SQLException{
