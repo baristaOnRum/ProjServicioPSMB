@@ -78,20 +78,18 @@ public class docGen {
                 Definimos 1 pixel como un valor arbitrario; séase 9525:
              */
             Inline inline1 = imgPartInst.createImageInline("logoInst","logo de la institución",
-                    0,1,false,(256 * 9525));
+                    0,1,false);
             Inline inline2 = imgPartMin.createImageInline("logoInst","logo del MPPE",
-                    2,3,false,(225 * 9525));
+                    2,3,false);
 
             //Añadimos las imágenes a una run y al párrafo
 
             run.getContent().add(drawing);
             drawing.getAnchorOrInline().add(inline1);
-            drawing.getAnchorOrInline().add(inline2);
+            //drawing.getAnchorOrInline().add(inline2);
             paragraph.getContent().add(run);
 
             System.out.println("Imagenes añadidas con éxito");
-
-
 
         } catch (java.io.IOException e){
             e.printStackTrace();
