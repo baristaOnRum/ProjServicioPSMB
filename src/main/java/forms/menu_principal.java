@@ -128,8 +128,8 @@ public void createConfPanel(){
         txt_estadoNiñ = new javax.swing.JTextField();
         lbl_nacionalidadNiñ = new javax.swing.JLabel();
         txt_nacionalidadNiñ = new javax.swing.JTextField();
-        label_edad_niñ1 = new javax.swing.JLabel();
-        text_edad_niñ1 = new javax.swing.JTextField();
+        label_edad_niñ = new javax.swing.JLabel();
+        text_edad_niñ = new javax.swing.JTextField();
         label_procedencia_niñ = new javax.swing.JLabel();
         radio_hogar_niñ = new javax.swing.JRadioButton();
         radio_mismo_plantel_niñ = new javax.swing.JRadioButton();
@@ -162,11 +162,11 @@ public void createConfPanel(){
         check_motor_no = new javax.swing.JCheckBox();
         label_motor_cual = new javax.swing.JLabel();
         text_motor_cual = new javax.swing.JTextField();
-        text_lenguaje_cual = new javax.swing.JTextField();
-        label_lenguaje_cual = new javax.swing.JLabel();
+        label_lenguaje = new javax.swing.JLabel();
         check_lenguaje_no = new javax.swing.JCheckBox();
         check_lenguaje_si = new javax.swing.JCheckBox();
-        label_lenguaje = new javax.swing.JLabel();
+        label_lenguaje_cual = new javax.swing.JLabel();
+        text_lenguaje_cual = new javax.swing.JTextField();
         label_cognitivo = new javax.swing.JLabel();
         check_cognitivo_si = new javax.swing.JCheckBox();
         check_cognitivo_no = new javax.swing.JCheckBox();
@@ -177,9 +177,9 @@ public void createConfPanel(){
         check_alergia_no = new javax.swing.JCheckBox();
         label_alergia_cual = new javax.swing.JLabel();
         text_alergia_cual = new javax.swing.JTextField();
+        label_condicion = new javax.swing.JLabel();
         check_condicion_no = new javax.swing.JCheckBox();
         check_condicion_si = new javax.swing.JCheckBox();
-        label_condicion = new javax.swing.JLabel();
         label_condicion_cual = new javax.swing.JLabel();
         text_condicion_cual = new javax.swing.JTextField();
         panelRepresentante = new javax.swing.JTabbedPane();
@@ -336,16 +336,16 @@ public void createConfPanel(){
         txt_edadNomina = new javax.swing.JTextField();
         lbl_munResNomina = new javax.swing.JLabel();
         txt_munResNomina = new javax.swing.JTextField();
-        lbl_tlfNomina1 = new javax.swing.JLabel();
-        txt_tlfNomina1 = new javax.swing.JTextField();
-        lbl_tlfNomina2 = new javax.swing.JLabel();
-        txt_tlfNomina2 = new javax.swing.JTextField();
-        lbl_munResNomina1 = new javax.swing.JLabel();
-        txt_munResNomina1 = new javax.swing.JTextField();
-        lbl_munResNomina2 = new javax.swing.JLabel();
-        txt_munResNomina2 = new javax.swing.JTextField();
-        lbl_munResNomina3 = new javax.swing.JLabel();
-        txt_munResNomina3 = new javax.swing.JTextField();
+        lbl_prrqResNomina = new javax.swing.JLabel();
+        txt_prrqResNomina = new javax.swing.JTextField();
+        lbl_comResNomina = new javax.swing.JLabel();
+        txt_comResNomina = new javax.swing.JTextField();
+        lbl_calleResNomina = new javax.swing.JLabel();
+        txt_calleResNomina = new javax.swing.JTextField();
+        lbl_tlf1Nomina = new javax.swing.JLabel();
+        txt_tlf1Nomina = new javax.swing.JTextField();
+        lbl_tlf2Nomina = new javax.swing.JLabel();
+        txt_tlf2Nomina = new javax.swing.JTextField();
         datGubNomina = new javax.swing.JPanel();
         lbl_munVotNomina = new javax.swing.JLabel();
         txt_munVotNomina = new javax.swing.JTextField();
@@ -376,26 +376,23 @@ public void createConfPanel(){
         lbl_fechIngresoNomina = new javax.swing.JLabel();
         txt_fechaIngresoNomina = new javax.swing.JTextField();
         docNomina = new javax.swing.JPanel();
-        label_originales1 = new javax.swing.JLabel();
-        check_originales1 = new javax.swing.JCheckBox();
-        label_copias1 = new javax.swing.JLabel();
-        check_copias1 = new javax.swing.JCheckBox();
-        label_partida1 = new javax.swing.JLabel();
-        check_partida1 = new javax.swing.JCheckBox();
-        label_vacunas1 = new javax.swing.JLabel();
-        check_vacunas1 = new javax.swing.JCheckBox();
-        label_cedula1 = new javax.swing.JLabel();
-        check_ci_madre1 = new javax.swing.JCheckBox();
-        check_ci_padre1 = new javax.swing.JCheckBox();
-        check_ci_representante1 = new javax.swing.JCheckBox();
-        label_responsable1 = new javax.swing.JLabel();
-        text_responsable1 = new javax.swing.JTextField();
-        label_persona1 = new javax.swing.JLabel();
-        text_persona1 = new javax.swing.JTextField();
-        label_fecha1 = new javax.swing.JLabel();
-        text_fecha1 = new javax.swing.JTextField();
-        label_observaciones1 = new javax.swing.JLabel();
         btn_aceptarInscripcionNomina = new javax.swing.JButton();
+        informacionRepresentante = new javax.swing.JDialog();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         panel = new javax.swing.JPanel();
 
         headderMenu.setBackground(new java.awt.Color(27, 120, 101));
@@ -1370,11 +1367,11 @@ public void createConfPanel(){
 
         lbl_nacionalidadNiñ.setText("Nacionalidad");
 
-        label_edad_niñ1.setText("Edad");
+        label_edad_niñ.setText("Edad");
 
-        text_edad_niñ1.addActionListener(new java.awt.event.ActionListener() {
+        text_edad_niñ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_edad_niñ1ActionPerformed(evt);
+                text_edad_niñActionPerformed(evt);
             }
         });
 
@@ -1484,9 +1481,9 @@ public void createConfPanel(){
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_edadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_edad_niñ1)
+                                .addComponent(label_edad_niñ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbl_lugarNacNiñ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1553,8 +1550,8 @@ public void createConfPanel(){
                 .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_edadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_edadNiñ)
-                    .addComponent(text_edad_niñ1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_edad_niñ1)
+                    .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_edad_niñ)
                     .addComponent(txt_lugarNacNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_lugarNacNiñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1627,13 +1624,13 @@ public void createConfPanel(){
 
         label_motor_cual.setText("Cual?");
 
-        label_lenguaje_cual.setText("Cual?");
+        label_lenguaje.setText("Lenguaje");
 
         check_lenguaje_no.setText("No");
 
         check_lenguaje_si.setText("Si");
 
-        label_lenguaje.setText("Lenguaje");
+        label_lenguaje_cual.setText("Cual?");
 
         label_cognitivo.setText("Cognitivo");
 
@@ -1656,6 +1653,8 @@ public void createConfPanel(){
 
         label_alergia_cual.setText("Cual?");
 
+        label_condicion.setText("<html>Presenta su niño(a) actualmente alguna condicion<br>\nque amerite del conocimiento del docente:\n</html>");
+
         check_condicion_no.setText("No");
 
         check_condicion_si.setText("Si");
@@ -1664,8 +1663,6 @@ public void createConfPanel(){
                 check_condicion_siActionPerformed(evt);
             }
         });
-
-        label_condicion.setText("<html>Presenta su niño(a) actualmente alguna condicion<br>\nque amerite del conocimiento del docente:\n</html>");
 
         label_condicion_cual.setText("Cual?");
 
@@ -1927,6 +1924,12 @@ public void createConfPanel(){
         label_ocupacion_madre.setText("Ocupacion");
 
         label_direc_trabaj_madre.setText("Direccion de Trabajo");
+
+        text_direc_trabj_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_direc_trabj_madreActionPerformed(evt);
+            }
+        });
 
         label_correo_madre.setText("Correo Electronico");
 
@@ -2886,15 +2889,15 @@ public void createConfPanel(){
 
         lbl_munResNomina.setText("Municipio Residencia");
 
-        lbl_tlfNomina1.setText("Telefono Principal");
+        lbl_prrqResNomina.setText("Parroquia Residencia");
 
-        lbl_tlfNomina2.setText("Telefono Secundario");
+        lbl_comResNomina.setText("Comunidad Residencia");
 
-        lbl_munResNomina1.setText("Parroquia Residencia");
+        lbl_calleResNomina.setText("Calle Residencia");
 
-        lbl_munResNomina2.setText("Comunidad Residencia");
+        lbl_tlf1Nomina.setText("Telefono Principal");
 
-        lbl_munResNomina3.setText("Calle Residencia");
+        lbl_tlf2Nomina.setText("Telefono Secundario");
 
         javax.swing.GroupLayout datosPersNominaLayout = new javax.swing.GroupLayout(datosPersNomina);
         datosPersNomina.setLayout(datosPersNominaLayout);
@@ -2924,17 +2927,17 @@ public void createConfPanel(){
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_munResNomina1)
+                                .addComponent(lbl_prrqResNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_munResNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_prrqResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_munResNomina2)
+                                .addComponent(lbl_comResNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_munResNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_comResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_munResNomina3)
+                                .addComponent(lbl_calleResNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_munResNomina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txt_calleResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 15, Short.MAX_VALUE))
                     .addGroup(datosPersNominaLayout.createSequentialGroup()
                         .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2956,13 +2959,13 @@ public void createConfPanel(){
                                 .addGap(18, 18, 18)
                                 .addComponent(rdb_femNomina))
                             .addGroup(datosPersNominaLayout.createSequentialGroup()
-                                .addComponent(lbl_tlfNomina2)
+                                .addComponent(lbl_tlf2Nomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_tlfNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt_tlf2Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(datosPersNominaLayout.createSequentialGroup()
-                                .addComponent(lbl_tlfNomina1)
+                                .addComponent(lbl_tlf1Nomina)
                                 .addGap(18, 18, 18)
-                                .addComponent(txt_tlfNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txt_tlf1Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         datosPersNominaLayout.setVerticalGroup(
@@ -2992,23 +2995,23 @@ public void createConfPanel(){
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt_munResNomina3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_munResNomina3))
+                        .addComponent(txt_calleResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_calleResNomina))
                     .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_munResNomina)
-                        .addComponent(txt_munResNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_munResNomina1)
-                        .addComponent(txt_munResNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_munResNomina2)))
+                        .addComponent(txt_prrqResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_prrqResNomina)
+                        .addComponent(txt_comResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_comResNomina)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_tlfNomina1)
-                    .addComponent(txt_tlfNomina1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_tlf1Nomina)
+                    .addComponent(txt_tlf1Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_tlfNomina2)
-                    .addComponent(txt_tlfNomina2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_tlf2Nomina)
+                    .addComponent(txt_tlf2Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -3124,7 +3127,7 @@ public void createConfPanel(){
         datPlantelNominaLayout.setHorizontalGroup(
             datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, datPlantelNominaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(120, Short.MAX_VALUE)
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_nivelNominaMaestra)
                     .addComponent(lbl_seccionNominaMaestra)
@@ -3150,12 +3153,10 @@ public void createConfPanel(){
                 .addContainerGap()
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_turnoNomina)
-                    .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_fechIngresoNomina)
-                            .addComponent(txt_fechaIngresoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_turnoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_fechIngresoNomina)
+                        .addComponent(txt_fechaIngresoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_turnoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nivelNominaMaestra)
@@ -3171,134 +3172,19 @@ public void createConfPanel(){
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        docNomina.setBackground(new java.awt.Color(204, 204, 255));
         docNomina.setPreferredSize(new java.awt.Dimension(600, 420));
         docNomina.setRequestFocusEnabled(false);
-
-        label_originales1.setText("Originales");
-
-        label_copias1.setText("Copias");
-
-        label_partida1.setText("Partidas de nacimiento");
-
-        label_vacunas1.setText("Certificado de Vacunas");
-
-        label_cedula1.setText("Cedulas de Identidad:");
-
-        check_ci_madre1.setText("Madre");
-
-        check_ci_padre1.setText("Padre");
-
-        check_ci_representante1.setText("Representante");
-
-        label_responsable1.setText("Persona responsable en la instirucion en realizar la inscripcion:");
-
-        text_responsable1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_responsable1ActionPerformed(evt);
-            }
-        });
-
-        label_persona1.setText("Persona que inscribe al niño o niña");
-
-        text_persona1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_persona1ActionPerformed(evt);
-            }
-        });
-
-        label_fecha1.setText("Fecha de incripcicion");
-
-        text_fecha1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_fecha1ActionPerformed(evt);
-            }
-        });
-
-        label_observaciones1.setText("Observaciones");
 
         javax.swing.GroupLayout docNominaLayout = new javax.swing.GroupLayout(docNomina);
         docNomina.setLayout(docNominaLayout);
         docNominaLayout.setHorizontalGroup(
             docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(docNominaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(docNominaLayout.createSequentialGroup()
-                        .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(docNominaLayout.createSequentialGroup()
-                                .addComponent(label_cedula1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_madre1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_padre1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_representante1))
-                            .addGroup(docNominaLayout.createSequentialGroup()
-                                .addComponent(label_responsable1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_responsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(docNominaLayout.createSequentialGroup()
-                                .addComponent(label_persona1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_persona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(docNominaLayout.createSequentialGroup()
-                                .addComponent(label_originales1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_originales1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_copias1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_copias1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_partida1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_partida1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_vacunas1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_vacunas1)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_observaciones1)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(docNominaLayout.createSequentialGroup()
-                        .addComponent(label_fecha1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_fecha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGap(0, 1330, Short.MAX_VALUE)
         );
         docNominaLayout.setVerticalGroup(
             docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(docNominaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(label_originales1)
-                        .addComponent(check_originales1)
-                        .addComponent(label_copias1)
-                        .addComponent(check_copias1)
-                        .addComponent(label_partida1)
-                        .addComponent(check_partida1)
-                        .addComponent(label_vacunas1)
-                        .addComponent(check_vacunas1))
-                    .addComponent(label_observaciones1))
-                .addGap(9, 9, 9)
-                .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_cedula1)
-                    .addComponent(check_ci_madre1)
-                    .addComponent(check_ci_padre1)
-                    .addComponent(check_ci_representante1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_responsable1)
-                    .addComponent(text_responsable1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_persona1)
-                    .addComponent(text_persona1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_fecha1)
-                    .addComponent(text_fecha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+            .addGap(0, 144, Short.MAX_VALUE)
         );
 
         btn_aceptarInscripcionNomina.setText("ACEPTAR");
@@ -3316,21 +3202,20 @@ public void createConfPanel(){
             .addGroup(informacionNominaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(docNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionNominaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btn_aceptarInscripcionNomina))
+                    .addComponent(docNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 1330, Short.MAX_VALUE)
                     .addGroup(informacionNominaLayout.createSequentialGroup()
-                        .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(informacionNominaLayout.createSequentialGroup()
-                                .addComponent(imgNomina)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(datosPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(informacionNominaLayout.createSequentialGroup()
-                                .addComponent(datGubNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(datPlantelNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(0, 6, Short.MAX_VALUE)))
+                        .addComponent(imgNomina)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(datosPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(informacionNominaLayout.createSequentialGroup()
+                        .addComponent(datGubNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(datPlantelNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 12, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         informacionNominaLayout.setVerticalGroup(
@@ -3341,15 +3226,184 @@ public void createConfPanel(){
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(imgNomina)
                     .addComponent(datosPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(datGubNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                    .addComponent(datPlantelNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(124, 124, 124)
+                    .addComponent(datPlantelNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(docNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(106, 106, 106)
                 .addComponent(btn_aceptarInscripcionNomina)
                 .addContainerGap(82, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable5);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Contacto");
+        jLabel3.setAlignmentX(0.5F);
+        jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), null, new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Residencia");
+        jLabel2.setAlignmentX(0.5F);
+        jLabel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), null, new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Ocupación");
+        jLabel5.setAlignmentX(0.5F);
+        jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), null, new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable2.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        jTable2.setAutoscrolls(false);
+        jTable2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane2.setViewportView(jTable2);
+
+        jPanel2.setBackground(new java.awt.Color(27, 120, 101));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1000, 32));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(250, 247, 239));
+        jLabel4.setText("Resultado");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(452, 452, 452))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
+
+        javax.swing.GroupLayout informacionRepresentanteLayout = new javax.swing.GroupLayout(informacionRepresentante.getContentPane());
+        informacionRepresentante.getContentPane().setLayout(informacionRepresentanteLayout);
+        informacionRepresentanteLayout.setHorizontalGroup(
+            informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(informacionRepresentanteLayout.createSequentialGroup()
+                    .addGap(0, 350, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 350, Short.MAX_VALUE)))
+            .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(informacionRepresentanteLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE)
+                        .addGroup(informacionRepresentanteLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel6)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(informacionRepresentanteLayout.createSequentialGroup()
+                                    .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(0, 0, 0)
+                                    .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(jScrollPane2)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addContainerGap()))
+        );
+        informacionRepresentanteLayout.setVerticalGroup(
+            informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(informacionRepresentanteLayout.createSequentialGroup()
+                    .addGap(0, 250, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 250, Short.MAX_VALUE)))
+            .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(informacionRepresentanteLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(informacionRepresentanteLayout.createSequentialGroup()
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(informacionRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGap(0, 0, 0)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, 0)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -3490,7 +3544,103 @@ public void createConfPanel(){
     }//GEN-LAST:event_btn_cerrarBusqRepActionPerformed
 
     private void btn_aceptarInscripcionNiñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarInscripcionNiñoActionPerformed
-        // TODO add your handling code here:
+      String nombre_niñ = txt_nombreNiñ.getText().trim();
+      String apellido_niñ = txt_apellidoNiñ.getText().trim();
+      int edad_niñ = Integer.parseInt(txt_edadNiñ.getText());
+      int tall_camisa_niñ = Integer.parseInt(text_tall_camisa_niñ.getText());
+      int tall_pantalon_niñ = Integer.parseInt(text_tall_pantalon_niñ.getText());
+      int tall_zapato_niñ = Integer.parseInt(text_tall_zapato_niñ.getText());
+      int peso_niñ = Integer.parseInt(text_peso_niñ.getText());
+      int estatura_niñ = Integer.parseInt(text_estatura_niñ.getText());
+      
+      String prob_parto     = text_problema_cual.getText().trim();
+      String prob_leng      = text_lenguaje_cual.getText().trim();
+      String prob_cogn      = text_cognitivo_cual.getText().trim();
+      String alergia        = text_alergia_cual.getText().trim();
+      String condicion      = text_condicion_cual.getText().trim();
+      
+      String ci_madre           = text_ci_madre.getText().trim();
+      String nombre_madre       = text_nombres_madre.getText().trim();
+      String apellido_madre     = text_apellidos_madre.getText().trim();
+      String fech_nac_madre     = text_fec_nac_madre.getText().trim();
+      String lug_nac_madre      = text_lugar_nac_madre.getText().trim();
+      String direc_hab_madre    = text_direc_hab_madre.getText().trim();
+      String ocup_madre         = text_ocupacion_madre.getText().trim();
+      String direc_trabj_madre  = text_direc_trabj_madre.getText().trim();
+      String corre_madre        = text_correo_madre.getText().trim();
+      String tlf1_madre         = text_tlf_madre.getText().trim();
+      
+      String ci_padre          = text_ci_padre.getText().trim();
+      String nombre_padre      = text_nombres_padre.getText().trim();
+      String apellido_padre    = text_apellidos_padre.getText().trim();
+      String fech_nac_padre    = text_fec_nac_padre.getText().trim();
+      String lug_nac_padre     = text_lugar_nac_padre.getText().trim();
+      String direc_hab_padre   = text_direc_hab_padre.getText().trim();
+      String ocup_padre        = text_ocupacion_padre.getText().trim();
+      String direc_trabj_padre = text_direc_trabj_padre.getText().trim();
+      String corre_padre       = text_correo_padre.getText().trim();
+      String tlf1_padre        = text_tlf_padre.getText().trim();
+      
+      String ci_rep          = text_ci_rep.getText().trim();
+      String nombre_rep      = text_nombres_rep.getText().trim();
+      String apellido_rep    = text_apellidos_rep.getText().trim();
+      String fech_nac_rep    = text_fec_nac_rep.getText().trim();
+      String lug_nac_rep     = text_lugar_nac_rep.getText().trim();
+      String direc_hab_rep   = text_direc_hab_rep.getText().trim();
+      String ocup_rep        = text_ocupacion_rep.getText().trim();
+      String direc_trabj_rep = text_direc_trabj_rep.getText().trim();
+      String corre_rep       = text_correo_rep.getText().trim();
+      String tlf1_rep        = text_tlf_rep.getText().trim();
+      
+      System.out.println(nombre_niñ);
+      System.out.println(apellido_niñ);
+      System.out.println(edad_niñ);
+      System.out.println(tall_camisa_niñ);
+      System.out.println(tall_pantalon_niñ);
+      System.out.println(tall_zapato_niñ);
+      System.out.println(peso_niñ);
+      System.out.println(estatura_niñ);
+      System.out.println(prob_parto    );
+      System.out.println(prob_leng     );
+      System.out.println(prob_cogn     );
+      System.out.println(alergia       );
+      System.out.println(condicion     );
+      
+      System.out.println(ci_madre          );
+      System.out.println(nombre_madre      );
+      System.out.println(apellido_madre    );
+      System.out.println(fech_nac_madre    );
+      System.out.println(lug_nac_madre     );
+      System.out.println(direc_hab_madre   );
+      System.out.println(ocup_madre        );
+      System.out.println(direc_trabj_madre );
+      System.out.println(corre_madre       );
+      System.out.println(tlf1_madre        );
+      
+      System.out.println(ci_padre         );
+      System.out.println(nombre_padre     );
+      System.out.println(apellido_padre   );
+      System.out.println(fech_nac_padre   );
+      System.out.println(lug_nac_padre    );
+      System.out.println(direc_hab_padre  );
+      System.out.println(ocup_padre       );
+      System.out.println(direc_trabj_padre);
+      System.out.println(corre_padre      );
+      System.out.println(tlf1_padre       );
+      
+      System.out.println(ci_rep          );
+      System.out.println(nombre_rep      );
+      System.out.println(apellido_rep    );
+      System.out.println(fech_nac_rep    );
+      System.out.println(lug_nac_rep     );
+      System.out.println(direc_hab_rep   );
+      System.out.println(ocup_rep        );
+      System.out.println(direc_trabj_rep );
+      System.out.println(corre_rep       );
+      System.out.println(tlf1_rep        );
+      
+      
+      
     }//GEN-LAST:event_btn_aceptarInscripcionNiñoActionPerformed
 
     private void text_apellidos_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_apellidos_madreActionPerformed
@@ -3705,9 +3855,9 @@ public void createConfPanel(){
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_lugarNacNiñActionPerformed
 
-    private void text_edad_niñ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_edad_niñ1ActionPerformed
+    private void text_edad_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_edad_niñActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_text_edad_niñ1ActionPerformed
+    }//GEN-LAST:event_text_edad_niñActionPerformed
 
     private void radio_hogar_niñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radio_hogar_niñActionPerformed
         // TODO add your handling code here:
@@ -3754,20 +3904,78 @@ public void createConfPanel(){
     }//GEN-LAST:event_text_fechaActionPerformed
 
     private void btn_aceptarInscripcionNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarInscripcionNominaActionPerformed
-        // TODO add your handling code here:
+      String ci_nomina          = txt_ciNomina.getText().trim();
+      String rif_nomina         = txt_rifNomina.getText().trim();
+      String nombre_nomina      = txt_nombreNomina.getText().trim();
+      String apellido_nomina    = txt_apellidoNomina.getText().trim();
+      String fech_nac_nomina    = txt_fechNacimNomina.getText().trim();
+      String mun_res            = txt_munResNomina.getText().trim();
+      String parrq_res          = txt_prrqResNomina.getText().trim();
+      String comn_res           = txt_comResNomina.getText().trim();
+      String calle_res          = txt_calleResNomina.getText().trim();
+      String tlf1_nomina        = txt_tlf1Nomina.getText().trim();
+      String tlf2_nomina        = txt_tlf2Nomina.getText().trim();
+      
+      String mun_vot            = txt_munVotNomina.getText().trim();
+      String prrq_vot           = txt_parrqVotNomina.getText().trim();
+      String ctr_vot            = txt_centrVotNomina.getText().trim();
+           
+      String jef_com            = txt_jefComNomina.getText().trim();
+      String ci_jef_com         = txt_ciJefComNomina.getText().trim();
+      String posee_1x10         = txt_1x10Nomina.getText().trim();
+      String cant_1x10          = txt_cant1x10Nomina.getText().trim();
+           
+      String nivel              = txt_nivelNominaMaestra.getText().trim();
+      String seccion            = txt_seccionNominaMaestra.getText().trim();
+      String estatus            = txt_estatusNomina.getText().trim();
+      String fch_ingreso        = txt_fechaIngresoNomina.getText().trim();
+      
+      System.out.println(ci_nomina       );
+      System.out.println(rif_nomina      );
+      System.out.println(nombre_nomina   );
+      System.out.println(apellido_nomina );
+      System.out.println(fech_nac_nomina );
+      System.out.println(mun_res         );
+      System.out.println(parrq_res       );
+      System.out.println(comn_res        );
+      System.out.println(calle_res       );
+      System.out.println(tlf1_nomina     );
+      System.out.println(tlf2_nomina     );
+      System.out.println(mun_vot         );
+      System.out.println(prrq_vot        );
+      System.out.println(ctr_vot         );
+      System.out.println(jef_com         );
+      System.out.println(ci_jef_com      );
+      System.out.println(posee_1x10      );
+      System.out.println( cant_1x10      ); 
+      System.out.println(nivel           );
+      System.out.println(seccion         );
+      System.out.println(estatus         );
+      System.out.println(fch_ingreso     );
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     }//GEN-LAST:event_btn_aceptarInscripcionNominaActionPerformed
-
-    private void text_fecha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_fecha1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text_fecha1ActionPerformed
-
-    private void text_persona1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_persona1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text_persona1ActionPerformed
-
-    private void text_responsable1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_responsable1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text_responsable1ActionPerformed
 
     private void txt_edadNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_edadNominaActionPerformed
         // TODO add your handling code here:
@@ -3788,6 +3996,10 @@ public void createConfPanel(){
     private void txt_ciNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ciNominaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_ciNominaActionPerformed
+
+    private void text_direc_trabj_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_direc_trabj_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_direc_trabj_madreActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -3868,17 +4080,13 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JCheckBox check_c_padre;
     private javax.swing.JCheckBox check_c_rep;
     private javax.swing.JCheckBox check_ci_madre;
-    private javax.swing.JCheckBox check_ci_madre1;
     private javax.swing.JCheckBox check_ci_padre;
-    private javax.swing.JCheckBox check_ci_padre1;
     private javax.swing.JCheckBox check_ci_representante;
-    private javax.swing.JCheckBox check_ci_representante1;
     private javax.swing.JCheckBox check_cognitivo_no;
     private javax.swing.JCheckBox check_cognitivo_si;
     private javax.swing.JCheckBox check_condicion_no;
     private javax.swing.JCheckBox check_condicion_si;
     private javax.swing.JCheckBox check_copias;
-    private javax.swing.JCheckBox check_copias1;
     private javax.swing.JCheckBox check_d_madre;
     private javax.swing.JCheckBox check_d_padre;
     private javax.swing.JCheckBox check_d_rep;
@@ -3893,9 +4101,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JCheckBox check_no_bachiller_padre;
     private javax.swing.JCheckBox check_no_bachiller_rep;
     private javax.swing.JCheckBox check_originales;
-    private javax.swing.JCheckBox check_originales1;
     private javax.swing.JCheckBox check_partida;
-    private javax.swing.JCheckBox check_partida1;
     private javax.swing.JCheckBox check_problema_no;
     private javax.swing.JCheckBox check_problema_si;
     private javax.swing.JCheckBox check_s_madre;
@@ -3911,7 +4117,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JCheckBox check_v_padre;
     private javax.swing.JCheckBox check_v_rep;
     private javax.swing.JCheckBox check_vacunas;
-    private javax.swing.JCheckBox check_vacunas1;
     private javax.swing.JCheckBox check_ven_madre;
     private javax.swing.JCheckBox check_ven_padre;
     private javax.swing.JCheckBox check_ven_rep;
@@ -3952,6 +4157,22 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel img_logoInstitucionBusqRep;
     private javax.swing.JPanel informacionEstudiante;
     private javax.swing.JPanel informacionNomina;
+    private javax.swing.JDialog informacionRepresentante;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable5;
     private javax.swing.JLabel label_alergia;
     private javax.swing.JLabel label_alergia_cual;
     private javax.swing.JLabel label_apellido_madre;
@@ -3959,7 +4180,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_apellido_rep;
     private javax.swing.JLabel label_camisa_niñ;
     private javax.swing.JLabel label_cedula;
-    private javax.swing.JLabel label_cedula1;
     private javax.swing.JLabel label_ci_madre;
     private javax.swing.JLabel label_ci_padre;
     private javax.swing.JLabel label_ci_rep;
@@ -3968,7 +4188,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_condicion;
     private javax.swing.JLabel label_condicion_cual;
     private javax.swing.JLabel label_copias;
-    private javax.swing.JLabel label_copias1;
     private javax.swing.JLabel label_correo_madre;
     private javax.swing.JLabel label_correo_padre;
     private javax.swing.JLabel label_correo_rep;
@@ -3979,7 +4198,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_direc_trabaj_padre;
     private javax.swing.JLabel label_direc_trabaj_rep;
     private javax.swing.JLabel label_edad_madre;
-    private javax.swing.JLabel label_edad_niñ1;
+    private javax.swing.JLabel label_edad_niñ;
     private javax.swing.JLabel label_edad_padre;
     private javax.swing.JLabel label_edad_rep;
     private javax.swing.JLabel label_estadociv_madre;
@@ -3990,7 +4209,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_fec_nac_padre;
     private javax.swing.JLabel label_fec_nac_rep;
     private javax.swing.JLabel label_fecha;
-    private javax.swing.JLabel label_fecha1;
     private javax.swing.JLabel label_grado_madre;
     private javax.swing.JLabel label_grado_padre;
     private javax.swing.JLabel label_grado_rep;
@@ -4009,23 +4227,18 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_nombes_padre;
     private javax.swing.JLabel label_nombes_rep;
     private javax.swing.JLabel label_observaciones;
-    private javax.swing.JLabel label_observaciones1;
     private javax.swing.JLabel label_ocupacion_madre;
     private javax.swing.JLabel label_ocupacion_padre;
     private javax.swing.JLabel label_ocupacion_rep;
     private javax.swing.JLabel label_originales;
-    private javax.swing.JLabel label_originales1;
     private javax.swing.JLabel label_partida;
-    private javax.swing.JLabel label_partida1;
     private javax.swing.JLabel label_persona;
-    private javax.swing.JLabel label_persona1;
     private javax.swing.JLabel label_peso_niñ;
     private javax.swing.JLabel label_problema;
     private javax.swing.JLabel label_problema_cual;
     private javax.swing.JLabel label_problema_desarr;
     private javax.swing.JLabel label_procedencia_niñ;
     private javax.swing.JLabel label_responsable;
-    private javax.swing.JLabel label_responsable1;
     private javax.swing.JLabel label_tall_pantalon_niñ;
     private javax.swing.JLabel label_tall_zapato_niñ;
     private javax.swing.JLabel label_tallas_niñ;
@@ -4033,7 +4246,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_tlf_padre;
     private javax.swing.JLabel label_tlf_rep;
     private javax.swing.JLabel label_vacunas;
-    private javax.swing.JLabel label_vacunas1;
     private javax.swing.JLabel lbl_1x10Nomina;
     private javax.swing.JLabel lbl_apellidoNiñ;
     private javax.swing.JLabel lbl_apellidoNomina;
@@ -4041,10 +4253,12 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_busqEstudiante;
     private javax.swing.JLabel lbl_busqNomina;
     private javax.swing.JLabel lbl_busqRepresentante;
+    private javax.swing.JLabel lbl_calleResNomina;
     private javax.swing.JLabel lbl_cant1x10Nomina;
     private javax.swing.JLabel lbl_centrVotNomina;
     private javax.swing.JLabel lbl_ciJefComNomina;
     private javax.swing.JLabel lbl_ciNomina;
+    private javax.swing.JLabel lbl_comResNomina;
     private javax.swing.JLabel lbl_edadNiñ;
     private javax.swing.JLabel lbl_edadNomina;
     private javax.swing.JLabel lbl_estadoNiñ;
@@ -4057,21 +4271,19 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_lugarNacNiñ;
     private javax.swing.JLabel lbl_munNacNiñ;
     private javax.swing.JLabel lbl_munResNomina;
-    private javax.swing.JLabel lbl_munResNomina1;
-    private javax.swing.JLabel lbl_munResNomina2;
-    private javax.swing.JLabel lbl_munResNomina3;
     private javax.swing.JLabel lbl_munVotNomina;
     private javax.swing.JLabel lbl_nacionalidadNiñ;
     private javax.swing.JLabel lbl_nivelNominaMaestra;
     private javax.swing.JLabel lbl_nombreNiñ;
     private javax.swing.JLabel lbl_nombreNomina;
     private javax.swing.JLabel lbl_parrqVotNomina;
+    private javax.swing.JLabel lbl_prrqResNomina;
     private javax.swing.JLabel lbl_rifNomina;
     private javax.swing.JLabel lbl_seccionNominaMaestra;
     private javax.swing.JLabel lbl_sexoNiñ;
     private javax.swing.JLabel lbl_sexoNomina;
-    private javax.swing.JLabel lbl_tlfNomina1;
-    private javax.swing.JLabel lbl_tlfNomina2;
+    private javax.swing.JLabel lbl_tlf1Nomina;
+    private javax.swing.JLabel lbl_tlf2Nomina;
     private javax.swing.JLabel lbl_turnoNomina;
     private javax.swing.JLabel lbl_votoNomina;
     private javax.swing.JLabel logoPreescolar;
@@ -4121,7 +4333,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField text_direc_trabj_padre;
     private javax.swing.JTextField text_direc_trabj_rep;
     private javax.swing.JTextField text_edad_madre;
-    private javax.swing.JTextField text_edad_niñ1;
+    private javax.swing.JTextField text_edad_niñ;
     private javax.swing.JTextField text_edad_padre;
     private javax.swing.JTextField text_edad_rep;
     private javax.swing.JTextField text_estatura_niñ;
@@ -4129,7 +4341,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField text_fec_nac_padre;
     private javax.swing.JTextField text_fec_nac_rep;
     private javax.swing.JTextField text_fecha;
-    private javax.swing.JTextField text_fecha1;
     private javax.swing.JTextField text_lenguaje_cual;
     private javax.swing.JTextField text_lugar_nac_madre;
     private javax.swing.JTextField text_lugar_nac_padre;
@@ -4143,11 +4354,9 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField text_ocupacion_padre;
     private javax.swing.JTextField text_ocupacion_rep;
     private javax.swing.JTextField text_persona;
-    private javax.swing.JTextField text_persona1;
     private javax.swing.JTextField text_peso_niñ;
     private javax.swing.JTextField text_problema_cual;
     private javax.swing.JTextField text_responsable;
-    private javax.swing.JTextField text_responsable1;
     private javax.swing.JTextField text_tall_camisa_niñ;
     private javax.swing.JTextField text_tall_pantalon_niñ;
     private javax.swing.JTextField text_tall_zapato_niñ;
@@ -4158,10 +4367,12 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_1x10Nomina;
     private javax.swing.JTextField txt_apellidoNiñ;
     private javax.swing.JTextField txt_apellidoNomina;
+    private javax.swing.JTextField txt_calleResNomina;
     private javax.swing.JTextField txt_cant1x10Nomina;
     private javax.swing.JTextField txt_centrVotNomina;
     private javax.swing.JTextField txt_ciJefComNomina;
     private javax.swing.JTextField txt_ciNomina;
+    private javax.swing.JTextField txt_comResNomina;
     private javax.swing.JTextField txt_edadNiñ;
     private javax.swing.JTextField txt_edadNomina;
     private javax.swing.JTextField txt_estadoNiñ;
@@ -4175,9 +4386,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_jefComNomina;
     private javax.swing.JTextField txt_lugarNacNiñ;
     private javax.swing.JTextField txt_munResNomina;
-    private javax.swing.JTextField txt_munResNomina1;
-    private javax.swing.JTextField txt_munResNomina2;
-    private javax.swing.JTextField txt_munResNomina3;
     private javax.swing.JTextField txt_munVotNomina;
     private javax.swing.JTextField txt_municNiñ;
     private javax.swing.JTextField txt_nacionalidadNiñ;
@@ -4185,10 +4393,11 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_nombreNiñ;
     private javax.swing.JTextField txt_nombreNomina;
     private javax.swing.JTextField txt_parrqVotNomina;
+    private javax.swing.JTextField txt_prrqResNomina;
     private javax.swing.JTextField txt_rifNomina;
     private javax.swing.JTextField txt_seccionNominaMaestra;
-    private javax.swing.JTextField txt_tlfNomina1;
-    private javax.swing.JTextField txt_tlfNomina2;
+    private javax.swing.JTextField txt_tlf1Nomina;
+    private javax.swing.JTextField txt_tlf2Nomina;
     private javax.swing.JTextField txt_turnoNomina;
     // End of variables declaration//GEN-END:variables
 }

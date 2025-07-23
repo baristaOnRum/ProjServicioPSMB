@@ -1704,9 +1704,9 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="txt_edadNiñ" min="-2" pref="102" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="label_edad_niñ1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_edad_niñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_edad_niñ1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="text_edad_niñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="lbl_lugarNacNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1785,8 +1785,8 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txt_edadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_edadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_edad_niñ1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_edad_niñ1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -1922,14 +1922,14 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_nacionalidadNi&#xf1;">
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_edad_ni&#xf1;1">
+                <Component class="javax.swing.JLabel" name="label_edad_ni&#xf1;">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Edad"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_edad_ni&#xf1;1">
+                <Component class="javax.swing.JTextField" name="text_edad_ni&#xf1;">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_edad_ni&#xf1;1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_edad_ni&#xf1;ActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_procedencia_ni&#xf1;">
@@ -2276,11 +2276,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="text_motor_cual">
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_lenguaje_cual">
-                </Component>
-                <Component class="javax.swing.JLabel" name="label_lenguaje_cual">
+                <Component class="javax.swing.JLabel" name="label_lenguaje">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Cual?"/>
+                    <Property name="text" type="java.lang.String" value="Lenguaje"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="check_lenguaje_no">
@@ -2293,10 +2291,12 @@
                     <Property name="text" type="java.lang.String" value="Si"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_lenguaje">
+                <Component class="javax.swing.JLabel" name="label_lenguaje_cual">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Lenguaje"/>
+                    <Property name="text" type="java.lang.String" value="Cual?"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="text_lenguaje_cual">
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_cognitivo">
                   <Properties>
@@ -2345,6 +2345,11 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="text_alergia_cual">
                 </Component>
+                <Component class="javax.swing.JLabel" name="label_condicion">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Presenta su ni&#xf1;o(a) actualmente alguna condicion&lt;br&gt;&#xa;que amerite del conocimiento del docente:&#xa;&lt;/html&gt;"/>
+                  </Properties>
+                </Component>
                 <Component class="javax.swing.JCheckBox" name="check_condicion_no">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No"/>
@@ -2357,11 +2362,6 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_condicion_siActionPerformed"/>
                   </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="label_condicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;Presenta su ni&#xf1;o(a) actualmente alguna condicion&lt;br&gt;&#xa;que amerite del conocimiento del docente:&#xa;&lt;/html&gt;"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_condicion_cual">
                   <Properties>
@@ -2718,6 +2718,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="text_direc_trabj_madre">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_direc_trabj_madreActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_correo_madre">
                   <Properties>
@@ -3695,25 +3698,22 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="docNomina" alignment="0" pref="1324" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="btn_aceptarInscripcionNomina" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="docNomina" alignment="0" pref="1330" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="imgNomina" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="datosPersNomina" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="datGubNomina" min="-2" pref="683" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="datPlantelNomina" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                          <Component id="imgNomina" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="datosPersNomina" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="datGubNomina" min="-2" pref="683" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="datPlantelNomina" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -3729,14 +3729,14 @@
                       <Component id="imgNomina" min="-2" max="-2" attributes="0"/>
                       <Component id="datosPersNomina" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="datGubNomina" pref="131" max="32767" attributes="0"/>
-                      <Component id="datPlantelNomina" max="32767" attributes="0"/>
+                      <Component id="datPlantelNomina" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="docNomina" min="-2" pref="144" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                   <Component id="btn_aceptarInscripcionNomina" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="82" max="32767" attributes="0"/>
               </Group>
@@ -3828,17 +3828,17 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="txt_munResNomina" min="-2" pref="180" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbl_munResNomina1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_prrqResNomina" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_munResNomina1" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="txt_prrqResNomina" min="-2" pref="149" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbl_munResNomina2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_comResNomina" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_munResNomina2" min="-2" pref="180" max="-2" attributes="0"/>
+                                      <Component id="txt_comResNomina" min="-2" pref="180" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbl_munResNomina3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_calleResNomina" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_munResNomina3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_calleResNomina" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
@@ -3866,14 +3866,14 @@
                                       <Component id="rdb_femNomina" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lbl_tlfNomina2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_tlf2Nomina" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_tlfNomina2" min="-2" pref="63" max="-2" attributes="0"/>
+                                      <Component id="txt_tlf2Nomina" min="-2" pref="63" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lbl_tlfNomina1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_tlf1Nomina" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txt_tlfNomina1" min="-2" pref="64" max="-2" attributes="0"/>
+                                      <Component id="txt_tlf1Nomina" min="-2" pref="64" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -3912,27 +3912,27 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="txt_munResNomina3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_munResNomina3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_calleResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_calleResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txt_munResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_munResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_munResNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_munResNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_munResNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_munResNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_prrqResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_prrqResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_comResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_comResNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_tlfNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_tlfNomina1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_tlf1Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_tlf1Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_tlfNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_tlfNomina2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_tlf2Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_tlf2Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="34" max="32767" attributes="0"/>
                   </Group>
@@ -4021,40 +4021,40 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txt_munResNomina">
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_tlfNomina1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Telefono Principal"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txt_tlfNomina1">
-            </Component>
-            <Component class="javax.swing.JLabel" name="lbl_tlfNomina2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Telefono Secundario"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txt_tlfNomina2">
-            </Component>
-            <Component class="javax.swing.JLabel" name="lbl_munResNomina1">
+            <Component class="javax.swing.JLabel" name="lbl_prrqResNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Parroquia Residencia"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_munResNomina1">
+            <Component class="javax.swing.JTextField" name="txt_prrqResNomina">
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_munResNomina2">
+            <Component class="javax.swing.JLabel" name="lbl_comResNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Comunidad Residencia"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_munResNomina2">
+            <Component class="javax.swing.JTextField" name="txt_comResNomina">
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_munResNomina3">
+            <Component class="javax.swing.JLabel" name="lbl_calleResNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Calle Residencia"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_munResNomina3">
+            <Component class="javax.swing.JTextField" name="txt_calleResNomina">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_tlf1Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefono Principal"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_tlf1Nomina">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_tlf2Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefono Secundario"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_tlf2Nomina">
             </Component>
           </SubComponents>
         </Container>
@@ -4235,7 +4235,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="120" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbl_nivelNominaMaestra" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_seccionNominaMaestra" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4267,15 +4267,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbl_turnoNomina" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="lbl_fechIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_fechaIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txt_turnoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="lbl_fechIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_fechaIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="txt_turnoNomina" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -4337,6 +4333,9 @@
         </Container>
         <Container class="javax.swing.JPanel" name="docNomina">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[600, 420]"/>
             </Property>
@@ -4346,190 +4345,15 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_cedula1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_ci_madre1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_ci_padre1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_ci_representante1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_responsable1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="text_responsable1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_persona1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="text_persona1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_originales1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_originales1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label_copias1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_copias1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label_partida1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_partida1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label_vacunas1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_vacunas1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="label_observaciones1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="label_fecha1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="text_fecha1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
+                  <EmptySpace min="0" pref="1330" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="label_originales1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_originales1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_copias1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_copias1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_partida1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_partida1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_vacunas1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_vacunas1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="label_observaciones1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_cedula1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_ci_madre1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_ci_padre1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_ci_representante1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_responsable1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_responsable1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_persona1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_persona1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_fecha1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_fecha1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="144" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="label_originales1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Originales"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="check_originales1">
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_copias1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Copias"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="check_copias1">
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_partida1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Partidas de nacimiento"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="check_partida1">
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_vacunas1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Certificado de Vacunas"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="check_vacunas1">
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_cedula1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cedulas de Identidad:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="check_ci_madre1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Madre"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="check_ci_padre1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Padre"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="check_ci_representante1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Representante"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_responsable1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Persona responsable en la instirucion en realizar la inscripcion:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="text_responsable1">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_responsable1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_persona1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Persona que inscribe al ni&#xf1;o o ni&#xf1;a"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="text_persona1">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_persona1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_fecha1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Fecha de incripcicion"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="text_fecha1">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_fecha1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="label_observaciones1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Observaciones"/>
-              </Properties>
-            </Component>
-          </SubComponents>
         </Container>
         <Component class="javax.swing.JButton" name="btn_aceptarInscripcionNomina">
           <Properties>
@@ -4538,6 +4362,300 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_aceptarInscripcionNominaActionPerformed"/>
           </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="informacionRepresentante">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="800" max="32767" attributes="0"/>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="350" max="32767" attributes="0"/>
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="350" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jPanel2" alignment="1" pref="788" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jScrollPane1" alignment="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel2" alignment="0" min="-2" pref="380" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jScrollPane5" alignment="0" pref="146" max="32767" attributes="0"/>
+                                          <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="600" max="32767" attributes="0"/>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" min="-2" pref="45" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel2" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jScrollPane5" alignment="0" pref="178" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane1" alignment="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable5">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable3">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="2" rowCount="2">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Contacto"/>
+            <Property name="alignmentX" type="float" value="0.5"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder>
+                  <Color PropertyName="highlightOuter" blue="cc" green="cc" red="cc" type="rgb"/>
+                  <Color PropertyName="shadowOuter" blue="66" green="66" red="66" type="rgb"/>
+                  <Color PropertyName="shadowInner" blue="0" green="0" red="0" type="rgb"/>
+                </BevelBorder>
+              </Border>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable1">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Residencia"/>
+            <Property name="alignmentX" type="float" value="0.5"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder>
+                  <Color PropertyName="highlightOuter" blue="cc" green="cc" red="cc" type="rgb"/>
+                  <Color PropertyName="shadowOuter" blue="66" green="66" red="66" type="rgb"/>
+                  <Color PropertyName="shadowInner" blue="0" green="0" red="0" type="rgb"/>
+                </BevelBorder>
+              </Border>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Ocupaci&#xf3;n"/>
+            <Property name="alignmentX" type="float" value="0.5"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder>
+                  <Color PropertyName="highlightOuter" blue="cc" green="cc" red="cc" type="rgb"/>
+                  <Color PropertyName="shadowOuter" blue="66" green="66" red="66" type="rgb"/>
+                  <Color PropertyName="shadowInner" blue="0" green="0" red="0" type="rgb"/>
+                </BevelBorder>
+              </Border>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable2">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="autoResizeMode" type="int" value="0"/>
+                <Property name="autoscrolls" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor Por defecto"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="65" green="78" red="1b" type="rgb"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1000, 32]"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="452" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ef" green="f7" red="fa" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Resultado"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconos/set1/user-line_240.png"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
