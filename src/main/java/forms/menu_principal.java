@@ -1,5 +1,4 @@
 package forms;
-import subsystems.acceso;
 
 public class menu_principal extends javax.swing.JFrame {
     

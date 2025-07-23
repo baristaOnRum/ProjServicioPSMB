@@ -1,5 +1,4 @@
 package forms;
-import subsystems.acceso;
 
 public class inicio extends javax.swing.JFrame {
     
