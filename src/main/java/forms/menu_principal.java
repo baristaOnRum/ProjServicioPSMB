@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package forms;
+import subsystems.acceso;
 
-/**
- *
- * @author Admin
- */
 public class menu_principal extends javax.swing.JFrame {
     
 private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(menu_principal.class.getName());
@@ -3441,6 +3434,7 @@ public void createConfPanel(){
         panel.removeAll();
         panel.add(busquedaEstudiantes);
         panel.repaint();
+        System.out.println(subsystems.acceso.tipo_acceso);
     }//GEN-LAST:event_btnEstudiantesActionPerformed
 
     private void btnRepresentantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepresentantesActionPerformed
