@@ -83,11 +83,18 @@ public class connectDB {
 
     public void removerRepresentante(){}
 
-    public void sendEstudiante(){
+    public void buscarRepresentante(){}
 
+    public void fetchRepresentante(){}
+
+    public void sendEstudiante(){
     }
 
     public void removerEstudiante(){}
+
+    public void buscarEstudiante(){}
+
+    public void fetchEstudiante(){}
 
     public void sendNomina(){
 
@@ -95,15 +102,27 @@ public class connectDB {
 
     public void removerNomina(){}
 
+    public void buscarNomina(){}
+
+    public void fetchNomina(){}
+
     public void sendNominaMaestra(){}
 
     public void removerNominaMaestra(){}
+
+    public void buscarNominaMaestra(){}
+
+    public void fetchNominaMaestra(){}
 
     public void sendAutorizado(){
 
     }
 
     public void removerAutorizado(){}
+
+    public void buscarAutorizado(){}
+
+    public void fetchAutorizado(){}
 
     public void sendDiagnostico(){}
 
@@ -116,6 +135,8 @@ public class connectDB {
     public void crearUsuario(){}
 
     public void removerUsuario(){}
+
+    public void buscarUsuario(){}
 
     public void promoverAño(){}
 
