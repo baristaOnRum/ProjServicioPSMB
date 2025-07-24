@@ -4,6 +4,7 @@ import org.docx4j.UnitsOfMeasurement;
 import org.docx4j.dml.wordprocessingDrawing.*;
 import org.docx4j.openpackaging.exceptions.*;
 import org.docx4j.openpackaging.packages.*;
+import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.WordprocessingML.HeaderPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.*;
 import org.docx4j.relationships.Relationship;
@@ -12,6 +13,8 @@ import org.docx4j.wml.*;
 import java.io.File;
 import java.io.InputStream;
 import java.math.BigInteger;
+
+import subsystems.individuos.*;
 
 
 public class docGen {
@@ -38,23 +41,16 @@ public class docGen {
         return gridCol;
     }
 
-    private static void agregarLogos(WordprocessingMLPackage packWord, MainDocumentPart parteRaiz){
-        String rutaLogoInst = "/iconos/logo_inst_128.png";
-        String rutaLogoMin = "/minppe_225x88.png";
+    private static void agregarLogos(WordprocessingMLPackage packWord, Part parteRaiz, Hdr header){
+        String rutaEncabezado = "/encabezado.png";
 
         //obtenemos el IS del logo del CEI
-        try {InputStream isInst = docGen.class.getResourceAsStream(rutaLogoInst);
-            if (isInst == null) {
-                System.out.println("Archivo no encontrado: " + rutaLogoInst);
-            } else {System.out.println("Recurso encontrado");}
-            //obtenemos el IS del logo del MINPPE
-            InputStream isMin = docGen.class.getResourceAsStream(rutaLogoMin);
-            if (isMin == null) {
-                System.out.println("Archivo no encontrado: " + rutaLogoMin);
+        try {InputStream isEnc = docGen.class.getResourceAsStream(rutaEncabezado);
+            if (isEnc == null) {
+                System.out.println("Archivo no encontrado: " + rutaEncabezado);
             } else {System.out.println("Recurso encontrado");}
             //Guardamos ambos streams como arreglos de bytes
-            byte[] arrInst = utils.leerISAByteArr(isInst);
-            byte[] arrMin = utils.leerISAByteArr(isMin);
+            byte[] arrEnc = utils.leerISAByteArr(isEnc);
 
             /* DEBUG: Checkeo de arreglos
             int i = arrMin.length;
@@ -64,80 +60,29 @@ public class docGen {
             };
             */
 
-            isInst.close();
-            isMin.close();
+            isEnc.close();
 
             // Definimos las variables del sistema para insertar los bitmaps al documento
-            BinaryPartAbstractImage imgPartInst = BinaryPartAbstractImage.createImagePart(packWord, parteRaiz, arrInst);
-            BinaryPartAbstractImage imgPartMin = ImagePngPart.createImagePart(packWord, parteRaiz, arrMin);
+            BinaryPartAbstractImage imgPartEnc = BinaryPartAbstractImage.createImagePart(packWord, parteRaiz, arrEnc);
 
 
-            R run1 = fabObjetos.createR();
-            R run2 = fabObjetos.createR();
-            P paragraph1 = fabObjetos.createP();
-            P paragraph2 = fabObjetos.createP();
+            R run = fabObjetos.createR();
+            P paragraph = fabObjetos.createP();
             Drawing drawing = fabObjetos.createDrawing();
-            Drawing drawing2 = fabObjetos.createDrawing();
 
             /* Las medidas usadas para la imagen usan EMU (English Metric Units), para las que:
                 1 pulgada: 914400 EMU
                 Creamos las imágenes como objetos Inline.
              */
-            int EMUpPulgada = 914400;
 
-            Inline inline1 = imgPartInst.createImageInline(null,null,
-                    0,0,false);
-            Inline inline2 = imgPartMin.createImageInline(null,null,
-                    1,1,false);
+            Inline inline = imgPartEnc.createImageInline(null,null, 0,0,false);
 
-            //Creamos tablas para dar formato a las imágenes
 
-            Tbl tabla = fabObjetos.createTbl();
-            packWord.getMainDocumentPart().addObject(tabla);
+            drawing.getAnchorOrInline().add(inline);
+            run.getContent().add(drawing);
+            paragraph.getContent().add(run);
 
-            TblPr propTabla = fabObjetos.createTblPr();
-            tabla.setTblPr(propTabla);
-
-            CTBorder marco = fabObjetos.createCTBorder();
-            marco.setColor("#FFFFFF");
-
-            TblBorders borders = fabObjetos.createTblBorders();
-            borders.setLeft(marco);
-            borders.setRight(marco);
-            borders.setTop(marco);
-            borders.setBottom(marco);
-
-            BigInteger totalWidth = BigInteger.valueOf(UnitsOfMeasurement.inchToTwip(6.35f));
-
-            TblGrid grid = fabObjetos.createTblGrid();
-            TblWidth width = fabObjetos.createTblWidth();
-            width.setType(TblWidth.TYPE_DXA);
-            width.setW(totalWidth);
-            propTabla.setTblW(width);
-            //CHANGE GRID WIDTH: 6 INCHES
-            // añadimos 2 columnas
-            grid.getGridCol().add(crearCol((totalWidth.divide(BigInteger.valueOf(2)))));
-            grid.getGridCol().add(crearCol((totalWidth.divide(BigInteger.valueOf(2)))));
-
-            tabla.setTblGrid(grid);
-            //definiendo tabla
-            Tr fila1 = fabObjetos.createTr();
-            tabla.getContent().add(fila1);
-            Tc cel1 = fabObjetos.createTc();
-            Tc cel2 = fabObjetos.createTc();
-            fila1.getContent().add(cel1);
-            fila1.getContent().add(cel2);
-
-            drawing.getAnchorOrInline().add(inline1);
-            run1.getContent().add(drawing);
-            paragraph1.getContent().add(run1);
-
-            drawing2.getAnchorOrInline().add(inline2);
-            run2.getContent().add(drawing2);
-            paragraph2.getContent().add(run2);
-
-            cel1.getContent().add(paragraph1);
-            cel2.getContent().add(paragraph2);
+            header.getContent().add(paragraph);
 
 
 
@@ -172,12 +117,27 @@ public class docGen {
 
     private static void agregarParrafoCEstilo(P paragraph, String text, boolean bold,
                                               boolean italic,
-                                              int underline, boolean strikethrough, int fSize){
+                                              int underline, boolean strikethrough, int fSize, int align){
         //Definir variables de función
         HpsMeasure sSz = fabObjetos.createHpsMeasure(); sSz.setVal(BigInteger.valueOf(fSize));
         BooleanDefaultTrue sBold = fabObjetos.createBooleanDefaultTrue(); sBold.setVal(bold);
         BooleanDefaultTrue sStrike = fabObjetos.createBooleanDefaultTrue(); sStrike.setVal(strikethrough);
         BooleanDefaultTrue sItal = fabObjetos.createBooleanDefaultTrue(); sItal.setVal(italic);
+
+        PPr paragraphP = fabObjetos.createPPr();
+        Jc jc = fabObjetos.createJc();
+        if (align == 0){
+            jc.setVal(JcEnumeration.CENTER);
+        } else if (align == 1){
+            jc.setVal(JcEnumeration.LEFT);
+        } else if (align == 2){
+            jc.setVal(JcEnumeration.RIGHT);
+        } else if (align == 3){
+            jc.setVal(JcEnumeration.DISTRIBUTE);
+        } else {
+            jc.setVal(JcEnumeration.CENTER);
+        }
+        paragraphP.setJc(jc);
 
         System.out.print("Creando párrafo\n");
         R run = fabObjetos.createR();
@@ -205,6 +165,7 @@ public class docGen {
         System.out.print("Aplicando estilo.\n");
         run.setRPr(style);
         System.out.print("Añadiendo párrafo.\n");
+        paragraph.setPPr(paragraphP);
         paragraph.getContent().add(run);
     }
 
@@ -232,15 +193,15 @@ public class docGen {
         P paragraph = fabObjetos.createP();
 
 
-        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text3, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text4, false,false,1,false,18);
-        agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text5, false,false,1,false,18);
+//        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
+//        agregarBr(paragraph);
+//        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
+//        agregarBr(paragraph);
+//        agregarParrafoCEstilo(paragraph, text3, false,false,1,false,18);
+//        agregarBr(paragraph);
+//        agregarParrafoCEstilo(paragraph, text4, false,false,1,false,18);
+//        agregarBr(paragraph);
+//        agregarParrafoCEstilo(paragraph, text5, false,false,1,false,18);
 
         header.getContent().add(paragraph);
     }
@@ -250,9 +211,9 @@ public class docGen {
         Ftr footer = fabObjetos.createFtr();
         P paragraph = fabObjetos.createP();
 
-        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
+        agregarParrafoCEstilo(paragraph, text1, false,false,0,false,18,0);
         agregarBr(paragraph);
-        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
+        agregarParrafoCEstilo(paragraph, text2, false,false,0,false,18,0);
 
         footer.getContent().add(paragraph);
         return footer;
@@ -402,12 +363,12 @@ public class docGen {
         //Definiciones
         MainDocumentPart docMain = packWord.getMainDocumentPart();
 
-        agregarLogos(packWord,docMain);
+        Hdr header = crearHeader();
+        HeaderPart headerPart = crearHeaderPart(header);
 
-        insertarHeader("Ministerio del poder popular para la educación",
-                "Distrito escolar 8-B Sector 02","Maturin, Estado Monagas",
-                "Código DEA O D02231608, Código Estadístico: 16100",
-                "Código Administrativo: 004170601", docMain);
+        setRelHeader(docMain,header,headerPart);
+
+        agregarLogos(packWord,headerPart,header);
 
         Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
                 "Teléfono: 0291 6436911");
@@ -425,7 +386,7 @@ public class docGen {
                     {firma}   {firma}
                     Docente   Director""",
                 true,true,
-                1,false, 24);
+                1,false, 36,1);
 
         docMain.getContent().add(paragraph);
 
