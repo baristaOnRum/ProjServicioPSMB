@@ -1,5 +1,7 @@
 package forms;
 
+import java.awt.Component;
+
 public class menu_principal extends javax.swing.JFrame {
     
 private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(menu_principal.class.getName());
@@ -10,6 +12,38 @@ private static final java.util.logging.Logger logger = java.util.logging.Logger.
 public menu_principal() {
     initComponents();
     panel.add(menuPrincipal);
+    
+    //los accesos se dan desde el menu de busqueda, se limita la informacion que pueden usar los usuarios
+//    switch(subsystems.acceso.tipo_acceso){
+//        case 1 -> {
+//            btn_inscribirEstd.setEnabled(false);
+//            btn_inscribirRep.setEnabled(false);
+//            btn_inscribirAut.setEnabled(false);
+//            btn_inscribirNom.setEnabled(false);
+//            //solo ver
+//            btn_editarBusqEstd.setEnabled(false);
+//            btn_editarBusqRep.setEnabled(false);
+//            btn_editarBusqAut.setEnabled(false);
+//            btn_editarBusqNom.setEnabled(false);
+//        }
+//        case 2 -> {
+//            btn_inscribirRep.setEnabled(false);
+//            btn_inscribirAut.setEnabled(false);
+//            btn_inscribirNom.setEnabled(false);
+//            //solo inscribir estudiantes
+//            btn_editarBusqEstd.setEnabled(false);
+//            btn_editarBusqRep.setEnabled(false);
+//            btn_editarBusqAut.setEnabled(false);
+//            btn_editarBusqNom.setEnabled(false);          
+//        }
+//        case 3 ->{
+//            //edicion total
+//        }
+//        case 4 ->{
+//            //edicion total
+//        }
+//  }
+     
     
 }
 
@@ -41,6 +75,8 @@ public void createConfPanel(){
         btnRepresentantes = new javax.swing.JButton();
         imgAutorizado = new javax.swing.JLabel();
         btnAutorizados = new javax.swing.JButton();
+        imgEstudiante1 = new javax.swing.JLabel();
+        btnEstudiantes1 = new javax.swing.JButton();
         busquedaEstudiantes = new javax.swing.JPanel();
         headderBusqEst = new javax.swing.JPanel();
         lbl_busqEstudiante = new javax.swing.JLabel();
@@ -51,7 +87,7 @@ public void createConfPanel(){
         scrl_busqEstd = new javax.swing.JScrollPane();
         tbl_busqEstd = new javax.swing.JTable();
         img_busqEstd = new javax.swing.JLabel();
-        btn_inscripcionEstd = new javax.swing.JButton();
+        btn_inscribirEstd = new javax.swing.JButton();
         btn_verBusqEstd = new javax.swing.JButton();
         btn_editarBusqEstd = new javax.swing.JButton();
         img_logoInstitucionBusqEstd = new javax.swing.JLabel();
@@ -65,7 +101,7 @@ public void createConfPanel(){
         scrl_busqRep = new javax.swing.JScrollPane();
         tbl_busqRep = new javax.swing.JTable();
         img_busqRep = new javax.swing.JLabel();
-        btn_inscribirRepresentante = new javax.swing.JButton();
+        btn_inscribirRep = new javax.swing.JButton();
         btn_verBusqRep = new javax.swing.JButton();
         btn_editarBusqRep = new javax.swing.JButton();
         img_logoInstitucionBusqRep = new javax.swing.JLabel();
@@ -95,14 +131,14 @@ public void createConfPanel(){
         img_busqNomina = new javax.swing.JLabel();
         btn_inscribirNom = new javax.swing.JButton();
         btn_verNom = new javax.swing.JButton();
-        btn_editarNom = new javax.swing.JButton();
+        btn_editarBusqNom = new javax.swing.JButton();
         im_logoInstitucionBusqNom = new javax.swing.JLabel();
         informacionEstudiante = new javax.swing.JPanel();
         headderEstudiante = new javax.swing.JPanel();
         lbl_headderEstudiante = new javax.swing.JLabel();
         img_infEstudiante = new javax.swing.JLabel();
-        panelDatos = new javax.swing.JTabbedPane();
-        datos = new javax.swing.JPanel();
+        panelDatosEstd = new javax.swing.JTabbedPane();
+        datosEstd = new javax.swing.JPanel();
         lbl_nombreNiñ = new javax.swing.JLabel();
         txt_nombreNiñ = new javax.swing.JTextField();
         lbl_apellidoNiñ = new javax.swing.JLabel();
@@ -142,7 +178,7 @@ public void createConfPanel(){
         text_peso_niñ = new javax.swing.JTextField();
         label_estatura_niñ = new javax.swing.JLabel();
         text_estatura_niñ = new javax.swing.JTextField();
-        diag = new javax.swing.JPanel();
+        diagEstd = new javax.swing.JPanel();
         label_problema = new javax.swing.JLabel();
         check_problema_si = new javax.swing.JCheckBox();
         check_problema_no = new javax.swing.JCheckBox();
@@ -174,7 +210,7 @@ public void createConfPanel(){
         check_condicion_si = new javax.swing.JCheckBox();
         label_condicion_cual = new javax.swing.JLabel();
         text_condicion_cual = new javax.swing.JTextField();
-        panelRepresentante = new javax.swing.JTabbedPane();
+        panelRepresentanteEstd = new javax.swing.JTabbedPane();
         dat_madre = new javax.swing.JPanel();
         label_apellido_madre = new javax.swing.JLabel();
         text_apellidos_madre = new javax.swing.JTextField();
@@ -283,7 +319,7 @@ public void createConfPanel(){
         text_correo_rep = new javax.swing.JTextField();
         label_tlf_rep = new javax.swing.JLabel();
         text_tlf_rep = new javax.swing.JTextField();
-        panelDocumentos = new javax.swing.JPanel();
+        panelDocumentosEstd = new javax.swing.JPanel();
         label_originales = new javax.swing.JLabel();
         check_originales = new javax.swing.JCheckBox();
         label_copias = new javax.swing.JLabel();
@@ -310,7 +346,7 @@ public void createConfPanel(){
         headderInfNomina = new javax.swing.JPanel();
         lbl_headderInfNomina = new javax.swing.JLabel();
         imgNomina = new javax.swing.JLabel();
-        datosPersNomina = new javax.swing.JPanel();
+        datPersNomina = new javax.swing.JPanel();
         lbl_ciNomina = new javax.swing.JLabel();
         txt_ciNomina = new javax.swing.JTextField();
         lbl_rifNomina = new javax.swing.JLabel();
@@ -385,6 +421,7 @@ public void createConfPanel(){
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        informacionAutorizado = new javax.swing.JDialog();
         panel = new javax.swing.JPanel();
 
         headderMenu.setBackground(new java.awt.Color(27, 120, 101));
@@ -411,7 +448,7 @@ public void createConfPanel(){
         );
 
         logoPreescolar.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        logoPreescolar.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        logoPreescolar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoPreescolar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
         logoPreescolar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         logoPreescolar.setAlignmentY(0.0F);
@@ -548,40 +585,64 @@ public void createConfPanel(){
             }
         });
 
+        imgEstudiante1.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
+        imgEstudiante1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgEstudiante1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/file-fill_240.png"))); // NOI18N
+        imgEstudiante1.setToolTipText("");
+        imgEstudiante1.setAlignmentY(0.0F);
+        imgEstudiante1.setAutoscrolls(true);
+        imgEstudiante1.setFocusable(false);
+        imgEstudiante1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        imgEstudiante1.setIconTextGap(0);
+        imgEstudiante1.setRequestFocusEnabled(false);
+
+        btnEstudiantes1.setBackground(new java.awt.Color(62, 181, 157));
+        btnEstudiantes1.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        btnEstudiantes1.setForeground(new java.awt.Color(250, 247, 239));
+        btnEstudiantes1.setText("REPORTES");
+        btnEstudiantes1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnEstudiantes1.setIconTextGap(25);
+        btnEstudiantes1.setMaximumSize(new java.awt.Dimension(100, 40));
+        btnEstudiantes1.setMinimumSize(new java.awt.Dimension(250, 56));
+        btnEstudiantes1.setPreferredSize(new java.awt.Dimension(256, 56));
+        btnEstudiantes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstudiantes1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout menuPrincipalLayout = new javax.swing.GroupLayout(menuPrincipal);
         menuPrincipal.setLayout(menuPrincipalLayout);
         menuPrincipalLayout.setHorizontalGroup(
             menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPrincipalLayout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPlantel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(4, 4, 4))
-                    .addComponent(btnEstudiantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(imgEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(imgFamilia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRepresentantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(logoPreescolar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(30, 30, 30)))
-                .addGap(113, 113, 113)
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAutorizados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(imgAutorizado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(imgHerramienta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnConfiguracion, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE))
-                        .addGap(15, 15, 15)))
-                .addGap(128, 128, 128))
             .addComponent(headderMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(imgEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(imgEstudiante1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEstudiantes1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnRepresentantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(imgFamilia, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAutorizados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(imgAutorizado, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)))
+                    .addComponent(logoPreescolar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(imgHerramienta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnPlantel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnConfiguracion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40))
         );
         menuPrincipalLayout.setVerticalGroup(
             menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -589,32 +650,40 @@ public void createConfPanel(){
                 .addComponent(headderMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPrincipalLayout.createSequentialGroup()
-                            .addComponent(imgAutorizado)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(menuPrincipalLayout.createSequentialGroup()
-                            .addComponent(imgFamilia)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addComponent(imgEstudiante)
-                        .addGap(9, 9, 9)
-                        .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                                .addComponent(imgAutorizado)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, menuPrincipalLayout.createSequentialGroup()
+                                .addComponent(imgFamilia)
+                                .addGap(9, 9, 9)
+                                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, menuPrincipalLayout.createSequentialGroup()
+                                .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnPlantel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                                .addComponent(imgHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE))
+                            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                                .addComponent(imgEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnEstudiantes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(logoPreescolar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addComponent(imgMaletin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnPlantel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(logoPreescolar)
-                        .addGroup(menuPrincipalLayout.createSequentialGroup()
-                            .addComponent(imgHerramienta)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(35, 35, 35))
+                        .addComponent(imgEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         busquedaEstudiantes.setPreferredSize(new java.awt.Dimension(1336, 800));
@@ -693,13 +762,13 @@ public void createConfPanel(){
         img_busqEstd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         img_busqEstd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
 
-        btn_inscripcionEstd.setBackground(new java.awt.Color(27, 120, 101));
-        btn_inscripcionEstd.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btn_inscripcionEstd.setForeground(new java.awt.Color(250, 247, 239));
-        btn_inscripcionEstd.setText("Añadir Estudiante");
-        btn_inscripcionEstd.addActionListener(new java.awt.event.ActionListener() {
+        btn_inscribirEstd.setBackground(new java.awt.Color(27, 120, 101));
+        btn_inscribirEstd.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        btn_inscribirEstd.setForeground(new java.awt.Color(250, 247, 239));
+        btn_inscribirEstd.setText("Añadir Estudiante");
+        btn_inscribirEstd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inscripcionEstdActionPerformed(evt);
+                btn_inscribirEstdActionPerformed(evt);
             }
         });
 
@@ -719,7 +788,7 @@ public void createConfPanel(){
         btn_editarBusqEstd.setBackground(new java.awt.Color(139, 208, 194));
         btn_editarBusqEstd.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn_editarBusqEstd.setForeground(new java.awt.Color(250, 247, 239));
-        btn_editarBusqEstd.setText("Editor");
+        btn_editarBusqEstd.setText("Editar");
         btn_editarBusqEstd.setMaximumSize(new java.awt.Dimension(100, 20));
         btn_editarBusqEstd.setMinimumSize(new java.awt.Dimension(100, 20));
         btn_editarBusqEstd.setPreferredSize(new java.awt.Dimension(100, 20));
@@ -758,7 +827,7 @@ public void createConfPanel(){
                         .addGroup(busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btn_verBusqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
                             .addComponent(btn_editarBusqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                            .addComponent(btn_inscripcionEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                            .addComponent(btn_inscribirEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
                             .addComponent(img_busqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -777,7 +846,7 @@ public void createConfPanel(){
                         .addComponent(scrl_busqEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(busquedaEstudiantesLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(btn_inscripcionEstd)
+                        .addComponent(btn_inscribirEstd)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(img_busqEstd)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -864,14 +933,14 @@ public void createConfPanel(){
         img_busqRep.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         img_busqRep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
 
-        btn_inscribirRepresentante.setBackground(new java.awt.Color(27, 120, 101));
-        btn_inscribirRepresentante.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btn_inscribirRepresentante.setForeground(new java.awt.Color(250, 247, 239));
-        btn_inscribirRepresentante.setToolTipText("");
-        btn_inscribirRepresentante.setLabel("Añadir Representante");
-        btn_inscribirRepresentante.addActionListener(new java.awt.event.ActionListener() {
+        btn_inscribirRep.setBackground(new java.awt.Color(27, 120, 101));
+        btn_inscribirRep.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        btn_inscribirRep.setForeground(new java.awt.Color(250, 247, 239));
+        btn_inscribirRep.setToolTipText("");
+        btn_inscribirRep.setLabel("Añadir Representante");
+        btn_inscribirRep.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inscribirRepresentanteActionPerformed(evt);
+                btn_inscribirRepActionPerformed(evt);
             }
         });
 
@@ -925,7 +994,7 @@ public void createConfPanel(){
                     .addComponent(img_logoInstitucionBusqRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_verBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_editarBusqRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_inscribirRepresentante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_inscribirRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
         busquedaRepresentanteLayout.setVerticalGroup(
@@ -937,7 +1006,7 @@ public void createConfPanel(){
                 .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmb_filtroBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_filtroBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_inscribirRepresentante))
+                    .addComponent(btn_inscribirRep))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrl_busqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1221,13 +1290,13 @@ public void createConfPanel(){
             }
         });
 
-        btn_editarNom.setBackground(new java.awt.Color(139, 208, 194));
-        btn_editarNom.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_editarNom.setForeground(new java.awt.Color(250, 247, 239));
-        btn_editarNom.setText("Editar");
-        btn_editarNom.setMaximumSize(new java.awt.Dimension(100, 20));
-        btn_editarNom.setMinimumSize(new java.awt.Dimension(100, 20));
-        btn_editarNom.setPreferredSize(new java.awt.Dimension(100, 20));
+        btn_editarBusqNom.setBackground(new java.awt.Color(139, 208, 194));
+        btn_editarBusqNom.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btn_editarBusqNom.setForeground(new java.awt.Color(250, 247, 239));
+        btn_editarBusqNom.setText("Editar");
+        btn_editarBusqNom.setMaximumSize(new java.awt.Dimension(100, 20));
+        btn_editarBusqNom.setMinimumSize(new java.awt.Dimension(100, 20));
+        btn_editarBusqNom.setPreferredSize(new java.awt.Dimension(100, 20));
 
         im_logoInstitucionBusqNom.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
         im_logoInstitucionBusqNom.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1257,7 +1326,7 @@ public void createConfPanel(){
                     .addComponent(img_busqNomina, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_inscribirNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_verNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_editarNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_editarBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(im_logoInstitucionBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
                 .addGap(36, 36, 36))
         );
@@ -1281,7 +1350,7 @@ public void createConfPanel(){
                         .addGap(12, 12, 12)
                         .addComponent(btn_verNom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_editarNom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_editarBusqNom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(im_logoInstitucionBusqNom)))
                 .addContainerGap(43, Short.MAX_VALUE))
@@ -1311,7 +1380,7 @@ public void createConfPanel(){
         img_infEstudiante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         img_infEstudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
 
-        datos.setBackground(new java.awt.Color(255, 255, 204));
+        datosEstd.setBackground(new java.awt.Color(255, 255, 204));
 
         lbl_nombreNiñ.setText("Nombre");
 
@@ -1432,20 +1501,20 @@ public void createConfPanel(){
 
         label_estatura_niñ.setText("Estatura");
 
-        javax.swing.GroupLayout datosLayout = new javax.swing.GroupLayout(datos);
-        datos.setLayout(datosLayout);
-        datosLayout.setHorizontalGroup(
-            datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(datosLayout.createSequentialGroup()
+        javax.swing.GroupLayout datosEstdLayout = new javax.swing.GroupLayout(datosEstd);
+        datosEstd.setLayout(datosEstdLayout);
+        datosEstdLayout.setHorizontalGroup(
+            datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(datosLayout.createSequentialGroup()
-                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datosEstdLayout.createSequentialGroup()
+                        .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_procedencia_niñ)
-                            .addGroup(datosLayout.createSequentialGroup()
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosEstdLayout.createSequentialGroup()
+                                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(label_tallas_niñ)
-                                    .addGroup(datosLayout.createSequentialGroup()
+                                    .addGroup(datosEstdLayout.createSequentialGroup()
                                         .addComponent(label_camisa_niñ)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1458,9 +1527,9 @@ public void createConfPanel(){
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(label_medidas_niñ)
-                                    .addGroup(datosLayout.createSequentialGroup()
+                                    .addGroup(datosEstdLayout.createSequentialGroup()
                                         .addComponent(label_peso_niñ)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1468,7 +1537,7 @@ public void createConfPanel(){
                                         .addComponent(label_estatura_niñ)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(datosLayout.createSequentialGroup()
+                            .addGroup(datosEstdLayout.createSequentialGroup()
                                 .addComponent(lbl_edadNiñ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_edadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1480,7 +1549,7 @@ public void createConfPanel(){
                                 .addComponent(lbl_lugarNacNiñ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_lugarNacNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(datosLayout.createSequentialGroup()
+                            .addGroup(datosEstdLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
                                 .addComponent(lbl_estadoNiñ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1494,9 +1563,9 @@ public void createConfPanel(){
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txt_nacionalidadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(datosLayout.createSequentialGroup()
-                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(datosLayout.createSequentialGroup()
+                    .addGroup(datosEstdLayout.createSequentialGroup()
+                        .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datosEstdLayout.createSequentialGroup()
                                 .addComponent(lbl_nombreNiñ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_nombreNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1510,7 +1579,7 @@ public void createConfPanel(){
                                 .addComponent(rdb_mascNiñ)
                                 .addGap(18, 18, 18)
                                 .addComponent(rdb_femNiñ))
-                            .addGroup(datosLayout.createSequentialGroup()
+                            .addGroup(datosEstdLayout.createSequentialGroup()
                                 .addComponent(radio_hogar_niñ)
                                 .addGap(18, 18, 18)
                                 .addComponent(radio_multihogar_niñ)
@@ -1526,11 +1595,11 @@ public void createConfPanel(){
                                 .addComponent(radio_otros_niñ)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-        datosLayout.setVerticalGroup(
-            datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(datosLayout.createSequentialGroup()
+        datosEstdLayout.setVerticalGroup(
+            datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datosEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_nombreNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombreNiñ)
                     .addComponent(txt_apellidoNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1539,7 +1608,7 @@ public void createConfPanel(){
                     .addComponent(rdb_mascNiñ)
                     .addComponent(rdb_femNiñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_edadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_edadNiñ)
                     .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1547,7 +1616,7 @@ public void createConfPanel(){
                     .addComponent(txt_lugarNacNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_lugarNacNiñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_estadoNiñ)
                     .addComponent(txt_estadoNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_municNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1557,8 +1626,8 @@ public void createConfPanel(){
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_procedencia_niñ)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(radio_hogar_niñ)
                         .addComponent(radio_hogar_cuidado_niñ)
                         .addComponent(radio_mismo_plantel_niñ)
@@ -1567,21 +1636,21 @@ public void createConfPanel(){
                         .addComponent(radio_otros_niñ))
                     .addComponent(radio_multihogar_niñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(datosLayout.createSequentialGroup()
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(datosEstdLayout.createSequentialGroup()
                         .addComponent(label_tallas_niñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_camisa_niñ)
                             .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(label_tall_pantalon_niñ)
                             .addComponent(label_tall_zapato_niñ)
                             .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(datosLayout.createSequentialGroup()
+                    .addGroup(datosEstdLayout.createSequentialGroup()
                         .addComponent(label_medidas_niñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(datosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_peso_niñ)
                             .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1589,9 +1658,9 @@ public void createConfPanel(){
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        panelDatos.addTab("Datos", datos);
+        panelDatosEstd.addTab("Datos", datosEstd);
 
-        diag.setBackground(new java.awt.Color(204, 255, 204));
+        diagEstd.setBackground(new java.awt.Color(204, 255, 204));
 
         label_problema.setText("Presento algun problema durante el parto:");
 
@@ -1658,48 +1727,48 @@ public void createConfPanel(){
 
         label_condicion_cual.setText("Cual?");
 
-        javax.swing.GroupLayout diagLayout = new javax.swing.GroupLayout(diag);
-        diag.setLayout(diagLayout);
-        diagLayout.setHorizontalGroup(
-            diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(diagLayout.createSequentialGroup()
+        javax.swing.GroupLayout diagEstdLayout = new javax.swing.GroupLayout(diagEstd);
+        diagEstd.setLayout(diagEstdLayout);
+        diagEstdLayout.setHorizontalGroup(
+            diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(diagEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diagLayout.createSequentialGroup()
+                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diagEstdLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(check_motor_no)
                         .addGap(18, 18, 18)
                         .addComponent(label_motor_cual)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(diagLayout.createSequentialGroup()
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label_motor)
                             .addComponent(label_lenguaje)
                             .addComponent(label_cognitivo))
                         .addGap(27, 27, 27)
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(check_cognitivo_si)
                             .addComponent(check_lenguaje_si)
                             .addComponent(check_motor_si))
                         .addGap(18, 18, 18)
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addComponent(check_cognitivo_no)
                                 .addGap(18, 18, 18)
                                 .addComponent(label_cognitivo_cual)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(text_cognitivo_cual))
-                            .addGroup(diagLayout.createSequentialGroup()
+                            .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addComponent(check_lenguaje_no)
                                 .addGap(18, 18, 18)
                                 .addComponent(label_lenguaje_cual)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(text_lenguaje_cual))))
-                    .addGroup(diagLayout.createSequentialGroup()
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(label_problema_desarr)
-                            .addGroup(diagLayout.createSequentialGroup()
+                            .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addComponent(label_problema)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(check_problema_si)
@@ -1709,7 +1778,7 @@ public void createConfPanel(){
                                 .addComponent(label_problema_cual)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(diagLayout.createSequentialGroup()
+                            .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addComponent(label_alergia)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(check_alergia_si)
@@ -1721,12 +1790,12 @@ public void createConfPanel(){
                                 .addComponent(text_alergia_cual)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(103, 103, 103)
-                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(diagLayout.createSequentialGroup()
+                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(diagEstdLayout.createSequentialGroup()
                         .addComponent(label_condicion_cual)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_condicion_cual))
-                    .addGroup(diagLayout.createSequentialGroup()
+                    .addGroup(diagEstdLayout.createSequentialGroup()
                         .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_condicion_si)
@@ -1734,13 +1803,13 @@ public void createConfPanel(){
                         .addComponent(check_condicion_no)))
                 .addGap(55, 55, 55))
         );
-        diagLayout.setVerticalGroup(
-            diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(diagLayout.createSequentialGroup()
+        diagEstdLayout.setVerticalGroup(
+            diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(diagEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(diagLayout.createSequentialGroup()
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_problema)
                             .addComponent(check_problema_si)
                             .addComponent(check_problema_no)
@@ -1748,52 +1817,52 @@ public void createConfPanel(){
                             .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_problema_desarr)
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(diagLayout.createSequentialGroup()
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(label_motor)
                                     .addComponent(check_motor_si)))
-                            .addGroup(diagLayout.createSequentialGroup()
+                            .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(label_motor_cual)
                                     .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(check_motor_no))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(check_lenguaje_no)
                                     .addComponent(label_lenguaje_cual)
                                     .addComponent(text_lenguaje_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(check_lenguaje_si)
                                     .addComponent(label_lenguaje))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(check_cognitivo_no)
                                     .addComponent(label_cognitivo_cual)
                                     .addComponent(text_cognitivo_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(check_cognitivo_si)
                                     .addComponent(label_cognitivo))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(check_alergia_si)
                             .addComponent(check_alergia_no)
                             .addComponent(label_alergia_cual)
                             .addComponent(text_alergia_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(label_alergia)))
-                    .addGroup(diagLayout.createSequentialGroup()
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(check_condicion_si)
                             .addComponent(check_condicion_no)
                             .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(diagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_condicion_cual)
                             .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        panelDatos.addTab("Antecedentes de Salud", diag);
+        panelDatosEstd.addTab("Antecedentes de Salud", diagEstd);
 
         dat_madre.setBackground(new java.awt.Color(255, 204, 204));
         dat_madre.setPreferredSize(new java.awt.Dimension(600, 420));
@@ -2073,7 +2142,7 @@ public void createConfPanel(){
                 .addGap(138, 138, 138))
         );
 
-        panelRepresentante.addTab("Datos Madre", dat_madre);
+        panelRepresentanteEstd.addTab("Datos Madre", dat_madre);
 
         dat_padre.setBackground(new java.awt.Color(204, 255, 255));
         dat_padre.setPreferredSize(new java.awt.Dimension(600, 450));
@@ -2344,7 +2413,7 @@ public void createConfPanel(){
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        panelRepresentante.addTab("Datos Padre", dat_padre);
+        panelRepresentanteEstd.addTab("Datos Padre", dat_padre);
 
         dat_rep.setBackground(new java.awt.Color(204, 204, 255));
         dat_rep.setPreferredSize(new java.awt.Dimension(600, 420));
@@ -2621,10 +2690,10 @@ public void createConfPanel(){
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        panelRepresentante.addTab("Datos Representante Legal", dat_rep);
+        panelRepresentanteEstd.addTab("Datos Representante Legal", dat_rep);
 
-        panelDocumentos.setPreferredSize(new java.awt.Dimension(600, 420));
-        panelDocumentos.setRequestFocusEnabled(false);
+        panelDocumentosEstd.setPreferredSize(new java.awt.Dimension(600, 420));
+        panelDocumentosEstd.setRequestFocusEnabled(false);
 
         label_originales.setText("Originales");
 
@@ -2670,16 +2739,16 @@ public void createConfPanel(){
 
         scroll_observaciones.setViewportView(text_observaciones);
 
-        javax.swing.GroupLayout panelDocumentosLayout = new javax.swing.GroupLayout(panelDocumentos);
-        panelDocumentos.setLayout(panelDocumentosLayout);
-        panelDocumentosLayout.setHorizontalGroup(
-            panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDocumentosLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelDocumentosEstdLayout = new javax.swing.GroupLayout(panelDocumentosEstd);
+        panelDocumentosEstd.setLayout(panelDocumentosEstdLayout);
+        panelDocumentosEstdLayout.setHorizontalGroup(
+            panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelDocumentosLayout.createSequentialGroup()
-                        .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDocumentosLayout.createSequentialGroup()
+                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                                 .addComponent(label_cedula)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(check_ci_madre)
@@ -2687,15 +2756,15 @@ public void createConfPanel(){
                                 .addComponent(check_ci_padre)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(check_ci_representante))
-                            .addGroup(panelDocumentosLayout.createSequentialGroup()
+                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                                 .addComponent(label_responsable)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDocumentosLayout.createSequentialGroup()
+                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                                 .addComponent(label_persona)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDocumentosLayout.createSequentialGroup()
+                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                                 .addComponent(label_originales)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(check_originales)
@@ -2716,20 +2785,20 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(224, Short.MAX_VALUE))
-                    .addGroup(panelDocumentosLayout.createSequentialGroup()
+                    .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                         .addComponent(label_fecha)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
-        panelDocumentosLayout.setVerticalGroup(
-            panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDocumentosLayout.createSequentialGroup()
+        panelDocumentosEstdLayout.setVerticalGroup(
+            panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(panelDocumentosLayout.createSequentialGroup()
-                        .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(label_originales)
                                 .addComponent(check_originales)
                                 .addComponent(label_copias)
@@ -2740,21 +2809,21 @@ public void createConfPanel(){
                                 .addComponent(check_vacunas))
                             .addComponent(label_observaciones))
                         .addGap(9, 9, 9)
-                        .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_cedula)
                             .addComponent(check_ci_madre)
                             .addComponent(check_ci_padre)
                             .addComponent(check_ci_representante))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_responsable)
                             .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_persona)
                             .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(scroll_observaciones))
-                .addGroup(panelDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_fecha)
                     .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(12, Short.MAX_VALUE))
@@ -2775,12 +2844,12 @@ public void createConfPanel(){
             .addGroup(informacionEstudianteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelRepresentante)
+                    .addComponent(panelRepresentanteEstd)
                     .addGroup(informacionEstudianteLayout.createSequentialGroup()
                         .addComponent(img_infEstudiante)
                         .addGap(18, 18, 18)
-                        .addComponent(panelDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(panelDocumentos, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
+                        .addComponent(panelDatosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionEstudianteLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btn_aceptarInscripcionNiño)))
@@ -2793,11 +2862,11 @@ public void createConfPanel(){
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(img_infEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelDatos))
+                    .addComponent(panelDatosEstd))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelRepresentanteEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelDocumentos, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_aceptarInscripcionNiño)
                 .addContainerGap(89, Short.MAX_VALUE))
@@ -2815,9 +2884,9 @@ public void createConfPanel(){
         headderInfNominaLayout.setHorizontalGroup(
             headderInfNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderInfNominaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(600, 600, 600)
                 .addComponent(lbl_headderInfNomina)
-                .addGap(502, 502, 502))
+                .addGap(491, 491, 491))
         );
         headderInfNominaLayout.setVerticalGroup(
             headderInfNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2827,7 +2896,7 @@ public void createConfPanel(){
         imgNomina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imgNomina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
 
-        datosPersNomina.setBackground(new java.awt.Color(255, 255, 204));
+        datPersNomina.setBackground(new java.awt.Color(255, 255, 204));
 
         lbl_ciNomina.setText("C.I");
 
@@ -2891,16 +2960,16 @@ public void createConfPanel(){
 
         lbl_tlf2Nomina.setText("Telefono Secundario");
 
-        javax.swing.GroupLayout datosPersNominaLayout = new javax.swing.GroupLayout(datosPersNomina);
-        datosPersNomina.setLayout(datosPersNominaLayout);
-        datosPersNominaLayout.setHorizontalGroup(
-            datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(datosPersNominaLayout.createSequentialGroup()
+        javax.swing.GroupLayout datPersNominaLayout = new javax.swing.GroupLayout(datPersNomina);
+        datPersNomina.setLayout(datPersNominaLayout);
+        datPersNominaLayout.setHorizontalGroup(
+            datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datPersNominaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(datosPersNominaLayout.createSequentialGroup()
-                        .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(datosPersNominaLayout.createSequentialGroup()
+                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datPersNominaLayout.createSequentialGroup()
+                        .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_fechNacimNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_fechNacimNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2908,13 +2977,13 @@ public void createConfPanel(){
                                 .addComponent(lbl_edadNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_edadNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(datosPersNominaLayout.createSequentialGroup()
+                            .addGroup(datPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_ciNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_ciNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(lbl_rifNomina))
-                            .addGroup(datosPersNominaLayout.createSequentialGroup()
+                            .addGroup(datPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_munResNomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2931,12 +3000,12 @@ public void createConfPanel(){
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_calleResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 15, Short.MAX_VALUE))
-                    .addGroup(datosPersNominaLayout.createSequentialGroup()
-                        .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(datosPersNominaLayout.createSequentialGroup()
-                                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(datPersNominaLayout.createSequentialGroup()
+                        .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(datPersNominaLayout.createSequentialGroup()
+                                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(txt_rifNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, datosPersNominaLayout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, datPersNominaLayout.createSequentialGroup()
                                         .addComponent(lbl_nombreNomina)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txt_nombreNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2950,27 +3019,27 @@ public void createConfPanel(){
                                 .addComponent(rdb_mascNomina)
                                 .addGap(18, 18, 18)
                                 .addComponent(rdb_femNomina))
-                            .addGroup(datosPersNominaLayout.createSequentialGroup()
+                            .addGroup(datPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_tlf2Nomina)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_tlf2Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(datosPersNominaLayout.createSequentialGroup()
+                            .addGroup(datPersNominaLayout.createSequentialGroup()
                                 .addComponent(lbl_tlf1Nomina)
                                 .addGap(18, 18, 18)
                                 .addComponent(txt_tlf1Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-        datosPersNominaLayout.setVerticalGroup(
-            datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(datosPersNominaLayout.createSequentialGroup()
+        datPersNominaLayout.setVerticalGroup(
+            datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(datPersNominaLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_ciNomina)
                     .addComponent(txt_ciNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_rifNomina)
                     .addComponent(txt_rifNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_nombreNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombreNomina)
                     .addComponent(txt_apellidoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2979,17 +3048,17 @@ public void createConfPanel(){
                     .addComponent(rdb_mascNomina)
                     .addComponent(rdb_femNomina))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_fechNacimNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_fechNacimNomina)
                     .addComponent(txt_edadNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_edadNomina))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txt_calleResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_calleResNomina))
-                    .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txt_munResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_munResNomina)
                         .addComponent(txt_prrqResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2997,11 +3066,11 @@ public void createConfPanel(){
                         .addComponent(txt_comResNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_comResNomina)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_tlf1Nomina)
                     .addComponent(txt_tlf1Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_tlf2Nomina)
                     .addComponent(txt_tlf2Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
@@ -3036,7 +3105,7 @@ public void createConfPanel(){
         datGubNominaLayout.setHorizontalGroup(
             datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(datGubNominaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(17, 17, 17)
                 .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(datGubNominaLayout.createSequentialGroup()
                         .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3054,7 +3123,7 @@ public void createConfPanel(){
                         .addComponent(rdb_siNomina)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(rdb_noNomina)))
-                .addGap(178, 178, 178)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_jefComNomina)
                     .addComponent(lbl_ciJefComNomina)
@@ -3066,12 +3135,12 @@ public void createConfPanel(){
                     .addComponent(txt_jefComNomina)
                     .addComponent(txt_1x10Nomina)
                     .addComponent(txt_cant1x10Nomina))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
         datGubNominaLayout.setVerticalGroup(
             datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(datGubNominaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(10, 10, 10)
                 .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_munVotNomina)
                     .addComponent(txt_munVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3099,7 +3168,7 @@ public void createConfPanel(){
                     .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_cant1x10Nomina)
                         .addComponent(txt_cant1x10Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         datPlantelNomina.setBackground(new java.awt.Color(204, 255, 204));
@@ -3119,7 +3188,7 @@ public void createConfPanel(){
         datPlantelNominaLayout.setHorizontalGroup(
             datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, datPlantelNominaLayout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
+                .addGap(114, 114, 114)
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_nivelNominaMaestra)
                     .addComponent(lbl_seccionNominaMaestra)
@@ -3137,12 +3206,12 @@ public void createConfPanel(){
                         .addComponent(lbl_fechIngresoNomina)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txt_fechaIngresoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(125, 125, 125))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         datPlantelNominaLayout.setVerticalGroup(
             datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(datPlantelNominaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(13, 13, 13)
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_turnoNomina)
                     .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3161,7 +3230,7 @@ public void createConfPanel(){
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_estatusNomina)
                     .addComponent(txt_estatusNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGap(16, 16, 16))
         );
 
         docNomina.setBackground(new java.awt.Color(204, 204, 255));
@@ -3172,7 +3241,7 @@ public void createConfPanel(){
         docNomina.setLayout(docNominaLayout);
         docNominaLayout.setHorizontalGroup(
             docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1330, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         docNominaLayout.setVerticalGroup(
             docNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3190,25 +3259,26 @@ public void createConfPanel(){
         informacionNomina.setLayout(informacionNominaLayout);
         informacionNominaLayout.setHorizontalGroup(
             informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(headderInfNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
+            .addComponent(headderInfNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 1375, Short.MAX_VALUE)
             .addGroup(informacionNominaLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionNominaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btn_aceptarInscripcionNomina))
-                    .addComponent(docNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 1330, Short.MAX_VALUE)
                     .addGroup(informacionNominaLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
                         .addComponent(imgNomina)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(datosPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(datPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(informacionNominaLayout.createSequentialGroup()
-                        .addComponent(datGubNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(datPlantelNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 12, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(26, 26, 26)
+                        .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(docNomina, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1311, Short.MAX_VALUE)
+                            .addGroup(informacionNominaLayout.createSequentialGroup()
+                                .addGap(1220, 1220, 1220)
+                                .addComponent(btn_aceptarInscripcionNomina))
+                            .addGroup(informacionNominaLayout.createSequentialGroup()
+                                .addComponent(datGubNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(datPlantelNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(20, 20, 20))
         );
         informacionNominaLayout.setVerticalGroup(
             informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3217,16 +3287,16 @@ public void createConfPanel(){
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(imgNomina)
-                    .addComponent(datosPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datPersNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(datGubNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                    .addComponent(datPlantelNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datGubNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(datPlantelNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(docNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106)
+                .addGap(42, 42, 42)
                 .addComponent(btn_aceptarInscripcionNomina)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -3398,10 +3468,22 @@ public void createConfPanel(){
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        javax.swing.GroupLayout informacionAutorizadoLayout = new javax.swing.GroupLayout(informacionAutorizado.getContentPane());
+        informacionAutorizado.getContentPane().setLayout(informacionAutorizadoLayout);
+        informacionAutorizadoLayout.setHorizontalGroup(
+            informacionAutorizadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        informacionAutorizadoLayout.setVerticalGroup(
+            informacionAutorizadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IM");
         setBackground(new java.awt.Color(197, 232, 225));
         setMinimumSize(new java.awt.Dimension(1336, 800));
+        setResizable(false);
 
         panel.setLayout(new java.awt.CardLayout());
 
@@ -3433,7 +3515,6 @@ public void createConfPanel(){
         panel.removeAll();
         panel.add(busquedaEstudiantes);
         panel.repaint();
-        System.out.println(subsystems.acceso.tipo_acceso);
     }//GEN-LAST:event_btnEstudiantesActionPerformed
 
     private void btnRepresentantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepresentantesActionPerformed
@@ -3448,9 +3529,9 @@ public void createConfPanel(){
         panel.repaint();
     }//GEN-LAST:event_btnAutorizadosActionPerformed
 
-    private void btn_inscribirRepresentanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirRepresentanteActionPerformed
+    private void btn_inscribirRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirRepActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_inscribirRepresentanteActionPerformed
+    }//GEN-LAST:event_btn_inscribirRepActionPerformed
 
     private void btn_verBusqRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verBusqRepActionPerformed
 
@@ -3461,7 +3542,21 @@ public void createConfPanel(){
     }//GEN-LAST:event_cmb_filtroBusqRepActionPerformed
 
     private void btn_verNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verNomActionPerformed
-
+        panel.removeAll();
+        panel.add(informacionNomina);
+        panel.revalidate();
+        
+        for(Component cp: datPersNomina.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: datGubNomina.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: datPlantelNomina.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: docNomina.getComponents()){
+        }
     }//GEN-LAST:event_btn_verNomActionPerformed
 
     private void btn_inscribirNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirNomActionPerformed
@@ -3477,12 +3572,37 @@ public void createConfPanel(){
     }//GEN-LAST:event_cmb_filtroBusqEstdActionPerformed
 
     private void btn_verBusqEstdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verBusqEstdActionPerformed
-
+        panel.removeAll();
+        panel.add(informacionEstudiante);
+        panel.repaint();
+        
+        for(Component cp: datosEstd.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: diagEstd.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: dat_madre.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: dat_padre.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: dat_rep.getComponents()){
+            cp.setEnabled(false);
+        }
+        for(Component cp: panelDocumentosEstd.getComponents()){
+            cp.setEnabled(false);
+        }
+        
+        
     }//GEN-LAST:event_btn_verBusqEstdActionPerformed
 
-    private void btn_inscripcionEstdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscripcionEstdActionPerformed
-
-    }//GEN-LAST:event_btn_inscripcionEstdActionPerformed
+    private void btn_inscribirEstdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirEstdActionPerformed
+        panel.removeAll();
+        panel.add(informacionEstudiante);
+        panel.repaint();        
+    }//GEN-LAST:event_btn_inscribirEstdActionPerformed
 
     private void btn_verBusqAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verBusqAutActionPerformed
 
@@ -3946,28 +4066,6 @@ public void createConfPanel(){
       System.out.println(estatus         );
       System.out.println(fch_ingreso     );
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
     }//GEN-LAST:event_btn_aceptarInscripcionNominaActionPerformed
 
     private void txt_edadNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_edadNominaActionPerformed
@@ -3993,6 +4091,10 @@ public void createConfPanel(){
     private void text_direc_trabj_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_direc_trabj_madreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_text_direc_trabj_madreActionPerformed
+
+    private void btnEstudiantes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEstudiantes1ActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -4036,6 +4138,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btnAutorizados;
     private javax.swing.JButton btnConfiguracion;
     private javax.swing.JButton btnEstudiantes;
+    private javax.swing.JButton btnEstudiantes1;
     private javax.swing.JButton btnPlantel;
     private javax.swing.JButton btnRepresentantes;
     private javax.swing.JButton btn_aceptarInscripcionNiño;
@@ -4046,12 +4149,12 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btn_cerrarBusqRep;
     private javax.swing.JButton btn_editarBusqAut;
     private javax.swing.JButton btn_editarBusqEstd;
+    private javax.swing.JButton btn_editarBusqNom;
     private javax.swing.JButton btn_editarBusqRep;
-    private javax.swing.JButton btn_editarNom;
     private javax.swing.JButton btn_inscribirAut;
+    private javax.swing.JButton btn_inscribirEstd;
     private javax.swing.JButton btn_inscribirNom;
-    private javax.swing.JButton btn_inscribirRepresentante;
-    private javax.swing.JButton btn_inscripcionEstd;
+    private javax.swing.JButton btn_inscribirRep;
     private javax.swing.JButton btn_verBusqAut;
     private javax.swing.JButton btn_verBusqEstd;
     private javax.swing.JButton btn_verBusqRep;
@@ -4118,13 +4221,13 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JComboBox<String> cmb_filtroBusqNom;
     private javax.swing.JComboBox<String> cmb_filtroBusqRep;
     private javax.swing.JPanel datGubNomina;
+    private javax.swing.JPanel datPersNomina;
     private javax.swing.JPanel datPlantelNomina;
     private javax.swing.JPanel dat_madre;
     private javax.swing.JPanel dat_padre;
     private javax.swing.JPanel dat_rep;
-    private javax.swing.JPanel datos;
-    private javax.swing.JPanel datosPersNomina;
-    private javax.swing.JPanel diag;
+    private javax.swing.JPanel datosEstd;
+    private javax.swing.JPanel diagEstd;
     private javax.swing.JPanel docNomina;
     private javax.swing.JPanel headderBusqAut;
     private javax.swing.JPanel headderBusqEst;
@@ -4136,6 +4239,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel im_logoInstitucionBusqNom;
     private javax.swing.JLabel imgAutorizado;
     private javax.swing.JLabel imgEstudiante;
+    private javax.swing.JLabel imgEstudiante1;
     private javax.swing.JLabel imgFamilia;
     private javax.swing.JLabel imgHerramienta;
     private javax.swing.JLabel imgMaletin;
@@ -4148,6 +4252,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel img_logoInstitucionBusqAut;
     private javax.swing.JLabel img_logoInstitucionBusqEstd;
     private javax.swing.JLabel img_logoInstitucionBusqRep;
+    private javax.swing.JDialog informacionAutorizado;
     private javax.swing.JPanel informacionEstudiante;
     private javax.swing.JPanel informacionNomina;
     private javax.swing.JDialog informacionRepresentante;
@@ -4282,9 +4387,9 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel logoPreescolar;
     private javax.swing.JPanel menuPrincipal;
     private javax.swing.JPanel panel;
-    private javax.swing.JTabbedPane panelDatos;
-    private javax.swing.JPanel panelDocumentos;
-    private javax.swing.JTabbedPane panelRepresentante;
+    private javax.swing.JTabbedPane panelDatosEstd;
+    private javax.swing.JPanel panelDocumentosEstd;
+    private javax.swing.JTabbedPane panelRepresentanteEstd;
     private javax.swing.JRadioButton radio_guarderia_niñ;
     private javax.swing.JRadioButton radio_hogar_cuidado_niñ;
     private javax.swing.JRadioButton radio_hogar_niñ;

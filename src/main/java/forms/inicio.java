@@ -136,10 +136,11 @@ public class inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        subsystems.acceso.tipo_acceso = Integer.parseInt(jTextField2.getText());
-        System.out.println(subsystems.acceso.tipo_acceso);
-        menu_principal menu = new menu_principal();
-        menu.setVisible(true);
+//        subsystems.acceso.tipo_acceso = Integer.parseInt(jTextField2.getText());
+//        System.out.println(subsystems.acceso.tipo_acceso);
+//        menu_principal menu = new menu_principal();
+//        menu.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_button1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
