@@ -2,6 +2,7 @@ package subsystems;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.security.*;
 
 public class utils {
 
@@ -43,6 +44,22 @@ public class utils {
         return finalData;
 */
 
+    }
+
+    public static String generarHash(String input) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hashBytes = md.digest(input.getBytes());
+
+            // Convertir a hex
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashBytes) {
+                sb.append(String.format("%02x", b));
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Error al generar hash", e);
+        }
     }
 
 }
