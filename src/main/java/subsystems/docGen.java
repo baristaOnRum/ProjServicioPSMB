@@ -682,18 +682,18 @@ public class docGen {
 
     }
 
-    public static void main(String args[]){
-
-        trabajador JuanDoe = new trabajador(11111111,11111112,22222222,10,
-                "Juan José", "Doe Hernández","Cocinero","Gastronomía","Av. Orinoco, la loma del orto",
-                "Universitario","04241234567","04121234567","Caicara de Maturín","Caripipipo","Escuela x",
-                "municipio x", "San Simón", "Palo verde", "Calle Rivas",
-                "Rosa Hernández","Ninguna", LocalDate.of(2020,12,10),LocalDate.of(2020,12,10),
-                true,true,true,true,true,new byte[0], new byte[0], new byte[0]);
-
-        generarLicenciaMedica(JuanDoe, "C.E.I Arnoldo Gabaldón", "Maturín", "Monagas",
-                "Boqueron","Fractura", 10, LocalDate.of(2021,10,1),
-                LocalDate.of(2021,10,30));
-    }
+//    public static void main(String args[]){
+//
+//        trabajador JuanDoe = new trabajador(11111111,11111112,22222222,10,
+//                "Juan José", "Doe Hernández","Cocinero","Gastronomía","Av. Orinoco, la loma del orto",
+//                "Universitario","04241234567","04121234567","Caicara de Maturín","Caripipipo","Escuela x",
+//                "municipio x", "San Simón", "Palo verde", "Calle Rivas",
+//                "Rosa Hernández","Ninguna", LocalDate.of(2020,12,10),LocalDate.of(2020,12,10),
+//                true,true,true,true,true,new byte[0], new byte[0], new byte[0]);
+//
+//        generarLicenciaMedica(JuanDoe, "C.E.I Arnoldo Gabaldón", "Maturín", "Monagas",
+//                "Boqueron","Fractura", 10, LocalDate.of(2021,10,1),
+//                LocalDate.of(2021,10,30));
+//    }
 
 }

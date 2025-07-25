@@ -2,6 +2,7 @@ package subsystems;
 
 import java.sql.*;
 
+import com.mysql.cj.jdbc.Blob;
 import subsystems.individuos.*;
 
 public class connectDB {
@@ -26,16 +27,14 @@ public class connectDB {
 
     public void sendRepresentante(representante representante){
 
-        sql = "INSERT INTO representante (" +
-                "cirepresentante, apellidos, nombres, estdciv, " +
-                "`lugar(nac)`, `fecha(nac)`, nacionalidad, edad, " +
-                "`direccion(hab)`, `grado(estudios)`, ocupacion, " +
-                "`direccion(trabj)`, tlf, correo, " +
-                "`niños menores de 6`) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        sql = "INSERT INTO representante +" +
+                "(ciRepresentante, apellidos, nombres, estdCiv, lugarNac, fechaNac," +
+                "nacionalidad, edad, direccionHab, gradoEstudios, ocupacion, direccionTrabj," +
+                "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, menores6, img)" +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
-            conexion = DriverManager.getConnection(url, user, pass);
+            conexion = DriverManager.getConnection(url, "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -52,9 +51,17 @@ public class connectDB {
             query.setString(11, representante.getOcupacion()); // ocupacion
             query.setString(12, representante.getDireccionTrabj()); // direccion_trabj
             query.setString(13, representante.getTlf1()); // tlf
-            query.setString(13, representante.getTlf2()); // tlf
-            query.setString(14, representante.getCorreo()); // correo
-            query.setBoolean(16, representante.isNinosMenor6()); // niños menores de 6
+            query.setString(14, representante.getTlf2()); // tlf
+            query.setString(15, representante.getTlfTrabajo()); // tlf
+            query.setString(16, representante.getTlfCasa()); // tlf
+            query.setString(17, representante.getCorreo()); // correo
+            query.setBoolean(18, representante.isNinosMenor6()); // niños menores de 6
+            if (representante.getImg() != null) {
+                query.setBytes(19, representante.getImg());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(19, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
 
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();

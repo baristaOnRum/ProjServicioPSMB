@@ -19,7 +19,7 @@ public class utils {
             e.printStackTrace();
         }
 
-        finalData = new byte[0];
+        finalData = null;
 
         return finalData;
 
