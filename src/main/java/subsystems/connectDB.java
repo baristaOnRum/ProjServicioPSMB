@@ -94,7 +94,9 @@ public class connectDB {
 
     public void buscarEstudiante(){}
 
-    public void fetchEstudiante(){}
+    public void fetchEstudiante(){
+
+    }
 
     public void sendNomina(){
 
@@ -139,6 +141,10 @@ public class connectDB {
     public void buscarUsuario(){}
 
     public void promoverAño(){}
+
+    public void crearFamiliar(){}
+
+    public void fetchFamiliar(){}
 
 
     //Main
