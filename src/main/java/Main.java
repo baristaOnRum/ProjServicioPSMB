@@ -7,6 +7,7 @@ import subsystems.individuos.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,26 +33,32 @@ public class Main {
         juanDoe.setFechaNac(LocalDate.of(1985, 10, 25)); // Año-Mes-Día
 
         // 2. Setters de la clase Representante
-        juanDoe.setCi(12345678); // Cédula de Identidad
-        juanDoe.setEdad(38);
+        juanDoe.setCi(87654321); // Cédula de Identidad
+        juanDoe.setEdad(69);
         juanDoe.setNinosMenor6(true); // Asumiendo que tiene niños menores de 6 años
-        juanDoe.setEstadoCivil("C"); // 'C' para Casado, 'S' para Soltero, etc.
+        juanDoe.setEstadoCivil("S"); // 'C' para Casado, 'S' para Soltero, etc.
         juanDoe.setNacionalidad("Venezolana");
-        juanDoe.setDireccionHab("Av. Libertador, Edif. Sol, Apto. 5B");
-        juanDoe.setDireccionTrabj("Calle Comercio, Centro Empresarial, Ofic. 101");
-        juanDoe.setOcupacion("Administradora");
+        juanDoe.setDireccionHab("Av. Libertador, Edif. Sol, Apto. 6B");
+        juanDoe.setDireccionTrabj("Calle Infierno, Centro Empresarial, Ofic. 101");
+        juanDoe.setOcupacion("Embajador");
         juanDoe.setGradoEstudios("Universitario");
-        juanDoe.setTlf1("0412-1234567");
-        juanDoe.setTlf2("0212-9876543");
-        juanDoe.setTlfTrabajo("0212-5551234");
-        juanDoe.setTlfCasa("0212-6667890");
-        juanDoe.setCorreo("maria.gonzales@example.com");
+        juanDoe.setTlf1("0412-7654321");
+        juanDoe.setTlf2("0212-3456789");
+        juanDoe.setTlfTrabajo("0212-5551113");
+        juanDoe.setTlfCasa("0212-3332323");
+        juanDoe.setCorreo("juan.Doe@example.com");
         try (InputStream is = Main.class.getResourceAsStream("/iconos/set1/close-line_240.png")){
             juanDoe.setImg(utils.leerISAByteArr(is));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        connectDB.removerRepresentante(juanDoe);
+        List<representante> representantes = connectDB.buscarRepresentante("nacionalidad", "venezolana");
+        System.out.println(representantes);
+
+        System.out.println(representantes.get(0).getCi());
+        System.out.println(representantes.get(0).getNacionalidad());
+        //for ((representantes.get(0) : ))
+
     }
 }
