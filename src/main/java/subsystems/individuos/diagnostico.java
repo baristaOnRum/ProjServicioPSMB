@@ -277,6 +277,178 @@ public class diagnostico {
         return horaLevantarse;
     }
 
+    public void setCe(String ce) {
+        this.ce = ce;
+    }
+
+    public void setEdadHablar(int edadHablar) {
+        this.edadHablar = edadHablar;
+    }
+
+    public void setEdadCaminar(int edadCaminar) {
+        this.edadCaminar = edadCaminar;
+    }
+
+    public void setEdadDejarPanales(int edadDejarPanales) {
+        this.edadDejarPanales = edadDejarPanales;
+    }
+
+    public void setProblemaParto(boolean problemaParto) {
+        this.problemaParto = problemaParto;
+    }
+
+    public void setProblemaMotor(boolean problemaMotor) {
+        this.problemaMotor = problemaMotor;
+    }
+
+    public void setProblemaLenguaje(boolean problemaLenguaje) {
+        this.problemaLenguaje = problemaLenguaje;
+    }
+
+    public void setProblemaCognitivo(boolean problemaCognitivo) {
+        this.problemaCognitivo = problemaCognitivo;
+    }
+
+    public void setAlergiaMedicamento(boolean alergiaMedicamento) {
+        this.alergiaMedicamento = alergiaMedicamento;
+    }
+
+    public void setEnfermedadEmbarazo(boolean enfermedadEmbarazo) {
+        this.enfermedadEmbarazo = enfermedadEmbarazo;
+    }
+
+    public void setEmbarazoPlanif(boolean embarazoPlanif) {
+        this.embarazoPlanif = embarazoPlanif;
+    }
+
+    public void setVacBCG(boolean vacBCG) {
+        this.vacBCG = vacBCG;
+    }
+
+    public void setVacTRIPLE(boolean vacTRIPLE) {
+        this.vacTRIPLE = vacTRIPLE;
+    }
+
+    public void setVacPOLIO(boolean vacPOLIO) {
+        this.vacPOLIO = vacPOLIO;
+    }
+
+    public void setVacTIFUS(boolean vacTIFUS) {
+        this.vacTIFUS = vacTIFUS;
+    }
+
+    public void setOtroVacAplicadas(boolean otroVacAplicadas) {
+        this.otroVacAplicadas = otroVacAplicadas;
+    }
+
+    public void setConsultaPsilg(boolean consultaPsilg) {
+        this.consultaPsilg = consultaPsilg;
+    }
+
+    public void setConsultaPsipeg(boolean consultaPsipeg) {
+        this.consultaPsipeg = consultaPsipeg;
+    }
+
+    public void setConsultaNeur(boolean consultaNeur) {
+        this.consultaNeur = consultaNeur;
+    }
+
+    public void setConsultaLeng(boolean consultaLeng) {
+        this.consultaLeng = consultaLeng;
+    }
+
+    public void setConsultaOtro(boolean consultaOtro) {
+        this.consultaOtro = consultaOtro;
+    }
+
+    public void setCondicionExtra(boolean condicionExtra) {
+        this.condicionExtra = condicionExtra;
+    }
+
+    public void setComeAyudado(boolean comeAyudado) {
+        this.comeAyudado = comeAyudado;
+    }
+
+    public void setBuenApetito(boolean buenApetito) {
+        this.buenApetito = buenApetito;
+    }
+
+    public void setChupaDedo(boolean chupaDedo) {
+        this.chupaDedo = chupaDedo;
+    }
+
+    public void setSeOrinaDia(boolean seOrinaDia) {
+        this.seOrinaDia = seOrinaDia;
+    }
+
+    public void setSeOrinaNoche(boolean seOrinaNoche) {
+        this.seOrinaNoche = seOrinaNoche;
+    }
+
+    public void setEvacuaDia(boolean evacuaDia) {
+        this.evacuaDia = evacuaDia;
+    }
+
+    public void setPideAyudaAseo(boolean pideAyudaAseo) {
+        this.pideAyudaAseo = pideAyudaAseo;
+    }
+
+    public void setCualParto(String cualParto) {
+        this.cualParto = cualParto;
+    }
+
+    public void setCualMotor(String cualMotor) {
+        this.cualMotor = cualMotor;
+    }
+
+    public void setCualLenguaje(String cualLenguaje) {
+        this.cualLenguaje = cualLenguaje;
+    }
+
+    public void setCualCoginitivo(String cualCoginitivo) {
+        this.cualCoginitivo = cualCoginitivo;
+    }
+
+    public void setCualMedicamento(String cualMedicamento) {
+        this.cualMedicamento = cualMedicamento;
+    }
+
+    public void setCualEnfEmbarazo(String cualEnfEmbarazo) {
+        this.cualEnfEmbarazo = cualEnfEmbarazo;
+    }
+
+    public void setMedicamentoFiebre(String medicamentoFiebre) {
+        this.medicamentoFiebre = medicamentoFiebre;
+    }
+
+    public void setCualVacAplicada(String cualVacAplicada) {
+        this.cualVacAplicada = cualVacAplicada;
+    }
+
+    public void setEspecifiqueConsultaOtro(String especifiqueConsultaOtro) {
+        this.especifiqueConsultaOtro = especifiqueConsultaOtro;
+    }
+
+    public void setCualExtra(String cualExtra) {
+        this.cualExtra = cualExtra;
+    }
+
+    public void setEnfermedadesPadecidas(String enfermedadesPadecidas) {
+        this.enfermedadesPadecidas = enfermedadesPadecidas;
+    }
+
+    public void setConQuienDuerme(String conQuienDuerme) {
+        this.conQuienDuerme = conQuienDuerme;
+    }
+
+    public void setHoraDormir(LocalTime horaDormir) {
+        this.horaDormir = horaDormir;
+    }
+
+    public void setHoraLevantarse(LocalTime horaLevantarse) {
+        this.horaLevantarse = horaLevantarse;
+    }
+
     diagnostico(String ce, boolean problemaParto,
                 boolean problemaMotor, boolean problemaLenguaje, boolean problemaCognitivo,
                 boolean alergiaMedicamento, boolean condicionExtra, String cualParto,

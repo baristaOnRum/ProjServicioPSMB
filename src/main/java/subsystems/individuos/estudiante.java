@@ -131,5 +131,79 @@ public class estudiante extends personas{
         return turno;
     }
 
+    public void setCe(String ce) {
+        this.ce = ce;
+    }
 
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
+    public void setProcedencia(String procedencia) {
+        this.procedencia = procedencia;
+    }
+
+    public void setGrupoSanguineo(String grupoSanguineo) {
+        this.grupoSanguineo = grupoSanguineo;
+    }
+
+    public void setCualSeguro(String cualSeguro) {
+        this.cualSeguro = cualSeguro;
+    }
+
+    public void setMedicoTratante(String medicoTratante) {
+        this.medicoTratante = medicoTratante;
+    }
+
+    public void setTlfMedicoTratante(String tlfMedicoTratante) {
+        this.tlfMedicoTratante = tlfMedicoTratante;
+    }
+
+    public void setTallaZapato(int tallaZapato) {
+        this.tallaZapato = tallaZapato;
+    }
+
+    public void setTallaCamisa(int tallaCamisa) {
+        this.tallaCamisa = tallaCamisa;
+    }
+
+    public void setTallaPantalon(int tallaPantalon) {
+        this.tallaPantalon = tallaPantalon;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setEstatura(int estatura) {
+        this.estatura = estatura;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public void setPeriodoCurso(int periodoCurso) {
+        this.periodoCurso = periodoCurso;
+    }
+
+    public void setPeriodoCursado(int periodoCursado) {
+        this.periodoCursado = periodoCursado;
+    }
+
+    public void setLateralidad(boolean lateralidad) {
+        this.lateralidad = lateralidad;
+    }
+
+    public void setAsegurado(boolean asegurado) {
+        this.asegurado = asegurado;
+    }
+
+    public void setTurno(byte turno) {
+        this.turno = turno;
+    }
 }

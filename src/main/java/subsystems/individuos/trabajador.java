@@ -145,6 +145,118 @@ public class trabajador extends personas{
         return tituloCopia;
     }
 
+    public void setCi(int ci) {
+        this.ci = ci;
+    }
+
+    public void setRif(int rif) {
+        this.rif = rif;
+    }
+
+    public void setCiJefeClap(int ciJefeClap) {
+        this.ciJefeClap = ciJefeClap;
+    }
+
+    public void setCantPers1x10(int cantPers1x10) {
+        this.cantPers1x10 = cantPers1x10;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setDireccionCobro(String direccionCobro) {
+        this.direccionCobro = direccionCobro;
+    }
+
+    public void setGrado(String grado) {
+        this.grado = grado;
+    }
+
+    public void setTlf1(String tlf1) {
+        this.tlf1 = tlf1;
+    }
+
+    public void setTlf2(String tlf2) {
+        this.tlf2 = tlf2;
+    }
+
+    public void setMunElec(String munElec) {
+        this.munElec = munElec;
+    }
+
+    public void setParrqElec(String parrqElec) {
+        this.parrqElec = parrqElec;
+    }
+
+    public void setCenVot(String cenVot) {
+        this.cenVot = cenVot;
+    }
+
+    public void setMunRes(String munRes) {
+        this.munRes = munRes;
+    }
+
+    public void setParrqRes(String parrqRes) {
+        this.parrqRes = parrqRes;
+    }
+
+    public void setComRes(String comRes) {
+        this.comRes = comRes;
+    }
+
+    public void setCalleRes(String calleRes) {
+        this.calleRes = calleRes;
+    }
+
+    public void setNombreJefeClap(String nombreJefeClap) {
+        this.nombreJefeClap = nombreJefeClap;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
+
+    public void setFechaIngreso(LocalDate fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
+    }
+
+    public void setTurno(boolean turno) {
+        this.turno = turno;
+    }
+
+    public void setEstatus(boolean estatus) {
+        this.estatus = estatus;
+    }
+
+    public void setSexo(boolean sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setTiene1x10(boolean tiene1x10) {
+        this.tiene1x10 = tiene1x10;
+    }
+
+    public void setHaVotado(boolean haVotado) {
+        this.haVotado = haVotado;
+    }
+
+    public void setCiCopia(byte[] ciCopia) {
+        this.ciCopia = ciCopia;
+    }
+
+    public void setRifCopia(byte[] rifCopia) {
+        this.rifCopia = rifCopia;
+    }
+
+    public void setTituloCopia(byte[] tituloCopia) {
+        this.tituloCopia = tituloCopia;
+    }
+
     public trabajador(int ci, int rif, int ciJefeClap, int cantPers1x10, String nombres,
                       String apellidos, String cargo, String titulo, String direccionCobro,
                       String grado, String tlf1, String tlf2, String munElec, String parrqElec,

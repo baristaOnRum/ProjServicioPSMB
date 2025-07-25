@@ -103,5 +103,59 @@ public class representante extends personas{
         return correo;
     }
 
+    public void setCi(int ci) {
+        this.ci = ci;
+    }
 
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setNinosMenor6(boolean ninosMenor6) {
+        this.ninosMenor6 = ninosMenor6;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
+    public void setDireccionHab(String direccionHab) {
+        this.direccionHab = direccionHab;
+    }
+
+    public void setDireccionTrabj(String direccionTrabj) {
+        this.direccionTrabj = direccionTrabj;
+    }
+
+    public void setOcupacion(String ocupacion) {
+        this.ocupacion = ocupacion;
+    }
+
+    public void setGradoEstudios(String gradoEstudios) {
+        this.gradoEstudios = gradoEstudios;
+    }
+
+    public void setTlf1(String tlf1) {
+        this.tlf1 = tlf1;
+    }
+
+    public void setTlf2(String tlf2) {
+        this.tlf2 = tlf2;
+    }
+
+    public void setTlfTrabajo(String tlfTrabajo) {
+        this.tlfTrabajo = tlfTrabajo;
+    }
+
+    public void setTlfCasa(String tlfCasa) {
+        this.tlfCasa = tlfCasa;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
 }
