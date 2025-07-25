@@ -33,6 +33,118 @@ public class trabajador extends personas{
     byte[] rifCopia;
     byte[] tituloCopia;
 
+    public int getCi() {
+        return ci;
+    }
+
+    public int getRif() {
+        return rif;
+    }
+
+    public int getCiJefeClap() {
+        return ciJefeClap;
+    }
+
+    public int getCantPers1x10() {
+        return cantPers1x10;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDireccionCobro() {
+        return direccionCobro;
+    }
+
+    public String getGrado() {
+        return grado;
+    }
+
+    public String getTlf1() {
+        return tlf1;
+    }
+
+    public String getTlf2() {
+        return tlf2;
+    }
+
+    public String getMunElec() {
+        return munElec;
+    }
+
+    public String getParrqElec() {
+        return parrqElec;
+    }
+
+    public String getCenVot() {
+        return cenVot;
+    }
+
+    public String getMunRes() {
+        return munRes;
+    }
+
+    public String getParrqRes() {
+        return parrqRes;
+    }
+
+    public String getComRes() {
+        return comRes;
+    }
+
+    public String getCalleRes() {
+        return calleRes;
+    }
+
+    public String getNombreJefeClap() {
+        return nombreJefeClap;
+    }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public LocalDate getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public boolean isTurno() {
+        return turno;
+    }
+
+    public boolean isEstatus() {
+        return estatus;
+    }
+
+    public boolean isSexo() {
+        return sexo;
+    }
+
+    public boolean isTiene1x10() {
+        return tiene1x10;
+    }
+
+    public boolean isHaVotado() {
+        return haVotado;
+    }
+
+    public byte[] getCiCopia() {
+        return ciCopia;
+    }
+
+    public byte[] getRifCopia() {
+        return rifCopia;
+    }
+
+    public byte[] getTituloCopia() {
+        return tituloCopia;
+    }
+
     public trabajador(int ci, int rif, int ciJefeClap, int cantPers1x10, String nombres,
                       String apellidos, String cargo, String titulo, String direccionCobro,
                       String grado, String tlf1, String tlf2, String munElec, String parrqElec,

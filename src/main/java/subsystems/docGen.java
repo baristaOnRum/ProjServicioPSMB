@@ -357,7 +357,7 @@ public class docGen {
              */
     }
 
-    public static void generarLicenciaMedica(){
+    public static void generarLicenciaMedica(trabajador nomina){
         WordprocessingMLPackage packWord = initDoc();
 
         //Definiciones
@@ -376,6 +376,12 @@ public class docGen {
         setRelFooter(docMain, footer);
 
         P paragraph = fabObjetos.createP();
+        agregarParrafoCEstilo(paragraph, "Solicitud de licencia", true, false, 1, false, 48, 0);
+
+        agregarBr(paragraph);
+
+        agregarParrafoCEstilo(paragraph "A favor de " + nomina.);
+
         agregarParrafoCEstilo(paragraph, """
                     TEXTO:
                     A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
@@ -385,8 +391,8 @@ public class docGen {
     
                     {firma}   {firma}
                     Docente   Director""",
-                true,true,
-                1,false, 36,1);
+                false,false,
+                0,false, 36,1);
 
         docMain.getContent().add(paragraph);
 
