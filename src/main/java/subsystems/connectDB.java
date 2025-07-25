@@ -2,6 +2,8 @@ package subsystems;
 
 import java.sql.*;
 
+import subsystems.individuos.*;
+
 public class connectDB {
 
     //Definir parámetros de conexión
@@ -18,29 +20,29 @@ public class connectDB {
         user = "root";
         pass = "xxx";
         conexion = null;
-        sql = "INSERT INTO representante (" + 
+    }
+
+    //Definición de funciones de envío de datos
+
+    public void sendRepresentante(representante representante){
+
+        sql = "INSERT INTO representante (" +
                 "cirepresentante, apellidos, nombres, estdciv, " +
                 "`lugar(nac)`, `fecha(nac)`, nacionalidad, edad, " +
                 "`direccion(hab)`, `grado(estudios)`, ocupacion, " +
                 "`direccion(trabj)`, tlf, correo, parentesco, " +
                 "`niños menores de 6`) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    }
-
-    //Definición de funciones de envío de datos
-
-/*
-    public void sendRepresentante(){
 
         try {
             conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
-            query.setInt(1, ci); // cirepresentante
-            query.setString(2, rep_apellidos); // apellidos
-            query.setString(3, rep_nombres); // nombres
-            query.setString(4, estado_civil); // estdciv
+            query.setInt(1, representante.getCi()); // cirepresentante
+            query.setString(2, representante.getApellidos()); // apellidos
+            query.setString(3, representante.getNombres()); // nombres
+            query.setString(4, representante.getEstadoCivil()); // estdciv
             query.setString(5, lugar_nac); // lugar_nac
             query.setString(6, fecha_nac); // fecha_nac (formato YYYY-MM-DD es estándar)
             query.setString(7, nacionalidad); // nacionalidad
@@ -79,7 +81,6 @@ public class connectDB {
         }
 
     }
-*/
 
     public void removerRepresentante(){}
 

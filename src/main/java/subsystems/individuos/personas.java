@@ -25,4 +25,21 @@ public class personas {
         return fechaNac;
     }
 
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public void setLugarNac(String lugarNac) {
+        this.lugarNac = lugarNac;
+    }
+
+    public void setFechaNac(LocalDate fechaNac) {
+        this.fechaNac = fechaNac;
+    }
+
+
 }
