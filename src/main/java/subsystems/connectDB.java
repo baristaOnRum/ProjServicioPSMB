@@ -8,11 +8,11 @@ import subsystems.individuos.*;
 public class connectDB {
 
     //Definir parámetros de conexión
-    String url;
-    String user;
-    String pass;
-    Connection conexion;
-    String sql;
+    static String url;
+    static String user;
+    static String pass;
+    static Connection conexion;
+    static String sql;
     //Definir funciones
 
     //Inicialización de variables (no estáticas)
@@ -25,16 +25,16 @@ public class connectDB {
 
     //Definición de funciones de envío de datos
 
-    public void sendRepresentante(representante representante){
+    public static void sendRepresentante(representante representante){
 
-        sql = "INSERT INTO representante +" +
+        sql = "INSERT INTO representante " +
                 "(ciRepresentante, apellidos, nombres, estdCiv, lugarNac, fechaNac," +
                 "nacionalidad, edad, direccionHab, gradoEstudios, ocupacion, direccionTrabj," +
                 "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, menores6, img)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
-            conexion = DriverManager.getConnection(url, "root", "bandidito10");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -89,7 +89,38 @@ public class connectDB {
 
     }
 
-    public void removerRepresentante(){}
+    public static void removerRepresentante(representante representante){
+        sql = "DELETE FROM representante" +
+                " WHERE ciRepresentante = ?;";
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setInt(1, representante.getCi());
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
     public void buscarRepresentante(){}
 
