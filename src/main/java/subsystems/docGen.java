@@ -10,13 +10,16 @@ import org.docx4j.openpackaging.parts.WordprocessingML.HeaderPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.*;
 import org.docx4j.relationships.Relationship;
 import org.docx4j.wml.*;
+import org.docx4j.model.table.TblFactory;
 
 import java.io.File;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 
+import org.eclipse.persistence.expressions.spatial.SpatialParameters;
 import subsystems.individuos.*;
 
 
@@ -50,14 +53,6 @@ public class docGen {
 
     }
 
-    private static TblGridCol crearCol(BigInteger ancho){
-        TblGridCol gridCol = fabObjetos.createTblGridCol();
-
-        gridCol.setW(ancho);
-
-        return gridCol;
-    }
-
     private static void agregarLogos(WordprocessingMLPackage packWord, Part parteRaiz, Hdr header){
         String rutaEncabezado = "/encabezado.png";
 
@@ -69,39 +64,22 @@ public class docGen {
             //Guardamos ambos streams como arreglos de bytes
             byte[] arrEnc = utils.leerISAByteArr(isEnc);
 
-            /* DEBUG: Checkeo de arreglos
-            int i = arrMin.length;
-            int j = 0;
-            for (j = 0; j < i; j++){
-                System.out.print(arrMin[j]);
-            };
-            */
-
             isEnc.close();
 
             // Definimos las variables del sistema para insertar los bitmaps al documento
             BinaryPartAbstractImage imgPartEnc = BinaryPartAbstractImage.createImagePart(packWord, parteRaiz, arrEnc);
 
-
             R run = fabObjetos.createR();
             P paragraph = fabObjetos.createP();
             Drawing drawing = fabObjetos.createDrawing();
 
-            /* Las medidas usadas para la imagen usan EMU (English Metric Units), para las que:
-                1 pulgada: 914400 EMU
-                Creamos las imágenes como objetos Inline.
-             */
-
             Inline inline = imgPartEnc.createImageInline(null,null, 0,0,false);
-
 
             drawing.getAnchorOrInline().add(inline);
             run.getContent().add(drawing);
             paragraph.getContent().add(run);
 
             header.getContent().add(paragraph);
-
-
 
             /*
 
@@ -127,8 +105,73 @@ public class docGen {
 
     }
 
+    private static void agregarFirmas(WordprocessingMLPackage packWord, String firma1, String firma2){
 
-    private static void agregarFirmas(int caso){
+        //Creamos la tabla y sus propiedades
+        int writableWidthTwips = packWord.getDocumentModel().getSections().get(0).getPageDimensions().getWritableWidthTwips();
+        int cellWidthTwips = Double.valueOf(Math.floor((writableWidthTwips / 5))).intValue();
+        Tbl tabla = TblFactory.createTable(2, 5, cellWidthTwips);
+        TblPr tblPr = fabObjetos.createTblPr();
+        TblBorders bordersTabla = fabObjetos.createTblBorders();
+        CTBorder borderColor = fabObjetos.createCTBorder();
+
+        //Definimos los bordes de la tabla
+        borderColor.setColor("FFFFFF");
+        bordersTabla.setLeft(borderColor);
+        bordersTabla.setRight(borderColor);
+        bordersTabla.setTop(borderColor);
+        bordersTabla.setBottom(borderColor);
+
+        //Aplicamos
+        tblPr.setTblBorders(bordersTabla);
+        tabla.setTblPr(tblPr);
+
+        //Damos propiedades a las celdas 2 y 5
+        CTBorder borderCelda = fabObjetos.createCTBorder();
+        TcPr propCelda;
+        TcPr propCelda2;
+        TcPrInner.TcBorders bordersTc1;
+        TcPrInner.TcBorders bordersTc2;
+        P parrafo1 = fabObjetos.createP();
+        P parrafo2 = fabObjetos.createP();
+
+        borderCelda.setColor("000000");
+        borderCelda.setVal(STBorder.THICK);
+        agregarParrafoCEstilo(parrafo1,firma1,true,false,0,false,24,0);
+        agregarParrafoCEstilo(parrafo2,firma2,true,false,0,false,24,0);
+
+
+        //Aplicamos
+        Tr fila = (Tr) tabla.getContent().get(1);
+
+        Tc celda1 = (Tc) fila.getContent().get(1);
+        Tc celda2 = (Tc) fila.getContent().get(3);
+
+        propCelda = celda1.getTcPr();
+        propCelda2 = celda2.getTcPr();
+        if (propCelda == null) { propCelda = fabObjetos.createTcPr(); celda1.setTcPr(propCelda);}
+        if (propCelda2 == null) { propCelda2 = fabObjetos.createTcPr(); celda2.setTcPr(propCelda2);}
+
+        bordersTc1 = propCelda.getTcBorders();
+        bordersTc2 = propCelda2.getTcBorders();
+        if (bordersTc1 == null) {bordersTc1 = fabObjetos.createTcPrInnerTcBorders();
+            propCelda.setTcBorders(bordersTc1);}
+        if (bordersTc2 == null) {bordersTc2 = fabObjetos.createTcPrInnerTcBorders();
+            propCelda2.setTcBorders(bordersTc2);}
+
+        bordersTc1.setTop(borderCelda);
+        bordersTc2.setTop(borderCelda);
+
+        celda1.getContent().add(parrafo1);
+        celda2.getContent().add(parrafo2);
+
+
+        packWord.getMainDocumentPart().getContent().add(tabla);
+
+//        if (i%2 != 0){
+//            TcPr propsCell = fabObjetos.createTcPr();
+//
+//        }
 
     }
 
@@ -377,9 +420,11 @@ public class docGen {
     public static void generarLicenciaMedica(trabajador nomina, String plantel, String municipio, String estado,
                                              String distrito, String motivo, int diasLicencia, LocalDate inicio, LocalDate fin){
 
+        //Creamos el documento
+
         WordprocessingMLPackage packWord = initDoc();
 
-        //Definiciones
+        //Definimos relaciones
         MainDocumentPart docMain = packWord.getMainDocumentPart();
 
         Hdr header = crearHeader();
@@ -394,6 +439,8 @@ public class docGen {
 
         setRelFooter(docMain, footer);
 
+        //Agregamos el título
+
         P paragraph = fabObjetos.createP();
         P paragraphTitle = fabObjetos.createP();
         agregarParrafoCEstilo(paragraphTitle, "Solicitud de licencia", true, false, 1, false, 48, 0);
@@ -401,6 +448,8 @@ public class docGen {
         agregarBr(paragraphTitle);
         agregarBr(paragraphTitle);
         agregarBr(paragraphTitle);
+
+        //Agregamos el texto
 
         agregarParrafoCEstilo(paragraph, "A favor de",false,false,0,false,36,1);
         agregarParrafoCEstilo(paragraph," " + nomina.getNombres() + " " + nomina.getApellidos() + ". ",false,
@@ -450,18 +499,118 @@ public class docGen {
         agregarBr(paragraph);
         agregarBr(paragraph);
         agregarBr(paragraph);
-        agregarBr(paragraph);
-        agregarBr(paragraph);
-
-        agregarParrafoCEstilo(paragraph, """
-    
-                    {firma}   {firma}
-                    Docente   Director""",
-                false,false,
-                0,false, 36,1);
 
         docMain.getContent().add(paragraphTitle);
         docMain.getContent().add(paragraph);
+
+        //Creamos la tabla de datos de suplente
+        int writableWidthTwips = packWord.getDocumentModel().getSections().get(0).getPageDimensions().getWritableWidthTwips();
+        int cellWidthTwips = Double.valueOf(Math.floor((writableWidthTwips / 2))).intValue();
+        Tbl tabla = TblFactory.createTable(3, 2, cellWidthTwips);
+        TcPrInner.TcBorders borderCelda;
+        CTBorder borderColor = fabObjetos.createCTBorder();
+
+            //Definimos los bordes de la tabla
+        borderColor.setColor("#000000");
+
+        for (int i = 0; i < 2; i++){
+            Tr tr = (Tr) tabla.getContent().get(i);
+            for (int j = 0; i < 2; i++) {
+                TcPr propCelda;
+                Tc tc = (Tc) tr.getContent().get(j);
+
+                propCelda = tc.getTcPr();
+                if (propCelda == null) {propCelda = fabObjetos.createTcPr(); tc.setTcPr(propCelda);}
+                borderCelda = propCelda.getTcBorders();
+                if (borderCelda == null) {borderCelda = fabObjetos.createTcPrInnerTcBorders(); propCelda.setTcBorders(borderCelda);}
+                borderCelda.setTop(borderColor);
+                borderCelda.setBottom(borderColor);
+                borderCelda.setRight(borderColor);
+                borderCelda.setLeft(borderColor);
+
+            }
+
+        }
+
+            //Añadimos contenido
+        Tr fila = (Tr) tabla.getContent().get(0);
+        Tr fila3 = (Tr) tabla.getContent().get(2);
+
+            //Por algún motivo la celda 0,0 no tiene formato; no voy a depurar esa sección del código, asi que aquí
+            // está el hotfix
+        Tc celda1 = (Tc) fila.getContent().get(0);
+            CTBorder border1Color = fabObjetos.createCTBorder();
+            border1Color.setColor("#000000");
+            border1Color.setVal(STBorder.THICK);
+            TcPr celda1Props = celda1.getTcPr(); if (celda1Props == null){
+                celda1Props = fabObjetos.createTcPr(); celda1.setTcPr(celda1Props);
+            }
+            TcPrInner.TcBorders borderCelda1 = celda1Props.getTcBorders();
+            if (borderCelda1 == null){
+                borderCelda1 = fabObjetos.createTcPrInnerTcBorders(); celda1Props.setTcBorders(borderCelda1);
+            }
+            borderCelda1.setTop(border1Color);
+            borderCelda1.setBottom(border1Color);
+            borderCelda1.setRight(border1Color);
+            borderCelda1.setLeft(border1Color);
+
+        Tc celda2 = (Tc) fila.getContent().get(1);
+        Tc celda3 = (Tc) fila3.getContent().get(0);
+        P parrafo1 = fabObjetos.createP(); agregarParrafoCEstilo(parrafo1,"Nombres Y apellidos",
+                true,false,0,false,18,0);
+        P parrafo2 = fabObjetos.createP(); agregarParrafoCEstilo(parrafo2,"Cédula de Identidad",
+                true,false,0,false,18,0);
+        P parrafo3 = fabObjetos.createP(); agregarParrafoCEstilo(parrafo3,"Observación:",
+                true,false,0,false,18,0);
+
+        celda1.getContent().add(parrafo1);
+        celda2.getContent().add(parrafo2);
+        celda3.getContent().add(parrafo3);
+
+        docMain.getContent().add(tabla);
+
+        P parrafo4 = fabObjetos.createP();
+        agregarBr(parrafo4);
+        docMain.getContent().add(parrafo4);
+
+        agregarFirmas(packWord,"Docente","Suplente");
+
+        //Agregamos una tabla extra para las firmas
+        int cellWidthTwipsF = Double.valueOf(Math.floor((writableWidthTwips / 5))).intValue();
+        Tbl tablaF = TblFactory.createTable(2, 5, cellWidthTwipsF);
+        TblPr tablaFPr = fabObjetos.createTblPr();
+        TblBorders tablaFBorders = fabObjetos.createTblBorders();
+        TcPr propsCeldaF;
+        TcPrInner.TcBorders borderCeldaF;
+        CTBorder borderColorF = fabObjetos.createCTBorder();
+        CTBorder tablaColorF = fabObjetos.createCTBorder();
+
+        tablaColorF.setColor("#FFFFFF");
+        borderColorF.setColor("#000000");
+        borderColorF.setVal(STBorder.THICK);
+        tablaFBorders.setTop(tablaColorF);
+        tablaFBorders.setBottom(tablaColorF);
+        tablaFBorders.setLeft(tablaColorF);
+        tablaFBorders.setRight(tablaColorF);
+
+        tablaF.setTblPr(tablaFPr);
+        tablaFPr.setTblBorders(tablaFBorders);
+
+        // Modificamos la tabla
+        Tr filaF = (Tr) tablaF.getContent().get(1);
+        Tc celdaF = (Tc) filaF.getContent().get(2);
+
+        P parrafo5; parrafo5 = fabObjetos.createP();
+        agregarParrafoCEstilo(parrafo5,"Director",true,false,0,false,24,0);
+        celdaF.getContent().add(parrafo5);
+
+        propsCeldaF = celdaF.getTcPr(); if (propsCeldaF == null) {
+            propsCeldaF = fabObjetos.createTcPr(); celdaF.setTcPr(propsCeldaF);}
+        borderCeldaF = propsCeldaF.getTcBorders(); if (borderCeldaF == null){
+            borderCeldaF = fabObjetos.createTcPrInnerTcBorders(); propsCeldaF.setTcBorders(borderCeldaF);}
+        borderCeldaF.setTop(borderColorF);
+        // Agregamos la tabla
+        docMain.getContent().add(tablaF);
 
         guardarArchivo(packWord, "pruebafase2.docx");
 
