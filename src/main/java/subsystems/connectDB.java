@@ -18,7 +18,7 @@ public class connectDB {
         user = "root";
         pass = "xxx";
         conexion = null;
-        sql = "INSERT INTO representante (" +
+        sql = "INSERT INTO representante (" + 
                 "cirepresentante, apellidos, nombres, estdciv, " +
                 "`lugar(nac)`, `fecha(nac)`, nacionalidad, edad, " +
                 "`direccion(hab)`, `grado(estudios)`, ocupacion, " +
@@ -136,7 +136,16 @@ public class connectDB {
 
     public void removerUsuario(){}
 
-    public void buscarUsuario(){}
+    public void buscarUsuario(){
+        
+        String nombre_usuario;
+        nombre_usuario = "SELEC * FROM usuario WHERE usuario = ?";
+        String hash;
+        hash = "SELEC * FROM usuario WHERE hash = ?";
+        String permiso;
+        permiso = "SELEC * FROM usuario WHERE permsiso = ?";
+        
+    }
 
     public void promoverAño(){}
 
