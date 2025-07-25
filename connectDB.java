@@ -1,9 +1,13 @@
 package subsystems;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
-import com.mysql.cj.jdbc.Blob;
-import subsystems.individuos.*;
+import subsystems.individuos.autorizado;
+import subsystems.individuos.representante;
 
 public class connectDB {
 
@@ -123,7 +127,7 @@ public class connectDB {
     public void buscarNominaMaestra(){}
 
     public void fetchNominaMaestra(){}
-
+//A partir de este punto todo queda en manos de Raul:
     public void sendAutorizado(autorizado autorizado){
 
         sql = "INSERT INTO autorizadoRetiro (ciAutorizado, apellidos, nombre, tlf1, tlf2) VALUES (?,?,?,?,?)";
@@ -250,4 +254,3 @@ public class connectDB {
 
     }
 }
-
