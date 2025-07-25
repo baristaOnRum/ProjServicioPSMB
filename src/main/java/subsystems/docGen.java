@@ -1,5 +1,6 @@
 package subsystems;
 
+import com.mysql.cj.result.LocalDateTimeValueFactory;
 import org.docx4j.UnitsOfMeasurement;
 import org.docx4j.dml.wordprocessingDrawing.*;
 import org.docx4j.openpackaging.exceptions.*;
@@ -13,6 +14,8 @@ import org.docx4j.wml.*;
 import java.io.File;
 import java.io.InputStream;
 import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 import subsystems.individuos.*;
 
@@ -31,6 +34,20 @@ public class docGen {
         textRun.getContent().add(lBreak);
 
         paragraph.getContent().add(textRun);
+    }
+
+    private static void agregarNoBreakHyphen(P paragraph){
+        R noEspacioRun = fabObjetos.createR();
+        RPr runPr = fabObjetos.createRPr();
+        Color color = fabObjetos.createColor();
+        color.setVal("#FFFFFF");
+
+        runPr.setColor(color);
+        noEspacioRun.setRPr(runPr);
+
+        noEspacioRun.getContent().add(fabObjetos.createRNoBreakHyphen());
+        paragraph.getContent().add(noEspacioRun);
+
     }
 
     private static TblGridCol crearCol(BigInteger ancho){
@@ -357,7 +374,9 @@ public class docGen {
              */
     }
 
-    public static void generarLicenciaMedica(trabajador nomina){
+    public static void generarLicenciaMedica(trabajador nomina, String plantel, String municipio, String estado,
+                                             String distrito, String motivo, int diasLicencia, LocalDate inicio, LocalDate fin){
+
         WordprocessingMLPackage packWord = initDoc();
 
         //Definiciones
@@ -376,24 +395,72 @@ public class docGen {
         setRelFooter(docMain, footer);
 
         P paragraph = fabObjetos.createP();
-        agregarParrafoCEstilo(paragraph, "Solicitud de licencia", true, false, 1, false, 48, 0);
+        P paragraphTitle = fabObjetos.createP();
+        agregarParrafoCEstilo(paragraphTitle, "Solicitud de licencia", true, false, 1, false, 48, 0);
 
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+
+        agregarParrafoCEstilo(paragraph, "A favor de",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph," " + nomina.getNombres() + " " + nomina.getApellidos() + ". ",false,
+                false,1,false,36,1);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph,"Sección: _________",false, false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,("C.I: "),false, false,0,false,36,1);;
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, nomina.getCi() + ". ",false,false,1,false,36,1);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Plantel o dependencia: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  plantel + ". ",false,false,1,false,36,1);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Estado: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  estado + ". ",false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Municipio: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  municipio + ". ",false,false,1,false,36,1);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Distrito: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  distrito + ". ",false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Duración de la licencia: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  diasLicencia + " días.",false,false,1,false,36,1);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Motivo: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  motivo + ".",false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Desde:",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  inicio + ".",false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  "Hasta:",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,  fin + ".",false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
         agregarBr(paragraph);
 
-        agregarParrafoCEstilo(paragraph "A favor de " + nomina.);
-
         agregarParrafoCEstilo(paragraph, """
-                    TEXTO:
-                    A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
-                    Plantel o dependencia: {nombre_plantel} //C.E.I Arnoldo Gabaldón
-                    Lugar: {estado} //Monagas, Municipio: {municipio} //Maturín
-                    Distrito: {distrito} //Boquerón Duración de la licencia: {duracíon_solicitud} días, Motivo: {Motivo}
     
                     {firma}   {firma}
                     Docente   Director""",
                 false,false,
                 0,false, 36,1);
 
+        docMain.getContent().add(paragraphTitle);
         docMain.getContent().add(paragraph);
 
         guardarArchivo(packWord, "pruebafase2.docx");
@@ -423,7 +490,17 @@ public class docGen {
     }
 
     public static void main(String args[]){
-        generarLicenciaMedica();
+
+        trabajador JuanDoe = new trabajador(11111111,11111112,22222222,10,
+                "Juan José", "Doe Hernández","Cocinero","Gastronomía","Av. Orinoco, la loma del orto",
+                "Universitario","04241234567","04121234567","Caicara de Maturín","Caripipipo","Escuela x",
+                "municipio x", "San Simón", "Palo verde", "Calle Rivas",
+                "Rosa Hernández","Ninguna", LocalDate.of(2020,12,10),LocalDate.of(2020,12,10),
+                true,true,true,true,true,new byte[0], new byte[0], new byte[0]);
+
+        generarLicenciaMedica(JuanDoe, "C.E.I Arnoldo Gabaldón", "Maturín", "Monagas",
+                "Boqueron","Fractura", 10, LocalDate.of(2021,10,1),
+                LocalDate.of(2021,10,30));
     }
 
 }
