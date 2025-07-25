@@ -18,6 +18,7 @@ public class representante extends personas{
     String tlfTrabajo;
     String tlfCasa;
     String correo;
+    byte[] img;
 
     representante(int ci, int edad, boolean ninosMenor6, String nombres,
                   String apellidos, String lugarNac, LocalDate fechaNac,
@@ -157,5 +158,13 @@ public class representante extends personas{
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public byte[] getImg() {
+        return img;
+    }
+
+    public void setImg(byte[] img) {
+        this.img = img;
     }
 }
