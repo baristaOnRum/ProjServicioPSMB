@@ -3,6 +3,7 @@ package subsystems.individuos;
 import java.time.LocalDate;
 
 public class representante extends personas{
+
     int ci;
     int edad;
     boolean ninosMenor6;
@@ -44,6 +45,62 @@ public class representante extends personas{
         this.tlfCasa = tlfCasa;
         this.correo = correo;
 
+    }
+
+    public int getCi() {
+        return ci;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public boolean isNinosMenor6() {
+        return ninosMenor6;
+    }
+
+    public String getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public String getDireccionHab() {
+        return direccionHab;
+    }
+
+    public String getDireccionTrabj() {
+        return direccionTrabj;
+    }
+
+    public String getOcupacion() {
+        return ocupacion;
+    }
+
+    public String getGradoEstudios() {
+        return gradoEstudios;
+    }
+
+    public String getTlf1() {
+        return tlf1;
+    }
+
+    public String getTlf2() {
+        return tlf2;
+    }
+
+    public String getTlfTrabajo() {
+        return tlfTrabajo;
+    }
+
+    public String getTlfCasa() {
+        return tlfCasa;
+    }
+
+    public String getCorreo() {
+        return correo;
     }
 
 

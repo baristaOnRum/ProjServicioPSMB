@@ -361,6 +361,8 @@ public class docGen {
 
     //Generadores públicos
 
+    public static void generarInscripcionAlumno(){}
+
     public static void generarConstanciaEstudios(){
             /*TEXTO:
             Quien suscribe, {Directora} (E) del C.E.I "Arnoldo Gabaldón", que funciona dentro de las
@@ -399,7 +401,70 @@ public class docGen {
              */
     }
 
-    public static void generarConstanciaRetiro(){
+    public static void generarConstanciaRetiro(estudiante estudiante, representante repre_estudiante, String directora){
+
+        //Creamos el documento
+
+        WordprocessingMLPackage packWord = initDoc();
+
+        //Definimos relaciones
+        MainDocumentPart docMain = packWord.getMainDocumentPart();
+
+        Hdr header = crearHeader();
+        HeaderPart headerPart = crearHeaderPart(header);
+
+        setRelHeader(docMain,header,headerPart);
+
+        agregarLogos(packWord,headerPart,header);
+
+        Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
+                "Teléfono: 0291 6436911");
+
+        setRelFooter(docMain, footer);
+
+        //Agregamos el título
+
+        P paragraph = fabObjetos.createP();
+        P paragraphTitle = fabObjetos.createP();
+        agregarParrafoCEstilo(paragraphTitle, "Constancia de Retiro", true, false, 1, false, 48, 0);
+
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+
+        //Agregamos el texto
+
+        agregarParrafoCEstilo(paragraph, "Quien suscribe, " + directora,false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, "Directora del C.E.I \"Arnoldo Gabaldón\", que funciona en las instalaciones" +
+                " del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas," +
+                " hace constar que el (la) alumno",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, " " + estudiante.getNombres() + " " + estudiante .getApellidos(),
+                false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph, "Portador (a) de la Cédula Escolar Nº: V.-",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, " " + estudiante.getCe(), false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph, "natural de",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, " " + estudiante.getLugarNac(), false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph, "cursó el ",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, " " + estudiante.getNivel(), false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph, "Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar"
+                ,false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, " " + estudiante.getPeriodoCursado(), false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph, ". Es retirado por su representante ",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, " " + repre_estudiante.getNombres() + " " + repre_estudiante.getApellidos(),
+                false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph, ". C.I.:",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, " " + repre_estudiante.getCi(), false,false,1,false,36,1);
+        agregarBr(paragraph);
+        LocalDate fecha = LocalDate.now();
+        agregarParrafoCEstilo(paragraph, "Constancia que se expide de parte interesada a los " + fecha.getDayOfMonth() + " del mes " + fecha.getMonth() +
+                " de " + fecha.getYear(),false,false,0,false,36,1);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+
+        agregarFirmas(packWord,"Docente","Director");
+        guardarArchivo(packWord,estudiante.getCe() + "Retiro.docx");
             /*
             TEXTO:
             Quien suscribe, {Directora}, Directora (E) del C.E.I "Arnoldo Gabaldón", que funciona
@@ -452,6 +517,7 @@ public class docGen {
         //Agregamos el texto
 
         agregarParrafoCEstilo(paragraph, "A favor de",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
         agregarParrafoCEstilo(paragraph," " + nomina.getNombres() + " " + nomina.getApellidos() + ". ",false,
                 false,1,false,36,1);
         agregarBr(paragraph);
@@ -612,30 +678,8 @@ public class docGen {
         // Agregamos la tabla
         docMain.getContent().add(tablaF);
 
-        guardarArchivo(packWord, "pruebafase2.docx");
+        guardarArchivo(packWord, String.valueOf(nomina.getCi()) + "Licencia.docx");
 
-            /*
-            TEXTO:
-            A favor de: {solicitante_obrero}. Sección: {seccion (si aplica)}. C.I.: {cisolicitante}
-            Plantel o dependencia: {nombre_plantel} //C.E.I Arnoldo Gabaldón
-            Lugar: {estado} //Monagas, Municipio: {municipio} //Maturín
-            Distrito: {distrito} //Boquerón Duración de la licencia: {duracíon_solicitud} días, Motivo: {Motivo}
-
-            Desde {fecha_inic}, hasta {fecha_fin}.
-
-            *_DATOS DEL SUPLENTE_*
-            __________________________________________
-            |Nombres y Apellidos | Cédula de Identidad|
-            |                    |                    |
-            |Observación:                             |
-            |                                         |
-            |_________________________________________|
-                {firma}              {firma}
-            Docente/Obrero          Suplente
-
-            {firma}
-            Director
-             */
     }
 
     public static void main(String args[]){
