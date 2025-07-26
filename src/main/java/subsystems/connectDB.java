@@ -385,6 +385,7 @@ public class connectDB {
             estudiante.setCualSeguro(rs.getString("cualSeguro"));
             estudiante.setMedicoTratante(rs.getString("medicoTratante"));
             estudiante.setTlfMedicoTratante(rs.getString("tlfMedicoTratante"));
+            estudiante.setImg(rs.getBytes("img"));
 
         }
     } catch(SQLException e) {
@@ -445,6 +446,7 @@ public class connectDB {
                 estudiante.setCualSeguro(rs.getString("cualSeguro"));
                 estudiante.setMedicoTratante(rs.getString("medicoTratante"));
                 estudiante.setTlfMedicoTratante(rs.getString("tlfMedicoTratante"));
+                estudiante.setImg(rs.getBytes("img"));
 
             }
 
