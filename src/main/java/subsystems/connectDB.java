@@ -97,14 +97,14 @@ public class connectDB {
 
     }
 
-    public static void removerRepresentante(representante representante){
+    public static void removerRepresentante(int ci){
         sql = "DELETE FROM representante" +
                 " WHERE ciRepresentante = ?;";
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            query.setInt(1, representante.getCi());
+            query.setInt(1, ci);
 
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
@@ -268,12 +268,12 @@ public class connectDB {
             query.setDouble(14, estudiante.getEstatura()); // estatura
             query.setInt(15, estudiante.getPeriodoCurso()); // periodoCurso
             query.setInt(16, estudiante.getPeriodoCursado()); // periodoCursado
-            // if (estudiante.getImg() != null) {
-            //     query.setBytes(17, estudiante.getImg());
-            // } else {
-            //     System.err.println("Imagen no existente");
-            //     query.setNull(17, java.sql.Types.BLOB); // Set as NULL if file not found
-            // }
+             if (estudiante.getImg() != null) {
+                 query.setBytes(17, estudiante.getImg());
+             } else {
+                 System.err.println("Imagen no existente");
+                 query.setNull(17, java.sql.Types.BLOB); // Set as NULL if file not found
+             }
             query.setBoolean(18, estudiante.isLateralidad()); // lateralidad
             query.setString(19, estudiante.getGrupoSanguineo()); // grupoSanguineo
             query.setBoolean(20, estudiante.isAsegurado()); // asegurado
@@ -308,15 +308,15 @@ public class connectDB {
 
     }
 
-    public void removerEstudiante(estudiante estudiante){
+    public void removerEstudiante(String ce){
 
         sql = "DELETE FROM estudiante" +
-                " WHERE estudiante = ?;";
+                " WHERE ciEstudiante = ?;";
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            query.setString(1, estudiante.getCe());
+            query.setString(1, ce);
 
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();

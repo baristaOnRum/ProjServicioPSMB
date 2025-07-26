@@ -20,6 +20,7 @@ public class estudiante extends personas{
     boolean lateralidad;
     boolean asegurado;
     byte turno;
+    byte[] img;
 
     // estudiante(String nombres, String apellidos, String lugarNac, LocalDate fechaNac,
     //            String cualSeguro,  String grupoSanguineo, String tlfMedicoTratante,
@@ -204,5 +205,13 @@ public class estudiante extends personas{
 
     public void setTurno(byte turno) {
         this.turno = turno;
+    }
+
+    public byte[] getImg() {
+        return img;
+    }
+
+    public void setImg(byte[] img) {
+        this.img = img;
     }
 }

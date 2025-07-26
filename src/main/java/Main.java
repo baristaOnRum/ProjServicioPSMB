@@ -4,25 +4,31 @@ import forms.*;
 import subsystems.*;
 import subsystems.individuos.*;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        //menuPrincipal main = new menuPrincipal();
-        //file_picker main = new file_picker();
-        ///planilla_inscripcion main = new planilla_inscripcion();
-        //busqueda_representante main = new busqueda_representante();
-        //res_busqueda_rep main = new res_busqueda_rep();
-        //res_busqueda_obr main = new res_busqueda_obr();
-        //conf_frame main = new conf_frame();
-        //conf_users main = new conf_users();
-        //menu_reportes main = new menu_reportes();
+    private static void checkInit(){
+        //TODO: Checkear: Existencia de una base de datos guardada -> Existencia de usuarios en la DB,
+        //                SI NO -> Solicitar enlace de conexión a DB; Verificar existencia otra vez ->
+        //                Verificar usuarios; SI NO USUARIO Crear usuarios.
+    }
 
-        //main.setVisible(true);
-        //docGen.generarDoc();
+    public static void main(String[] args) {
+                //menuPrincipal main = new menuPrincipal();
+                //file_picker main = new file_picker();
+                //busqueda_representante main = new busqueda_representante();
+                //res_busqueda_rep main = new res_busqueda_rep();
+                //res_busqueda_obr main = new res_busqueda_obr();
+                //conf_frame main = new conf_frame();
+                //conf_users main = new conf_users();
+                //menu_reportes main = new menu_reportes();
+
+                //main.setVisible(true);
+                //docGen.generarDoc();
 
         representante juanDoe = new representante();
 
