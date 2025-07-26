@@ -1663,15 +1663,38 @@ public class connectDB {
 
     public void removerUsuario(){}
 
-    public void buscarUsuario(acceso acceso){
-        
-        String nombre_usuario;
-        nombre_usuario = "SELEC * FROM usuario WHERE usuario = ?";
-        String hash;
-        hash = "SELEC * FROM usuario WHERE hash = ?";
-        String permiso;
-        permiso = "SELEC * FROM usuario WHERE permsiso = ?";
-        
+    public boolean fetchUsuario(acceso accesoPresente){
+        sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+            try {
+            rs.next();
+            return accesoPresente.getNombre_usuario().equals(rs.getString("usuario"));
+            } catch (SQLException e1) {
+                System.out.println("USUARIO NO EXISTENTE");
+                e1.printStackTrace();
+            }
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                    return false;
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                    return false;
+                }
+            }
+        }
+        return false;
     }
 
     public void promoverAño(){}
