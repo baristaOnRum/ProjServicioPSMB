@@ -138,6 +138,7 @@ public void createConfPanel(){
         btn_verBusqAut = new javax.swing.JButton();
         btn_editarBusqAut = new javax.swing.JButton();
         img_logoInstitucionBusqAut = new javax.swing.JLabel();
+        btn_buscarAut = new javax.swing.JButton();
         busquedaNomina = new javax.swing.JPanel();
         headderBusqNomina = new javax.swing.JPanel();
         lbl_busqNomina = new javax.swing.JLabel();
@@ -1148,13 +1149,13 @@ public void createConfPanel(){
         tbl_busqAut.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tbl_busqAut.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2"
             }
         ));
         tbl_busqAut.setColumnSelectionAllowed(true);
@@ -1207,6 +1208,17 @@ public void createConfPanel(){
         img_logoInstitucionBusqAut.setIconTextGap(0);
         img_logoInstitucionBusqAut.setRequestFocusEnabled(false);
 
+        btn_buscarAut.setBackground(new java.awt.Color(27, 120, 101));
+        btn_buscarAut.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        btn_buscarAut.setForeground(new java.awt.Color(250, 247, 239));
+        btn_buscarAut.setText("Buscar");
+        btn_buscarAut.setToolTipText("");
+        btn_buscarAut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarAutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout busquedaAutorizadosLayout = new javax.swing.GroupLayout(busquedaAutorizados);
         busquedaAutorizados.setLayout(busquedaAutorizadosLayout);
         busquedaAutorizadosLayout.setHorizontalGroup(
@@ -1224,21 +1236,24 @@ public void createConfPanel(){
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_verBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_inscribirAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(img_busqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(img_logoInstitucionBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(img_logoInstitucionBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, busquedaAutorizadosLayout.createSequentialGroup()
+                        .addComponent(btn_buscarAut, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_inscribirAut, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(15, 15, 15))
         );
         busquedaAutorizadosLayout.setVerticalGroup(
             busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(headderBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(26, 26, 26)
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmb_filtroBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_filtroBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_inscribirAut))
+                    .addComponent(btn_inscribirAut)
+                    .addComponent(btn_buscarAut))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
@@ -3392,6 +3407,7 @@ public void createConfPanel(){
        panel.removeAll();
        panel.add(busquedaNomina);
        panel.repaint();
+       panel.validate();
     }//GEN-LAST:event_btnPlantelActionPerformed
 
     private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
@@ -3437,6 +3453,7 @@ public void createConfPanel(){
     private void btn_verNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verNomActionPerformed
         panel.removeAll();
         panel.add(informacionNomina);
+        panel.repaint();
         panel.revalidate();
         
         for(Component cp: datPersNomina.getComponents()){
@@ -3468,6 +3485,9 @@ public void createConfPanel(){
         panel.removeAll();
         panel.add(informacionEstudiante);
         panel.repaint();
+        panel.validate();
+        
+        
         
         for(Component cp: datosEstd.getComponents()){
             cp.setEnabled(false);
@@ -4070,10 +4090,44 @@ public void createConfPanel(){
                 row.add(estActual.getApellidos());
                 row.add(estActual.getCe());
                 model.addRow(row);
-                
             }
         }
     }//GEN-LAST:event_btn_buscarEstdActionPerformed
+
+    private void btn_buscarAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarAutActionPerformed
+    DefaultTableModel model = (DefaultTableModel) tbl_busqRep.getModel();
+    for (int i = 0; i < model.getRowCount(); i++){
+        model.removeRow(i); }
+       
+    String query = txt_filtroBusqAut.getText();
+    System.out.println(query);
+    String criterio = cmb_filtroBusqAut.getItemAt(cmb_filtroBusqAut.getSelectedIndex()); 
+
+    criterio = switch (criterio) {
+            case "Cédula" -> "ciRepresentante";
+            case "Nombre" -> "nombres";
+            case "Apellido" -> "apellidos";
+            case "Telefono 1" -> "tlf1";
+            case "Telefono 2" -> "tlf1";
+            default -> null; };
+    System.out.println(criterio);
+    // Handle cases where the input string doesn't match any known options
+    List<autorizado> lista = connectDB.buscarAutorizado(criterio, query);
+    for (autorizado aut : lista) {
+            if (aut instanceof autorizado) { // Check if it's a Person object
+                autorizado autorizadoActual = (autorizado) aut;
+                // Create a row vector for each person
+                Vector<Object> row = new Vector<>();
+                row.add(autorizadoActual.getCi());
+                row.add(autorizadoActual.getNombres());
+                row.add(autorizadoActual.getApellidos());
+                row.add(autorizadoActual.getTlf1());
+                row.add(autorizadoActual.getTlf2());              
+                model.addRow(row);
+                
+            }
+        }
+    }//GEN-LAST:event_btn_buscarAutActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -4122,6 +4176,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btnRepresentantes;
     private javax.swing.JButton btn_aceptarInscripcionNiño;
     private javax.swing.JButton btn_aceptarInscripcionNomina;
+    private javax.swing.JButton btn_buscarAut;
     private javax.swing.JButton btn_buscarEstd;
     private javax.swing.JButton btn_buscarRep;
     private javax.swing.JButton btn_cerrarBusqAut;

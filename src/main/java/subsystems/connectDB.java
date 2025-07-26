@@ -968,14 +968,13 @@ public class connectDB {
                 "munElec, parrqElec, centVot, munRes, parrqRes, comRes, calleRes, nombreJefeCLAP, ciJefeCLAP," +
                 "tiene1x10, cantPersonas1x10, voto, observaciones," +
                 "ciCopia, rifCopia, tituloCopia, turno, img " +
-                "FROM trabajadores WHERE ci_trabajador = ?";
+                "FROM trabajadores WHERE ci_trabajador ="+ ci;
         trabajador trabajador = new trabajador();
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            query.setInt(1, ci);
 
             ResultSet rs = query.executeQuery();
 
@@ -1278,14 +1277,13 @@ public class connectDB {
                 "munElec, parrqElec, centVot, munRes, parrqRes, comRes, calleRes, nombreJefeCLAP, ciJefeCLAP," +
                 "tiene1x10, cantPersonas1x10, voto, observaciones," +
                 "ciCopia, rifCopia, tituloCopia, turno, img " +
-                "FROM maestras WHERE ci_maestra = ?";
+                "FROM maestras WHERE ci_maestra =" + ci;
         maestro maestra = new maestro();
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            query.setInt(1, ci);
 
             ResultSet rs = query.executeQuery();
 
@@ -1395,9 +1393,77 @@ public class connectDB {
         }
     }
 
-    public void buscarAutorizado(autorizado autorizado){
+    public static List<autorizado> buscarAutorizado(String criterio, String busquedaQuery) {
+        List<autorizado> autorizados = new ArrayList<>();
+        if (busquedaQuery != null) {
+            sql = "SELECT * FROM autorizadoRetiro";
+            try {
+                conexion = DriverManager.getConnection(url, "root", "1234");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+                ResultSet rs = query.executeQuery();
 
-        sql = "SELECT ciAutorizado FROM autorizadoRetiro WHERE ciAutorizado = ?";
+                while (rs.next()) {
+                    autorizado autor = new autorizado();
+                    autor.setCi(rs.getInt("ciAutorizado"));
+                    autor.setApellidos(rs.getString("apellidos"));
+                    autor.setNombres(rs.getString("nombre"));
+                    autor.setTlf1(rs.getString("tlf1"));
+                    autor.setTlf2(rs.getString("tlf2"));
+                    autorizados.add(autor);
+                }
+                
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } else {
+            sql = "SELECT ciAutorizado, apellidos, nombre, tlf1, tlf2 FROM autorizadoRetiro WHERE " + criterio + " = ?";
+            try {
+                conexion = DriverManager.getConnection(url, "root", "1234");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+                query.setString(1, busquedaQuery);
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()) {
+                    autorizado aut = new autorizado();
+                    aut.setCi(rs.getInt("ciAutorizado"));
+                    aut.setApellidos(rs.getString("apellidos"));
+                    aut.setNombres(rs.getString("nombre"));
+                    aut.setTlf1(rs.getString("tlf1"));
+                    aut.setTlf2(rs.getString("tlf2"));
+                    autorizados.add(aut);
+                }
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return autorizados;
+    }
+
+    public void fetchAutorizado(autorizado autorizado){
+
+                sql = "SELECT ciAutorizado FROM autorizadoRetiro WHERE ciAutorizado = ?";
 
         try{
             conexion = DriverManager.getConnection(url, "root", "1234");
@@ -1420,10 +1486,7 @@ public class connectDB {
             }
         }
 
-
     }
-
-    public void fetchAutorizado(autorizado autorizado){}
 
     public void sendDiagnostico(diagnostico diagnostico){
     
