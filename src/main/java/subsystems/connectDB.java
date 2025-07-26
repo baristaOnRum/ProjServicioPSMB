@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDate;
 
 import subsystems.individuos.autorizado;
 import subsystems.individuos.estudiante;
@@ -237,6 +238,64 @@ public class connectDB {
             }
         }
         if (representante != null){ return representante; } else { return null;}
+    }
+
+    public static void updateRepresentante(representante representante){
+        sql = " UPDATE representante SET apellidos = ?," +
+                "nombres = ?, estdCiv = ?, lugarNac = ?, fechaNac = ?," +
+                "nacionalidad = ?, edad = ?, direccionHab = ?, gradoEstudios = ?," +
+                "ocupacion = ?, direccionTrabj = ?, tlf1 = ?, tlf2 = ?," +
+                "tlfTrabajo = ?, tlfCasa = ?, correo = ?, menores6 = ?," +
+                "img = ? WHERE ciRepresentante = ?;"; // VALUES ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            query.setString(1, representante.getApellidos()); // cirepresentante
+            query.setString(2, representante.getNombres()); // apellidos
+            query.setString(3, representante.getEstadoCivil()); // nombres
+            query.setString(4, representante.getLugarNac()); // estdciv
+            query.setDate(5, Date.valueOf(representante.getFechaNac())); // lugar_nac
+            query.setString(6, representante.getNacionalidad()); // fecha_nac (formato YYYY-MM-DD es estándar)
+            query.setInt(7, representante.getEdad()); // nacionalidad
+            query.setString(8, representante.getDireccionHab()); // direccion_hab
+            query.setString(9, representante.getGradoEstudios()); // grado_estudios
+            query.setString(10, representante.getOcupacion()); // ocupacion
+            query.setString(11, representante.getDireccionTrabj()); // direccion_trabj
+            query.setString(12, representante.getTlf1()); // tlf
+            query.setString(13, representante.getTlf2()); // tlf
+            query.setString(14, representante.getTlfTrabajo()); // tlf
+            query.setString(15, representante.getTlfCasa()); // tlf
+            query.setString(16, representante.getCorreo()); // correo
+            query.setBoolean(17, representante.isNinosMenor6()); // niños menores de 6
+            if (representante.getImg() != null) {
+                query.setBytes(18, representante.getImg());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(18, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            query.setInt(19,representante.getCi());
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+            System.out.print(columnasAfectadas);
+
+            } catch(SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
     }
 
     public void sendEstudiante(estudiante estudiante){
@@ -580,7 +639,7 @@ public class connectDB {
 
     public void removerUsuario(){}
 
-    public void buscarUsuario(){
+    public void buscarUsuario(acceso acceso){
         
         String nombre_usuario;
         nombre_usuario = "SELEC * FROM usuario WHERE usuario = ?";
