@@ -909,20 +909,17 @@ public void createConfPanel(){
         tbl_busqRep.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tbl_busqRep.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "FOTO", "Nombres", "Apellidos", "CI"
+                "FOTO", "Nombres", "Apellidos", "¿Tiene menores de 6?", "CI"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -3363,18 +3360,21 @@ public void createConfPanel(){
         panel.removeAll();
         panel.add(busquedaEstudiantes);
         panel.repaint();
+        panel.validate();
     }//GEN-LAST:event_btnEstudiantesActionPerformed
 
     private void btnRepresentantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepresentantesActionPerformed
         panel.removeAll();
         panel.add(busquedaRepresentante);
         panel.repaint();
+        panel.validate();
     }//GEN-LAST:event_btnRepresentantesActionPerformed
 
     private void btnAutorizadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAutorizadosActionPerformed
         panel.removeAll();
         panel.add(busquedaAutorizados);
         panel.repaint();
+        panel.validate();
     }//GEN-LAST:event_btnAutorizadosActionPerformed
 
     private void btn_inscribirRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirRepActionPerformed
@@ -3949,7 +3949,9 @@ public void createConfPanel(){
 
     private void btn_buscarRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarRepActionPerformed
     DefaultTableModel model = (DefaultTableModel) tbl_busqRep.getModel();
-    model = new DefaultTableModel();
+    for (int i = 0; i < model.getRowCount(); i++){
+        model.removeRow(i); }
+
         
     String query = txt_filtroBusqRep.getText();
     System.out.println(query);
@@ -3976,14 +3978,14 @@ public void createConfPanel(){
                 row.add(repActual.getImg());
                 row.add(repActual.getNombres());
                 row.add(repActual.getApellidos());
+                if (repActual.isNinosMenor6()) {
+                    row.add("Sí"); } else { 
+                    row.add("No"); }
                 row.add(repActual.getCi());
                 model.addRow(row);
                 
             }
         }
-    
-    
-    
     }//GEN-LAST:event_btn_buscarRepActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
