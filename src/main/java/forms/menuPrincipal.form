@@ -3615,6 +3615,131 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JPanel" name="dat_aut">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Autorizado para Retiro">
+                    <Property name="tabTitle" type="java.lang.String" value="Autorizado para Retiro"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="1324" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="201" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+            </Container>
+            <Container class="javax.swing.JPanel" name="dat_socioFamiliares">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Ambiente Socio Familiar">
+                    <Property name="tabTitle" type="java.lang.String" value="Ambiente Socio Familiar"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbl_casa" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_propia" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rdio_prestada" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_alquilada" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbl_tipocasa" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_zinc" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rdio_prestada1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_alquilada1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="1002" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_casa" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_propia" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_prestada" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_alquilada" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_tipocasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_zinc" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_prestada1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_alquilada1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="147" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lbl_casa">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Vivienda:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdio_propia">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Propia"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdio_prestada">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Prestada"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdio_alquilada">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Alquilada"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_tipocasa">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tipo de Vivienda"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdio_zinc">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Zinc"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdio_prestada1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Prestada"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdio_alquilada1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Alquilada"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panelDocumentosEstd">
@@ -3674,7 +3799,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="scroll_observaciones" min="-2" pref="544" max="-2" attributes="0"/>
-                              <EmptySpace pref="224" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="label_fecha" min="-2" max="-2" attributes="0"/>
