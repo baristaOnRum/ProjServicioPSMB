@@ -3965,8 +3965,8 @@ public void createConfPanel(){
             case "Grado de Estudios" -> "gradoEstudios";
             case "Ocupación" -> "ocupacion";
             case "Tiene niños menores de 6 años" -> "menores6";
-            case "Ninguno" -> "any";
-            default -> "any"; };
+            case "Ninguno" -> null;
+            default -> null; };
     System.out.println(criterio);
     // Handle cases where the input string doesn't match any known options
     List<representante> lista = connectDB.buscarRepresentante(criterio, query);

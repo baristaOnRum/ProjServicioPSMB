@@ -134,62 +134,116 @@ public class connectDB {
 
     public static List<representante> buscarRepresentante(String criterio, String busquedaQuery){
         List<representante> representantes = new ArrayList<>();
-        if (!"any".equals(busquedaQuery)){
+        if (busquedaQuery != null){
+            sql = "SELECT * FROM representante";
+            System.out.println("INSIDE ELSE");
+            try {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                System.out.println("INSIDE ELSE");
+                ResultSet rs = query.executeQuery();
+
+                System.out.println("INSIDE ELSE");
+                while (true){
+                    try {
+                        rs.next();
+                        representante representante = new representante();
+                        representante.setNombres(rs.getString("nombres"));
+                        representante.setApellidos(rs.getString("apellidos"));
+                        representante.setLugarNac(rs.getString("lugarNac"));
+                        representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                        representante.setCi(rs.getInt("ciRepresentante"));
+                        representante.setEdad(rs.getInt("edad"));
+                        representante.setNinosMenor6(rs.getBoolean("menores6"));
+                        representante.setEstadoCivil(rs.getString("estdCiv"));
+                        representante.setNacionalidad(rs.getString("nacionalidad"));
+                        representante.setDireccionHab(rs.getString("direccionHab"));
+                        representante.setDireccionTrabj(rs.getString("direccionTrabj"));
+                        representante.setOcupacion(rs.getString("ocupacion"));
+                        representante.setGradoEstudios(rs.getString("gradoEstudios"));
+                        representante.setTlf1(rs.getString("tlf1"));
+                        representante.setTlf2(rs.getString("tlf2"));
+                        representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
+                        representante.setTlfCasa(rs.getString("tlfCasa"));
+                        representante.setCorreo(rs.getString("correo"));
+                        representante.setImg(rs.getBytes("img"));
+                        representantes.add(representante);
+                        System.out.println(representante.getCi());
+                    } catch (SQLException e){
+                        break;
+                    }
+                }
+                return representantes;
+            } catch(SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } else {
+
             sql = "SELECT " +
                     "nombres, apellidos, lugarNac, fechaNac, " +
                     "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
                     "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
                     "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
                     "FROM representante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
-        } else {
-            sql = "SELECT * FROM representante";
-        }
-    try {
-        conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
-        System.out.println("Database connection started.");
-        PreparedStatement query = conexion.prepareStatement(sql);
-
-        ResultSet rs = query.executeQuery();
-
-        while (rs.next()){
-            representante representante = new representante();
-            representante.setNombres(rs.getString("nombres"));
-            representante.setApellidos(rs.getString("apellidos"));
-            representante.setLugarNac(rs.getString("lugarNac"));
-            representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-            representante.setCi(rs.getInt("ciRepresentante"));
-            representante.setEdad(rs.getInt("edad"));
-            representante.setNinosMenor6(rs.getBoolean("menores6"));
-            representante.setEstadoCivil(rs.getString("estdCiv"));
-            representante.setNacionalidad(rs.getString("nacionalidad"));
-            representante.setDireccionHab(rs.getString("direccionHab"));
-            representante.setDireccionTrabj(rs.getString("direccionTrabj"));
-            representante.setOcupacion(rs.getString("ocupacion"));
-            representante.setGradoEstudios(rs.getString("gradoEstudios"));
-            representante.setTlf1(rs.getString("tlf1"));
-            representante.setTlf2(rs.getString("tlf2"));
-            representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
-            representante.setTlfCasa(rs.getString("tlfCasa"));
-            representante.setCorreo(rs.getString("correo"));
-            representante.setImg(rs.getBytes("img"));
-            representantes.add(representante);
-            
-            return representantes;
-        }
-    } catch(SQLException e) {
-        System.err.println("Cannot connect to the database!");
-        e.printStackTrace();
-    } finally {
-        if (conexion != null) {
             try {
-                conexion.close();
-                System.out.println("Database connection closed.");
-            } catch (SQLException e) {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()){
+                    representante representante = new representante();
+                    representante.setNombres(rs.getString("nombres"));
+                    representante.setApellidos(rs.getString("apellidos"));
+                    representante.setLugarNac(rs.getString("lugarNac"));
+                    representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                    representante.setCi(rs.getInt("ciRepresentante"));
+                    representante.setEdad(rs.getInt("edad"));
+                    representante.setNinosMenor6(rs.getBoolean("menores6"));
+                    representante.setEstadoCivil(rs.getString("estdCiv"));
+                    representante.setNacionalidad(rs.getString("nacionalidad"));
+                    representante.setDireccionHab(rs.getString("direccionHab"));
+                    representante.setDireccionTrabj(rs.getString("direccionTrabj"));
+                    representante.setOcupacion(rs.getString("ocupacion"));
+                    representante.setGradoEstudios(rs.getString("gradoEstudios"));
+                    representante.setTlf1(rs.getString("tlf1"));
+                    representante.setTlf2(rs.getString("tlf2"));
+                    representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
+                    representante.setTlfCasa(rs.getString("tlfCasa"));
+                    representante.setCorreo(rs.getString("correo"));
+                    representante.setImg(rs.getBytes("img"));
+                    representantes.add(representante);
+
+                    System.out.println(representante.getCi());
+                }
+                return representantes;
+            } catch(SQLException e) {
+                System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
-    }
-    
     return representantes;
 }
 
@@ -409,65 +463,129 @@ public class connectDB {
 
     }
 
-    public static List<estudiante> buscarEstudiante(String criterio, String busquedaQuery){
+    public static List<estudiante> buscarEstudiante(String criterio, String busquedaQuery) {
         List<estudiante> estudiantes = new ArrayList<>();
-
-        sql = "SELECT " +
-                "nombres, apellidos, lugarNac, fechaNac, " +
-                "ciEstudiante, edad, procedencia, nacionalidad, " +
-                "tallaCamisa, tallaPantalon, tallaZapato, peso,"+
-                "estatura, periodoCurso, periodoCursado," +
-                "lateralidad, grupoSanguineo, asegurado,"+
-                "cualSeguro, medicoTratante, tlfMedicoTratante " +
-                "FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
-                
-    try {
-        conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
-        System.out.println("Database connection started.");
-        PreparedStatement query = conexion.prepareStatement(sql);
-
-        ResultSet rs = query.executeQuery();
-
-        while (rs.next()){
-            estudiante estudiante = new estudiante();
-            estudiante.setNombres(rs.getString("nombres"));
-            estudiante.setApellidos(rs.getString("apellidos"));
-            estudiante.setLugarNac(rs.getString("lugarNac"));
-            estudiante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-            estudiante.setCe(rs.getString("ciEstudiante"));
-            estudiante.setEdad(rs.getInt("edad"));
-            estudiante.setProcedencia(rs.getString("procedencia"));
-            estudiante.setNacionalidad(rs.getString("nacionalidad"));
-            estudiante.setTallaCamisa(rs.getInt("tallaCamisa"));
-            estudiante.setTallaPantalon(rs.getInt("tallaPantalon"));
-            estudiante.setTallaZapato(rs.getInt("tallaZapato"));
-            estudiante.setPeso(rs.getInt("peso"));
-            estudiante.setEstatura(rs.getInt("estatura"));
-            estudiante.setPeriodoCurso(rs.getInt("periodoCurso"));
-            estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
-            estudiante.setLateralidad(rs.getBoolean("lateralidad"));
-            estudiante.setGrupoSanguineo(rs.getString("grupoSanguineo"));
-            estudiante.setAsegurado(rs.getBoolean("asegurado"));
-            estudiante.setCualSeguro(rs.getString("cualSeguro"));
-            estudiante.setMedicoTratante(rs.getString("medicoTratante"));
-            estudiante.setTlfMedicoTratante(rs.getString("tlfMedicoTratante"));
-            estudiante.setImg(rs.getBytes("img"));
-
-        }
-    } catch(SQLException e) {
-        System.err.println("Cannot connect to the database!");
-        e.printStackTrace();
-    } finally {
-        if (conexion != null) {
+        if (busquedaQuery != null) {
+            sql = "SELECT * FROM estudiante";
+            System.out.println("INSIDE ELSE");
             try {
-                conexion.close();
-                System.out.println("Database connection closed.");
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                System.out.println("INSIDE ELSE");
+                ResultSet rs = query.executeQuery();
+
+                System.out.println("INSIDE ELSE");
+                while (true) {
+                    try {
+                        rs.next();
+                        estudiante estudiante = new estudiante();
+                        estudiante.setNombres(rs.getString("nombres"));
+                        estudiante.setApellidos(rs.getString("apellidos"));
+                        estudiante.setLugarNac(rs.getString("lugarNac"));
+                        estudiante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                        estudiante.setCe(rs.getString("ciEstudiante"));
+                        estudiante.setNacionalidad(rs.getString("nacionalidad"));
+                        estudiante.setProcedencia(rs.getString("procedencia"));
+                        estudiante.setGrupoSanguineo(rs.getString("grupoSanguineo"));
+                        estudiante.setCualSeguro(rs.getString("cualSeguro"));
+                        estudiante.setMedicoTratante(rs.getString("medicoTratante"));
+                        estudiante.setTlfMedicoTratante(rs.getString("tlfMedicoTratante"));
+                        estudiante.setTallaZapato(rs.getInt("tallaZap"));
+                        estudiante.setTallaCamisa(rs.getInt("tallaCam"));
+                        estudiante.setTallaPantalon(rs.getInt("tallaPant"));
+                        estudiante.setNivel(rs.getInt("nivel"));
+                        estudiante.setEdad(rs.getInt("edad"));
+                        estudiante.setEstatura(rs.getInt("estatura"));
+                        estudiante.setPeso(rs.getInt("peso"));
+                        estudiante.setPeriodoCurso(rs.getInt("periodioCurso"));
+                        estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
+                        estudiante.setLateralidad(rs.getBoolean("lateralidad"));
+                        estudiante.setAsegurado(rs.getBoolean("asegurado"));
+                        estudiante.setTurno(rs.getByte("turno"));
+                        estudiante.setImg(rs.getBytes("img"));
+                        estudiantes.add(estudiante);
+                        System.out.println(estudiante.getCe());
+                    } catch (SQLException e) {
+                        break;
+                    }
+                }
+                return estudiantes;
             } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } else {
+
+            sql = "SELECT " +
+                    "nombres, apellidos, lugarNac, fechaNac, " +
+                    "ciestudiante, edad, menores6, estdCiv, nacionalidad, " +
+                    "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
+                    "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
+                    "FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
+            try {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()) {
+                    estudiante estudiante = new estudiante();
+                    estudiante.setNombres(rs.getString("nombres"));
+                    estudiante.setApellidos(rs.getString("apellidos"));
+                    estudiante.setLugarNac(rs.getString("lugarNac"));
+                    estudiante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                    estudiante.setCe(rs.getString("ciEstudiante"));
+                    estudiante.setNacionalidad(rs.getString("nacionalidad"));
+                    estudiante.setProcedencia(rs.getString("procedencia"));
+                    estudiante.setGrupoSanguineo(rs.getString("grupoSanguineo"));
+                    estudiante.setCualSeguro(rs.getString("cualSeguro"));
+                    estudiante.setMedicoTratante(rs.getString("medicoTratante"));
+                    estudiante.setTlfMedicoTratante(rs.getString("tlfMedicoTratante"));
+                    estudiante.setTallaZapato(rs.getInt("tallaZap"));
+                    estudiante.setTallaCamisa(rs.getInt("tallaCam"));
+                    estudiante.setTallaPantalon(rs.getInt("tallaPant"));
+                    estudiante.setNivel(rs.getInt("nivel"));
+                    estudiante.setEdad(rs.getInt("edad"));
+                    estudiante.setEstatura(rs.getInt("estatura"));
+                    estudiante.setPeso(rs.getInt("peso"));
+                    estudiante.setPeriodoCurso(rs.getInt("periodioCurso"));
+                    estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
+                    estudiante.setLateralidad(rs.getBoolean("lateralidad"));
+                    estudiante.setAsegurado(rs.getBoolean("asegurado"));
+                    estudiante.setTurno(rs.getByte("turno"));
+                    estudiante.setImg(rs.getBytes("img"));
+                    estudiantes.add(estudiante);
+
+                    System.out.println(estudiante.getCe());
+                }
+                return estudiantes;
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
-    }
-    return estudiantes;
+        return estudiantes;
     }
 
     public static estudiante fetchEstudiante(String ce){ 
