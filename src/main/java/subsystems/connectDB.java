@@ -6,11 +6,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
 
 import subsystems.individuos.autorizado;
+import subsystems.individuos.diagnostico;
 import subsystems.individuos.estudiante;
 import subsystems.individuos.representante;
 
@@ -633,7 +634,132 @@ public class connectDB {
 
     public void fetchAutorizado(autorizado autorizado){}
 
-    public void sendDiagnostico(){}
+    public void sendDiagnostico(diagnostico diagnostico){
+    
+        sql = "INSERT INTO `mydb`.`diagnostico` (`estudiante_ciEstudiante`,"+
+                "`problemaParto`, `problemaMotor`, `problemaLenguaje`,"+
+                "`problemaCognitivo`, `alergiaMedicamento`, `condicionExtra`,"+
+                "`cualParto`, `cualMotor`, `cualLenguaje`, `cualCognitivo`,"+
+                "`cualAMedicamento`, `cualExtra`, `alergia`, `cualAlergia`,"+
+                "`enfermedadesPadecidas`, `edadHablar`, `edadCaminar`,"+
+                "`enfermedadEmbarazo`, `cualEnfEmbarazo`, `embarazoPlanif`,"+
+                "`medicamentoFiebre`, `vacBCG`, `vacTRIPLE`, `vacPOLIO`, `vacTIFUS`,"+
+                "`otroVacAplicadas`, `cualVacAplicada`, `consultaPsilg`,"+
+                "`consultaPsipeg`, `consultaNeur`, `consultaLeng`, `consultaOtro`,"+
+                "`especifiqueConsultaOtro`, `comeAyudado`, `buenApetito`,"+
+                "`horaDormir`, `horaLevantarse`, `conQuienDuerme`, `chupaDedo`,"+
+                "`edadDejarPañales`, `seOrinaDia`, `seOrinaNoche`, `evacuaDia`, `pideAydaAseo`)"+
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"+
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+   
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            // --- Asignación de parámetros ---
+            query.setString(1, diagnostico.getCe()); // estudiante_ciEstudiante
+            query.setBoolean(2, diagnostico.isProblemaParto()); // problemaParto
+            query.setBoolean(3, diagnostico.isProblemaMotor()); // problemaMotor
+            query.setBoolean(4, diagnostico.isProblemaLenguaje()); // problemaLenguaje
+            query.setBoolean(5, diagnostico.isProblemaCognitivo()); // problemaC
+            query.setBoolean(6, diagnostico.isAlergiaMedicamento()); // alergiaMedicamento
+            query.setBoolean(7, diagnostico.isCondicionExtra()); // condicionExtra
+            query.setString(8, diagnostico.getCualParto()); // cualParto
+            query.setString(9, diagnostico.getCualMotor()); // cualMotor
+            query.setString(10, diagnostico.getCualLenguaje()); // cualLenguaje
+            query.setString(11, diagnostico.getCualCognitivo()); // cualCognitivo
+            query.setString(12, diagnostico.getCualAMedicamento()); // cualAMedicamento
+            query.setString(13, diagnostico.getCualExtra()); // cualExtra
+            query.setBoolean(14, diagnostico.isAlergia()); // alergia
+            query.setString(15, diagnostico.getCualAlergia()); // cualAlergia
+            query.setString(16, diagnostico.getEnfermedadesPadecidas()); // enfermedadesPadecidas
+            query.setInt(17, diagnostico.getEdadHablar()); // edadHablar
+            query.setInt(18, diagnostico.getEdadCaminar()); // edadCaminar
+            query.setBoolean(19, diagnostico.isEnfermedadEmbarazo()); // enfermedadEmbarazo
+            query.setString(20, diagnostico.getCualEnfEmbarazo()); // cualEnfEmbarazo
+            query.setBoolean(21, diagnostico.isEmbarazoPlanif()); // embarazoPlanif
+            query.setString(22, diagnostico.getMedicamentoFiebre()); // medicamentoFiebre
+            query.setBoolean(23, diagnostico.isVacBCG()); // vacBCG
+            query.setBoolean(24, diagnostico.isVacTRIPLE()); // vacTRIPLE
+            query.setBoolean(25, diagnostico.isVacPOLIO()); // vacPOLIO
+            query.setBoolean(26, diagnostico.isVacTIFUS()); // vacTIF
+            query.setBoolean(27, diagnostico.isOtroVacAplicadas()); // otroVacAplicadas
+            query.setString(28, diagnostico.getCualVacAplicada()); // cualVacAplicada
+            query.setBoolean(29, diagnostico.isConsultaPsilg()); // consultaPsilg
+            query.setBoolean(30, diagnostico.isConsultaPsipeg()); // consultaPsipe
+            query.setBoolean(31, diagnostico.isConsultaNeur()); // consultaNeur
+            query.setBoolean(32, diagnostico.isConsultaLeng()); // consultaLeng
+            query.setBoolean(33, diagnostico.isConsultaOtro()); // consultaOtro
+            query.setString(34, diagnostico.getEspecifiqueConsultaOtro()); // especifiqueConsultaOtro
+            query.setBoolean(35, diagnostico.isComeAyudado()); // comeAyudado
+            query.setBoolean(36, diagnostico.isBuenApetito()); // buenApetito
+            query.setTime(37, Time.valueOf(diagnostico.getHoraDormir())); // horaDormir
+            query.setTime(38, Time.valueOf(diagnostico.getHoraLevantarse())); // horaLevantarse
+            query.setString(39, diagnostico.getConQuienDuerme()); // conQuienDuerme
+            query.setBoolean(40, diagnostico.isChupaDedo()); // chupaDedo
+            query.setInt(41, diagnostico.getEdadDejarPanales()); // edadDejarPañales
+            query.setBoolean(42, diagnostico.isSeOrinaDia()); // seOrinaDia
+            query.setBoolean(43, diagnostico.isSeOrinaNoche()); // seOrinaNoche
+            query.setBoolean(44, diagnostico.isEvacuaDia()); // evacuaDia
+            query.setBoolean(45, diagnostico.isPideAyudaAseo()); // pideAydaAseo
+
+
+            
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        }
+        catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+ 
+        
+        
+        
+    }
+
+    public void editarDiagnostico(){
+        sql = "UPDATE diagnostico SET problemaParto = ?, problemaMotor = ?, problemaLenguaje = ?," +
+                "problemaCognitivo = ?, alergiaMedicamento = ?, condicionExtra = ?," +
+                "cualParto = ?, cualMotor = ?, cualLenguaje = ?, cualCognitivo = ?," +
+                "cualAMedicamento = ?, cualExtra = ?, alergia = ?, cualAlergia = ?," +
+                "enfermedadesPadecidas = ?, edadHablar = ?, edadCaminar = ?," +
+                "enfermedadEmbarazo = ?, cualEnfEmbarazo = ?, embarazoPlanif = ?," +
+                "medicamentoFiebre = ?, vacBCG = ?, vacTRIPLE = ?, vacPOLIO = ?," +
+                "vacTIFUS = ?, otroVacAplicadas = ?, cualVacAplicada = ?," +
+                "consultaPsilg = ?, consultaPsipeg = ?, consultaNeur = ?," +
+                "consultaLeng = ?, consultaOtro = ?, especifiqueConsultaOtro = ?," +
+                "comeAyudado = ?, buenApetito = ?, horaDormir = ?," +
+                "horaLevantarse = ?, conQuienDuerme = ?, chupaDedo = ?," +
+                "edadDejarPañales = ?, seOrinaDia = ?, seOrinaNoche = ?," +
+                "evacuaDia = ?, pideAydaAseo= ? WHERE estudiante_ciEstudiante= ?";
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+
+        }
+        catch(SQLException e){
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        }
+    }
 
     public void removerDiagnostico(){}
 

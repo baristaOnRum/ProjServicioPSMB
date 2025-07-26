@@ -1,7 +1,6 @@
 package subsystems.individuos;
 
-import java.time.*;
-import java.sql.Time;
+import java.time.LocalTime;
 
 public class diagnostico {
     String ce;
@@ -12,6 +11,7 @@ public class diagnostico {
     boolean problemaMotor;
     boolean problemaLenguaje;
     boolean problemaCognitivo;
+    boolean alergia;
     boolean alergiaMedicamento;
     boolean enfermedadEmbarazo;
     boolean embarazoPlanif;
@@ -37,7 +37,8 @@ public class diagnostico {
     String cualMotor;
     String cualLenguaje;
     String cualCoginitivo;
-    String cualMedicamento;
+    String cualAlergia;
+    String cualAMedicamento;
     String cualEnfEmbarazo;
     String medicamentoFiebre;
     String cualVacAplicada;
@@ -50,13 +51,13 @@ public class diagnostico {
 
     public diagnostico(String ce, int edadHablar, int edadCaminar, int edadDejarPanales,
                        boolean problemaParto, boolean problemaMotor, boolean problemaLenguaje,
-                       boolean problemaCognitivo, boolean alergiaMedicamento, boolean enfermedadEmbarazo,
+                       boolean problemaCognitivo, boolean alergia, boolean alergiaMedicamento, boolean enfermedadEmbarazo,
                        boolean embarazoPlanif, boolean vacBCG, boolean vacTRIPLE, boolean vacPOLIO, boolean vacTIFUS,
                        boolean otroVacAplicadas, boolean consultaPsilg, boolean consultaPsipeg,
                        boolean consultaNeur, boolean consultaLeng, boolean consultaOtro, boolean condicionExtra,
                        boolean comeAyudado, boolean buenApetito, boolean chupaDedo, boolean seOrinaDia,
                        boolean seOrinaNoche, boolean evacuaDia, boolean pideAyudaAseo, String cualParto,
-                       String cualMotor, String cualLenguaje, String cualCoginitivo, String cualMedicamento,
+                       String cualMotor, String cualLenguaje, String cualCoginitivo, String cualAlergia, String cualAMedicamento,
                        String cualEnfEmbarazo, String medicamentoFiebre, String cualVacAplicada,
                        String especifiqueConsultaOtro, String cualExtra, String enfermedadesPadecidas,
                        String conQuienDuerme, LocalTime horaDormir, LocalTime horaLevantarse) {
@@ -68,6 +69,7 @@ public class diagnostico {
         this.problemaMotor = problemaMotor;
         this.problemaLenguaje = problemaLenguaje;
         this.problemaCognitivo = problemaCognitivo;
+        this.alergia = alergia;
         this.alergiaMedicamento = alergiaMedicamento;
         this.enfermedadEmbarazo = enfermedadEmbarazo;
         this.embarazoPlanif = embarazoPlanif;
@@ -93,7 +95,8 @@ public class diagnostico {
         this.cualMotor = cualMotor;
         this.cualLenguaje = cualLenguaje;
         this.cualCoginitivo = cualCoginitivo;
-        this.cualMedicamento = cualMedicamento;
+        this.cualAlergia = cualAlergia;
+        this.cualAMedicamento = cualAMedicamento;
         this.cualEnfEmbarazo = cualEnfEmbarazo;
         this.medicamentoFiebre = medicamentoFiebre;
         this.cualVacAplicada = cualVacAplicada;
@@ -135,6 +138,10 @@ public class diagnostico {
 
     public boolean isProblemaCognitivo() {
         return problemaCognitivo;
+    }
+
+    public boolean isAlergia(){
+        return alergia;
     }
 
     public boolean isAlergiaMedicamento() {
@@ -233,12 +240,16 @@ public class diagnostico {
         return cualLenguaje;
     }
 
-    public String getCualCoginitivo() {
+    public String getCualCognitivo() {
         return cualCoginitivo;
     }
 
-    public String getCualMedicamento() {
-        return cualMedicamento;
+    public String getCualAlergia() {
+        return cualAlergia;
+    }
+
+    public String getCualAMedicamento() {
+        return cualAMedicamento;
     }
 
     public String getCualEnfEmbarazo() {
@@ -409,8 +420,12 @@ public class diagnostico {
         this.cualCoginitivo = cualCoginitivo;
     }
 
-    public void setCualMedicamento(String cualMedicamento) {
-        this.cualMedicamento = cualMedicamento;
+    public void setCualAlergia(String cualAlergia) {
+        this.cualAlergia = cualAlergia;
+    }
+
+    public void setCualAMedicamento(String cualAMedicamento) {
+        this.cualAMedicamento = cualAMedicamento;
     }
 
     public void setCualEnfEmbarazo(String cualEnfEmbarazo) {
@@ -452,7 +467,7 @@ public class diagnostico {
     diagnostico(String ce, boolean problemaParto,
                 boolean problemaMotor, boolean problemaLenguaje, boolean problemaCognitivo,
                 boolean alergiaMedicamento, boolean condicionExtra, String cualParto,
-                String cualMotor, String cualLenguaje, String cualCoginitivo, String cualMedicamento,
+                String cualMotor, String cualLenguaje, String cualCoginitivo, String cualAMedicamento,
                 String cualExtra){
         this.ce = ce;
         this.problemaParto = problemaParto;
@@ -465,7 +480,7 @@ public class diagnostico {
         this.cualMotor = cualMotor;
         this.cualLenguaje = cualLenguaje;
         this.cualCoginitivo = cualCoginitivo;
-        this.cualMedicamento = cualMedicamento;
+        this.cualAMedicamento = cualAMedicamento;
         this.cualExtra = cualExtra;
 
 
