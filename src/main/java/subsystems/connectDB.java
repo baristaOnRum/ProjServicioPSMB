@@ -133,13 +133,21 @@ public class connectDB {
 
     public static List<representante> buscarRepresentante(String criterio, String busquedaQuery){
         List<representante> representantes = new ArrayList<>();
-
-        sql = "SELECT " +
-                "nombres, apellidos, lugarNac, fechaNac, " +
-                "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
-                "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
-                "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
-                "FROM representante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
+        if (busquedaQuery != "any" || busquedaQuery != "unknown"){
+            sql = "SELECT " +
+                    "nombres, apellidos, lugarNac, fechaNac, " +
+                    "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
+                    "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
+                    "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
+                    "FROM representante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
+        } else {
+            sql = "SELECT " +
+                        "nombres, apellidos, lugarNac, fechaNac, " +
+                        "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
+                        "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
+                        "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
+                        "FROM representante";
+        }
     try {
         conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
         System.out.println("Database connection started.");
