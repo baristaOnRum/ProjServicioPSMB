@@ -3,7 +3,6 @@ package forms;
 import java.awt.Component;
 import java.util.List;
 import java.util.Vector;
-import java.swing.table.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -3949,9 +3948,11 @@ public void createConfPanel(){
     }//GEN-LAST:event_btnEstudiantes1ActionPerformed
 
     private void btn_buscarRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarRepActionPerformed
-    
+    DefaultTableModel model = (DefaultTableModel) tbl_busqRep.getModel();
+    model = new DefaultTableModel();
         
     String query = txt_filtroBusqRep.getText();
+    System.out.println(query);
     String criterio = cmb_filtroBusqRep.getItemAt(cmb_filtroBusqRep.getSelectedIndex()); 
 
     criterio = switch (criterio) {
@@ -3963,11 +3964,10 @@ public void createConfPanel(){
             case "Ocupación" -> "ocupacion";
             case "Tiene niños menores de 6 años" -> "menores6";
             case "Ninguno" -> "any";
-            default -> "unknown"; }; // Assuming "Cédula" maps to "nombres"
+            default -> "any"; };
+    System.out.println(criterio);
     // Handle cases where the input string doesn't match any known options
     List<representante> lista = connectDB.buscarRepresentante(criterio, query);
-    int contIndice;
-    TableModel model = tbl_busqRep.getModel();
     for (representante rep : lista) {
             if (rep instanceof representante) { // Check if it's a Person object
                 representante repActual = (representante) rep;
@@ -3977,7 +3977,7 @@ public void createConfPanel(){
                 row.add(repActual.getNombres());
                 row.add(repActual.getApellidos());
                 row.add(repActual.getCi());
-                model.setValueAt(evt, WIDTH, contIndice);
+                model.addRow(row);
                 
             }
         }

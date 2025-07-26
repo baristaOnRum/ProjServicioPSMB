@@ -133,7 +133,7 @@ public class connectDB {
 
     public static List<representante> buscarRepresentante(String criterio, String busquedaQuery){
         List<representante> representantes = new ArrayList<>();
-        if (busquedaQuery != "any" || busquedaQuery != "unknown"){
+        if (!"any".equals(busquedaQuery)){
             sql = "SELECT " +
                     "nombres, apellidos, lugarNac, fechaNac, " +
                     "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
@@ -141,12 +141,7 @@ public class connectDB {
                     "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
                     "FROM representante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
         } else {
-            sql = "SELECT " +
-                        "nombres, apellidos, lugarNac, fechaNac, " +
-                        "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
-                        "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
-                        "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
-                        "FROM representante";
+            sql = "SELECT * FROM representante";
         }
     try {
         conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -177,6 +172,8 @@ public class connectDB {
             representante.setCorreo(rs.getString("correo"));
             representante.setImg(rs.getBytes("img"));
             representantes.add(representante);
+            
+            return representantes;
         }
     } catch(SQLException e) {
         System.err.println("Cannot connect to the database!");
@@ -191,6 +188,7 @@ public class connectDB {
             }
         }
     }
+    
     return representantes;
 }
 
