@@ -13,6 +13,7 @@ import java.util.List;
 import subsystems.individuos.autorizado;
 import subsystems.individuos.diagnostico;
 import subsystems.individuos.estudiante;
+import subsystems.individuos.maestro;
 import subsystems.individuos.representante;
 import subsystems.individuos.trabajador;
 
@@ -653,11 +654,12 @@ public class connectDB {
 
     public void sendNomina(trabajador trabajador){
 
-        sql = "INSERT INTO `mydb`.`trabajadores` (`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`,"+
-        "`cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`,"+
-        "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`,"+
-        "`tiene1x10`, `cantPersonas1x10`, `voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`)"+
-        "VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);";
+        sql = "INSERT INTO `mydb`.`trabajadores` (" +
+            "`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`, " +
+            "`cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
+            "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, " +
+            "`tiene1x10`, `cantPersonas1x10`, `voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`" +
+            ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -959,19 +961,383 @@ public class connectDB {
     return trabajadores;
     }
 
-    public void fetchNomina(){
+    public trabajador fetchNomina(int ci) {
+        sql = "SELECT " +
+                "ci_trabajador, rif, titulo, nombres, apellidos, cargo, fechaNac, fechaIngreso," +
+                "direccionCobro, estatus, grado, sexo, tlf1, tlf2," +
+                "munElec, parrqElec, centVot, munRes, parrqRes, comRes, calleRes, nombreJefeCLAP, ciJefeCLAP," +
+                "tiene1x10, cantPersonas1x10, voto, observaciones," +
+                "ciCopia, rifCopia, tituloCopia, turno, img " +
+                "FROM trabajadores WHERE ci_trabajador = ?";
+        trabajador trabajador = new trabajador();
 
-        
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setInt(1, ci);
 
+            ResultSet rs = query.executeQuery();
+
+            if (rs.next()) {
+                trabajador.setCi(rs.getInt("ci_trabajador"));
+                trabajador.setRif(rs.getInt("rif"));
+                trabajador.setTitulo(rs.getString("titulo"));
+                trabajador.setNombres(rs.getString("nombres"));
+                trabajador.setApellidos(rs.getString("apellidos"));
+                trabajador.setCargo(rs.getString("cargo"));
+                trabajador.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                trabajador.setFechaIngreso(rs.getDate("fechaIngreso").toLocalDate());
+                trabajador.setDireccionCobro(rs.getString("direccionCobro"));
+                trabajador.setEstatus(rs.getBoolean("estatus"));
+                trabajador.setGrado(rs.getString("grado"));
+                trabajador.setSexo(rs.getBoolean("sexo"));
+                trabajador.setTlf1(rs.getString("tlf1"));
+                trabajador.setTlf2(rs.getString("tlf2"));
+                trabajador.setMunElec(rs.getString("munElec"));
+                trabajador.setParrqElec(rs.getString("parrqElec"));
+                trabajador.setCenVot(rs.getString("centVot"));
+                trabajador.setMunRes(rs.getString("munRes"));
+                trabajador.setParrqRes(rs.getString("parrqRes"));
+                trabajador.setComRes(rs.getString("comRes"));
+                trabajador.setCalleRes(rs.getString("calleRes"));
+                trabajador.setNombreJefeClap(rs.getString("nombreJefeCLAP"));
+                trabajador.setCiJefeClap(rs.getInt("ciJefeCLAP"));
+                trabajador.setTiene1x10(rs.getBoolean("tiene1x10"));
+                trabajador.setCantPers1x10(rs.getInt("cantPersonas1x10"));
+                trabajador.setHaVotado(rs.getBoolean("voto"));
+                trabajador.setObservaciones(rs.getString("observaciones"));
+                trabajador.setCiCopia(rs.getBytes("ciCopia"));
+                trabajador.setRifCopia(rs.getBytes("rifCopia"));
+                trabajador.setTituloCopia(rs.getBytes("tituloCopia"));
+                trabajador.setTurno(rs.getBoolean("turno"));
+                trabajador.setImg(rs.getBytes("img"));
+            }
+
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return trabajador;
     }
 
-    public void sendNominaMaestra(){}
+    public void sendNominaMaestra(maestro maestro) {
+        sql = "INSERT INTO `mydb`.`maestras` (" +
+            "`ci_maestra`, `rif`, `titulo`, `nombres`, `apellidos`, `cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
+            "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, `tiene1x10`, `cantPersonas1x10`, " +
+            "`voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`) " +
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
-    public void removerNominaMaestra(){}
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
 
-    public void buscarNominaMaestra(){}
+            query.setInt(1, maestro.getCi());
+            query.setInt(2, maestro.getRif());
+            query.setString(3, maestro.getTitulo());
+            query.setString(4, maestro.getNombres());
+            query.setString(5, maestro.getApellidos());
+            query.setString(6, maestro.getTitulo());
+            query.setDate(7, Date.valueOf(maestro.getFechaNac()));
+            query.setDate(8, Date.valueOf(maestro.getFechaIngreso()));
+            query.setString(9, maestro.getDireccionCobro());
+            query.setBoolean(10, maestro.isEstatus());
+            query.setBoolean(12, maestro.isSexo());
+            query.setString(13, maestro.getTlf1());
+            query.setString(14, maestro.getTlf2());
+            query.setString(15, maestro.getMunElec());
+            query.setString(16, maestro.getParrqElec());
+            query.setString(17, maestro.getCenVot());
+            query.setString(18, maestro.getMunRes());
+            query.setString(19, maestro.getParrqRes());
+            query.setString(20, maestro.getComRes());
+            query.setString(21, maestro.getCalleRes());
+            query.setString(22, maestro.getNombreJefeClap());
+            query.setInt(23, maestro.getCiJefeClap());
+            query.setBoolean(24, maestro.isTiene1x10());
+            query.setInt(25, maestro.getCantPers1x10());
+            query.setBoolean(26, maestro.isHaVotado());
+            query.setString(27, maestro.getObservaciones());
+            if (maestro.getCiCopia() != null) {
+                query.setBytes(28, maestro.getCiCopia());
+            } else {
+                query.setNull(28, java.sql.Types.BLOB);
+            }
+            if (maestro.getRifCopia() != null) {
+                query.setBytes(29, maestro.getRifCopia());
+            } else {
+                query.setNull(29, java.sql.Types.BLOB);
+            }
+            if (maestro.getTituloCopia() != null) {
+                query.setBytes(30, maestro.getTituloCopia());
+            } else {
+                query.setNull(30, java.sql.Types.BLOB);
+            }
 
-    public void fetchNominaMaestra(){}
+            query.setBoolean(31, maestro.isTurno());
+            
+            if (maestro.getImg() != null) {
+                query.setBytes(32, maestro.getImg());
+            } else {
+                query.setNull(32, java.sql.Types.BLOB);
+            }
+
+            int columnasAfectadas = query.executeUpdate();
+
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente en trabajadores_maestra!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado en trabajadores_maestra.");
+            }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void removerNominaMaestra(int ci) {
+        sql = "DELETE FROM maestras WHERE ci_maestra = ?;";
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setInt(1, ci);
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila eliminada exitosamente!");
+            } else {
+                System.out.println("La eliminación de la fila ha fallado.");
+            }
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static List<maestro> buscarNominaMaestra(String criterio, String busquedaQuery) {
+        List<maestro> maestras = new ArrayList<>();
+        if (busquedaQuery != null) {
+            sql = "SELECT * FROM maestras";
+            try {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()) {
+                    maestro maestra = new maestro();
+                    maestra.setCi(rs.getInt("ci_maestra"));
+                    maestra.setRif(rs.getInt("rif"));
+                    maestra.setTitulo(rs.getString("titulo"));
+                    maestra.setNombres(rs.getString("nombres"));
+                    maestra.setApellidos(rs.getString("apellidos"));
+                    maestra.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                    maestra.setFechaIngreso(rs.getDate("fechaIngreso").toLocalDate());
+                    maestra.setDireccionCobro(rs.getString("direccionCobro"));
+                    maestra.setEstatus(rs.getBoolean("estatus"));
+                    maestra.setTitulo(rs.getString("grado"));
+                    maestra.setSexo(rs.getBoolean("sexo"));
+                    maestra.setTlf1(rs.getString("tlf1"));
+                    maestra.setTlf2(rs.getString("tlf2"));
+                    maestra.setMunElec(rs.getString("munElec"));
+                    maestra.setParrqElec(rs.getString("parrqElec"));
+                    maestra.setCenVot(rs.getString("centVot"));
+                    maestra.setMunRes(rs.getString("munRes"));
+                    maestra.setParrqRes(rs.getString("parrqRes"));
+                    maestra.setComRes(rs.getString("comRes"));
+                    maestra.setCalleRes(rs.getString("calleRes"));
+                    maestra.setNombreJefeClap(rs.getString("nombreJefeCLAP"));
+                    maestra.setCiJefeClap(rs.getInt("ciJefeCLAP"));
+                    maestra.setTiene1x10(rs.getBoolean("tiene1x10"));
+                    maestra.setCantPers1x10(rs.getInt("cantPersonas1x10"));
+                    maestra.setHaVotado(rs.getBoolean("voto"));
+                    maestra.setObservaciones(rs.getString("observaciones"));
+                    maestra.setCiCopia(rs.getBytes("ciCopia"));
+                    maestra.setRifCopia(rs.getBytes("rifCopia"));
+                    maestra.setTituloCopia(rs.getBytes("tituloCopia"));
+                    maestra.setTurno(rs.getBoolean("turno"));
+                    maestra.setImg(rs.getBytes("img"));
+                    maestras.add(maestra);
+                }
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } else {
+            sql = "SELECT ci_maestra, rif, titulo, nombres, apellidos, cargo, fechaNac, fechaIngreso," +
+                    "direccionCobro, estatus, grado, sexo, tlf1, tlf2," +
+                    "munElec, parrqElec, centVot, munRes, parrqRes, comRes, calleRes, nombreJefeCLAP, ciJefeCLAP," +
+                    "tiene1x10, cantPersonas1x10, voto, observaciones," +
+                    "ciCopia, rifCopia, tituloCopia, turno, img " +
+                    "FROM maestras WHERE " + criterio + " = '" + busquedaQuery + "'";
+            try {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()) {
+                    maestro maestra = new maestro();
+                    maestra.setCi(rs.getInt("ci_maestra"));
+                    maestra.setRif(rs.getInt("rif"));
+                    maestra.setTitulo(rs.getString("titulo"));
+                    maestra.setNombres(rs.getString("nombres"));
+                    maestra.setApellidos(rs.getString("apellidos"));
+                    maestra.setTitulo(rs.getString("titulo"));
+                    maestra.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                    maestra.setFechaIngreso(rs.getDate("fechaIngreso").toLocalDate());
+                    maestra.setDireccionCobro(rs.getString("direccionCobro"));
+                    maestra.setEstatus(rs.getBoolean("estatus"));
+                    maestra.setSexo(rs.getBoolean("sexo"));
+                    maestra.setTlf1(rs.getString("tlf1"));
+                    maestra.setTlf2(rs.getString("tlf2"));
+                    maestra.setMunElec(rs.getString("munElec"));
+                    maestra.setParrqElec(rs.getString("parrqElec"));
+                    maestra.setCenVot(rs.getString("centVot"));
+                    maestra.setMunRes(rs.getString("munRes"));
+                    maestra.setParrqRes(rs.getString("parrqRes"));
+                    maestra.setComRes(rs.getString("comRes"));
+                    maestra.setCalleRes(rs.getString("calleRes"));
+                    maestra.setNombreJefeClap(rs.getString("nombreJefeCLAP"));
+                    maestra.setCiJefeClap(rs.getInt("ciJefeCLAP"));
+                    maestra.setTiene1x10(rs.getBoolean("tiene1x10"));
+                    maestra.setCantPers1x10(rs.getInt("cantPersonas1x10"));
+                    maestra.setHaVotado(rs.getBoolean("voto"));
+                    maestra.setObservaciones(rs.getString("observaciones"));
+                    maestra.setCiCopia(rs.getBytes("ciCopia"));
+                    maestra.setRifCopia(rs.getBytes("rifCopia"));
+                    maestra.setTituloCopia(rs.getBytes("tituloCopia"));
+                    maestra.setTurno(rs.getBoolean("turno"));
+                    maestra.setImg(rs.getBytes("img"));
+                    maestras.add(maestra);
+                }
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return maestras;
+    }
+
+    public maestro fetchNominaMaestra(int ci) {
+        sql = "SELECT " +
+                "ci_maestra, rif, titulo, nombres, apellidos, cargo, fechaNac, fechaIngreso," +
+                "direccionCobro, estatus, grado, sexo, tlf1, tlf2," +
+                "munElec, parrqElec, centVot, munRes, parrqRes, comRes, calleRes, nombreJefeCLAP, ciJefeCLAP," +
+                "tiene1x10, cantPersonas1x10, voto, observaciones," +
+                "ciCopia, rifCopia, tituloCopia, turno, img " +
+                "FROM maestras WHERE ci_maestra = ?";
+        maestro maestra = new maestro();
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setInt(1, ci);
+
+            ResultSet rs = query.executeQuery();
+
+            if (rs.next()) {
+                maestra.setCi(rs.getInt("ci_maestra"));
+                maestra.setRif(rs.getInt("rif"));
+                maestra.setTitulo(rs.getString("titulo"));
+                maestra.setNombres(rs.getString("nombres"));
+                maestra.setApellidos(rs.getString("apellidos"));
+                maestra.setTitulo(rs.getString("titulo"));
+                maestra.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                maestra.setFechaIngreso(rs.getDate("fechaIngreso").toLocalDate());
+                maestra.setDireccionCobro(rs.getString("direccionCobro"));
+                maestra.setEstatus(rs.getBoolean("estatus"));
+                maestra.setSexo(rs.getBoolean("sexo"));
+                maestra.setTlf1(rs.getString("tlf1"));
+                maestra.setTlf2(rs.getString("tlf2"));
+                maestra.setMunElec(rs.getString("munElec"));
+                maestra.setParrqElec(rs.getString("parrqElec"));
+                maestra.setCenVot(rs.getString("centVot"));
+                maestra.setMunRes(rs.getString("munRes"));
+                maestra.setParrqRes(rs.getString("parrqRes"));
+                maestra.setComRes(rs.getString("comRes"));
+                maestra.setCalleRes(rs.getString("calleRes"));
+                maestra.setNombreJefeClap(rs.getString("nombreJefeCLAP"));
+                maestra.setCiJefeClap(rs.getInt("ciJefeCLAP"));
+                maestra.setTiene1x10(rs.getBoolean("tiene1x10"));
+                maestra.setCantPers1x10(rs.getInt("cantPersonas1x10"));
+                maestra.setHaVotado(rs.getBoolean("voto"));
+                maestra.setObservaciones(rs.getString("observaciones"));
+                maestra.setCiCopia(rs.getBytes("ciCopia"));
+                maestra.setRifCopia(rs.getBytes("rifCopia"));
+                maestra.setTituloCopia(rs.getBytes("tituloCopia"));
+                maestra.setTurno(rs.getBoolean("turno"));
+                maestra.setImg(rs.getBytes("img"));
+            }
+
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return maestra;
+    }
 
     public void sendAutorizado(autorizado autorizado){
 
