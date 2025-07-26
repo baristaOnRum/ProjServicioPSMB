@@ -469,12 +469,18 @@
                           <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="btn_verBusqEstd" pref="344" max="32767" attributes="0"/>
-                              <Component id="btn_editarBusqEstd" pref="344" max="32767" attributes="0"/>
-                              <Component id="btn_inscribirEstd" alignment="0" pref="344" max="32767" attributes="0"/>
-                              <Component id="img_busqEstd" alignment="0" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btn_verBusqEstd" pref="344" max="32767" attributes="0"/>
+                                  <Component id="btn_editarBusqEstd" pref="344" max="32767" attributes="0"/>
+                                  <Component id="img_busqEstd" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="btn_buscarEstd" min="-2" pref="170" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="btn_inscribirEstd" min="-2" pref="170" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="36" max="32767" attributes="0"/>
                       </Group>
@@ -499,7 +505,10 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Component id="btn_inscribirEstd" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btn_inscribirEstd" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_buscarEstd" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="img_busqEstd" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -510,7 +519,7 @@
                           <Component id="img_logoInstitucionBusqEstd" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -590,7 +599,7 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
-                <StringItem index="0" value="C.I Representante"/>
+                <StringItem index="0" value="C&#xe9;dula Estudiantil"/>
                 <StringItem index="1" value="Nombre"/>
                 <StringItem index="2" value="Apellido"/>
                 <StringItem index="3" value="Talla Camisa"/>
@@ -627,9 +636,13 @@
                   </Border>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="2" rowCount="4">
-                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                  <Table columnCount="6" rowCount="0">
+                    <Column editable="false" title="Foto" type="java.lang.Object"/>
+                    <Column editable="false" title="Nombres" type="java.lang.String"/>
+                    <Column editable="false" title="Apellidos" type="java.lang.String"/>
+                    <Column editable="false" title="Nivel" type="java.lang.String"/>
+                    <Column editable="false" title="Seccion" type="java.lang.String"/>
+                    <Column editable="false" title="Grupo Sanguineo" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnSelectionAllowed" type="boolean" value="true"/>
@@ -738,6 +751,23 @@
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="btn_buscarEstd">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="65" green="78" red="1b" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="15" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ef" green="f7" red="fa" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Buscar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buscarEstdActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="busquedaRepresentante">
@@ -761,24 +791,28 @@
                       </Group>
                       <Component id="scrl_busqRep" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="btn_buscarRep" min="-2" pref="113" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btn_inscribirRep" min="-2" pref="225" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="btn_buscarRep" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="btn_inscribirRep" min="-2" pref="225" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btn_verBusqRep" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
+                                  <Component id="btn_editarBusqRep" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                      <Component id="img_busqRep" min="-2" pref="248" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btn_verBusqRep" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
-                          <Component id="btn_editarBusqRep" alignment="0" min="-2" pref="344" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="img_logoInstitucionBusqRep" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                              <Component id="img_busqRep" min="-2" pref="248" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="img_logoInstitucionBusqRep" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -788,7 +822,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="headderBusqRep" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -806,11 +840,12 @@
                           <Component id="btn_verBusqRep" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btn_editarBusqRep" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="img_logoInstitucionBusqRep" min="-2" pref="281" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -834,9 +869,9 @@
                       <Component id="btn_volverBusqRep" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="309" max="-2" attributes="0"/>
                       <Component id="lbl_busqRepresentante" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="245" max="32767" attributes="0"/>
+                      <EmptySpace pref="323" max="32767" attributes="0"/>
                       <Component id="btn_cerrarBusqRep" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -850,7 +885,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btn_volverBusqRep" max="32767" attributes="0"/>
-                          <Component id="btn_cerrarBusqRep" max="32767" attributes="0"/>
+                          <Component id="btn_cerrarBusqRep" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -890,15 +925,14 @@
         <Component class="javax.swing.JComboBox" name="cmb_filtroBusqRep">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="8">
+              <StringArray count="7">
                 <StringItem index="0" value="C&#xe9;dula"/>
                 <StringItem index="1" value="Nombre"/>
                 <StringItem index="2" value="Apellido"/>
                 <StringItem index="3" value="Estado Civil"/>
                 <StringItem index="4" value="Grado de Estudios"/>
                 <StringItem index="5" value="Ocupaci&#xf3;n"/>
-                <StringItem index="6" value="Tiene ni&#xf1;os menores de 6 a&#xf1;os"/>
-                <StringItem index="7" value="Ninguno"/>
+                <StringItem index="6" value="Ninguno"/>
               </StringArray>
             </Property>
           </Properties>
@@ -927,10 +961,10 @@
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="5" rowCount="0">
-                    <Column editable="false" title="FOTO" type="java.lang.Object"/>
+                    <Column editable="false" title="Foto" type="java.lang.Object"/>
                     <Column editable="false" title="Nombres" type="java.lang.String"/>
                     <Column editable="false" title="Apellidos" type="java.lang.String"/>
-                    <Column editable="true" title="&#xbf;Tiene menores de 6?" type="java.lang.String"/>
+                    <Column editable="false" title="&#xbf;Tiene menores de 6?" type="java.lang.String"/>
                     <Column editable="false" title="CI" type="java.lang.Integer"/>
                   </Table>
                 </Property>
