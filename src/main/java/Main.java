@@ -14,10 +14,12 @@ public class Main {
     private static void checkInit(){
         //TODO: Checkear: Existencia de una base de datos guardada -> Existencia de usuarios en la DB,
         //                SI NO -> Solicitar enlace de conexión a DB; Verificar existencia otra vez ->
-        //                Verificar usuarios; SI NO USUARIO Crear usuarios.
+        //                Verificar usuarios; SI NO USUARIO Crear usuarios. El primer usuario siempre es Administrador
     }
 
     private static acceso setAcceso(acceso acceso){
+        //TODO: Llamar al inicio de sesión, devolver un acceso válido;
+
         return acceso;
     }
 

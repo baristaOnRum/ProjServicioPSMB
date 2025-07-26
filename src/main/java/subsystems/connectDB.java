@@ -591,15 +591,8 @@ public class connectDB {
 
     public static estudiante fetchEstudiante(String ce){ 
 
-        sql = "SELECT " +
-                "nombres, apellidos, lugarNac, fechaNac, " +
-                "ciEstudiante, edad, procedencia, nacionalidad, " +
-                "tallaCamisa, tallaPantalon, tallaZapato, peso,"+
-                "estatura, periodoCurso, periodoCursado," +
-                "lateralidad, grupoSanguineo, asegurado,"+
-                "cualSeguro, medicoTratante, tlfMedicoTratante " +
-                "FROM estudiante WHERE ciEstudiante = "+ ce;
-
+        sql = "SELECT * FROM estudiante WHERE ciEstudiante = \""+ ce + "\"";
+        // System.out.println(sql);
         estudiante estudiante = new estudiante();
 
         try {
@@ -609,21 +602,22 @@ public class connectDB {
 
             ResultSet rs = query.executeQuery();
 
-            while (rs.next()) {
+            try {
+                rs.next();
+                estudiante.setCe(ce);
                 estudiante.setNombres(rs.getString("nombres"));
                 estudiante.setApellidos(rs.getString("apellidos"));
                 estudiante.setLugarNac(rs.getString("lugarNac"));
                 estudiante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-                estudiante.setCe(rs.getString("ceEstudiante"));
                 estudiante.setEdad(rs.getInt("edad"));
                 estudiante.setProcedencia(rs.getString("procedencia"));
                 estudiante.setNacionalidad(rs.getString("nacionalidad"));
-                estudiante.setTallaCamisa(rs.getInt("tallaCamisa"));
-                estudiante.setTallaPantalon(rs.getInt("tallaPantalon"));
-                estudiante.setTallaZapato(rs.getInt("tallaZapato"));
+                estudiante.setTallaCamisa(rs.getInt("tallaCam"));
+                estudiante.setTallaPantalon(rs.getInt("tallaPant"));
+                estudiante.setTallaZapato(rs.getInt("tallaZap"));
                 estudiante.setPeso(rs.getInt("peso"));
                 estudiante.setEstatura(rs.getInt("estatura"));
-                estudiante.setPeriodoCurso(rs.getInt("periodoCurso"));
+                estudiante.setPeriodoCurso(rs.getInt("periodioCurso"));
                 estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
                 estudiante.setLateralidad(rs.getBoolean("lateralidad"));
                 estudiante.setGrupoSanguineo(rs.getString("grupoSanguineo"));
@@ -633,7 +627,12 @@ public class connectDB {
                 estudiante.setTlfMedicoTratante(rs.getString("tlfMedicoTratante"));
                 estudiante.setImg(rs.getBytes("img"));
 
+            } catch (SQLException e1){
+                System.out.println("Estudiante no encontrado!");
+                e1.printStackTrace();
+                return null;
             }
+            return estudiante;
 
         } catch(SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -961,8 +960,6 @@ public class connectDB {
 
     public void fetchNomina(){
 
-        
-
     }
 
     public void sendNominaMaestra(){}
@@ -1011,7 +1008,7 @@ public class connectDB {
             conexion = DriverManager.getConnection(url, "root", "1234");
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            
+
             query.setInt(1, autorizado.getCi()); // cirepresentante
 
         }catch(SQLException e){
