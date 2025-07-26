@@ -133,62 +133,116 @@ public class connectDB {
 
     public static List<representante> buscarRepresentante(String criterio, String busquedaQuery){
         List<representante> representantes = new ArrayList<>();
-        if (!"any".equals(busquedaQuery)){
+        if (busquedaQuery != null){
+            sql = "SELECT * FROM representante";
+            System.out.println("INSIDE ELSE");
+            try {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                System.out.println("INSIDE ELSE");
+                ResultSet rs = query.executeQuery();
+
+                System.out.println("INSIDE ELSE");
+                while (true){
+                    try {
+                        rs.next();
+                        representante representante = new representante();
+                        representante.setNombres(rs.getString("nombres"));
+                        representante.setApellidos(rs.getString("apellidos"));
+                        representante.setLugarNac(rs.getString("lugarNac"));
+                        representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                        representante.setCi(rs.getInt("ciRepresentante"));
+                        representante.setEdad(rs.getInt("edad"));
+                        representante.setNinosMenor6(rs.getBoolean("menores6"));
+                        representante.setEstadoCivil(rs.getString("estdCiv"));
+                        representante.setNacionalidad(rs.getString("nacionalidad"));
+                        representante.setDireccionHab(rs.getString("direccionHab"));
+                        representante.setDireccionTrabj(rs.getString("direccionTrabj"));
+                        representante.setOcupacion(rs.getString("ocupacion"));
+                        representante.setGradoEstudios(rs.getString("gradoEstudios"));
+                        representante.setTlf1(rs.getString("tlf1"));
+                        representante.setTlf2(rs.getString("tlf2"));
+                        representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
+                        representante.setTlfCasa(rs.getString("tlfCasa"));
+                        representante.setCorreo(rs.getString("correo"));
+                        representante.setImg(rs.getBytes("img"));
+                        representantes.add(representante);
+                        System.out.println(representante.getCi());
+                    } catch (SQLException e){
+                        break;
+                    }
+                }
+                return representantes;
+            } catch(SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } else {
+
             sql = "SELECT " +
                     "nombres, apellidos, lugarNac, fechaNac, " +
                     "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
                     "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
                     "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
                     "FROM representante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
-        } else {
-            sql = "SELECT * FROM representante";
-        }
-    try {
-        conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
-        System.out.println("Database connection started.");
-        PreparedStatement query = conexion.prepareStatement(sql);
-
-        ResultSet rs = query.executeQuery();
-
-        while (rs.next()){
-            representante representante = new representante();
-            representante.setNombres(rs.getString("nombres"));
-            representante.setApellidos(rs.getString("apellidos"));
-            representante.setLugarNac(rs.getString("lugarNac"));
-            representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-            representante.setCi(rs.getInt("ciRepresentante"));
-            representante.setEdad(rs.getInt("edad"));
-            representante.setNinosMenor6(rs.getBoolean("menores6"));
-            representante.setEstadoCivil(rs.getString("estdCiv"));
-            representante.setNacionalidad(rs.getString("nacionalidad"));
-            representante.setDireccionHab(rs.getString("direccionHab"));
-            representante.setDireccionTrabj(rs.getString("direccionTrabj"));
-            representante.setOcupacion(rs.getString("ocupacion"));
-            representante.setGradoEstudios(rs.getString("gradoEstudios"));
-            representante.setTlf1(rs.getString("tlf1"));
-            representante.setTlf2(rs.getString("tlf2"));
-            representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
-            representante.setTlfCasa(rs.getString("tlfCasa"));
-            representante.setCorreo(rs.getString("correo"));
-            representante.setImg(rs.getBytes("img"));
-            representantes.add(representante);
-            
-            return representantes;
-        }
-    } catch(SQLException e) {
-        System.err.println("Cannot connect to the database!");
-        e.printStackTrace();
-    } finally {
-        if (conexion != null) {
             try {
-                conexion.close();
-                System.out.println("Database connection closed.");
-            } catch (SQLException e) {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()){
+                    representante representante = new representante();
+                    representante.setNombres(rs.getString("nombres"));
+                    representante.setApellidos(rs.getString("apellidos"));
+                    representante.setLugarNac(rs.getString("lugarNac"));
+                    representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                    representante.setCi(rs.getInt("ciRepresentante"));
+                    representante.setEdad(rs.getInt("edad"));
+                    representante.setNinosMenor6(rs.getBoolean("menores6"));
+                    representante.setEstadoCivil(rs.getString("estdCiv"));
+                    representante.setNacionalidad(rs.getString("nacionalidad"));
+                    representante.setDireccionHab(rs.getString("direccionHab"));
+                    representante.setDireccionTrabj(rs.getString("direccionTrabj"));
+                    representante.setOcupacion(rs.getString("ocupacion"));
+                    representante.setGradoEstudios(rs.getString("gradoEstudios"));
+                    representante.setTlf1(rs.getString("tlf1"));
+                    representante.setTlf2(rs.getString("tlf2"));
+                    representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
+                    representante.setTlfCasa(rs.getString("tlfCasa"));
+                    representante.setCorreo(rs.getString("correo"));
+                    representante.setImg(rs.getBytes("img"));
+                    representantes.add(representante);
+
+                    System.out.println(representante.getCi());
+                }
+                return representantes;
+            } catch(SQLException e) {
+                System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
-    }
-    
     return representantes;
 }
 
