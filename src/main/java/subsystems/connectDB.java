@@ -1,11 +1,17 @@
 package subsystems;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.jdbc.Blob;
-import subsystems.individuos.*;
+import subsystems.individuos.autorizado;
+import subsystems.individuos.estudiante;
+import subsystems.individuos.representante;
 
 public class connectDB {
 
@@ -233,20 +239,177 @@ public class connectDB {
         if (representante != null){ return representante; } else { return null;}
     }
 
-    public void sendEstudiante(){
+    public void sendEstudiante(estudiante estudiante){
+
+        sql = "INSERT INTO `mydb`.`estudiante` (`ciEstudiante`, `apellidos`, `nombres`,"+
+        "`fechaNac`, `lugarNac`, `nacionalidad`, `edad`, `procedencia`,"+
+        "`tallaCam`, `tallaPant`, `tallaZap`, `peso`, `estatura`, `periodioCurso`,"+
+        "`periodoCursado`, `img`, `lateralidad`, `grupoSanguineo`, `asegurado`,"+
+        "`cualSeguro`, `medicoTratante`, `tlfMedicoTratante`)"+
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            query.setString(1, estudiante.getCe()); // ceestudiante
+            query.setString(2, estudiante.getApellidos()); // apellidos
+            query.setString(3, estudiante.getNombres()); // nombres
+            query.setDate(6, Date.valueOf(estudiante.getFechaNac())); // fecha_nac (formato YYYY-MM-DD es estándar)
+            query.setString(5, estudiante.getLugarNac()); // lugar_nac
+            query.setString(7, estudiante.getNacionalidad()); // nacionalidad
+            query.setInt(8, estudiante.getEdad()); // edad
+            query.setString(9, estudiante.getProcedencia()); // procedencia
+            query.setInt(10, estudiante.getTallaCamisa()); // tallaCam
+            query.setInt(11, estudiante.getTallaPantalon()); // tallaPant
+            query.setInt(12, estudiante.getTallaZapato()); // tallaZap
+            query.setDouble(13, estudiante.getPeso()); // peso
+            query.setDouble(14, estudiante.getEstatura()); // estatura
+            query.setInt(15, estudiante.getPeriodoCurso()); // periodoCurso
+            query.setInt(16, estudiante.getPeriodoCursado()); // periodoCursado
+            // if (estudiante.getImg() != null) {
+            //     query.setBytes(17, estudiante.getImg());
+            // } else {
+            //     System.err.println("Imagen no existente");
+            //     query.setNull(17, java.sql.Types.BLOB); // Set as NULL if file not found
+            // }
+            query.setBoolean(18, estudiante.isLateralidad()); // lateralidad
+            query.setString(19, estudiante.getGrupoSanguineo()); // grupoSanguineo
+            query.setBoolean(20, estudiante.isAsegurado()); // asegurado
+            query.setString(21, estudiante.getCualSeguro()); // cualSeguro
+            query.setString(22, estudiante.getMedicoTratante()); // medicoTratante
+            query.setString(23, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
+            
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        }
+        catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    
+
     }
 
-    public void removerEstudiante(){}
+    public void removerEstudiante(estudiante estudiante){
 
-    public void buscarEstudiante(){}
+        sql = "DELETE FROM estudiante" +
+                " WHERE estudiante = ?;";
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setString(1, estudiante.getCe());
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    public static List<estudiante> buscarEstudiante(String criterio, String busquedaQuery){
+        List<estudiante> estudiantes = new ArrayList<>();
+
+        sql = "SELECT " +
+                "nombres, apellidos, lugarNac, fechaNac, " +
+                "ciEstudiante, edad, procedencia, nacionalidad, " +
+                "tallaCamisa, tallaPantalon, tallaZapato, peso,"+
+                "estatura, periodoCurso, periodoCursado," +
+                "lateralidad, grupoSanguineo, asegurado,"+
+                "cualSeguro, medicoTratante, tlfMedicoTratante " +
+                "FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
+                
+    try {
+        conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+        System.out.println("Database connection started.");
+        PreparedStatement query = conexion.prepareStatement(sql);
+
+        ResultSet rs = query.executeQuery();
+
+        while (rs.next()){
+            estudiante estudiante = new estudiante();
+            estudiante.setNombres(rs.getString("nombres"));
+            estudiante.setApellidos(rs.getString("apellidos"));
+            estudiante.setLugarNac(rs.getString("lugarNac"));
+            estudiante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+            estudiante.setCe(rs.getString("ciEstudiante"));
+            estudiante.setEdad(rs.getInt("edad"));
+            estudiante.setProcedencia(rs.getString("procedencia"));
+            estudiante.setNacionalidad(rs.getString("nacionalidad"));
+            estudiante.setTallaCamisa(rs.getInt("tallaCamisa"));
+            estudiante.setTallaPantalon(rs.getInt("tallaPantalon"));
+            estudiante.setTallaZapato(rs.getInt("tallaZapato"));
+            estudiante.setPeso(rs.getInt("peso"));
+            estudiante.setEstatura(rs.getInt("estatura"));
+            estudiante.setPeriodoCurso(rs.getInt("periodoCurso"));
+            estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
+            estudiante.setLateralidad(rs.getBoolean("lateralidad"));
+            estudiante.setGrupoSanguineo(rs.getString("grupoSanguineo"));
+            estudiante.setAsegurado(rs.getBoolean("asegurado"));
+            estudiante.setCualSeguro(rs.getString("cualSeguro"));
+            estudiante.setMedicoTratante(rs.getString("medicoTratante"));
+            estudiante.setTlfMedicoTratante(rs.getString("tlfMedicoTratante"));
+
+        }
+    } catch(SQLException e) {
+        System.err.println("Cannot connect to the database!");
+        e.printStackTrace();
+    } finally {
+        if (conexion != null) {
+            try {
+                conexion.close();
+                System.out.println("Database connection closed.");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    return estudiantes;
+    }
 
     public void fetchEstudiante(){
 
+
+        
     }
 
-    public void sendNomina(){
-
-    }
+    public void sendNomina(){}
 
     public void removerNomina(){}
 
