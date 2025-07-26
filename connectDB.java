@@ -1,20 +1,22 @@
 package subsystems;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
-import com.mysql.cj.jdbc.Blob;
-import subsystems.individuos.*;
+import subsystems.individuos.autorizado;
+import subsystems.individuos.representante;
 
 public class connectDB {
 
     //Definir parámetros de conexión
-    static String url;
-    static String user;
-    static String pass;
-    static Connection conexion;
-    static String sql;
+    String url;
+    String user;
+    String pass;
+    Connection conexion;
+    String sql;
     //Definir funciones
 
     //Inicialización de variables (no estáticas)
@@ -27,16 +29,16 @@ public class connectDB {
 
     //Definición de funciones de envío de datos
 
-    public static void sendRepresentante(representante representante){
+    public void sendRepresentante(representante representante){
 
-        sql = "INSERT INTO representante " +
+        sql = "INSERT INTO representante +" +
                 "(ciRepresentante, apellidos, nombres, estdCiv, lugarNac, fechaNac," +
                 "nacionalidad, edad, direccionHab, gradoEstudios, ocupacion, direccionTrabj," +
                 "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, menores6, img)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            conexion = DriverManager.getConnection(url, "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -91,147 +93,11 @@ public class connectDB {
 
     }
 
-    public static void removerRepresentante(representante representante){
-        sql = "DELETE FROM representante" +
-                " WHERE ciRepresentante = ?;";
-        try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-            query.setInt(1, representante.getCi());
+    public void removerRepresentante(){}
 
-            // --- Ejecución de la consulta ---
-            int columnasAfectadas = query.executeUpdate();
+    public void buscarRepresentante(){}
 
-            // --- Verificación del resultado ---
-            if (columnasAfectadas > 0) {
-                System.out.println("¡Fila insertada exitosamente!");
-            } else {
-                System.out.println("La inserción de la fila ha fallado.");
-            }
-        } catch(SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static List<representante> buscarRepresentante(String criterio, String busquedaQuery){
-        List<representante> representantes = new ArrayList<>();
-
-        sql = "SELECT " +
-                "nombres, apellidos, lugarNac, fechaNac, " +
-                "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
-                "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
-                "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
-                "FROM representante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
-    try {
-        conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
-        System.out.println("Database connection started.");
-        PreparedStatement query = conexion.prepareStatement(sql);
-
-        ResultSet rs = query.executeQuery();
-
-        while (rs.next()){
-            representante representante = new representante();
-            representante.setNombres(rs.getString("nombres"));
-            representante.setApellidos(rs.getString("apellidos"));
-            representante.setLugarNac(rs.getString("lugarNac"));
-            representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-            representante.setCi(rs.getInt("ciRepresentante"));
-            representante.setEdad(rs.getInt("edad"));
-            representante.setNinosMenor6(rs.getBoolean("menores6"));
-            representante.setEstadoCivil(rs.getString("estdCiv"));
-            representante.setNacionalidad(rs.getString("nacionalidad"));
-            representante.setDireccionHab(rs.getString("direccionHab"));
-            representante.setDireccionTrabj(rs.getString("direccionTrabj"));
-            representante.setOcupacion(rs.getString("ocupacion"));
-            representante.setGradoEstudios(rs.getString("gradoEstudios"));
-            representante.setTlf1(rs.getString("tlf1"));
-            representante.setTlf2(rs.getString("tlf2"));
-            representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
-            representante.setTlfCasa(rs.getString("tlfCasa"));
-            representante.setCorreo(rs.getString("correo"));
-            representante.setImg(rs.getBytes("img"));
-            representantes.add(representante);
-        }
-    } catch(SQLException e) {
-        System.err.println("Cannot connect to the database!");
-        e.printStackTrace();
-    } finally {
-        if (conexion != null) {
-            try {
-                conexion.close();
-                System.out.println("Database connection closed.");
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-    return representantes;
-}
-
-    public static representante fetchRepresentante(int ci) {
-        sql = "SELECT " +
-                "nombres, apellidos, lugarNac, fechaNac, " +
-                "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
-                "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
-                "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
-                "FROM representante WHERE ciRepresentante = " + ci;
-        representante representante = new representante();
-
-        try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            ResultSet rs = query.executeQuery();
-
-            while (rs.next()) {
-                representante.setNombres(rs.getString("nombres"));
-                representante.setApellidos(rs.getString("apellidos"));
-                representante.setLugarNac(rs.getString("lugarNac"));
-                representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-                representante.setCi(rs.getInt("ciRepresentante"));
-                representante.setEdad(rs.getInt("edad"));
-                representante.setNinosMenor6(rs.getBoolean("menores6"));
-                representante.setEstadoCivil(rs.getString("estdCiv"));
-                representante.setNacionalidad(rs.getString("nacionalidad"));
-                representante.setDireccionHab(rs.getString("direccionHab"));
-                representante.setDireccionTrabj(rs.getString("direccionTrabj"));
-                representante.setOcupacion(rs.getString("ocupacion"));
-                representante.setGradoEstudios(rs.getString("gradoEstudios"));
-                representante.setTlf1(rs.getString("tlf1"));
-                representante.setTlf2(rs.getString("tlf2"));
-                representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
-                representante.setTlfCasa(rs.getString("tlfCasa"));
-                representante.setCorreo(rs.getString("correo"));
-                representante.setImg(rs.getBytes("img"));
-            }
-
-        } catch(SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        if (representante != null){ return representante; } else { return null;}
-    }
+    public void fetchRepresentante(){}
 
     public void sendEstudiante(){
     }
@@ -261,7 +127,7 @@ public class connectDB {
     public void buscarNominaMaestra(){}
 
     public void fetchNominaMaestra(){}
-
+//A partir de este punto todo queda en manos de Raul:
     public void sendAutorizado(autorizado autorizado){
 
         sql = "INSERT INTO autorizadoRetiro (ciAutorizado, apellidos, nombre, tlf1, tlf2) VALUES (?,?,?,?,?)";
@@ -388,4 +254,3 @@ public class connectDB {
 
     }
 }
-
