@@ -14,6 +14,7 @@ import subsystems.individuos.autorizado;
 import subsystems.individuos.diagnostico;
 import subsystems.individuos.estudiante;
 import subsystems.individuos.representante;
+import subsystems.individuos.trabajador;
 
 public class connectDB {
 
@@ -650,13 +651,319 @@ public class connectDB {
         if (estudiante != null){ return estudiante; } else { return null;}
     }
 
-    public void sendNomina(){}
+    public void sendNomina(trabajador trabajador){
 
-    public void removerNomina(){}
+        sql = "INSERT INTO `mydb`.`trabajadores` (`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`,"+
+        "`cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`,"+
+        "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`,"+
+        "`tiene1x10`, `cantPersonas1x10`, `voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`)"+
+        "VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);";
 
-    public void buscarNomina(){}
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
 
-    public void fetchNomina(){}
+            query.setInt(1, trabajador.getCi()); // ci_maestra
+            query.setInt(2, trabajador.getRif()); // rif
+            query.setString(3, trabajador.getTitulo()); // titulo
+            query.setString(4, trabajador.getNombres()); // nombres
+            query.setString(5, trabajador.getApellidos()); // apellidos
+            query.setString(6, trabajador.getCargo()); // cargo
+            query.setDate(7, Date.valueOf(trabajador.getFechaNac())); // fecha_nac (formato YYYY-MM-DD es estándar)
+            query.setDate(8, Date.valueOf(trabajador.getFechaIngreso())); // fecha_ingreso
+            query.setString(9, trabajador.getDireccionCobro()); // direccion_cobro
+            query.setBoolean(10, trabajador.isEstatus()); // estatus
+            query.setString(11, trabajador.getGrado()); // grado
+            query.setBoolean(12, trabajador.isSexo()); // sexo
+            query.setString(13, trabajador.getTlf1()); // tlf1
+            query.setString(14, trabajador.getTlf2()); // tlf2
+            query.setString(15, trabajador.getMunElec()); // mun_elec
+            query.setString(16, trabajador.getParrqElec()); // parrq_elec
+            query.setString(17, trabajador.getCenVot()); // cent_vot
+            query.setString(18, trabajador.getMunRes()); // mun_res
+            query.setString(19, trabajador.getParrqRes()); // parrq_res
+            query.setString(20, trabajador.getComRes()); // com_res
+            query.setString(21, trabajador.getCalleRes()); // calle_res
+            query.setString(22, trabajador.getNombreJefeClap()); // nombre_jefe_clap
+            query.setInt(23, trabajador.getCiJefeClap()); // ci_jefe_clap
+            query.setBoolean(24, trabajador.isTiene1x10()); // tiene_1x10
+            query.setInt(25, trabajador.getCantPers1x10()); // cant_personas_1x10
+            query.setBoolean(26, trabajador.isHaVotado()); // voto
+            query.setString(27, trabajador.getObservaciones()); // observaciones
+            if (trabajador.getCiCopia() != null) {
+                query.setBytes(32, trabajador.getCiCopia());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(32, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            if (trabajador.getRifCopia() != null) {
+                query.setBytes(33, trabajador.getRifCopia());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(33, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            if (trabajador.getTituloCopia() != null) {
+                query.setBytes(34, trabajador.getTituloCopia());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(34, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            query.setBoolean(35, trabajador.isTurno()); // turno
+            if (trabajador.getImg() != null) {
+                query.setBytes(36, trabajador.getImg());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(36, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        }
+        catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void removerNomina(int ci){
+
+        sql = "DELETE FROM trabajador" +
+                " WHERE ci_trabajadores = ?;";
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setInt(1, ci);
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    public static List<trabajador> buscarNomina(String criterio, String busquedaQuery){
+        List<trabajador> trabajadores = new ArrayList<>();
+        if (busquedaQuery != null) {
+            sql = "SELECT * FROM trabajadores";
+            System.out.println("INSIDE ELSE");
+            try {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                System.out.println("INSIDE ELSE");
+                ResultSet rs = query.executeQuery();
+
+                System.out.println("INSIDE ELSE");
+                while (true) {
+                    try {
+                        rs.next();
+                        trabajador trabajador = new trabajador();
+                        trabajador.setCi(rs.getInt("ci_trabajador"));
+                        trabajador.setRif(rs.getInt("rif"));
+                        trabajador.setTitulo(rs.getString("titulo"));
+                        trabajador.setNombres(rs.getString("nombres"));
+                        trabajador.setApellidos(rs.getString("apellidos"));
+                        trabajador.setCargo(rs.getString("cargo"));
+                        trabajador.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                        trabajador.setFechaIngreso(rs.getDate("fechaIngreso").toLocalDate());
+                        trabajador.setDireccionCobro(rs.getString("direccionCobro"));
+                        trabajador.setEstatus(rs.getBoolean("estatus"));
+                        trabajador.setGrado(rs.getString("grado"));
+                        trabajador.setSexo(rs.getBoolean("sexo"));
+                        trabajador.setTlf1(rs.getString("tlf1"));
+                        trabajador.setTlf2(rs.getString("tlf2"));
+                        trabajador.setMunElec(rs.getString("munElec"));
+                        trabajador.setParrqElec(rs.getString("parrqElec"));
+                        trabajador.setCenVot(rs.getString("centVot"));
+                        trabajador.setMunRes(rs.getString("munRes"));
+                        trabajador.setParrqRes(rs.getString("parrqRes"));
+                        trabajador.setComRes(rs.getString("comRes"));
+                        trabajador.setCalleRes(rs.getString("calleRes"));
+                        trabajador.setNombreJefeClap(rs.getString("nombreJefeCLAP"));
+                        trabajador.setCiJefeClap(rs.getInt("ciJefeCLAP"));
+                        trabajador.setTiene1x10(rs.getBoolean("tiene1x10"));
+                        trabajador.setCantPers1x10(rs.getInt("cantPersonas1x10"));
+                        trabajador.setHaVotado(rs.getBoolean("voto"));
+                        trabajador.setObservaciones(rs.getString("observaciones"));
+
+                        if (rs.getBytes("ciCopia") != null) {
+                            trabajador.setCiCopia(rs.getBytes("ciCopia"));
+                        } else {
+                            System.err.println("Imagen no existente");
+                            trabajador.setCiCopia(null); // Set as NULL if file not found
+                        }
+                        if (rs.getBytes("rifCopia") != null) {
+                            trabajador.setRifCopia(rs.getBytes("rifCopia"));
+                        } else {
+                            System.err.println("Imagen no existente");
+                            trabajador.setRifCopia(null); // Set as NULL if file not found
+                        }
+                        if (rs.getBytes("tituloCopia") != null) {
+                            trabajador.setTituloCopia(rs.getBytes("tituloCopia"));
+                        } else {
+                            System.err.println("Imagen no existente");
+                            trabajador.setTituloCopia(null); // Set as NULL if file not found
+                        }
+                        trabajador.setTurno(rs.getBoolean("turno"));
+                        if (rs.getBytes("img") != null) {
+                            trabajador.setImg(rs.getBytes("img"));
+                        } else {
+                            System.err.println("Imagen no existente");
+                            trabajador.setImg(null); // Set as NULL if file not found
+                        }
+                        trabajadores.add(trabajador);
+                        System.out.println(trabajador.getCi());
+                    } catch (SQLException e) {
+                        break;
+                    }
+                }
+            }
+            catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }   
+        }
+        else {
+            sql = "SELECT " +
+                    "ci_trabajador, rif, titulo, nombres, apellidos, cargo, fechaNac, fechaIngreso," +
+                    "direccionCobro, estatus, grado, sexo, tlf1, tlf2," +
+                    "munElec, parrqElec, centVot, munRes, parrqRes," +
+                    "comRes, calleRes, nombreJefeCLAP, ciJefeCLAP," +
+                    "tiene1x10, cantPersonas1x10, voto, observaciones," +
+                    "ciCopia, rifCopia, tituloCopia, turno" +
+                    " FROM trabajadores WHERE " + criterio + " = \'" + busquedaQuery + "\'";
+            try {
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()) {
+                    trabajador trabajador = new trabajador();
+                    trabajador.setCi(rs.getInt("ci_trabajador"));
+                    trabajador.setRif(rs.getInt("rif"));
+                    trabajador.setTitulo(rs.getString("titulo"));
+                    trabajador.setNombres(rs.getString("nombres"));
+                    trabajador.setApellidos(rs.getString("apellidos"));
+                    trabajador.setCargo(rs.getString("cargo"));
+                    trabajador.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+                    trabajador.setFechaIngreso(rs.getDate("fechaIngreso").toLocalDate());
+                    trabajador.setDireccionCobro(rs.getString("direccionCobro"));
+                    trabajador.setEstatus(rs.getBoolean("estatus"));
+                    trabajador.setGrado(rs.getString("grado"));
+                    trabajador.setSexo(rs.getBoolean("sexo"));
+                    trabajador.setTlf1(rs.getString("tlf1"));
+                    trabajador.setTlf2(rs.getString("tlf2"));
+                    trabajador.setMunElec(rs.getString("munElec"));
+                    trabajador.setParrqElec(rs.getString("parrqElec"));
+                    trabajador.setCenVot(rs.getString("centVot"));
+                    trabajador.setMunRes(rs.getString("munRes"));
+                    trabajador.setParrqRes(rs.getString("parrqRes"));
+                    trabajador.setComRes(rs.getString("comRes"));
+                    trabajador.setCalleRes(rs.getString("calleRes"));
+                    trabajador.setNombreJefeClap(rs.getString("nombreJefeCLAP"));
+                    trabajador.setCiJefeClap(rs.getInt("ciJefeCLAP"));
+                    trabajador.setTiene1x10(rs.getBoolean("tiene1x10"));
+                    trabajador.setCantPers1x10(rs.getInt("cantPersonas1x10"));
+                    trabajador.setHaVotado(rs.getBoolean("voto"));
+                    trabajador.setObservaciones(rs.getString("observaciones"));
+                    if (rs.getBytes("ciCopia") != null) {
+                        trabajador.setCiCopia(rs.getBytes("ciCopia"));
+                    } else {
+                        System.err.println("Imagen no existente");
+                        trabajador.setCiCopia(null); // Set as NULL if file not found
+                    }
+                    if (rs.getBytes("rifCopia") != null) {
+                        trabajador.setRifCopia(rs.getBytes("rifCopia"));
+                    } else {
+                        System.err.println("Imagen no existente");
+                        trabajador.setRifCopia(null); // Set as NULL if file not found
+                    }
+                    if (rs.getBytes("tituloCopia") != null) {
+                        trabajador.setTituloCopia(rs.getBytes("tituloCopia"));
+                    } else {
+                        System.err.println("Imagen no existente");
+                        trabajador.setTituloCopia(null); // Set as NULL if file not found
+                    }
+                    trabajador.setTurno(rs.getBoolean("turno"));
+                    if (rs.getBytes("img") != null) {
+                        trabajador.setImg(rs.getBytes("img"));
+                    } else {
+                        System.err.println("Imagen no existente");
+                        trabajador.setImg(null); // Set as NULL if file not found
+                    }
+                    trabajadores.add(trabajador);
+                    System.out.println(trabajador.getCi());
+                }
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } 
+        }
+    return trabajadores;
+    }
+
+    public void fetchNomina(){
+
+        
+
+    }
 
     public void sendNominaMaestra(){}
 
@@ -847,13 +1154,9 @@ public class connectDB {
                 }
             }
         }
- 
-        
-        
-        
     }
 
-    public void editarDiagnostico(){
+    public void editarDiagnostico(diagnostico diagnostico){
         sql = "UPDATE diagnostico SET problemaParto = ?, problemaMotor = ?, problemaLenguaje = ?," +
                 "problemaCognitivo = ?, alergiaMedicamento = ?, condicionExtra = ?," +
                 "cualParto = ?, cualMotor = ?, cualLenguaje = ?, cualCognitivo = ?," +
@@ -871,15 +1174,120 @@ public class connectDB {
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            // Se establecen los parametros a editar
+            query.setBoolean(1, diagnostico.isProblemaParto()); // problemaParto
+            query.setBoolean(2, diagnostico.isProblemaMotor()); // problemaMotor
+            query.setBoolean(3, diagnostico.isProblemaLenguaje()); // problemaLenguaje
+            query.setBoolean(4, diagnostico.isProblemaCognitivo()); // problemaC
+            query.setBoolean(5, diagnostico.isAlergiaMedicamento()); // alergiaMedicamento
+            query.setBoolean(6, diagnostico.isCondicionExtra()); // condicionExtra
+            query.setString(7, diagnostico.getCualParto()); // cualParto
+            query.setString(8, diagnostico.getCualMotor()); // cualMotor
+            query.setString(9, diagnostico.getCualLenguaje()); // cualLenguaje
+            query.setString(10, diagnostico.getCualCognitivo()); // cualCognitivo
+            query.setString(11, diagnostico.getCualAMedicamento()); // cualAMedicamento
+            query.setString(12, diagnostico.getCualExtra()); // cualExtra
+            query.setBoolean(13, diagnostico.isAlergia()); // alergia
+            query.setString(14, diagnostico.getCualAlergia()); // cualAlergia
+            query.setString(15, diagnostico.getEnfermedadesPadecidas()); // enfermedadesPadecidas
+            query.setInt(16, diagnostico.getEdadHablar()); // edadHablar
+            query.setInt(17, diagnostico.getEdadCaminar()); // edadCaminar
+            query.setBoolean(18, diagnostico.isEnfermedadEmbarazo()); // enfermedadEmbarazo
+            query.setString(19, diagnostico.getCualEnfEmbarazo()); // cualEnfEmbarazo
+            query.setBoolean(20, diagnostico.isEmbarazoPlanif()); // embarazoPlanif
+            query.setString(21, diagnostico.getMedicamentoFiebre()); // medicamentoFiebre
+            query.setBoolean(22, diagnostico.isVacBCG()); // vacBCG
+            query.setBoolean(23, diagnostico.isVacTRIPLE()); // vacTRIPLE
+            query.setBoolean(24, diagnostico.isVacPOLIO()); // vacPOLIO
+            query.setBoolean(25, diagnostico.isVacTIFUS()); // vacTIF
+            query.setBoolean(26, diagnostico.isOtroVacAplicadas()); // otroVacAplicadas
+            query.setString(27, diagnostico.getCualVacAplicada()); // cualVacAplicada
+            query.setBoolean(28, diagnostico.isConsultaPsilg()); // consultaPsilg
+            query.setBoolean(29, diagnostico.isConsultaPsipeg()); // consultaPsipe
+            query.setBoolean(30, diagnostico.isConsultaNeur()); // consultaNeur
+            query.setBoolean(31, diagnostico.isConsultaLeng()); // consultaLeng
+            query.setBoolean(32, diagnostico.isConsultaOtro()); // consultaOtro
+            query.setString(33, diagnostico.getEspecifiqueConsultaOtro()); // especifiqueConsultaOtro
+            query.setBoolean(34, diagnostico.isComeAyudado()); // comeAyudado
+            query.setBoolean(35, diagnostico.isBuenApetito()); // buenApetito
+            query.setTime(36, Time.valueOf(diagnostico.getHoraDormir())); // horaDormir
+            query.setTime(37, Time.valueOf(diagnostico.getHoraLevantarse())); // horaLevantarse
+            query.setString(38, diagnostico.getConQuienDuerme()); // conQuienDuerme
+            query.setBoolean(39, diagnostico.isChupaDedo()); // chupaDedo
+            query.setInt(40, diagnostico.getEdadDejarPanales()); // edadDejarPañales
+            query.setBoolean(41, diagnostico.isSeOrinaDia()); // seOrinaDia
+            query.setBoolean(42, diagnostico.isSeOrinaNoche()); // seOrinaNoche
+            query.setBoolean(43, diagnostico.isEvacuaDia()); // evacuaDia
+            query.setBoolean(44, diagnostico.isPideAyudaAseo()); // pideAydaAseo
+
+            // Se establece el ci del estudiante al que pertenece el diagnostico
+            query.setString(45, diagnostico.getCe()); // estudiante_ciEstudiante
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+            System.out.print(columnasAfectadas);
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila actualizada exitosamente!");
+            } else {
+                System.out.println("La actualización de la fila ha fallado.");
+            }
 
         }
         catch(SQLException e){
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
+        }finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
-    public void removerDiagnostico(){}
+    public void removerDiagnostico(String ce){
+
+        sql = "DELETE FROM diagnostico" +
+        " WHERE estudiante_ciEstudiante = ?;";
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            
+            query.setString(1, ce); // estudiante_ciEstudiante
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
 
     public void setRelRepresentado(){}
 
