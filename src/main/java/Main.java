@@ -53,11 +53,13 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        List<representante> representantes = connectDB.buscarRepresentante("nacionalidad", "venezolana");
-        System.out.println(representantes);
-
-        System.out.println(representantes.get(0).getCi());
-        System.out.println(representantes.get(0).getNacionalidad());
+//        List<representante> representantes = connectDB.buscarRepresentante("nacionalidad", "venezolana");
+//        System.out.println(representantes);
+//
+//        System.out.println(representantes.get(0).getCi());
+//        System.out.println(representantes.get(0).getNacionalidad());
+        representante r = connectDB.fetchRepresentante(12345678);
+        System.out.println(r.getNombres());
         //for ((representantes.get(0) : ))
 
     }
