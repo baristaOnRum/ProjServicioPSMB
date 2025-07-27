@@ -4,15 +4,8 @@
  */
 package forms;
 
-/**
- *
- * @author Uzer
- */
 public class menuReportes extends javax.swing.JDialog {
-
-    /**
-     * Creates new form menuReportes
-     */
+    
     public menuReportes(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -27,114 +20,36 @@ public class menuReportes extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel_permiso_medico = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
         panel_vacio = new javax.swing.JPanel();
-        panel = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
+        panel_licenciaMedica = new javax.swing.JPanel();
+        lbl_direcPerMed = new javax.swing.JLabel();
+        txt_direcPerMed = new javax.swing.JTextField();
+        panel_constRetiro = new javax.swing.JPanel();
+        lbl_plantel = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        lbl_municipio = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-
-        panel_permiso_medico.setBackground(new java.awt.Color(197, 232, 225));
-
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel4.setText("Requerimientos");
-
-        jCheckBox1.setBackground(new java.awt.Color(27, 120, 101));
-        jCheckBox1.setForeground(new java.awt.Color(27, 120, 101));
-        jCheckBox1.setSelected(true);
-        jCheckBox1.setText("jCheckBox1");
-        jCheckBox1.setContentAreaFilled(false);
-        jCheckBox1.setEnabled(false);
-
-        jCheckBox2.setBackground(new java.awt.Color(27, 120, 101));
-        jCheckBox2.setForeground(new java.awt.Color(27, 120, 101));
-        jCheckBox2.setSelected(true);
-        jCheckBox2.setText("jCheckBox1");
-        jCheckBox2.setContentAreaFilled(false);
-        jCheckBox2.setEnabled(false);
-
-        jCheckBox3.setBackground(new java.awt.Color(27, 120, 101));
-        jCheckBox3.setForeground(new java.awt.Color(27, 120, 101));
-        jCheckBox3.setSelected(true);
-        jCheckBox3.setText("jCheckBox1");
-        jCheckBox3.setContentAreaFilled(false);
-        jCheckBox3.setEnabled(false);
-
-        jCheckBox4.setBackground(new java.awt.Color(27, 120, 101));
-        jCheckBox4.setForeground(new java.awt.Color(27, 120, 101));
-        jCheckBox4.setSelected(true);
-        jCheckBox4.setText("jCheckBox1");
-        jCheckBox4.setContentAreaFilled(false);
-        jCheckBox4.setEnabled(false);
-
-        jCheckBox5.setBackground(new java.awt.Color(27, 120, 101));
-        jCheckBox5.setForeground(new java.awt.Color(27, 120, 101));
-        jCheckBox5.setSelected(true);
-        jCheckBox5.setText("jCheckBox1");
-        jCheckBox5.setContentAreaFilled(false);
-        jCheckBox5.setEnabled(false);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox5))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox5)
-                .addContainerGap(93, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout panel_permiso_medicoLayout = new javax.swing.GroupLayout(panel_permiso_medico);
-        panel_permiso_medico.setLayout(panel_permiso_medicoLayout);
-        panel_permiso_medicoLayout.setHorizontalGroup(
-            panel_permiso_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_permiso_medicoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(517, Short.MAX_VALUE))
-        );
-        panel_permiso_medicoLayout.setVerticalGroup(
-            panel_permiso_medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_permiso_medicoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
+        lbl_estado = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        lbl_distrito = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        lbl_motivo = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        lbl_dias = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        lbl_inicio = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        lbl_fin = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        headder = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        panel = new javax.swing.JPanel();
+        cmb_tipoReporte = new javax.swing.JComboBox<>();
+        btn_buscarReporte = new javax.swing.JButton();
+        lbl_persReporte = new javax.swing.JLabel();
+        txt_persReporte = new javax.swing.JTextField();
+        lbl_ciPersReporte = new javax.swing.JLabel();
+        txt_ciPersReporte = new javax.swing.JTextField();
 
         panel_vacio.setBackground(new java.awt.Color(197, 232, 225));
 
@@ -149,106 +64,288 @@ public class menuReportes extends javax.swing.JDialog {
             .addGap(0, 282, Short.MAX_VALUE)
         );
 
+        panel_licenciaMedica.setBackground(new java.awt.Color(197, 232, 225));
+
+        lbl_direcPerMed.setText("Quien suscribe:");
+
+        javax.swing.GroupLayout panel_licenciaMedicaLayout = new javax.swing.GroupLayout(panel_licenciaMedica);
+        panel_licenciaMedica.setLayout(panel_licenciaMedicaLayout);
+        panel_licenciaMedicaLayout.setHorizontalGroup(
+            panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_direcPerMed)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_direcPerMed, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(430, Short.MAX_VALUE))
+        );
+        panel_licenciaMedicaLayout.setVerticalGroup(
+            panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_direcPerMed)
+                    .addComponent(txt_direcPerMed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(254, Short.MAX_VALUE))
+        );
+
+        panel_constRetiro.setBackground(new java.awt.Color(204, 204, 255));
+
+        lbl_plantel.setText("Plantel:");
+
+        jTextField1.setText("jTextField1");
+
+        lbl_municipio.setText("jLabel3");
+
+        jTextField2.setText("jTextField2");
+
+        lbl_estado.setText("jLabel4");
+
+        jTextField3.setText("jTextField3");
+
+        lbl_distrito.setText("jLabel5");
+
+        jTextField4.setText("jTextField4");
+
+        lbl_motivo.setText("jLabel6");
+
+        jTextField5.setText("jTextField5");
+
+        lbl_dias.setText("jLabel7");
+
+        jTextField6.setText("jTextField6");
+
+        lbl_inicio.setText("jLabel8");
+
+        jTextField7.setText("jTextField7");
+
+        lbl_fin.setText("jLabel9");
+
+        jTextField8.setText("jTextField8");
+
+        javax.swing.GroupLayout panel_constRetiroLayout = new javax.swing.GroupLayout(panel_constRetiro);
+        panel_constRetiro.setLayout(panel_constRetiroLayout);
+        panel_constRetiroLayout.setHorizontalGroup(
+            panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_plantel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_municipio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_estado)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_distrito)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_motivo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_dias)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_inicio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_fin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(666, Short.MAX_VALUE))
+        );
+        panel_constRetiroLayout.setVerticalGroup(
+            panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_plantel)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_municipio)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_estado)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_distrito)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_motivo)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dias)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_inicio)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_fin)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(241, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        panel.setBackground(new java.awt.Color(197, 232, 225));
-        panel.setLayout(new java.awt.CardLayout());
-
-        jPanel2.setBackground(new java.awt.Color(27, 120, 101));
-        jPanel2.setPreferredSize(new java.awt.Dimension(668, 48));
+        headder.setBackground(new java.awt.Color(27, 120, 101));
+        headder.setPreferredSize(new java.awt.Dimension(668, 48));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(250, 247, 239));
         jLabel1.setText("Reportes");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout headderLayout = new javax.swing.GroupLayout(headder);
+        headder.setLayout(headderLayout);
+        headderLayout.setHorizontalGroup(
+            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderLayout.createSequentialGroup()
+                .addContainerGap(326, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(324, 324, 324))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        headderLayout.setVerticalGroup(
+            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderLayout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Vacio", "Permiso Medico", " ", " " }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        panel.setBackground(new java.awt.Color(197, 232, 225));
+        panel.setLayout(new java.awt.CardLayout());
+
+        cmb_tipoReporte.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Permiso Medico", "Constancia de retiro", "Constacia de conducta", "Constacia de estudios", " ", " " }));
+        cmb_tipoReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cmb_tipoReporteActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel2.setText("Nombre:");
+        btn_buscarReporte.setText("Generar");
+        btn_buscarReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarReporteActionPerformed(evt);
+            }
+        });
 
-        jTextField1.setEditable(false);
-        jTextField1.setText("Nombre Apellido");
+        lbl_persReporte.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lbl_persReporte.setText("Nombre:");
 
-        jTextField2.setEditable(false);
-        jTextField2.setText("123456789");
+        txt_persReporte.setEditable(false);
+        txt_persReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_persReporteActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel3.setText("Cédula:");
+        lbl_ciPersReporte.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lbl_ciPersReporte.setText("Cédula:");
+
+        txt_ciPersReporte.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(headder, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmb_tipoReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
+                        .addComponent(btn_buscarReporte)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_persReporte)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3)
+                        .addComponent(txt_persReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lbl_ciPersReporte)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_ciPersReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(headder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmb_tipoReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_persReporte)
+                    .addComponent(txt_persReporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lbl_ciPersReporte)
+                        .addComponent(txt_ciPersReporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_buscarReporte))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    
+    
+    private void cmb_tipoReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_tipoReporteActionPerformed
 
-        if (jComboBox1.getSelectedItem() == "Vacio"){
+    }//GEN-LAST:event_cmb_tipoReporteActionPerformed
+
+    private void btn_buscarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarReporteActionPerformed
+        if (cmb_tipoReporte.getSelectedItem() == "..."){
             panel.removeAll();
             panel.add(panel_vacio);
+            panel.repaint();
+            panel.revalidate();
         }
-        if (jComboBox1.getSelectedItem() == "Permiso Medico"){
+        if (cmb_tipoReporte.getSelectedItem() == "Permiso Medico"){
             panel.removeAll();
-            panel.add(panel_permiso_medico);
+            panel.add(panel_licenciaMedica);
+            panel.repaint();
+            panel.revalidate();
         }
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+        if (cmb_tipoReporte.getSelectedItem() == "Constancia de estudios"){
+            panel.removeAll();
+            panel.add(panel_licenciaMedica);
+            panel.repaint();
+            panel.revalidate();
+        }
+        if (cmb_tipoReporte.getSelectedItem() == "Constancia de conducta"){
+            panel.removeAll();
+            panel.add(panel_licenciaMedica);
+            panel.repaint();
+            panel.revalidate();
+        }
+        if (cmb_tipoReporte.getSelectedItem() == "Constancia de retiro"){
+            panel.removeAll();
+            panel.add(panel_licenciaMedica);
+            panel.repaint();
+            panel.revalidate();
+        }
+        
+    }//GEN-LAST:event_btn_buscarReporteActionPerformed
+
+    private void txt_persReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_persReporteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_persReporteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,22 +390,35 @@ public class menuReportes extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton btn_buscarReporte;
+    private javax.swing.JComboBox<String> cmb_tipoReporte;
+    private javax.swing.JPanel headder;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JLabel lbl_ciPersReporte;
+    private javax.swing.JLabel lbl_dias;
+    private javax.swing.JLabel lbl_direcPerMed;
+    private javax.swing.JLabel lbl_distrito;
+    private javax.swing.JLabel lbl_estado;
+    private javax.swing.JLabel lbl_fin;
+    private javax.swing.JLabel lbl_inicio;
+    private javax.swing.JLabel lbl_motivo;
+    private javax.swing.JLabel lbl_municipio;
+    private javax.swing.JLabel lbl_persReporte;
+    private javax.swing.JLabel lbl_plantel;
     private javax.swing.JPanel panel;
-    private javax.swing.JPanel panel_permiso_medico;
+    private javax.swing.JPanel panel_constRetiro;
+    private javax.swing.JPanel panel_licenciaMedica;
     private javax.swing.JPanel panel_vacio;
+    private javax.swing.JTextField txt_ciPersReporte;
+    private javax.swing.JTextField txt_direcPerMed;
+    private javax.swing.JTextField txt_persReporte;
     // End of variables declaration//GEN-END:variables
 }
