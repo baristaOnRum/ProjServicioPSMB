@@ -4857,38 +4857,6 @@ public void createConfPanel(){
         }
     }//GEN-LAST:event_btn_buscarAutActionPerformed
 
-    private void rdio_casaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdio_casaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdio_casaActionPerformed
-
-    private void rdo_siPromCogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdo_siPromCogActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdo_siPromCogActionPerformed
-
-    private void txt_grpoSangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_grpoSangActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_grpoSangActionPerformed
-
-    private void txt_fiebreAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fiebreAltaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_fiebreAltaActionPerformed
-
-    private void chk_tripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_tripleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chk_tripleActionPerformed
-
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
-
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
-
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
-
     private void btn_buscarNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarNominaActionPerformed
     DefaultTableModel model = (DefaultTableModel) tbl_busqNomina.getModel();
     for (int i = model.getRowCount(); i > 0;){
@@ -4928,7 +4896,37 @@ public void createConfPanel(){
             }
         }
     }//GEN-LAST:event_btn_buscarNominaActionPerformed
+    private void rdio_casaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdio_casaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdio_casaActionPerformed
 
+    private void rdo_siPromCogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdo_siPromCogActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdo_siPromCogActionPerformed
+
+    private void txt_grpoSangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_grpoSangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_grpoSangActionPerformed
+
+    private void txt_fiebreAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fiebreAltaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_fiebreAltaActionPerformed
+
+    private void chk_tripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_tripleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_tripleActionPerformed
+
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
+
+    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton20ActionPerformed
+
+    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton14ActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
