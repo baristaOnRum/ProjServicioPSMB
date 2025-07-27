@@ -4857,7 +4857,6 @@ public void createConfPanel(){
         }
     }//GEN-LAST:event_btn_buscarAutActionPerformed
 
-<<<<<<< HEAD
     private void rdio_casaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdio_casaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rdio_casaActionPerformed
@@ -4889,7 +4888,7 @@ public void createConfPanel(){
     private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton14ActionPerformed
-=======
+
     private void btn_buscarNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarNominaActionPerformed
     DefaultTableModel model = (DefaultTableModel) tbl_busqNomina.getModel();
     for (int i = model.getRowCount(); i > 0;){
@@ -4929,7 +4928,7 @@ public void createConfPanel(){
             }
         }
     }//GEN-LAST:event_btn_buscarNominaActionPerformed
->>>>>>> origin/master
+
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 

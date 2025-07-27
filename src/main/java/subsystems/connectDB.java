@@ -136,18 +136,18 @@ public class connectDB {
 
     public static List<representante> buscarRepresentante(String criterio, String busquedaQuery){
         List<representante> representantes = new ArrayList<>();
-        if (busquedaQuery != null){
+        if (criterio == null){
             sql = "SELECT * FROM representante";
-            System.out.println("INSIDE ELSE");
+            System.out.println("INSIDE IF");
             try {
                 conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
-                System.out.println("INSIDE ELSE");
+                System.out.println("INSIDE IF");
                 ResultSet rs = query.executeQuery();
 
-                System.out.println("INSIDE ELSE");
+                System.out.println("INSIDE IF");
                 while (true){
                     try {
                         rs.next();
@@ -198,7 +198,7 @@ public class connectDB {
                     "ciRepresentante, edad, menores6, estdCiv, nacionalidad, " +
                     "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
                     "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
-                    "FROM representante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
+                    "FROM representante WHERE " + criterio + " = \"" + busquedaQuery + "\"";
             try {
                 conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
                 System.out.println("Database connection started.");
@@ -467,7 +467,7 @@ public class connectDB {
 
     public static List<estudiante> buscarEstudiante(String criterio, String busquedaQuery) {
         List<estudiante> estudiantes = new ArrayList<>();
-        if (busquedaQuery != null) {
+        if (criterio == null) {
             sql = "SELECT * FROM estudiante";
             System.out.println("INSIDE ELSE");
             try {
@@ -781,7 +781,7 @@ public class connectDB {
 
     public static List<trabajador> buscarNomina(String criterio, String busquedaQuery){
         List<trabajador> trabajadores = new ArrayList<>();
-        if (busquedaQuery != null) {
+        if (criterio == null) {
             sql = "SELECT * FROM trabajadores";
             System.out.println("INSIDE ELSE");
             try {
@@ -856,6 +856,7 @@ public class connectDB {
                         break;
                     }
                 }
+                return trabajadores;
             }
             catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
@@ -944,6 +945,7 @@ public class connectDB {
                     trabajadores.add(trabajador);
                     System.out.println(trabajador.getCi());
                 }
+                return trabajadores;
             } catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
@@ -1147,7 +1149,7 @@ public class connectDB {
 
     public static List<maestro> buscarNominaMaestra(String criterio, String busquedaQuery) {
         List<maestro> maestras = new ArrayList<>();
-        if (busquedaQuery != null) {
+        if (busquedaQuery == null) {
             sql = "SELECT * FROM maestras";
             try {
                 conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -1372,7 +1374,7 @@ public class connectDB {
         sql = "DELETE FROM autorizadoRetiro WHERE ciAutorizado = ?";
 
         try{
-            conexion = DriverManager.getConnection(url, "root", "1234");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
             
@@ -1395,24 +1397,30 @@ public class connectDB {
 
     public static List<autorizado> buscarAutorizado(String criterio, String busquedaQuery) {
         List<autorizado> autorizados = new ArrayList<>();
-        if (busquedaQuery != null) {
-            sql = "SELECT * FROM autorizadoRetiro";
+        if (criterio == null) {
+            sql = "SELECT * FROM autorizadoretiro";
             try {
-                conexion = DriverManager.getConnection(url, "root", "1234");
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
                 ResultSet rs = query.executeQuery();
 
-                while (rs.next()) {
+                while (true) { try{
+                    rs.next();
                     autorizado autor = new autorizado();
                     autor.setCi(rs.getInt("ciAutorizado"));
                     autor.setApellidos(rs.getString("apellidos"));
-                    autor.setNombres(rs.getString("nombre"));
+                    autor.setNombres(rs.getString("nombres"));
                     autor.setTlf1(rs.getString("tlf1"));
                     autor.setTlf2(rs.getString("tlf2"));
                     autorizados.add(autor);
+                    System.out.println(autor.getCi());
+                    } catch (SQLException e1){
+                        System.out.println("No more rows found");
+                        break;
+                    }
                 }
-                
+                return autorizados;
             } catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
@@ -1427,9 +1435,9 @@ public class connectDB {
                 }
             }
         } else {
-            sql = "SELECT ciAutorizado, apellidos, nombre, tlf1, tlf2 FROM autorizadoRetiro WHERE " + criterio + " = ?";
+            sql = "SELECT ciAutorizado, apellidos, nombres, tlf1, tlf2 FROM autorizadoretiro WHERE " + criterio + " = ?";
             try {
-                conexion = DriverManager.getConnection(url, "root", "1234");
+                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
                 query.setString(1, busquedaQuery);
@@ -1439,11 +1447,12 @@ public class connectDB {
                     autorizado aut = new autorizado();
                     aut.setCi(rs.getInt("ciAutorizado"));
                     aut.setApellidos(rs.getString("apellidos"));
-                    aut.setNombres(rs.getString("nombre"));
+                    aut.setNombres(rs.getString("nombres"));
                     aut.setTlf1(rs.getString("tlf1"));
                     aut.setTlf2(rs.getString("tlf2"));
                     autorizados.add(aut);
                 }
+                return autorizados;
             } catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
