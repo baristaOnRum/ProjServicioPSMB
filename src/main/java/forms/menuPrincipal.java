@@ -340,6 +340,16 @@ public void createConfPanel(){
         text_correo_rep = new javax.swing.JTextField();
         label_tlf_rep = new javax.swing.JLabel();
         text_tlf_rep = new javax.swing.JTextField();
+        dat_aut = new javax.swing.JPanel();
+        dat_socioFamiliares = new javax.swing.JPanel();
+        lbl_casa = new javax.swing.JLabel();
+        rdio_propia = new javax.swing.JRadioButton();
+        rdio_prestada = new javax.swing.JRadioButton();
+        rdio_alquilada = new javax.swing.JRadioButton();
+        lbl_tipocasa = new javax.swing.JLabel();
+        rdio_zinc = new javax.swing.JRadioButton();
+        rdio_prestada1 = new javax.swing.JRadioButton();
+        rdio_alquilada1 = new javax.swing.JRadioButton();
         panelDocumentosEstd = new javax.swing.JPanel();
         label_originales = new javax.swing.JLabel();
         check_originales = new javax.swing.JCheckBox();
@@ -2802,6 +2812,80 @@ public void createConfPanel(){
 
         panelRepresentanteEstd.addTab("Datos Representante Legal", dat_rep);
 
+        javax.swing.GroupLayout dat_autLayout = new javax.swing.GroupLayout(dat_aut);
+        dat_aut.setLayout(dat_autLayout);
+        dat_autLayout.setHorizontalGroup(
+            dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1324, Short.MAX_VALUE)
+        );
+        dat_autLayout.setVerticalGroup(
+            dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 201, Short.MAX_VALUE)
+        );
+
+        panelRepresentanteEstd.addTab("Autorizado para Retiro", dat_aut);
+
+        lbl_casa.setText("Vivienda:");
+
+        rdio_propia.setText("Propia");
+
+        rdio_prestada.setText("Prestada");
+
+        rdio_alquilada.setText("Alquilada");
+
+        lbl_tipocasa.setText("Tipo de Vivienda");
+
+        rdio_zinc.setText("Zinc");
+
+        rdio_prestada1.setText("Prestada");
+
+        rdio_alquilada1.setText("Alquilada");
+
+        javax.swing.GroupLayout dat_socioFamiliaresLayout = new javax.swing.GroupLayout(dat_socioFamiliares);
+        dat_socioFamiliares.setLayout(dat_socioFamiliaresLayout);
+        dat_socioFamiliaresLayout.setHorizontalGroup(
+            dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                        .addComponent(lbl_casa)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdio_propia)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdio_prestada)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdio_alquilada))
+                    .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                        .addComponent(lbl_tipocasa)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdio_zinc)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdio_prestada1)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdio_alquilada1)))
+                .addContainerGap(1002, Short.MAX_VALUE))
+        );
+        dat_socioFamiliaresLayout.setVerticalGroup(
+            dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_casa)
+                    .addComponent(rdio_propia)
+                    .addComponent(rdio_prestada)
+                    .addComponent(rdio_alquilada))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_tipocasa)
+                    .addComponent(rdio_zinc)
+                    .addComponent(rdio_prestada1)
+                    .addComponent(rdio_alquilada1))
+                .addContainerGap(147, Short.MAX_VALUE))
+        );
+
+        panelRepresentanteEstd.addTab("Ambiente Socio Familiar", dat_socioFamiliares);
+
         panelDocumentosEstd.setPreferredSize(new java.awt.Dimension(600, 420));
         panelDocumentosEstd.setRequestFocusEnabled(false);
 
@@ -2894,7 +2978,7 @@ public void createConfPanel(){
                                 .addComponent(label_observaciones)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(224, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
                         .addComponent(label_fecha)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4333,9 +4417,11 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JPanel datGubNomina;
     private javax.swing.JPanel datPersNomina;
     private javax.swing.JPanel datPlantelNomina;
+    private javax.swing.JPanel dat_aut;
     private javax.swing.JPanel dat_madre;
     private javax.swing.JPanel dat_padre;
     private javax.swing.JPanel dat_rep;
+    private javax.swing.JPanel dat_socioFamiliares;
     private javax.swing.JPanel datosEstd;
     private javax.swing.JPanel diagEstd;
     private javax.swing.JPanel docNomina;
@@ -4446,6 +4532,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_busqRepresentante;
     private javax.swing.JLabel lbl_calleResNomina;
     private javax.swing.JLabel lbl_cant1x10Nomina;
+    private javax.swing.JLabel lbl_casa;
     private javax.swing.JLabel lbl_centrVotNomina;
     private javax.swing.JLabel lbl_ciJefComNomina;
     private javax.swing.JLabel lbl_ciNomina;
@@ -4473,6 +4560,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_seccionNominaMaestra;
     private javax.swing.JLabel lbl_sexoNiñ;
     private javax.swing.JLabel lbl_sexoNomina;
+    private javax.swing.JLabel lbl_tipocasa;
     private javax.swing.JLabel lbl_tlf1Nomina;
     private javax.swing.JLabel lbl_tlf2Nomina;
     private javax.swing.JLabel lbl_turnoNomina;
@@ -4496,6 +4584,12 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JRadioButton rdb_mascNomina;
     private javax.swing.JRadioButton rdb_noNomina;
     private javax.swing.JRadioButton rdb_siNomina;
+    private javax.swing.JRadioButton rdio_alquilada;
+    private javax.swing.JRadioButton rdio_alquilada1;
+    private javax.swing.JRadioButton rdio_prestada;
+    private javax.swing.JRadioButton rdio_prestada1;
+    private javax.swing.JRadioButton rdio_propia;
+    private javax.swing.JRadioButton rdio_zinc;
     private javax.swing.JScrollPane scl_busqNom;
     private javax.swing.JScrollPane scrl_busqAut;
     private javax.swing.JScrollPane scrl_busqEstd;
