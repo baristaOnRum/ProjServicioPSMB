@@ -266,44 +266,42 @@ public void createConfPanel(){
         lbl_tlfMedicTrat = new javax.swing.JLabel();
         otros = new javax.swing.JPanel();
         lbl_cmeAyda = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        rdo_siCmeAyda = new javax.swing.JRadioButton();
+        rdo_noCmeAyda = new javax.swing.JRadioButton();
         lbl_buenAptito = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        rdo_siBuenApetito = new javax.swing.JRadioButton();
+        rdo_noBuenApetito = new javax.swing.JRadioButton();
         lbl_horaAcostar = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txt_horaAcostar = new javax.swing.JTextField();
         lbl_horaLevantar = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txt_horaLevantar = new javax.swing.JTextField();
         lbl_duermTarde = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        rdo_duermTardeSi = new javax.swing.JRadioButton();
+        rdo_duermTardeNo = new javax.swing.JRadioButton();
+        rdo_duermTardeAveces = new javax.swing.JRadioButton();
         lbl_qnDuermeNino = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jLabel11 = new javax.swing.JLabel();
-        jRadioButton14 = new javax.swing.JRadioButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
-        jLabel12 = new javax.swing.JLabel();
-        jRadioButton17 = new javax.swing.JRadioButton();
-        jRadioButton18 = new javax.swing.JRadioButton();
-        jRadioButton19 = new javax.swing.JRadioButton();
-        jRadioButton20 = new javax.swing.JRadioButton();
-        jLabel13 = new javax.swing.JLabel();
-        jRadioButton21 = new javax.swing.JRadioButton();
+        txt_qnDuermeNino = new javax.swing.JTextField();
+        lbl_chupaDedo = new javax.swing.JLabel();
+        lbl_chupaDedoSi = new javax.swing.JRadioButton();
+        lbl_chupaDedoNo = new javax.swing.JRadioButton();
+        lbl_chupaDedoAvece = new javax.swing.JRadioButton();
+        lbl_edadDejPan = new javax.swing.JLabel();
+        txt_edadDejPan = new javax.swing.JTextField();
+        lbl_orinaRopaDia = new javax.swing.JLabel();
+        rdo_orinaRopaDiaSi = new javax.swing.JRadioButton();
+        rdo_orinaRopaDiaNo = new javax.swing.JRadioButton();
+        rdo_orinaRopaDiaAvece = new javax.swing.JRadioButton();
+        lbl_orinaRopaNoch = new javax.swing.JLabel();
+        rdo_orinaRopaNocheAvece = new javax.swing.JRadioButton();
+        rdo_orinaRopaNocheNo = new javax.swing.JRadioButton();
+        rdo_orinaRopaNocheSi = new javax.swing.JRadioButton();
+        lbl_evacDia = new javax.swing.JLabel();
+        rdo_evacDiaSi = new javax.swing.JRadioButton();
+        rdo_evacDiaNo = new javax.swing.JRadioButton();
+        rdo_evacDiaAvece = new javax.swing.JRadioButton();
+        lbl_aseaSolo = new javax.swing.JLabel();
+        rdo_aseaSoloSi = new javax.swing.JRadioButton();
+        rdo_aseaSoloNo = new javax.swing.JRadioButton();
         panelRepresentanteEstd = new javax.swing.JTabbedPane();
         dat_madre = new javax.swing.JPanel();
         label_apellido_madre = new javax.swing.JLabel();
@@ -2241,15 +2239,15 @@ public void createConfPanel(){
 
         lbl_cmeAyda.setText("Come ayudado por un Adulto");
 
-        jRadioButton1.setText("Si");
+        rdo_siCmeAyda.setText("Si");
 
-        jRadioButton2.setText("No");
+        rdo_noCmeAyda.setText("No");
 
         lbl_buenAptito.setText("Tiene buen Apetito");
 
-        jRadioButton3.setText("Si");
+        rdo_siBuenApetito.setText("Si");
 
-        jRadioButton4.setText("No");
+        rdo_noBuenApetito.setText("No");
 
         lbl_horaAcostar.setText("A que hora se acuesta");
 
@@ -2257,74 +2255,68 @@ public void createConfPanel(){
 
         lbl_duermTarde.setText("Duerme en la tarde");
 
-        jRadioButton5.setText("Si");
+        rdo_duermTardeSi.setText("Si");
 
-        jRadioButton6.setText("No");
+        rdo_duermTardeNo.setText("No");
 
-        jRadioButton7.setText("Aveces");
+        rdo_duermTardeAveces.setText("Aveces");
 
         lbl_qnDuermeNino.setText("Con quien duerme el niño");
 
-        jLabel7.setText("Chupa dedo");
+        lbl_chupaDedo.setText("Chupa dedo");
 
-        jRadioButton8.setText("Si");
+        lbl_chupaDedoSi.setText("Si");
 
-        jRadioButton9.setText("No");
-        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+        lbl_chupaDedoNo.setText("No");
+        lbl_chupaDedoNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton9ActionPerformed(evt);
+                lbl_chupaDedoNoActionPerformed(evt);
             }
         });
 
-        jRadioButton10.setText("Aveces");
+        lbl_chupaDedoAvece.setText("Aveces");
 
-        jLabel8.setText("A que edad dejo de usar pañales");
+        lbl_edadDejPan.setText("A que edad dejo de usar pañales");
 
-        jTextField4.setText("jTextField4");
+        lbl_orinaRopaDia.setText("Se orina en la ropa durante el dia");
 
-        jLabel9.setText("A que edad");
+        rdo_orinaRopaDiaSi.setText("Si");
 
-        jTextField5.setText("jTextField5");
+        rdo_orinaRopaDiaNo.setText("No");
 
-        jLabel10.setText("Se orina en la ropa durante el dia");
+        rdo_orinaRopaDiaAvece.setText("Aveces");
 
-        jRadioButton11.setText("Si");
+        lbl_orinaRopaNoch.setText("Se orina en la ropa durante la noche");
 
-        jRadioButton12.setText("No");
-
-        jRadioButton13.setText("Aveces");
-
-        jLabel11.setText("Se orina en la ropa durante la noche");
-
-        jRadioButton14.setText("Aveces");
-        jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
+        rdo_orinaRopaNocheAvece.setText("Aveces");
+        rdo_orinaRopaNocheAvece.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton14ActionPerformed(evt);
+                rdo_orinaRopaNocheAveceActionPerformed(evt);
             }
         });
 
-        jRadioButton15.setText("No");
+        rdo_orinaRopaNocheNo.setText("No");
 
-        jRadioButton16.setText("Si");
+        rdo_orinaRopaNocheSi.setText("Si");
 
-        jLabel12.setText("Evacua durante el dia");
+        lbl_evacDia.setText("Evacua durante el dia");
 
-        jRadioButton17.setText("Si");
+        rdo_evacDiaSi.setText("Si");
 
-        jRadioButton18.setText("No");
+        rdo_evacDiaNo.setText("No");
 
-        jRadioButton19.setText("Aveces");
+        rdo_evacDiaAvece.setText("Aveces");
 
-        jRadioButton20.setText("No");
-        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
+        lbl_aseaSolo.setText("Se asea solo luego del baño");
+
+        rdo_aseaSoloSi.setText("Si");
+
+        rdo_aseaSoloNo.setText("No");
+        rdo_aseaSoloNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton20ActionPerformed(evt);
+                rdo_aseaSoloNoActionPerformed(evt);
             }
         });
-
-        jLabel13.setText("Se asea solo luego del baño");
-
-        jRadioButton21.setText("Si");
 
         javax.swing.GroupLayout otrosLayout = new javax.swing.GroupLayout(otros);
         otros.setLayout(otrosLayout);
@@ -2334,88 +2326,85 @@ public void createConfPanel(){
                 .addContainerGap()
                 .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(otrosLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addComponent(lbl_chupaDedo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton8)
+                        .addComponent(lbl_chupaDedoSi)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton9)
+                        .addComponent(lbl_chupaDedoNo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton10))
+                        .addComponent(lbl_chupaDedoAvece))
                     .addGroup(otrosLayout.createSequentialGroup()
                         .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(otrosLayout.createSequentialGroup()
                                 .addComponent(lbl_cmeAyda)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton1)
+                                .addComponent(rdo_siCmeAyda)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton2))
+                                .addComponent(rdo_noCmeAyda))
                             .addGroup(otrosLayout.createSequentialGroup()
                                 .addComponent(lbl_buenAptito)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton3)
+                                .addComponent(rdo_siBuenApetito)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton4))
+                                .addComponent(rdo_noBuenApetito))
                             .addGroup(otrosLayout.createSequentialGroup()
                                 .addComponent(lbl_horaAcostar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt_horaAcostar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(otrosLayout.createSequentialGroup()
                                 .addComponent(lbl_horaLevantar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt_horaLevantar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(otrosLayout.createSequentialGroup()
                                     .addComponent(lbl_qnDuermeNino)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField3))
+                                    .addComponent(txt_qnDuermeNino))
                                 .addGroup(otrosLayout.createSequentialGroup()
                                     .addComponent(lbl_duermTarde)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jRadioButton5)
+                                    .addComponent(rdo_duermTardeSi)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jRadioButton6)
+                                    .addComponent(rdo_duermTardeNo)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jRadioButton7))))
+                                    .addComponent(rdo_duermTardeAveces))))
                         .addGap(186, 186, 186)
                         .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(jLabel12)
+                                .addComponent(lbl_evacDia)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton17)
+                                .addComponent(rdo_evacDiaSi)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton18)
+                                .addComponent(rdo_evacDiaNo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton19))
+                                .addComponent(rdo_evacDiaAvece))
                             .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(jLabel13)
+                                .addComponent(lbl_aseaSolo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton21)
+                                .addComponent(rdo_aseaSoloSi)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton20))
+                                .addComponent(rdo_aseaSoloNo))
                             .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
+                                .addComponent(lbl_orinaRopaNoch)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton11)
+                                .addComponent(rdo_orinaRopaNocheSi)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton12)
+                                .addComponent(rdo_orinaRopaNocheNo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton13))
-                            .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton16)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton14)))))
+                                .addComponent(rdo_orinaRopaNocheAvece))
+                            .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(otrosLayout.createSequentialGroup()
+                                    .addComponent(lbl_edadDejPan)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txt_edadDejPan))
+                                .addGroup(otrosLayout.createSequentialGroup()
+                                    .addComponent(lbl_orinaRopaDia)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_orinaRopaDiaSi)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_orinaRopaDiaNo)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_orinaRopaDiaAvece))))))
                 .addContainerGap(287, Short.MAX_VALUE))
         );
         otrosLayout.setVerticalGroup(
@@ -2424,59 +2413,65 @@ public void createConfPanel(){
                 .addContainerGap()
                 .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_cmeAyda)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_buenAptito)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jLabel9)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_horaAcostar)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton12)
-                    .addComponent(jRadioButton13))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_horaLevantar)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(jRadioButton16)
-                    .addComponent(jRadioButton15)
-                    .addComponent(jRadioButton14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_duermTarde)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jLabel12)
-                    .addComponent(jRadioButton17)
-                    .addComponent(jRadioButton18)
-                    .addComponent(jRadioButton19))
+                    .addComponent(rdo_siCmeAyda)
+                    .addComponent(rdo_noCmeAyda)
+                    .addComponent(lbl_edadDejPan)
+                    .addComponent(txt_edadDejPan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel13)
-                        .addComponent(jRadioButton21)
-                        .addComponent(jRadioButton20))
-                    .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lbl_qnDuermeNino)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(otrosLayout.createSequentialGroup()
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_buenAptito)
+                            .addComponent(rdo_siBuenApetito)
+                            .addComponent(rdo_noBuenApetito))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_horaAcostar)
+                            .addComponent(txt_horaAcostar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_horaLevantar)
+                            .addComponent(txt_horaLevantar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_duermTarde)
+                            .addComponent(rdo_duermTardeSi)
+                            .addComponent(rdo_duermTardeNo)
+                            .addComponent(rdo_duermTardeAveces)))
+                    .addGroup(otrosLayout.createSequentialGroup()
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_orinaRopaDia)
+                            .addComponent(rdo_orinaRopaDiaSi)
+                            .addComponent(rdo_orinaRopaDiaNo)
+                            .addComponent(rdo_orinaRopaDiaAvece))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_orinaRopaNoch)
+                            .addComponent(rdo_orinaRopaNocheSi)
+                            .addComponent(rdo_orinaRopaNocheNo)
+                            .addComponent(rdo_orinaRopaNocheAvece))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_evacDia)
+                            .addComponent(rdo_evacDiaSi)
+                            .addComponent(rdo_evacDiaNo)
+                            .addComponent(rdo_evacDiaAvece))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_aseaSolo)
+                            .addComponent(rdo_aseaSoloSi)
+                            .addComponent(rdo_aseaSoloNo))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton9)
-                    .addComponent(jRadioButton10))
-                .addContainerGap(113, Short.MAX_VALUE))
+                    .addComponent(lbl_qnDuermeNino)
+                    .addComponent(txt_qnDuermeNino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_chupaDedo)
+                    .addComponent(lbl_chupaDedoSi)
+                    .addComponent(lbl_chupaDedoNo)
+                    .addComponent(lbl_chupaDedoAvece))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         panelDatosEstd.addTab("Otros", otros);
@@ -4916,17 +4911,17 @@ public void createConfPanel(){
         // TODO add your handling code here:
     }//GEN-LAST:event_chk_tripleActionPerformed
 
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+    private void lbl_chupaDedoNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbl_chupaDedoNoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
+    }//GEN-LAST:event_lbl_chupaDedoNoActionPerformed
 
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
+    private void rdo_aseaSoloNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdo_aseaSoloNoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
+    }//GEN-LAST:event_rdo_aseaSoloNoActionPerformed
 
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
+    private void rdo_orinaRopaNocheAveceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdo_orinaRopaNocheAveceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
+    }//GEN-LAST:event_rdo_orinaRopaNocheAveceActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -5090,39 +5085,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel img_logoInstitucionBusqRep;
     private javax.swing.JPanel informacionEstudiante;
     private javax.swing.JPanel informacionNomina;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton17;
-    private javax.swing.JRadioButton jRadioButton18;
-    private javax.swing.JRadioButton jRadioButton19;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton20;
-    private javax.swing.JRadioButton jRadioButton21;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel label_alergia;
     private javax.swing.JLabel label_alergiaMed;
     private javax.swing.JLabel label_alergiaMed_cual;
@@ -5197,6 +5159,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_1x10Nomina;
     private javax.swing.JLabel lbl_apellidoNiñ;
     private javax.swing.JLabel lbl_apellidoNomina;
+    private javax.swing.JLabel lbl_aseaSolo;
     private javax.swing.JLabel lbl_autRetiro;
     private javax.swing.JLabel lbl_buenAptito;
     private javax.swing.JLabel lbl_busqAutorizado;
@@ -5207,6 +5170,10 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_cant1x10Nomina;
     private javax.swing.JLabel lbl_casa;
     private javax.swing.JLabel lbl_centrVotNomina;
+    private javax.swing.JLabel lbl_chupaDedo;
+    private javax.swing.JRadioButton lbl_chupaDedoAvece;
+    private javax.swing.JRadioButton lbl_chupaDedoNo;
+    private javax.swing.JRadioButton lbl_chupaDedoSi;
     private javax.swing.JLabel lbl_ciJefComNomina;
     private javax.swing.JLabel lbl_ciNomina;
     private javax.swing.JLabel lbl_cmeAyda;
@@ -5215,12 +5182,14 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_cuidaNiñoHogar;
     private javax.swing.JLabel lbl_duermTarde;
     private javax.swing.JLabel lbl_edadCaminar;
+    private javax.swing.JLabel lbl_edadDejPan;
     private javax.swing.JLabel lbl_edadNiñ;
     private javax.swing.JLabel lbl_edadNomina;
     private javax.swing.JLabel lbl_embPlan;
     private javax.swing.JLabel lbl_enfPadecidas;
     private javax.swing.JLabel lbl_estadoNiñ;
     private javax.swing.JLabel lbl_estatusNomina;
+    private javax.swing.JLabel lbl_evacDia;
     private javax.swing.JLabel lbl_familiarExtra;
     private javax.swing.JLabel lbl_fechIngresoNomina;
     private javax.swing.JLabel lbl_fechNacimNomina;
@@ -5242,6 +5211,8 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_nivelNominaMaestra;
     private javax.swing.JLabel lbl_nombreNiñ;
     private javax.swing.JLabel lbl_nombreNomina;
+    private javax.swing.JLabel lbl_orinaRopaDia;
+    private javax.swing.JLabel lbl_orinaRopaNoch;
     private javax.swing.JLabel lbl_otraVac;
     private javax.swing.JLabel lbl_parrqVotNomina;
     private javax.swing.JLabel lbl_prbDesarr;
@@ -5288,18 +5259,36 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JRadioButton rdio_propia;
     private javax.swing.JRadioButton rdio_zinc;
     private javax.swing.JRadioButton rdo_ambidiestro;
+    private javax.swing.JRadioButton rdo_aseaSoloNo;
+    private javax.swing.JRadioButton rdo_aseaSoloSi;
     private javax.swing.JRadioButton rdo_desconocido;
     private javax.swing.JRadioButton rdo_diestro;
+    private javax.swing.JRadioButton rdo_duermTardeAveces;
+    private javax.swing.JRadioButton rdo_duermTardeNo;
+    private javax.swing.JRadioButton rdo_duermTardeSi;
+    private javax.swing.JRadioButton rdo_evacDiaAvece;
+    private javax.swing.JRadioButton rdo_evacDiaNo;
+    private javax.swing.JRadioButton rdo_evacDiaSi;
     private javax.swing.JRadioButton rdo_noAlergia;
     private javax.swing.JRadioButton rdo_noAlergiaMed;
+    private javax.swing.JRadioButton rdo_noBuenApetito;
+    private javax.swing.JRadioButton rdo_noCmeAyda;
     private javax.swing.JRadioButton rdo_noCondExtra;
     private javax.swing.JRadioButton rdo_noEmbPlan;
     private javax.swing.JRadioButton rdo_noPrmLeng;
     private javax.swing.JRadioButton rdo_noPrmMotr;
     private javax.swing.JRadioButton rdo_noPrmParto;
     private javax.swing.JRadioButton rdo_noPromCog;
+    private javax.swing.JRadioButton rdo_orinaRopaDiaAvece;
+    private javax.swing.JRadioButton rdo_orinaRopaDiaNo;
+    private javax.swing.JRadioButton rdo_orinaRopaDiaSi;
+    private javax.swing.JRadioButton rdo_orinaRopaNocheAvece;
+    private javax.swing.JRadioButton rdo_orinaRopaNocheNo;
+    private javax.swing.JRadioButton rdo_orinaRopaNocheSi;
     private javax.swing.JRadioButton rdo_siAlergia;
     private javax.swing.JRadioButton rdo_siAlergiaMed;
+    private javax.swing.JRadioButton rdo_siBuenApetito;
+    private javax.swing.JRadioButton rdo_siCmeAyda;
     private javax.swing.JRadioButton rdo_siCondExtra;
     private javax.swing.JRadioButton rdo_siEmbPLan;
     private javax.swing.JRadioButton rdo_siPrmParto;
@@ -5381,6 +5370,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_comResNomina;
     private javax.swing.JTextField txt_cuidaNiñoHogar;
     private javax.swing.JTextField txt_edadCaminar;
+    private javax.swing.JTextField txt_edadDejPan;
     private javax.swing.JTextField txt_edadNiñ;
     private javax.swing.JTextField txt_edadNomina;
     private javax.swing.JTextField txt_enfPadecidas;
@@ -5394,6 +5384,8 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_filtroBusqNom;
     private javax.swing.JTextField txt_filtroBusqRep;
     private javax.swing.JTextField txt_grpoSang;
+    private javax.swing.JTextField txt_horaAcostar;
+    private javax.swing.JTextField txt_horaLevantar;
     private javax.swing.JTextField txt_jefComNomina;
     private javax.swing.JTextField txt_lugarNacNiñ;
     private javax.swing.JTextField txt_medicoTratante;
@@ -5409,6 +5401,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_parrqVotNomina;
     private javax.swing.JTextField txt_prmPartocual;
     private javax.swing.JTextField txt_prrqResNomina;
+    private javax.swing.JTextField txt_qnDuermeNino;
     private javax.swing.JTextField txt_rifNomina;
     private javax.swing.JTextField txt_seccionNominaMaestra;
     private javax.swing.JTextField txt_tlf1Nomina;
