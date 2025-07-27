@@ -153,6 +153,7 @@ public void createConfPanel(){
         btn_verNom = new javax.swing.JButton();
         btn_editarBusqNom = new javax.swing.JButton();
         im_logoInstitucionBusqNom = new javax.swing.JLabel();
+        btn_buscarNomina = new javax.swing.JButton();
         informacionEstudiante = new javax.swing.JPanel();
         headderEstudiante = new javax.swing.JPanel();
         lbl_headderEstudiante = new javax.swing.JLabel();
@@ -1139,7 +1140,7 @@ public void createConfPanel(){
                         .addContainerGap())))
         );
 
-        cmb_filtroBusqAut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C.I Autorizado", "C.I Representante", "C.I Estudiante" }));
+        cmb_filtroBusqAut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C.I Autorizado", "C.I Representante", "Cédula de Estudiante", "Nombres", "Apellidos", "Teléfono 1", "Teléfono 2", "Ninguno" }));
         cmb_filtroBusqAut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmb_filtroBusqAutActionPerformed(evt);
@@ -1149,15 +1150,20 @@ public void createConfPanel(){
         tbl_busqAut.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tbl_busqAut.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         tbl_busqAut.setColumnSelectionAllowed(true);
         tbl_busqAut.setMinimumSize(new java.awt.Dimension(550, 250));
         tbl_busqAut.setPreferredSize(new java.awt.Dimension(550, 250));
@@ -1332,15 +1338,20 @@ public void createConfPanel(){
         tbl_busqNomina.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tbl_busqNomina.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2"
+                "Foto", "Nombres", "Apellidos", "Cédula", "Estatus"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         tbl_busqNomina.setColumnSelectionAllowed(true);
         tbl_busqNomina.setMinimumSize(new java.awt.Dimension(550, 250));
         tbl_busqNomina.setPreferredSize(new java.awt.Dimension(550, 250));
@@ -1390,6 +1401,16 @@ public void createConfPanel(){
         im_logoInstitucionBusqNom.setIconTextGap(0);
         im_logoInstitucionBusqNom.setRequestFocusEnabled(false);
 
+        btn_buscarNomina.setBackground(new java.awt.Color(27, 120, 101));
+        btn_buscarNomina.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        btn_buscarNomina.setForeground(new java.awt.Color(250, 247, 239));
+        btn_buscarNomina.setText("Buscar");
+        btn_buscarNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarNominaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout busquedaNominaLayout = new javax.swing.GroupLayout(busquedaNomina);
         busquedaNomina.setLayout(busquedaNominaLayout);
         busquedaNominaLayout.setHorizontalGroup(
@@ -1403,13 +1424,19 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_filtroBusqNom))
                     .addComponent(scl_busqNom, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(busquedaNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_busqNomina, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_inscribirNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_verNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_editarBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(im_logoInstitucionBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(busquedaNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(busquedaNominaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(busquedaNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(img_busqNomina, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_verNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_editarBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(im_logoInstitucionBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(busquedaNominaLayout.createSequentialGroup()
+                        .addComponent(btn_buscarNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_inscribirNom, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(36, 36, 36))
         );
         busquedaNominaLayout.setVerticalGroup(
@@ -1421,7 +1448,8 @@ public void createConfPanel(){
                 .addGroup(busquedaNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmb_filtroBusqNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_filtroBusqNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_inscribirNom))
+                    .addComponent(btn_inscribirNom)
+                    .addComponent(btn_buscarNomina))
                 .addGroup(busquedaNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(busquedaNominaLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1431,7 +1459,7 @@ public void createConfPanel(){
                         .addComponent(img_busqNomina)
                         .addGap(12, 12, 12)
                         .addComponent(btn_verNom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                         .addComponent(btn_editarBusqNom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(im_logoInstitucionBusqNom)))
@@ -4011,7 +4039,8 @@ public void createConfPanel(){
 
     private void btn_buscarRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarRepActionPerformed
     DefaultTableModel model = (DefaultTableModel) tbl_busqRep.getModel();
-    for (int i = 0; i < model.getRowCount(); i++){
+    for (int i = model.getRowCount(); i > 0 ; i = i){
+        i--;
         model.removeRow(i); }
     
     tbl_busqRep.getColumn("Foto").setCellRenderer( new customCellRenderer());
@@ -4055,13 +4084,15 @@ public void createConfPanel(){
     private void btn_buscarEstdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarEstdActionPerformed
         
     DefaultTableModel model = (DefaultTableModel) tbl_busqEstd.getModel();
-    for (int i = 0; i < model.getRowCount(); i++){
+    for (int i = model.getRowCount(); i > 0; i=i) {
+        i--;
         model.removeRow(i); }
+    
     tbl_busqEstd.getColumn("Foto").setCellRenderer( new customCellRenderer());
         
-    String query = txt_filtroBusqRep.getText();
+    String query = txt_filtroBusqEstd.getText();
     System.out.println(query);
-    String criterio = cmb_filtroBusqRep.getItemAt(cmb_filtroBusqRep.getSelectedIndex()); 
+    String criterio = cmb_filtroBusqEstd.getItemAt(cmb_filtroBusqEstd.getSelectedIndex()); 
 
     criterio = switch (criterio) {
             case "Cédula Estudiantil" -> "ciEstudiante";
@@ -4095,39 +4126,81 @@ public void createConfPanel(){
     }//GEN-LAST:event_btn_buscarEstdActionPerformed
 
     private void btn_buscarAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarAutActionPerformed
-    DefaultTableModel model = (DefaultTableModel) tbl_busqRep.getModel();
-    for (int i = 0; i < model.getRowCount(); i++){
+    DefaultTableModel model = (DefaultTableModel) tbl_busqAut.getModel();
+    for (int i = model.getRowCount(); i > 0;){
+        i--;
         model.removeRow(i); }
        
     String query = txt_filtroBusqAut.getText();
     System.out.println(query);
-    String criterio = cmb_filtroBusqAut.getItemAt(cmb_filtroBusqAut.getSelectedIndex()); 
-
-    criterio = switch (criterio) {
-            case "Cédula" -> "ciRepresentante";
-            case "Nombre" -> "nombres";
-            case "Apellido" -> "apellidos";
-            case "Telefono 1" -> "tlf1";
-            case "Telefono 2" -> "tlf1";
-            default -> null; };
-    System.out.println(criterio);
-    // Handle cases where the input string doesn't match any known options
+    String criterio = cmb_filtroBusqAut.getItemAt(cmb_filtroBusqAut.getSelectedIndex());
+    criterio = switch(criterio){
+        case "C.I Autorizado" -> "ciAutorizado";
+        case "C.I Representante" -> "ciRepresentante";
+        case "Cédula de Estudiante" -> "ciEstudiante";
+        case "Nombres" -> "nombres";
+        case "Apellidos" -> "apellidos";
+        case "Teléfono 1" -> "Tlf1";
+        case "Teléfono 2" -> "Tlf2";
+        case "Ninguno" -> null;
+        default -> null;
+    };
+    
     List<autorizado> lista = connectDB.buscarAutorizado(criterio, query);
     for (autorizado aut : lista) {
             if (aut instanceof autorizado) { // Check if it's a Person object
-                autorizado autorizadoActual = (autorizado) aut;
+                autorizado autActual = (autorizado) aut;
                 // Create a row vector for each person
                 Vector<Object> row = new Vector<>();
-                row.add(autorizadoActual.getCi());
-                row.add(autorizadoActual.getNombres());
-                row.add(autorizadoActual.getApellidos());
-                row.add(autorizadoActual.getTlf1());
-                row.add(autorizadoActual.getTlf2());              
+                row.add(autActual.getCi());
+                row.add(autActual.getNombres());
+                row.add(autActual.getApellidos());
+                row.add(autActual.getTlf1());
+                row.add(autActual.getTlf2());
                 model.addRow(row);
-                
             }
         }
     }//GEN-LAST:event_btn_buscarAutActionPerformed
+
+    private void btn_buscarNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarNominaActionPerformed
+    DefaultTableModel model = (DefaultTableModel) tbl_busqNomina.getModel();
+    for (int i = model.getRowCount(); i > 0;){
+        i--;
+        model.removeRow(i); }
+    
+    tbl_busqNomina.getColumn("Foto").setCellRenderer( new customCellRenderer());
+       
+    String query = txt_filtroBusqNom.getText();
+    System.out.println(query);
+    String criterio = cmb_filtroBusqNom.getItemAt(cmb_filtroBusqNom.getSelectedIndex());
+    criterio = switch(criterio){
+        case "Nombres" -> "nombres";
+        case "Apellidos" -> "apellidos";
+        case "Cédula" -> "ci_maestra";
+        case "Estatus" -> "estatus";
+        case "Ninguno" -> null;
+        default -> null;
+    };
+    
+    List<trabajador> lista = connectDB.buscarNomina(criterio, query);
+    for (trabajador nom : lista) {
+            if (nom instanceof trabajador) { // Check if it's a Person object
+                trabajador nomina = (trabajador) nom;
+                // Create a row vector for each person
+                Vector<Object> row = new Vector<>();
+                ImageIcon icon = new ImageIcon(nomina.getImg());
+                javax.swing.JLabel label = new javax.swing.JLabel(); label.setIcon(icon);
+                row.add(label);
+                row.add(nomina.getNombres());
+                row.add(nomina.getApellidos());
+                row.add(nomina.getCi());
+                if (nomina.isEstatus()){
+                    row.add("Sí");} else{
+                    row.add("No");}
+                model.addRow(row);
+            }
+        }
+    }//GEN-LAST:event_btn_buscarNominaActionPerformed
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -4178,6 +4251,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btn_aceptarInscripcionNomina;
     private javax.swing.JButton btn_buscarAut;
     private javax.swing.JButton btn_buscarEstd;
+    private javax.swing.JButton btn_buscarNomina;
     private javax.swing.JButton btn_buscarRep;
     private javax.swing.JButton btn_cerrarBusqAut;
     private javax.swing.JButton btn_cerrarBusqEst;
