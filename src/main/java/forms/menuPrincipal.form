@@ -2,7 +2,7 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JPanel" name="menuPrincipal">
+    <Container class="javax.swing.JPanel" name="principal">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -1749,7 +1749,14 @@
                       </Group>
                       <Component id="panelRepresentanteEstd" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="img_infEstudiante" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="img_infEstudiante" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbl_ce" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_ce" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="panelDatosEstd" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -1762,13 +1769,20 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="headderEstudiante" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="img_infEstudiante" max="32767" attributes="0"/>
-                      <Component id="panelDatosEstd" max="32767" attributes="0"/>
+                  <Component id="headderEstudiante" min="-2" pref="49" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="panelDatosEstd" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="img_infEstudiante" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_ce" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_ce" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="panelRepresentanteEstd" min="-2" pref="236" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="panelDocumentosEstd" min="-2" pref="116" max="-2" attributes="0"/>
@@ -1794,6 +1808,8 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btn_repEstd" min="-2" pref="114" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="lbl_headderEstudiante" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="502" max="-2" attributes="0"/>
@@ -1802,7 +1818,13 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbl_headderEstudiante" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_headderEstudiante" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_repEstd" alignment="3" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1818,6 +1840,14 @@
                 <Property name="text" type="java.lang.String" value="INFORMACION"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JButton" name="btn_repEstd">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Generar reporte"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_repEstdActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="img_infEstudiante">
@@ -1826,6 +1856,11 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/iconos/set1/user-line_240.png"/>
             </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_ce">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="C.E:"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JTabbedPane" name="panelDatosEstd">
@@ -2033,7 +2068,7 @@
                               <Component id="rdo_ambidiestro" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="rdo_desconocido" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="140" max="32767" attributes="0"/>
+                          <EmptySpace pref="95" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2288,7 +2323,43 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbl_medicTratante" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_medicoTratante" min="-2" pref="432" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lbl_tlfMedicTrat" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_tlfMedicoTrat" max="32767" attributes="0"/>
+                                  <EmptySpace pref="349" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="label_alergiaMed" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rdo_siAlergiaMed" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rdo_noAlergiaMed" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="label_alergiaMed_cual" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_alergia_cual1" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="chk_bcg" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="chk_triple" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="chk_polio" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="chk_tifus" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="chk_viruela" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbl_otraVac" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_otraVac" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                              </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
@@ -2358,12 +2429,7 @@
                                       <Component id="lbl_prbDesarr" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="label_condicion_cual" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_condicion_cual" max="32767" attributes="0"/>
-                                      </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="label_condicion" min="-2" pref="265" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -2371,62 +2437,32 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="rdo_noCondExtra" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbl_enfPadecidas" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_enfPadecidas" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbl_grpoSang" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_grpoSang" min="-2" pref="263" max="-2" attributes="0"/>
-                                      </Group>
                                       <Component id="lbl_fiebreAlta" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txt_fiebreAlta" alignment="0" max="32767" attributes="0"/>
                                       <Component id="lbl_vac" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_alergiaMed" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="rdo_siAlergiaMed" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="rdo_noAlergiaMed" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="label_alergiaMed_cual" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_alergia_cual1" min="-2" pref="222" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="lbl_otraVac" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="label_condicion_cual" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="text_condicion_cual" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lbl_enfPadecidas" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txt_enfPadecidas" pref="339" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lbl_grpoSang" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txt_grpoSang" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="txt_fiebreAlta" max="32767" attributes="0"/>
+                                          </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_otraVac" pref="326" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="chk_bcg" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="chk_triple" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="chk_polio" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="chk_tifus" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="chk_viruela" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbl_medicTratante" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_medicoTratante" min="-2" pref="432" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lbl_tlfMedicTrat" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_tlfMedicoTrat" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="158" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2535,24 +2571,21 @@
                               <Component id="chk_polio" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="chk_tifus" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="chk_viruela" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_otraVac" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_otraVac" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="lbl_tlfMedicTrat" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_tlfMedicoTrat" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="lbl_medicTratante" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_medicoTratante" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="11" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3018,7 +3051,7 @@
                               <Component id="lbl_chupaDedoNo" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_chupaDedoAvece" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="114" max="32767" attributes="0"/>
+                          <EmptySpace pref="69" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4824,6 +4857,8 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_aceptarInscripcionNi&#xf1;oActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_ce">
         </Component>
       </SubComponents>
     </Container>

@@ -23,12 +23,10 @@ public class menuPrincipal extends javax.swing.JFrame {
     
 private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(menuPrincipal.class.getName());
 
-/**
- * Creates new form Menu_Principal
- */
 public menuPrincipal() {
     initComponents();
-    panel.add(menuPrincipal);
+    panel.add(principal);
+    
     
     //los accesos se dan desde el menu de busqueda, se limita la informacion que pueden usar los usuarios
 //    switch(subsystems.acceso.tipo_acceso){
@@ -78,7 +76,7 @@ public void createConfPanel(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        menuPrincipal = new javax.swing.JPanel();
+        principal = new javax.swing.JPanel();
         headderMenu = new javax.swing.JPanel();
         txtMenuPrincipal1 = new javax.swing.JLabel();
         logoPreescolar = new javax.swing.JLabel();
@@ -157,7 +155,9 @@ public void createConfPanel(){
         informacionEstudiante = new javax.swing.JPanel();
         headderEstudiante = new javax.swing.JPanel();
         lbl_headderEstudiante = new javax.swing.JLabel();
+        btn_repEstd = new javax.swing.JButton();
         img_infEstudiante = new javax.swing.JLabel();
+        lbl_ce = new javax.swing.JLabel();
         panelDatosEstd = new javax.swing.JTabbedPane();
         datosEstd = new javax.swing.JPanel();
         lbl_nombreNiñ = new javax.swing.JLabel();
@@ -460,6 +460,7 @@ public void createConfPanel(){
         scroll_observaciones = new javax.swing.JScrollPane();
         text_observaciones = new javax.swing.JTextPane();
         btn_aceptarInscripcionNiño = new javax.swing.JButton();
+        txt_ce = new javax.swing.JTextField();
         informacionNomina = new javax.swing.JPanel();
         headderInfNomina = new javax.swing.JPanel();
         lbl_headderInfNomina = new javax.swing.JLabel();
@@ -713,76 +714,76 @@ public void createConfPanel(){
             }
         });
 
-        javax.swing.GroupLayout menuPrincipalLayout = new javax.swing.GroupLayout(menuPrincipal);
-        menuPrincipal.setLayout(menuPrincipalLayout);
-        menuPrincipalLayout.setHorizontalGroup(
-            menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPrincipalLayout.createSequentialGroup()
+        javax.swing.GroupLayout principalLayout = new javax.swing.GroupLayout(principal);
+        principal.setLayout(principalLayout);
+        principalLayout.setHorizontalGroup(
+            principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(principalLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(imgEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(imgEstudiante1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEstudiantes1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(principalLayout.createSequentialGroup()
+                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnRepresentantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(imgFamilia, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnAutorizados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(imgAutorizado, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(logoPreescolar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(29, 29, 29)
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imgHerramienta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnPlantel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(btnConfiguracion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
             .addComponent(headderMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        menuPrincipalLayout.setVerticalGroup(
-            menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPrincipalLayout.createSequentialGroup()
+        principalLayout.setVerticalGroup(
+            principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(principalLayout.createSequentialGroup()
                 .addComponent(headderMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuPrincipalLayout.createSequentialGroup()
-                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(principalLayout.createSequentialGroup()
+                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(principalLayout.createSequentialGroup()
                                 .addComponent(imgAutorizado)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, menuPrincipalLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, principalLayout.createSequentialGroup()
                                 .addComponent(imgFamilia)
                                 .addGap(9, 9, 9)
-                                .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, menuPrincipalLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, principalLayout.createSequentialGroup()
                                 .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnPlantel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addGroup(menuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(principalLayout.createSequentialGroup()
                                 .addComponent(imgHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE))
-                            .addGroup(menuPrincipalLayout.createSequentialGroup()
+                            .addGroup(principalLayout.createSequentialGroup()
                                 .addComponent(imgEstudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnEstudiantes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(logoPreescolar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(menuPrincipalLayout.createSequentialGroup()
+                    .addGroup(principalLayout.createSequentialGroup()
                         .addComponent(imgEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -1570,22 +1571,37 @@ public void createConfPanel(){
         lbl_headderEstudiante.setForeground(new java.awt.Color(250, 247, 239));
         lbl_headderEstudiante.setText("INFORMACION");
 
+        btn_repEstd.setText("Generar reporte");
+        btn_repEstd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_repEstdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout headderEstudianteLayout = new javax.swing.GroupLayout(headderEstudiante);
         headderEstudiante.setLayout(headderEstudianteLayout);
         headderEstudianteLayout.setHorizontalGroup(
             headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderEstudianteLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(btn_repEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbl_headderEstudiante)
                 .addGap(502, 502, 502))
         );
         headderEstudianteLayout.setVerticalGroup(
             headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_headderEstudiante, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(headderEstudianteLayout.createSequentialGroup()
+                .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_headderEstudiante)
+                    .addComponent(btn_repEstd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 16, Short.MAX_VALUE))
         );
 
         img_infEstudiante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         img_infEstudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
+
+        lbl_ce.setText("C.E:");
 
         datosEstd.setBackground(new java.awt.Color(255, 255, 204));
 
@@ -1888,7 +1904,7 @@ public void createConfPanel(){
                     .addComponent(rdo_zurdo)
                     .addComponent(rdo_ambidiestro)
                     .addComponent(rdo_desconocido))
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         panelDatosEstd.addTab("Datos Personales", datosEstd);
@@ -2011,7 +2027,41 @@ public void createConfPanel(){
             diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(diagEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addComponent(lbl_medicTratante)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_medicoTratante, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_tlfMedicTrat)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_tlfMedicoTrat)
+                        .addContainerGap(349, Short.MAX_VALUE))
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addComponent(label_alergiaMed)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdo_siAlergiaMed)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdo_noAlergiaMed)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_alergiaMed_cual)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_alergia_cual1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(chk_bcg)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chk_triple)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chk_polio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chk_tifus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chk_viruela)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_otraVac)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_otraVac, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(39, Short.MAX_VALUE))
                     .addGroup(diagEstdLayout.createSequentialGroup()
                         .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -2073,63 +2123,31 @@ public void createConfPanel(){
                                 .addComponent(rdo_noEmbPlan))
                             .addComponent(lbl_prbDesarr))
                         .addGap(18, 18, 18)
-                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(label_condicion_cual)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_condicion_cual))
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(rdo_siCondExtra)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(rdo_noCondExtra))
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(lbl_enfPadecidas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_enfPadecidas))
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(lbl_grpoSang)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_grpoSang, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(lbl_fiebreAlta)
-                            .addComponent(txt_fiebreAlta)
-                            .addComponent(lbl_vac)))
-                    .addGroup(diagEstdLayout.createSequentialGroup()
-                        .addComponent(label_alergiaMed)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rdo_siAlergiaMed)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rdo_noAlergiaMed)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_alergiaMed_cual)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_alergia_cual1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(lbl_otraVac)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_otraVac, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE))
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(chk_bcg)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chk_triple)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chk_polio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chk_tifus)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chk_viruela))))
-                    .addGroup(diagEstdLayout.createSequentialGroup()
-                        .addComponent(lbl_medicTratante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_medicoTratante, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbl_tlfMedicTrat)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_tlfMedicoTrat)))
-                .addContainerGap(158, Short.MAX_VALUE))
+                            .addComponent(lbl_vac)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diagEstdLayout.createSequentialGroup()
+                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                        .addComponent(label_condicion_cual)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_condicion_cual))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                        .addComponent(lbl_enfPadecidas)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_enfPadecidas, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                        .addComponent(lbl_grpoSang)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_grpoSang))
+                                    .addComponent(txt_fiebreAlta))
+                                .addContainerGap())))))
         );
         diagEstdLayout.setVerticalGroup(
             diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2217,12 +2235,10 @@ public void createConfPanel(){
                     .addComponent(chk_triple)
                     .addComponent(chk_polio)
                     .addComponent(chk_tifus)
-                    .addComponent(chk_viruela))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_viruela)
                     .addComponent(lbl_otraVac)
                     .addComponent(txt_otraVac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_tlfMedicTrat)
@@ -2230,7 +2246,7 @@ public void createConfPanel(){
                     .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_medicTratante)
                         .addComponent(txt_medicoTratante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         panelDatosEstd.addTab("Datos de Salud", diagEstd);
@@ -2471,7 +2487,7 @@ public void createConfPanel(){
                     .addComponent(lbl_chupaDedoSi)
                     .addComponent(lbl_chupaDedoNo)
                     .addComponent(lbl_chupaDedoAvece))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         panelDatosEstd.addTab("Otros", otros);
@@ -3661,7 +3677,12 @@ public void createConfPanel(){
                         .addComponent(btn_aceptarInscripcionNiño, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(panelRepresentanteEstd, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, informacionEstudianteLayout.createSequentialGroup()
-                        .addComponent(img_infEstudiante)
+                        .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(img_infEstudiante)
+                            .addGroup(informacionEstudianteLayout.createSequentialGroup()
+                                .addComponent(lbl_ce)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_ce)))
                         .addGap(18, 18, 18)
                         .addComponent(panelDatosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE))
@@ -3670,12 +3691,17 @@ public void createConfPanel(){
         informacionEstudianteLayout.setVerticalGroup(
             informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(informacionEstudianteLayout.createSequentialGroup()
-                .addComponent(headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(img_infEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelDatosEstd))
+                .addComponent(headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelDatosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(informacionEstudianteLayout.createSequentialGroup()
+                        .addComponent(img_infEstudiante)
+                        .addGap(18, 18, 18)
+                        .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_ce)
+                            .addComponent(txt_ce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(34, 34, 34)
                 .addComponent(panelRepresentanteEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4261,7 +4287,7 @@ public void createConfPanel(){
 
     private void btn_volverBusqNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverBusqNomActionPerformed
        panel.removeAll();
-       panel.add(menuPrincipal);
+       panel.add(principal);
        panel.repaint();
     }//GEN-LAST:event_btn_volverBusqNomActionPerformed
 
@@ -4275,7 +4301,7 @@ public void createConfPanel(){
 
     private void btn_volverBusqEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverBusqEstActionPerformed
        panel.removeAll();
-       panel.add(menuPrincipal);
+       panel.add(principal);
        panel.repaint();
     }//GEN-LAST:event_btn_volverBusqEstActionPerformed
 
@@ -4285,13 +4311,13 @@ public void createConfPanel(){
 
     private void btn_volverBusqAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverBusqAutActionPerformed
        panel.removeAll();
-       panel.add(menuPrincipal);
+       panel.add(principal);
        panel.repaint();
     }//GEN-LAST:event_btn_volverBusqAutActionPerformed
 
     private void btn_volverBusqRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverBusqRepActionPerformed
        panel.removeAll();
-       panel.add(menuPrincipal);
+       panel.add(principal);
        panel.repaint();
     }//GEN-LAST:event_btn_volverBusqRepActionPerformed
 
@@ -4300,103 +4326,212 @@ public void createConfPanel(){
     }//GEN-LAST:event_btn_cerrarBusqRepActionPerformed
 
     private void btn_aceptarInscripcionNiñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarInscripcionNiñoActionPerformed
-      String nombre_niñ = txt_nombreNiñ.getText().trim();
-      String apellido_niñ = txt_apellidoNiñ.getText().trim();
-      int edad_niñ = Integer.parseInt(txt_edadNiñ.getText());
-      int tall_camisa_niñ = Integer.parseInt(text_tall_camisa_niñ.getText());
-      int tall_pantalon_niñ = Integer.parseInt(text_tall_pantalon_niñ.getText());
-      int tall_zapato_niñ = Integer.parseInt(text_tall_zapato_niñ.getText());
-      int peso_niñ = Integer.parseInt(text_peso_niñ.getText());
-      int estatura_niñ = Integer.parseInt(text_estatura_niñ.getText());
-      
-      String prob_parto     = txt_prmPartocual.getText().trim();
-      String prob_leng      = text_lenguaje_cual.getText().trim();
-      String prob_cogn      = text_cognitivo_cual.getText().trim();
-      String alergia        = text_alergia_cual.getText().trim();
-      String condicion      = text_condicion_cual.getText().trim();
-      
-      String ci_madre           = text_ci_madre.getText().trim();
-      String nombre_madre       = text_nombres_madre.getText().trim();
-      String apellido_madre     = text_apellidos_madre.getText().trim();
-      String fech_nac_madre     = text_fec_nac_madre.getText().trim();
-      String lug_nac_madre      = text_lugar_nac_madre.getText().trim();
-      String direc_hab_madre    = text_direc_hab_madre.getText().trim();
-      String ocup_madre         = text_ocupacion_madre.getText().trim();
-      String direc_trabj_madre  = text_direc_trabj_madre.getText().trim();
-      String corre_madre        = text_correo_madre.getText().trim();
-      String tlf1_madre         = text_tlf_madre.getText().trim();
-      
-      String ci_padre          = text_ci_padre.getText().trim();
-      String nombre_padre      = text_nombres_padre.getText().trim();
-      String apellido_padre    = text_apellidos_padre.getText().trim();
-      String fech_nac_padre    = text_fec_nac_padre.getText().trim();
-      String lug_nac_padre     = text_lugar_nac_padre.getText().trim();
-      String direc_hab_padre   = text_direc_hab_padre.getText().trim();
-      String ocup_padre        = text_ocupacion_padre.getText().trim();
-      String direc_trabj_padre = text_direc_trabj_padre.getText().trim();
-      String corre_padre       = text_correo_padre.getText().trim();
-      String tlf1_padre        = text_tlf_padre.getText().trim();
-      
-      String ci_rep          = text_ci_rep.getText().trim();
-      String nombre_rep      = text_nombres_rep.getText().trim();
-      String apellido_rep    = text_apellidos_rep.getText().trim();
-      String fech_nac_rep    = text_fec_nac_rep.getText().trim();
-      String lug_nac_rep     = text_lugar_nac_rep.getText().trim();
-      String direc_hab_rep   = text_direc_hab_rep.getText().trim();
-      String ocup_rep        = text_ocupacion_rep.getText().trim();
-      String direc_trabj_rep = text_direc_trabj_rep.getText().trim();
-      String corre_rep       = text_correo_rep.getText().trim();
-      String tlf1_rep        = text_tlf_rep.getText().trim();
-      
-      System.out.println(nombre_niñ);
-      System.out.println(apellido_niñ);
-      System.out.println(edad_niñ);
-      System.out.println(tall_camisa_niñ);
-      System.out.println(tall_pantalon_niñ);
-      System.out.println(tall_zapato_niñ);
-      System.out.println(peso_niñ);
-      System.out.println(estatura_niñ);
-      System.out.println(prob_parto    );
-      System.out.println(prob_leng     );
-      System.out.println(prob_cogn     );
-      System.out.println(alergia       );
-      System.out.println(condicion     );
-      
-      System.out.println(ci_madre          );
-      System.out.println(nombre_madre      );
-      System.out.println(apellido_madre    );
-      System.out.println(fech_nac_madre    );
-      System.out.println(lug_nac_madre     );
-      System.out.println(direc_hab_madre   );
-      System.out.println(ocup_madre        );
-      System.out.println(direc_trabj_madre );
-      System.out.println(corre_madre       );
-      System.out.println(tlf1_madre        );
-      
-      System.out.println(ci_padre         );
-      System.out.println(nombre_padre     );
-      System.out.println(apellido_padre   );
-      System.out.println(fech_nac_padre   );
-      System.out.println(lug_nac_padre    );
-      System.out.println(direc_hab_padre  );
-      System.out.println(ocup_padre       );
-      System.out.println(direc_trabj_padre);
-      System.out.println(corre_padre      );
-      System.out.println(tlf1_padre       );
-      
-      System.out.println(ci_rep          );
-      System.out.println(nombre_rep      );
-      System.out.println(apellido_rep    );
-      System.out.println(fech_nac_rep    );
-      System.out.println(lug_nac_rep     );
-      System.out.println(direc_hab_rep   );
-      System.out.println(ocup_rep        );
-      System.out.println(direc_trabj_rep );
-      System.out.println(corre_rep       );
-      System.out.println(tlf1_rep        );
-      
-      
-      
+    // Datos Personales
+    String nombreNiñ = txt_nombreNiñ.getText().trim();
+    String apellidoNiñ = txt_apellidoNiñ.getText().trim();
+    String edadNiñ = txt_edadNiñ.getText().trim();
+    String edadNumNiñ = text_edad_niñ.getText().trim();
+    String lugarNacNiñ = txt_lugarNacNiñ.getText().trim();
+    String estadoNiñ = txt_estadoNiñ.getText().trim();
+    String municipioNiñ = txt_municNiñ.getText().trim();
+    String nacionalidadNiñ = txt_nacionalidadNiñ.getText().trim();
+    String tallaCamisaNiñ = text_tall_camisa_niñ.getText().trim();
+    String tallaPantalonNiñ = text_tall_pantalon_niñ.getText().trim();
+    String tallaZapatoNiñ = text_tall_zapato_niñ.getText().trim();
+    String pesoNiñ = text_peso_niñ.getText().trim();
+    String estaturaNiñ = text_estatura_niñ.getText().trim();
+    String edadCaminar = txt_edadCaminar.getText().trim();
+
+    // Datos de Salud
+    String prmPartoCual = txt_prmPartocual.getText().trim();
+    String motorCual = text_motor_cual.getText().trim();
+    String lenguajeCual = text_lenguaje_cual.getText().trim();
+    String cognitivoCual = text_cognitivo_cual.getText().trim();
+    String alergiaCual = text_alergia_cual.getText().trim();
+    String alergiaMedCual = text_alergia_cual1.getText().trim();
+    String condicionCual = text_condicion_cual.getText().trim();
+    String enfPadecidas = txt_enfPadecidas.getText().trim();
+    String grupoSang = txt_grpoSang.getText().trim();
+    String fiebreAlta = txt_fiebreAlta.getText().trim();
+    String otraVac = txt_otraVac.getText().trim();
+    String medicoTratante = txt_medicoTratante.getText().trim();
+    String tlfMedicoTrat = txt_tlfMedicoTrat.getText().trim();
+
+    // Otros
+    String horaAcostar = txt_horaAcostar.getText().trim();
+    String horaLevantar = txt_horaLevantar.getText().trim();
+    String qnDuermeNino = txt_qnDuermeNino.getText().trim();
+    String edadDejPan = txt_edadDejPan.getText().trim();
+
+    // Madre
+    String apellidosMadre = text_apellidos_madre.getText().trim();
+    String nombresMadre = text_nombres_madre.getText().trim();
+    String ciMadre = text_ci_madre.getText().trim();
+    String fecNacMadre = text_fec_nac_madre.getText().trim();
+    String edadMadre = text_edad_madre.getText().trim();
+    String lugarNacMadre = text_lugar_nac_madre.getText().trim();
+    String direcHabMadre = text_direc_hab_madre.getText().trim();
+    String ocupacionMadre = text_ocupacion_madre.getText().trim();
+    String direcTrabjMadre = text_direc_trabj_madre.getText().trim();
+    String correoMadre = text_correo_madre.getText().trim();
+    String tlfMadre = text_tlf_madre.getText().trim();
+
+    // Padre
+    String apellidosPadre = text_apellidos_padre.getText().trim();
+    String nombresPadre = text_nombres_padre.getText().trim();
+    String ciPadre = text_ci_padre.getText().trim();
+    String fecNacPadre = text_fec_nac_padre.getText().trim();
+    String edadPadre = text_edad_padre.getText().trim();
+    String lugarNacPadre = text_lugar_nac_padre.getText().trim();
+    String direcHabPadre = text_direc_hab_padre.getText().trim();
+    String ocupacionPadre = text_ocupacion_padre.getText().trim();
+    String direcTrabjPadre = text_direc_trabj_padre.getText().trim();
+    String correoPadre = text_correo_padre.getText().trim();
+    String tlfPadre = text_tlf_padre.getText().trim();
+
+    // Representante Legal
+    String apellidosRep = text_apellidos_rep.getText().trim();
+    String nombresRep = text_nombres_rep.getText().trim();
+    String ciRep = text_ci_rep.getText().trim();
+    String fecNacRep = text_fec_nac_rep.getText().trim();
+    String edadRep = text_edad_rep.getText().trim();
+    String lugarNacRep = text_lugar_nac_rep.getText().trim();
+    String direcHabRep = text_direc_hab_rep.getText().trim();
+    String ocupacionRep = text_ocupacion_rep.getText().trim();
+    String direcTrabjRep = text_direc_trabj_rep.getText().trim();
+    String correoRep = text_correo_rep.getText().trim();
+    String tlfRep = text_tlf_rep.getText().trim();
+
+    // Documentos
+    String responsable = text_responsable.getText().trim();
+    String persona = text_persona.getText().trim();
+    String fecha = text_fecha.getText().trim();
+    String observaciones = text_observaciones.getText().trim();
+
+    // Ambiente Socio Familiar
+    String cuidaNiñoHogar = txt_cuidaNiñoHogar.getText().trim();
+    String otroConsult = txt_otroConsult.getText().trim();
+
+    //Autorizados
+    java.util.List<autorizado> listaAutorizados = new java.util.ArrayList<>();
+    javax.swing.table.TableModel modelAut = tbl_autRetiro.getModel();
+    for (int i = 0; i < modelAut.getRowCount(); i++) {
+        Object ciObj = modelAut.getValueAt(i, 0);
+        Object nombreObj = modelAut.getValueAt(i, 1);
+        Object apellidoObj = modelAut.getValueAt(i, 2);
+        Object tlf1Obj = modelAut.getValueAt(i, 3);
+        Object tlf2Obj = modelAut.getValueAt(i, 4);
+
+        int ci = 0;
+        if (ciObj != null && !ciObj.toString().trim().isEmpty()) {
+            try {
+                ci = Integer.parseInt(ciObj.toString().trim());
+            } catch (NumberFormatException e) {
+                ci = 0;
+            }
+        }
+        String nombre = nombreObj != null ? nombreObj.toString().trim() : "";
+        String apellido = apellidoObj != null ? apellidoObj.toString().trim() : "";
+        String tlf1 = tlf1Obj != null ? tlf1Obj.toString().trim() : "";
+        String tlf2 = tlf2Obj != null ? tlf2Obj.toString().trim() : "";
+
+        if (ci != 0 || !nombre.isEmpty() || !apellido.isEmpty() || !tlf1.isEmpty() || !tlf2.isEmpty()) {
+            autorizado aut = new autorizado();
+            aut.setCi(ci);
+            aut.setNombres(nombre);
+            aut.setApellidos(apellido);
+            aut.setTlf1(tlf1);
+            aut.setTlf2(tlf2);
+            listaAutorizados.add(aut);
+        }
+    }
+
+    System.out.println(nombreNiñ);
+    System.out.println(apellidoNiñ);
+    System.out.println(edadNiñ);
+    System.out.println(edadNumNiñ);
+    System.out.println(lugarNacNiñ);
+    System.out.println(estadoNiñ);
+    System.out.println(municipioNiñ);
+    System.out.println(nacionalidadNiñ);
+    System.out.println(tallaCamisaNiñ);
+    System.out.println(tallaPantalonNiñ);
+    System.out.println(tallaZapatoNiñ);
+    System.out.println(pesoNiñ);
+    System.out.println(estaturaNiñ);
+    System.out.println(edadCaminar);
+
+    System.out.println(prmPartoCual);
+    System.out.println(motorCual);
+    System.out.println(lenguajeCual);
+    System.out.println(cognitivoCual);
+    System.out.println(alergiaCual);
+    System.out.println(alergiaMedCual);
+    System.out.println(condicionCual);
+    System.out.println(enfPadecidas);
+    System.out.println(grupoSang);
+    System.out.println(fiebreAlta);
+    System.out.println(otraVac);
+    System.out.println(medicoTratante);
+    System.out.println(tlfMedicoTrat);
+
+    System.out.println(horaAcostar);
+    System.out.println(horaLevantar);
+    System.out.println(qnDuermeNino);
+    System.out.println(edadDejPan);
+
+    System.out.println(apellidosMadre);
+    System.out.println(nombresMadre);
+    System.out.println(ciMadre);
+    System.out.println(fecNacMadre);
+    System.out.println(edadMadre);
+    System.out.println(lugarNacMadre);
+    System.out.println(direcHabMadre);
+    System.out.println(ocupacionMadre);
+    System.out.println(direcTrabjMadre);
+    System.out.println(correoMadre);
+    System.out.println(tlfMadre);
+
+    System.out.println(apellidosPadre);
+    System.out.println(nombresPadre);
+    System.out.println(ciPadre);
+    System.out.println(fecNacPadre);
+    System.out.println(edadPadre);
+    System.out.println(lugarNacPadre);
+    System.out.println(direcHabPadre);
+    System.out.println(ocupacionPadre);
+    System.out.println(direcTrabjPadre);
+    System.out.println(correoPadre);
+    System.out.println(tlfPadre);
+
+    System.out.println(apellidosRep);
+    System.out.println(nombresRep);
+    System.out.println(ciRep);
+    System.out.println(fecNacRep);
+    System.out.println(edadRep);
+    System.out.println(lugarNacRep);
+    System.out.println(direcHabRep);
+    System.out.println(ocupacionRep);
+    System.out.println(direcTrabjRep);
+    System.out.println(correoRep);
+    System.out.println(tlfRep);
+
+    System.out.println(responsable);
+    System.out.println(persona);
+    System.out.println(fecha);
+    System.out.println(observaciones);
+
+    System.out.println(cuidaNiñoHogar);
+    System.out.println(otroConsult);
+
+    for (autorizado aut : listaAutorizados) {
+        System.out.println("Autorizado:");
+        System.out.println("  CI: " + aut.getCi());
+        System.out.println("  Nombres: " + aut.getNombres());
+        System.out.println("  Apellidos: " + aut.getApellidos());
+        System.out.println("  Teléfono 1: " + aut.getTlf1());
+        System.out.println("  Teléfono 2: " + aut.getTlf2());
+    }
     }//GEN-LAST:event_btn_aceptarInscripcionNiñoActionPerformed
 
     private void text_apellidos_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_apellidos_madreActionPerformed
@@ -4648,55 +4783,65 @@ public void createConfPanel(){
     }//GEN-LAST:event_text_fechaActionPerformed
 
     private void btn_aceptarInscripcionNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarInscripcionNominaActionPerformed
-      String ci_nomina          = txt_ciNomina.getText().trim();
-      String rif_nomina         = txt_rifNomina.getText().trim();
-      String nombre_nomina      = txt_nombreNomina.getText().trim();
-      String apellido_nomina    = txt_apellidoNomina.getText().trim();
-      String fech_nac_nomina    = txt_fechNacimNomina.getText().trim();
-      String mun_res            = txt_munResNomina.getText().trim();
-      String parrq_res          = txt_prrqResNomina.getText().trim();
-      String comn_res           = txt_comResNomina.getText().trim();
-      String calle_res          = txt_calleResNomina.getText().trim();
-      String tlf1_nomina        = txt_tlf1Nomina.getText().trim();
-      String tlf2_nomina        = txt_tlf2Nomina.getText().trim();
-      
-      String mun_vot            = txt_munVotNomina.getText().trim();
-      String prrq_vot           = txt_parrqVotNomina.getText().trim();
-      String ctr_vot            = txt_centrVotNomina.getText().trim();
-           
-      String jef_com            = txt_jefComNomina.getText().trim();
-      String ci_jef_com         = txt_ciJefComNomina.getText().trim();
-      String posee_1x10         = txt_1x10Nomina.getText().trim();
-      String cant_1x10          = txt_cant1x10Nomina.getText().trim();
-           
-      String nivel              = txt_nivelNominaMaestra.getText().trim();
-      String seccion            = txt_seccionNominaMaestra.getText().trim();
-      String estatus            = txt_estatusNomina.getText().trim();
-      String fch_ingreso        = txt_fechaIngresoNomina.getText().trim();
-      
-      System.out.println(ci_nomina       );
-      System.out.println(rif_nomina      );
-      System.out.println(nombre_nomina   );
-      System.out.println(apellido_nomina );
-      System.out.println(fech_nac_nomina );
-      System.out.println(mun_res         );
-      System.out.println(parrq_res       );
-      System.out.println(comn_res        );
-      System.out.println(calle_res       );
-      System.out.println(tlf1_nomina     );
-      System.out.println(tlf2_nomina     );
-      System.out.println(mun_vot         );
-      System.out.println(prrq_vot        );
-      System.out.println(ctr_vot         );
-      System.out.println(jef_com         );
-      System.out.println(ci_jef_com      );
-      System.out.println(posee_1x10      );
-      System.out.println( cant_1x10      ); 
-      System.out.println(nivel           );
-      System.out.println(seccion         );
-      System.out.println(estatus         );
-      System.out.println(fch_ingreso     );
-      
+
+    String ciNomina = txt_ciNomina.getText().trim();
+    String rifNomina = txt_rifNomina.getText().trim();
+    String nombreNomina = txt_nombreNomina.getText().trim();
+    String apellidoNomina = txt_apellidoNomina.getText().trim();
+    String sexoNomina = rdb_mascNomina.isSelected() ? "Masculino" : (rdb_femNomina.isSelected() ? "Femenino" : "");
+    String fechNacimNomina = txt_fechNacimNomina.getText().trim();
+    String edadNomina = txt_edadNomina.getText().trim();
+    String munResNomina = txt_munResNomina.getText().trim();
+    String prrqResNomina = txt_prrqResNomina.getText().trim();
+    String comResNomina = txt_comResNomina.getText().trim();
+    String calleResNomina = txt_calleResNomina.getText().trim();
+    String tlf1Nomina = txt_tlf1Nomina.getText().trim();
+    String tlf2Nomina = txt_tlf2Nomina.getText().trim();
+
+    String munVotNomina = txt_munVotNomina.getText().trim();
+    String parrqVotNomina = txt_parrqVotNomina.getText().trim();
+    String centrVotNomina = txt_centrVotNomina.getText().trim();
+    String votoNomina = rdb_siNomina.isSelected() ? "Sí" : (rdb_noNomina.isSelected() ? "No" : "");
+    String jefComNomina = txt_jefComNomina.getText().trim();
+    String ciJefComNomina = txt_ciJefComNomina.getText().trim();
+    String unoX10Nomina = txt_1x10Nomina.getText().trim();
+    String cant1x10Nomina = txt_cant1x10Nomina.getText().trim();
+
+    String turnoNomina = txt_turnoNomina.getText().trim();
+    String nivelNominaMaestra = txt_nivelNominaMaestra.getText().trim();
+    String seccionNominaMaestra = txt_seccionNominaMaestra.getText().trim();
+    String estatusNomina = txt_estatusNomina.getText().trim();
+    String fechaIngresoNomina = txt_fechaIngresoNomina.getText().trim();
+
+    System.out.println(ciNomina);
+    System.out.println(rifNomina);
+    System.out.println(nombreNomina);
+    System.out.println(apellidoNomina);
+    System.out.println(sexoNomina);
+    System.out.println(fechNacimNomina);
+    System.out.println(edadNomina);
+    System.out.println(munResNomina);
+    System.out.println(prrqResNomina);
+    System.out.println(comResNomina);
+    System.out.println(calleResNomina);
+    System.out.println(tlf1Nomina);
+    System.out.println(tlf2Nomina);
+
+    System.out.println(munVotNomina);
+    System.out.println(parrqVotNomina);
+    System.out.println(centrVotNomina);
+    System.out.println(votoNomina);
+    System.out.println(jefComNomina);
+    System.out.println(ciJefComNomina);
+    System.out.println(unoX10Nomina);
+    System.out.println(cant1x10Nomina);
+
+    System.out.println(turnoNomina);
+    System.out.println(nivelNominaMaestra);
+    System.out.println(seccionNominaMaestra);
+    System.out.println(estatusNomina);
+    System.out.println(fechaIngresoNomina);
+
     }//GEN-LAST:event_btn_aceptarInscripcionNominaActionPerformed
 
     private void txt_edadNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_edadNominaActionPerformed
@@ -4923,6 +5068,11 @@ public void createConfPanel(){
         // TODO add your handling code here:
     }//GEN-LAST:event_rdo_orinaRopaNocheAveceActionPerformed
 
+    private void btn_repEstdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_repEstdActionPerformed
+       menuReportes reportes = new menuReportes(this, true);
+       reportes.setVisible(true);
+    }//GEN-LAST:event_btn_repEstdActionPerformed
+
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
     System.exit(0); // Cierra la aplicación Java
@@ -4986,6 +5136,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btn_inscribirEstd;
     private javax.swing.JButton btn_inscribirNom;
     private javax.swing.JButton btn_inscribirRep;
+    private javax.swing.JButton btn_repEstd;
     private javax.swing.JButton btn_verBusqAut;
     private javax.swing.JButton btn_verBusqEstd;
     private javax.swing.JButton btn_verBusqRep;
@@ -5169,6 +5320,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_calleResNomina;
     private javax.swing.JLabel lbl_cant1x10Nomina;
     private javax.swing.JLabel lbl_casa;
+    private javax.swing.JLabel lbl_ce;
     private javax.swing.JLabel lbl_centrVotNomina;
     private javax.swing.JLabel lbl_chupaDedo;
     private javax.swing.JRadioButton lbl_chupaDedoAvece;
@@ -5232,12 +5384,12 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_vac;
     private javax.swing.JLabel lbl_votoNomina;
     private javax.swing.JLabel logoPreescolar;
-    private javax.swing.JPanel menuPrincipal;
     private javax.swing.JPanel otros;
     private javax.swing.JPanel panel;
     private javax.swing.JTabbedPane panelDatosEstd;
     private javax.swing.JPanel panelDocumentosEstd;
     private javax.swing.JTabbedPane panelRepresentanteEstd;
+    private javax.swing.JPanel principal;
     private javax.swing.JRadioButton radio_guarderia_niñ;
     private javax.swing.JRadioButton radio_hogar_cuidado_niñ;
     private javax.swing.JRadioButton radio_hogar_niñ;
@@ -5364,6 +5516,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_apellidoNomina;
     private javax.swing.JTextField txt_calleResNomina;
     private javax.swing.JTextField txt_cant1x10Nomina;
+    private javax.swing.JTextField txt_ce;
     private javax.swing.JTextField txt_centrVotNomina;
     private javax.swing.JTextField txt_ciJefComNomina;
     private javax.swing.JTextField txt_ciNomina;
