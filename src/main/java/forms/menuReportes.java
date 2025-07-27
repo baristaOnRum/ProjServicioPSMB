@@ -26,21 +26,21 @@ public class menuReportes extends javax.swing.JDialog {
         txt_direcPerMed = new javax.swing.JTextField();
         panel_constRetiro = new javax.swing.JPanel();
         lbl_plantel = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txt_plantel = new javax.swing.JTextField();
         lbl_municipio = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txt_municipio = new javax.swing.JTextField();
         lbl_estado = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txt_estado = new javax.swing.JTextField();
         lbl_distrito = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txt_distrito = new javax.swing.JTextField();
         lbl_motivo = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txt_motivo = new javax.swing.JTextField();
         lbl_dias = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txt_dias = new javax.swing.JTextField();
         lbl_inicio = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        txt_inicio = new javax.swing.JTextField();
         lbl_fin = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        txt_fin = new javax.swing.JTextField();
         headder = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         panel = new javax.swing.JPanel();
@@ -93,35 +93,19 @@ public class menuReportes extends javax.swing.JDialog {
 
         lbl_plantel.setText("Plantel:");
 
-        jTextField1.setText("jTextField1");
+        lbl_municipio.setText("Municipio");
 
-        lbl_municipio.setText("jLabel3");
+        lbl_estado.setText("Estado");
 
-        jTextField2.setText("jTextField2");
+        lbl_distrito.setText("Distrito");
 
-        lbl_estado.setText("jLabel4");
+        lbl_motivo.setText("Motivo");
 
-        jTextField3.setText("jTextField3");
+        lbl_dias.setText("Cantidad de dias");
 
-        lbl_distrito.setText("jLabel5");
+        lbl_inicio.setText("Dia inicio");
 
-        jTextField4.setText("jTextField4");
-
-        lbl_motivo.setText("jLabel6");
-
-        jTextField5.setText("jTextField5");
-
-        lbl_dias.setText("jLabel7");
-
-        jTextField6.setText("jTextField6");
-
-        lbl_inicio.setText("jLabel8");
-
-        jTextField7.setText("jTextField7");
-
-        lbl_fin.setText("jLabel9");
-
-        jTextField8.setText("jTextField8");
+        lbl_fin.setText("Dia Fin");
 
         javax.swing.GroupLayout panel_constRetiroLayout = new javax.swing.GroupLayout(panel_constRetiro);
         panel_constRetiro.setLayout(panel_constRetiroLayout);
@@ -129,40 +113,40 @@ public class menuReportes extends javax.swing.JDialog {
             panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_constRetiroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panel_constRetiroLayout.createSequentialGroup()
                         .addComponent(lbl_plantel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_plantel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_constRetiroLayout.createSequentialGroup()
                         .addComponent(lbl_municipio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_municipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_constRetiroLayout.createSequentialGroup()
                         .addComponent(lbl_estado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_constRetiroLayout.createSequentialGroup()
                         .addComponent(lbl_distrito)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_distrito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_constRetiroLayout.createSequentialGroup()
                         .addComponent(lbl_motivo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_motivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_fin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_fin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_inicio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_constRetiroLayout.createSequentialGroup()
                         .addComponent(lbl_dias)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
-                        .addComponent(lbl_inicio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_constRetiroLayout.createSequentialGroup()
-                        .addComponent(lbl_fin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(666, Short.MAX_VALUE))
+                        .addComponent(txt_dias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(624, Short.MAX_VALUE))
         );
         panel_constRetiroLayout.setVerticalGroup(
             panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,35 +154,35 @@ public class menuReportes extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_plantel)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_plantel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_municipio)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_municipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_estado)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_distrito)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_distrito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_motivo)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_motivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_dias)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_dias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_inicio)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_inicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_constRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_fin)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_fin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(241, Short.MAX_VALUE))
         );
 
@@ -394,14 +378,6 @@ public class menuReportes extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> cmb_tipoReporte;
     private javax.swing.JPanel headder;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JLabel lbl_ciPersReporte;
     private javax.swing.JLabel lbl_dias;
     private javax.swing.JLabel lbl_direcPerMed;
@@ -418,7 +394,15 @@ public class menuReportes extends javax.swing.JDialog {
     private javax.swing.JPanel panel_licenciaMedica;
     private javax.swing.JPanel panel_vacio;
     private javax.swing.JTextField txt_ciPersReporte;
+    private javax.swing.JTextField txt_dias;
     private javax.swing.JTextField txt_direcPerMed;
+    private javax.swing.JTextField txt_distrito;
+    private javax.swing.JTextField txt_estado;
+    private javax.swing.JTextField txt_fin;
+    private javax.swing.JTextField txt_inicio;
+    private javax.swing.JTextField txt_motivo;
+    private javax.swing.JTextField txt_municipio;
     private javax.swing.JTextField txt_persReporte;
+    private javax.swing.JTextField txt_plantel;
     // End of variables declaration//GEN-END:variables
 }
