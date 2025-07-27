@@ -1236,10 +1236,15 @@
         <Component class="javax.swing.JComboBox" name="cmb_filtroBusqAut">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="8">
                 <StringItem index="0" value="C.I Autorizado"/>
                 <StringItem index="1" value="C.I Representante"/>
-                <StringItem index="2" value="C.I Estudiante"/>
+                <StringItem index="2" value="C&#xe9;dula de Estudiante"/>
+                <StringItem index="3" value="Nombres"/>
+                <StringItem index="4" value="Apellidos"/>
+                <StringItem index="5" value="Tel&#xe9;fono 1"/>
+                <StringItem index="6" value="Tel&#xe9;fono 2"/>
+                <StringItem index="7" value="Ninguno"/>
               </StringArray>
             </Property>
           </Properties>
@@ -1267,12 +1272,12 @@
                   </Border>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="4">
-                    <Column editable="true" title="Cedula" type="java.lang.Object"/>
-                    <Column editable="true" title="Nombre" type="java.lang.Object"/>
-                    <Column editable="true" title="Apellido" type="java.lang.Object"/>
-                    <Column editable="true" title="Telefono 1" type="java.lang.Object"/>
-                    <Column editable="true" title="Telefono 2" type="java.lang.Object"/>
+                  <Table columnCount="5" rowCount="0">
+                    <Column editable="true" title="Cedula" type="java.lang.String"/>
+                    <Column editable="true" title="Nombre" type="java.lang.String"/>
+                    <Column editable="true" title="Apellido" type="java.lang.String"/>
+                    <Column editable="true" title="Telefono 1" type="java.lang.String"/>
+                    <Column editable="true" title="Telefono 2" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnSelectionAllowed" type="boolean" value="true"/>
@@ -1422,13 +1427,22 @@
                       </Group>
                       <Component id="scl_busqNom" alignment="0" min="-2" pref="930" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="41" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="img_busqNomina" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btn_inscribirNom" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btn_verNom" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btn_editarBusqNom" alignment="0" max="32767" attributes="0"/>
-                      <Component id="im_logoInstitucionBusqNom" alignment="0" pref="323" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="img_busqNomina" alignment="1" max="32767" attributes="0"/>
+                              <Component id="btn_verNom" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btn_editarBusqNom" alignment="0" max="32767" attributes="0"/>
+                              <Component id="im_logoInstitucionBusqNom" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btn_buscarNomina" min="-2" pref="170" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btn_inscribirNom" min="-2" pref="170" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
@@ -1444,6 +1458,7 @@
                       <Component id="cmb_filtroBusqNom" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_filtroBusqNom" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_inscribirNom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_buscarNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -1455,7 +1470,7 @@
                           <Component id="img_busqNomina" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Component id="btn_verNom" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
                           <Component id="btn_editarBusqNom" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="im_logoInstitucionBusqNom" min="-2" max="-2" attributes="0"/>
@@ -1587,9 +1602,12 @@
                   </Border>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="2" rowCount="4">
-                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                  <Table columnCount="5" rowCount="0">
+                    <Column editable="true" title="Foto" type="java.lang.Object"/>
+                    <Column editable="true" title="Nombres" type="java.lang.String"/>
+                    <Column editable="true" title="Apellidos" type="java.lang.String"/>
+                    <Column editable="true" title="C&#xe9;dula" type="java.lang.String"/>
+                    <Column editable="true" title="Estatus" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnSelectionAllowed" type="boolean" value="true"/>
@@ -1696,6 +1714,23 @@
             <Property name="iconTextGap" type="int" value="0"/>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_buscarNomina">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="65" green="78" red="1b" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="15" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ef" green="f7" red="fa" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Buscar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buscarNominaActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -2507,12 +2542,14 @@
                               <Component id="txt_otraVac" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_medicTratante" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_medicoTratante" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="lbl_tlfMedicTrat" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_tlfMedicoTrat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lbl_medicTratante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_medicoTratante" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -2955,13 +2992,15 @@
                               <Component id="jRadioButton19" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_qnDuermeNino" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jRadioButton21" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jRadioButton20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lbl_qnDuermeNino" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -4668,12 +4707,14 @@
                                   <Component id="text_responsable" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="label_persona" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="text_persona" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="label_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="text_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="label_persona" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_persona" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
