@@ -363,13 +363,92 @@ public class docGen {
 
     public static void generarInscripcionAlumno(){}
 
-    public static void generarConstanciaEstudios(){
+    public static void generarConstanciaEstudios(estudiante estudiante, String directora, String lapso, String finLapso, boolean maternal){
+
+        //Creamos el documento
+
+        WordprocessingMLPackage packWord = initDoc();
+
+        //Definimos relaciones
+        MainDocumentPart docMain = packWord.getMainDocumentPart();
+
+        Hdr header = crearHeader();
+        HeaderPart headerPart = crearHeaderPart(header);
+
+        setRelHeader(docMain,header,headerPart);
+
+        agregarLogos(packWord,headerPart,header);
+
+        Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
+                "Teléfono: 0291 6436911");
+
+        setRelFooter(docMain, footer);
+
+        //Agregamos el título
+
+        P paragraph = fabObjetos.createP();
+        P paragraphTitle = fabObjetos.createP();
+        agregarParrafoCEstilo(paragraphTitle, "Constancia de Estudios", true, false, 1, false, 48, 0);
+
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+
+        //Agregamos el texto
+
+        agregarParrafoCEstilo(paragraph, "Quien suscribe, " + directora + ",",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, "Directora del Centro de Educación Inicial (C.E.I) \"Arnoldo Gabaldón\", que funciona" +
+                " en el Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Autónomo Maturín - Estado Monagas," +
+                " hace constar que el (la) alumno (a) ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, estudiante.getNombres() + " " + estudiante.getApellidos(),false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph,", portador (a) de la Cédula Escolar Nº: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, " " + estudiante.getCe() + " ",false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph,", nacido el ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, estudiante.getFechaNac().toString(),false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph,", en ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, estudiante.getLugarNac(),false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,"cursó el Grupo",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, String.valueOf(estudiante.getNivel()),false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+
+        if (!maternal){
+            agregarParrafoCEstilo(paragraph," de la etapa preescolar en este plantel en su",false,false,0,false,36,1);
+        } else{
+            agregarParrafoCEstilo(paragraph," de la etapa maternal en este plantel en su",false,false,0,false,36,1);
+        }
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, lapso + "___",false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,"Lapso, hasta el",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, finLapso,false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph,", en esta institución; correspondiente al periodo escolar",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, estudiante.getPeriodoCurso() + ".",false,false,1,false,36,1);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        LocalDate fecha = LocalDate.now();
+        agregarParrafoCEstilo(paragraph, "Constancia que se expide de parte interesada a los " + fecha.getDayOfMonth() + " del mes de " + fecha.getMonth() +
+                " de " + fecha.getYear(),false,false,0,false,36,1);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+
+        docMain.getContent().add(paragraphTitle);
+        docMain.getContent().add(paragraph);
+
+        agregarFirmas(packWord,"Docente","Director");
+        guardarArchivo(packWord,estudiante.getCe() + "Estudios.docx");
+
             /*TEXTO:
-            Quien suscribe, {Directora} (E) del C.E.I "Arnoldo Gabaldón", que funciona dentro de las
-            instalaciones del Ministerio del Poder Popular para el Ecosocialismo y Agua,
-            Municipio Autónomo Maturín - Estado Monagas, hace constancia que el alumno {estudiante}
-            ; portador de la Cédula Escolar Nº: V.-{CE}, nacido el {fecha_nac}, en {lug_nac}; cursó el {grado},
-            {grado}, de la etapa Preescolar {etapa}, *Maternal* {nombre_maternal}, en su {fecha?}, hasta el {fecha}
+         , hasta el {fecha}
             en esta institución; correspondiente al periodo escolar {periodo_escolar}.
 
             Constancia que se expide a petición de parte interesada, a los {parte interesada}
@@ -384,98 +463,83 @@ public class docGen {
              */
     }
 
-    public static void generarConstanciaConducta(){
+    public static void generarConstanciaConducta(estudiante estudiante, String directora, boolean maternal){
 
-//        //Creamos el documento
-//
-//        WordprocessingMLPackage packWord = initDoc();
-//
-//        //Definimos relaciones
-//        MainDocumentPart docMain = packWord.getMainDocumentPart();
-//
-//        Hdr header = crearHeader();
-//        HeaderPart headerPart = crearHeaderPart(header);
-//
-//        setRelHeader(docMain,header,headerPart);
-//
-//        agregarLogos(packWord,headerPart,header);
-//
-//        Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
-//                "Teléfono: 0291 6436911");
-//
-//        setRelFooter(docMain, footer);
-//
-//        //Agregamos el título
-//
-//        P paragraph = fabObjetos.createP();
-//        P paragraphTitle = fabObjetos.createP();
-//        agregarParrafoCEstilo(paragraphTitle, "Constancia de Retiro", true, false, 1, false, 48, 0);
-//
-//        agregarBr(paragraphTitle);
-//        agregarBr(paragraphTitle);
-//        agregarBr(paragraphTitle);
-//
-//        //Agregamos el texto
-//
-//        agregarParrafoCEstilo(paragraph, "Quien suscribe, " + directora,false,false,0,false,36,1);
-//        agregarParrafoCEstilo(paragraph, ", Directora del C.E.I \"Arnoldo Gabaldón\", que funciona en las instalaciones" +
-//                " del Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Maturín - Estado Monagas," +
-//                " hace constar que el (la) alumno",false,false,0,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, " " + estudiante.getNombres() + " " + estudiante .getApellidos(),
-//                false,false,1,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, "Portador (a) de la Cédula Escolar Nº: V.-",false,false,0,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, " " + estudiante.getCe(), false,false,1,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, "natural de",false,false,0,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, " " + estudiante.getLugarNac(), false,false,1,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, "cursó el ",false,false,0,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, " " + estudiante.getNivel(), false,false,1,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, "Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar"
-//                ,false,false,0,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, " " + estudiante.getPeriodoCursado(), false,false,1,false,36,1);
-//        agregarParrafoCEstilo(paragraph, ". Es retirado por su representante ",false,false,0,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, " " + repre_estudiante.getNombres() + " " + repre_estudiante.getApellidos(),
-//                false,false,1,false,36,1);
-//        agregarParrafoCEstilo(paragraph, ". C.I.:",false,false,0,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarParrafoCEstilo(paragraph, " " + repre_estudiante.getCi() + ".", false,false,1,false,36,1);
-//        agregarNoBreakHyphen(paragraph);
-//        agregarBr(paragraph);
-//        LocalDate fecha = LocalDate.now();
-//        agregarParrafoCEstilo(paragraph, "Constancia que se expide de parte interesada a los " + fecha.getDayOfMonth() + " del mes de " + fecha.getMonth() +
-//                " de " + fecha.getYear(),false,false,0,false,36,1);
-//        agregarBr(paragraph);
-//        agregarBr(paragraph);
-//        agregarBr(paragraph);
-//
-//        docMain.getContent().add(paragraphTitle);
-//        docMain.getContent().add(paragraph);
-//
-//        agregarFirmas(packWord,"Docente","Director");
-//        guardarArchivo(packWord,estudiante.getCe() + "Retiro.docx");
-            /*
-            TEXTO:
-            Quien suscribe, {Directora/Profesora} del Centro de Educación Inicial [(C.E.I)] "Arnoldo Gabaldón", que funciona
-            en el Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Autónomo Maturín - Estado Monagas,
-            hace constar que el (la) alumno (a) {alumno} Portador (a) de la Cédula Escolar Nº: V.-{CE} natural de {lugar_nac/nacionalidad}
-            cursó el {grado} Grupo de la etapa preescolar en este plantel, presentando *_BUENA CONDUCTA_*.
+        //Creamos el documento
 
-            Constancia que se expide de parte interesada a los {dias} del mes {mes} de {año}.
+        WordprocessingMLPackage packWord = initDoc();
 
-            {firma}   {firma}
-            Docente Directora (E)
-            Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC
-            Teléfono: 0291 6436911
-             */
+        //Definimos relaciones
+        MainDocumentPart docMain = packWord.getMainDocumentPart();
+
+        Hdr header = crearHeader();
+        HeaderPart headerPart = crearHeaderPart(header);
+
+        setRelHeader(docMain,header,headerPart);
+
+        agregarLogos(packWord,headerPart,header);
+
+        Ftr footer = crearFooter("Dirección: Av. Alirio Ugarte Pelayo, sector Ambiente, sede MINEC",
+                "Teléfono: 0291 6436911");
+
+        setRelFooter(docMain, footer);
+
+        //Agregamos el título
+
+        P paragraph = fabObjetos.createP();
+        P paragraphTitle = fabObjetos.createP();
+        agregarParrafoCEstilo(paragraphTitle, "Constancia de Buena Conducta", true, false, 1, false, 48, 0);
+
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+        agregarBr(paragraphTitle);
+
+        //Agregamos el texto
+
+        agregarParrafoCEstilo(paragraph, "Quien suscribe, " + directora + ",",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, "Directora del Centro de Educación Inicial (C.E.I) \"Arnoldo Gabaldón\", que funciona" +
+                " en el Ministerio del Poder Popular para el Ecosocialismo y Agua. Municipio Autónomo Maturín - Estado Monagas," +
+                " hace constar que el (la) alumno (a) ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, estudiante.getNombres() + " " + estudiante.getApellidos(),false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph,", portador (a) de la Cédula Escolar Nº: ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, " " + estudiante.getCe() + " ",false,false,1,false,36,1);
+        agregarParrafoCEstilo(paragraph,", natural de ",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, estudiante.getLugarNac(),false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,"cursó el Grupo",false,false,0,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph, String.valueOf(estudiante.getNivel()),false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+
+        if (!maternal){
+            agregarParrafoCEstilo(paragraph," de la etapa preescolar en este plantel, presentando",false,false,0,false,36,1);
+        } else{
+            agregarParrafoCEstilo(paragraph," de la etapa maternal en este plantel, presentando",false,false,0,false,36,1);
+        }
+
+        agregarNoBreakHyphen(paragraph);
+        agregarParrafoCEstilo(paragraph,"BUENA CONDUCTA",false,false,1,false,36,1);
+        agregarNoBreakHyphen(paragraph);
+
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        LocalDate fecha = LocalDate.now();
+        agregarParrafoCEstilo(paragraph, "Constancia que se expide de parte interesada a los " + fecha.getDayOfMonth() + " del mes de " + fecha.getMonth() +
+                " de " + fecha.getYear(),false,false,0,false,36,1);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+        agregarBr(paragraph);
+
+        docMain.getContent().add(paragraphTitle);
+        docMain.getContent().add(paragraph);
+
+        agregarFirmas(packWord,"Docente","Director");
+        guardarArchivo(packWord,estudiante.getCe() + "BuenaConducta.docx");
+
     }
 
     public static void generarConstanciaRetiro(estudiante estudiante, representante repre_estudiante, String directora){
@@ -527,11 +591,11 @@ public class docGen {
         agregarNoBreakHyphen(paragraph);
         agregarParrafoCEstilo(paragraph, " " + estudiante.getLugarNac(), false,false,1,false,36,1);
         agregarNoBreakHyphen(paragraph);
-        agregarParrafoCEstilo(paragraph, "cursó el ",false,false,0,false,36,1);
+        agregarParrafoCEstilo(paragraph, "cursó el Grupo",false,false,0,false,36,1);
         agregarNoBreakHyphen(paragraph);
         agregarParrafoCEstilo(paragraph, " " + estudiante.getNivel(), false,false,1,false,36,1);
         agregarNoBreakHyphen(paragraph);
-        agregarParrafoCEstilo(paragraph, "Grupo de la etapa preescolar en esta institución correspondiente al periodo escolar"
+        agregarParrafoCEstilo(paragraph, " de la etapa Preescolar____, Maternal____ en esta institución correspondiente al periodo escolar"
                 ,false,false,0,false,36,1);
         agregarNoBreakHyphen(paragraph);
         agregarParrafoCEstilo(paragraph, " " + estudiante.getPeriodoCursado(), false,false,1,false,36,1);
@@ -757,18 +821,6 @@ public class docGen {
 
         guardarArchivo(packWord, String.valueOf(nomina.getCi()) + "Licencia.docx");
 
-    }
-
-    public static void main(String args[]){
-
-        estudiante ej = connectDB.fetchEstudiante("E-10000000");
-        representante ej1 = connectDB.fetchRepresentante(12345678);
-        generarConstanciaRetiro(ej,ej1,"Fulana de Tal");
-
-
-//        generarLicenciaMedica(, "C.E.I Arnoldo Gabaldón", "Maturín", "Monagas",
-//                "Boqueron","Fractura", 10, LocalDate.of(2021,10,1),
-//                LocalDate.of(2021,10,30));
     }
 
 }

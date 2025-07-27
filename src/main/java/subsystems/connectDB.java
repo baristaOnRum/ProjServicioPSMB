@@ -532,8 +532,8 @@ public class connectDB {
             sql = "SELECT " +
                     "nombres, apellidos, lugarNac, fechaNac, " +
                     "ciestudiante, edad, menores6, estdCiv, nacionalidad, " +
-                    "direccionHab, direccionTrabj, ocupacion, gradoEstudios, " +
-                    "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
+                    "direccionHab, direccionTrabj, ocupacion, gradoEstudios, nivel," +
+                    "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img, periodioCurso " +
                     "FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
             try {
                 conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -592,14 +592,7 @@ public class connectDB {
 
     public static estudiante fetchEstudiante(String ce){ 
 
-        sql = "SELECT " +
-                "nombres, apellidos, lugarNac, fechaNac, " +
-                "ciEstudiante, edad, procedencia, nacionalidad, " +
-                "tallaCamisa, tallaPantalon, tallaZapato, peso,"+
-                "estatura, periodoCurso, periodoCursado," +
-                "lateralidad, grupoSanguineo, asegurado,"+
-                "cualSeguro, medicoTratante, tlfMedicoTratante " +
-                "FROM estudiante WHERE ciEstudiante = "+ ce;
+        sql = "SELECT * FROM estudiante WHERE ciEstudiante = \""+ ce +"\"";
 
         estudiante estudiante = new estudiante();
 
@@ -615,16 +608,17 @@ public class connectDB {
                 estudiante.setApellidos(rs.getString("apellidos"));
                 estudiante.setLugarNac(rs.getString("lugarNac"));
                 estudiante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-                estudiante.setCe(rs.getString("ceEstudiante"));
+                estudiante.setCe(rs.getString("ciEstudiante"));
                 estudiante.setEdad(rs.getInt("edad"));
+                estudiante.setNivel(rs.getInt("nivel"));
                 estudiante.setProcedencia(rs.getString("procedencia"));
                 estudiante.setNacionalidad(rs.getString("nacionalidad"));
-                estudiante.setTallaCamisa(rs.getInt("tallaCamisa"));
-                estudiante.setTallaPantalon(rs.getInt("tallaPantalon"));
-                estudiante.setTallaZapato(rs.getInt("tallaZapato"));
+                estudiante.setTallaCamisa(rs.getInt("tallaCam"));
+                estudiante.setTallaPantalon(rs.getInt("tallaPant"));
+                estudiante.setTallaZapato(rs.getInt("tallaZap"));
                 estudiante.setPeso(rs.getInt("peso"));
                 estudiante.setEstatura(rs.getInt("estatura"));
-                estudiante.setPeriodoCurso(rs.getInt("periodoCurso"));
+                estudiante.setPeriodoCurso(rs.getInt("periodioCurso"));
                 estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
                 estudiante.setLateralidad(rs.getBoolean("lateralidad"));
                 estudiante.setGrupoSanguineo(rs.getString("grupoSanguineo"));
