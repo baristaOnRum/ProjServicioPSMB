@@ -1705,9 +1705,13 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="headderEstudiante" alignment="0" pref="1336" max="32767" attributes="0"/>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="btn_aceptarInscripcionNiño" min="-2" pref="138" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="panelRepresentanteEstd" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="img_infEstudiante" min="-2" max="-2" attributes="0"/>
@@ -1715,10 +1719,6 @@
                           <Component id="panelDatosEstd" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="panelDocumentosEstd" alignment="0" pref="1324" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="btn_aceptarInscripcionNiño" min="-2" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -1730,16 +1730,16 @@
                   <Component id="headderEstudiante" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="img_infEstudiante" alignment="0" max="32767" attributes="0"/>
-                      <Component id="panelDatosEstd" alignment="0" max="32767" attributes="0"/>
+                      <Component id="img_infEstudiante" max="32767" attributes="0"/>
+                      <Component id="panelDatosEstd" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="panelRepresentanteEstd" min="-2" pref="236" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="panelDocumentosEstd" min="-2" pref="144" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btn_aceptarInscripcionNiño" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="89" max="32767" attributes="0"/>
+                  <Component id="panelDocumentosEstd" min="-2" pref="116" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btn_aceptarInscripcionNiño" pref="32" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1805,8 +1805,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Datos">
-                    <Property name="tabTitle" type="java.lang.String" value="Datos"/>
+                  <JTabbedPaneConstraints tabName="Datos Personales">
+                    <Property name="tabTitle" type="java.lang.String" value="Datos Personales"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -1814,91 +1814,60 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbl_nombreNiñ" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_nombreNiñ" min="-2" pref="256" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbl_apellidoNiñ" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_apellidoNiñ" min="-2" pref="264" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbl_sexoNiñ" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdb_mascNiñ" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdb_femNiñ" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="215" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="label_procedencia_niñ" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="label_tallas_niñ" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="label_camisa_niñ" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_edadNiñ" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="text_tall_camisa_niñ" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="txt_edadNiñ" min="-2" pref="102" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="label_tall_pantalon_niñ" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="label_edad_niñ" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="text_tall_pantalon_niñ" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="text_edad_niñ" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="label_tall_zapato_niñ" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_lugarNacNiñ" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="text_tall_zapato_niñ" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="txt_lugarNacNiñ" min="-2" pref="197" max="-2" attributes="0"/>
                                               </Group>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="label_medidas_niñ" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="label_peso_niñ" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="text_peso_niñ" min="-2" pref="70" max="-2" attributes="0"/>
+                                                  <Component id="lbl_estadoNiñ" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="label_estatura_niñ" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_estadoNiñ" min="-2" pref="259" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="text_estatura_niñ" min="-2" pref="70" max="-2" attributes="0"/>
+                                                  <Component id="lbl_munNacNiñ" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txt_municNiñ" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbl_edadNiñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_edadNiñ" min="-2" pref="102" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="label_edad_niñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_edad_niñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbl_lugarNacNiñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_lugarNacNiñ" min="-2" pref="257" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                          <Component id="lbl_estadoNiñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_estadoNiñ" min="-2" pref="259" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbl_munNacNiñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_municNiñ" min="-2" pref="180" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="lbl_nacionalidadNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="txt_nacionalidadNiñ" min="-2" pref="158" max="-2" attributes="0"/>
                                       </Group>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbl_nombreNiñ" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_procedencia_niñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_nombreNiñ" min="-2" pref="324" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbl_apellidoNiñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_apellidoNiñ" min="-2" pref="264" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbl_sexoNiñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdb_mascNiñ" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdb_femNiñ" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
                                           <Component id="radio_hogar_niñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="radio_multihogar_niñ" min="-2" max="-2" attributes="0"/>
@@ -1913,8 +1882,48 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="radio_otros_niñ" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_tallas_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_camisa_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_tall_camisa_niñ" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_tall_pantalon_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_tall_pantalon_niñ" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_tall_zapato_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_tall_zapato_niñ" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_medidas_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_peso_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_peso_niñ" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="label_estatura_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_estatura_niñ" min="-2" pref="70" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_edadCaminar" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_edadCaminar" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbl_lateralidad" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_diestro" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_zurdo" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_ambidiestro" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_desconocido" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1952,8 +1961,6 @@
                               <Component id="lbl_nacionalidadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="label_procedencia_niñ" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="radio_hogar_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1962,35 +1969,36 @@
                                   <Component id="radio_guarderia_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="radio_otro_plantel_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="radio_otros_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_procedencia_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="radio_multihogar_niñ" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="label_tallas_niñ" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="label_camisa_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_tall_camisa_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_tall_pantalon_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_tall_pantalon_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_tall_zapato_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_tall_zapato_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="label_medidas_niñ" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="label_peso_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_peso_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_estatura_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_estatura_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="label_tallas_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_camisa_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_tall_camisa_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_tall_pantalon_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_tall_pantalon_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_tall_zapato_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_tall_zapato_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_medidas_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_peso_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_peso_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_estatura_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_estatura_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_edadCaminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_edadCaminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_lateralidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdo_diestro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdo_zurdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdo_ambidiestro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdo_desconocido" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="140" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2192,6 +2200,38 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="text_estatura_ni&#xf1;">
                 </Component>
+                <Component class="javax.swing.JLabel" name="lbl_edadCaminar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A que edad comenzo a caminar"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_edadCaminar">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_lateralidad">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lateralidad"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_diestro">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Diestro"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_zurdo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Zurdo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_ambidiestro">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ambidiestro"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_desconocido">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No se sabe"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="diagEstd">
@@ -2202,8 +2242,8 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Antecedentes de Salud">
-                    <Property name="tabTitle" type="java.lang.String" value="Antecedentes de Salud"/>
+                  <JTabbedPaneConstraints tabName="Datos de Salud">
+                    <Property name="tabTitle" type="java.lang.String" value="Datos de Salud"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -2211,92 +2251,147 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="check_motor_no" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_motor_cual" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_motor_cual" min="-2" pref="373" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="label_motor" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_lenguaje" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_cognitivo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="check_cognitivo_si" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_lenguaje_si" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_motor_si" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="check_cognitivo_no" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="label_cognitivo_cual" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_cognitivo_cual" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="check_lenguaje_no" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="label_lenguaje_cual" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_lenguaje_cual" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="label_problema_desarr" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="label_problema" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="check_problema_si" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="check_problema_no" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="label_problema_cual" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_problema_cual" min="-2" pref="235" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="label_alergia" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="check_alergia_si" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="check_alergia_no" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                          <Component id="label_alergia_cual" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="text_alergia_cual" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_condicion_cual" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_condicion_cual" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lbl_prmParto" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_siPrmParto" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_noPrmParto" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="lbl_promPartoCual" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txt_prmPartocual" pref="177" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lbl_motor" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_siPromMotr" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_noPrmMotr" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="label_motor_cual" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="text_motor_cual" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="label_lenguaje" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_siPromLeng" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_noPrmLeng" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="label_lenguaje_cual" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="text_lenguaje_cual" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="label_cognitivo" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_siPromCog" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_noPromCog" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="label_cognitivo_cual" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="text_cognitivo_cual" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="label_alergia" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_siAlergia" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rdo_noAlergia" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="label_alergia_cual" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="text_alergia_cual" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_embPlan" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_siEmbPLan" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_noEmbPlan" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lbl_prbDesarr" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_condicion_cual" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_condicion_cual" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_condicion" min="-2" pref="265" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_siCondExtra" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdo_noCondExtra" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_enfPadecidas" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_enfPadecidas" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_grpoSang" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_grpoSang" min="-2" pref="263" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lbl_fiebreAlta" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_fiebreAlta" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lbl_vac" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_condicion" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_alergiaMed" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_condicion_si" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rdo_siAlergiaMed" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rdo_noAlergiaMed" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="label_alergiaMed_cual" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_alergia_cual1" min="-2" pref="222" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="check_condicion_no" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="lbl_otraVac" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_otraVac" pref="326" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="chk_bcg" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chk_triple" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chk_polio" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chk_tifus" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chk_viruela" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbl_medicTratante" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_medicoTratante" min="-2" pref="432" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lbl_tlfMedicTrat" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_tlfMedicoTrat" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          <EmptySpace pref="158" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2305,120 +2400,167 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="label_problema" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_problema_si" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_problema_no" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_problema_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_problema_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_embPlan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_siEmbPLan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_noEmbPlan" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="label_problema_desarr" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbl_prmParto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_promPartoCual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_prmPartocual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_siPrmParto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_noPrmParto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="label_motor" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="check_motor_si" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_motor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_motor_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="text_motor_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rdo_siPromMotr" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rdo_noPrmMotr" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="label_motor_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="text_motor_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="check_motor_no" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="check_lenguaje_no" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="label_lenguaje_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="text_lenguaje_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="check_lenguaje_si" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="label_lenguaje" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="check_cognitivo_no" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="label_cognitivo_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="text_cognitivo_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="check_cognitivo_si" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="label_cognitivo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="lbl_prbDesarr" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="check_alergia_si" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_alergia_no" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_lenguaje_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_lenguaje_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_lenguaje" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_siPromLeng" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_noPrmLeng" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                          <Component id="label_cognitivo_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_cognitivo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdo_siPromCog" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdo_noPromCog" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="text_cognitivo_cual" alignment="1" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="label_alergia_cual" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="text_alergia_cual" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="label_alergia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_siAlergia" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rdo_noAlergia" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="check_condicion_si" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_condicion_no" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_condicion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="label_condicion" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="rdo_siCondExtra" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdo_noCondExtra" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="label_condicion_cual" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_condicion_cual" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
+                                      <Component id="text_condicion_cual" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbl_enfPadecidas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_enfPadecidas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbl_grpoSang" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_grpoSang" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbl_fiebreAlta" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txt_fiebreAlta" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbl_vac" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="46" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="label_alergiaMed_cual" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_alergia_cual1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_alergiaMed" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdo_siAlergiaMed" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdo_noAlergiaMed" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_bcg" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_triple" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_polio" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_tifus" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_viruela" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_otraVac" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_otraVac" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_medicTratante" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_medicoTratante" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                  <Component id="lbl_tlfMedicTrat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_tlfMedicoTrat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="label_problema">
+                <Component class="javax.swing.JLabel" name="lbl_prmParto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Presento algun problema durante el parto:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_problema_si">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Si"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="check_problema_no">
+                <Component class="javax.swing.JRadioButton" name="rdo_noPrmParto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_problema_cual">
+                <Component class="javax.swing.JRadioButton" name="rdo_siPrmParto">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_promPartoCual">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cual?"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="text_problema_cual">
+                <Component class="javax.swing.JTextField" name="txt_prmPartocual">
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_problema_desarr">
+                <Component class="javax.swing.JLabel" name="lbl_prbDesarr">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Presento problemas durante su desarrollo:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_motor">
+                <Component class="javax.swing.JLabel" name="lbl_motor">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Motor"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_motor_si">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Si"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_motor_siActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="check_motor_no">
+                <Component class="javax.swing.JRadioButton" name="rdo_noPrmMotr">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_siPromMotr">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_motor_cual">
@@ -2433,12 +2575,12 @@
                     <Property name="text" type="java.lang.String" value="Lenguaje"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_lenguaje_no">
+                <Component class="javax.swing.JRadioButton" name="rdo_noPrmLeng">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_lenguaje_si">
+                <Component class="javax.swing.JRadioButton" name="rdo_siPromLeng">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Si"/>
                   </Properties>
@@ -2455,15 +2597,18 @@
                     <Property name="text" type="java.lang.String" value="Cognitivo"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_cognitivo_si">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Si"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="check_cognitivo_no">
+                <Component class="javax.swing.JRadioButton" name="rdo_noPromCog">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_siPromCog">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdo_siPromCogActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_cognitivo_cual">
                   <Properties>
@@ -2474,20 +2619,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_alergia">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Es alergico a algun medicamento:"/>
+                    <Property name="text" type="java.lang.String" value="Es alergico a algo:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_alergia_si">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Si"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_alergia_siActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="check_alergia_no">
+                <Component class="javax.swing.JRadioButton" name="rdo_noAlergia">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_siAlergia">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_alergia_cual">
@@ -2497,23 +2639,42 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="text_alergia_cual">
                 </Component>
+                <Component class="javax.swing.JLabel" name="label_alergiaMed">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Es alergico a algun medicamento:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_noAlergiaMed">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_siAlergiaMed">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="label_alergiaMed_cual">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cual?"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="text_alergia_cual1">
+                </Component>
                 <Component class="javax.swing.JLabel" name="label_condicion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="&lt;html&gt;Presenta su ni&#xf1;o(a) actualmente alguna condicion&lt;br&gt;&#xa;que amerite del conocimiento del docente:&#xa;&lt;/html&gt;"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_condicion_no">
+                <Component class="javax.swing.JRadioButton" name="rdo_noCondExtra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="check_condicion_si">
+                <Component class="javax.swing.JRadioButton" name="rdo_siCondExtra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Si"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_condicion_siActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_condicion_cual">
                   <Properties>
@@ -2521,6 +2682,495 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="text_condicion_cual">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_embPlan">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Embarazo planificado"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_siEmbPLan">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdo_noEmbPlan">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_enfPadecidas">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Enfermedades padecidas:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_enfPadecidas">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_grpoSang">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Grupo sanguineo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_grpoSang">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_grpoSangActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_fiebreAlta">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="En caso de fiebre alta que medicamenteo ese le suministra:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_fiebreAlta">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_fiebreAltaActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_vac">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Vacunas administradas:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_bcg">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="BCG"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_triple">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="TRIPLE"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_tripleActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_polio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="POLIO"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_tifus">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="TIFUS"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_viruela">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Viruela"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_otraVac">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Otras"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_otraVac">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_medicTratante">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Medico tratante"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_medicoTratante">
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_tlfMedicoTrat">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_tlfMedicTrat">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tlf Medico tratante"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="otros">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="ff" red="cc" type="rgb"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Otros">
+                    <Property name="tabTitle" type="java.lang.String" value="Otros"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_cmeAyda" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_buenAptito" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_horaAcostar" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_horaLevantar" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="lbl_qnDuermeNino" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextField3" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="lbl_duermTarde" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton17" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton18" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton19" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton21" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton20" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton11" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton12" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton13" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextField5" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTextField4" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton16" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton15" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jRadioButton14" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="287" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_cmeAyda" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_buenAptito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_horaAcostar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_horaLevantar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton16" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton14" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_duermTarde" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton17" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton18" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton19" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_qnDuermeNino" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="113" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lbl_cmeAyda">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Come ayudado por un Adulto"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_buenAptito">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tiene buen Apetito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_horaAcostar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A que hora se acuesta"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField1">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_horaLevantar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A que hora se levanta"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField2">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_duermTarde">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Duerme en la tarde"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Aveces"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_qnDuermeNino">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Con quien duerme el ni&#xf1;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField3">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Chupa dedo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton9ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Aveces"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A que edad dejo de usar pa&#xf1;ales"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="jTextField4"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel9">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A que edad"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="jTextField5"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Se orina en la ropa durante el dia"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Aveces"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Se orina en la ropa durante la noche"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton14">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Aveces"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton14ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton15">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton16">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel12">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Evacua durante el dia"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton17">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton18">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton19">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Aveces"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton20">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="No"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton20ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel13">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Se asea solo luego del ba&#xf1;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButton21">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Si"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -3616,6 +4266,11 @@
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_aut">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="cc" type="rgb"/>
+                </Property>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Autorizado para Retiro">
@@ -3627,17 +4282,64 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1324" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="scrl_autRetiro" alignment="0" min="-2" pref="659" max="-2" attributes="0"/>
+                              <Component id="lbl_autRetiro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="659" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="201" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="16" max="32767" attributes="0"/>
+                          <Component id="lbl_autRetiro" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="scrl_autRetiro" min="-2" pref="151" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lbl_autRetiro">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Datos autorizado para retiro:"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="scrl_autRetiro">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTable" name="tbl_autRetiro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="5" rowCount="5">
+                            <Column editable="true" title="Cedula" type="java.lang.Integer"/>
+                            <Column editable="true" title="Nombre" type="java.lang.String"/>
+                            <Column editable="true" title="Apellido" type="java.lang.String"/>
+                            <Column editable="true" title="Telefono 1" type="java.lang.String"/>
+                            <Column editable="true" title="Telefono 2" type="java.lang.String"/>
+                          </Table>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_socioFamiliares">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="ff" type="rgb"/>
+                </Property>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Ambiente Socio Familiar">
@@ -3651,27 +4353,59 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbl_casa" min="-2" max="-2" attributes="0"/>
+                                  <Component id="scrl_familiarExtra" min="-2" pref="590" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rdio_propia" min="-2" max="-2" attributes="0"/>
+                                  <Component id="chk_otroConsult" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="rdio_prestada" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rdio_alquilada" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_otroConsult" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbl_tipocasa" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rdio_zinc" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="rdio_prestada1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rdio_alquilada1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_casa" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="rdio_propia" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="rdio_prestada" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="rdio_alquilada" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_tipocasa" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                          <Component id="rdio_casa" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="rdio_apartamento" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="rdio_zinc" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="rdio_otro" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="lbl_familiarExtra" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lbl_consultas" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="lbl_cuidaNiñoHogar" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_cuidaNiñoHogar" min="-2" pref="135" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="chk_pspg" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chk_psic" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chk_neur" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chk_terpLenguaje" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="1002" max="32767" attributes="0"/>
+                          <EmptySpace pref="292" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3684,15 +4418,38 @@
                               <Component id="rdio_propia" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="rdio_prestada" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="rdio_alquilada" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_cuidaNiñoHogar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_cuidaNiñoHogar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_tipocasa" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="rdio_zinc" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdio_prestada1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdio_alquilada1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_casa" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_apartamento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdio_otro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_consultas" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="147" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_familiarExtra" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_pspg" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_psic" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_neur" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_terpLenguaje" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="scrl_familiarExtra" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="chk_otroConsult" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_otroConsult" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="86" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3720,7 +4477,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_tipocasa">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Tipo de Vivienda"/>
+                    <Property name="text" type="java.lang.String" value="Tipo de Vivienda:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="rdio_zinc">
@@ -3728,15 +4485,89 @@
                     <Property name="text" type="java.lang.String" value="Zinc"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="rdio_prestada1">
+                <Component class="javax.swing.JRadioButton" name="rdio_casa">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Prestada"/>
+                    <Property name="text" type="java.lang.String" value="Casa"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdio_casaActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="rdio_apartamento">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Apartamento"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="rdio_alquilada1">
+                <Component class="javax.swing.JRadioButton" name="rdio_otro">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Alquilada"/>
+                    <Property name="text" type="java.lang.String" value="Otro"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_familiarExtra">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Personas que vivan en el hogar con el ni&#xf1;o(a):"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="scrl_familiarExtra">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTable" name="tbl_familiarExtra">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="5" rowCount="5">
+                            <Column editable="true" title="Nombre y Apellido" type="java.lang.String"/>
+                            <Column editable="true" title="Sexo" type="java.lang.String"/>
+                            <Column editable="true" title="Edad" type="java.lang.Integer"/>
+                            <Column editable="true" title="Parentezco" type="java.lang.String"/>
+                            <Column editable="true" title="Ocupacion" type="java.lang.String"/>
+                          </Table>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="lbl_cuidaNi&#xf1;oHogar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quien cuida al ni&#xf1;o(a) en el hogar:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_cuidaNi&#xf1;oHogar">
+                </Component>
+                <Component class="javax.swing.JLabel" name="lbl_consultas">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ha asistido a alguna de estas consultas:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_pspg">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Psicopedagogo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_psic">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Psicologo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_neur">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Neurologos"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_terpLenguaje">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Terapias del Lenguaje"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_otroConsult">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Otro"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_otroConsult">
                 </Component>
               </SubComponents>
             </Container>
@@ -3757,57 +4588,51 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_cedula" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_ci_madre" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_ci_padre" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_ci_representante" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_responsable" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="text_responsable" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_persona" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="text_persona" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="label_originales" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_originales" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label_copias" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_copias" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label_partida" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_partida" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label_vacunas" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="check_vacunas" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="label_observaciones" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="label_cedula" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="scroll_observaciones" min="-2" pref="544" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="check_ci_madre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ci_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_ci_representante" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_responsable" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_responsable" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_persona" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_persona" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="label_fecha" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="text_fecha" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_originales" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_originales" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label_copias" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_copias" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label_partida" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_partida" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label_vacunas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="check_vacunas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="label_observaciones" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="scroll_observaciones" min="-2" pref="544" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3846,15 +4671,15 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="label_persona" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="text_persona" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                      <Component id="label_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Component id="scroll_observaciones" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="label_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_fecha" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

@@ -198,38 +198,111 @@ public void createConfPanel(){
         text_peso_niñ = new javax.swing.JTextField();
         label_estatura_niñ = new javax.swing.JLabel();
         text_estatura_niñ = new javax.swing.JTextField();
+        lbl_edadCaminar = new javax.swing.JLabel();
+        txt_edadCaminar = new javax.swing.JTextField();
+        lbl_lateralidad = new javax.swing.JLabel();
+        rdo_diestro = new javax.swing.JRadioButton();
+        rdo_zurdo = new javax.swing.JRadioButton();
+        rdo_ambidiestro = new javax.swing.JRadioButton();
+        rdo_desconocido = new javax.swing.JRadioButton();
         diagEstd = new javax.swing.JPanel();
-        label_problema = new javax.swing.JLabel();
-        check_problema_si = new javax.swing.JCheckBox();
-        check_problema_no = new javax.swing.JCheckBox();
-        label_problema_cual = new javax.swing.JLabel();
-        text_problema_cual = new javax.swing.JTextField();
-        label_problema_desarr = new javax.swing.JLabel();
-        label_motor = new javax.swing.JLabel();
-        check_motor_si = new javax.swing.JCheckBox();
-        check_motor_no = new javax.swing.JCheckBox();
+        lbl_prmParto = new javax.swing.JLabel();
+        rdo_noPrmParto = new javax.swing.JRadioButton();
+        rdo_siPrmParto = new javax.swing.JRadioButton();
+        lbl_promPartoCual = new javax.swing.JLabel();
+        txt_prmPartocual = new javax.swing.JTextField();
+        lbl_prbDesarr = new javax.swing.JLabel();
+        lbl_motor = new javax.swing.JLabel();
+        rdo_noPrmMotr = new javax.swing.JRadioButton();
+        rdo_siPromMotr = new javax.swing.JRadioButton();
         label_motor_cual = new javax.swing.JLabel();
         text_motor_cual = new javax.swing.JTextField();
         label_lenguaje = new javax.swing.JLabel();
-        check_lenguaje_no = new javax.swing.JCheckBox();
-        check_lenguaje_si = new javax.swing.JCheckBox();
+        rdo_noPrmLeng = new javax.swing.JRadioButton();
+        rdo_siPromLeng = new javax.swing.JRadioButton();
         label_lenguaje_cual = new javax.swing.JLabel();
         text_lenguaje_cual = new javax.swing.JTextField();
         label_cognitivo = new javax.swing.JLabel();
-        check_cognitivo_si = new javax.swing.JCheckBox();
-        check_cognitivo_no = new javax.swing.JCheckBox();
+        rdo_noPromCog = new javax.swing.JRadioButton();
+        rdo_siPromCog = new javax.swing.JRadioButton();
         label_cognitivo_cual = new javax.swing.JLabel();
         text_cognitivo_cual = new javax.swing.JTextField();
         label_alergia = new javax.swing.JLabel();
-        check_alergia_si = new javax.swing.JCheckBox();
-        check_alergia_no = new javax.swing.JCheckBox();
+        rdo_noAlergia = new javax.swing.JRadioButton();
+        rdo_siAlergia = new javax.swing.JRadioButton();
         label_alergia_cual = new javax.swing.JLabel();
         text_alergia_cual = new javax.swing.JTextField();
+        label_alergiaMed = new javax.swing.JLabel();
+        rdo_noAlergiaMed = new javax.swing.JRadioButton();
+        rdo_siAlergiaMed = new javax.swing.JRadioButton();
+        label_alergiaMed_cual = new javax.swing.JLabel();
+        text_alergia_cual1 = new javax.swing.JTextField();
         label_condicion = new javax.swing.JLabel();
-        check_condicion_no = new javax.swing.JCheckBox();
-        check_condicion_si = new javax.swing.JCheckBox();
+        rdo_noCondExtra = new javax.swing.JRadioButton();
+        rdo_siCondExtra = new javax.swing.JRadioButton();
         label_condicion_cual = new javax.swing.JLabel();
         text_condicion_cual = new javax.swing.JTextField();
+        lbl_embPlan = new javax.swing.JLabel();
+        rdo_siEmbPLan = new javax.swing.JRadioButton();
+        rdo_noEmbPlan = new javax.swing.JRadioButton();
+        lbl_enfPadecidas = new javax.swing.JLabel();
+        txt_enfPadecidas = new javax.swing.JTextField();
+        lbl_grpoSang = new javax.swing.JLabel();
+        txt_grpoSang = new javax.swing.JTextField();
+        lbl_fiebreAlta = new javax.swing.JLabel();
+        txt_fiebreAlta = new javax.swing.JTextField();
+        lbl_vac = new javax.swing.JLabel();
+        chk_bcg = new javax.swing.JCheckBox();
+        chk_triple = new javax.swing.JCheckBox();
+        chk_polio = new javax.swing.JCheckBox();
+        chk_tifus = new javax.swing.JCheckBox();
+        chk_viruela = new javax.swing.JCheckBox();
+        lbl_otraVac = new javax.swing.JLabel();
+        txt_otraVac = new javax.swing.JTextField();
+        lbl_medicTratante = new javax.swing.JLabel();
+        txt_medicoTratante = new javax.swing.JTextField();
+        txt_tlfMedicoTrat = new javax.swing.JTextField();
+        lbl_tlfMedicTrat = new javax.swing.JLabel();
+        otros = new javax.swing.JPanel();
+        lbl_cmeAyda = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        lbl_buenAptito = new javax.swing.JLabel();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        lbl_horaAcostar = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        lbl_horaLevantar = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        lbl_duermTarde = new javax.swing.JLabel();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        lbl_qnDuermeNino = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jRadioButton11 = new javax.swing.JRadioButton();
+        jRadioButton12 = new javax.swing.JRadioButton();
+        jRadioButton13 = new javax.swing.JRadioButton();
+        jLabel11 = new javax.swing.JLabel();
+        jRadioButton14 = new javax.swing.JRadioButton();
+        jRadioButton15 = new javax.swing.JRadioButton();
+        jRadioButton16 = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
+        jRadioButton17 = new javax.swing.JRadioButton();
+        jRadioButton18 = new javax.swing.JRadioButton();
+        jRadioButton19 = new javax.swing.JRadioButton();
+        jRadioButton20 = new javax.swing.JRadioButton();
+        jLabel13 = new javax.swing.JLabel();
+        jRadioButton21 = new javax.swing.JRadioButton();
         panelRepresentanteEstd = new javax.swing.JTabbedPane();
         dat_madre = new javax.swing.JPanel();
         label_apellido_madre = new javax.swing.JLabel();
@@ -340,6 +413,9 @@ public void createConfPanel(){
         label_tlf_rep = new javax.swing.JLabel();
         text_tlf_rep = new javax.swing.JTextField();
         dat_aut = new javax.swing.JPanel();
+        lbl_autRetiro = new javax.swing.JLabel();
+        scrl_autRetiro = new javax.swing.JScrollPane();
+        tbl_autRetiro = new javax.swing.JTable();
         dat_socioFamiliares = new javax.swing.JPanel();
         lbl_casa = new javax.swing.JLabel();
         rdio_propia = new javax.swing.JRadioButton();
@@ -347,8 +423,21 @@ public void createConfPanel(){
         rdio_alquilada = new javax.swing.JRadioButton();
         lbl_tipocasa = new javax.swing.JLabel();
         rdio_zinc = new javax.swing.JRadioButton();
-        rdio_prestada1 = new javax.swing.JRadioButton();
-        rdio_alquilada1 = new javax.swing.JRadioButton();
+        rdio_casa = new javax.swing.JRadioButton();
+        rdio_apartamento = new javax.swing.JRadioButton();
+        rdio_otro = new javax.swing.JRadioButton();
+        lbl_familiarExtra = new javax.swing.JLabel();
+        scrl_familiarExtra = new javax.swing.JScrollPane();
+        tbl_familiarExtra = new javax.swing.JTable();
+        lbl_cuidaNiñoHogar = new javax.swing.JLabel();
+        txt_cuidaNiñoHogar = new javax.swing.JTextField();
+        lbl_consultas = new javax.swing.JLabel();
+        chk_pspg = new javax.swing.JCheckBox();
+        chk_psic = new javax.swing.JCheckBox();
+        chk_neur = new javax.swing.JCheckBox();
+        chk_terpLenguaje = new javax.swing.JCheckBox();
+        chk_otroConsult = new javax.swing.JCheckBox();
+        txt_otroConsult = new javax.swing.JTextField();
         panelDocumentosEstd = new javax.swing.JPanel();
         label_originales = new javax.swing.JLabel();
         check_originales = new javax.swing.JCheckBox();
@@ -1593,6 +1682,18 @@ public void createConfPanel(){
 
         label_estatura_niñ.setText("Estatura");
 
+        lbl_edadCaminar.setText("A que edad comenzo a caminar");
+
+        lbl_lateralidad.setText("Lateralidad");
+
+        rdo_diestro.setText("Diestro");
+
+        rdo_zurdo.setText("Zurdo");
+
+        rdo_ambidiestro.setText("Ambidiestro");
+
+        rdo_desconocido.setText("No se sabe");
+
         javax.swing.GroupLayout datosEstdLayout = new javax.swing.GroupLayout(datosEstd);
         datosEstd.setLayout(datosEstdLayout);
         datosEstdLayout.setHorizontalGroup(
@@ -1601,77 +1702,51 @@ public void createConfPanel(){
                 .addContainerGap()
                 .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(datosEstdLayout.createSequentialGroup()
-                        .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label_procedencia_niñ)
-                            .addGroup(datosEstdLayout.createSequentialGroup()
-                                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(label_tallas_niñ)
-                                    .addGroup(datosEstdLayout.createSequentialGroup()
-                                        .addComponent(label_camisa_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(label_tall_pantalon_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(label_tall_zapato_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(label_medidas_niñ)
-                                    .addGroup(datosEstdLayout.createSequentialGroup()
-                                        .addComponent(label_peso_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(label_estatura_niñ)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(datosEstdLayout.createSequentialGroup()
-                                .addComponent(lbl_edadNiñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_edadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_edad_niñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_lugarNacNiñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_lugarNacNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(datosEstdLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(lbl_estadoNiñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_estadoNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_munNacNiñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_municNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_nacionalidadNiñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt_nacionalidadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(lbl_nombreNiñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_nombreNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_apellidoNiñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_apellidoNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_sexoNiñ)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdb_mascNiñ)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdb_femNiñ)
+                        .addContainerGap(215, Short.MAX_VALUE))
                     .addGroup(datosEstdLayout.createSequentialGroup()
                         .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(datosEstdLayout.createSequentialGroup()
-                                .addComponent(lbl_nombreNiñ)
+                                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(datosEstdLayout.createSequentialGroup()
+                                        .addComponent(lbl_edadNiñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_edadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(label_edad_niñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lbl_lugarNacNiñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_lugarNacNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(datosEstdLayout.createSequentialGroup()
+                                        .addComponent(lbl_estadoNiñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(txt_estadoNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lbl_munNacNiñ)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_municNiñ)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_nombreNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_apellidoNiñ)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_apellidoNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_sexoNiñ)
-                                .addGap(18, 18, 18)
-                                .addComponent(rdb_mascNiñ)
-                                .addGap(18, 18, 18)
-                                .addComponent(rdb_femNiñ))
+                                .addComponent(lbl_nacionalidadNiñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_nacionalidadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(datosEstdLayout.createSequentialGroup()
+                                .addComponent(label_procedencia_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(radio_hogar_niñ)
                                 .addGap(18, 18, 18)
                                 .addComponent(radio_multihogar_niñ)
@@ -1684,8 +1759,46 @@ public void createConfPanel(){
                                 .addGap(18, 18, 18)
                                 .addComponent(radio_guarderia_niñ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(radio_otros_niñ)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(radio_otros_niñ))
+                            .addGroup(datosEstdLayout.createSequentialGroup()
+                                .addComponent(label_tallas_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_camisa_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_tall_pantalon_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_tall_zapato_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_medidas_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_peso_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(label_estatura_niñ)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(datosEstdLayout.createSequentialGroup()
+                                .addComponent(lbl_edadCaminar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_edadCaminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_lateralidad)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_diestro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_zurdo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_ambidiestro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_desconocido)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         datosEstdLayout.setVerticalGroup(
             datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1716,8 +1829,6 @@ public void createConfPanel(){
                     .addComponent(txt_nacionalidadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nacionalidadNiñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label_procedencia_niñ)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(radio_hogar_niñ)
@@ -1725,99 +1836,148 @@ public void createConfPanel(){
                         .addComponent(radio_mismo_plantel_niñ)
                         .addComponent(radio_guarderia_niñ)
                         .addComponent(radio_otro_plantel_niñ)
-                        .addComponent(radio_otros_niñ))
+                        .addComponent(radio_otros_niñ)
+                        .addComponent(label_procedencia_niñ))
                     .addComponent(radio_multihogar_niñ))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(datosEstdLayout.createSequentialGroup()
-                        .addComponent(label_tallas_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_camisa_niñ)
-                            .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_tall_pantalon_niñ)
-                            .addComponent(label_tall_zapato_niñ)
-                            .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(datosEstdLayout.createSequentialGroup()
-                        .addComponent(label_medidas_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_peso_niñ)
-                            .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_estatura_niñ))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_tallas_niñ)
+                    .addComponent(label_camisa_niñ)
+                    .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_tall_pantalon_niñ)
+                    .addComponent(label_tall_zapato_niñ)
+                    .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_medidas_niñ)
+                    .addComponent(label_peso_niñ)
+                    .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_estatura_niñ))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_edadCaminar)
+                    .addComponent(txt_edadCaminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_lateralidad)
+                    .addComponent(rdo_diestro)
+                    .addComponent(rdo_zurdo)
+                    .addComponent(rdo_ambidiestro)
+                    .addComponent(rdo_desconocido))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
-        panelDatosEstd.addTab("Datos", datosEstd);
+        panelDatosEstd.addTab("Datos Personales", datosEstd);
 
         diagEstd.setBackground(new java.awt.Color(204, 255, 204));
 
-        label_problema.setText("Presento algun problema durante el parto:");
+        lbl_prmParto.setText("Presento algun problema durante el parto:");
 
-        check_problema_si.setText("Si");
+        rdo_noPrmParto.setText("No");
 
-        check_problema_no.setText("No");
+        rdo_siPrmParto.setText("Si");
 
-        label_problema_cual.setText("Cual?");
+        lbl_promPartoCual.setText("Cual?");
 
-        label_problema_desarr.setText("Presento problemas durante su desarrollo:");
+        lbl_prbDesarr.setText("Presento problemas durante su desarrollo:");
 
-        label_motor.setText("Motor");
+        lbl_motor.setText("Motor");
 
-        check_motor_si.setText("Si");
-        check_motor_si.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_motor_siActionPerformed(evt);
-            }
-        });
+        rdo_noPrmMotr.setText("No");
 
-        check_motor_no.setText("No");
+        rdo_siPromMotr.setText("Si");
 
         label_motor_cual.setText("Cual?");
 
         label_lenguaje.setText("Lenguaje");
 
-        check_lenguaje_no.setText("No");
+        rdo_noPrmLeng.setText("No");
 
-        check_lenguaje_si.setText("Si");
+        rdo_siPromLeng.setText("Si");
 
         label_lenguaje_cual.setText("Cual?");
 
         label_cognitivo.setText("Cognitivo");
 
-        check_cognitivo_si.setText("Si");
+        rdo_noPromCog.setText("No");
 
-        check_cognitivo_no.setText("No");
+        rdo_siPromCog.setText("Si");
+        rdo_siPromCog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdo_siPromCogActionPerformed(evt);
+            }
+        });
 
         label_cognitivo_cual.setText("Cual?");
 
-        label_alergia.setText("Es alergico a algun medicamento:");
+        label_alergia.setText("Es alergico a algo:");
 
-        check_alergia_si.setText("Si");
-        check_alergia_si.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_alergia_siActionPerformed(evt);
-            }
-        });
+        rdo_noAlergia.setText("No");
 
-        check_alergia_no.setText("No");
+        rdo_siAlergia.setText("Si");
 
         label_alergia_cual.setText("Cual?");
 
+        label_alergiaMed.setText("Es alergico a algun medicamento:");
+
+        rdo_noAlergiaMed.setText("No");
+
+        rdo_siAlergiaMed.setText("Si");
+
+        label_alergiaMed_cual.setText("Cual?");
+
         label_condicion.setText("<html>Presenta su niño(a) actualmente alguna condicion<br>\nque amerite del conocimiento del docente:\n</html>");
 
-        check_condicion_no.setText("No");
+        rdo_noCondExtra.setText("No");
 
-        check_condicion_si.setText("Si");
-        check_condicion_si.addActionListener(new java.awt.event.ActionListener() {
+        rdo_siCondExtra.setText("Si");
+
+        label_condicion_cual.setText("Cual?");
+
+        lbl_embPlan.setText("Embarazo planificado");
+
+        rdo_siEmbPLan.setText("Si");
+
+        rdo_noEmbPlan.setText("No");
+
+        lbl_enfPadecidas.setText("Enfermedades padecidas:");
+
+        lbl_grpoSang.setText("Grupo sanguineo");
+
+        txt_grpoSang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_condicion_siActionPerformed(evt);
+                txt_grpoSangActionPerformed(evt);
             }
         });
 
-        label_condicion_cual.setText("Cual?");
+        lbl_fiebreAlta.setText("En caso de fiebre alta que medicamenteo ese le suministra:");
+
+        txt_fiebreAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_fiebreAltaActionPerformed(evt);
+            }
+        });
+
+        lbl_vac.setText("Vacunas administradas:");
+
+        chk_bcg.setText("BCG");
+
+        chk_triple.setText("TRIPLE");
+        chk_triple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_tripleActionPerformed(evt);
+            }
+        });
+
+        chk_polio.setText("POLIO");
+
+        chk_tifus.setText("TIFUS");
+
+        chk_viruela.setText("Viruela");
+
+        lbl_otraVac.setText("Otras");
+
+        lbl_medicTratante.setText("Medico tratante");
+
+        lbl_tlfMedicTrat.setText("Tlf Medico tratante");
 
         javax.swing.GroupLayout diagEstdLayout = new javax.swing.GroupLayout(diagEstd);
         diagEstd.setLayout(diagEstdLayout);
@@ -1825,75 +1985,125 @@ public void createConfPanel(){
             diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(diagEstdLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, diagEstdLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(check_motor_no)
-                        .addGap(18, 18, 18)
-                        .addComponent(label_motor_cual)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(diagEstdLayout.createSequentialGroup()
-                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label_motor)
-                            .addComponent(label_lenguaje)
-                            .addComponent(label_cognitivo))
-                        .addGap(27, 27, 27)
-                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(check_cognitivo_si)
-                            .addComponent(check_lenguaje_si)
-                            .addComponent(check_motor_si))
-                        .addGap(18, 18, 18)
-                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(check_cognitivo_no)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_cognitivo_cual)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_cognitivo_cual))
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(check_lenguaje_no)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_lenguaje_cual)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_lenguaje_cual))))
-                    .addGroup(diagEstdLayout.createSequentialGroup()
-                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(label_problema_desarr)
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(label_problema)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_problema_si)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_problema_no)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_problema_cual)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addComponent(label_alergia)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_alergia_si)
-                                .addGap(18, 18, 18)
-                                .addComponent(check_alergia_no)
-                                .addGap(12, 12, 12)
-                                .addComponent(label_alergia_cual)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_alergia_cual)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(103, 103, 103)
                 .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(diagEstdLayout.createSequentialGroup()
-                        .addComponent(label_condicion_cual)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_condicion_cual))
-                    .addGroup(diagEstdLayout.createSequentialGroup()
-                        .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_condicion_si)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                    .addComponent(lbl_prmParto)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_siPrmParto)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_noPrmParto)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(lbl_promPartoCual)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txt_prmPartocual, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                    .addComponent(lbl_motor)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_siPromMotr)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_noPrmMotr)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(label_motor_cual)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(text_motor_cual))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                    .addComponent(label_lenguaje)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_siPromLeng)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_noPrmLeng)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(label_lenguaje_cual)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(text_lenguaje_cual))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                    .addComponent(label_cognitivo)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_siPromCog)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_noPromCog)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(label_cognitivo_cual)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(text_cognitivo_cual))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, diagEstdLayout.createSequentialGroup()
+                                    .addComponent(label_alergia)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_siAlergia)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_noAlergia)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(label_alergia_cual)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(text_alergia_cual)))
+                            .addGroup(diagEstdLayout.createSequentialGroup()
+                                .addComponent(lbl_embPlan)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_siEmbPLan)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_noEmbPlan))
+                            .addComponent(lbl_prbDesarr))
                         .addGap(18, 18, 18)
-                        .addComponent(check_condicion_no)))
-                .addGap(55, 55, 55))
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(diagEstdLayout.createSequentialGroup()
+                                .addComponent(label_condicion_cual)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_condicion_cual))
+                            .addGroup(diagEstdLayout.createSequentialGroup()
+                                .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_siCondExtra)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_noCondExtra))
+                            .addGroup(diagEstdLayout.createSequentialGroup()
+                                .addComponent(lbl_enfPadecidas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_enfPadecidas))
+                            .addGroup(diagEstdLayout.createSequentialGroup()
+                                .addComponent(lbl_grpoSang)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_grpoSang, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_fiebreAlta)
+                            .addComponent(txt_fiebreAlta)
+                            .addComponent(lbl_vac)))
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addComponent(label_alergiaMed)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdo_siAlergiaMed)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rdo_noAlergiaMed)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_alergiaMed_cual)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_alergia_cual1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(diagEstdLayout.createSequentialGroup()
+                                .addComponent(lbl_otraVac)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_otraVac, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE))
+                            .addGroup(diagEstdLayout.createSequentialGroup()
+                                .addComponent(chk_bcg)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chk_triple)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chk_polio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chk_tifus)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chk_viruela))))
+                    .addGroup(diagEstdLayout.createSequentialGroup()
+                        .addComponent(lbl_medicTratante)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_medicoTratante, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_tlfMedicTrat)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_tlfMedicoTrat)))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         diagEstdLayout.setVerticalGroup(
             diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1902,59 +2112,344 @@ public void createConfPanel(){
                 .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(diagEstdLayout.createSequentialGroup()
                         .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_problema)
-                            .addComponent(check_problema_si)
-                            .addComponent(check_problema_no)
-                            .addComponent(label_problema_cual)
-                            .addComponent(text_problema_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_embPlan)
+                            .addComponent(rdo_siEmbPLan)
+                            .addComponent(rdo_noEmbPlan))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_problema_desarr)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_prmParto)
+                            .addComponent(lbl_promPartoCual)
+                            .addComponent(txt_prmPartocual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rdo_siPrmParto)
+                            .addComponent(rdo_noPrmParto))
                         .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(34, 34, 34)
                                 .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label_motor)
-                                    .addComponent(check_motor_si)))
-                            .addGroup(diagEstdLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lbl_motor)
                                     .addComponent(label_motor_cual)
                                     .addComponent(text_motor_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(check_motor_no))
+                                    .addComponent(rdo_siPromMotr)
+                                    .addComponent(rdo_noPrmMotr)))
+                            .addGroup(diagEstdLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(check_lenguaje_no)
-                                    .addComponent(label_lenguaje_cual)
-                                    .addComponent(text_lenguaje_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(check_lenguaje_si)
-                                    .addComponent(label_lenguaje))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(check_cognitivo_no)
-                                    .addComponent(label_cognitivo_cual)
-                                    .addComponent(text_cognitivo_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(check_cognitivo_si)
-                                    .addComponent(label_cognitivo))))
+                                .addComponent(lbl_prbDesarr)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(check_alergia_si)
-                            .addComponent(check_alergia_no)
+                            .addComponent(label_lenguaje_cual)
+                            .addComponent(text_lenguaje_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_lenguaje)
+                            .addComponent(rdo_siPromLeng)
+                            .addComponent(rdo_noPrmLeng))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_cognitivo_cual)
+                                .addComponent(label_cognitivo)
+                                .addComponent(rdo_siPromCog)
+                                .addComponent(rdo_noPromCog))
+                            .addComponent(text_cognitivo_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_alergia_cual)
                             .addComponent(text_alergia_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_alergia)))
+                            .addComponent(label_alergia)
+                            .addComponent(rdo_siAlergia)
+                            .addComponent(rdo_noAlergia)))
                     .addGroup(diagEstdLayout.createSequentialGroup()
-                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(check_condicion_si)
-                            .addComponent(check_condicion_no)
-                            .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(label_condicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(rdo_siCondExtra)
+                                .addComponent(rdo_noCondExtra)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_condicion_cual)
-                            .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                            .addComponent(text_condicion_cual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_enfPadecidas)
+                            .addComponent(txt_enfPadecidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_grpoSang)
+                            .addComponent(txt_grpoSang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_fiebreAlta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_fiebreAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_vac)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_alergiaMed_cual)
+                    .addComponent(text_alergia_cual1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_alergiaMed)
+                    .addComponent(rdo_siAlergiaMed)
+                    .addComponent(rdo_noAlergiaMed)
+                    .addComponent(chk_bcg)
+                    .addComponent(chk_triple)
+                    .addComponent(chk_polio)
+                    .addComponent(chk_tifus)
+                    .addComponent(chk_viruela))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_otraVac)
+                    .addComponent(txt_otraVac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_medicTratante)
+                    .addComponent(txt_medicoTratante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(diagEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_tlfMedicTrat)
+                        .addComponent(txt_tlfMedicoTrat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panelDatosEstd.addTab("Antecedentes de Salud", diagEstd);
+        panelDatosEstd.addTab("Datos de Salud", diagEstd);
+
+        otros.setBackground(new java.awt.Color(204, 255, 204));
+
+        lbl_cmeAyda.setText("Come ayudado por un Adulto");
+
+        jRadioButton1.setText("Si");
+
+        jRadioButton2.setText("No");
+
+        lbl_buenAptito.setText("Tiene buen Apetito");
+
+        jRadioButton3.setText("Si");
+
+        jRadioButton4.setText("No");
+
+        lbl_horaAcostar.setText("A que hora se acuesta");
+
+        lbl_horaLevantar.setText("A que hora se levanta");
+
+        lbl_duermTarde.setText("Duerme en la tarde");
+
+        jRadioButton5.setText("Si");
+
+        jRadioButton6.setText("No");
+
+        jRadioButton7.setText("Aveces");
+
+        lbl_qnDuermeNino.setText("Con quien duerme el niño");
+
+        jLabel7.setText("Chupa dedo");
+
+        jRadioButton8.setText("Si");
+
+        jRadioButton9.setText("No");
+        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton9ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton10.setText("Aveces");
+
+        jLabel8.setText("A que edad dejo de usar pañales");
+
+        jTextField4.setText("jTextField4");
+
+        jLabel9.setText("A que edad");
+
+        jTextField5.setText("jTextField5");
+
+        jLabel10.setText("Se orina en la ropa durante el dia");
+
+        jRadioButton11.setText("Si");
+
+        jRadioButton12.setText("No");
+
+        jRadioButton13.setText("Aveces");
+
+        jLabel11.setText("Se orina en la ropa durante la noche");
+
+        jRadioButton14.setText("Aveces");
+        jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton14ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton15.setText("No");
+
+        jRadioButton16.setText("Si");
+
+        jLabel12.setText("Evacua durante el dia");
+
+        jRadioButton17.setText("Si");
+
+        jRadioButton18.setText("No");
+
+        jRadioButton19.setText("Aveces");
+
+        jRadioButton20.setText("No");
+        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton20ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("Se asea solo luego del baño");
+
+        jRadioButton21.setText("Si");
+
+        javax.swing.GroupLayout otrosLayout = new javax.swing.GroupLayout(otros);
+        otros.setLayout(otrosLayout);
+        otrosLayout.setHorizontalGroup(
+            otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(otrosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(otrosLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton10))
+                    .addGroup(otrosLayout.createSequentialGroup()
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(lbl_cmeAyda)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton2))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(lbl_buenAptito)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton4))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(lbl_horaAcostar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(lbl_horaLevantar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(otrosLayout.createSequentialGroup()
+                                    .addComponent(lbl_qnDuermeNino)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextField3))
+                                .addGroup(otrosLayout.createSequentialGroup()
+                                    .addComponent(lbl_duermTarde)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jRadioButton5)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jRadioButton6)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jRadioButton7))))
+                        .addGap(186, 186, 186)
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton19))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton20))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton13))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton14)))))
+                .addContainerGap(287, Short.MAX_VALUE))
+        );
+        otrosLayout.setVerticalGroup(
+            otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(otrosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_cmeAyda)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jLabel8)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_buenAptito)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton4)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_horaAcostar)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(jRadioButton11)
+                    .addComponent(jRadioButton12)
+                    .addComponent(jRadioButton13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_horaLevantar)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11)
+                    .addComponent(jRadioButton16)
+                    .addComponent(jRadioButton15)
+                    .addComponent(jRadioButton14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_duermTarde)
+                    .addComponent(jRadioButton5)
+                    .addComponent(jRadioButton6)
+                    .addComponent(jRadioButton7)
+                    .addComponent(jLabel12)
+                    .addComponent(jRadioButton17)
+                    .addComponent(jRadioButton18)
+                    .addComponent(jRadioButton19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_qnDuermeNino)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel13)
+                        .addComponent(jRadioButton21)
+                        .addComponent(jRadioButton20)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jRadioButton8)
+                    .addComponent(jRadioButton9)
+                    .addComponent(jRadioButton10))
+                .addContainerGap(113, Short.MAX_VALUE))
+        );
+
+        panelDatosEstd.addTab("Otros", otros);
 
         dat_madre.setBackground(new java.awt.Color(255, 204, 204));
         dat_madre.setPreferredSize(new java.awt.Dimension(600, 420));
@@ -2784,18 +3279,56 @@ public void createConfPanel(){
 
         panelRepresentanteEstd.addTab("Datos Representante Legal", dat_rep);
 
+        dat_aut.setBackground(new java.awt.Color(204, 255, 255));
+
+        lbl_autRetiro.setText("Datos autorizado para retiro:");
+
+        tbl_autRetiro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        scrl_autRetiro.setViewportView(tbl_autRetiro);
+
         javax.swing.GroupLayout dat_autLayout = new javax.swing.GroupLayout(dat_aut);
         dat_aut.setLayout(dat_autLayout);
         dat_autLayout.setHorizontalGroup(
             dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1324, Short.MAX_VALUE)
+            .addGroup(dat_autLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_autRetiro))
+                .addContainerGap(659, Short.MAX_VALUE))
         );
         dat_autLayout.setVerticalGroup(
             dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 201, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_autLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(lbl_autRetiro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         panelRepresentanteEstd.addTab("Autorizado para Retiro", dat_aut);
+
+        dat_socioFamiliares.setBackground(new java.awt.Color(255, 204, 255));
 
         lbl_casa.setText("Vivienda:");
 
@@ -2805,13 +3338,58 @@ public void createConfPanel(){
 
         rdio_alquilada.setText("Alquilada");
 
-        lbl_tipocasa.setText("Tipo de Vivienda");
+        lbl_tipocasa.setText("Tipo de Vivienda:");
 
         rdio_zinc.setText("Zinc");
 
-        rdio_prestada1.setText("Prestada");
+        rdio_casa.setText("Casa");
+        rdio_casa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdio_casaActionPerformed(evt);
+            }
+        });
 
-        rdio_alquilada1.setText("Alquilada");
+        rdio_apartamento.setText("Apartamento");
+
+        rdio_otro.setText("Otro");
+
+        lbl_familiarExtra.setText("Personas que vivan en el hogar con el niño(a):");
+
+        tbl_familiarExtra.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre y Apellido", "Sexo", "Edad", "Parentezco", "Ocupacion"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        scrl_familiarExtra.setViewportView(tbl_familiarExtra);
+
+        lbl_cuidaNiñoHogar.setText("Quien cuida al niño(a) en el hogar:");
+
+        lbl_consultas.setText("Ha asistido a alguna de estas consultas:");
+
+        chk_pspg.setText("Psicopedagogo");
+
+        chk_psic.setText("Psicologo");
+
+        chk_neur.setText("Neurologos");
+
+        chk_terpLenguaje.setText("Terapias del Lenguaje");
+
+        chk_otroConsult.setText("Otro");
 
         javax.swing.GroupLayout dat_socioFamiliaresLayout = new javax.swing.GroupLayout(dat_socioFamiliares);
         dat_socioFamiliares.setLayout(dat_socioFamiliaresLayout);
@@ -2819,24 +3397,50 @@ public void createConfPanel(){
             dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
-                        .addComponent(lbl_casa)
+                        .addComponent(scrl_familiarExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(rdio_propia)
+                        .addComponent(chk_otroConsult)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rdio_prestada)
-                        .addGap(18, 18, 18)
-                        .addComponent(rdio_alquilada))
+                        .addComponent(txt_otroConsult))
                     .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
-                        .addComponent(lbl_tipocasa)
-                        .addGap(18, 18, 18)
-                        .addComponent(rdio_zinc)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rdio_prestada1)
-                        .addGap(18, 18, 18)
-                        .addComponent(rdio_alquilada1)))
-                .addContainerGap(1002, Short.MAX_VALUE))
+                        .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                                .addComponent(lbl_casa)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdio_propia)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdio_prestada)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdio_alquilada))
+                            .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                                .addComponent(lbl_tipocasa)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdio_casa)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdio_apartamento)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdio_zinc)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdio_otro))
+                            .addComponent(lbl_familiarExtra))
+                        .addGap(211, 211, 211)
+                        .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_consultas)
+                            .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                                .addComponent(lbl_cuidaNiñoHogar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_cuidaNiñoHogar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                                .addComponent(chk_pspg)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chk_psic)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chk_neur)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chk_terpLenguaje)))))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
         dat_socioFamiliaresLayout.setVerticalGroup(
             dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2846,14 +3450,33 @@ public void createConfPanel(){
                     .addComponent(lbl_casa)
                     .addComponent(rdio_propia)
                     .addComponent(rdio_prestada)
-                    .addComponent(rdio_alquilada))
+                    .addComponent(rdio_alquilada)
+                    .addComponent(lbl_cuidaNiñoHogar)
+                    .addComponent(txt_cuidaNiñoHogar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_tipocasa)
                     .addComponent(rdio_zinc)
-                    .addComponent(rdio_prestada1)
-                    .addComponent(rdio_alquilada1))
-                .addContainerGap(147, Short.MAX_VALUE))
+                    .addComponent(rdio_casa)
+                    .addComponent(rdio_apartamento)
+                    .addComponent(rdio_otro)
+                    .addComponent(lbl_consultas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_familiarExtra)
+                    .addComponent(chk_pspg)
+                    .addComponent(chk_psic)
+                    .addComponent(chk_neur)
+                    .addComponent(chk_terpLenguaje))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrl_familiarExtra, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
+                        .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chk_otroConsult)
+                            .addComponent(txt_otroConsult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 86, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         panelRepresentanteEstd.addTab("Ambiente Socio Familiar", dat_socioFamiliares);
@@ -2913,49 +3536,46 @@ public void createConfPanel(){
                 .addContainerGap()
                 .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                                .addComponent(label_cedula)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ci_representante))
-                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                                .addComponent(label_responsable)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                                .addComponent(label_persona)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                                .addComponent(label_originales)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_originales)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_copias)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_copias)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_partida)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_partida)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_vacunas)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_vacunas)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_observaciones)))
+                        .addComponent(label_cedula)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(check_ci_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ci_padre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_ci_representante))
                     .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
+                        .addComponent(label_responsable)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
+                        .addComponent(label_persona)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_fecha)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
+                        .addComponent(label_originales)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_originales)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_copias)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_copias)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_partida)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_partida)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_vacunas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_vacunas)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_observaciones)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelDocumentosEstdLayout.setVerticalGroup(
             panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2987,12 +3607,12 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_persona)
-                            .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_fecha)
+                                .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(scroll_observaciones))
-                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_fecha)
-                    .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btn_aceptarInscripcionNiño.setText("ACEPTAR");
@@ -3007,18 +3627,18 @@ public void createConfPanel(){
         informacionEstudianteLayout.setHorizontalGroup(
             informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(headderEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
-            .addGroup(informacionEstudianteLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionEstudianteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelRepresentanteEstd)
+                .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(informacionEstudianteLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_aceptarInscripcionNiño, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelRepresentanteEstd, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, informacionEstudianteLayout.createSequentialGroup()
                         .addComponent(img_infEstudiante)
                         .addGap(18, 18, 18)
                         .addComponent(panelDatosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionEstudianteLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btn_aceptarInscripcionNiño)))
+                    .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE))
                 .addContainerGap())
         );
         informacionEstudianteLayout.setVerticalGroup(
@@ -3029,13 +3649,13 @@ public void createConfPanel(){
                 .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(img_infEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelDatosEstd))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(panelRepresentanteEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_aceptarInscripcionNiño)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_aceptarInscripcionNiño, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         headderInfNomina.setBackground(new java.awt.Color(27, 120, 101));
@@ -3663,7 +4283,7 @@ public void createConfPanel(){
       int peso_niñ = Integer.parseInt(text_peso_niñ.getText());
       int estatura_niñ = Integer.parseInt(text_estatura_niñ.getText());
       
-      String prob_parto     = text_problema_cual.getText().trim();
+      String prob_parto     = txt_prmPartocual.getText().trim();
       String prob_leng      = text_lenguaje_cual.getText().trim();
       String prob_cogn      = text_cognitivo_cual.getText().trim();
       String alergia        = text_alergia_cual.getText().trim();
@@ -3989,18 +4609,6 @@ public void createConfPanel(){
         // TODO add your handling code here:
     }//GEN-LAST:event_text_peso_niñActionPerformed
 
-    private void check_motor_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_motor_siActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_motor_siActionPerformed
-
-    private void check_alergia_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_alergia_siActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_alergia_siActionPerformed
-
-    private void check_condicion_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_condicion_siActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_check_condicion_siActionPerformed
-
     private void text_responsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_responsableActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_text_responsableActionPerformed
@@ -4213,6 +4821,38 @@ public void createConfPanel(){
         }
     }//GEN-LAST:event_btn_buscarAutActionPerformed
 
+    private void rdio_casaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdio_casaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdio_casaActionPerformed
+
+    private void rdo_siPromCogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdo_siPromCogActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdo_siPromCogActionPerformed
+
+    private void txt_grpoSangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_grpoSangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_grpoSangActionPerformed
+
+    private void txt_fiebreAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fiebreAltaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_fiebreAltaActionPerformed
+
+    private void chk_tripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_tripleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_tripleActionPerformed
+
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
+
+    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton20ActionPerformed
+
+    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton14ActionPerformed
+
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
     System.exit(0); // Cierra la aplicación Java
@@ -4290,18 +4930,12 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JCheckBox chec_bachiller_madre;
     private javax.swing.JCheckBox chec_bachiller_padre;
     private javax.swing.JCheckBox chec_bachiller_rep;
-    private javax.swing.JCheckBox check_alergia_no;
-    private javax.swing.JCheckBox check_alergia_si;
     private javax.swing.JCheckBox check_c_madre;
     private javax.swing.JCheckBox check_c_padre;
     private javax.swing.JCheckBox check_c_rep;
     private javax.swing.JCheckBox check_ci_madre;
     private javax.swing.JCheckBox check_ci_padre;
     private javax.swing.JCheckBox check_ci_representante;
-    private javax.swing.JCheckBox check_cognitivo_no;
-    private javax.swing.JCheckBox check_cognitivo_si;
-    private javax.swing.JCheckBox check_condicion_no;
-    private javax.swing.JCheckBox check_condicion_si;
     private javax.swing.JCheckBox check_copias;
     private javax.swing.JCheckBox check_d_madre;
     private javax.swing.JCheckBox check_d_padre;
@@ -4309,17 +4943,11 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JCheckBox check_ext_madre;
     private javax.swing.JCheckBox check_ext_padre;
     private javax.swing.JCheckBox check_ext_rep;
-    private javax.swing.JCheckBox check_lenguaje_no;
-    private javax.swing.JCheckBox check_lenguaje_si;
-    private javax.swing.JCheckBox check_motor_no;
-    private javax.swing.JCheckBox check_motor_si;
     private javax.swing.JCheckBox check_no_bachiller_madre;
     private javax.swing.JCheckBox check_no_bachiller_padre;
     private javax.swing.JCheckBox check_no_bachiller_rep;
     private javax.swing.JCheckBox check_originales;
     private javax.swing.JCheckBox check_partida;
-    private javax.swing.JCheckBox check_problema_no;
-    private javax.swing.JCheckBox check_problema_si;
     private javax.swing.JCheckBox check_s_madre;
     private javax.swing.JCheckBox check_s_padre;
     private javax.swing.JCheckBox check_s_rep;
@@ -4336,6 +4964,16 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JCheckBox check_ven_madre;
     private javax.swing.JCheckBox check_ven_padre;
     private javax.swing.JCheckBox check_ven_rep;
+    private javax.swing.JCheckBox chk_bcg;
+    private javax.swing.JCheckBox chk_neur;
+    private javax.swing.JCheckBox chk_otroConsult;
+    private javax.swing.JCheckBox chk_polio;
+    private javax.swing.JCheckBox chk_psic;
+    private javax.swing.JCheckBox chk_pspg;
+    private javax.swing.JCheckBox chk_terpLenguaje;
+    private javax.swing.JCheckBox chk_tifus;
+    private javax.swing.JCheckBox chk_triple;
+    private javax.swing.JCheckBox chk_viruela;
     private javax.swing.JComboBox<String> cmb_filtroBusqAut;
     private javax.swing.JComboBox<String> cmb_filtroBusqEstd;
     private javax.swing.JComboBox<String> cmb_filtroBusqNom;
@@ -4376,7 +5014,42 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel img_logoInstitucionBusqRep;
     private javax.swing.JPanel informacionEstudiante;
     private javax.swing.JPanel informacionNomina;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
+    private javax.swing.JRadioButton jRadioButton13;
+    private javax.swing.JRadioButton jRadioButton14;
+    private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton17;
+    private javax.swing.JRadioButton jRadioButton18;
+    private javax.swing.JRadioButton jRadioButton19;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton20;
+    private javax.swing.JRadioButton jRadioButton21;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel label_alergia;
+    private javax.swing.JLabel label_alergiaMed;
+    private javax.swing.JLabel label_alergiaMed_cual;
     private javax.swing.JLabel label_alergia_cual;
     private javax.swing.JLabel label_apellido_madre;
     private javax.swing.JLabel label_apellido_padre;
@@ -4421,7 +5094,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_lugar_nac_padre;
     private javax.swing.JLabel label_lugar_nac_rep;
     private javax.swing.JLabel label_medidas_niñ;
-    private javax.swing.JLabel label_motor;
     private javax.swing.JLabel label_motor_cual;
     private javax.swing.JLabel label_nacionalidad_madre;
     private javax.swing.JLabel label_nacionalidad_padre;
@@ -4437,9 +5109,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel label_partida;
     private javax.swing.JLabel label_persona;
     private javax.swing.JLabel label_peso_niñ;
-    private javax.swing.JLabel label_problema;
-    private javax.swing.JLabel label_problema_cual;
-    private javax.swing.JLabel label_problema_desarr;
     private javax.swing.JLabel label_procedencia_niñ;
     private javax.swing.JLabel label_responsable;
     private javax.swing.JLabel label_tall_pantalon_niñ;
@@ -4452,6 +5121,8 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_1x10Nomina;
     private javax.swing.JLabel lbl_apellidoNiñ;
     private javax.swing.JLabel lbl_apellidoNomina;
+    private javax.swing.JLabel lbl_autRetiro;
+    private javax.swing.JLabel lbl_buenAptito;
     private javax.swing.JLabel lbl_busqAutorizado;
     private javax.swing.JLabel lbl_busqEstudiante;
     private javax.swing.JLabel lbl_busqNomina;
@@ -4462,17 +5133,32 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_centrVotNomina;
     private javax.swing.JLabel lbl_ciJefComNomina;
     private javax.swing.JLabel lbl_ciNomina;
+    private javax.swing.JLabel lbl_cmeAyda;
     private javax.swing.JLabel lbl_comResNomina;
+    private javax.swing.JLabel lbl_consultas;
+    private javax.swing.JLabel lbl_cuidaNiñoHogar;
+    private javax.swing.JLabel lbl_duermTarde;
+    private javax.swing.JLabel lbl_edadCaminar;
     private javax.swing.JLabel lbl_edadNiñ;
     private javax.swing.JLabel lbl_edadNomina;
+    private javax.swing.JLabel lbl_embPlan;
+    private javax.swing.JLabel lbl_enfPadecidas;
     private javax.swing.JLabel lbl_estadoNiñ;
     private javax.swing.JLabel lbl_estatusNomina;
+    private javax.swing.JLabel lbl_familiarExtra;
     private javax.swing.JLabel lbl_fechIngresoNomina;
     private javax.swing.JLabel lbl_fechNacimNomina;
+    private javax.swing.JLabel lbl_fiebreAlta;
+    private javax.swing.JLabel lbl_grpoSang;
     private javax.swing.JLabel lbl_headderEstudiante;
     private javax.swing.JLabel lbl_headderInfNomina;
+    private javax.swing.JLabel lbl_horaAcostar;
+    private javax.swing.JLabel lbl_horaLevantar;
     private javax.swing.JLabel lbl_jefComNomina;
+    private javax.swing.JLabel lbl_lateralidad;
     private javax.swing.JLabel lbl_lugarNacNiñ;
+    private javax.swing.JLabel lbl_medicTratante;
+    private javax.swing.JLabel lbl_motor;
     private javax.swing.JLabel lbl_munNacNiñ;
     private javax.swing.JLabel lbl_munResNomina;
     private javax.swing.JLabel lbl_munVotNomina;
@@ -4480,8 +5166,13 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_nivelNominaMaestra;
     private javax.swing.JLabel lbl_nombreNiñ;
     private javax.swing.JLabel lbl_nombreNomina;
+    private javax.swing.JLabel lbl_otraVac;
     private javax.swing.JLabel lbl_parrqVotNomina;
+    private javax.swing.JLabel lbl_prbDesarr;
+    private javax.swing.JLabel lbl_prmParto;
+    private javax.swing.JLabel lbl_promPartoCual;
     private javax.swing.JLabel lbl_prrqResNomina;
+    private javax.swing.JLabel lbl_qnDuermeNino;
     private javax.swing.JLabel lbl_rifNomina;
     private javax.swing.JLabel lbl_seccionNominaMaestra;
     private javax.swing.JLabel lbl_sexoNiñ;
@@ -4489,10 +5180,13 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_tipocasa;
     private javax.swing.JLabel lbl_tlf1Nomina;
     private javax.swing.JLabel lbl_tlf2Nomina;
+    private javax.swing.JLabel lbl_tlfMedicTrat;
     private javax.swing.JLabel lbl_turnoNomina;
+    private javax.swing.JLabel lbl_vac;
     private javax.swing.JLabel lbl_votoNomina;
     private javax.swing.JLabel logoPreescolar;
     private javax.swing.JPanel menuPrincipal;
+    private javax.swing.JPanel otros;
     private javax.swing.JPanel panel;
     private javax.swing.JTabbedPane panelDatosEstd;
     private javax.swing.JPanel panelDocumentosEstd;
@@ -4511,21 +5205,47 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JRadioButton rdb_noNomina;
     private javax.swing.JRadioButton rdb_siNomina;
     private javax.swing.JRadioButton rdio_alquilada;
-    private javax.swing.JRadioButton rdio_alquilada1;
+    private javax.swing.JRadioButton rdio_apartamento;
+    private javax.swing.JRadioButton rdio_casa;
+    private javax.swing.JRadioButton rdio_otro;
     private javax.swing.JRadioButton rdio_prestada;
-    private javax.swing.JRadioButton rdio_prestada1;
     private javax.swing.JRadioButton rdio_propia;
     private javax.swing.JRadioButton rdio_zinc;
+    private javax.swing.JRadioButton rdo_ambidiestro;
+    private javax.swing.JRadioButton rdo_desconocido;
+    private javax.swing.JRadioButton rdo_diestro;
+    private javax.swing.JRadioButton rdo_noAlergia;
+    private javax.swing.JRadioButton rdo_noAlergiaMed;
+    private javax.swing.JRadioButton rdo_noCondExtra;
+    private javax.swing.JRadioButton rdo_noEmbPlan;
+    private javax.swing.JRadioButton rdo_noPrmLeng;
+    private javax.swing.JRadioButton rdo_noPrmMotr;
+    private javax.swing.JRadioButton rdo_noPrmParto;
+    private javax.swing.JRadioButton rdo_noPromCog;
+    private javax.swing.JRadioButton rdo_siAlergia;
+    private javax.swing.JRadioButton rdo_siAlergiaMed;
+    private javax.swing.JRadioButton rdo_siCondExtra;
+    private javax.swing.JRadioButton rdo_siEmbPLan;
+    private javax.swing.JRadioButton rdo_siPrmParto;
+    private javax.swing.JRadioButton rdo_siPromCog;
+    private javax.swing.JRadioButton rdo_siPromLeng;
+    private javax.swing.JRadioButton rdo_siPromMotr;
+    private javax.swing.JRadioButton rdo_zurdo;
     private javax.swing.JScrollPane scl_busqNom;
+    private javax.swing.JScrollPane scrl_autRetiro;
     private javax.swing.JScrollPane scrl_busqAut;
     private javax.swing.JScrollPane scrl_busqEstd;
     private javax.swing.JScrollPane scrl_busqRep;
+    private javax.swing.JScrollPane scrl_familiarExtra;
     private javax.swing.JScrollPane scroll_observaciones;
+    private javax.swing.JTable tbl_autRetiro;
     private javax.swing.JTable tbl_busqAut;
     private javax.swing.JTable tbl_busqEstd;
     private javax.swing.JTable tbl_busqNomina;
     private javax.swing.JTable tbl_busqRep;
+    private javax.swing.JTable tbl_familiarExtra;
     private javax.swing.JTextField text_alergia_cual;
+    private javax.swing.JTextField text_alergia_cual1;
     private javax.swing.JTextField text_apellidos_madre;
     private javax.swing.JTextField text_apellidos_padre;
     private javax.swing.JTextField text_apellidos_rep;
@@ -4566,7 +5286,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField text_ocupacion_rep;
     private javax.swing.JTextField text_persona;
     private javax.swing.JTextField text_peso_niñ;
-    private javax.swing.JTextField text_problema_cual;
     private javax.swing.JTextField text_responsable;
     private javax.swing.JTextField text_tall_camisa_niñ;
     private javax.swing.JTextField text_tall_pantalon_niñ;
@@ -4584,18 +5303,24 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_ciJefComNomina;
     private javax.swing.JTextField txt_ciNomina;
     private javax.swing.JTextField txt_comResNomina;
+    private javax.swing.JTextField txt_cuidaNiñoHogar;
+    private javax.swing.JTextField txt_edadCaminar;
     private javax.swing.JTextField txt_edadNiñ;
     private javax.swing.JTextField txt_edadNomina;
+    private javax.swing.JTextField txt_enfPadecidas;
     private javax.swing.JTextField txt_estadoNiñ;
     private javax.swing.JTextField txt_estatusNomina;
     private javax.swing.JTextField txt_fechNacimNomina;
     private javax.swing.JTextField txt_fechaIngresoNomina;
+    private javax.swing.JTextField txt_fiebreAlta;
     private javax.swing.JTextField txt_filtroBusqAut;
     private javax.swing.JTextField txt_filtroBusqEstd;
     private javax.swing.JTextField txt_filtroBusqNom;
     private javax.swing.JTextField txt_filtroBusqRep;
+    private javax.swing.JTextField txt_grpoSang;
     private javax.swing.JTextField txt_jefComNomina;
     private javax.swing.JTextField txt_lugarNacNiñ;
+    private javax.swing.JTextField txt_medicoTratante;
     private javax.swing.JTextField txt_munResNomina;
     private javax.swing.JTextField txt_munVotNomina;
     private javax.swing.JTextField txt_municNiñ;
@@ -4603,12 +5328,16 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_nivelNominaMaestra;
     private javax.swing.JTextField txt_nombreNiñ;
     private javax.swing.JTextField txt_nombreNomina;
+    private javax.swing.JTextField txt_otraVac;
+    private javax.swing.JTextField txt_otroConsult;
     private javax.swing.JTextField txt_parrqVotNomina;
+    private javax.swing.JTextField txt_prmPartocual;
     private javax.swing.JTextField txt_prrqResNomina;
     private javax.swing.JTextField txt_rifNomina;
     private javax.swing.JTextField txt_seccionNominaMaestra;
     private javax.swing.JTextField txt_tlf1Nomina;
     private javax.swing.JTextField txt_tlf2Nomina;
+    private javax.swing.JTextField txt_tlfMedicoTrat;
     private javax.swing.JTextField txt_turnoNomina;
     // End of variables declaration//GEN-END:variables
 }
