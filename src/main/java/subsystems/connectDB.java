@@ -28,10 +28,10 @@ public class connectDB {
     //Definir funciones
 
     //Inicialización de variables (no estáticas)
-    public void connparamsinit(){
-        url = "jdbc:mysql://localhost:3306/mydb";
-        user = "root";
-        pass = "xxx";
+    public void connparamsinit(acceso acceso){
+        url = acceso.getConnURL();
+        user = acceso.getUserDB();
+        pass = acceso.getPassDB();
         conexion = null;
     }
 
@@ -643,7 +643,7 @@ public class connectDB {
                 }
             }
         }
-        if (estudiante != null){ return estudiante; } else { return null;}
+        if (estudiante.getCe() != null){ return estudiante; } else { return null;}
     }
 
     public void sendNomina(trabajador trabajador){
@@ -1729,7 +1729,7 @@ public class connectDB {
 
     public void removerUsuario(){}
 
-    public boolean fetchUsuario(acceso accesoPresente){
+    public void fetchUsuario(acceso accesoPresente){
         sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
 
         try {
@@ -1740,7 +1740,7 @@ public class connectDB {
             ResultSet rs = query.executeQuery();
             try {
             rs.next();
-            return accesoPresente.getNombre_usuario().equals(rs.getString("usuario"));
+            //accesoPresente.getNombre_usuario().equals(rs.getString("usuario"));
             } catch (SQLException e1) {
                 System.out.println("USUARIO NO EXISTENTE");
                 e1.printStackTrace();
@@ -1753,14 +1753,11 @@ public class connectDB {
                 try {
                     conexion.close();
                     System.out.println("Database connection closed.");
-                    return false;
                 } catch (SQLException e) {
                     e.printStackTrace();
-                    return false;
                 }
             }
         }
-        return false;
     }
 
     public void promoverAño(){}

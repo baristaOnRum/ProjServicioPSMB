@@ -8,6 +8,7 @@ public class representante extends personas{
     int edad;
     boolean ninosMenor6;
     String estadoCivil;
+    String lugarNac;
     String nacionalidad;
     String direccionHab;
     String direccionTrabj;
@@ -19,6 +20,8 @@ public class representante extends personas{
     String tlfCasa;
     String correo;
     byte[] img;
+    LocalDate fechaNac;
+
 
 //    representante(int ci, int edad, boolean ninosMenor6, String nombres,
 //                  String apellidos, String lugarNac, LocalDate fechaNac,
@@ -47,6 +50,27 @@ public class representante extends personas{
 //        this.correo = correo;
 //
 //    }
+
+
+    @Override
+    public String getLugarNac() {
+        return lugarNac;
+    }
+
+    @Override
+    public void setLugarNac(String lugarNac) {
+        this.lugarNac = lugarNac;
+    }
+
+    @Override
+    public LocalDate getFechaNac() {
+        return fechaNac;
+    }
+
+    @Override
+    public void setFechaNac(LocalDate fechaNac) {
+        this.fechaNac = fechaNac;
+    }
 
     public int getCi() {
         return ci;

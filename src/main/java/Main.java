@@ -33,11 +33,10 @@ public class Main {
                 //conf_users main = new conf_users();
                 //menu_reportes main = new menu_reportes();
 
-                main.setVisible(true);
-                //docGen.generarDoc();
         acceso accesoPresente = new acceso();
         checkInit();
         setAcceso(accesoPresente);
+        main.setVisible(true);
         
     }
 }

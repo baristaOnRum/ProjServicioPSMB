@@ -11,6 +11,8 @@ import javax.swing.table.TableModel;
 
 import subsystems.*;
 import subsystems.individuos.*;
+import forms.pops.*;
+import javax.swing.JOptionPane;
 
 class customCellRenderer implements TableCellRenderer{
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
@@ -20,6 +22,8 @@ class customCellRenderer implements TableCellRenderer{
     }
 }
 public class menuPrincipal extends javax.swing.JFrame {
+    
+private static String cEstudiante;
     
 private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(menuPrincipal.class.getName());
 
@@ -117,7 +121,6 @@ public void createConfPanel(){
         scrl_busqRep = new javax.swing.JScrollPane();
         tbl_busqRep = new javax.swing.JTable();
         img_busqRep = new javax.swing.JLabel();
-        btn_inscribirRep = new javax.swing.JButton();
         btn_verBusqRep = new javax.swing.JButton();
         btn_editarBusqRep = new javax.swing.JButton();
         img_logoInstitucionBusqRep = new javax.swing.JLabel();
@@ -1077,17 +1080,6 @@ public void createConfPanel(){
         img_busqRep.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         img_busqRep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
 
-        btn_inscribirRep.setBackground(new java.awt.Color(27, 120, 101));
-        btn_inscribirRep.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btn_inscribirRep.setForeground(new java.awt.Color(250, 247, 239));
-        btn_inscribirRep.setToolTipText("");
-        btn_inscribirRep.setLabel("Añadir Representante");
-        btn_inscribirRep.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inscribirRepActionPerformed(evt);
-            }
-        });
-
         btn_verBusqRep.setBackground(new java.awt.Color(139, 208, 194));
         btn_verBusqRep.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn_verBusqRep.setForeground(new java.awt.Color(250, 247, 239));
@@ -1143,24 +1135,18 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_filtroBusqRep))
                     .addComponent(scrl_busqRep))
-                .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_verBusqRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                    .addComponent(btn_editarBusqRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
                     .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, busquedaRepresentanteLayout.createSequentialGroup()
-                                .addComponent(btn_buscarRep, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_inscribirRep, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btn_verBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btn_editarBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
-                                    .addGap(49, 49, 49)
-                                    .addComponent(img_busqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(49, 49, 49)
+                        .addComponent(img_busqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(img_logoInstitucionBusqRep)))
-                .addGap(35, 35, 35))
+                        .addGap(43, 43, 43)
+                        .addComponent(img_logoInstitucionBusqRep))
+                    .addComponent(btn_buscarRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
         busquedaRepresentanteLayout.setVerticalGroup(
             busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1171,7 +1157,6 @@ public void createConfPanel(){
                 .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmb_filtroBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_filtroBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_inscribirRep)
                     .addComponent(btn_buscarRep))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -4191,10 +4176,6 @@ public void createConfPanel(){
         panel.validate();
     }//GEN-LAST:event_btnAutorizadosActionPerformed
 
-    private void btn_inscribirRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirRepActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_inscribirRepActionPerformed
-
     private void btn_verBusqRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verBusqRepActionPerformed
         
         informacionRepresentante rep = new informacionRepresentante(this, true);
@@ -5135,7 +5116,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btn_inscribirAut;
     private javax.swing.JButton btn_inscribirEstd;
     private javax.swing.JButton btn_inscribirNom;
-    private javax.swing.JButton btn_inscribirRep;
     private javax.swing.JButton btn_repEstd;
     private javax.swing.JButton btn_verBusqAut;
     private javax.swing.JButton btn_verBusqEstd;
