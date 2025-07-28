@@ -10,12 +10,7 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
-import subsystems.individuos.autorizado;
-import subsystems.individuos.diagnostico;
-import subsystems.individuos.estudiante;
-import subsystems.individuos.maestro;
-import subsystems.individuos.representante;
-import subsystems.individuos.trabajador;
+import subsystems.individuos.*;
 
 public class connectDB {
 
@@ -1769,6 +1764,7 @@ public class connectDB {
     }
 
     public void crearFamiliar() {
+
     }
 
     public void fetchFamiliar() {
@@ -1777,20 +1773,11 @@ public class connectDB {
     public void aumentarNivelEstd() {
     }
 
-    public void fetchRelFamiliar() {
+    public static List<familia> fetchRelFamiliar(String cEstudiante) {
 
-    }
-
-    public void fetchRelRepresentante() {
-
-    }
-
-    ;
-
-    public List<estudiante> fetchRelAutorizado(String ciAutorizado) {
-
-        sql = "SELECT * FROM puederetirar WHERE autorizadoRetiro_ciAutorizado =" + ciAutorizado;
-        List<estudiante> ests = new ArrayList<>();
+        sql = "SELECT estudiante_ciEstudiante, nombre, apellido, edad, parentezco, ocupacion " +
+                "FROM `familiares extra` WHERE estudiante_ciEstudiante = \"" + cEstudiante + "\"";
+        List<familia> fams = null;
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -1798,15 +1785,22 @@ public class connectDB {
             PreparedStatement query = conexion.prepareStatement(sql);
 
             ResultSet rs = query.executeQuery();
+            fams = new ArrayList<>();
 
             try {
                 while (rs.next()) {
-                    estudiante estN = new estudiante();
-                    estN.setCe(rs.getString("ciEstudiante"));
-                    ests.add(estN);
+                    familia repF = new familia();
+                    repF.setCeRelacionado(rs.getString("estudiante_ciEstudiante"));
+                    repF.setNombres(rs.getString("nombre"));
+                    repF.setApellidos(rs.getString("apellido"));
+                    repF.setEdad(rs.getInt("edad"));
+                    repF.setOcupacion(rs.getString("ocupacion"));
+                    repF.setParentesco(rs.getString("parentezco"));
+                    fams.add(repF);
                 }
             } catch (SQLException e1) {
                 System.out.println("Recuperados todos los estudiantes");
+                return fams;
             }
 
         } catch (SQLException e) {
@@ -1822,17 +1816,92 @@ public class connectDB {
                 }
             }
         }
-
+        return fams;
     }
-}
 
+    public static List<representaA> fetchRelRepresentante(int ciRep) {
 
-    //Main
-    public void main(String args[]) throws SQLException{
+        sql = "SELECT * FROM retiraa WHERE representante_ciRepresentante =" + ciRep;
+        List<representaA> reps = null;
 
-        //connparamsinit();
-        //sendRepresentante();
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
 
+            ResultSet rs = query.executeQuery();
+            reps = new ArrayList<>();
+
+            try {
+                while (rs.next()) {
+                    representaA repN = new representaA();
+                    repN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
+                    repN.setRepresentante_ciRepresentante(rs.getInt("representante_ciRepresentante"));
+                    repN.setRol(rs.getBoolean("rol"));
+                    repN.setParentesco(rs.getString("parentesco"));
+                    reps.add(repN);
+                }
+            } catch (SQLException e1) {
+                System.out.println("Recuperados todos los estudiantes");
+                return reps;
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return reps;
+    }
+
+    public static List<retiraA> fetchRelAutorizado(String ciAutorizado) {
+
+        sql = "SELECT * FROM puederetirar WHERE autorizadoRetiro_ciAutorizado =" + ciAutorizado;
+        List<retiraA> rets = null;
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+            rets = new ArrayList<>();
+
+            try {
+                while (rs.next()) {
+                    retiraA retN = new retiraA();
+                    retN.setAutorizadoRetiro_ciAutorizado(rs.getInt("autorizadoRetiro_ciAutorizado"));
+                    retN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
+                    retN.setParentesco(rs.getString("parentesco"));
+                    rets.add(retN);
+                }
+            } catch (SQLException e1) {
+                System.out.println("Recuperados todos los estudiantes");
+                return rets;
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return rets;
     }
 }
 

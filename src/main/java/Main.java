@@ -32,7 +32,10 @@ public class Main {
                 //conf_frame main = new conf_frame();
                 //conf_users main = new conf_users();
                 //menu_reportes main = new menu_reportes();
-
+        List<familia> list = connectDB.fetchRelFamiliar("E-10000000");
+        for (familia a : list){
+            System.out.println(a.getNombres());
+        }
         acceso accesoPresente = new acceso();
         checkInit();
         setAcceso(accesoPresente);

@@ -23,6 +23,9 @@ public class informacionRepresentante extends javax.swing.JDialog {
     public informacionRepresentante(java.awt.Frame parent, boolean modal,representante rep) {
         super(parent, modal);
         initComponents();
+        for (java.awt.Component cp: this.getComponents()){
+        cp.setEnabled(false);
+        }
         
         text_nombres_padre.setText(rep.getNombres() != null ? rep.getNombres() : "");
         text_apellidos_padre.setText(rep.getApellidos() != null ? rep.getApellidos() : "");

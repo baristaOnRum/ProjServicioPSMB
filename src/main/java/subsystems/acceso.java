@@ -8,6 +8,7 @@ public class acceso {
     public int tipo_acceso;
     public String nombre_usuario;
     public String contrasenaHash;
+    public String twoFA;
 
     //Datos conexión
     public String connURL;
@@ -62,4 +63,11 @@ public class acceso {
         this.userDB = userDB;
     }
 
+    public String getTwoFA() {
+        return twoFA;
+    }
+
+    public void setTwoFA(String twoFA) {
+        this.twoFA = twoFA;
+    }
 }
