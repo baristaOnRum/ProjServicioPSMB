@@ -49,65 +49,6 @@ public class diagnostico {
     LocalTime horaDormir;
     LocalTime horaLevantarse;
 
-    public diagnostico(String ce, int edadHablar, int edadCaminar, int edadDejarPanales,
-                       boolean problemaParto, boolean problemaMotor, boolean problemaLenguaje,
-                       boolean problemaCognitivo, boolean alergia, boolean alergiaMedicamento, boolean enfermedadEmbarazo,
-                       boolean embarazoPlanif, boolean vacBCG, boolean vacTRIPLE, boolean vacPOLIO, boolean vacTIFUS,
-                       boolean otroVacAplicadas, boolean consultaPsilg, boolean consultaPsipeg,
-                       boolean consultaNeur, boolean consultaLeng, boolean consultaOtro, boolean condicionExtra,
-                       boolean comeAyudado, boolean buenApetito, boolean chupaDedo, boolean seOrinaDia,
-                       boolean seOrinaNoche, boolean evacuaDia, boolean pideAyudaAseo, String cualParto,
-                       String cualMotor, String cualLenguaje, String cualCoginitivo, String cualAlergia, String cualAMedicamento,
-                       String cualEnfEmbarazo, String medicamentoFiebre, String cualVacAplicada,
-                       String especifiqueConsultaOtro, String cualExtra, String enfermedadesPadecidas,
-                       String conQuienDuerme, LocalTime horaDormir, LocalTime horaLevantarse) {
-        this.ce = ce;
-        this.edadHablar = edadHablar;
-        this.edadCaminar = edadCaminar;
-        this.edadDejarPanales = edadDejarPanales;
-        this.problemaParto = problemaParto;
-        this.problemaMotor = problemaMotor;
-        this.problemaLenguaje = problemaLenguaje;
-        this.problemaCognitivo = problemaCognitivo;
-        this.alergia = alergia;
-        this.alergiaMedicamento = alergiaMedicamento;
-        this.enfermedadEmbarazo = enfermedadEmbarazo;
-        this.embarazoPlanif = embarazoPlanif;
-        this.vacBCG = vacBCG;
-        this.vacTRIPLE = vacTRIPLE;
-        this.vacPOLIO = vacPOLIO;
-        this.vacTIFUS = vacTIFUS;
-        this.otroVacAplicadas = otroVacAplicadas;
-        this.consultaPsilg = consultaPsilg;
-        this.consultaPsipeg = consultaPsipeg;
-        this.consultaNeur = consultaNeur;
-        this.consultaLeng = consultaLeng;
-        this.consultaOtro = consultaOtro;
-        this.condicionExtra = condicionExtra;
-        this.comeAyudado = comeAyudado;
-        this.buenApetito = buenApetito;
-        this.chupaDedo = chupaDedo;
-        this.seOrinaDia = seOrinaDia;
-        this.seOrinaNoche = seOrinaNoche;
-        this.evacuaDia = evacuaDia;
-        this.pideAyudaAseo = pideAyudaAseo;
-        this.cualParto = cualParto;
-        this.cualMotor = cualMotor;
-        this.cualLenguaje = cualLenguaje;
-        this.cualCoginitivo = cualCoginitivo;
-        this.cualAlergia = cualAlergia;
-        this.cualAMedicamento = cualAMedicamento;
-        this.cualEnfEmbarazo = cualEnfEmbarazo;
-        this.medicamentoFiebre = medicamentoFiebre;
-        this.cualVacAplicada = cualVacAplicada;
-        this.especifiqueConsultaOtro = especifiqueConsultaOtro;
-        this.cualExtra = cualExtra;
-        this.enfermedadesPadecidas = enfermedadesPadecidas;
-        this.conQuienDuerme = conQuienDuerme;
-        this.horaDormir = horaDormir;
-        this.horaLevantarse = horaLevantarse;
-    }
-
     public String getCe() {
         return ce;
     }
@@ -423,6 +364,9 @@ public class diagnostico {
     public void setCualAlergia(String cualAlergia) {
         this.cualAlergia = cualAlergia;
     }
+    public void setAlergia(boolean isAlergia){
+        this.alergia = isAlergia;
+    }
 
     public void setCualAMedicamento(String cualAMedicamento) {
         this.cualAMedicamento = cualAMedicamento;
@@ -464,25 +408,4 @@ public class diagnostico {
         this.horaLevantarse = horaLevantarse;
     }
 
-    diagnostico(String ce, boolean problemaParto,
-                boolean problemaMotor, boolean problemaLenguaje, boolean problemaCognitivo,
-                boolean alergiaMedicamento, boolean condicionExtra, String cualParto,
-                String cualMotor, String cualLenguaje, String cualCoginitivo, String cualAMedicamento,
-                String cualExtra){
-        this.ce = ce;
-        this.problemaParto = problemaParto;
-        this.problemaMotor = problemaMotor;
-        this.problemaLenguaje = problemaLenguaje;
-        this.problemaCognitivo = problemaCognitivo;
-        this.alergiaMedicamento = alergiaMedicamento;
-        this.condicionExtra = condicionExtra;
-        this.cualParto = cualParto;
-        this.cualMotor = cualMotor;
-        this.cualLenguaje = cualLenguaje;
-        this.cualCoginitivo = cualCoginitivo;
-        this.cualAMedicamento = cualAMedicamento;
-        this.cualExtra = cualExtra;
-
-
-    }
 }
