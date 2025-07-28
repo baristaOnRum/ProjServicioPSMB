@@ -1768,6 +1768,52 @@ public class connectDB {
 
     public void aumentarNivelEstd(){}
 
+    public void fetchRelFamiliar(){
+
+    }
+
+    public void fetchRelRepresentante(){
+
+    };
+
+    public List<estudiante> fetchRelAutorizado(String ciAutorizado){
+
+        sql = "SELECT * FROM puederetirar WHERE autorizadoRetiro_ciAutorizado ="+ ciAutorizado;
+        List<estudiante> ests = new ArrayList<>();
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+
+            try {
+                while (rs.next()) {
+                    estudiante estN = new estudiante();
+                    estN.setCe(rs.getString("ciEstudiante"));
+                    ests.add(estN);
+                }
+            } catch (SQLException e1) {
+                System.out.println("Recuperados todos los estudiantes");
+            }
+
+        } catch(SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    };
+
 
     //Main
     public void main(String args[]) throws SQLException{

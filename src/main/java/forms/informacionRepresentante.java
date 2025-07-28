@@ -7,6 +7,7 @@ package forms;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import javax.imageio.ImageIO;
 import subsystems.individuos.*;
 /**
@@ -16,13 +17,92 @@ import subsystems.individuos.*;
 public class informacionRepresentante extends javax.swing.JDialog {
 
     
-    representante rep;
     /**
      * Creates new form resultadoRepresentante
      */
-    public informacionRepresentante(java.awt.Frame parent, boolean modal) {
+    public informacionRepresentante(java.awt.Frame parent, boolean modal,representante rep) {
         super(parent, modal);
         initComponents();
+        
+        text_nombres_padre.setText(rep.getNombres() != null ? rep.getNombres() : "");
+        text_apellidos_padre.setText(rep.getApellidos() != null ? rep.getApellidos() : "");
+        text_ci_padre.setText(String.valueOf(rep.getCi()));
+        text_edad_padre.setText(String.valueOf(rep.getEdad()));
+        text_fec_nac_padre.setText(rep.getFechaNac() != null ? (rep.getFechaNac().toString()) : "");
+        text_lugar_nac_padre.setText(rep.getLugarNac() != null ? rep.getLugarNac() : "");
+        text_direc_hab_padre.setText(rep.getDireccionHab() != null ? rep.getDireccionHab() : "");
+        text_direc_trabj_padre.setText(rep.getDireccionTrabj() != null ? rep.getDireccionTrabj() : "");
+        text_ocupacion_padre.setText(rep.getOcupacion() != null ? rep.getOcupacion() : "");
+        text_tlf_padre.setText(rep.getTlf1() != null ? rep.getTlf1() : "");
+        text_tlf_padre1.setText(rep.getTlf2() != null ? rep.getTlf2() : "");
+        text_correo_padre.setText(rep.getCorreo() != null ? rep.getCorreo() : "");
+        
+                // Nacionalidad
+        check_ven_padre.setSelected(false);
+        check_ext_padre.setSelected(false); // Deselect all in the group
+        if ("Venezolana".equalsIgnoreCase(rep.getNacionalidad())) {
+            check_ven_padre.setSelected(true);
+        } else {
+            check_ext_padre.setSelected(true);
+        }
+
+        // Estado Civil
+        check_s_padre.setSelected(false);
+        check_c_padre.setSelected(false);
+        check_d_padre.setSelected(false);
+        check_v_padre.setSelected(false);
+        if ("S".equalsIgnoreCase(rep.getEstadoCivil())) {
+            check_s_padre.setSelected(true);
+        } else if ("C".equalsIgnoreCase(rep.getEstadoCivil())) {
+            check_c_padre.setSelected(true);
+        } else if ("D".equalsIgnoreCase(rep.getEstadoCivil())) {
+            check_d_padre.setSelected(true);
+        } else if ("V".equalsIgnoreCase(rep.getEstadoCivil())) {
+            check_v_padre.setSelected(true);
+        }
+
+        // Grado de Estudios
+        check_no_bachiller_padre.setSelected(false);
+        chec_bachiller_padre.setSelected(false);
+        check_tsu_padre.setSelected(false);
+        check_superior_padre.setSelected(false);
+        if ("No Bachiller".equalsIgnoreCase(rep.getGradoEstudios())) {
+            check_no_bachiller_padre.setSelected(true);
+        } else if ("Bachiller".equalsIgnoreCase(rep.getGradoEstudios())) {
+            chec_bachiller_padre.setSelected(true);
+        } else if ("TSU".equalsIgnoreCase(rep.getGradoEstudios())) {
+            check_tsu_padre.setSelected(true);
+        } else if ("Superior".equalsIgnoreCase(rep.getGradoEstudios())) {
+            check_superior_padre.setSelected(true);
+        }
+
+        // --- Set Image on JLabel using setIcon() ---
+        if (rep.getImg() != null && rep.getImg().length > 0) {
+            try {
+                ByteArrayInputStream bis = new ByteArrayInputStream(rep.getImg());
+                BufferedImage bImage;
+                bImage = ImageIO.read(bis);
+                if (bImage != null) {
+                    // Scale image to fit the label's current size
+                    Image scaledImage = bImage.getScaledInstance(
+                            jLabel6.getWidth(),
+                            jLabel6.getHeight(),
+                            Image.SCALE_SMOOTH);
+                    jLabel6.setIcon(new javax.swing.ImageIcon(scaledImage));
+                    jLabel6.setText(""); // Clear any "No Image" text
+                } else {
+                    jLabel6.setIcon(null); // Clear previous icon
+                    jLabel6.setText("Invalid Image rep");
+                }
+            } catch (IOException ex) {
+                System.err.println("Error loading image: " + ex.getMessage());
+                jLabel6.setIcon(null);
+                jLabel6.setText("Error Loading Image");
+            }
+        } else {
+            jLabel6.setIcon(null); // Clear any existing image
+            jLabel6.setText("No Image"); // Display a message when no image
+        }
     }
 
     /**
@@ -92,7 +172,7 @@ public class informacionRepresentante extends javax.swing.JDialog {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(243, 243, 243)
+                .addGap(305, 305, 305)
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -365,21 +445,23 @@ public class informacionRepresentante extends javax.swing.JDialog {
                     .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_ci_padre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_edad_padre)
-                    .addComponent(text_fec_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_fec_nac_padre)
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(label_tlf_padre)
-                        .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(label_edad_padre)
+                        .addComponent(text_fec_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(label_fec_nac_padre)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_direc_hab_padre)
-                    .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(label_tlf_padre1)
-                        .addComponent(text_tlf_padre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(text_tlf_padre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(label_direc_hab_padre)
+                        .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_padre)
@@ -406,7 +488,7 @@ public class informacionRepresentante extends javax.swing.JDialog {
                             .addComponent(check_ext_padre))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_padreLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                         .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(dat_padreLayout.createSequentialGroup()
                                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -431,9 +513,8 @@ public class informacionRepresentante extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel6)
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addComponent(dat_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -443,11 +524,12 @@ public class informacionRepresentante extends javax.swing.JDialog {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dat_padre, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 17, Short.MAX_VALUE)
-                        .addComponent(jLabel6)))
-                .addContainerGap())
+                        .addComponent(dat_padre, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel6))))
         );
 
         pack();
@@ -551,100 +633,22 @@ public class informacionRepresentante extends javax.swing.JDialog {
             java.util.logging.Logger.getLogger(informacionRepresentante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        text_nombres_padre.setText(rep.getNombres() != null ? rep.getNombres() : "");
-        text_apellidos_padre.setText(rep.getApellidos() != null ? rep.getApellidos() : "");
-        text_ci_padre.setText(String.valueOf(rep.getCi()));
-        text_edad_padre.setText(String.valueOf(rep.getEdad()));
-        text_fec_nac_padre.setText(rep.getFechaNac() != null ? (rep.getFechaNac().toString()) : "");
-        text_lugar_nac_padre.setText(rep.getLugarNac() != null ? rep.getLugarNac() : "");
-        text_direc_hab_padre.setText(rep.getDireccionHab() != null ? rep.getDireccionHab() : "");
-        text_direc_trabj_padre.setText(rep.getDireccionTrabj() != null ? rep.getDireccionTrabj() : "");
-        text_ocupacion_padre.setText(rep.getOcupacion() != null ? rep.getOcupacion() : "");
-        text_tlf_padre.setText(rep.getTlf1() != null ? rep.getTlf1() : "");
-        text_tlf_padre1.setText(rep.getTlf2() != null ? rep.getTlf2() : "");
-        text_correo_padre.setText(rep.getCorreo() != null ? rep.getCorreo() : "");
-        
-                // Nacionalidad
-        check_ven_padre.setSelected(false);
-        check_ext_padre.setSelected(false); // Deselect all in the group
-        if ("Venezolana".equalsIgnoreCase(rep.getNacionalidad())) {
-            check_ven_padre.setSelected(true);
-        } else {
-            check_ext_padre.setSelected(true);
-        }
 
-        // Estado Civil
-        check_s_padre.setSelected(false);
-        check_c_padre.setSelected(false);
-        check_d_padre.setSelected(false);
-        check_v_padre.setSelected(false);
-        if ("S".equalsIgnoreCase(rep.getEstadoCivil())) {
-            check_s_padre.setSelected(true);
-        } else if ("C".equalsIgnoreCase(rep.getEstadoCivil())) {
-            check_c_padre.setSelected(true);
-        } else if ("D".equalsIgnoreCase(rep.getEstadoCivil())) {
-            check_d_padre.setSelected(true);
-        } else if ("V".equalsIgnoreCase(rep.getEstadoCivil())) {
-            check_v_padre.setSelected(true);
-        }
-
-        // Grado de Estudios
-        check_no_bachiller_padre.setSelected(false);
-        chec_bachiller_padre.setSelected(false);
-        check_tsu_padre.setSelected(false);
-        check_superior_padre.setSelected(false);
-        if ("No Bachiller".equalsIgnoreCase(rep.getGradoEstudios())) {
-            check_no_bachiller_padre.setSelected(true);
-        } else if ("Bachiller".equalsIgnoreCase(rep.getGradoEstudios())) {
-            chec_bachiller_padre.setSelected(true);
-        } else if ("TSU".equalsIgnoreCase(rep.getGradoEstudios())) {
-            check_tsu_padre.setSelected(true);
-        } else if ("Superior".equalsIgnoreCase(rep.getGradoEstudios())) {
-            check_superior_padre.setSelected(true);
-        }
-
-        // --- Set Image on JLabel using setIcon() ---
-        if (rep.getImg() != null && rep.getImg().length > 0) {
-            try {
-                ByteArrayInputStream bis = new ByteArrayInputStream(rep.getImg());
-                BufferedImage bImage;
-                bImage = ImageIO.read(bis);
-                if (bImage != null) {
-                    // Scale image to fit the label's current size
-                    Image scaledImage = bImage.getScaledInstance(
-                            jLabel6.getWidth(),
-                            jLabel6.getHeight(),
-                            Image.SCALE_SMOOTH);
-                    jLabel6.setIcon(new javax.swing.ImageIcon(scaledImage));
-                    jLabel6.setText(""); // Clear any "No Image" text
-                } else {
-                    jLabel6.setIcon(null); // Clear previous icon
-                    jLabel6.setText("Invalid Image rep");
-                }
-            } catch (IOException ex) {
-                System.err.println("Error loading image: " + ex.getMessage());
-                jLabel6.setIcon(null);
-                jLabel6.setText("Error Loading Image");
-            }
-        } else {
-            jLabel6.setIcon(null); // Clear any existing image
-            jLabel6.setText("No Image"); // Display a message when no image
-        }
         //</editor-fold>
 
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                informacionRepresentante dialog = new informacionRepresentante(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
+//        /* Create and display the dialog */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                informacionRepresentante dialog = new informacionRepresentante(new javax.swing.JFrame(), true);
+//                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+//                    @Override
+//                    public void windowClosing(java.awt.event.WindowEvent e) {
+//                        System.exit(0);
+//                    }
+//                });
+//                dialog.setVisible(true);
+//            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

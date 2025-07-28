@@ -135,7 +135,6 @@ public void createConfPanel(){
         scrl_busqAut = new javax.swing.JScrollPane();
         tbl_busqAut = new javax.swing.JTable();
         img_busqAut = new javax.swing.JLabel();
-        btn_inscribirAut = new javax.swing.JButton();
         btn_verBusqAut = new javax.swing.JButton();
         btn_editarBusqAut = new javax.swing.JButton();
         img_logoInstitucionBusqAut = new javax.swing.JLabel();
@@ -1236,11 +1235,11 @@ public void createConfPanel(){
 
             },
             new String [] {
-                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2"
+                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2", "Cédula Estudiante(s)"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1254,16 +1253,6 @@ public void createConfPanel(){
 
         img_busqAut.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         img_busqAut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
-
-        btn_inscribirAut.setBackground(new java.awt.Color(27, 120, 101));
-        btn_inscribirAut.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btn_inscribirAut.setForeground(new java.awt.Color(250, 247, 239));
-        btn_inscribirAut.setText("Añadir Autorizado");
-        btn_inscribirAut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inscribirAutActionPerformed(evt);
-            }
-        });
 
         btn_verBusqAut.setBackground(new java.awt.Color(139, 208, 194));
         btn_verBusqAut.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -1326,11 +1315,8 @@ public void createConfPanel(){
                     .addComponent(btn_verBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(img_busqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(img_logoInstitucionBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, busquedaAutorizadosLayout.createSequentialGroup()
-                        .addComponent(btn_buscarAut, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_inscribirAut, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(img_logoInstitucionBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                    .addComponent(btn_buscarAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(15, 15, 15))
         );
         busquedaAutorizadosLayout.setVerticalGroup(
@@ -1341,7 +1327,6 @@ public void createConfPanel(){
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmb_filtroBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_filtroBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_inscribirAut)
                     .addComponent(btn_buscarAut))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1354,7 +1339,7 @@ public void createConfPanel(){
                         .addGap(28, 28, 28)
                         .addComponent(img_logoInstitucionBusqAut))
                     .addComponent(scrl_busqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         busquedaNomina.setPreferredSize(new java.awt.Dimension(1336, 800));
@@ -4178,7 +4163,7 @@ public void createConfPanel(){
 
     private void btn_verBusqRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verBusqRepActionPerformed
         
-        informacionRepresentante rep = new informacionRepresentante(this, true);
+        informacionRepresentante rep = new informacionRepresentante(this, true, connectDB.fetchRepresentante((Integer) tbl_busqRep.getValueAt(tbl_busqRep.getSelectedRow(), 4))); //
         rep.setVisible(true);
         
     }//GEN-LAST:event_btn_verBusqRepActionPerformed
@@ -4257,10 +4242,6 @@ public void createConfPanel(){
     private void btn_verBusqAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verBusqAutActionPerformed
 
     }//GEN-LAST:event_btn_verBusqAutActionPerformed
-
-    private void btn_inscribirAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirAutActionPerformed
-
-    }//GEN-LAST:event_btn_inscribirAutActionPerformed
 
     private void cmb_filtroBusqAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_filtroBusqAutActionPerformed
         // TODO add your handling code here:
@@ -5113,7 +5094,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btn_editarBusqEstd;
     private javax.swing.JButton btn_editarBusqNom;
     private javax.swing.JButton btn_editarBusqRep;
-    private javax.swing.JButton btn_inscribirAut;
     private javax.swing.JButton btn_inscribirEstd;
     private javax.swing.JButton btn_inscribirNom;
     private javax.swing.JButton btn_repEstd;
