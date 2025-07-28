@@ -15,6 +15,9 @@ import forms.pops.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 class customCellRenderer implements TableCellRenderer{
@@ -29,6 +32,37 @@ public class menuPrincipal extends javax.swing.JFrame {
 private static String cEstudiante;
     
 private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(menuPrincipal.class.getName());
+
+public static boolean validateAndNotify(Component parentComponent, LinkedHashMap<String, String> map){
+    
+    //Chequeamos la data
+        
+        List<String> missingFields = new ArrayList<>();
+
+        // Iterate through the map and check each field
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            String fieldName = entry.getKey();
+            String fieldValue = entry.getValue();
+
+            // Check if the field is null or empty after trimming
+            if (fieldValue == null || fieldValue.trim().isEmpty()) {
+                missingFields.add(fieldName);
+            }
+        }
+
+        // If there are missing fields, construct and display the message
+        if (!missingFields.isEmpty()) {
+            StringBuilder message = new StringBuilder("Los siguientes campos son obligatorios y están vacíos:\n\n");
+            for (String field : missingFields) {
+                message.append("- ").append(field).append("\n");
+            }
+            message.append("\nPor favor, complete la información para continuar.");
+
+            JOptionPane.showMessageDialog(parentComponent, message.toString(), "Campos Obligatorios Faltantes", JOptionPane.WARNING_MESSAGE);
+            return false;
+        }    
+    return true;
+}
 
 public menuPrincipal() {
     initComponents();
@@ -4189,8 +4223,6 @@ public void createConfPanel(){
         for(Component cp: datPlantelNomina.getComponents()){
             cp.setEnabled(false);
         }
-        for(Component cp: docNomina.getComponents()){
-        }
     }//GEN-LAST:event_btn_verNomActionPerformed
 
     private void btn_inscribirNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirNomActionPerformed
@@ -4410,10 +4442,102 @@ public void createConfPanel(){
         }
     }
     
+            // Use LinkedHashMap to maintain insertion order for a consistent error message
+        LinkedHashMap<String, String> fields = new LinkedHashMap<>();
+
+
+        // Child's Data
+        fields.put("Nombre del Niño", nombreNiñ);
+        fields.put("Apellido del Niño", apellidoNiñ);
+        fields.put("Edad del Niño (texto)", edadNiñ);
+        fields.put("Edad del Niño (número)", edadNumNiñ);
+        fields.put("Lugar de Nacimiento del Niño", lugarNacNiñ);
+        fields.put("Estado del Niño", estadoNiñ);
+        fields.put("Municipio del Niño", municipioNiñ);
+        fields.put("Nacionalidad del Niño", nacionalidadNiñ);
+        fields.put("Talla de Camisa del Niño", tallaCamisaNiñ);
+        fields.put("Talla de Pantalón del Niño", tallaPantalonNiñ);
+        fields.put("Talla de Zapato del Niño", tallaZapatoNiñ);
+        fields.put("Peso del Niño", pesoNiñ);
+        fields.put("Estatura del Niño", estaturaNiñ);
+        fields.put("Edad al Caminar", edadCaminar);
+
+        // Other Information
+        fields.put("Hora de Acostarse", horaAcostar);
+        fields.put("Hora de Levantarse", horaLevantar);
+        fields.put("Quién Duerme con el Niño", qnDuermeNino);
+        fields.put("Edad al Dejar el Pañal", edadDejPan);
+
+        // Health Data
+        fields.put("Tipo de Parto", prmPartoCual);
+        fields.put("Desarrollo Motor (Cual)", motorCual);
+        fields.put("Desarrollo del Lenguaje (Cual)", lenguajeCual);
+        fields.put("Desarrollo Cognitivo (Cual)", cognitivoCual);
+        fields.put("Alergias (Cual)", alergiaCual);
+        fields.put("Alergias a Medicamentos (Cual)", alergiaMedCual);
+        fields.put("Condición Médica (Cual)", condicionCual);
+        fields.put("Enfermedades Padecidas", enfPadecidas);
+        fields.put("Grupo Sanguíneo", grupoSang);
+        fields.put("Fiebre Alta", fiebreAlta);
+        fields.put("Otras Vacunas", otraVac);
+        fields.put("Médico Tratante", medicoTratante);
+        fields.put("Teléfono del Médico Tratante", tlfMedicoTrat);
+
+        // Mother's Data
+        fields.put("Apellidos de la Madre", apellidosMadre);
+        fields.put("Nombres de la Madre", nombresMadre);
+        fields.put("Cédula de Identidad de la Madre", ciMadre);
+        fields.put("Fecha de Nacimiento de la Madre", fecNacMadre);
+        fields.put("Edad de la Madre", edadMadre);
+        fields.put("Lugar de Nacimiento de la Madre", lugarNacMadre);
+        fields.put("Dirección de Habitación de la Madre", direcHabMadre);
+        fields.put("Ocupación de la Madre", ocupacionMadre);
+        fields.put("Dirección de Trabajo de la Madre", direcTrabjMadre);
+        fields.put("Correo Electrónico de la Madre", correoMadre);
+        fields.put("Teléfono de la Madre", tlfMadre);
+
+        // Father's Data
+        fields.put("Apellidos del Padre", apellidosPadre);
+        fields.put("Nombres del Padre", nombresPadre);
+        fields.put("Cédula de Identidad del Padre", ciPadre);
+        fields.put("Fecha de Nacimiento del Padre", fecNacPadre);
+        fields.put("Edad del Padre", edadPadre);
+        fields.put("Lugar de Nacimiento del Padre", lugarNacPadre);
+        fields.put("Dirección de Habitación del Padre", direcHabPadre);
+        fields.put("Ocupación del Padre", ocupacionPadre);
+        fields.put("Dirección de Trabajo del Padre", direcTrabjPadre);
+        fields.put("Correo Electrónico del Padre", correoPadre);
+        fields.put("Teléfono del Padre", tlfPadre);
+
+        // Legal Representative's Data
+        fields.put("Apellidos del Representante Legal", apellidosRep);
+        fields.put("Nombres del Representante Legal", nombresRep);
+        fields.put("Cédula de Identidad del Representante Legal", ciRep);
+        fields.put("Fecha de Nacimiento del Representante Legal", fecNacRep);
+        fields.put("Edad del Representante Legal", edadRep);
+        fields.put("Lugar de Nacimiento del Representante Legal", lugarNacRep);
+        fields.put("Dirección de Habitación del Representante Legal", direcHabRep);
+        fields.put("Ocupación del Representante Legal", ocupacionRep);
+        fields.put("Dirección de Trabajo del Representante Legal", direcTrabjRep);
+        fields.put("Correo Electrónico del Representante Legal", correoRep);
+        fields.put("Teléfono del Representante Legal", tlfRep);
+
+        // Document Data
+        fields.put("Responsable", responsable);
+        fields.put("Persona", persona);
+        fields.put("Fecha", fecha);
+        fields.put("Observaciones", observaciones);
+
+        // Socio-Family Environment
+        fields.put("Quién Cuida al Niño en el Hogar", cuidaNiñoHogar);
+        fields.put("Otro Consultor", otroConsult);        
+    
     //Creamos los objetos reflejo de la DB
     
     estudiante estudiante = new estudiante();
-    representante representante = new representante();
+    representante representanteLegal = new representante();
+    representante madre = new representante();
+    representante padre = new representante();
     diagnostico diagnostico = new diagnostico(); 
     documentos documentos = new documentos();
     
@@ -4552,7 +4676,6 @@ public void createConfPanel(){
         madre.setTlf1(tlfMadre); // Assuming tlfMadre maps to tlf1
 
         // --- Datos del Padre (representante) ---
-        representante padre = new representante();
         padre.setNombres(nombresPadre);
         padre.setApellidos(apellidosPadre);
         try {
@@ -4581,7 +4704,6 @@ public void createConfPanel(){
         padre.setTlf1(tlfPadre); // Assuming tlfPadre maps to tlf1
 
         // --- Datos del Representante Legal (representante) ---
-        representante representanteLegal = new representante();
         representanteLegal.setNombres(nombresRep);
         representanteLegal.setApellidos(apellidosRep);
         try {
@@ -4664,7 +4786,23 @@ public void createConfPanel(){
             System.err.println("tbl_autRetiro is null. Authorized persons list will be empty.");
         }
 
+        if (validateAndNotify(this, fields)){
+            connectDB.sendEstudiante(estudiante);
+            connectDB.sendDiagnostico(diagnostico);
+            for (autorizado aut: listaAutorizados){
+                connectDB.sendAutorizado(aut);
+                connectDB.setRelAutorizado(aut, estudiante);
+            }
+            connectDB.sendRepresentante(madre);
+            connectDB.sendRepresentante(padre);
+            connectDB.sendRepresentante(representanteLegal);
 
+            connectDB.setRelRepresentado();
+        } else {
+        
+        }
+        
+        
         // At this point, you have all your objects populated:
         // estudiante, diagnostico, madre, padre, representanteLegal, documentos, socioFamiliar, listaAutorizados
 

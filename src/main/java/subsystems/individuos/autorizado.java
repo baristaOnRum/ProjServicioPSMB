@@ -4,6 +4,7 @@ public class autorizado extends personas{
     int ci;
     String tlf1;
     String tlf2;
+    String parentesco;
 
     public int getCi() {
         return ci;
@@ -27,5 +28,13 @@ public class autorizado extends personas{
 
     public void setTlf2(String tlf2) {
         this.tlf2 = tlf2;
+    }
+
+    public String getParentesco() {
+        return parentesco;
+    }
+
+    public void setParentesco(String parentesco) {
+        this.parentesco = parentesco;
     }
 }

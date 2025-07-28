@@ -330,8 +330,6 @@ public class docGen {
 
     //Generadores públicos
 
-    public static void generarInscripcionAlumno(){}
-
     public static void generarConstanciaEstudios(estudiante estudiante, String directora, String lapso, String finLapso, boolean maternal){
 
         //Creamos el documento

@@ -359,7 +359,7 @@ public class connectDB {
 
     }
 
-    public void sendEstudiante(estudiante estudiante) {
+    public static void sendEstudiante(estudiante estudiante) {
 
         sql = "INSERT INTO `mydb`.`estudiante` (`ciEstudiante`, `apellidos`, `nombres`," +
                 "`fechaNac`, `lugarNac`, `nacionalidad`, `edad`, `procedencia`," +
@@ -427,7 +427,7 @@ public class connectDB {
 
     }
 
-    public void removerEstudiante(String ce) {
+    public static void removerEstudiante(String ce) {
 
         sql = "DELETE FROM estudiante" +
                 " WHERE ciEstudiante = ?;";
@@ -647,7 +647,7 @@ public class connectDB {
         }
     }
 
-    public void sendNomina(trabajador trabajador) {
+    public static void sendNomina(trabajador trabajador) {
 
         sql = "INSERT INTO `mydb`.`trabajadores` (" +
                 "`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`, " +
@@ -738,7 +738,7 @@ public class connectDB {
         }
     }
 
-    public void removerNomina(int ci) {
+    public static void removerNomina(int ci) {
 
         sql = "DELETE FROM trabajador" +
                 " WHERE ci_trabajadores = ?;";
@@ -1023,7 +1023,7 @@ public class connectDB {
         return trabajador;
     }
 
-    public void sendNominaMaestra(maestro maestro) {
+    public static void sendNominaMaestra(maestro maestro) {
         sql = "INSERT INTO `mydb`.`maestras` (" +
                 "`ci_maestra`, `rif`, `titulo`, `nombres`, `apellidos`, `cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
                 "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, `tiene1x10`, `cantPersonas1x10`, " +
@@ -1107,7 +1107,7 @@ public class connectDB {
         }
     }
 
-    public void removerNominaMaestra(int ci) {
+    public static void removerNominaMaestra(int ci) {
         sql = "DELETE FROM maestras WHERE ci_maestra = ?;";
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -1331,7 +1331,7 @@ public class connectDB {
         return maestra;
     }
 
-    public void sendAutorizado(autorizado autorizado) {
+    public static void sendAutorizado(autorizado autorizado) {
 
         sql = "INSERT INTO autorizadoRetiro (ciAutorizado, apellidos, nombre, tlf1, tlf2) VALUES (?,?,?,?,?)";
 
@@ -1343,8 +1343,9 @@ public class connectDB {
             query.setInt(1, autorizado.getCi()); // cirepresentante
             query.setString(2, autorizado.getApellidos()); // apellidos
             query.setString(3, autorizado.getNombres()); // nombres
-            query.setString(13, autorizado.getTlf1()); // tlf
-            query.setString(14, autorizado.getTlf2()); // tlf
+            query.setString(4, autorizado.getTlf1()); // tlf
+            query.setString(5, autorizado.getTlf2()); // tlf
+            query.setString(6, autorizado.getParentesco());
 
         } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -1361,7 +1362,7 @@ public class connectDB {
         }
     }
 
-    public void removerAutorizado(autorizado autorizado) {
+    public static void removerAutorizado(autorizado autorizado) {
 
         sql = "DELETE FROM autorizadoRetiro WHERE ciAutorizado = ?";
 
@@ -1406,6 +1407,7 @@ public class connectDB {
                         autor.setNombres(rs.getString("nombres"));
                         autor.setTlf1(rs.getString("tlf1"));
                         autor.setTlf2(rs.getString("tlf2"));
+                        autor.setParentesco(rs.getString("parentesco"));
                         autorizados.add(autor);
                         System.out.println(autor.getCi());
                     } catch (SQLException e1) {
@@ -1443,6 +1445,7 @@ public class connectDB {
                     aut.setNombres(rs.getString("nombres"));
                     aut.setTlf1(rs.getString("tlf1"));
                     aut.setTlf2(rs.getString("tlf2"));
+                    aut.setParentesco(rs.getString("parentesco"));
                     autorizados.add(aut);
                 }
                 return autorizados;
@@ -1463,7 +1466,7 @@ public class connectDB {
         return autorizados;
     }
 
-    public void fetchAutorizado(autorizado autorizado) {
+    public static void fetchAutorizado(autorizado autorizado) {
 
         sql = "SELECT ciAutorizado FROM autorizadoRetiro WHERE ciAutorizado = ?";
 
@@ -1490,7 +1493,7 @@ public class connectDB {
 
     }
 
-    public void sendDiagnostico(diagnostico diagnostico) {
+    public static void sendDiagnostico(diagnostico diagnostico) {
 
         sql = "INSERT INTO `mydb`.`diagnostico` (`estudiante_ciEstudiante`," +
                 "`problemaParto`, `problemaMotor`, `problemaLenguaje`," +
@@ -1585,7 +1588,7 @@ public class connectDB {
         }
     }
 
-    public void editarDiagnostico(diagnostico diagnostico) {
+    public static void editarDiagnostico(diagnostico diagnostico) {
         sql = "UPDATE diagnostico SET problemaParto = ?, problemaMotor = ?, problemaLenguaje = ?," +
                 "problemaCognitivo = ?, alergiaMedicamento = ?, condicionExtra = ?," +
                 "cualParto = ?, cualMotor = ?, cualLenguaje = ?, cualCognitivo = ?," +
@@ -1680,7 +1683,7 @@ public class connectDB {
         }
     }
 
-    public void removerDiagnostico(String ce) {
+    public static void removerDiagnostico(String ce) {
 
         sql = "DELETE FROM diagnostico" +
                 " WHERE estudiante_ciEstudiante = ?;";
@@ -1717,19 +1720,43 @@ public class connectDB {
 
     }
 
-    public void setRelRepresentado() {
+    public static void setRelRepresentado() {
+
     }
 
-    public void setRelAutorizado() {
+    public static void setRelAutorizado(autorizado authorized, estudiante student) {
+        String sql = "INSERT INTO puederetirar (autorizadoRetiro_ciAutorizado, estudiante_ciEstudiante, parentesco) VALUES (?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the parameters for the prepared statement
+            pstmt.setInt(1, authorized.getCi()); // autorizadoRetiro_ciAutorizado from autorizado object
+            pstmt.setString(2, student.getCe()); // estudiante_ciEstudiante from estudiante object (assuming 'ce' is the student ID)
+            pstmt.setString(3, authorized.getParentesco()); // parentesco
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Database error during puederetirar insertion: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
-    public void crearUsuario() {
+    public static void crearUsuario() {
     }
 
-    public void removerUsuario() {
+    public static void removerUsuario() {
     }
 
-    public void fetchUsuario(acceso accesoPresente) {
+    public static void fetchUsuario(acceso accesoPresente) {
         sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
 
         try {
@@ -1760,17 +1787,17 @@ public class connectDB {
         }
     }
 
-    public void promoverAño() {
+    public static void promoverAño() {
     }
 
-    public void crearFamiliar() {
+    public static void crearFamiliar() {
 
     }
 
-    public void fetchFamiliar() {
+    public static void fetchFamiliar() {
     }
 
-    public void aumentarNivelEstd() {
+    public static void aumentarNivelEstd() {
     }
 
     public static List<familia> fetchRelFamiliar(String cEstudiante) {
