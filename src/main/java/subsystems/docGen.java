@@ -229,41 +229,10 @@ public class docGen {
         paragraph.getContent().add(run);
     }
 
-    private static void agregarParrafo(P paragraph, String text) {
-        System.out.print("Añadiendo párrafo.\n");
-        R run = fabObjetos.createR();
-        System.out.print("Run creada.\n");
-        Text textElement = fabObjetos.createText();
-        textElement.setValue(text);
-        System.out.print("Text creado.\n");
-        run.getContent().add(textElement);
-        System.out.print("Text añadido.\n");
-        paragraph.getContent().add(run);
-        System.out.print("Párrafo añadido exiosamente.\n");
-    }
-
     private static Hdr crearHeader(){
         //Definimos variables
         Hdr header = fabObjetos.createHdr();
         return header;
-    }
-
-    private static void insertarHeader(String text1, String text2, String text3,
-                                       String text4, String text5, MainDocumentPart header){
-        P paragraph = fabObjetos.createP();
-
-
-//        agregarParrafoCEstilo(paragraph, text1, false,false,1,false,18);
-//        agregarBr(paragraph);
-//        agregarParrafoCEstilo(paragraph, text2, false,false,1,false,18);
-//        agregarBr(paragraph);
-//        agregarParrafoCEstilo(paragraph, text3, false,false,1,false,18);
-//        agregarBr(paragraph);
-//        agregarParrafoCEstilo(paragraph, text4, false,false,1,false,18);
-//        agregarBr(paragraph);
-//        agregarParrafoCEstilo(paragraph, text5, false,false,1,false,18);
-
-        header.getContent().add(paragraph);
     }
 
     private static Ftr crearFooter(String text1, String text2){

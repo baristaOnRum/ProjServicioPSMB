@@ -28,7 +28,7 @@ public class connectDB {
     //Definir funciones
 
     //Inicialización de variables (no estáticas)
-    public void connparamsinit(acceso acceso){
+    public void connparamsinit(acceso acceso) {
         url = acceso.getConnURL();
         user = acceso.getUserDB();
         pass = acceso.getPassDB();
@@ -37,7 +37,7 @@ public class connectDB {
 
     //Definición de funciones de envío de datos
 
-    public static void sendRepresentante(representante representante){
+    public static void sendRepresentante(representante representante) {
 
         sql = "INSERT INTO representante " +
                 "(ciRepresentante, apellidos, nombres, estdCiv, lugarNac, fechaNac," +
@@ -84,8 +84,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        }
-        catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -101,7 +100,7 @@ public class connectDB {
 
     }
 
-    public static void removerRepresentante(int ci){
+    public static void removerRepresentante(int ci) {
         sql = "DELETE FROM representante" +
                 " WHERE ciRepresentante = ?;";
         try {
@@ -119,7 +118,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -134,9 +133,9 @@ public class connectDB {
         }
     }
 
-    public static List<representante> buscarRepresentante(String criterio, String busquedaQuery){
+    public static List<representante> buscarRepresentante(String criterio, String busquedaQuery) {
         List<representante> representantes = new ArrayList<>();
-        if (criterio == null){
+        if (criterio == null) {
             sql = "SELECT * FROM representante";
             System.out.println("INSIDE IF");
             try {
@@ -148,7 +147,7 @@ public class connectDB {
                 ResultSet rs = query.executeQuery();
 
                 System.out.println("INSIDE IF");
-                while (true){
+                while (true) {
                     try {
                         rs.next();
                         representante representante = new representante();
@@ -173,12 +172,12 @@ public class connectDB {
                         representante.setImg(rs.getBytes("img"));
                         representantes.add(representante);
                         System.out.println(representante.getCi());
-                    } catch (SQLException e){
+                    } catch (SQLException e) {
                         break;
                     }
                 }
                 return representantes;
-            } catch(SQLException e) {
+            } catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
             } finally {
@@ -206,7 +205,7 @@ public class connectDB {
 
                 ResultSet rs = query.executeQuery();
 
-                while (rs.next()){
+                while (rs.next()) {
                     representante representante = new representante();
                     representante.setNombres(rs.getString("nombres"));
                     representante.setApellidos(rs.getString("apellidos"));
@@ -232,7 +231,7 @@ public class connectDB {
                     System.out.println(representante.getCi());
                 }
                 return representantes;
-            } catch(SQLException e) {
+            } catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
             } finally {
@@ -246,8 +245,8 @@ public class connectDB {
                 }
             }
         }
-    return representantes;
-}
+        return representantes;
+    }
 
     public static representante fetchRepresentante(int ci) {
         sql = "SELECT " +
@@ -287,7 +286,7 @@ public class connectDB {
                 representante.setImg(rs.getBytes("img"));
             }
 
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -300,10 +299,14 @@ public class connectDB {
                 }
             }
         }
-        if (representante != null){ return representante; } else { return null;}
+        if (representante != null) {
+            return representante;
+        } else {
+            return null;
+        }
     }
 
-    public static void updateRepresentante(representante representante){
+    public static void updateRepresentante(representante representante) {
         sql = " UPDATE representante SET apellidos = ?," +
                 "nombres = ?, estdCiv = ?, lugarNac = ?, fechaNac = ?," +
                 "nacionalidad = ?, edad = ?, direccionHab = ?, gradoEstudios = ?," +
@@ -339,36 +342,36 @@ public class connectDB {
                 System.err.println("Imagen no existente");
                 query.setNull(18, java.sql.Types.BLOB); // Set as NULL if file not found
             }
-            query.setInt(19,representante.getCi());
+            query.setInt(19, representante.getCi());
 
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
             System.out.print(columnasAfectadas);
 
-            } catch(SQLException e) {
-                System.err.println("Cannot connect to the database!");
-                e.printStackTrace();
-            } finally {
-                if (conexion != null) {
-                    try {
-                        conexion.close();
-                        System.out.println("Database connection closed.");
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
                 }
             }
+        }
 
     }
 
-    public void sendEstudiante(estudiante estudiante){
+    public void sendEstudiante(estudiante estudiante) {
 
-        sql = "INSERT INTO `mydb`.`estudiante` (`ciEstudiante`, `apellidos`, `nombres`,"+
-        "`fechaNac`, `lugarNac`, `nacionalidad`, `edad`, `procedencia`,"+
-        "`tallaCam`, `tallaPant`, `tallaZap`, `peso`, `estatura`, `periodioCurso`,"+
-        "`periodoCursado`, `img`, `lateralidad`, `grupoSanguineo`, `asegurado`,"+
-        "`cualSeguro`, `medicoTratante`, `tlfMedicoTratante`)"+
-        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        sql = "INSERT INTO `mydb`.`estudiante` (`ciEstudiante`, `apellidos`, `nombres`," +
+                "`fechaNac`, `lugarNac`, `nacionalidad`, `edad`, `procedencia`," +
+                "`tallaCam`, `tallaPant`, `tallaZap`, `peso`, `estatura`, `periodioCurso`," +
+                "`periodoCursado`, `img`, `lateralidad`, `grupoSanguineo`, `asegurado`," +
+                "`cualSeguro`, `medicoTratante`, `tlfMedicoTratante`)" +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -390,19 +393,19 @@ public class connectDB {
             query.setDouble(14, estudiante.getEstatura()); // estatura
             query.setInt(15, estudiante.getPeriodoCurso()); // periodoCurso
             query.setInt(16, estudiante.getPeriodoCursado()); // periodoCursado
-             if (estudiante.getImg() != null) {
-                 query.setBytes(17, estudiante.getImg());
-             } else {
-                 System.err.println("Imagen no existente");
-                 query.setNull(17, java.sql.Types.BLOB); // Set as NULL if file not found
-             }
+            if (estudiante.getImg() != null) {
+                query.setBytes(17, estudiante.getImg());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(17, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
             query.setBoolean(18, estudiante.isLateralidad()); // lateralidad
             query.setString(19, estudiante.getGrupoSanguineo()); // grupoSanguineo
             query.setBoolean(20, estudiante.isAsegurado()); // asegurado
             query.setString(21, estudiante.getCualSeguro()); // cualSeguro
             query.setString(22, estudiante.getMedicoTratante()); // medicoTratante
             query.setString(23, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
-            
+
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
 
@@ -412,8 +415,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        }
-        catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -426,11 +428,11 @@ public class connectDB {
                 }
             }
         }
-    
+
 
     }
 
-    public void removerEstudiante(String ce){
+    public void removerEstudiante(String ce) {
 
         sql = "DELETE FROM estudiante" +
                 " WHERE ciEstudiante = ?;";
@@ -449,7 +451,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -590,9 +592,9 @@ public class connectDB {
         return estudiantes;
     }
 
-    public static estudiante fetchEstudiante(String ce){ 
+    public static estudiante fetchEstudiante(String ce) {
 
-        sql = "SELECT * FROM estudiante WHERE ciEstudiante = \""+ ce +"\"";
+        sql = "SELECT * FROM estudiante WHERE ciEstudiante = \"" + ce + "\"";
 
         estudiante estudiante = new estudiante();
 
@@ -630,7 +632,7 @@ public class connectDB {
 
             }
 
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -643,17 +645,21 @@ public class connectDB {
                 }
             }
         }
-        if (estudiante.getCe() != null){ return estudiante; } else { return null;}
+        if (estudiante.getCe() != null) {
+            return estudiante;
+        } else {
+            return null;
+        }
     }
 
-    public void sendNomina(trabajador trabajador){
+    public void sendNomina(trabajador trabajador) {
 
         sql = "INSERT INTO `mydb`.`trabajadores` (" +
-            "`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`, " +
-            "`cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
-            "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, " +
-            "`tiene1x10`, `cantPersonas1x10`, `voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`" +
-            ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                "`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`, " +
+                "`cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
+                "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, " +
+                "`tiene1x10`, `cantPersonas1x10`, `voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`" +
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -712,7 +718,7 @@ public class connectDB {
                 System.err.println("Imagen no existente");
                 query.setNull(36, java.sql.Types.BLOB); // Set as NULL if file not found
             }
-            
+
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
 
@@ -722,8 +728,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        }
-        catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -738,7 +743,7 @@ public class connectDB {
         }
     }
 
-    public void removerNomina(int ci){
+    public void removerNomina(int ci) {
 
         sql = "DELETE FROM trabajador" +
                 " WHERE ci_trabajadores = ?;";
@@ -757,7 +762,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -773,7 +778,7 @@ public class connectDB {
 
     }
 
-    public static List<trabajador> buscarNomina(String criterio, String busquedaQuery){
+    public static List<trabajador> buscarNomina(String criterio, String busquedaQuery) {
         List<trabajador> trabajadores = new ArrayList<>();
         if (criterio == null) {
             sql = "SELECT * FROM trabajadores";
@@ -851,8 +856,7 @@ public class connectDB {
                     }
                 }
                 return trabajadores;
-            }
-            catch (SQLException e) {
+            } catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
             } finally {
@@ -864,9 +868,8 @@ public class connectDB {
                         e.printStackTrace();
                     }
                 }
-            }   
-        }
-        else {
+            }
+        } else {
             sql = "SELECT " +
                     "ci_trabajador, rif, titulo, nombres, apellidos, cargo, fechaNac, fechaIngreso," +
                     "direccionCobro, estatus, grado, sexo, tlf1, tlf2," +
@@ -952,9 +955,9 @@ public class connectDB {
                         e.printStackTrace();
                     }
                 }
-            } 
+            }
         }
-    return trabajadores;
+        return trabajadores;
     }
 
     public trabajador fetchNomina(int ci) {
@@ -964,7 +967,7 @@ public class connectDB {
                 "munElec, parrqElec, centVot, munRes, parrqRes, comRes, calleRes, nombreJefeCLAP, ciJefeCLAP," +
                 "tiene1x10, cantPersonas1x10, voto, observaciones," +
                 "ciCopia, rifCopia, tituloCopia, turno, img " +
-                "FROM trabajadores WHERE ci_trabajador ="+ ci;
+                "FROM trabajadores WHERE ci_trabajador =" + ci;
         trabajador trabajador = new trabajador();
 
         try {
@@ -1009,7 +1012,7 @@ public class connectDB {
                 trabajador.setImg(rs.getBytes("img"));
             }
 
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1027,10 +1030,10 @@ public class connectDB {
 
     public void sendNominaMaestra(maestro maestro) {
         sql = "INSERT INTO `mydb`.`maestras` (" +
-            "`ci_maestra`, `rif`, `titulo`, `nombres`, `apellidos`, `cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
-            "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, `tiene1x10`, `cantPersonas1x10`, " +
-            "`voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`) " +
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                "`ci_maestra`, `rif`, `titulo`, `nombres`, `apellidos`, `cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
+                "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, `tiene1x10`, `cantPersonas1x10`, " +
+                "`voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
@@ -1080,7 +1083,7 @@ public class connectDB {
             }
 
             query.setBoolean(31, maestro.isTurno());
-            
+
             if (maestro.getImg() != null) {
                 query.setBytes(32, maestro.getImg());
             } else {
@@ -1126,7 +1129,7 @@ public class connectDB {
             } else {
                 System.out.println("La eliminación de la fila ha fallado.");
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1317,7 +1320,7 @@ public class connectDB {
                 maestra.setImg(rs.getBytes("img"));
             }
 
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1333,11 +1336,11 @@ public class connectDB {
         return maestra;
     }
 
-    public void sendAutorizado(autorizado autorizado){
+    public void sendAutorizado(autorizado autorizado) {
 
         sql = "INSERT INTO autorizadoRetiro (ciAutorizado, apellidos, nombre, tlf1, tlf2) VALUES (?,?,?,?,?)";
 
-        try{
+        try {
             conexion = DriverManager.getConnection(url, "root", "1234");
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
@@ -1348,7 +1351,7 @@ public class connectDB {
             query.setString(13, autorizado.getTlf1()); // tlf
             query.setString(14, autorizado.getTlf2()); // tlf
 
-        }catch(SQLException e){
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1363,18 +1366,18 @@ public class connectDB {
         }
     }
 
-    public void removerAutorizado(autorizado autorizado){
+    public void removerAutorizado(autorizado autorizado) {
 
         sql = "DELETE FROM autorizadoRetiro WHERE ciAutorizado = ?";
 
-        try{
+        try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            
+
             query.setInt(1, autorizado.getCi()); // cirepresentante
 
-        }catch(SQLException e){
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1399,17 +1402,18 @@ public class connectDB {
                 PreparedStatement query = conexion.prepareStatement(sql);
                 ResultSet rs = query.executeQuery();
 
-                while (true) { try{
-                    rs.next();
-                    autorizado autor = new autorizado();
-                    autor.setCi(rs.getInt("ciAutorizado"));
-                    autor.setApellidos(rs.getString("apellidos"));
-                    autor.setNombres(rs.getString("nombres"));
-                    autor.setTlf1(rs.getString("tlf1"));
-                    autor.setTlf2(rs.getString("tlf2"));
-                    autorizados.add(autor);
-                    System.out.println(autor.getCi());
-                    } catch (SQLException e1){
+                while (true) {
+                    try {
+                        rs.next();
+                        autorizado autor = new autorizado();
+                        autor.setCi(rs.getInt("ciAutorizado"));
+                        autor.setApellidos(rs.getString("apellidos"));
+                        autor.setNombres(rs.getString("nombres"));
+                        autor.setTlf1(rs.getString("tlf1"));
+                        autor.setTlf2(rs.getString("tlf2"));
+                        autorizados.add(autor);
+                        System.out.println(autor.getCi());
+                    } catch (SQLException e1) {
                         System.out.println("No more rows found");
                         break;
                     }
@@ -1464,18 +1468,18 @@ public class connectDB {
         return autorizados;
     }
 
-    public void fetchAutorizado(autorizado autorizado){
+    public void fetchAutorizado(autorizado autorizado) {
 
-                sql = "SELECT ciAutorizado FROM autorizadoRetiro WHERE ciAutorizado = ?";
+        sql = "SELECT ciAutorizado FROM autorizadoRetiro WHERE ciAutorizado = ?";
 
-        try{
+        try {
             conexion = DriverManager.getConnection(url, "root", "1234");
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            
+
             query.setInt(1, autorizado.getCi()); // cirepresentante
 
-        }catch(SQLException e){
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1491,24 +1495,24 @@ public class connectDB {
 
     }
 
-    public void sendDiagnostico(diagnostico diagnostico){
-    
-        sql = "INSERT INTO `mydb`.`diagnostico` (`estudiante_ciEstudiante`,"+
-                "`problemaParto`, `problemaMotor`, `problemaLenguaje`,"+
-                "`problemaCognitivo`, `alergiaMedicamento`, `condicionExtra`,"+
-                "`cualParto`, `cualMotor`, `cualLenguaje`, `cualCognitivo`,"+
-                "`cualAMedicamento`, `cualExtra`, `alergia`, `cualAlergia`,"+
-                "`enfermedadesPadecidas`, `edadHablar`, `edadCaminar`,"+
-                "`enfermedadEmbarazo`, `cualEnfEmbarazo`, `embarazoPlanif`,"+
-                "`medicamentoFiebre`, `vacBCG`, `vacTRIPLE`, `vacPOLIO`, `vacTIFUS`,"+
-                "`otroVacAplicadas`, `cualVacAplicada`, `consultaPsilg`,"+
-                "`consultaPsipeg`, `consultaNeur`, `consultaLeng`, `consultaOtro`,"+
-                "`especifiqueConsultaOtro`, `comeAyudado`, `buenApetito`,"+
-                "`horaDormir`, `horaLevantarse`, `conQuienDuerme`, `chupaDedo`,"+
-                "`edadDejarPañales`, `seOrinaDia`, `seOrinaNoche`, `evacuaDia`, `pideAydaAseo`)"+
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"+
+    public void sendDiagnostico(diagnostico diagnostico) {
+
+        sql = "INSERT INTO `mydb`.`diagnostico` (`estudiante_ciEstudiante`," +
+                "`problemaParto`, `problemaMotor`, `problemaLenguaje`," +
+                "`problemaCognitivo`, `alergiaMedicamento`, `condicionExtra`," +
+                "`cualParto`, `cualMotor`, `cualLenguaje`, `cualCognitivo`," +
+                "`cualAMedicamento`, `cualExtra`, `alergia`, `cualAlergia`," +
+                "`enfermedadesPadecidas`, `edadHablar`, `edadCaminar`," +
+                "`enfermedadEmbarazo`, `cualEnfEmbarazo`, `embarazoPlanif`," +
+                "`medicamentoFiebre`, `vacBCG`, `vacTRIPLE`, `vacPOLIO`, `vacTIFUS`," +
+                "`otroVacAplicadas`, `cualVacAplicada`, `consultaPsilg`," +
+                "`consultaPsipeg`, `consultaNeur`, `consultaLeng`, `consultaOtro`," +
+                "`especifiqueConsultaOtro`, `comeAyudado`, `buenApetito`," +
+                "`horaDormir`, `horaLevantarse`, `conQuienDuerme`, `chupaDedo`," +
+                "`edadDejarPañales`, `seOrinaDia`, `seOrinaNoche`, `evacuaDia`, `pideAydaAseo`)" +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?," +
                 "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-   
+
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
             System.out.println("Database connection started.");
@@ -1562,7 +1566,6 @@ public class connectDB {
             query.setBoolean(45, diagnostico.isPideAyudaAseo()); // pideAydaAseo
 
 
-            
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
 
@@ -1572,8 +1575,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        }
-        catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1588,7 +1590,7 @@ public class connectDB {
         }
     }
 
-    public void editarDiagnostico(diagnostico diagnostico){
+    public void editarDiagnostico(diagnostico diagnostico) {
         sql = "UPDATE diagnostico SET problemaParto = ?, problemaMotor = ?, problemaLenguaje = ?," +
                 "problemaCognitivo = ?, alergiaMedicamento = ?, condicionExtra = ?," +
                 "cualParto = ?, cualMotor = ?, cualLenguaje = ?, cualCognitivo = ?," +
@@ -1668,11 +1670,10 @@ public class connectDB {
                 System.out.println("La actualización de la fila ha fallado.");
             }
 
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
-        }finally {
+        } finally {
             if (conexion != null) {
                 try {
                     conexion.close();
@@ -1684,16 +1685,16 @@ public class connectDB {
         }
     }
 
-    public void removerDiagnostico(String ce){
+    public void removerDiagnostico(String ce) {
 
         sql = "DELETE FROM diagnostico" +
-        " WHERE estudiante_ciEstudiante = ?;";
+                " WHERE estudiante_ciEstudiante = ?;";
 
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
-            
+
             query.setString(1, ce); // estudiante_ciEstudiante
 
             // --- Ejecución de la consulta ---
@@ -1705,7 +1706,7 @@ public class connectDB {
             } else {
                 System.out.println("La inserción de la fila ha fallado.");
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1721,15 +1722,19 @@ public class connectDB {
 
     }
 
-    public void setRelRepresentado(){}
+    public void setRelRepresentado() {
+    }
 
-    public void setRelAutorizado(){}
+    public void setRelAutorizado() {
+    }
 
-    public void crearUsuario(){}
+    public void crearUsuario() {
+    }
 
-    public void removerUsuario(){}
+    public void removerUsuario() {
+    }
 
-    public void fetchUsuario(acceso accesoPresente){
+    public void fetchUsuario(acceso accesoPresente) {
         sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
 
         try {
@@ -1739,13 +1744,13 @@ public class connectDB {
 
             ResultSet rs = query.executeQuery();
             try {
-            rs.next();
-            //accesoPresente.getNombre_usuario().equals(rs.getString("usuario"));
+                rs.next();
+                //accesoPresente.getNombre_usuario().equals(rs.getString("usuario"));
             } catch (SQLException e1) {
                 System.out.println("USUARIO NO EXISTENTE");
                 e1.printStackTrace();
             }
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1760,25 +1765,31 @@ public class connectDB {
         }
     }
 
-    public void promoverAño(){}
+    public void promoverAño() {
+    }
 
-    public void crearFamiliar(){}
+    public void crearFamiliar() {
+    }
 
-    public void fetchFamiliar(){}
+    public void fetchFamiliar() {
+    }
 
-    public void aumentarNivelEstd(){}
+    public void aumentarNivelEstd() {
+    }
 
-    public void fetchRelFamiliar(){
+    public void fetchRelFamiliar() {
 
     }
 
-    public void fetchRelRepresentante(){
+    public void fetchRelRepresentante() {
 
-    };
+    }
 
-    public List<estudiante> fetchRelAutorizado(String ciAutorizado){
+    ;
 
-        sql = "SELECT * FROM puederetirar WHERE autorizadoRetiro_ciAutorizado ="+ ciAutorizado;
+    public List<estudiante> fetchRelAutorizado(String ciAutorizado) {
+
+        sql = "SELECT * FROM puederetirar WHERE autorizadoRetiro_ciAutorizado =" + ciAutorizado;
         List<estudiante> ests = new ArrayList<>();
 
         try {
@@ -1798,7 +1809,7 @@ public class connectDB {
                 System.out.println("Recuperados todos los estudiantes");
             }
 
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
             e.printStackTrace();
         } finally {
@@ -1812,7 +1823,8 @@ public class connectDB {
             }
         }
 
-    };
+    }
+}
 
 
     //Main
