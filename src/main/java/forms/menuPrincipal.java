@@ -3403,12 +3403,13 @@ public void createConfPanel(){
                     .addComponent(check_ven_rep)
                     .addComponent(check_ext_rep))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_direc_hab_rep)
-                    .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(parentescoRepresentanteTexto)
-                        .addComponent(fieldRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(fieldRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(label_direc_hab_rep)
+                        .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_rep)
@@ -3439,18 +3440,18 @@ public void createConfPanel(){
 
         tbl_autRetiro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2"
+                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2", "Parentesco"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -3466,9 +3467,9 @@ public void createConfPanel(){
             .addGroup(dat_autLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_autRetiro))
-                .addContainerGap(659, Short.MAX_VALUE))
+                    .addComponent(lbl_autRetiro)
+                    .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(518, Short.MAX_VALUE))
         );
         dat_autLayout.setVerticalGroup(
             dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3629,7 +3630,7 @@ public void createConfPanel(){
                         .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chk_otroConsult)
                             .addComponent(txt_otroConsult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 67, Short.MAX_VALUE)))
+                        .addGap(0, 200, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -4515,7 +4516,6 @@ public void createConfPanel(){
 
     //Autorizados
     java.util.List<autorizado> listaAutorizados = new java.util.ArrayList<>();
-    java.util.List<retiraA> listaRelAut = new java.util.ArrayList<>();
     javax.swing.table.TableModel modelAut = tbl_autRetiro.getModel();
     for (int i = 0; i < modelAut.getRowCount(); i++) {
         Object ciObj = modelAut.getValueAt(i, 0);
@@ -4899,9 +4899,8 @@ public void createConfPanel(){
                     aut.setApellidos(apellido);
                     aut.setTlf1(tlf1);
                     aut.setTlf2(tlf2);
-                    ret.setParentesco(parentesco);
+                    aut.setParentesco(parentesco);
                     listaAutorizados.add(aut);
-                    listaRelAut.add(ret);
                 }
             }
         } else {
