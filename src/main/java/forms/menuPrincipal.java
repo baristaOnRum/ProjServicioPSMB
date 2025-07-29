@@ -11,7 +11,7 @@ import javax.swing.table.TableModel;
 
 import subsystems.*;
 import subsystems.individuos.*;
-import forms.pops.*;
+//import forms.pops.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.*;
