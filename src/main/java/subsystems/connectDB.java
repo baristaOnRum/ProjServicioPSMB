@@ -2012,7 +2012,6 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                 }
             }
         }
-        
     }
 
     public static void crearUsuario(acceso acceso) {
