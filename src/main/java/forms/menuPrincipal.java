@@ -5668,7 +5668,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new menuPrincipal().setVisible(true));
+        //java.awt.EventQueue.invokeLater(() -> new menuPrincipal().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
