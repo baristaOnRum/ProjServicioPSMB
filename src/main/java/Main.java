@@ -11,17 +11,26 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Main {
-    private static void checkInit(){
+    private static void checkInit(acceso accesoPresente){
         //TODO: Checkear: Existencia de una base de datos guardada -> Existencia de usuarios en la DB,
         //                SI NO -> Solicitar enlace de conexión a DB; Verificar existencia otra vez ->
         //                Verificar usuarios; SI NO USUARIO Crear usuarios. El primer usuario siempre es Administrador
+        if (utils.obtenerVariable("db_url") != null){
+            if (!utils.obtenerVariable("db_url").isEmpty());{
+                if (!utils.obtenerVariable("db_user").isEmpty()){
+                    setAcceso(utils.obtenerVariable("db_url"),
+                            utils.obtenerVariable("db_user"), accesoPresente);
+                    }
+                }
+        } else {
+            // llamar a un formulario que settee las cosas
+        }
     }
 
-    private static acceso setAcceso(acceso acceso){
+    private static acceso setAcceso(String urlDB, String userDB, acceso acceso){
         //TODO: Llamar al inicio de sesión, devolver un acceso válido;
-        acceso.setTipo_acceso(4);
-        acceso.setConnURL("jdbc:mysql://localhost:3306/mydb");
-        acceso.setPassDB("1234");
+        acceso.setConnURL(urlDB);
+        acceso.setPassDB(userDB);
         acceso.setUserDB("root");
         acceso.setNombre_usuario("test");
         acceso.setContrasenaHash("test");
@@ -39,8 +48,7 @@ public class Main {
                 //conf_users main = new conf_users();
                 //menu_reportes main = new menu_reportes();
         acceso accesoPresente = new acceso();
-        checkInit();
-        setAcceso(accesoPresente);
+        checkInit(accesoPresente);
         connectDB.connparamsinit(accesoPresente);
         main = new menuPrincipal(accesoPresente);
         main.setVisible(true);
