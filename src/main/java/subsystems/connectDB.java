@@ -356,54 +356,57 @@ public class connectDB {
 
     public static void sendEstudiante(estudiante estudiante) {
 
-        sql = "INSERT INTO `mydb`.`estudiante` (`ciEstudiante`, `apellidos`, `nombres`," +
-                "`fechaNac`, `lugarNac`, `nacionalidad`, `edad`, `procedencia`," +
-                "`tallaCam`, `tallaPant`, `tallaZap`, `peso`, `estatura`, `periodioCurso`," +
-                "`periodoCursado`, `img`, `lateralidad`, `grupoSanguineo`, `asegurado`," +
-                "`cualSeguro`, `medicoTratante`, `tlfMedicoTratante`)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO estudiante (" +
+                "ciEstudiante, apellidos, nombres, fechaNac, lugarNac, nacionalidad, edad, " +
+                "procedencia, tallaCam, tallaPant, tallaZap, peso, estatura, nivel, " +
+                "turno, periodioCurso, periodoCursado, img, lateralidad, grupoSanguineo, " +
+                "asegurado, cualSeguro, medicoTratante, tlfMedicoTratante" +
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
+        try (Connection conn = DriverManager.getConnection(url,user,pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            query.setString(1, estudiante.getCe()); // ceestudiante
-            query.setString(2, estudiante.getApellidos()); // apellidos
-            query.setString(3, estudiante.getNombres()); // nombres
-            query.setDate(6, Date.valueOf(estudiante.getFechaNac())); // fecha_nac (formato YYYY-MM-DD es estándar)
-            query.setString(5, estudiante.getLugarNac()); // lugar_nac
-            query.setString(7, estudiante.getNacionalidad()); // nacionalidad
-            query.setInt(8, estudiante.getEdad()); // edad
-            query.setString(9, estudiante.getProcedencia()); // procedencia
-            query.setInt(10, estudiante.getTallaCamisa()); // tallaCam
-            query.setInt(11, estudiante.getTallaPantalon()); // tallaPant
-            query.setInt(12, estudiante.getTallaZapato()); // tallaZap
-            query.setDouble(13, estudiante.getPeso()); // peso
-            query.setDouble(14, estudiante.getEstatura()); // estatura
-            query.setInt(15, estudiante.getPeriodoCurso()); // periodoCurso
-            query.setInt(16, estudiante.getPeriodoCursado()); // periodoCursado
+            // Set parameters for the prepared statement
+            pstmt.setString(1, estudiante.getCe()); // ciEstudiante
+            pstmt.setString(2, estudiante.getApellidos()); // apellidos (from personas superclass)
+            pstmt.setString(3, estudiante.getNombres()); // nombres (from personas superclass)
+            pstmt.setDate(4, Date.valueOf(estudiante.getFechaNac())); // fechaNac (from personas superclass, converted to java.sql.Date)
+            pstmt.setString(5, estudiante.getLugarNac()); // lugarNac (from personas superclass)
+            pstmt.setString(6, estudiante.getNacionalidad()); // nacionalidad
+            pstmt.setInt(7, estudiante.getEdad()); // edad
+            pstmt.setString(8, estudiante.getProcedencia()); // procedencia
+            pstmt.setInt(9, estudiante.getTallaCamisa()); // tallaCam
+            pstmt.setInt(10, estudiante.getTallaPantalon()); // tallaPant
+            pstmt.setInt(11, estudiante.getTallaZapato()); // tallaZap
+            pstmt.setInt(12, estudiante.getPeso()); // peso
+            pstmt.setInt(13, estudiante.getEstatura()); // estatura
+            pstmt.setInt(14, estudiante.getNivel()); // nivel
+            // pstmt.setString(15, estudiante.getSeccion()); // seccion - OMITTED as not in class
+            pstmt.setBoolean(15, estudiante.getTurno() == 1); // turno (byte to boolean, assuming 1 is true, 0 is false)
+            pstmt.setInt(16, estudiante.getPeriodoCurso()); // periodioCurso
+            pstmt.setInt(17, estudiante.getPeriodoCursado()); // periodoCursado
+
+            // Handle image (byte array)
             if (estudiante.getImg() != null) {
-                query.setBytes(17, estudiante.getImg());
+                pstmt.setBytes(18, estudiante.getImg()); // img
             } else {
-                System.err.println("Imagen no existente");
-                query.setNull(17, java.sql.Types.BLOB); // Set as NULL if file not found
+                pstmt.setNull(18, java.sql.Types.BLOB); // Set as NULL if no image
             }
-            query.setBoolean(18, estudiante.isLateralidad()); // lateralidad
-            query.setString(19, estudiante.getGrupoSanguineo()); // grupoSanguineo
-            query.setBoolean(20, estudiante.isAsegurado()); // asegurado
-            query.setString(21, estudiante.getCualSeguro()); // cualSeguro
-            query.setString(22, estudiante.getMedicoTratante()); // medicoTratante
-            query.setString(23, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
 
-            // --- Ejecución de la consulta ---
-            int columnasAfectadas = query.executeUpdate();
+            pstmt.setBoolean(19, estudiante.isLateralidad()); // lateralidad
+            pstmt.setString(20, estudiante.getGrupoSanguineo()); // grupoSanguineo
+            pstmt.setBoolean(21, estudiante.isAsegurado()); // asegurado
+            pstmt.setString(22, estudiante.getCualSeguro()); // cualSeguro
+            pstmt.setString(23, estudiante.getMedicoTratante()); // medicoTratante
+            pstmt.setString(24, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
 
-            // --- Verificación del resultado ---
-            if (columnasAfectadas > 0) {
-                System.out.println("¡Fila insertada exitosamente!");
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into estudiante for CI: " + estudiante.getCe());
             } else {
-                System.out.println("La inserción de la fila ha fallado.");
+                System.out.println("No rows affected. Data insertion failed for estudiante for CI: " + estudiante.getCe());
             }
         } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -1852,28 +1855,40 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
         } catch (SQLException e) {
             System.err.println("Database error during puederetirar insertion: " + e.getMessage());
             e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
     public static void setSocioFamiliar(socioFamiliar socioFamiliar){
-        String sql = "INSERT INTO socioFamiliar (estudiante_ciEstudiante, vivienda, tipoVivienda," +
-                "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO socioFamiliar (" +
+                "estudiante_ciEstudiante, vivienda, tipoVivienda, cuidaNiñoHogar, estdCivilPadres, " +
+                "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng" +
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            PreparedStatement pstmt = conexion.prepareStatement(sql);
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             // Set the parameters for the prepared statement using getters
             pstmt.setString(1, socioFamiliar.getEstudiante_ciEstudiante());
             pstmt.setString(2, socioFamiliar.getVivienda());
             pstmt.setString(3, socioFamiliar.getTipoVivienda());
             pstmt.setString(4, socioFamiliar.getCuidaNinoHogar());
+            // Note: relacionAmbienteFamiliar is in the class but not in the new table schema, so it's omitted here.
             pstmt.setString(5, socioFamiliar.getEstdCivilPadres());
             pstmt.setString(6, socioFamiliar.getConsultaAtend());
-            pstmt.setBoolean(7, socioFamiliar.isVisitPsicopedagogo()); // bit(1) maps to boolean
+            pstmt.setBoolean(7, socioFamiliar.isVisitPsicopedagogo());
             pstmt.setBoolean(8, socioFamiliar.isVisitPsicologo());
             pstmt.setBoolean(9, socioFamiliar.isVisitNeurologo());
             pstmt.setBoolean(10, socioFamiliar.isVisitTerapLeng());
+
 
             // Execute the update (insert)
             int rowsAffected = pstmt.executeUpdate();
@@ -1886,6 +1901,15 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
         } catch (SQLException e) {
             System.err.println("Database error during socioFamiliar insertion: " + e.getMessage());
             e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
     }

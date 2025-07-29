@@ -4761,7 +4761,9 @@ public void createConfPanel(){
     }//GEN-LAST:event_btn_cerrarBusqRepActionPerformed
 
     private void btn_aceptarInscripcionNiñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarInscripcionNiñoActionPerformed
-    // Datos Personales
+
+
+    String ceNiñ = txt_ce.getText().trim();
     String nombreNiñ = txt_nombreNiñ.getText().trim();
     String apellidoNiñ = txt_apellidoNiñ.getText().trim();
     String edadNiñ = text_edad_niñ.getText().trim();
@@ -4855,7 +4857,7 @@ public void createConfPanel(){
     // Documentos
     String responsable = text_responsable.getText().trim();
     String persona = text_persona.getText().trim();
-    String fecha = text_fecha.getText().trim();
+    LocalDate fecha = LocalDate.now();
     String observaciones = text_observaciones.getText().trim();
 
     // Ambiente Socio Familiar
@@ -4931,6 +4933,7 @@ public void createConfPanel(){
 
 
         // Child's Data
+        fields.put("Cédula Escolar", ceNiñ);
         fields.put("Nombre del Niño", nombreNiñ);
         fields.put("Apellido del Niño", apellidoNiñ);
         fields.put("Edad del Niño (texto)", edadNiñ);
@@ -4981,6 +4984,7 @@ public void createConfPanel(){
     
     
     //Ponemos las variables
+        estudiante.setCe(ceNiñ);
         estudiante.setNombres(nombreNiñ);
         estudiante.setApellidos(apellidoNiñ);
         estudiante.setLugarNac(lugarNacNiñ);
@@ -4992,39 +4996,45 @@ public void createConfPanel(){
             try {
             estudiante.setTallaCamisa(Integer.parseInt(tallaCamisaNiñ));
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing tallaCamisaNiñ: " + e.getMessage());
-            estudiante.setTallaCamisa(0); // Default value
-        }
+                String message = new String("Verifique que ingresó valores correctos el campo Talla Camisa (Niño)");;
+                JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
         try {
             estudiante.setTallaPantalon(Integer.parseInt(tallaPantalonNiñ));
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing tallaPantalonNiñ: " + e.getMessage());
-            estudiante.setTallaPantalon(0); // Default value
+            String message = new String("Verifique que ingresó valores correctos el campo Talla Pantalón (Niño)");;
+            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         try {
             estudiante.setTallaZapato(Integer.parseInt(tallaZapatoNiñ));
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing tallaZapatoNiñ: " + e.getMessage());
-            estudiante.setTallaZapato(0); // Default value
+            String message = new String("Verifique que ingresó valores correctos el Talla Zapato (Niño)");;
+            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         try {
             // Prefer edadNumNiñ if it's meant to be numeric, otherwise fall back to edadNiñ
             estudiante.setEdad(Integer.parseInt(edadNumNiñ.isEmpty() ? edadNiñ : edadNumNiñ));
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing edadNiñ/edadNumNiñ: " + e.getMessage());
-            estudiante.setEdad(0); // Default value
+            String message = new String("Verifique que ingresó valores correctos el campo Edad (Niño)");;
+            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         try {
             estudiante.setEstatura(Integer.parseInt(estaturaNiñ));
-        } catch (NumberFormatException e) {
-            System.err.println("Error parsing estaturaNiñ: " + e.getMessage());
-            estudiante.setEstatura(0); // Default value
+        }catch (NumberFormatException e) {
+            String message = new String("Verifique que ingresó valores correctos el campo Estatura (Niño)");;
+            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         try {
             estudiante.setPeso(Integer.parseInt(pesoNiñ));
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing pesoNiñ: " + e.getMessage());
-            estudiante.setPeso(0); // Default value
+            String message = new String("Verifique que ingresó valores correctos el campo Peso (Niño)");;
+            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         try {
             estudiante.setFechaNac(LocalDate.of(Integer.parseInt(añoNacNiñ),
@@ -5033,7 +5043,7 @@ public void createConfPanel(){
             System.err.println("Error parsing fecNacRep: " + e.getMessage());
             estudiante.setFechaNac(null);
         } catch (NumberFormatException e) {
-            String message = new String("Verifique que ingresó valores correctos en los campos");;
+            String message = new String("Verifique que ingresó valores correctos el campo Fecha de Nacimiento (Niño)");;
             JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
                 }
 
@@ -5041,14 +5051,16 @@ public void createConfPanel(){
         try {
             diagnostico.setEdadCaminar(Integer.parseInt(edadCaminar));
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing edadCaminar: " + e.getMessage());
-            diagnostico.setEdadCaminar(0); // Default value
+            String message = new String("Verifique que ingresó valores correctos el campo Edad de Caminar (Niño)");;
+            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         try {
             diagnostico.setEdadDejarPanales(Integer.parseInt(edadDejPan));
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing edadDejPan: " + e.getMessage());
-            diagnostico.setEdadDejarPanales(0); // Default value
+            String message = new String("Verifique que ingresó valores correctos el campo Edad de Dejar el Pañal (Niño)");;
+            JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
         }
 
         diagnostico.setCualParto(prmPartoCual);
@@ -5219,10 +5231,11 @@ public void createConfPanel(){
             madre.setFechaNac(LocalDate.of(Integer.parseInt(añoNacMad),
                     Integer.parseInt(mesNacMad),Integer.parseInt(diaNacMad)));
         } catch (DateTimeParseException e) {
-            StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en los campos");;
+            StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en el campo Fecha de Nacimiento (Madre)");;
             JOptionPane.showMessageDialog(this, message.toString(), "Error", JOptionPane.WARNING_MESSAGE);
             System.err.println("Error parsing fecNacRep: " + e.getMessage());
             madre.setFechaNac(null);
+            return;
         }
         }
         
@@ -5245,10 +5258,11 @@ public void createConfPanel(){
             padre.setFechaNac(LocalDate.of(Integer.parseInt(añoNacPadre),
                     Integer.parseInt(mesNacPadre),Integer.parseInt(diaNacPadre)));
         } catch (DateTimeParseException e) {
-            StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en los campos");;
+            StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en el campo Fecha de Nacimiento (padre)");;
             JOptionPane.showMessageDialog(this, message.toString(), "Error", JOptionPane.WARNING_MESSAGE);
             System.err.println("Error parsing fecNacRep: " + e.getMessage());
             padre.setFechaNac(null);
+            return;
         }
         }
         // Legal Representative's Data
@@ -5271,7 +5285,7 @@ public void createConfPanel(){
             representanteLegal.setFechaNac(LocalDate.of(Integer.parseInt(añoNacRep),
                     Integer.parseInt(mesNacRep),Integer.parseInt(diaNacRep)));
         } catch (DateTimeParseException e) {
-            StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en los campos");;
+            StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en el campo Fecha de Nacimiento (Representante)");;
             JOptionPane.showMessageDialog(this, message.toString(), "Error", JOptionPane.WARNING_MESSAGE);
             System.err.println("Error parsing fecNacRep: " + e.getMessage());
             representanteLegal.setFechaNac(null);
@@ -5281,12 +5295,7 @@ public void createConfPanel(){
         // --- Documentos ---
         documentos.setResponsableInscripcion(responsable);
         documentos.setPersonaInscribe(persona);
-        try {
-            documentos.setFechaInscripcion(LocalDate.parse(fecha, dateFormatter));
-        } catch (DateTimeParseException e) {
-            System.err.println("Error parsing fecha: " + e.getMessage());
-            documentos.setFechaInscripcion(null);
-        }
+        documentos.setFechaInscripcion(fecha);
         documentos.setObservaciones(observaciones);
         documentos.setCe(estudiante.getCe());
         documentos.setCedulaMadre(check_ci_madre.isSelected());
