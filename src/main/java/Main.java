@@ -21,7 +21,7 @@ public class Main {
         //TODO: Llamar al inicio de sesión, devolver un acceso válido;
         acceso.setTipo_acceso(4);
         acceso.setConnURL("jdbc:mysql://localhost:3306/mydb");
-        acceso.setPassDB("bandidito10");
+        acceso.setPassDB("1234");
         acceso.setUserDB("root");
         acceso.setNombre_usuario("test");
         acceso.setContrasenaHash("test");
