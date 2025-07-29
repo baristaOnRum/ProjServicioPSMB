@@ -64,13 +64,13 @@ public static boolean validateAndNotify(Component parentComponent, LinkedHashMap
     return true;
 }
 
-public menuPrincipal() {
+public menuPrincipal(acceso accesoPresente) {
     initComponents();
     panel.add(principal);
     
     
     //los accesos se dan desde el menu de busqueda, se limita la informacion que pueden usar los usuarios
-//    switch(subsystems.acceso.tipo_acceso){
+//    switch(subsystems.accesoPresente.tipo_acceso){
 //        case 1 -> {
 //            btn_inscribirEstd.setEnabled(false);
 //            btn_inscribirRep.setEnabled(false);

@@ -19,12 +19,18 @@ public class Main {
 
     private static acceso setAcceso(acceso acceso){
         //TODO: Llamar al inicio de sesión, devolver un acceso válido;
+        acceso.setTipo_acceso(4);
+        acceso.setConnURL("jdbc:mysql://localhost:3306/mydb");
+        acceso.setPassDB("bandidito10");
+        acceso.setUserDB("root");
+        acceso.setNombre_usuario("test");
+        acceso.setContrasenaHash("test");
 
         return acceso;
     }
 
     public static void main(String[] args) {
-                menuPrincipal main = new menuPrincipal();
+                menuPrincipal main;
                 //file_picker main = new file_picker();
                 //busqueda_representante main = new busqueda_representante();
                 //res_busqueda_rep main = new res_busqueda_rep();
@@ -35,6 +41,8 @@ public class Main {
         acceso accesoPresente = new acceso();
         checkInit();
         setAcceso(accesoPresente);
+        connectDB.connparamsinit(accesoPresente);
+        main = new menuPrincipal(accesoPresente);
         main.setVisible(true);
         
     }
