@@ -95,7 +95,7 @@ public menuPrincipal() {
 //        case 3 ->{
 //            //edicion total
 //        }
-//        case 4 ->{
+//        case  4 ->{
 //            //edicion total
 //        }
 //  }
@@ -573,6 +573,7 @@ public void createConfPanel(){
         lbl_fechIngresoNomina = new javax.swing.JLabel();
         txt_fechaIngresoNomina = new javax.swing.JTextField();
         btn_aceptarInscripcionNomina = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         panel = new javax.swing.JPanel();
 
         headderMenu.setBackground(new java.awt.Color(27, 120, 101));
@@ -3782,7 +3783,7 @@ public void createConfPanel(){
                                     .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(label_persona)
                                         .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout informacionEstudianteLayout = new javax.swing.GroupLayout(informacionEstudiante);
@@ -5706,6 +5707,7 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JPanel busquedaEstudiantes;
     private javax.swing.JPanel busquedaNomina;
     private javax.swing.JPanel busquedaRepresentante;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox chec_bachiller_madre;
     private javax.swing.JCheckBox chec_bachiller_padre;
     private javax.swing.JCheckBox chec_bachiller_rep;
