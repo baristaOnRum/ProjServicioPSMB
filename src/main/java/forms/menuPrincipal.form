@@ -4950,7 +4950,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="headderInfNomina" alignment="0" pref="0" max="32767" attributes="0"/>
+              <Component id="headderInfNomina" alignment="0" pref="1214" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
@@ -5355,12 +5355,12 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="lbl_votoNomina" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rdb_siNomina" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_siVot" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="rdb_noNomina" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_noVot" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="68" max="32767" attributes="0"/>
+                      <EmptySpace pref="146" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbl_jefComNomina" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_ciJefComNomina" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -5371,8 +5371,12 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txt_ciJefComNomina" pref="100" max="32767" attributes="0"/>
                           <Component id="txt_jefComNomina" max="32767" attributes="0"/>
-                          <Component id="txt_1x10Nomina" alignment="0" max="32767" attributes="0"/>
                           <Component id="txt_cant1x10Nomina" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="rdb_no1x10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="rdb_si1x10" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   </Group>
@@ -5396,27 +5400,28 @@
                           <Component id="txt_ciJefComNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                              <Component id="rdb_no1x10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_si1x10" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="txt_1x10Nomina" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_votoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdb_siNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdb_noNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_siVot" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdb_noVot" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="lbl_cant1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_cant1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -5448,12 +5453,12 @@
                 <Property name="text" type="java.lang.String" value="Ya ha votado?"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="rdb_siNomina">
+            <Component class="javax.swing.JRadioButton" name="rdb_siVot">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Si"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="rdb_noNomina">
+            <Component class="javax.swing.JRadioButton" name="rdb_noVot">
               <Properties>
                 <Property name="text" type="java.lang.String" value="No"/>
               </Properties>
@@ -5477,7 +5482,15 @@
                 <Property name="text" type="java.lang.String" value="Posee el 1x10"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_1x10Nomina">
+            <Component class="javax.swing.JRadioButton" name="rdb_si1x10">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="rdb_no1x10">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Si"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_cant1x10Nomina">
               <Properties>
@@ -5531,15 +5544,11 @@
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbl_turnoNomina" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="lbl_fechIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txt_fechaIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txt_turnoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="lbl_fechIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_fechaIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="txt_turnoNomina" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -5609,8 +5618,6 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
-    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
