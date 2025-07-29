@@ -3472,13 +3472,15 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="label_tlf_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="text_tlf_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btn_aggImgMad" alignment="3" max="32767" attributes="0"/>
-                                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="lbl_ce2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txt_rutImgMad" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="label_tlf_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_tlf_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn_aggImgMad" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -3970,15 +3972,17 @@
                                       <Component id="text_direc_trabj_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="label_correo_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_correo_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_tlf_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_tlf_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                           <Component id="btn_aggImgPadre" alignment="3" max="32767" attributes="0"/>
                                           <Component id="lbl_ce3" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txt_rutImgPadre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="label_correo_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="text_correo_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_tlf_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="text_tlf_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -4448,15 +4452,17 @@
                               <Component id="text_direc_trabj_rep" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="label_correo_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_correo_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_tlf_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_tlf_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="btn_aggImgRep" alignment="3" max="32767" attributes="0"/>
                                   <Component id="lbl_ce4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_rutImgRep" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="label_correo_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_correo_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_tlf_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_tlf_rep" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>

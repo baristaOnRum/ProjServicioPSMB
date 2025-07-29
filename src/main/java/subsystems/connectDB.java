@@ -2120,7 +2120,7 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
         }
     }
 
-    public List<acceso> getAllAccesos() {
+    public static List<acceso> getAllAccesos() {
         String sql = "SELECT id, usuario, hash, permiso, twoFA FROM acceso";
         List<acceso> accesos = new ArrayList<>();
 
