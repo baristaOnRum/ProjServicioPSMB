@@ -4962,7 +4962,7 @@ public void createConfPanel(){
         // Document Data
         fields.put("Responsable", responsable);
         fields.put("Persona", persona);
-        fields.put("Fecha", fecha);
+        fields.put("Fecha", fecha.toString());
         fields.put("Observaciones", observaciones);
 
         // Socio-Family Environment
@@ -5366,7 +5366,7 @@ public void createConfPanel(){
 
         if (validateAndNotify(this, fields)){
             connectDB.sendEstudiante(estudiante);
-            connectDB.sendDiagnostico(diagnostico);
+            connectDB.sendDiagnostico(diagnostico, estudiante);
             connectDB.setSocioFamiliar(socioFamiliar);
 
             for (autorizado aut: listaAutorizados){
@@ -5393,102 +5393,92 @@ public void createConfPanel(){
         } else {
             
         }
-        
-        
-        // At this point, you have all your objects populated:
-        // estudiante, diagnostico, madre, padre, representanteLegal, documentos, socioFamiliar, listaAutorizados
 
-        // You can now use these objects, e.g., to save them to a database or pass them to other methods.
-        System.out.println("Student Name: " + estudiante.getNombres() + " " + estudiante.getApellidos());
-        System.out.println("Mother's Name: " + madre.getNombres() + " " + madre.getApellidos());
-        System.out.println("Diagnosis (Caminar): " + diagnostico.getEdadCaminar());
-        System.out.println("Number of authorized persons: " + listaAutorizados.size());
-    
-    //Imprimimos en la consola
+//    //Imprimimos en la consola
+//
+//    System.out.println(nombreNiñ);
+//    System.out.println(apellidoNiñ);
+//    System.out.println(edadNiñ);
+//    System.out.println(edadNumNiñ);
+//    System.out.println(lugarNacNiñ);
+//    System.out.println(estadoNiñ);
+//    System.out.println(municipioNiñ);
+//    System.out.println(nacionalidadNiñ);
+//    System.out.println(tallaCamisaNiñ);
+//    System.out.println(tallaPantalonNiñ);
+//    System.out.println(tallaZapatoNiñ);
+//    System.out.println(pesoNiñ);
+//    System.out.println(estaturaNiñ);
+//    System.out.println(edadCaminar);
+//
+//    System.out.println(prmPartoCual);
+//    System.out.println(motorCual);
+//    System.out.println(lenguajeCual);
+//    System.out.println(cognitivoCual);
+//    System.out.println(alergiaCual);
+//    System.out.println(alergiaMedCual);
+//    System.out.println(condicionCual);
+//    System.out.println(enfPadecidas);
+//    System.out.println(grupoSang);
+//    System.out.println(fiebreAlta);
+//    System.out.println(otraVac);
+//    System.out.println(medicoTratante);
+//    System.out.println(tlfMedicoTrat);
+//
+//    System.out.println(horaAcostar);
+//    System.out.println(horaLevantar);
+//    System.out.println(qnDuermeNino);
+//    System.out.println(edadDejPan);
+//
+//    System.out.println(apellidosMadre);
+//    System.out.println(nombresMadre);
+//    System.out.println(ciMadre);
+//    System.out.println(edadMadre);
+//    System.out.println(lugarNacMadre);
+//    System.out.println(direcHabMadre);
+//    System.out.println(ocupacionMadre);
+//    System.out.println(direcTrabjMadre);
+//    System.out.println(correoMadre);
+//    System.out.println(tlfMadre);
+//
+//    System.out.println(apellidosPadre);
+//    System.out.println(nombresPadre);
+//    System.out.println(ciPadre);
+//    System.out.println(edadPadre);
+//    System.out.println(lugarNacPadre);
+//    System.out.println(direcHabPadre);
+//    System.out.println(ocupacionPadre);
+//    System.out.println(direcTrabjPadre);
+//    System.out.println(correoPadre);
+//    System.out.println(tlfPadre);
+//
+//    System.out.println(apellidosRep);
+//    System.out.println(nombresRep);
+//    System.out.println(ciRep);
+//    System.out.println(edadRep);
+//    System.out.println(lugarNacRep);
+//    System.out.println(direcHabRep);
+//    System.out.println(ocupacionRep);
+//    System.out.println(direcTrabjRep);
+//    System.out.println(correoRep);
+//    System.out.println(tlfRep);
+//
+//    System.out.println(responsable);
+//    System.out.println(persona);
+//    System.out.println(fecha);
+//    System.out.println(observaciones);
+//
+//    System.out.println(cuidaNiñoHogar);
+//    System.out.println(otroConsult);
 
-    System.out.println(nombreNiñ);
-    System.out.println(apellidoNiñ);
-    System.out.println(edadNiñ);
-    System.out.println(edadNumNiñ);
-    System.out.println(lugarNacNiñ);
-    System.out.println(estadoNiñ);
-    System.out.println(municipioNiñ);
-    System.out.println(nacionalidadNiñ);
-    System.out.println(tallaCamisaNiñ);
-    System.out.println(tallaPantalonNiñ);
-    System.out.println(tallaZapatoNiñ);
-    System.out.println(pesoNiñ);
-    System.out.println(estaturaNiñ);
-    System.out.println(edadCaminar);
-
-    System.out.println(prmPartoCual);
-    System.out.println(motorCual);
-    System.out.println(lenguajeCual);
-    System.out.println(cognitivoCual);
-    System.out.println(alergiaCual);
-    System.out.println(alergiaMedCual);
-    System.out.println(condicionCual);
-    System.out.println(enfPadecidas);
-    System.out.println(grupoSang);
-    System.out.println(fiebreAlta);
-    System.out.println(otraVac);
-    System.out.println(medicoTratante);
-    System.out.println(tlfMedicoTrat);
-
-    System.out.println(horaAcostar);
-    System.out.println(horaLevantar);
-    System.out.println(qnDuermeNino);
-    System.out.println(edadDejPan);
-
-    System.out.println(apellidosMadre);
-    System.out.println(nombresMadre);
-    System.out.println(ciMadre);
-    System.out.println(edadMadre);
-    System.out.println(lugarNacMadre);
-    System.out.println(direcHabMadre);
-    System.out.println(ocupacionMadre);
-    System.out.println(direcTrabjMadre);
-    System.out.println(correoMadre);
-    System.out.println(tlfMadre);
-
-    System.out.println(apellidosPadre);
-    System.out.println(nombresPadre);
-    System.out.println(ciPadre);
-    System.out.println(edadPadre);
-    System.out.println(lugarNacPadre);
-    System.out.println(direcHabPadre);
-    System.out.println(ocupacionPadre);
-    System.out.println(direcTrabjPadre);
-    System.out.println(correoPadre);
-    System.out.println(tlfPadre);
-
-    System.out.println(apellidosRep);
-    System.out.println(nombresRep);
-    System.out.println(ciRep);
-    System.out.println(edadRep);
-    System.out.println(lugarNacRep);
-    System.out.println(direcHabRep);
-    System.out.println(ocupacionRep);
-    System.out.println(direcTrabjRep);
-    System.out.println(correoRep);
-    System.out.println(tlfRep);
-
-    System.out.println(responsable);
-    System.out.println(persona);
-    System.out.println(fecha);
-    System.out.println(observaciones);
-
-    System.out.println(cuidaNiñoHogar);
-    System.out.println(otroConsult);
-
-    for (autorizado aut : listaAutorizados) {
-        System.out.println("Autorizado:");
-        System.out.println("  CI: " + aut.getCi());
-        System.out.println("  Nombres: " + aut.getNombres());
-        System.out.println("  Apellidos: " + aut.getApellidos());
-        System.out.println("  Teléfono 1: " + aut.getTlf1());
-        System.out.println("  Teléfono 2: " + aut.getTlf2());
-    }
+//    for (autorizado aut : listaAutorizados) {
+//        System.out.println("Autorizado:");
+//        System.out.println("  CI: " + aut.getCi());
+//        System.out.println("  Nombres: " + aut.getNombres());
+//        System.out.println("  Apellidos: " + aut.getApellidos());
+//        System.out.println("  Teléfono 1: " + aut.getTlf1());
+//        System.out.println("  Teléfono 2: " + aut.getTlf2());
+//    }
     }//GEN-LAST:event_btn_aceptarInscripcionNiñoActionPerformed
 
     private void text_apellidos_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_apellidos_madreActionPerformed

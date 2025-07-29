@@ -1578,7 +1578,7 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
 
     }
 
-    public static void sendDiagnostico(diagnostico diagnostico) {
+    public static void sendDiagnostico(diagnostico diagnostico, estudiante estudiante) {
 
         sql = "INSERT INTO `mydb`.`diagnostico` (`estudiante_ciEstudiante`," +
                 "`problemaParto`, `problemaMotor`, `problemaLenguaje`," +
@@ -1602,7 +1602,7 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
             PreparedStatement query = conexion.prepareStatement(sql);
 
             // --- Asignación de parámetros ---
-            query.setString(1, diagnostico.getCe()); // estudiante_ciEstudiante
+            query.setString(1, estudiante.getCe()); // estudiante_ciEstudiante
             query.setBoolean(2, diagnostico.isProblemaParto()); // problemaParto
             query.setBoolean(3, diagnostico.isProblemaMotor()); // problemaMotor
             query.setBoolean(4, diagnostico.isProblemaLenguaje()); // problemaLenguaje
