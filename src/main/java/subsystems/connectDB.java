@@ -1773,6 +1773,37 @@ public class connectDB {
         }
     }
 
+    public static void setSocioFamliar(socioFamiliar socioFamiliar){
+        String sql = "INSERT INTO socioFamiliar (estudiante_ciEstudiante, vivienda, tipoVivienda," +
+                "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres) VALUES (?, ?, ?, ?, ?, ?)";
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            PreparedStatement pstmt = conexion.prepareStatement(sql);
+
+            // Set the parameters for the prepared statement using getters
+            pstmt.setString(1, socioFamiliar.getEstudiante_ciEstudiante());
+            pstmt.setString(2, socioFamiliar.getVivienda());
+            pstmt.setString(3, socioFamiliar.getTipoVivienda());
+            pstmt.setString(4, socioFamiliar.getCuidaNinoHogar());
+            pstmt.setString(5, socioFamiliar.getRelacionAmbienteFamiliar());
+            pstmt.setString(6, socioFamiliar.getEstdCivilPadres());
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
+            }
+        } catch (SQLException e) {
+            System.err.println("Database error during socioFamiliar insertion: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+    }
+
     public static void crearUsuario() {
     }
 
