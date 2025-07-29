@@ -64,13 +64,13 @@ public static boolean validateAndNotify(Component parentComponent, LinkedHashMap
     return true;
 }
 
-public menuPrincipal() {
+public menuPrincipal(acceso accesoPresente) {
     initComponents();
     panel.add(principal);
     
     
     //los accesos se dan desde el menu de busqueda, se limita la informacion que pueden usar los usuarios
-//    switch(subsystems.acceso.tipo_acceso){
+//    switch(subsystems.accesoPresente.tipo_acceso){
 //        case 1 -> {
 //            btn_inscribirEstd.setEnabled(false);
 //            btn_inscribirRep.setEnabled(false);
@@ -4831,7 +4831,7 @@ public void createConfPanel(){
         
         //Evaluación representantes
         
-        if (padre.getCi() == 0 && madre.getCi() == 0){
+        if (padre.getCi() == 0 && madre.getCi() == 0 && representanteLegal.getCi() == 0){
         return;
         }
         
@@ -4926,7 +4926,6 @@ public void createConfPanel(){
 
                 if (ci != 0 || !nombre.isEmpty() || !apellido.isEmpty() || !tlf1.isEmpty() || !tlf2.isEmpty() || !parentesco.isEmpty()) {
                     autorizado aut = new autorizado();
-                    retiraA ret = new retiraA();
                     aut.setCi(ci);
                     aut.setNombres(nombre);
                     aut.setApellidos(apellido);
@@ -4962,8 +4961,11 @@ public void createConfPanel(){
             for (autorizado aut: listaAutorizados){
                 connectDB.sendAutorizado(aut);
                 connectDB.setRelAutorizado(aut, estudiante);
-                
             }
+
+            connectDB.setSocioFamliar(socioFamiliar);
+
+
             
         } else {
             

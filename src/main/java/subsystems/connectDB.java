@@ -23,7 +23,7 @@ public class connectDB {
     //Definir funciones
 
     //Inicialización de variables (no estáticas)
-    public void connparamsinit(acceso acceso) {
+    public static void connparamsinit(acceso acceso) {
         url = acceso.getConnURL();
         user = acceso.getUserDB();
         pass = acceso.getPassDB();
@@ -41,7 +41,7 @@ public class connectDB {
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -99,7 +99,7 @@ public class connectDB {
         sql = "DELETE FROM representante" +
                 " WHERE ciRepresentante = ?;";
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
             query.setInt(1, ci);
@@ -134,7 +134,7 @@ public class connectDB {
             sql = "SELECT * FROM representante";
             System.out.println("INSIDE IF");
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -194,7 +194,7 @@ public class connectDB {
                     "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img " +
                     "FROM representante WHERE " + criterio + " = \"" + busquedaQuery + "\"";
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -253,7 +253,7 @@ public class connectDB {
         representante representante = new representante();
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -310,7 +310,7 @@ public class connectDB {
                 "img = ? WHERE ciRepresentante = ?;"; // VALUES ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -369,7 +369,7 @@ public class connectDB {
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -432,7 +432,7 @@ public class connectDB {
         sql = "DELETE FROM estudiante" +
                 " WHERE ciEstudiante = ?;";
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
             query.setString(1, ce);
@@ -468,7 +468,7 @@ public class connectDB {
             sql = "SELECT * FROM estudiante";
             System.out.println("INSIDE ELSE");
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -533,7 +533,7 @@ public class connectDB {
                     "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img, periodioCurso " +
                     "FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -594,7 +594,7 @@ public class connectDB {
         estudiante estudiante = new estudiante();
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -657,7 +657,7 @@ public class connectDB {
                 ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -743,7 +743,7 @@ public class connectDB {
         sql = "DELETE FROM trabajador" +
                 " WHERE ci_trabajadores = ?;";
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
             query.setInt(1, ci);
@@ -779,7 +779,7 @@ public class connectDB {
             sql = "SELECT * FROM trabajadores";
             System.out.println("INSIDE ELSE");
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -874,7 +874,7 @@ public class connectDB {
                     "ciCopia, rifCopia, tituloCopia, turno" +
                     " FROM trabajadores WHERE " + criterio + " = \'" + busquedaQuery + "\'";
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -966,7 +966,7 @@ public class connectDB {
         trabajador trabajador = new trabajador();
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1031,7 +1031,7 @@ public class connectDB {
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1110,7 +1110,7 @@ public class connectDB {
     public static void removerNominaMaestra(int ci) {
         sql = "DELETE FROM maestras WHERE ci_maestra = ?;";
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
             query.setInt(1, ci);
@@ -1144,7 +1144,7 @@ public class connectDB {
         if (busquedaQuery == null) {
             sql = "SELECT * FROM maestras";
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1206,7 +1206,7 @@ public class connectDB {
                     "ciCopia, rifCopia, tituloCopia, turno, img " +
                     "FROM maestras WHERE " + criterio + " = '" + busquedaQuery + "'";
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1275,7 +1275,7 @@ public class connectDB {
         maestro maestra = new maestro();
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1367,7 +1367,7 @@ public class connectDB {
         sql = "DELETE FROM autorizadoRetiro WHERE ciAutorizado = ?";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1393,7 +1393,7 @@ public class connectDB {
         if (criterio == null) {
             sql = "SELECT * FROM autorizadoretiro";
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
                 ResultSet rs = query.executeQuery();
@@ -1432,7 +1432,7 @@ public class connectDB {
         } else {
             sql = "SELECT ciAutorizado, apellidos, nombres, tlf1, tlf2 FROM autorizadoretiro WHERE " + criterio + " = ?";
             try {
-                conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+                conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
                 PreparedStatement query = conexion.prepareStatement(sql);
                 query.setString(1, busquedaQuery);
@@ -1512,7 +1512,7 @@ public class connectDB {
                 "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1605,7 +1605,7 @@ public class connectDB {
                 "evacuaDia = ?, pideAydaAseo= ? WHERE estudiante_ciEstudiante= ?";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1689,7 +1689,7 @@ public class connectDB {
                 " WHERE estudiante_ciEstudiante = ?;";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1750,7 +1750,7 @@ public class connectDB {
     public static void setRelAutorizado(autorizado authorized, estudiante student) {
         String sql = "INSERT INTO puederetirar (autorizadoRetiro_ciAutorizado, estudiante_ciEstudiante, parentesco) VALUES (?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             // Set the parameters for the prepared statement
@@ -1773,6 +1773,37 @@ public class connectDB {
         }
     }
 
+    public static void setSocioFamliar(socioFamiliar socioFamiliar){
+        String sql = "INSERT INTO socioFamiliar (estudiante_ciEstudiante, vivienda, tipoVivienda," +
+                "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres) VALUES (?, ?, ?, ?, ?, ?)";
+
+        try {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            PreparedStatement pstmt = conexion.prepareStatement(sql);
+
+            // Set the parameters for the prepared statement using getters
+            pstmt.setString(1, socioFamiliar.getEstudiante_ciEstudiante());
+            pstmt.setString(2, socioFamiliar.getVivienda());
+            pstmt.setString(3, socioFamiliar.getTipoVivienda());
+            pstmt.setString(4, socioFamiliar.getCuidaNinoHogar());
+            pstmt.setString(5, socioFamiliar.getRelacionAmbienteFamiliar());
+            pstmt.setString(6, socioFamiliar.getEstdCivilPadres());
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
+            }
+        } catch (SQLException e) {
+            System.err.println("Database error during socioFamiliar insertion: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+    }
+
     public static void crearUsuario() {
     }
 
@@ -1783,7 +1814,7 @@ public class connectDB {
         sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1830,7 +1861,7 @@ public class connectDB {
         List<familia> fams = null;
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1875,7 +1906,7 @@ public class connectDB {
         List<representaA> reps = null;
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1918,7 +1949,7 @@ public class connectDB {
         List<retiraA> rets = null;
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
