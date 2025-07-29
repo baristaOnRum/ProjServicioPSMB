@@ -4409,6 +4409,36 @@ public void createConfPanel(){
     // Ambiente Socio Familiar
     String cuidaNiñoHogar = txt_cuidaNiñoHogar.getText().trim();
     String otroConsult = txt_otroConsult.getText().trim();
+    
+    java.util.List<java.util.Map<String, Object>> listaFamiliares = new java.util.ArrayList<>();
+    javax.swing.table.TableModel modelFam = tbl_familiarExtra.getModel();
+    int familiaresAgregados = 0;
+    for (int i = 0; i < modelFam.getRowCount() && familiaresAgregados == 5; i++) {
+        Object nombreApellidoObj = modelFam.getValueAt(i, 0);
+        Object sexoObj = modelFam.getValueAt(i, 1);
+        Object edadObj = modelFam.getValueAt(i, 2);
+        Object parentezcoObj = modelFam.getValueAt(i, 3);
+        Object ocupacionObj = modelFam.getValueAt(i, 4);
+
+        String nombreApellido = nombreApellidoObj != null ? nombreApellidoObj.toString().trim() : "";
+        String sexo = sexoObj != null ? sexoObj.toString().trim() : "";
+        String edad = edadObj != null ? edadObj.toString().trim() : "";
+        String parentezco = parentezcoObj != null ? parentezcoObj.toString().trim() : "";
+        String ocupacion = ocupacionObj != null ? ocupacionObj.toString().trim() : "";
+
+        // Only add if at least one field is not empty
+        if (!nombreApellido.isEmpty() || !sexo.isEmpty() || !edad.isEmpty() || !parentezco.isEmpty() || !ocupacion.isEmpty()) {
+            java.util.Map<String, Object> familiar = new java.util.HashMap<>();
+            familiar.put("nombreApellido", nombreApellido);
+            familiar.put("sexo", sexo);
+            familiar.put("edad", edad);
+            familiar.put("parentezco", parentezco);
+            familiar.put("ocupacion", ocupacion);
+            listaFamiliares.add(familiar);
+            familiaresAgregados++;
+        }
+    }
+
 
     //Autorizados
     java.util.List<autorizado> listaAutorizados = new java.util.ArrayList<>();
@@ -4749,6 +4779,8 @@ public void createConfPanel(){
         socioFamiliar.setCuidaNinoHogar(cuidaNiñoHogar);
         // otroConsult is available but no direct field in socioFamiliar.
         // If it's meant to be part of 'relacionAmbienteFamiliar' or similar, you'd combine it.
+
+
 
         // --- Autorizados ---
         // Assuming tbl_autRetiro is the JTable's model
