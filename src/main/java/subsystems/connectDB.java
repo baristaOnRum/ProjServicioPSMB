@@ -2015,10 +2015,78 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
         
     }
 
-    public static void crearUsuario() {
+    public static void crearUsuario(acceso acceso) {
+
+        String sql = "INSERT INTO acceso (usuario, hash, permiso, twoFA) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the values for the prepared statement using getters from the Acceso object
+            pstmt.setInt(3, acceso.getTipo_acceso());       // Maps to 'permiso'
+            pstmt.setString(1, acceso.getNombre_usuario()); // Maps to 'usuario'
+            pstmt.setString(2, acceso.getContrasenaHash()); // Maps to 'hash'
+            pstmt.setString(4, acceso.getTwoFA());          // Maps to 'twoFA'
+
+            // Execute the insert statement
+            int rowsAffected = pstmt.executeUpdate();
+
+            // Return true if at least one row was successfully inserted
+            if (rowsAffected > 0){
+                System.out.println("Data inserted successfully into usuario for usuario: " + acceso.getNombre_usuario());
+            } else {
+                System.out.println("Data couldn't be inserted for usuario: " + acceso.getNombre_usuario());
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al insertar registro de acceso: " + e.getMessage());
+            e.printStackTrace(); // Print the stack trace for detailed debugging
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
-    public static void removerUsuario() {
+    public static void removerUsuario(String usuario) {
+        // SQL DELETE statement with a WHERE clause to target a specific user.
+        String sql = "DELETE FROM acceso WHERE usuario = ?";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the username parameter for the WHERE clause
+            pstmt.setString(1, usuario);
+
+            // Execute the delete statement
+            int rowsAffected = pstmt.executeUpdate();
+
+            // Return true if at least one row was deleted
+            if (rowsAffected > 0){
+                System.out.println("Data deleted successfully for usuario: " + usuario);
+            } else {
+                System.out.println("Data couldn't be deleted for usuario: " + usuario);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al eliminar registro de acceso para usuario: " + usuario + " - " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public static void fetchUsuario(acceso accesoPresente) {
@@ -2050,6 +2118,48 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                 }
             }
         }
+    }
+
+    public List<acceso> getAllAccesos() {
+        String sql = "SELECT id, usuario, hash, permiso, twoFA FROM acceso";
+        List<acceso> accesos = new ArrayList<>();
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            // Iterate through the result set to fetch each row
+            try {
+            while (rs.next()) {
+                // Create a new Acceso object for each row
+                acceso acceso = new acceso();
+
+                // Set properties using setters
+                acceso.setTipo_acceso(rs.getInt("permiso"));
+                acceso.setNombre_usuario(rs.getString("usuario"));
+                acceso.setContrasenaHash(rs.getString("hash"));
+                acceso.setTwoFA(rs.getString("twoFA")); // Set the twoFA value using its setter
+
+                // Add the populated Acceso object to the list
+                accesos.add(acceso);
+            } } catch (SQLException e1){
+                System.out.println("Recuperados todos los usuarios de la base de datos");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al obtener todos los registros de acceso: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return accesos;
     }
 
     public static void promoverAño() {
