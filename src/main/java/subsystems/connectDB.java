@@ -1948,8 +1948,71 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
         } catch (SQLException e) {
             System.err.println("Database error during socioFamiliar fetch: " + e.getMessage());
             e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return sf;
+    }
+    
+    public static void sendDocumentos(documentos documentos){
+                String sql = "INSERT INTO documentos (" +
+                     "estudiante_ciEstudiante, originales, fotocopias, partidaNac, certificadoVacunas, " +
+                     "cedulaMadre, cedulaPadre, cedulaRep, responsableInscripcion, personaInscribe, " +
+                     "fechaInscripcion, observaciones) " +
+                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        // Usamos try-with-resources para asegurar que la conexión y el PreparedStatement se cierren automáticamente.
+        try (Connection conexion = DriverManager.getConnection(url,user,pass);
+             PreparedStatement pstmt = conexion.prepareStatement(sql)) {
+
+            // Establece los parámetros de la consulta SQL usando los valores del objeto documentoss.
+            // Los índices de los parámetros corresponden a los '?' en la consulta SQL, empezando desde 1.
+            pstmt.setString(1, documentos.getCe());
+            pstmt.setBoolean(2, documentos.isOriginales());
+            pstmt.setBoolean(3, documentos.isFotocopias());
+            pstmt.setBoolean(4, documentos.isPartidaNac());
+            pstmt.setBoolean(5, documentos.isCertificadoVacuna());
+            pstmt.setBoolean(6, documentos.isCedulaMadre());
+            pstmt.setBoolean(7, documentos.isCedulaPadre());
+            pstmt.setBoolean(8, documentos.isCedulaRep());
+            pstmt.setString(9, documentos.getResponsableInscripcion());
+            pstmt.setString(10, documentos.getPersonaInscribe());
+
+            // Para LocalDate, usamos java.sql.Date.valueOf() para convertirlo a un tipo compatible con SQL DATE.
+            pstmt.setDate(11, java.sql.Date.valueOf(documentos.getFechaInscripcion()));
+            pstmt.setString(12, documentos.getObservaciones());
+
+            // Ejecuta la consulta de inserción.
+            // executeUpdate() devuelve el número de filas afectadas (1 si la inserción fue exitosa).
+            int rowsAffected = pstmt.executeUpdate();
+            
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into estudiante for CI: " + documentos.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for estudiante for CI: " + documentos.getCe());
+            }
+        } catch (SQLException e) {
+            // Manejo de excepciones SQL: Imprime el error y devuelve false.
+            System.err.println("Error al insertar el documentos: " + e.getMessage());
+            e.printStackTrace(); // Imprime la traza completa para depuración
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        
     }
 
     public static void crearUsuario() {
