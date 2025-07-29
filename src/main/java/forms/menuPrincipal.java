@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
+import javax.swing.ButtonGroup;
 import javax.swing.table.TableModel;
 
 import subsystems.*;
@@ -70,35 +71,33 @@ public menuPrincipal(acceso accesoPresente) {
     
     
     //los accesos se dan desde el menu de busqueda, se limita la informacion que pueden usar los usuarios
-//    switch(subsystems.accesoPresente.tipo_acceso){
-//        case 1 -> {
-//            btn_inscribirEstd.setEnabled(false);
-//            btn_inscribirRep.setEnabled(false);
-//            btn_inscribirAut.setEnabled(false);
-//            btn_inscribirNom.setEnabled(false);
-//            //solo ver
-//            btn_editarBusqEstd.setEnabled(false);
-//            btn_editarBusqRep.setEnabled(false);
-//            btn_editarBusqAut.setEnabled(false);
-//            btn_editarBusqNom.setEnabled(false);
-//        }
-//        case 2 -> {
-//            btn_inscribirRep.setEnabled(false);
-//            btn_inscribirAut.setEnabled(false);
-//            btn_inscribirNom.setEnabled(false);
-//            //solo inscribir estudiantes
-//            btn_editarBusqEstd.setEnabled(false);
-//            btn_editarBusqRep.setEnabled(false);
-//            btn_editarBusqAut.setEnabled(false);
-//            btn_editarBusqNom.setEnabled(false);          
-//        }
-//        case 3 ->{
-//            //edicion total
-//        }
-//        case 4 ->{
-//            //edicion total
-//        }
-//  }
+    acceso accs = new acceso();
+
+   switch(accs.getTipo_acceso()){
+       case 1 -> {
+           btn_inscribirEstd.setEnabled(false);
+           btn_inscribirNom.setEnabled(false);
+           //solo ver
+           btn_editarBusqEstd.setEnabled(false);
+           btn_editarBusqRep.setEnabled(false);
+           btn_editarBusqAut.setEnabled(false);
+           btn_editarBusqNom.setEnabled(false);
+       }
+       case 2 -> {
+           btn_inscribirNom.setEnabled(false);
+           //solo inscribir estudiantes
+           btn_editarBusqEstd.setEnabled(false);
+           btn_editarBusqRep.setEnabled(false);
+           btn_editarBusqAut.setEnabled(false);
+           btn_editarBusqNom.setEnabled(false);          
+       }
+       case 3 ->{
+           //edicion total
+       }
+       case  4 ->{
+           //edicion total
+       }
+ }
      
     
 }
@@ -551,14 +550,15 @@ public void createConfPanel(){
         lbl_centrVotNomina = new javax.swing.JLabel();
         txt_centrVotNomina = new javax.swing.JTextField();
         lbl_votoNomina = new javax.swing.JLabel();
-        rdb_siNomina = new javax.swing.JRadioButton();
-        rdb_noNomina = new javax.swing.JRadioButton();
+        rdb_siVot = new javax.swing.JRadioButton();
+        rdb_noVot = new javax.swing.JRadioButton();
         lbl_jefComNomina = new javax.swing.JLabel();
         txt_jefComNomina = new javax.swing.JTextField();
         lbl_ciJefComNomina = new javax.swing.JLabel();
         txt_ciJefComNomina = new javax.swing.JTextField();
         lbl_1x10Nomina = new javax.swing.JLabel();
-        txt_1x10Nomina = new javax.swing.JTextField();
+        rdb_si1x10 = new javax.swing.JRadioButton();
+        rdb_no1x10 = new javax.swing.JRadioButton();
         lbl_cant1x10Nomina = new javax.swing.JLabel();
         txt_cant1x10Nomina = new javax.swing.JTextField();
         datPlantelNomina = new javax.swing.JPanel();
@@ -3782,7 +3782,7 @@ public void createConfPanel(){
                                     .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(label_persona)
                                         .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout informacionEstudianteLayout = new javax.swing.GroupLayout(informacionEstudiante);
@@ -4048,15 +4048,19 @@ public void createConfPanel(){
 
         lbl_votoNomina.setText("Ya ha votado?");
 
-        rdb_siNomina.setText("Si");
+        rdb_siVot.setText("Si");
 
-        rdb_noNomina.setText("No");
+        rdb_noVot.setText("No");
 
         lbl_jefComNomina.setText("Nombre del Jefe de la Comunidad");
 
         lbl_ciJefComNomina.setText("C.I del Jefe de la Comunidad");
 
         lbl_1x10Nomina.setText("Posee el 1x10");
+
+        rdb_si1x10.setText("No");
+
+        rdb_no1x10.setText("Si");
 
         lbl_cant1x10Nomina.setText("Cantidad de personas en el 1x10");
 
@@ -4080,10 +4084,10 @@ public void createConfPanel(){
                     .addGroup(datGubNominaLayout.createSequentialGroup()
                         .addComponent(lbl_votoNomina)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rdb_siNomina)
+                        .addComponent(rdb_siVot)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rdb_noNomina)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                        .addComponent(rdb_noVot)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_jefComNomina)
                     .addComponent(lbl_ciJefComNomina)
@@ -4093,8 +4097,11 @@ public void createConfPanel(){
                 .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txt_ciJefComNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(txt_jefComNomina)
-                    .addComponent(txt_1x10Nomina)
-                    .addComponent(txt_cant1x10Nomina))
+                    .addComponent(txt_cant1x10Nomina)
+                    .addGroup(datGubNominaLayout.createSequentialGroup()
+                        .addComponent(rdb_no1x10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rdb_si1x10)))
                 .addGap(15, 15, 15))
         );
         datGubNominaLayout.setVerticalGroup(
@@ -4113,22 +4120,23 @@ public void createConfPanel(){
                     .addComponent(lbl_ciJefComNomina)
                     .addComponent(txt_ciJefComNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_centrVotNomina)
+                    .addComponent(txt_centrVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_1x10Nomina)
                     .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lbl_centrVotNomina)
-                        .addComponent(txt_centrVotNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_1x10Nomina))
-                    .addComponent(txt_1x10Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(rdb_no1x10)
+                        .addComponent(rdb_si1x10)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_votoNomina)
-                        .addComponent(rdb_siNomina)
-                        .addComponent(rdb_noNomina))
+                        .addComponent(rdb_siVot)
+                        .addComponent(rdb_noVot))
                     .addGroup(datGubNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_cant1x10Nomina)
                         .addComponent(txt_cant1x10Nomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(32, 32, 32))
         );
 
         datPlantelNomina.setBackground(new java.awt.Color(204, 255, 204));
@@ -4174,12 +4182,10 @@ public void createConfPanel(){
                 .addGap(13, 13, 13)
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_turnoNomina)
-                    .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_fechIngresoNomina)
-                            .addComponent(txt_fechaIngresoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_turnoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_fechIngresoNomina)
+                        .addComponent(txt_fechaIngresoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_turnoNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(datPlantelNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nivelNominaMaestra)
@@ -4206,7 +4212,7 @@ public void createConfPanel(){
         informacionNomina.setLayout(informacionNominaLayout);
         informacionNominaLayout.setHorizontalGroup(
             informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(headderInfNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(headderInfNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 1214, Short.MAX_VALUE)
             .addGroup(informacionNominaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(informacionNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -4261,6 +4267,142 @@ public void createConfPanel(){
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        // Sexo del Niño
+        ButtonGroup grupoSexoNino = new ButtonGroup();
+        grupoSexoNino.add(rdb_mascNiñ);
+        grupoSexoNino.add(rdb_femNiñ);
+
+        // Sexo de la Nómina
+        ButtonGroup grupoSexoNomina = new ButtonGroup();
+        grupoSexoNomina.add(rdb_mascNomina);
+        grupoSexoNomina.add(rdb_femNomina);
+
+        // Procedencia del Niño
+        ButtonGroup grupoProcedenciaNino = new ButtonGroup();
+        grupoProcedenciaNino.add(radio_hogar_niñ);
+        grupoProcedenciaNino.add(radio_multihogar_niñ);
+        grupoProcedenciaNino.add(radio_hogar_cuidado_niñ);
+        grupoProcedenciaNino.add(radio_mismo_plantel_niñ);
+        grupoProcedenciaNino.add(radio_otro_plantel_niñ);
+        grupoProcedenciaNino.add(radio_guarderia_niñ);
+        grupoProcedenciaNino.add(radio_otros_niñ);
+
+        // Lateralidad
+        ButtonGroup grupoLateralidad = new ButtonGroup();
+        grupoLateralidad.add(rdo_diestro);
+        grupoLateralidad.add(rdo_zurdo);
+        grupoLateralidad.add(rdo_ambidiestro);
+        grupoLateralidad.add(rdo_desconocido);
+
+        // Problemas durante el parto
+        ButtonGroup grupoPrmParto = new ButtonGroup();
+        grupoPrmParto.add(rdo_siPrmParto);
+        grupoPrmParto.add(rdo_noPrmParto);
+
+        // Problemas motores
+        ButtonGroup grupoPrmMotr = new ButtonGroup();
+        grupoPrmMotr.add(rdo_siPromMotr);
+        grupoPrmMotr.add(rdo_noPrmMotr);
+
+        // Problemas de lenguaje
+        ButtonGroup grupoPrmLeng = new ButtonGroup();
+        grupoPrmLeng.add(rdo_siPromLeng);
+        grupoPrmLeng.add(rdo_noPrmLeng);
+
+        // Problemas cognitivos
+        ButtonGroup grupoPrmCog = new ButtonGroup();
+        grupoPrmCog.add(rdo_siPromCog);
+        grupoPrmCog.add(rdo_noPromCog);
+
+        // Alergias
+        ButtonGroup grupoAlergia = new ButtonGroup();
+        grupoAlergia.add(rdo_siAlergia);
+        grupoAlergia.add(rdo_noAlergia);
+
+        // Alergia a medicamentos
+        ButtonGroup grupoAlergiaMed = new ButtonGroup();
+        grupoAlergiaMed.add(rdo_siAlergiaMed);
+        grupoAlergiaMed.add(rdo_noAlergiaMed);
+
+        // Condición extra
+        ButtonGroup grupoCondExtra = new ButtonGroup();
+        grupoCondExtra.add(rdo_siCondExtra);
+        grupoCondExtra.add(rdo_noCondExtra);
+
+        // Embarazo planificado
+        ButtonGroup grupoEmbPlan = new ButtonGroup();
+        grupoEmbPlan.add(rdo_siEmbPLan);
+        grupoEmbPlan.add(rdo_noEmbPlan);
+
+        // Come ayudado
+        ButtonGroup grupoCmeAyda = new ButtonGroup();
+        grupoCmeAyda.add(rdo_siCmeAyda);
+        grupoCmeAyda.add(rdo_noCmeAyda);
+
+        // Buen apetito
+        ButtonGroup grupoBuenApetito = new ButtonGroup();
+        grupoBuenApetito.add(rdo_siBuenApetito);
+        grupoBuenApetito.add(rdo_noBuenApetito);
+
+        // Duerme en la tarde
+        ButtonGroup grupoDuermTarde = new ButtonGroup();
+        grupoDuermTarde.add(rdo_duermTardeSi);
+        grupoDuermTarde.add(rdo_duermTardeNo);
+        grupoDuermTarde.add(rdo_duermTardeAveces);
+
+        // Chupa dedo
+        ButtonGroup grupoChupaDedo = new ButtonGroup();
+        grupoChupaDedo.add(lbl_chupaDedoSi);
+        grupoChupaDedo.add(lbl_chupaDedoNo);
+        grupoChupaDedo.add(lbl_chupaDedoAvece);
+
+        // Se orina en la ropa durante el día
+        ButtonGroup grupoOrinaRopaDia = new ButtonGroup();
+        grupoOrinaRopaDia.add(rdo_orinaRopaDiaSi);
+        grupoOrinaRopaDia.add(rdo_orinaRopaDiaNo);
+        grupoOrinaRopaDia.add(rdo_orinaRopaDiaAvece);
+
+        // Se orina en la ropa durante la noche
+        ButtonGroup grupoOrinaRopaNoche = new ButtonGroup();
+        grupoOrinaRopaNoche.add(rdo_orinaRopaNocheSi);
+        grupoOrinaRopaNoche.add(rdo_orinaRopaNocheNo);
+        grupoOrinaRopaNoche.add(rdo_orinaRopaNocheAvece);
+
+        // Evacua durante el día
+        ButtonGroup grupoEvacDia = new ButtonGroup();
+        grupoEvacDia.add(rdo_evacDiaSi);
+        grupoEvacDia.add(rdo_evacDiaNo);
+        grupoEvacDia.add(rdo_evacDiaAvece);
+
+        // Se asea solo
+        ButtonGroup grupoAseaSolo = new ButtonGroup();
+        grupoAseaSolo.add(rdo_aseaSoloSi);
+        grupoAseaSolo.add(rdo_aseaSoloNo);
+
+        // Vivienda
+        ButtonGroup grupoVivienda = new ButtonGroup();
+        grupoVivienda.add(rdio_propia);
+        grupoVivienda.add(rdio_prestada);
+        grupoVivienda.add(rdio_alquilada);
+
+        // Tipo de vivienda
+        ButtonGroup grupoTipoVivienda = new ButtonGroup();
+        grupoTipoVivienda.add(rdio_casa);
+        grupoTipoVivienda.add(rdio_apartamento);
+        grupoTipoVivienda.add(rdio_zinc);
+        grupoTipoVivienda.add(rdio_otro);
+
+        // --- NUEVOS RADIO BUTTONS PARA NÓMINA (GUBERNAMENTAL) ---
+        // Ha votado (Nómina)
+        ButtonGroup grupoVotoNomina = new ButtonGroup();
+        grupoVotoNomina.add(rdb_siVot);
+        grupoVotoNomina.add(rdb_noVot);
+
+        // 1x10 (Nómina)
+        ButtonGroup grupoUnoX10Nomina = new ButtonGroup();
+        grupoUnoX10Nomina.add(rdb_si1x10);
+        grupoUnoX10Nomina.add(rdb_no1x10);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -5320,13 +5462,22 @@ public void createConfPanel(){
 
     private void btn_aceptarInscripcionNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarInscripcionNominaActionPerformed
 
-    String ciNomina = txt_ciNomina.getText().trim();
-    String rifNomina = txt_rifNomina.getText().trim();
+    Integer ciNomina = Integer.parseInt(txt_ciNomina.getText().trim());
+    Integer rifNomina = Integer.parseInt(txt_rifNomina.getText().trim());
     String nombreNomina = txt_nombreNomina.getText().trim();
     String apellidoNomina = txt_apellidoNomina.getText().trim();
-    String sexoNomina = rdb_mascNomina.isSelected() ? "Masculino" : (rdb_femNomina.isSelected() ? "Femenino" : "");
-    String fechNacimNomina = txt_fechNacimNomina.getText().trim();
-    String edadNomina = txt_edadNomina.getText().trim();
+
+    // Nuevo: usar ButtonGroup para sexoNomina (Booleano: true=masculino, false=femenino, null=ninguno)
+    Boolean sexoNomina = null;
+    if (rdb_mascNomina.isSelected()) {
+        sexoNomina = true;
+    } else if (rdb_femNomina.isSelected()) {
+        sexoNomina = false;
+    }
+
+    //LocalDate fechNacimNomina = parse(txt_fechNacimNomina.getText().trim());
+
+    Integer edadNomina = Integer.parseInt(txt_edadNomina.getText().trim());
     String munResNomina = txt_munResNomina.getText().trim();
     String prrqResNomina = txt_prrqResNomina.getText().trim();
     String comResNomina = txt_comResNomina.getText().trim();
@@ -5337,24 +5488,42 @@ public void createConfPanel(){
     String munVotNomina = txt_munVotNomina.getText().trim();
     String parrqVotNomina = txt_parrqVotNomina.getText().trim();
     String centrVotNomina = txt_centrVotNomina.getText().trim();
-    String votoNomina = rdb_siNomina.isSelected() ? "Sí" : (rdb_noNomina.isSelected() ? "No" : "");
-    String jefComNomina = txt_jefComNomina.getText().trim();
-    String ciJefComNomina = txt_ciJefComNomina.getText().trim();
-    String unoX10Nomina = txt_1x10Nomina.getText().trim();
-    String cant1x10Nomina = txt_cant1x10Nomina.getText().trim();
 
-    String turnoNomina = txt_turnoNomina.getText().trim();
+    // Nuevo: usar ButtonGroup para votoNomina (Booleano: true=sí, false=no, null=ninguno)
+    Boolean votoNomina = null;
+    if (rdb_siVot.isSelected()) {
+        votoNomina = true;
+    } else if (rdb_noVot.isSelected()) {
+        votoNomina = false;
+    }
+
+    String jefComNomina = txt_jefComNomina.getText().trim();
+
+    Integer ciJefComNomina = Integer.parseInt(txt_ciJefComNomina.getText().trim());
+    
+    Boolean unoX10Nomina = null;
+    if (rdb_si1x10.isSelected()) {
+        unoX10Nomina = true;
+    } else if (rdb_no1x10.isSelected()) {
+        unoX10Nomina = false;
+    }
+
+    Integer cant1x10Nomina = Integer.parseInt(txt_cant1x10Nomina.getText().trim());
+
+    Boolean turnoNomina = null;
     String nivelNominaMaestra = txt_nivelNominaMaestra.getText().trim();
     String seccionNominaMaestra = txt_seccionNominaMaestra.getText().trim();
-    String estatusNomina = txt_estatusNomina.getText().trim();
-    String fechaIngresoNomina = txt_fechaIngresoNomina.getText().trim();
+
+    Boolean estatusNomina = null;
+
+    //LocalDate fechaIngresoNomina = parse(txt_fechaIngresoNomina.getText().trim());
 
     System.out.println(ciNomina);
     System.out.println(rifNomina);
     System.out.println(nombreNomina);
     System.out.println(apellidoNomina);
     System.out.println(sexoNomina);
-    System.out.println(fechNacimNomina);
+    /*System.out.println(fechNacimNomina);*/
     System.out.println(edadNomina);
     System.out.println(munResNomina);
     System.out.println(prrqResNomina);
@@ -5376,7 +5545,40 @@ public void createConfPanel(){
     System.out.println(nivelNominaMaestra);
     System.out.println(seccionNominaMaestra);
     System.out.println(estatusNomina);
-    System.out.println(fechaIngresoNomina);
+    /*System.out.println(fechaIngresoNomina);*/
+
+    trabajador trabajador = new trabajador();
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/M-M/yyyy");
+
+    // Asignar los valores al objeto trabajador
+    trabajador.setNombres(nombreNomina);
+    trabajador.setApellidos(apellidoNomina);
+    trabajador.setCi(ciNomina);
+    trabajador.setRif(rifNomina);
+    trabajador.setSexo(sexoNomina);
+    /*trabajador.setFechaNac(fechNacimNomina);*/
+    trabajador.setMunRes(munResNomina);
+    trabajador.setParrqRes(prrqResNomina);
+    trabajador.setComRes(comResNomina);
+    trabajador.setCalleRes(calleResNomina);
+    trabajador.setTlf1(tlf1Nomina);
+    trabajador.setTlf2(tlf2Nomina);
+
+    trabajador.setMunElec(munVotNomina);
+    trabajador.setParrqElec(parrqVotNomina);
+    trabajador.setCenVot(centrVotNomina);
+    trabajador.setHaVotado(votoNomina);
+    trabajador.setNombreJefeClap(jefComNomina);
+    trabajador.setCiJefeClap(ciJefComNomina);
+    trabajador.setTiene1x10(unoX10Nomina);
+    trabajador.setCantPers1x10(cant1x10Nomina);
+
+    trabajador.setTurno(turnoNomina);
+    trabajador.setEstatus(estatusNomina);
+    /*trabajador.setFechaIngreso(fechaIngresoNomina);*/
+
+    // Guardar en la base de datos
+    connectDB.sendNomina(trabajador);
 
     }//GEN-LAST:event_btn_aceptarInscripcionNominaActionPerformed
 
@@ -5965,8 +6167,10 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JRadioButton rdb_femNomina;
     private javax.swing.JRadioButton rdb_mascNiñ;
     private javax.swing.JRadioButton rdb_mascNomina;
-    private javax.swing.JRadioButton rdb_noNomina;
-    private javax.swing.JRadioButton rdb_siNomina;
+    private javax.swing.JRadioButton rdb_no1x10;
+    private javax.swing.JRadioButton rdb_noVot;
+    private javax.swing.JRadioButton rdb_si1x10;
+    private javax.swing.JRadioButton rdb_siVot;
     private javax.swing.JRadioButton rdio_alquilada;
     private javax.swing.JRadioButton rdio_apartamento;
     private javax.swing.JRadioButton rdio_casa;
@@ -6079,7 +6283,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField text_tlf_padre;
     private javax.swing.JTextField text_tlf_rep;
     private javax.swing.JLabel txtMenuPrincipal1;
-    private javax.swing.JTextField txt_1x10Nomina;
     private javax.swing.JTextField txt_apellidoNiñ;
     private javax.swing.JTextField txt_apellidoNomina;
     private javax.swing.JTextField txt_calleResNomina;
