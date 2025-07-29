@@ -1774,12 +1774,9 @@
                               <Component id="btn_repEstd" max="32767" attributes="0"/>
                               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lbl_headderEstudiante" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="btn_repEstd1" alignment="3" max="32767" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_headderEstudiante" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="btn_repEstd1" alignment="3" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -2531,12 +2528,14 @@
                               <Component id="txt_otraVac" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_medicTratante" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_medicoTratante" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="lbl_tlfMedicTrat" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_tlfMedicoTrat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lbl_medicTratante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_medicoTratante" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="8" max="32767" attributes="0"/>
@@ -3222,20 +3221,9 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_grado_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_no_bachiller_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="chec_bachiller_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_tsu_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_superior_madre" min="-2" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_ocupacion_madre" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -3253,11 +3241,6 @@
                                   <Component id="label_tlf_madre" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="text_tlf_madre" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_direc_hab_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_direc_hab_madre" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_apellido_madre" min="-2" max="-2" attributes="0"/>
@@ -3301,6 +3284,39 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="check_ext_madre" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_grado_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_no_bachiller_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="chec_bachiller_madre" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label_direc_hab_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_direc_hab_madre" min="-2" pref="140" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="repLegalLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="repLegalMadreCheckbox" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="parentescoMadreTexto" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="fieldParentescoMadre" min="-2" pref="140" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="check_tsu_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_superior_madre" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
                           <EmptySpace pref="534" max="32767" attributes="0"/>
                       </Group>
@@ -3309,7 +3325,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="text_apellidos_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="label_apellido_madre" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3336,9 +3352,20 @@
                               <Component id="check_ext_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="label_direc_hab_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_direc_hab_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="repLegalMadreCheckbox" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="label_direc_hab_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_direc_hab_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="repLegalLabel" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="parentescoMadreTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fieldParentescoMadre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -3565,6 +3592,30 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tlf_madreActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="repLegalLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Representante legal"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="repLegalMadreCheckbox">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="repLegalMadreCheckboxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="parentescoMadreTexto">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Parentesco"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fieldParentescoMadre">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="text" type="java.lang.String" value="Madre"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldParentescoMadreActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_padre">
@@ -3623,6 +3674,14 @@
                                   <Component id="label_direc_hab_padre" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="text_direc_hab_padre" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="repLegalPadre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="repLegalPadreCheckbox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="parentescoPadreTexto" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="fieldParentescoPadre" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_apellido_padre" min="-2" max="-2" attributes="0"/>
@@ -3675,35 +3734,50 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="text_apellidos_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_apellido_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_nombres_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_nombes_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_ci_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_ci_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_estadociv_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_s_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_c_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_d_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_v_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="text_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_nacionalidad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_ven_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_ext_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="label_direc_hab_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_direc_hab_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="text_apellidos_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_apellido_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_nombres_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_nombes_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_ci_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_ci_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_estadociv_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_s_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_c_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_d_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_v_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="text_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="text_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_nacionalidad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_ven_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_ext_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="label_direc_hab_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="text_direc_hab_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="repLegalPadreCheckbox" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="repLegalPadre" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="parentescoPadreTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="fieldParentescoPadre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -3923,6 +3997,30 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tlf_padreActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="repLegalPadre">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Representante legal"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="repLegalPadreCheckbox">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="repLegalPadreCheckboxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="parentescoPadreTexto">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Parentesco"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fieldParentescoPadre">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="text" type="java.lang.String" value="Padre"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldParentescoPadreActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_rep">
@@ -3981,6 +4079,10 @@
                                   <Component id="label_direc_hab_rep" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="text_direc_hab_rep" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="parentescoRepresentanteTexto" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="fieldRepresentante" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_apellido_rep" min="-2" max="-2" attributes="0"/>
@@ -4062,6 +4164,10 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="label_direc_hab_rep" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="text_direc_hab_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                  <Component id="parentescoRepresentanteTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fieldRepresentante" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -4284,6 +4390,16 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tlf_repActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="parentescoRepresentanteTexto">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Parentesco"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="fieldRepresentante">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldRepresentanteActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_aut">
@@ -4316,7 +4432,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="16" max="32767" attributes="0"/>
+                          <EmptySpace pref="144" max="32767" attributes="0"/>
                           <Component id="lbl_autRetiro" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="scrl_autRetiro" min="-2" pref="151" max="-2" attributes="0"/>
@@ -4467,7 +4583,7 @@
                                       <Component id="chk_otroConsult" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txt_otroConsult" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="86" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -5412,11 +5528,13 @@
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbl_turnoNomina" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_turnoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="lbl_fechIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txt_fechaIngresoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txt_turnoNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>

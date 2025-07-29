@@ -1720,8 +1720,31 @@ public class connectDB {
 
     }
 
-    public static void setRelRepresentado() {
+    public static void setRelRepresentado(representante representative, estudiante student, boolean rol, String relationship) {
+        String sql = "INSERT INTO representaa (representante_ciRepresentante, estudiante_ciEstudiante, rol, parentesco) VALUES (?, ?, ?, ?)";
 
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the parameters for the prepared statement
+            pstmt.setInt(1, representative.getCi()); // representante_ciRepresentante
+            pstmt.setString(2, student.getCe()); // estudiante_ciEstudiante
+            pstmt.setBoolean(3, rol); // rol (BIT(1) in MySQL maps to boolean in Java)
+            pstmt.setString(4, relationship); // parentesco
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Database error during representaa insertion: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     public static void setRelAutorizado(autorizado authorized, estudiante student) {
