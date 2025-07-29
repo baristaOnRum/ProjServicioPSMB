@@ -1,12 +1,7 @@
 package subsystems;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Time;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -426,6 +421,93 @@ public class connectDB {
 
 
     }
+
+public static void updateEstudiante(estudiante estudiante) throws SQLException {
+    // SQL UPDATE statement with placeholders for all columns to be updated
+    // The WHERE clause uses ciEstudiante to identify the specific record.
+    String sql = "UPDATE `mydb`.`estudiante` SET " +
+            "`apellidos` = ?, " +
+            "`nombres` = ?, " +
+            "`fechaNac` = ?, " +
+            "`lugarNac` = ?, " +
+            "`nacionalidad` = ?, " +
+            "`edad` = ?, " +
+            "`procedencia` = ?, " +
+            "`tallaCam` = ?, " +
+            "`tallaPant` = ?, " +
+            "`tallaZap` = ?, " +
+            "`peso` = ?, " +
+            "`estatura` = ?, " +
+            "`periodioCurso` = ?, " +
+            "`periodoCursado` = ?, " +
+            "`img` = ?, " +
+            "`lateralidad` = ?, " +
+            "`grupoSanguineo` = ?, " +
+            "`asegurado` = ?, " +
+            "`cualSeguro` = ?, " +
+            "`medicoTratante` = ?, " +
+            "`tlfMedicoTratante` = ? " +
+            "WHERE `ciEstudiante` = ?"; // Primary key in WHERE clause
+
+    // Use try-with-resources to ensure Connection and PreparedStatement are closed
+    try (Connection conexion = DriverManager.getConnection(url, user, pass);
+         PreparedStatement query = conexion.prepareStatement(sql)) {
+
+        System.out.println("Conexión a la base de datos iniciada.");
+
+        // Set values for each placeholder in the UPDATE statement
+        // The order here must match the order of columns in the SET clause.
+        int paramIndex = 1;
+        query.setString(paramIndex++, estudiante.getApellidos());
+        query.setString(paramIndex++, estudiante.getNombres());
+        query.setDate(paramIndex++, Date.valueOf(estudiante.getFechaNac())); // Convert LocalDate to java.sql.Date
+        query.setString(paramIndex++, estudiante.getLugarNac());
+        query.setString(paramIndex++, estudiante.getNacionalidad());
+        query.setInt(paramIndex++, estudiante.getEdad());
+        query.setString(paramIndex++, estudiante.getProcedencia());
+        query.setInt(paramIndex++, estudiante.getTallaCamisa());
+        query.setInt(paramIndex++, estudiante.getTallaPantalon());
+        query.setInt(paramIndex++, estudiante.getTallaZapato());
+        query.setDouble(paramIndex++, estudiante.getPeso());
+        query.setDouble(paramIndex++, estudiante.getEstatura());
+        query.setInt(paramIndex++, estudiante.getPeriodoCurso());
+        query.setInt(paramIndex++, estudiante.getPeriodoCursado());
+
+        if (estudiante.getImg() != null) {
+            query.setBytes(paramIndex++, estudiante.getImg());
+        } else {
+            System.err.println("Imagen no existente, se establecerá como NULL.");
+            query.setNull(paramIndex++, java.sql.Types.BLOB); // Set as NULL if image is not provided
+        }
+
+        query.setBoolean(paramIndex++, estudiante.isLateralidad());
+        query.setString(paramIndex++, estudiante.getGrupoSanguineo());
+        query.setBoolean(paramIndex++, estudiante.isAsegurado());
+        query.setString(paramIndex++, estudiante.getCualSeguro());
+        query.setString(paramIndex++, estudiante.getMedicoTratante());
+        query.setString(paramIndex++, estudiante.getTlfMedicoTratante());
+
+        // Set the value for the WHERE clause (ciEstudiante)
+        query.setString(paramIndex++, estudiante.getCe());
+
+        // Execute the update query
+        int filasAfectadas = query.executeUpdate();
+
+        // Check the result
+        if (filasAfectadas > 0) {
+            System.out.println("¡Registro de estudiante actualizado exitosamente para CI: " + estudiante.getCe() + "!");
+        } else {
+            System.out.println("La actualización del registro de estudiante ha fallado o el CI no existe: " + estudiante.getCe() + ".");
+        }
+
+    } catch (SQLException e) {
+        System.err.println("Error de base de datos al actualizar estudiante: " + e.getMessage());
+        throw e; // Re-throw the exception for higher-level handling
+    } finally {
+        // Connection and PreparedStatement are automatically closed by try-with-resources
+        System.out.println("Conexión a la base de datos cerrada.");
+    }
+}
 
     public static void removerEstudiante(String ce) {
 
@@ -1773,12 +1855,12 @@ public class connectDB {
         }
     }
 
-    public static void setSocioFamliar(socioFamiliar socioFamiliar){
+    public static void setSocioFamiliar(socioFamiliar socioFamiliar){
         String sql = "INSERT INTO socioFamiliar (estudiante_ciEstudiante, vivienda, tipoVivienda," +
                 "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres) VALUES (?, ?, ?, ?, ?, ?)";
 
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+            conexion = DriverManager.getConnection(url, user, pass);
             PreparedStatement pstmt = conexion.prepareStatement(sql);
 
             // Set the parameters for the prepared statement using getters
@@ -1786,8 +1868,12 @@ public class connectDB {
             pstmt.setString(2, socioFamiliar.getVivienda());
             pstmt.setString(3, socioFamiliar.getTipoVivienda());
             pstmt.setString(4, socioFamiliar.getCuidaNinoHogar());
-            pstmt.setString(5, socioFamiliar.getRelacionAmbienteFamiliar());
-            pstmt.setString(6, socioFamiliar.getEstdCivilPadres());
+            pstmt.setString(5, socioFamiliar.getEstdCivilPadres());
+            pstmt.setString(6, socioFamiliar.getConsultaAtend());
+            pstmt.setBoolean(7, socioFamiliar.isVisitPsicopedagogo()); // bit(1) maps to boolean
+            pstmt.setBoolean(8, socioFamiliar.isVisitPsicologo());
+            pstmt.setBoolean(9, socioFamiliar.isVisitNeurologo());
+            pstmt.setBoolean(10, socioFamiliar.isVisitTerapLeng());
 
             // Execute the update (insert)
             int rowsAffected = pstmt.executeUpdate();
@@ -1802,6 +1888,44 @@ public class connectDB {
             e.printStackTrace();
         }
 
+    }
+
+    public static socioFamiliar fetchSocioFamiliar(String ciEstudiante) {
+        socioFamiliar sf = null;
+        String sql = "SELECT estudiante_ciEstudiante, vivienda, tipoVivienda, " +
+                "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres, " +
+                "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng " + // Added
+                "FROM socioFamiliar WHERE estudiante_ciEstudiante = ?";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass); // Use try-with-resources for connection
+            PreparedStatement pstmt = conexion.prepareStatement(sql);
+
+            pstmt.setString(1, ciEstudiante); // Set the CI parameter
+
+            try (ResultSet rs = pstmt.executeQuery()) { // Use try-with-resources for ResultSet
+                if (rs.next()) {
+                    sf = new socioFamiliar();
+                    sf.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
+                    sf.setVivienda(rs.getString("vivienda"));
+                    sf.setTipoVivienda(rs.getString("tipoVivienda"));
+                    sf.setCuidaNinoHogar(rs.getString("cuidaNiñoHogar"));
+                    sf.setRelacionAmbienteFamiliar(rs.getString("relacionAmbienteFamiliar"));
+                    sf.setEstdCivilPadres(rs.getString("estdCivilPadres"));
+                    sf.setConsultaAtend(rs.getString("consultAtend")); // Set consultAtend
+                    sf.setVisitPsicopedagogo(rs.getBoolean("visitPsicopedagogo")); // Set boolean
+                    sf.setVisitPsicologo(rs.getBoolean("visitPsicologo"));       // Set boolean
+                    sf.setVisitNeurologo(rs.getBoolean("visitNeurologo"));       // Set boolean
+                    sf.setVisitTerapLeng(rs.getBoolean("visitTerapLeng"));       // Set boolean
+                } else {
+                    System.out.println("No socioFamiliar data found for student CI: " + ciEstudiante);
+                }
+            } // ResultSet is closed automatically
+        } catch (SQLException e) {
+            System.err.println("Database error during socioFamiliar fetch: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return sf;
     }
 
     public static void crearUsuario() {
@@ -1844,13 +1968,6 @@ public class connectDB {
     public static void promoverAño() {
     }
 
-    public static void crearFamiliar() {
-
-    }
-
-    public static void fetchFamiliar() {
-    }
-
     public static void aumentarNivelEstd() {
     }
 
@@ -1874,7 +1991,7 @@ public class connectDB {
                     repF.setCeRelacionado(rs.getString("estudiante_ciEstudiante"));
                     repF.setNombres(rs.getString("nombre"));
                     repF.setApellidos(rs.getString("apellido"));
-                    repF.setEdad(rs.getInt("edad"));
+                    repF.setEdad(rs.getString("edad"));
                     repF.setOcupacion(rs.getString("ocupacion"));
                     repF.setParentesco(rs.getString("parentezco"));
                     fams.add(repF);
@@ -1898,6 +2015,39 @@ public class connectDB {
             }
         }
         return fams;
+    }
+
+    public static void setFamilia(familia familia, estudiante estudiante) {
+        // SQL INSERT statement for 'familiares extra' table
+        String sql = "INSERT INTO `familiares extra` (" +
+                "nombre, apellido, edad, parentezco, ocupacion, estudiante_ciEstudiante) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
+
+        try {
+
+            conexion = DriverManager.getConnection(url, user, pass); // Use try-with-resources for connection
+            PreparedStatement pstmt = conexion.prepareStatement(sql);
+
+            // Set the parameters for the prepared statement using getters from the familia object
+            pstmt.setString(1, familia.getNombres());
+            pstmt.setString(2, familia.getApellidos());
+            pstmt.setString(3, familia.getEdad());
+            pstmt.setString(4, familia.getParentesco()); // Note 'parentezco' for the column name
+            pstmt.setString(5, familia.getOcupacion());
+            pstmt.setString(6, estudiante.getCe());
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into `familiares extra` for student CE: " + estudiante.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for `familiares extra` for student CE: " + estudiante.getCe());
+            }
+        } catch (SQLException e) {
+            System.err.println("Database error during `familiares extra` insertion: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     public static List<representaA> fetchRelRepresentante(int ciRep) {

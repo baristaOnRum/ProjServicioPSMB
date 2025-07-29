@@ -1379,15 +1379,10 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="img_busqNomina" alignment="1" max="32767" attributes="0"/>
-                              <Component id="btn_verNom" alignment="0" max="32767" attributes="0"/>
-                              <Component id="btn_editarBusqNom" alignment="0" max="32767" attributes="0"/>
-                              <Component id="im_logoInstitucionBusqNom" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="img_busqNomina" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btn_verNom" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btn_editarBusqNom" alignment="0" max="32767" attributes="0"/>
+                      <Component id="im_logoInstitucionBusqNom" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="btn_buscarNomina" min="-2" pref="170" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -1853,48 +1848,31 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lbl_nombreNiñ" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_edadCaminar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_nombreNiñ" min="-2" pref="256" max="-2" attributes="0"/>
+                                  <Component id="txt_edadCaminar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbl_apellidoNiñ" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_lateralidad" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_apellidoNiñ" min="-2" pref="264" max="-2" attributes="0"/>
+                                  <Component id="rdo_diestro" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lbl_sexoNiñ" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rdb_mascNiñ" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="rdb_femNiñ" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="166" max="32767" attributes="0"/>
+                                  <Component id="rdo_zurdo" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rdo_ambidiestro" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rdo_desconocido" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lbl_edadNiñ" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txt_edadNiñ" min="-2" pref="102" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="label_edad_niñ" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="text_edad_niñ" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lbl_lugarNacNiñ" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txt_lugarNacNiñ" min="-2" pref="197" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lbl_estadoNiñ" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="txt_estadoNiñ" min="-2" pref="259" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lbl_munNacNiñ" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txt_municNiñ" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                          <Component id="lbl_estadoNiñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="txt_estadoNiñ" min="-2" pref="259" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbl_munNacNiñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_municNiñ" min="-2" pref="291" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="lbl_nacionalidadNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -1943,22 +1921,45 @@
                                           <Component id="text_estatura_niñ" min="-2" pref="70" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbl_edadCaminar" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_nombreNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txt_edadCaminar" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_nombreNiñ" min="-2" pref="256" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lbl_lateralidad" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_apellidoNiñ" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="rdo_diestro" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_apellidoNiñ" min="-2" pref="264" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="rdo_zurdo" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_sexoNiñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="rdb_mascNiñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="rdb_femNiñ" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_edadNiñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="diaNacNiñLbl" min="-2" pref="25" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="rdo_ambidiestro" min="-2" max="-2" attributes="0"/>
+                                          <Component id="diaNacNiñField" min="-2" pref="40" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="rdo_desconocido" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mesNacNiñLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="mesNacNiñField" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="añoNacNiñLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="añoNacNiñField" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_edad_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_edad_niñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbl_lugarNacNiñ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_lugarNacNiñ" min="-2" pref="197" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace pref="116" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1978,13 +1979,22 @@
                               <Component id="rdb_femNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_edadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_edadNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="text_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_edad_niñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_lugarNacNiñ" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="diaNacNiñField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mesNacNiñField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="añoNacNiñField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="diaNacNiñLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mesNacNiñLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="añoNacNiñLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lbl_edadNiñ" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -2063,11 +2073,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txt_edadNi&#xf1;">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_edadNi&#xf1;ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lbl_sexoNi&#xf1;">
                   <Properties>
@@ -2265,6 +2270,27 @@
                 <Component class="javax.swing.JRadioButton" name="rdo_desconocido">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="No se sabe"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="diaNacNi&#xf1;Field">
+                </Component>
+                <Component class="javax.swing.JTextField" name="mesNacNi&#xf1;Field">
+                </Component>
+                <Component class="javax.swing.JTextField" name="a&#xf1;oNacNi&#xf1;Field">
+                </Component>
+                <Component class="javax.swing.JLabel" name="diaNacNi&#xf1;Lbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DD:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="mesNacNi&#xf1;Lbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="MM:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="a&#xf1;oNacNi&#xf1;Lbl">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A&#xd1;O:"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -3225,66 +3251,6 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_ocupacion_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_ocupacion_madre" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_direc_trabaj_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_direc_trabj_madre" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_correo_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_correo_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_tlf_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_tlf_madre" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_apellido_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_apellidos_madre" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_nombes_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_nombres_madre" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_ci_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_ci_madre" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="label_estadociv_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="check_s_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_c_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_d_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_v_madre" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_fec_nac_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_fec_nac_madre" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="label_edad_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_edad_madre" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="label_lugar_nac_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_lugar_nac_madre" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_nacionalidad_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_ven_madre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="check_ext_madre" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="label_grado_madre" min="-2" max="-2" attributes="0"/>
@@ -3317,8 +3283,87 @@
                                       </Group>
                                   </Group>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="label_apellido_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_apellidos_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="label_nombes_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_nombres_madre" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="label_ci_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_ci_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="label_fec_nac_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="diaNacNiñLbl1" min="-2" pref="25" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="diaNacMadField" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="mesNacNiñLbl1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="mesNacMadField" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="añoNacNiñLbl1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="añoNacMadField" min="-2" pref="80" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="label_edad_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_edad_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_lugar_nac_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="text_lugar_nac_madre" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="label_nacionalidad_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_ven_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_ext_madre" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="label_estadociv_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="check_s_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_c_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_d_madre" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_v_madre" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="label_ocupacion_madre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_ocupacion_madre" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="label_direc_trabaj_madre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_direc_trabj_madre" min="-2" pref="70" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="label_correo_madre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_correo_madre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="label_tlf_madre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_tlf_madre" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="534" max="32767" attributes="0"/>
+                          <EmptySpace pref="330" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3340,16 +3385,25 @@
                               <Component id="check_v_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="text_edad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_edad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_fec_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_fec_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_lugar_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_lugar_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_nacionalidad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_ven_madre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_ext_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="diaNacMadField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mesNacMadField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="añoNacMadField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="diaNacNiñLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mesNacNiñLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="añoNacNiñLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="text_edad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_edad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_fec_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_lugar_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_lugar_nac_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_nacionalidad_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_ven_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_ext_madre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -3467,8 +3521,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="text_fec_nac_madre">
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_edad_madre">
                   <Properties>
@@ -3616,6 +3668,27 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldParentescoMadreActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JTextField" name="diaNacMadField">
+                </Component>
+                <Component class="javax.swing.JTextField" name="a&#xf1;oNacMadField">
+                </Component>
+                <Component class="javax.swing.JTextField" name="mesNacMadField">
+                </Component>
+                <Component class="javax.swing.JLabel" name="diaNacNi&#xf1;Lbl1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DD:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="mesNacNi&#xf1;Lbl1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="MM:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="a&#xf1;oNacNi&#xf1;Lbl1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A&#xd1;O:"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_padre">
@@ -3642,24 +3715,6 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_ocupacion_padre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_ocupacion_padre" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_direc_trabaj_padre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_direc_trabj_padre" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_correo_padre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_correo_padre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_tlf_padre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_tlf_padre" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_grado_padre" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="check_no_bachiller_padre" min="-2" max="-2" attributes="0"/>
@@ -3682,6 +3737,24 @@
                                   <Component id="parentescoPadreTexto" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="fieldParentescoPadre" min="-2" pref="140" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="label_ocupacion_padre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_ocupacion_padre" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="label_direc_trabaj_padre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_direc_trabj_padre" min="-2" pref="70" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="label_correo_padre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_correo_padre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="label_tlf_padre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_tlf_padre" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_apellido_padre" min="-2" max="-2" attributes="0"/>
@@ -3708,9 +3781,19 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_fec_nac_padre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="diaNacNiñLbl2" min="-2" pref="25" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_fec_nac_padre" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="diaNacPadreField" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="mesNacNiñLbl2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="mesNacPadreField" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="añoNacNiñLbl2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="añoNacPadreField" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="label_edad_padre" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="text_edad_padre" min="-2" pref="70" max="-2" attributes="0"/>
@@ -3726,7 +3809,7 @@
                                   <Component id="check_ext_padre" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="534" max="32767" attributes="0"/>
+                          <EmptySpace pref="313" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3750,16 +3833,25 @@
                                       <Component id="check_v_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="text_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_fec_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="text_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_nacionalidad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_ven_padre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="check_ext_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                          <Component id="text_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_edad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="text_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_lugar_nac_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_nacionalidad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="check_ven_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="check_ext_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="diaNacPadreField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mesNacPadreField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="añoNacPadreField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="diaNacNiñLbl2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mesNacNiñLbl2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="añoNacNiñLbl2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="label_fec_nac_padre" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -3875,8 +3967,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="text_fec_nac_padre">
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_edad_padre">
                   <Properties>
@@ -4021,6 +4111,30 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldParentescoPadreActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="diaNacNi&#xf1;Lbl2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DD:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="diaNacPadreField">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="menuPrincipal_diaNacPadreField"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="mesNacNi&#xf1;Lbl2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="MM:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="mesNacPadreField">
+                </Component>
+                <Component class="javax.swing.JLabel" name="a&#xf1;oNacNi&#xf1;Lbl2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A&#xd1;O:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="a&#xf1;oNacPadreField">
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_rep">
@@ -4046,24 +4160,6 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_ocupacion_rep" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_ocupacion_rep" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_direc_trabaj_rep" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_direc_trabj_rep" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="label_correo_rep" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_correo_rep" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="label_tlf_rep" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_tlf_rep" min="-2" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_grado_rep" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -4108,10 +4204,38 @@
                                   <Component id="check_v_rep" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
+                                  <Component id="label_ocupacion_rep" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_ocupacion_rep" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="label_direc_trabaj_rep" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_direc_trabj_rep" min="-2" pref="70" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="label_correo_rep" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_correo_rep" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="label_tlf_rep" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="text_tlf_rep" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="label_fec_nac_rep" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="text_fec_nac_rep" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="diaNacNiñLbl3" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="diaNacRepField" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="mesNacNiñLbl3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="mesNacRepField" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="añoNacNiñLbl3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="añoNacRepField" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="label_edad_rep" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="text_edad_rep" min="-2" pref="70" max="-2" attributes="0"/>
@@ -4127,7 +4251,7 @@
                                   <Component id="check_ext_rep" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="534" max="32767" attributes="0"/>
+                          <EmptySpace pref="325" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4149,16 +4273,25 @@
                               <Component id="check_v_rep" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="text_edad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_edad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_fec_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_fec_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="text_lugar_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_lugar_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_nacionalidad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_ven_rep" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="check_ext_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="text_edad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_edad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="text_lugar_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_lugar_nac_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_nacionalidad_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_ven_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="check_ext_rep" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="diaNacRepField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mesNacRepField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="añoNacRepField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="diaNacNiñLbl3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mesNacNiñLbl3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="añoNacNiñLbl3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="label_fec_nac_rep" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -4267,8 +4400,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Fecha Nacimiento"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="text_fec_nac_rep">
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_edad_rep">
                   <Properties>
@@ -4402,6 +4533,27 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldRepresentanteActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="diaNacNi&#xf1;Lbl3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DD:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="diaNacRepField">
+                </Component>
+                <Component class="javax.swing.JLabel" name="mesNacNi&#xf1;Lbl3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="MM:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="mesNacRepField">
+                </Component>
+                <Component class="javax.swing.JLabel" name="a&#xf1;oNacNi&#xf1;Lbl3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="A&#xd1;O:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="a&#xf1;oNacRepField">
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="dat_aut">
@@ -4434,7 +4586,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="11" max="32767" attributes="0"/>
+                          <EmptySpace pref="144" max="32767" attributes="0"/>
                           <Component id="lbl_autRetiro" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="scrl_autRetiro" min="-2" pref="151" max="-2" attributes="0"/>
@@ -4493,45 +4645,61 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="scrl_familiarExtra" min="-2" pref="590" max="-2" attributes="0"/>
+                                  <Component id="lbl_casa" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="chk_otroConsult" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rdio_propia" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_otroConsult" max="32767" attributes="0"/>
+                                  <Component id="rdio_prestada" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_alquilada" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbl_casa" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdio_propia" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="rdio_prestada" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdio_alquilada" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lbl_tipocasa" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                          <Component id="rdio_casa" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdio_apartamento" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdio_zinc" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdio_otro" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="lbl_familiarExtra" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                                  <Component id="lbl_tipocasa" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="rdio_casa" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_apartamento" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_zinc" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rdio_otro" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lbl_familiarExtra" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="scrl_familiarExtra" min="-2" pref="733" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lbl_consultas" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <Component id="lbl_cuidaNiñoHogar" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="txt_cuidaNiñoHogar" min="-2" pref="135" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbl_relPadres" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="check_s_padres" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_c_padres" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_d_padres" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="check_v_padres" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="198" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="chk_otroConsult" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_otroConsult" pref="510" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="chk_pspg" min="-2" max="-2" attributes="0"/>
@@ -4543,9 +4711,9 @@
                                           <Component id="chk_terpLenguaje" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="149" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -4562,31 +4730,45 @@
                               <Component id="txt_cuidaNiñoHogar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_tipocasa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdio_zinc" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdio_casa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdio_apartamento" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdio_otro" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_consultas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lbl_tipocasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rdio_zinc" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rdio_casa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rdio_apartamento" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rdio_otro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="check_s_padres" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_c_padres" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_d_padres" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_v_padres" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="lbl_relPadres" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_familiarExtra" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chk_pspg" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chk_psic" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chk_neur" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chk_terpLenguaje" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_consultas" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="scrl_familiarExtra" pref="0" max="32767" attributes="0"/>
+                              <Component id="scrl_familiarExtra" pref="98" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="chk_pspg" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="chk_psic" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="chk_neur" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="chk_terpLenguaje" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="chk_otroConsult" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txt_otroConsult" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -4659,8 +4841,8 @@
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="5" rowCount="5">
-                            <Column editable="true" title="Nombre y Apellido" type="java.lang.String"/>
-                            <Column editable="true" title="Sexo" type="java.lang.String"/>
+                            <Column editable="true" title="Nombre" type="java.lang.String"/>
+                            <Column editable="true" title="Apellido" type="java.lang.String"/>
                             <Column editable="true" title="Edad" type="java.lang.Integer"/>
                             <Column editable="true" title="Parentezco" type="java.lang.String"/>
                             <Column editable="true" title="Ocupacion" type="java.lang.String"/>
@@ -4709,6 +4891,43 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_otroConsult">
                 </Component>
+                <Component class="javax.swing.JLabel" name="lbl_relPadres">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Relaci&#xf3;n civil de los padres:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="check_s_padres">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="S"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_s_padresActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="check_c_padres">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="C"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_c_padresActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="check_d_padres">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="D"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_d_padresActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="check_v_padres">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="V"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_v_padresActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -4737,20 +4956,6 @@
                               <Component id="check_ci_representante" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="label_responsable" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="text_responsable" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="label_persona" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="text_persona" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="label_fecha" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="text_fecha" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Component id="label_originales" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="check_originales" min="-2" max="-2" attributes="0"/>
@@ -4768,6 +4973,20 @@
                               <Component id="check_vacunas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="label_observaciones" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_persona" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_persona" min="-2" pref="112" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label_fecha" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_fecha" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="label_responsable" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="text_responsable" min="-2" pref="129" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -4831,7 +5050,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4901,9 +5120,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="text_persona">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_personaActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="label_fecha">
               <Properties>
@@ -4911,9 +5127,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="text_fecha">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_fechaActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="label_observaciones">
               <Properties>
@@ -5400,13 +5613,15 @@
                           <Component id="txt_ciJefComNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl_1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="rdb_no1x10" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="rdb_si1x10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_centrVotNomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_1x10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>

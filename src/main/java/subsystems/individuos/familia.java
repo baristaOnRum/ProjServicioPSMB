@@ -4,7 +4,7 @@ public class familia extends personas{
     String ceRelacionado;
     String parentesco;
     String ocupacion;
-    int edad;
+    String edad;
 
     public String getCeRelacionado() {
         return ceRelacionado;
@@ -30,11 +30,11 @@ public class familia extends personas{
         this.ocupacion = ocupacion;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 }
