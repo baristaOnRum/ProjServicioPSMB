@@ -379,6 +379,10 @@ public void createConfPanel(){
         text_correo_madre = new javax.swing.JTextField();
         label_tlf_madre = new javax.swing.JLabel();
         text_tlf_madre = new javax.swing.JTextField();
+        repLegalLabel = new javax.swing.JLabel();
+        repLegalMadreCheckbox = new javax.swing.JCheckBox();
+        parentescoMadreTexto = new javax.swing.JLabel();
+        fieldParentescoMadre = new javax.swing.JTextField();
         dat_padre = new javax.swing.JPanel();
         label_apellido_padre = new javax.swing.JLabel();
         text_apellidos_padre = new javax.swing.JTextField();
@@ -415,6 +419,10 @@ public void createConfPanel(){
         text_correo_padre = new javax.swing.JTextField();
         label_tlf_padre = new javax.swing.JLabel();
         text_tlf_padre = new javax.swing.JTextField();
+        repLegalPadre = new javax.swing.JLabel();
+        repLegalPadreCheckbox = new javax.swing.JCheckBox();
+        parentescoPadreTexto = new javax.swing.JLabel();
+        fieldParentescoPadre = new javax.swing.JTextField();
         dat_rep = new javax.swing.JPanel();
         label_apellido_rep = new javax.swing.JLabel();
         text_apellidos_rep = new javax.swing.JTextField();
@@ -451,6 +459,8 @@ public void createConfPanel(){
         text_correo_rep = new javax.swing.JTextField();
         label_tlf_rep = new javax.swing.JLabel();
         text_tlf_rep = new javax.swing.JTextField();
+        parentescoRepresentanteTexto = new javax.swing.JLabel();
+        fieldRepresentante = new javax.swing.JTextField();
         dat_aut = new javax.swing.JPanel();
         lbl_autRetiro = new javax.swing.JLabel();
         scrl_autRetiro = new javax.swing.JScrollPane();
@@ -1614,11 +1624,9 @@ public void createConfPanel(){
                         .addContainerGap()
                         .addComponent(btn_repEstd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(2, 2, 2))
-                    .addGroup(headderEstudianteLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_repEstd1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_repEstd1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -2652,6 +2660,24 @@ public void createConfPanel(){
             }
         });
 
+        repLegalLabel.setText("Representante legal");
+
+        repLegalMadreCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                repLegalMadreCheckboxActionPerformed(evt);
+            }
+        });
+
+        parentescoMadreTexto.setText("Parentesco");
+
+        fieldParentescoMadre.setEditable(false);
+        fieldParentescoMadre.setText("Madre");
+        fieldParentescoMadre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldParentescoMadreActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout dat_madreLayout = new javax.swing.GroupLayout(dat_madre);
         dat_madre.setLayout(dat_madreLayout);
         dat_madreLayout.setHorizontalGroup(
@@ -2659,16 +2685,6 @@ public void createConfPanel(){
             .addGroup(dat_madreLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dat_madreLayout.createSequentialGroup()
-                        .addComponent(label_grado_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_no_bachiller_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chec_bachiller_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_tsu_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_superior_madre))
                     .addGroup(dat_madreLayout.createSequentialGroup()
                         .addComponent(label_ocupacion_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2685,10 +2701,6 @@ public void createConfPanel(){
                         .addComponent(label_tlf_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dat_madreLayout.createSequentialGroup()
-                        .addComponent(label_direc_hab_madre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_direc_hab_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dat_madreLayout.createSequentialGroup()
                         .addComponent(label_apellido_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2728,13 +2740,39 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(check_ven_madre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(check_ext_madre)))
+                        .addComponent(check_ext_madre))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_madreLayout.createSequentialGroup()
+                                .addComponent(label_grado_madre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_no_bachiller_madre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chec_bachiller_madre))
+                            .addGroup(dat_madreLayout.createSequentialGroup()
+                                .addComponent(label_direc_hab_madre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_direc_hab_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_madreLayout.createSequentialGroup()
+                                .addComponent(repLegalLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(repLegalMadreCheckbox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(parentescoMadreTexto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fieldParentescoMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_madreLayout.createSequentialGroup()
+                                .addComponent(check_tsu_madre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_superior_madre)))))
                 .addContainerGap(534, Short.MAX_VALUE))
         );
         dat_madreLayout.setVerticalGroup(
             dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_madreLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_apellidos_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label_apellido_madre)
@@ -2759,9 +2797,17 @@ public void createConfPanel(){
                     .addComponent(check_ven_madre)
                     .addComponent(check_ext_madre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_direc_hab_madre)
-                    .addComponent(text_direc_hab_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(repLegalMadreCheckbox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(label_direc_hab_madre)
+                        .addComponent(text_direc_hab_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(repLegalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_madreLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(parentescoMadreTexto)
+                            .addComponent(fieldParentescoMadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_madre)
@@ -2925,6 +2971,24 @@ public void createConfPanel(){
             }
         });
 
+        repLegalPadre.setText("Representante legal");
+
+        repLegalPadreCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                repLegalPadreCheckboxActionPerformed(evt);
+            }
+        });
+
+        parentescoPadreTexto.setText("Parentesco");
+
+        fieldParentescoPadre.setEditable(false);
+        fieldParentescoPadre.setText("Padre");
+        fieldParentescoPadre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldParentescoPadreActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout dat_padreLayout = new javax.swing.GroupLayout(dat_padre);
         dat_padre.setLayout(dat_padreLayout);
         dat_padreLayout.setHorizontalGroup(
@@ -2961,7 +3025,15 @@ public void createConfPanel(){
                     .addGroup(dat_padreLayout.createSequentialGroup()
                         .addComponent(label_direc_hab_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(repLegalPadre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(repLegalPadreCheckbox)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(parentescoPadreTexto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dat_padreLayout.createSequentialGroup()
                         .addComponent(label_apellido_padre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3008,33 +3080,43 @@ public void createConfPanel(){
             dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_padreLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_apellido_padre)
-                    .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_nombes_padre)
-                    .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_ci_padre)
-                    .addComponent(label_estadociv_padre)
-                    .addComponent(check_s_padre)
-                    .addComponent(check_c_padre)
-                    .addComponent(check_d_padre)
-                    .addComponent(check_v_padre))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_edad_padre)
-                    .addComponent(text_fec_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_fec_nac_padre)
-                    .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_lugar_nac_padre)
-                    .addComponent(label_nacionalidad_padre)
-                    .addComponent(check_ven_padre)
-                    .addComponent(check_ext_padre))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_direc_hab_padre)
-                    .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_apellido_padre)
+                            .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_nombes_padre)
+                            .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_ci_padre)
+                            .addComponent(label_estadociv_padre)
+                            .addComponent(check_s_padre)
+                            .addComponent(check_c_padre)
+                            .addComponent(check_d_padre)
+                            .addComponent(check_v_padre))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_edad_padre)
+                            .addComponent(text_fec_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_fec_nac_padre)
+                            .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_lugar_nac_padre)
+                            .addComponent(label_nacionalidad_padre)
+                            .addComponent(check_ven_padre)
+                            .addComponent(check_ext_padre))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_direc_hab_padre)
+                                .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(repLegalPadreCheckbox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(repLegalPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(parentescoPadreTexto)
+                            .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_padre)
@@ -3202,6 +3284,14 @@ public void createConfPanel(){
             }
         });
 
+        parentescoRepresentanteTexto.setText("Parentesco");
+
+        fieldRepresentante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldRepresentanteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout dat_repLayout = new javax.swing.GroupLayout(dat_rep);
         dat_rep.setLayout(dat_repLayout);
         dat_repLayout.setHorizontalGroup(
@@ -3238,7 +3328,11 @@ public void createConfPanel(){
                     .addGroup(dat_repLayout.createSequentialGroup()
                         .addComponent(label_direc_hab_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(parentescoRepresentanteTexto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fieldRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dat_repLayout.createSequentialGroup()
                         .addComponent(label_apellido_rep)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3309,9 +3403,13 @@ public void createConfPanel(){
                     .addComponent(check_ven_rep)
                     .addComponent(check_ext_rep))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label_direc_hab_rep)
-                    .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(parentescoRepresentanteTexto)
+                        .addComponent(fieldRepresentante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(label_direc_hab_rep)
+                        .addComponent(text_direc_hab_rep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_repLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_grado_rep)
@@ -3342,18 +3440,18 @@ public void createConfPanel(){
 
         tbl_autRetiro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2"
+                "Cedula", "Nombre", "Apellido", "Telefono 1", "Telefono 2", "Parentesco"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -3369,14 +3467,14 @@ public void createConfPanel(){
             .addGroup(dat_autLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_autRetiro))
-                .addContainerGap(659, Short.MAX_VALUE))
+                    .addComponent(lbl_autRetiro)
+                    .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(518, Short.MAX_VALUE))
         );
         dat_autLayout.setVerticalGroup(
             dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_autLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(11, Short.MAX_VALUE)
                 .addComponent(lbl_autRetiro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3532,7 +3630,7 @@ public void createConfPanel(){
                         .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chk_otroConsult)
                             .addComponent(txt_otroConsult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 86, Short.MAX_VALUE)))
+                        .addGap(0, 200, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -4373,6 +4471,8 @@ public void createConfPanel(){
     String direcTrabjMadre = text_direc_trabj_madre.getText().trim();
     String correoMadre = text_correo_madre.getText().trim();
     String tlfMadre = text_tlf_madre.getText().trim();
+    
+    boolean repLegalMadre = repLegalMadreCheckbox.isSelected();
 
     // Padre
     String apellidosPadre = text_apellidos_padre.getText().trim();
@@ -4386,6 +4486,8 @@ public void createConfPanel(){
     String direcTrabjPadre = text_direc_trabj_padre.getText().trim();
     String correoPadre = text_correo_padre.getText().trim();
     String tlfPadre = text_tlf_padre.getText().trim();
+    
+    boolean repLegalPadre = repLegalPadreCheckbox.isSelected();
 
     // Representante Legal
     String apellidosRep = text_apellidos_rep.getText().trim();
@@ -4399,6 +4501,8 @@ public void createConfPanel(){
     String direcTrabjRep = text_direc_trabj_rep.getText().trim();
     String correoRep = text_correo_rep.getText().trim();
     String tlfRep = text_tlf_rep.getText().trim();
+    
+    String parentescoRep = fieldRepresentante.getText().trim();
 
     // Documentos
     String responsable = text_responsable.getText().trim();
@@ -4514,45 +4618,6 @@ public void createConfPanel(){
         fields.put("Otras Vacunas", otraVac);
         fields.put("Médico Tratante", medicoTratante);
         fields.put("Teléfono del Médico Tratante", tlfMedicoTrat);
-
-        // Mother's Data
-        fields.put("Apellidos de la Madre", apellidosMadre);
-        fields.put("Nombres de la Madre", nombresMadre);
-        fields.put("Cédula de Identidad de la Madre", ciMadre);
-        fields.put("Fecha de Nacimiento de la Madre", fecNacMadre);
-        fields.put("Edad de la Madre", edadMadre);
-        fields.put("Lugar de Nacimiento de la Madre", lugarNacMadre);
-        fields.put("Dirección de Habitación de la Madre", direcHabMadre);
-        fields.put("Ocupación de la Madre", ocupacionMadre);
-        fields.put("Dirección de Trabajo de la Madre", direcTrabjMadre);
-        fields.put("Correo Electrónico de la Madre", correoMadre);
-        fields.put("Teléfono de la Madre", tlfMadre);
-
-        // Father's Data
-        fields.put("Apellidos del Padre", apellidosPadre);
-        fields.put("Nombres del Padre", nombresPadre);
-        fields.put("Cédula de Identidad del Padre", ciPadre);
-        fields.put("Fecha de Nacimiento del Padre", fecNacPadre);
-        fields.put("Edad del Padre", edadPadre);
-        fields.put("Lugar de Nacimiento del Padre", lugarNacPadre);
-        fields.put("Dirección de Habitación del Padre", direcHabPadre);
-        fields.put("Ocupación del Padre", ocupacionPadre);
-        fields.put("Dirección de Trabajo del Padre", direcTrabjPadre);
-        fields.put("Correo Electrónico del Padre", correoPadre);
-        fields.put("Teléfono del Padre", tlfPadre);
-
-        // Legal Representative's Data
-        fields.put("Apellidos del Representante Legal", apellidosRep);
-        fields.put("Nombres del Representante Legal", nombresRep);
-        fields.put("Cédula de Identidad del Representante Legal", ciRep);
-        fields.put("Fecha de Nacimiento del Representante Legal", fecNacRep);
-        fields.put("Edad del Representante Legal", edadRep);
-        fields.put("Lugar de Nacimiento del Representante Legal", lugarNacRep);
-        fields.put("Dirección de Habitación del Representante Legal", direcHabRep);
-        fields.put("Ocupación del Representante Legal", ocupacionRep);
-        fields.put("Dirección de Trabajo del Representante Legal", direcTrabjRep);
-        fields.put("Correo Electrónico del Representante Legal", correoRep);
-        fields.put("Teléfono del Representante Legal", tlfRep);
 
         // Document Data
         fields.put("Responsable", responsable);
@@ -4762,6 +4827,56 @@ public void createConfPanel(){
         representanteLegal.setDireccionTrabj(direcTrabjRep);
         representanteLegal.setCorreo(correoRep);
         representanteLegal.setTlf1(tlfRep); // Assuming tlfRep maps to tlf1
+        
+        //Evaluación representantes
+        
+        if (padre.getCi() == 0 && madre.getCi() == 0){
+        return;
+        }
+        
+        if (madre.getCi() != 0) {
+                // Mother's Data
+        fields.put("Apellidos de la Madre", apellidosMadre);
+        fields.put("Nombres de la Madre", nombresMadre);
+        fields.put("Cédula de Identidad de la Madre", ciMadre);
+        fields.put("Fecha de Nacimiento de la Madre", fecNacMadre);
+        fields.put("Edad de la Madre", edadMadre);
+        fields.put("Lugar de Nacimiento de la Madre", lugarNacMadre);
+        fields.put("Dirección de Habitación de la Madre", direcHabMadre);
+        fields.put("Ocupación de la Madre", ocupacionMadre);
+        fields.put("Dirección de Trabajo de la Madre", direcTrabjMadre);
+        fields.put("Correo Electrónico de la Madre", correoMadre);
+        fields.put("Teléfono de la Madre", tlfMadre);
+        }
+        
+        if (padre.getCi() != 0) {
+        // Father's Data
+        fields.put("Apellidos del Padre", apellidosPadre);
+        fields.put("Nombres del Padre", nombresPadre);
+        fields.put("Cédula de Identidad del Padre", ciPadre);
+        fields.put("Fecha de Nacimiento del Padre", fecNacPadre);
+        fields.put("Edad del Padre", edadPadre);
+        fields.put("Lugar de Nacimiento del Padre", lugarNacPadre);
+        fields.put("Dirección de Habitación del Padre", direcHabPadre);
+        fields.put("Ocupación del Padre", ocupacionPadre);
+        fields.put("Dirección de Trabajo del Padre", direcTrabjPadre);
+        fields.put("Correo Electrónico del Padre", correoPadre);
+        fields.put("Teléfono del Padre", tlfPadre);
+        }
+        // Legal Representative's Data
+        fields.put("Apellidos del Representante Legal", apellidosRep);
+        fields.put("Nombres del Representante Legal", nombresRep);
+        fields.put("Cédula de Identidad del Representante Legal", ciRep);
+        fields.put("Fecha de Nacimiento del Representante Legal", fecNacRep);
+        fields.put("Edad del Representante Legal", edadRep);
+        fields.put("Lugar de Nacimiento del Representante Legal", lugarNacRep);
+        fields.put("Dirección de Habitación del Representante Legal", direcHabRep);
+        fields.put("Ocupación del Representante Legal", ocupacionRep);
+        fields.put("Dirección de Trabajo del Representante Legal", direcTrabjRep);
+        fields.put("Correo Electrónico del Representante Legal", correoRep);
+        fields.put("Teléfono del Representante Legal", tlfRep);
+        fields.put("Parentesco del Representante Legal", parentescoRep);
+        
 
         // --- Documentos ---
         documentos.setResponsableInscripcion(responsable);
@@ -4791,6 +4906,7 @@ public void createConfPanel(){
                 Object apellidoObj = tbl_autRetiro.getValueAt(i, 2);
                 Object tlf1Obj = tbl_autRetiro.getValueAt(i, 3);
                 Object tlf2Obj = tbl_autRetiro.getValueAt(i, 4);
+                Object parentescoObj = tbl_autRetiro.getValueAt(i,5);
 
                 int ci = 0;
                 if (ciObj != null && !ciObj.toString().trim().isEmpty()) {
@@ -4805,14 +4921,17 @@ public void createConfPanel(){
                 String apellido = apellidoObj != null ? apellidoObj.toString().trim() : "";
                 String tlf1 = tlf1Obj != null ? tlf1Obj.toString().trim() : "";
                 String tlf2 = tlf2Obj != null ? tlf2Obj.toString().trim() : "";
+                String parentesco = parentescoObj != null ? parentescoObj.toString().trim() : "";
 
-                if (ci != 0 || !nombre.isEmpty() || !apellido.isEmpty() || !tlf1.isEmpty() || !tlf2.isEmpty()) {
+                if (ci != 0 || !nombre.isEmpty() || !apellido.isEmpty() || !tlf1.isEmpty() || !tlf2.isEmpty() || !parentesco.isEmpty()) {
                     autorizado aut = new autorizado();
+                    retiraA ret = new retiraA();
                     aut.setCi(ci);
                     aut.setNombres(nombre);
                     aut.setApellidos(apellido);
                     aut.setTlf1(tlf1);
                     aut.setTlf2(tlf2);
+                    aut.setParentesco(parentesco);
                     listaAutorizados.add(aut);
                 }
             }
@@ -4829,11 +4948,24 @@ public void createConfPanel(){
             }
             connectDB.sendRepresentante(madre);
             connectDB.sendRepresentante(padre);
-            connectDB.sendRepresentante(representanteLegal);
+            if (madre.getCi() == 0 && padre.getCi() == 0){
+                connectDB.sendRepresentante(representanteLegal);
+                connectDB.setRelRepresentado(representanteLegal, estudiante, true, parentescoRep);
+            }
 
-            connectDB.setRelRepresentado();
+            if (madre.getCi() != 0){
+            connectDB.setRelRepresentado(madre, estudiante, repLegalMadre, "madre");}
+            if (padre.getCi() != 0){
+            connectDB.setRelRepresentado(padre, estudiante, repLegalPadre, "padre");}
+            
+            for (autorizado aut: listaAutorizados){
+                connectDB.sendAutorizado(aut);
+                connectDB.setRelAutorizado(aut, estudiante);
+                
+            }
+            
         } else {
-        
+            
         }
         
         
@@ -5479,6 +5611,26 @@ public void createConfPanel(){
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_repEstd1ActionPerformed
 
+    private void repLegalMadreCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_repLegalMadreCheckboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_repLegalMadreCheckboxActionPerformed
+
+    private void repLegalPadreCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_repLegalPadreCheckboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_repLegalPadreCheckboxActionPerformed
+
+    private void fieldParentescoMadreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldParentescoMadreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldParentescoMadreActionPerformed
+
+    private void fieldParentescoPadreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldParentescoPadreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldParentescoPadreActionPerformed
+
+    private void fieldRepresentanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldRepresentanteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldRepresentanteActionPerformed
+
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
     System.exit(0); // Cierra la aplicación Java
@@ -5615,6 +5767,9 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JPanel dat_socioFamiliares;
     private javax.swing.JPanel datosEstd;
     private javax.swing.JPanel diagEstd;
+    private javax.swing.JTextField fieldParentescoMadre;
+    private javax.swing.JTextField fieldParentescoPadre;
+    private javax.swing.JTextField fieldRepresentante;
     private javax.swing.JPanel headderBusqAut;
     private javax.swing.JPanel headderBusqEst;
     private javax.swing.JPanel headderBusqNomina;
@@ -5793,6 +5948,9 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTabbedPane panelDatosEstd;
     private javax.swing.JPanel panelDocumentosEstd;
     private javax.swing.JTabbedPane panelRepresentanteEstd;
+    private javax.swing.JLabel parentescoMadreTexto;
+    private javax.swing.JLabel parentescoPadreTexto;
+    private javax.swing.JLabel parentescoRepresentanteTexto;
     private javax.swing.JPanel principal;
     private javax.swing.JRadioButton radio_guarderia_niñ;
     private javax.swing.JRadioButton radio_hogar_cuidado_niñ;
@@ -5852,6 +6010,10 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JRadioButton rdo_siPromLeng;
     private javax.swing.JRadioButton rdo_siPromMotr;
     private javax.swing.JRadioButton rdo_zurdo;
+    private javax.swing.JLabel repLegalLabel;
+    private javax.swing.JCheckBox repLegalMadreCheckbox;
+    private javax.swing.JLabel repLegalPadre;
+    private javax.swing.JCheckBox repLegalPadreCheckbox;
     private javax.swing.JScrollPane scl_busqNom;
     private javax.swing.JScrollPane scrl_autRetiro;
     private javax.swing.JScrollPane scrl_busqAut;
