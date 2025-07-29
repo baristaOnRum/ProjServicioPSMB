@@ -4,7 +4,8 @@
  */
 package forms;
 import subsystems.docGen;
-import subsystems.individuos.estudiante;
+import subsystems.individuos.*;
+import java.time.LocalDate;
 
 public class menuReportes extends javax.swing.JDialog {
     
@@ -32,6 +33,8 @@ public class menuReportes extends javax.swing.JDialog {
         lbl_direcRet = new javax.swing.JLabel();
         txt_direcRet = new javax.swing.JTextField();
         btn_retiro = new javax.swing.JButton();
+        lbl_repRet = new javax.swing.JLabel();
+        txt_repRet = new javax.swing.JTextField();
         panel_constanciaConducta = new javax.swing.JPanel();
         lbl_direcConducta = new javax.swing.JLabel();
         txt_direcConducta = new javax.swing.JTextField();
@@ -54,9 +57,11 @@ public class menuReportes extends javax.swing.JDialog {
         lbl_inicio = new javax.swing.JLabel();
         cmb_diaInicio = new javax.swing.JComboBox<>();
         cmb_mesInicio = new javax.swing.JComboBox<>();
+        txt_añoInicio = new javax.swing.JTextField();
         lbl_fin = new javax.swing.JLabel();
         cmb_diaFin = new javax.swing.JComboBox<>();
         cmb_mesFin = new javax.swing.JComboBox<>();
+        txt_añoFin = new javax.swing.JTextField();
         btn_medica = new javax.swing.JButton();
         headder = new javax.swing.JPanel();
         lbl_headder = new javax.swing.JLabel();
@@ -173,6 +178,14 @@ public class menuReportes extends javax.swing.JDialog {
             }
         });
 
+        lbl_repRet.setText("Representante:");
+
+        txt_repRet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_repRetActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panel_constanciaRetiroLayout = new javax.swing.GroupLayout(panel_constanciaRetiro);
         panel_constanciaRetiro.setLayout(panel_constanciaRetiroLayout);
         panel_constanciaRetiroLayout.setHorizontalGroup(
@@ -180,20 +193,28 @@ public class menuReportes extends javax.swing.JDialog {
             .addGroup(panel_constanciaRetiroLayout.createSequentialGroup()
                 .addGap(156, 156, 156)
                 .addGroup(panel_constanciaRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btn_retiro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panel_constanciaRetiroLayout.createSequentialGroup()
+                        .addComponent(lbl_repRet)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_repRet))
+                    .addComponent(btn_retiro, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panel_constanciaRetiroLayout.createSequentialGroup()
                         .addComponent(lbl_direcRet)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_direcRet, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(33, 33, 33)
+                        .addComponent(txt_direcRet, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(174, Short.MAX_VALUE))
         );
         panel_constanciaRetiroLayout.setVerticalGroup(
             panel_constanciaRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_constanciaRetiroLayout.createSequentialGroup()
-                .addGap(120, 120, 120)
+                .addGap(94, 94, 94)
                 .addGroup(panel_constanciaRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lbl_direcRet)
                     .addComponent(txt_direcRet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addGroup(panel_constanciaRetiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lbl_repRet)
+                    .addComponent(txt_repRet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_retiro)
                 .addContainerGap(111, Short.MAX_VALUE))
@@ -299,35 +320,28 @@ public class menuReportes extends javax.swing.JDialog {
             panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
                 .addGap(215, 215, 215)
-                .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btn_medica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_licenciaMedicaLayout.createSequentialGroup()
+                .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
                         .addComponent(lbl_dias)
                         .addGap(37, 37, 37)
                         .addComponent(txt_dias))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_licenciaMedicaLayout.createSequentialGroup()
-                        .addComponent(lbl_plantel)
-                        .addGap(86, 86, 86)
-                        .addComponent(txt_plantel))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_licenciaMedicaLayout.createSequentialGroup()
-                        .addComponent(lbl_municipio)
-                        .addGap(71, 71, 71)
-                        .addComponent(txt_municipio))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_licenciaMedicaLayout.createSequentialGroup()
+                    .addComponent(btn_medica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
                         .addComponent(lbl_estado)
                         .addGap(90, 90, 90)
                         .addComponent(txt_estado))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_licenciaMedicaLayout.createSequentialGroup()
+                    .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
                         .addComponent(lbl_distrito)
                         .addGap(87, 87, 87)
                         .addComponent(txt_distrito))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_licenciaMedicaLayout.createSequentialGroup()
+                    .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
                         .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_motivo)
                             .addComponent(lbl_fin)
-                            .addComponent(lbl_inicio))
+                            .addComponent(lbl_inicio)
+                            .addComponent(lbl_motivo))
                         .addGap(76, 76, 76)
-                        .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_motivo)
                             .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
                                 .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(cmb_diaFin, 0, 1, Short.MAX_VALUE)
@@ -335,9 +349,20 @@ public class menuReportes extends javax.swing.JDialog {
                                 .addGap(18, 18, 18)
                                 .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(cmb_mesInicio, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cmb_mesFin, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(txt_motivo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(268, Short.MAX_VALUE))
+                                    .addComponent(cmb_mesFin, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_añoInicio, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                                    .addComponent(txt_añoFin)))))
+                    .addGroup(panel_licenciaMedicaLayout.createSequentialGroup()
+                        .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_municipio)
+                            .addComponent(lbl_plantel))
+                        .addGap(71, 71, 71)
+                        .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_municipio)
+                            .addComponent(txt_plantel))))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
         panel_licenciaMedicaLayout.setVerticalGroup(
             panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -366,12 +391,14 @@ public class menuReportes extends javax.swing.JDialog {
                 .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_inicio)
                     .addComponent(cmb_diaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmb_mesInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmb_mesInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_añoFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_fin)
                     .addComponent(cmb_diaFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmb_mesFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmb_mesFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_añoInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panel_licenciaMedicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_dias)
@@ -470,11 +497,11 @@ public class menuReportes extends javax.swing.JDialog {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_ciPersReporte)
                         .addComponent(txt_ciPersReporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_buscarReporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cmb_tipoReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_persReporte)
-                        .addComponent(txt_persReporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btn_buscarReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(txt_persReporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -549,16 +576,59 @@ public class menuReportes extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_estudioActionPerformed
 
     private void btn_retiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_retiroActionPerformed
-
+        String ce = txt_ciPersReporte.getText().trim();
+        int ci = Integer.parseInt(txt_repRet.getText().trim());
+        estudiante est = new estudiante();
+        est.setCe(ce);
+        representante rep = new representante();
+        rep.setCi(ci);
+        docGen.generarConstanciaRetiro(est, rep, txt_direcRet.getText().trim());
     }//GEN-LAST:event_btn_retiroActionPerformed
 
     private void btn_conductaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_conductaActionPerformed
-
+        String ce = txt_ciPersReporte.getText().trim();
+        estudiante est = new estudiante();
+        est.setCe(ce);
+        
+        Boolean maternal;
+        if(chk_maternal.isEnabled()){
+            maternal = true;
+        }
+        else{
+            maternal = false;
+        }
+         
+        docGen.generarConstanciaConducta(est, txt_direcConducta.getText().trim(), maternal);
     }//GEN-LAST:event_btn_conductaActionPerformed
 
     private void btn_medicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_medicaActionPerformed
-
+        String plantel = txt_plantel.getText().trim();
+        String municipio = txt_municipio.getText().trim();
+        String estado = txt_estado.getText().trim();
+        String distrito = txt_distrito.getText().trim();
+        String motivo = txt_motivo.getText().trim();
+        int dias = Integer.parseInt(txt_dias.getText().trim());
+        
+        LocalDate DiaInicio;
+        DiaInicio = LocalDate.of(Integer.parseInt(txt_añoInicio.getText()),
+                                    Integer.parseInt(cmb_mesInicio.toString()),
+                                        Integer.parseInt(cmb_diaInicio.toString()));
+        
+        LocalDate DiaFin;
+        DiaFin = LocalDate.of(Integer.parseInt(txt_añoFin.getText()),
+                                    Integer.parseInt(cmb_mesFin.toString()),
+                                        Integer.parseInt(cmb_diaFin.toString()));
+        
+        trabajador nomina = new trabajador();
+        nomina.setCi(Integer.parseInt(txt_ciPersReporte.getText()));
+        
+        docGen.generarLicenciaMedica(nomina, plantel, municipio, estado, distrito, motivo, dias, DiaInicio, DiaFin);
+        
     }//GEN-LAST:event_btn_medicaActionPerformed
+
+    private void txt_repRetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_repRetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_repRetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -634,12 +704,15 @@ public class menuReportes extends javax.swing.JDialog {
     private javax.swing.JLabel lbl_municipio;
     private javax.swing.JLabel lbl_persReporte;
     private javax.swing.JLabel lbl_plantel;
+    private javax.swing.JLabel lbl_repRet;
     private javax.swing.JPanel panel;
     private javax.swing.JPanel panel_constanciaConducta;
     private javax.swing.JPanel panel_constanciaEstudio;
     private javax.swing.JPanel panel_constanciaRetiro;
     private javax.swing.JPanel panel_licenciaMedica;
     private javax.swing.JPanel panel_vacio;
+    private javax.swing.JTextField txt_añoFin;
+    private javax.swing.JTextField txt_añoInicio;
     private javax.swing.JTextField txt_ciPersReporte;
     private javax.swing.JTextField txt_dias;
     private javax.swing.JTextField txt_direcConducta;
@@ -653,5 +726,6 @@ public class menuReportes extends javax.swing.JDialog {
     private javax.swing.JTextField txt_municipio;
     private javax.swing.JTextField txt_persReporte;
     private javax.swing.JTextField txt_plantel;
+    private javax.swing.JTextField txt_repRet;
     // End of variables declaration//GEN-END:variables
 }

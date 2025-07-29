@@ -150,11 +150,16 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="btn_retiro" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="lbl_repRet" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txt_repRet" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="btn_retiro" min="-2" pref="326" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="lbl_direcRet" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txt_direcRet" min="-2" pref="269" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="txt_direcRet" min="-2" pref="242" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="174" max="32767" attributes="0"/>
@@ -164,10 +169,15 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Component id="lbl_direcRet" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_direcRet" alignment="2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="2" attributes="0">
+                      <Component id="lbl_repRet" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_repRet" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btn_retiro" min="-2" max="-2" attributes="0"/>
@@ -193,6 +203,16 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_retiroActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_repRet">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Representante:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_repRet">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_repRetActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -286,42 +306,33 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="btn_medica" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="lbl_dias" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="txt_dias" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="lbl_plantel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                          <Component id="txt_plantel" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="lbl_municipio" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="txt_municipio" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Component id="btn_medica" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Component id="lbl_estado" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           <Component id="txt_estado" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Component id="lbl_distrito" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                           <Component id="txt_distrito" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lbl_motivo" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_fin" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_inicio" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_motivo" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_motivo" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Component id="cmb_diaFin" pref="0" max="32767" attributes="0"/>
                                       <Component id="cmb_diaInicio" min="-2" pref="60" max="-2" attributes="0"/>
@@ -331,12 +342,27 @@
                                       <Component id="cmb_mesInicio" max="32767" attributes="0"/>
                                       <Component id="cmb_mesFin" min="-2" pref="102" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txt_añoInicio" pref="81" max="32767" attributes="0"/>
+                                      <Component id="txt_añoFin" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Component id="txt_motivo" min="-2" pref="180" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbl_municipio" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_plantel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_municipio" max="32767" attributes="0"/>
+                              <Component id="txt_plantel" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="268" max="32767" attributes="0"/>
+                  <EmptySpace pref="181" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -373,12 +399,14 @@
                       <Component id="lbl_inicio" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cmb_diaInicio" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cmb_mesInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_añoFin" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lbl_fin" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cmb_diaFin" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cmb_mesFin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_añoInicio" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -511,6 +539,8 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
+        <Component class="javax.swing.JTextField" name="txt_a&#xf1;oInicio">
+        </Component>
         <Component class="javax.swing.JLabel" name="lbl_fin">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dia Fin"/>
@@ -581,6 +611,8 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
+        <Component class="javax.swing.JTextField" name="txt_a&#xf1;oFin">
+        </Component>
         <Component class="javax.swing.JButton" name="btn_medica">
           <Properties>
             <Property name="text" type="java.lang.String" value="GENERAR"/>
@@ -647,11 +679,11 @@
                       <Component id="lbl_ciPersReporte" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_ciPersReporte" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="btn_buscarReporte" alignment="1" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="cmb_tipoReporte" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="lbl_persReporte" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_persReporte" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn_buscarReporte" alignment="1" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
