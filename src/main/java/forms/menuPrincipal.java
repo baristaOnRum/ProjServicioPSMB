@@ -360,10 +360,8 @@ public void createConfPanel(){
         txt_filtroBusqAut = new javax.swing.JTextField();
         scrl_busqAut = new javax.swing.JScrollPane();
         tbl_busqAut = new javax.swing.JTable();
-        img_busqAut = new javax.swing.JLabel();
         btn_verBusqAut = new javax.swing.JButton();
         btn_editarBusqAut = new javax.swing.JButton();
-        img_logoInstitucionBusqAut = new javax.swing.JLabel();
         btn_buscarAut = new javax.swing.JButton();
         busquedaNomina = new javax.swing.JPanel();
         headderBusqNomina = new javax.swing.JPanel();
@@ -1528,9 +1526,6 @@ public void createConfPanel(){
         tbl_busqAut.setPreferredSize(new java.awt.Dimension(550, 250));
         scrl_busqAut.setViewportView(tbl_busqAut);
 
-        img_busqAut.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        img_busqAut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
-
         btn_verBusqAut.setBackground(new java.awt.Color(139, 208, 194));
         btn_verBusqAut.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btn_verBusqAut.setForeground(new java.awt.Color(250, 247, 239));
@@ -1544,24 +1539,13 @@ public void createConfPanel(){
             }
         });
 
-        btn_editarBusqAut.setBackground(new java.awt.Color(139, 208, 194));
+        btn_editarBusqAut.setBackground(new java.awt.Color(231, 231, 231));
         btn_editarBusqAut.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_editarBusqAut.setForeground(new java.awt.Color(250, 247, 239));
-        btn_editarBusqAut.setText("Editar");
+        btn_editarBusqAut.setForeground(new java.awt.Color(102, 102, 102));
+        btn_editarBusqAut.setText("Eliminar");
         btn_editarBusqAut.setMaximumSize(new java.awt.Dimension(100, 20));
         btn_editarBusqAut.setMinimumSize(new java.awt.Dimension(100, 20));
         btn_editarBusqAut.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        img_logoInstitucionBusqAut.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        img_logoInstitucionBusqAut.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        img_logoInstitucionBusqAut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
-        img_logoInstitucionBusqAut.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        img_logoInstitucionBusqAut.setAlignmentY(0.0F);
-        img_logoInstitucionBusqAut.setAutoscrolls(true);
-        img_logoInstitucionBusqAut.setFocusable(false);
-        img_logoInstitucionBusqAut.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        img_logoInstitucionBusqAut.setIconTextGap(0);
-        img_logoInstitucionBusqAut.setRequestFocusEnabled(false);
 
         btn_buscarAut.setBackground(new java.awt.Color(27, 120, 101));
         btn_buscarAut.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
@@ -1579,22 +1563,24 @@ public void createConfPanel(){
         busquedaAutorizadosLayout.setHorizontalGroup(
             busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(headderBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, busquedaAutorizadosLayout.createSequentialGroup()
+            .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
+                        .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_verBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, busquedaAutorizadosLayout.createSequentialGroup()
-                        .addComponent(cmb_filtroBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_filtroBusqAut))
-                    .addComponent(scrl_busqAut, javax.swing.GroupLayout.DEFAULT_SIZE, 959, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btn_verBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(img_busqAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(img_logoInstitucionBusqAut, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                    .addComponent(btn_buscarAut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(15, 15, 15))
+                        .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scrl_busqAut, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
+                                .addComponent(cmb_filtroBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_filtroBusqAut)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btn_buscarAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(15, 15, 15))))
         );
         busquedaAutorizadosLayout.setVerticalGroup(
             busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1606,17 +1592,12 @@ public void createConfPanel(){
                     .addComponent(txt_filtroBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_buscarAut))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scrl_busqAut, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
-                        .addComponent(img_busqAut)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_verBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(img_logoInstitucionBusqAut))
-                    .addComponent(scrl_busqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
+                    .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_verBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9))
         );
 
         busquedaNomina.setPreferredSize(new java.awt.Dimension(1336, 800));
@@ -1648,29 +1629,23 @@ public void createConfPanel(){
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderBusqNominaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_volverBusqNom, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(431, 431, 431)
                 .addComponent(lbl_busqNomina)
-                .addGap(589, 589, 589))
-            .addGroup(headderBusqNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderBusqNominaLayout.createSequentialGroup()
-                    .addContainerGap(1220, Short.MAX_VALUE)
-                    .addComponent(btn_cerrarBusqNom, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(16, 16, 16)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_cerrarBusqNom, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         headderBusqNominaLayout.setVerticalGroup(
             headderBusqNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(headderBusqNominaLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderBusqNominaLayout.createSequentialGroup()
                 .addComponent(lbl_busqNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(headderBusqNominaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_volverBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(headderBusqNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_volverBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_cerrarBusqNom, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(headderBusqNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(headderBusqNominaLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(btn_cerrarBusqNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
         );
 
         cmb_filtroBusqNom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula", "Nombre", "Apellido", "Estado Civil", "Estatus", "Género", "Grado de Estudios", "Ocupación", "Comunidad de residencia", "Parroquia de residencia", "Municipio de residencia", "Ninguno" }));
@@ -1728,10 +1703,10 @@ public void createConfPanel(){
             }
         });
 
-        btn_editarBusqNom.setBackground(new java.awt.Color(139, 208, 194));
+        btn_editarBusqNom.setBackground(new java.awt.Color(231, 231, 231));
         btn_editarBusqNom.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_editarBusqNom.setForeground(new java.awt.Color(250, 247, 239));
-        btn_editarBusqNom.setText("Editar");
+        btn_editarBusqNom.setForeground(new java.awt.Color(102, 102, 102));
+        btn_editarBusqNom.setText("Eliminar");
         btn_editarBusqNom.setMaximumSize(new java.awt.Dimension(100, 20));
         btn_editarBusqNom.setMinimumSize(new java.awt.Dimension(100, 20));
         btn_editarBusqNom.setPreferredSize(new java.awt.Dimension(100, 20));
@@ -4195,52 +4170,51 @@ public void createConfPanel(){
                         .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scroll_observaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_aceptarInscripcionNiño)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         panelDocumentosEstdLayout.setVerticalGroup(
             panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(scroll_observaciones)
                     .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(btn_aceptarInscripcionNiño, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(scroll_observaciones)
-                            .addGroup(panelDocumentosEstdLayout.createSequentialGroup()
-                                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(label_originales)
-                                        .addComponent(check_originales)
-                                        .addComponent(label_copias)
-                                        .addComponent(check_copias)
-                                        .addComponent(label_partida)
-                                        .addComponent(check_partida)
-                                        .addComponent(label_vacunas)
-                                        .addComponent(check_vacunas))
-                                    .addComponent(label_observaciones))
-                                .addGap(9, 9, 9)
-                                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label_cedula)
-                                    .addComponent(check_ci_madre)
-                                    .addComponent(check_ci_padre)
-                                    .addComponent(check_ci_representante))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label_responsable)
-                                    .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(label_fecha)
-                                        .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(label_persona)
-                                        .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_originales)
+                                .addComponent(check_originales)
+                                .addComponent(label_copias)
+                                .addComponent(check_copias)
+                                .addComponent(label_partida)
+                                .addComponent(check_partida)
+                                .addComponent(label_vacunas)
+                                .addComponent(check_vacunas))
+                            .addComponent(label_observaciones))
+                        .addGap(9, 9, 9)
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_cedula)
+                            .addComponent(check_ci_madre)
+                            .addComponent(check_ci_padre)
+                            .addComponent(check_ci_representante))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_responsable)
+                            .addComponent(text_responsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_fecha)
+                                .addComponent(text_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelDocumentosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_persona)
+                                .addComponent(text_persona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDocumentosEstdLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_aceptarInscripcionNiño, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42))
         );
 
         btn_aggImgNiñ.setText("Agregar Imagen");
@@ -4817,10 +4791,6 @@ public void createConfPanel(){
         }
     }//GEN-LAST:event_btn_verNomActionPerformed
 
-    private void btn_inscribirNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirNomActionPerformed
-
-    }//GEN-LAST:event_btn_inscribirNomActionPerformed
-
     private void cmb_filtroBusqNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_filtroBusqNomActionPerformed
 
     }//GEN-LAST:event_cmb_filtroBusqNomActionPerformed
@@ -4834,8 +4804,6 @@ public void createConfPanel(){
         panel.add(informacionEstudiante);
         panel.repaint();
         panel.validate();
-        
-        
         
         for(Component cp: datosEstd.getComponents()){
             cp.setEnabled(false);
@@ -4895,7 +4863,7 @@ public void createConfPanel(){
     }//GEN-LAST:event_btn_volverBusqEstActionPerformed
 
     private void btn_cerrarBusqAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cerrarBusqAutActionPerformed
-        dispose();
+        System.exit(0);
     }//GEN-LAST:event_btn_cerrarBusqAutActionPerformed
 
     private void btn_volverBusqAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volverBusqAutActionPerformed
@@ -6426,6 +6394,10 @@ public void createConfPanel(){
 // TODO add your handling code here:
     }//GEN-LAST:event_btn_aggImgRepActionPerformed
 
+    private void btn_inscribirNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inscribirNomActionPerformed
+
+    }//GEN-LAST:event_btn_inscribirNomActionPerformed
+
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
     System.exit(0); // Cierra la aplicación Java
@@ -6604,7 +6576,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel imgHerramienta;
     private javax.swing.JLabel imgMaletin;
     private javax.swing.JLabel imgNomina;
-    private javax.swing.JLabel img_busqAut;
     private javax.swing.JLabel img_busqEstd;
     private javax.swing.JLabel img_busqNomina;
     private javax.swing.JLabel img_busqRep;
@@ -6612,7 +6583,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel img_infMad;
     private javax.swing.JLabel img_infPadre;
     private javax.swing.JLabel img_infRep;
-    private javax.swing.JLabel img_logoInstitucionBusqAut;
     private javax.swing.JLabel img_logoInstitucionBusqEstd;
     private javax.swing.JLabel img_logoInstitucionBusqRep;
     private javax.swing.JPanel informacionEstudiante;

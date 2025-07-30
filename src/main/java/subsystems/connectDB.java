@@ -254,27 +254,26 @@ public class connectDB {
 
             ResultSet rs = query.executeQuery();
 
-            while (rs.next()) {
-                representante.setNombres(rs.getString("nombres"));
-                representante.setApellidos(rs.getString("apellidos"));
-                representante.setLugarNac(rs.getString("lugarNac"));
-                representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
-                representante.setCi(rs.getInt("ciRepresentante"));
-                representante.setEdad(rs.getInt("edad"));
-                representante.setNinosMenor6(rs.getBoolean("menores6"));
-                representante.setEstadoCivil(rs.getString("estdCiv"));
-                representante.setNacionalidad(rs.getString("nacionalidad"));
-                representante.setDireccionHab(rs.getString("direccionHab"));
-                representante.setDireccionTrabj(rs.getString("direccionTrabj"));
-                representante.setOcupacion(rs.getString("ocupacion"));
-                representante.setGradoEstudios(rs.getString("gradoEstudios"));
-                representante.setTlf1(rs.getString("tlf1"));
-                representante.setTlf2(rs.getString("tlf2"));
-                representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
-                representante.setTlfCasa(rs.getString("tlfCasa"));
-                representante.setCorreo(rs.getString("correo"));
-                representante.setImg(rs.getBytes("img"));
-            }
+            rs.next();
+            representante.setNombres(rs.getString("nombres"));
+            representante.setApellidos(rs.getString("apellidos"));
+            representante.setLugarNac(rs.getString("lugarNac"));
+            representante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
+            representante.setCi(rs.getInt("ciRepresentante"));
+            representante.setEdad(rs.getInt("edad"));
+            representante.setNinosMenor6(rs.getBoolean("menores6"));
+            representante.setEstadoCivil(rs.getString("estdCiv"));
+            representante.setNacionalidad(rs.getString("nacionalidad"));
+            representante.setDireccionHab(rs.getString("direccionHab"));
+            representante.setDireccionTrabj(rs.getString("direccionTrabj"));
+            representante.setOcupacion(rs.getString("ocupacion"));
+            representante.setGradoEstudios(rs.getString("gradoEstudios"));
+            representante.setTlf1(rs.getString("tlf1"));
+            representante.setTlf2(rs.getString("tlf2"));
+            representante.setTlfTrabajo(rs.getString("tlfTrabajo"));
+            representante.setTlfCasa(rs.getString("tlfCasa"));
+            representante.setCorreo(rs.getString("correo"));
+            representante.setImg(rs.getBytes("img"));
 
         } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -1551,16 +1550,26 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
         return autorizados;
     }
 
-    public static void fetchAutorizado(autorizado autorizado) {
-
-        sql = "SELECT ciAutorizado FROM autorizadoRetiro WHERE ciAutorizado = ?";
+    public static autorizado fetchAutorizado(String autorizadoCi) {
+        autorizado autorizado = new autorizado();
+        sql = "SELECT ciAutorizado FROM autorizadoretiro WHERE ciAutorizado = ?";
 
         try {
-            conexion = DriverManager.getConnection(url, "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
-            query.setInt(1, autorizado.getCi()); // cirepresentante
+            query.setInt(1, autorizado.getCi());
+            
+            ResultSet rs = query.executeQuery();
+
+            rs.next();
+            autorizado.setNombres(rs.getString("nombres"));
+            autorizado.setApellidos(rs.getString("apellidos"));
+            autorizado.setCi(rs.getInt("ciAutorizado"));
+            autorizado.setTlf1(rs.getString("tlf1"));
+            autorizado.setTlf2(rs.getString("tlf2"));
+            return autorizado;
 
         } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -1574,6 +1583,11 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                     e.printStackTrace();
                 }
             }
+        }
+        if (autorizado != null) {
+            return autorizado;
+        } else {
+            return null;
         }
 
     }

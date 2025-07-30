@@ -7,33 +7,42 @@ import subsystems.individuos.*;
 import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
 public class Main {
+    
     private static void checkInit(acceso accesoPresente){
-        //TODO: Checkear: Existencia de una base de datos guardada -> Existencia de usuarios en la DB,
-        //                SI NO -> Solicitar enlace de conexión a DB; Verificar existencia otra vez ->
-        //                Verificar usuarios; SI NO USUARIO Crear usuarios. El primer usuario siempre es Administrador
-        if (utils.obtenerVariable("db_url") != null){
-            if (!utils.obtenerVariable("db_url").isEmpty());{
-                if (!utils.obtenerVariable("db_user").isEmpty()){
-                    setAcceso(utils.obtenerVariable("db_url"),
-                            utils.obtenerVariable("db_user"), accesoPresente);
-                    }
-                }
-        } else {
-            // llamar a un formulario que settee las cosas
+        //Verificamos existencia de DB
+        
+        if (utils.obtenerVariable("db_url") == null){
+            //Inicializar la DB
+            confDBFirst conf = new confDBFirst(accesoPresente);
+            conf.setVisible(true);
+            conf.repaint();
+            conf.validate();
+            while (conf.isEnabled()){
+            }
         }
     }
+//        if (utils.obtenerVariable("db_user").isEmpty());{
+//                if (!utils.obtenerVariable("db_user").isEmpty()){
+//                    setAcceso(utils.obtenerVariable("db_url"),
+//                            utils.obtenerVariable("db_user"), accesoPresente);
+//                    }
+//                }
 
     private static acceso setAcceso(String urlDB, String userDB, acceso acceso){
         //TODO: Llamar al inicio de sesión, devolver un acceso válido;
         acceso.setConnURL(urlDB);
-        acceso.setPassDB(userDB);
-        acceso.setUserDB("root");
+        acceso.setUserDB(userDB);
         acceso.setNombre_usuario("test");
         acceso.setContrasenaHash("test");
+        acceso.setTipo_acceso(4);
+        //acceso.setPassDB();
 
         return acceso;
     }
