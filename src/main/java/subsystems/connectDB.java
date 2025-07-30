@@ -40,30 +40,41 @@ public class connectDB {
             System.out.println("Database connection started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
-            query.setInt(1, representante.getCi()); // cirepresentante
-            query.setString(2, representante.getApellidos()); // apellidos
-            query.setString(3, representante.getNombres()); // nombres
-            query.setString(4, representante.getEstadoCivil()); // estdciv
-            query.setString(5, representante.getLugarNac()); // lugar_nac
-            query.setDate(6, Date.valueOf(representante.getFechaNac())); // fecha_nac (formato YYYY-MM-DD es estándar)
+            // Set the values for each placeholder using the getter methods from the representante object
+            // Mapping Java class fields to DB column names:
+            query.setInt(1, representante.getCi()); // ciRepresentante
+            query.setString(2, representante.getApellidos()); // apellidos (from personas)
+            query.setString(3, representante.getNombres()); // nombres (from personas)
+            query.setString(4, representante.getEstadoCivil()); // estdCiv
+            query.setString(5, representante.getLugarNac()); // lugarNac (from personas)
+
+            // Convert LocalDate to java.sql.Date for database insertion
+            if (representante.getFechaNac() != null) {
+                query.setDate(6, Date.valueOf(representante.getFechaNac())); // fechaNac (from personas)
+            } else {
+                query.setNull(6, java.sql.Types.DATE);
+            }
+
             query.setString(7, representante.getNacionalidad()); // nacionalidad
             query.setInt(8, representante.getEdad()); // edad
-            query.setString(9, representante.getDireccionHab()); // direccion_hab
-            query.setString(10, representante.getGradoEstudios()); // grado_estudios
+            query.setString(9, representante.getDireccionHab()); // direccionHab
+            query.setString(10, representante.getGradoEstudios()); // gradoEstudios
             query.setString(11, representante.getOcupacion()); // ocupacion
-            query.setString(12, representante.getDireccionTrabj()); // direccion_trabj
-            query.setString(13, representante.getTlf1()); // tlf
-            query.setString(14, representante.getTlf2()); // tlf
-            query.setString(15, representante.getTlfTrabajo()); // tlf
-            query.setString(16, representante.getTlfCasa()); // tlf
+            query.setString(12, representante.getDireccionTrabj()); // direccionTrabj
+            query.setString(13, representante.getTlf1()); // tlf1
+            query.setString(14, representante.getTlf2()); // tlf2
+            query.setString(15, representante.getTlfTrabajo()); // tlfTrabajo
+            query.setString(16, representante.getTlfCasa()); // tlfCasa
             query.setString(17, representante.getCorreo()); // correo
-            query.setBoolean(18, representante.isNinosMenor6()); // niños menores de 6
+            query.setBoolean(18, representante.isNinosMenor6()); // menores6
+
+            // Set the byte array for the image
             if (representante.getImg() != null) {
-                query.setBytes(19, representante.getImg());
+                query.setBytes(19, representante.getImg()); // img
             } else {
-                System.err.println("Imagen no existente");
-                query.setNull(19, java.sql.Types.BLOB); // Set as NULL if file not found
+                query.setNull(19, java.sql.Types.BLOB);
             }
+
 
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
@@ -357,20 +368,27 @@ public class connectDB {
 
         String sql = "INSERT INTO estudiante (" +
                 "ciEstudiante, apellidos, nombres, fechaNac, lugarNac, nacionalidad, edad, " +
-                "procedencia, tallaCam, tallaPant, tallaZap, peso, estatura, nivel, " +
+                "procedencia, tallaCam, tallaPant, tallaZap, peso, estatura, " +
                 "turno, periodioCurso, periodoCursado, img, lateralidad, grupoSanguineo, " +
                 "asegurado, cualSeguro, medicoTratante, tlfMedicoTratante" +
-                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(url,user,pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             // Set parameters for the prepared statement
             pstmt.setString(1, estudiante.getCe()); // ciEstudiante
-            pstmt.setString(2, estudiante.getApellidos()); // apellidos (from personas superclass)
-            pstmt.setString(3, estudiante.getNombres()); // nombres (from personas superclass)
-            pstmt.setDate(4, Date.valueOf(estudiante.getFechaNac())); // fechaNac (from personas superclass, converted to java.sql.Date)
-            pstmt.setString(5, estudiante.getLugarNac()); // lugarNac (from personas superclass)
+            pstmt.setString(2, estudiante.getApellidos()); // apellidos (from personas)
+            pstmt.setString(3, estudiante.getNombres()); // nombres (from personas)
+
+            // Convert LocalDate to java.sql.Date for database insertion
+            if (estudiante.getFechaNac() != null) {
+                pstmt.setDate(4, Date.valueOf(estudiante.getFechaNac())); // fechaNac (from personas)
+            } else {
+                pstmt.setNull(4, java.sql.Types.DATE);
+            }
+
+            pstmt.setString(5, estudiante.getLugarNac()); // lugarNac (from personas)
             pstmt.setString(6, estudiante.getNacionalidad()); // nacionalidad
             pstmt.setInt(7, estudiante.getEdad()); // edad
             pstmt.setString(8, estudiante.getProcedencia()); // procedencia
@@ -379,25 +397,22 @@ public class connectDB {
             pstmt.setInt(11, estudiante.getTallaZapato()); // tallaZap
             pstmt.setInt(12, estudiante.getPeso()); // peso
             pstmt.setInt(13, estudiante.getEstatura()); // estatura
-            pstmt.setInt(14, estudiante.getNivel()); // nivel
-            // pstmt.setString(15, estudiante.getSeccion()); // seccion - OMITTED as not in class
-            pstmt.setBoolean(15, estudiante.getTurno() == 1); // turno (byte to boolean, assuming 1 is true, 0 is false)
-            pstmt.setInt(16, estudiante.getPeriodoCurso()); // periodioCurso
-            pstmt.setInt(17, estudiante.getPeriodoCursado()); // periodoCursado
+            pstmt.setInt(14, estudiante.getPeriodoCurso()); // periodioCurso
+            pstmt.setInt(15, estudiante.getPeriodoCursado()); // periodoCursado
 
-            // Handle image (byte array)
+            // Set the byte array for the image
             if (estudiante.getImg() != null) {
-                pstmt.setBytes(18, estudiante.getImg()); // img
+                pstmt.setBytes(16, estudiante.getImg()); // img
             } else {
-                pstmt.setNull(18, java.sql.Types.BLOB); // Set as NULL if no image
+                pstmt.setNull(16, java.sql.Types.BLOB);
             }
 
-            pstmt.setBoolean(19, estudiante.isLateralidad()); // lateralidad
-            pstmt.setString(20, estudiante.getGrupoSanguineo()); // grupoSanguineo
-            pstmt.setBoolean(21, estudiante.isAsegurado()); // asegurado
-            pstmt.setString(22, estudiante.getCualSeguro()); // cualSeguro
-            pstmt.setString(23, estudiante.getMedicoTratante()); // medicoTratante
-            pstmt.setString(24, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
+            pstmt.setBoolean(17, estudiante.isLateralidad()); // lateralidad
+            pstmt.setString(18, estudiante.getGrupoSanguineo()); // grupoSanguineo
+            pstmt.setBoolean(19, estudiante.isAsegurado()); // asegurado
+            pstmt.setString(20, estudiante.getCualSeguro()); // cualSeguro
+            pstmt.setString(21, estudiante.getMedicoTratante()); // medicoTratante
+            pstmt.setString(22, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
 
             // Execute the update (insert)
             int rowsAffected = pstmt.executeUpdate();
@@ -424,76 +439,61 @@ public class connectDB {
 
     }
 
-public static void updateEstudiante(estudiante estudiante) throws SQLException {
+    public static void updateEstudiante(estudiante estudiante) {
     // SQL UPDATE statement with placeholders for all columns to be updated
     // The WHERE clause uses ciEstudiante to identify the specific record.
-    String sql = "UPDATE `mydb`.`estudiante` SET " +
-            "`apellidos` = ?, " +
-            "`nombres` = ?, " +
-            "`fechaNac` = ?, " +
-            "`lugarNac` = ?, " +
-            "`nacionalidad` = ?, " +
-            "`edad` = ?, " +
-            "`procedencia` = ?, " +
-            "`tallaCam` = ?, " +
-            "`tallaPant` = ?, " +
-            "`tallaZap` = ?, " +
-            "`peso` = ?, " +
-            "`estatura` = ?, " +
-            "`periodioCurso` = ?, " +
-            "`periodoCursado` = ?, " +
-            "`img` = ?, " +
-            "`lateralidad` = ?, " +
-            "`grupoSanguineo` = ?, " +
-            "`asegurado` = ?, " +
-            "`cualSeguro` = ?, " +
-            "`medicoTratante` = ?, " +
-            "`tlfMedicoTratante` = ? " +
-            "WHERE `ciEstudiante` = ?"; // Primary key in WHERE clause
+    String sql = "UPDATE estudiante SET " +
+            "apellidos = ?, nombres = ?, fechaNac = ?, lugarNac = ?, nacionalidad = ?, " +
+            "edad = ?, procedencia = ?, tallaCam = ?, tallaPant = ?, tallaZap = ?, " +
+            "peso = ?, estatura = ?, periodioCurso = ?, periodoCursado = ?, img = ?, " +
+            "lateralidad = ?, grupoSanguineo = ?, asegurado = ?, cualSeguro = ?, " +
+            "medicoTratante = ?, tlfMedicoTratante = ? " +
+            "WHERE ciEstudiante = ?";
 
-    // Use try-with-resources to ensure Connection and PreparedStatement are closed
-    try (Connection conexion = DriverManager.getConnection(url, user, pass);
-         PreparedStatement query = conexion.prepareStatement(sql)) {
-
-        System.out.println("Conexión a la base de datos iniciada.");
-
-        // Set values for each placeholder in the UPDATE statement
-        // The order here must match the order of columns in the SET clause.
+    // Using try-with-resources to ensure the PreparedStatement is closed automatically
+    try (Connection conn = DriverManager.getConnection(url,user,pass);
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        // Set the values for each placeholder in the UPDATE clause
         int paramIndex = 1;
-        query.setString(paramIndex++, estudiante.getApellidos());
-        query.setString(paramIndex++, estudiante.getNombres());
-        query.setDate(paramIndex++, Date.valueOf(estudiante.getFechaNac())); // Convert LocalDate to java.sql.Date
-        query.setString(paramIndex++, estudiante.getLugarNac());
-        query.setString(paramIndex++, estudiante.getNacionalidad());
-        query.setInt(paramIndex++, estudiante.getEdad());
-        query.setString(paramIndex++, estudiante.getProcedencia());
-        query.setInt(paramIndex++, estudiante.getTallaCamisa());
-        query.setInt(paramIndex++, estudiante.getTallaPantalon());
-        query.setInt(paramIndex++, estudiante.getTallaZapato());
-        query.setDouble(paramIndex++, estudiante.getPeso());
-        query.setDouble(paramIndex++, estudiante.getEstatura());
-        query.setInt(paramIndex++, estudiante.getPeriodoCurso());
-        query.setInt(paramIndex++, estudiante.getPeriodoCursado());
+        pstmt.setString(paramIndex++, estudiante.getApellidos()); // apellidos
+        pstmt.setString(paramIndex++, estudiante.getNombres()); // nombres
 
-        if (estudiante.getImg() != null) {
-            query.setBytes(paramIndex++, estudiante.getImg());
+        if (estudiante.getFechaNac() != null) {
+            pstmt.setDate(paramIndex++, Date.valueOf(estudiante.getFechaNac())); // fechaNac
         } else {
-            System.err.println("Imagen no existente, se establecerá como NULL.");
-            query.setNull(paramIndex++, java.sql.Types.BLOB); // Set as NULL if image is not provided
+            pstmt.setNull(paramIndex++, java.sql.Types.DATE);
         }
 
-        query.setBoolean(paramIndex++, estudiante.isLateralidad());
-        query.setString(paramIndex++, estudiante.getGrupoSanguineo());
-        query.setBoolean(paramIndex++, estudiante.isAsegurado());
-        query.setString(paramIndex++, estudiante.getCualSeguro());
-        query.setString(paramIndex++, estudiante.getMedicoTratante());
-        query.setString(paramIndex++, estudiante.getTlfMedicoTratante());
+        pstmt.setString(paramIndex++, estudiante.getLugarNac()); // lugarNac
+        pstmt.setString(paramIndex++, estudiante.getNacionalidad()); // nacionalidad
+        pstmt.setInt(paramIndex++, estudiante.getEdad()); // edad
+        pstmt.setString(paramIndex++, estudiante.getProcedencia()); // procedencia
+        pstmt.setInt(paramIndex++, estudiante.getTallaCamisa()); // tallaCam
+        pstmt.setInt(paramIndex++, estudiante.getTallaPantalon()); // tallaPant
+        pstmt.setInt(paramIndex++, estudiante.getTallaZapato()); // tallaZap
+        pstmt.setInt(paramIndex++, estudiante.getPeso()); // peso
+        pstmt.setInt(paramIndex++, estudiante.getEstatura()); // estatura
+        pstmt.setInt(paramIndex++, estudiante.getPeriodoCurso()); // periodioCurso
+        pstmt.setInt(paramIndex++, estudiante.getPeriodoCursado()); // periodoCursado
 
-        // Set the value for the WHERE clause (ciEstudiante)
-        query.setString(paramIndex++, estudiante.getCe());
+        if (estudiante.getImg() != null) {
+            pstmt.setBytes(paramIndex++, estudiante.getImg()); // img
+        } else {
+            pstmt.setNull(paramIndex++, java.sql.Types.BLOB);
+        }
+
+        pstmt.setBoolean(paramIndex++, estudiante.isLateralidad()); // lateralidad
+        pstmt.setString(paramIndex++, estudiante.getGrupoSanguineo()); // grupoSanguineo
+        pstmt.setBoolean(paramIndex++, estudiante.isAsegurado()); // asegurado
+        pstmt.setString(paramIndex++, estudiante.getCualSeguro()); // cualSeguro
+        pstmt.setString(paramIndex++, estudiante.getMedicoTratante()); // medicoTratante
+        pstmt.setString(paramIndex++, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
+
+        // Set the WHERE clause parameter
+        pstmt.setString(paramIndex++, estudiante.getCe()); // ciEstudiante for WHERE clause
 
         // Execute the update query
-        int filasAfectadas = query.executeUpdate();
+        int filasAfectadas = pstmt.executeUpdate();
 
         // Check the result
         if (filasAfectadas > 0) {
@@ -504,7 +504,6 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
 
     } catch (SQLException e) {
         System.err.println("Error de base de datos al actualizar estudiante: " + e.getMessage());
-        throw e; // Re-throw the exception for higher-level handling
     } finally {
         // Connection and PreparedStatement are automatically closed by try-with-resources
         System.out.println("Conexión a la base de datos cerrada.");
@@ -578,7 +577,6 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                         estudiante.setTallaZapato(rs.getInt("tallaZap"));
                         estudiante.setTallaCamisa(rs.getInt("tallaCam"));
                         estudiante.setTallaPantalon(rs.getInt("tallaPant"));
-                        estudiante.setNivel(rs.getInt("nivel"));
                         estudiante.setEdad(rs.getInt("edad"));
                         estudiante.setEstatura(rs.getInt("estatura"));
                         estudiante.setPeso(rs.getInt("peso"));
@@ -613,7 +611,7 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
             sql = "SELECT " +
                     "nombres, apellidos, lugarNac, fechaNac, " +
                     "ciestudiante, edad, menores6, estdCiv, nacionalidad, " +
-                    "direccionHab, direccionTrabj, ocupacion, gradoEstudios, nivel," +
+                    "direccionHab, direccionTrabj, ocupacion, gradoEstudios," +
                     "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img, periodioCurso " +
                     "FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
             try {
@@ -639,7 +637,6 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                     estudiante.setTallaZapato(rs.getInt("tallaZap"));
                     estudiante.setTallaCamisa(rs.getInt("tallaCam"));
                     estudiante.setTallaPantalon(rs.getInt("tallaPant"));
-                    estudiante.setNivel(rs.getInt("nivel"));
                     estudiante.setEdad(rs.getInt("edad"));
                     estudiante.setEstatura(rs.getInt("estatura"));
                     estudiante.setPeso(rs.getInt("peso"));
@@ -691,7 +688,6 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                 estudiante.setFechaNac(rs.getDate("fechaNac").toLocalDate());
                 estudiante.setCe(rs.getString("ciEstudiante"));
                 estudiante.setEdad(rs.getInt("edad"));
-                estudiante.setNivel(rs.getInt("nivel"));
                 estudiante.setProcedencia(rs.getString("procedencia"));
                 estudiante.setNacionalidad(rs.getString("nacionalidad"));
                 estudiante.setTallaCamisa(rs.getInt("tallaCam"));
@@ -1602,13 +1598,11 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                 "`enfermedadesPadecidas`, `edadHablar`, `edadCaminar`," +
                 "`enfermedadEmbarazo`, `cualEnfEmbarazo`, `embarazoPlanif`," +
                 "`medicamentoFiebre`, `vacBCG`, `vacTRIPLE`, `vacPOLIO`, `vacTIFUS`," +
-                "`otroVacAplicadas`, `cualVacAplicada`, `consultaPsilg`," +
-                "`consultaPsipeg`, `consultaNeur`, `consultaLeng`, `consultaOtro`," +
-                "`especifiqueConsultaOtro`, `comeAyudado`, `buenApetito`," +
+                "`otroVacAplicadas`, `cualVacAplicada`, `comeAyudado`, `buenApetito`," +
                 "`horaDormir`, `horaLevantarse`, `conQuienDuerme`, `chupaDedo`," +
                 "`edadDejarPañales`, `seOrinaDia`, `seOrinaNoche`, `evacuaDia`, `pideAydaAseo`)" +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?," +
-                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         try {
             conexion = DriverManager.getConnection(url, user, pass);
@@ -1644,23 +1638,19 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
             query.setBoolean(26, diagnostico.isVacTIFUS()); // vacTIF
             query.setBoolean(27, diagnostico.isOtroVacAplicadas()); // otroVacAplicadas
             query.setString(28, diagnostico.getCualVacAplicada()); // cualVacAplicada
-            query.setBoolean(29, diagnostico.isConsultaPsilg()); // consultaPsilg
-            query.setBoolean(30, diagnostico.isConsultaPsipeg()); // consultaPsipe
-            query.setBoolean(31, diagnostico.isConsultaNeur()); // consultaNeur
-            query.setBoolean(32, diagnostico.isConsultaLeng()); // consultaLeng
-            query.setBoolean(33, diagnostico.isConsultaOtro()); // consultaOtro
-            query.setString(34, diagnostico.getEspecifiqueConsultaOtro()); // especifiqueConsultaOtro
-            query.setBoolean(35, diagnostico.isComeAyudado()); // comeAyudado
-            query.setBoolean(36, diagnostico.isBuenApetito()); // buenApetito
-            query.setTime(37, Time.valueOf(diagnostico.getHoraDormir())); // horaDormir
-            query.setTime(38, Time.valueOf(diagnostico.getHoraLevantarse())); // horaLevantarse
-            query.setString(39, diagnostico.getConQuienDuerme()); // conQuienDuerme
-            query.setBoolean(40, diagnostico.isChupaDedo()); // chupaDedo
-            query.setInt(41, diagnostico.getEdadDejarPanales()); // edadDejarPañales
-            query.setBoolean(42, diagnostico.isSeOrinaDia()); // seOrinaDia
-            query.setBoolean(43, diagnostico.isSeOrinaNoche()); // seOrinaNoche
-            query.setBoolean(44, diagnostico.isEvacuaDia()); // evacuaDia
-            query.setBoolean(45, diagnostico.isPideAyudaAseo()); // pideAydaAseo
+            query.setBoolean(29, diagnostico.isComeAyudado()); // comeAyudado
+            query.setBoolean(30, diagnostico.isBuenApetito()); // buenApetito
+            if (diagnostico.getHoraDormir() == null) {query.setTime(31, null); }// horaDormir
+                else {query.setTime(31, Time.valueOf(diagnostico.getHoraDormir())); }// horaDormir
+            if (diagnostico.getHoraLevantarse() == null){ query.setTime(32, null);}
+            else { query.setTime(32, Time.valueOf(diagnostico.getHoraLevantarse()));}// horaLevantarse
+            query.setString(33, diagnostico.getConQuienDuerme()); // conQuienDuerme
+            query.setBoolean(34, diagnostico.isChupaDedo()); // chupaDedo
+            query.setInt(35, diagnostico.getEdadDejarPanales()); // edadDejarPañales
+            query.setBoolean(36, diagnostico.isSeOrinaDia()); // seOrinaDia
+            query.setBoolean(37, diagnostico.isSeOrinaNoche()); // seOrinaNoche
+            query.setBoolean(38, diagnostico.isEvacuaDia()); // evacuaDia
+            query.setBoolean(39, diagnostico.isPideAyudaAseo()); // pideAydaAseo
 
 
             // --- Ejecución de la consulta ---
@@ -1696,8 +1686,6 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
                 "enfermedadEmbarazo = ?, cualEnfEmbarazo = ?, embarazoPlanif = ?," +
                 "medicamentoFiebre = ?, vacBCG = ?, vacTRIPLE = ?, vacPOLIO = ?," +
                 "vacTIFUS = ?, otroVacAplicadas = ?, cualVacAplicada = ?," +
-                "consultaPsilg = ?, consultaPsipeg = ?, consultaNeur = ?," +
-                "consultaLeng = ?, consultaOtro = ?, especifiqueConsultaOtro = ?," +
                 "comeAyudado = ?, buenApetito = ?, horaDormir = ?," +
                 "horaLevantarse = ?, conQuienDuerme = ?, chupaDedo = ?," +
                 "edadDejarPañales = ?, seOrinaDia = ?, seOrinaNoche = ?," +
@@ -1736,26 +1724,20 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
             query.setBoolean(25, diagnostico.isVacTIFUS()); // vacTIF
             query.setBoolean(26, diagnostico.isOtroVacAplicadas()); // otroVacAplicadas
             query.setString(27, diagnostico.getCualVacAplicada()); // cualVacAplicada
-            query.setBoolean(28, diagnostico.isConsultaPsilg()); // consultaPsilg
-            query.setBoolean(29, diagnostico.isConsultaPsipeg()); // consultaPsipe
-            query.setBoolean(30, diagnostico.isConsultaNeur()); // consultaNeur
-            query.setBoolean(31, diagnostico.isConsultaLeng()); // consultaLeng
-            query.setBoolean(32, diagnostico.isConsultaOtro()); // consultaOtro
-            query.setString(33, diagnostico.getEspecifiqueConsultaOtro()); // especifiqueConsultaOtro
-            query.setBoolean(34, diagnostico.isComeAyudado()); // comeAyudado
-            query.setBoolean(35, diagnostico.isBuenApetito()); // buenApetito
-            query.setTime(36, Time.valueOf(diagnostico.getHoraDormir())); // horaDormir
-            query.setTime(37, Time.valueOf(diagnostico.getHoraLevantarse())); // horaLevantarse
-            query.setString(38, diagnostico.getConQuienDuerme()); // conQuienDuerme
-            query.setBoolean(39, diagnostico.isChupaDedo()); // chupaDedo
-            query.setInt(40, diagnostico.getEdadDejarPanales()); // edadDejarPañales
-            query.setBoolean(41, diagnostico.isSeOrinaDia()); // seOrinaDia
-            query.setBoolean(42, diagnostico.isSeOrinaNoche()); // seOrinaNoche
-            query.setBoolean(43, diagnostico.isEvacuaDia()); // evacuaDia
-            query.setBoolean(44, diagnostico.isPideAyudaAseo()); // pideAydaAseo
+            query.setBoolean(28, diagnostico.isComeAyudado()); // comeAyudado
+            query.setBoolean(29, diagnostico.isBuenApetito()); // buenApetito
+            query.setTime(30, Time.valueOf(diagnostico.getHoraDormir())); // horaDormir
+            query.setTime(31, Time.valueOf(diagnostico.getHoraLevantarse())); // horaLevantarse
+            query.setString(32, diagnostico.getConQuienDuerme()); // conQuienDuerme
+            query.setBoolean(33, diagnostico.isChupaDedo()); // chupaDedo
+            query.setInt(34, diagnostico.getEdadDejarPanales()); // edadDejarPañales
+            query.setBoolean(35, diagnostico.isSeOrinaDia()); // seOrinaDia
+            query.setBoolean(36, diagnostico.isSeOrinaNoche()); // seOrinaNoche
+            query.setBoolean(37, diagnostico.isEvacuaDia()); // evacuaDia
+            query.setBoolean(38, diagnostico.isPideAyudaAseo()); // pideAydaAseo
 
             // Se establece el ci del estudiante al que pertenece el diagnostico
-            query.setString(45, diagnostico.getCe()); // estudiante_ciEstudiante
+            query.setString(39, diagnostico.getCe()); // estudiante_ciEstudiante
 
             // --- Ejecución de la consulta ---
             int columnasAfectadas = query.executeUpdate();
@@ -1894,9 +1876,10 @@ public static void updateEstudiante(estudiante estudiante) throws SQLException {
             pstmt.setString(1, socioFamiliar.getEstudiante_ciEstudiante());
             pstmt.setString(2, socioFamiliar.getVivienda());
             pstmt.setString(3, socioFamiliar.getTipoVivienda());
+            // Map cuidaNinoHogar from Java class to cuidaNiñoHogar in DB
             pstmt.setString(4, socioFamiliar.getCuidaNinoHogar());
-            // Note: relacionAmbienteFamiliar is in the class but not in the new table schema, so it's omitted here.
             pstmt.setString(5, socioFamiliar.getEstdCivilPadres());
+            // Map consultaAtend from Java class to consultAtend in DB
             pstmt.setString(6, socioFamiliar.getConsultaAtend());
             pstmt.setBoolean(7, socioFamiliar.isVisitPsicopedagogo());
             pstmt.setBoolean(8, socioFamiliar.isVisitPsicologo());

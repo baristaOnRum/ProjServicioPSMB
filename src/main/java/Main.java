@@ -15,17 +15,15 @@ import java.util.List;
 
 public class Main {
     
-    private static void checkInit(acceso accesoPresente){
+    private static void checkInit(acceso accesoPresente, menuPrincipal menu){
         //Verificamos existencia de DB
         
         if (utils.obtenerVariable("db_url") == null){
             //Inicializar la DB
-            confDBFirst conf = new confDBFirst(accesoPresente);
+            confDBFirst conf = new confDBFirst(accesoPresente, menu);
             conf.setVisible(true);
             conf.repaint();
             conf.validate();
-            while (conf.isEnabled()){
-            }
         }
     }
 //        if (utils.obtenerVariable("db_user").isEmpty());{
@@ -48,7 +46,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-                menuPrincipal main;
+                menuPrincipal main = null;
                 //file_picker main = new file_picker();
                 //busqueda_representante main = new busqueda_representante();
                 //res_busqueda_rep main = new res_busqueda_rep();
@@ -57,10 +55,7 @@ public class Main {
                 //conf_users main = new conf_users();
                 //menu_reportes main = new menu_reportes();
         acceso accesoPresente = new acceso();
-        checkInit(accesoPresente);
-        connectDB.connparamsinit(accesoPresente);
-        main = new menuPrincipal(accesoPresente);
-        main.setVisible(true);
+        checkInit(accesoPresente, main);
         
     }
 }
