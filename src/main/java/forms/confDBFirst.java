@@ -229,7 +229,6 @@ public class confDBFirst extends javax.swing.JFrame {
                 // this.dispose();
             } else{
                 JOptionPane.showMessageDialog(new javax.swing.JFrame(), "Por favor ingrese datos de conexión válidos", "Error", JOptionPane.WARNING_MESSAGE);
-                return;
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed

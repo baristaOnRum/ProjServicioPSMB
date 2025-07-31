@@ -15,7 +15,9 @@ import org.apache.commons.codec.binary.Base32;
 
 public class utils {
     
-    public static final String CONFIG_PATH = "/configuracion.properties";
+    public static final String APPDATA_DIR = System.getenv("APPDATA");
+    
+    public static final String CONFIG_PATH = APPDATA_DIR + "/configuracion.properties";
             
     public static byte[] leerISAByteArr(InputStream is){
 
