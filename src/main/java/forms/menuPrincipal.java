@@ -1488,29 +1488,28 @@ public void createConfPanel(){
         headderEstudianteLayout.setHorizontalGroup(
             headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderEstudianteLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(32, 32, 32)
                 .addComponent(btn_repEstd)
-                .addGap(515, 515, 515)
+                .addGap(489, 489, 489)
                 .addComponent(lbl_headderEstudiante)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_repEstd1)
-                .addContainerGap())
+                .addGap(25, 25, 25))
         );
         headderEstudianteLayout.setVerticalGroup(
             headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderEstudianteLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lbl_headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(headderEstudianteLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lbl_headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(headderEstudianteLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btn_repEstd1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_repEstd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(2, 2, 2)))
                 .addContainerGap())
-            .addGroup(headderEstudianteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(headderEstudianteLayout.createSequentialGroup()
-                        .addComponent(btn_repEstd1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(9, 9, 9))
-                    .addGroup(headderEstudianteLayout.createSequentialGroup()
-                        .addComponent(btn_repEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         img_infEstudiante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3784,14 +3783,13 @@ public void createConfPanel(){
                                     .addComponent(label_direc_hab_padre)
                                     .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(repLegalPadreCheckbox)
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label_nacionalidad_padre)
-                                    .addComponent(check_ven_padre)
-                                    .addComponent(check_ext_padre))
-                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(parentescoPadreTexto)
-                                    .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(label_nacionalidad_padre)
+                                .addComponent(check_ven_padre)
+                                .addComponent(check_ext_padre))
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(parentescoPadreTexto)
+                                .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(7, 7, 7)
                         .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_grado_padre)
@@ -4599,9 +4597,17 @@ public void createConfPanel(){
     String direcTrabjMadre = text_direc_trabj_madre.getText().trim();
     String correoMadre = text_correo_madre.getText().trim();
     String tlfMadre = text_tlf_madre.getText().trim();
-    String estdCivMad = madreLegalEstdCiv.getSelection().toString();
-    String nacionalidadMad = madreLegalNac.getSelection().toString();
-    String gradoEstdMad = madreLegalInstrucc.getSelection().toString();
+    String estdCivMad;
+    String nacionalidadMad;
+    String gradoEstdMad;
+    try {
+    estdCivMad = madreLegalEstdCiv.getSelection().toString();
+    nacionalidadMad = madreLegalNac.getSelection().toString();
+    gradoEstdMad = madreLegalInstrucc.getSelection().toString();}
+    catch (Exception e) {System.out.println("Unable to fetch data");
+        estdCivMad = null;
+        nacionalidadMad = null;
+        gradoEstdMad = null;}
     byte[] imgArrMad = fileBytesMad;
     
     boolean repLegalMadre = repLegalMadreCheckbox.isSelected();
@@ -4620,9 +4626,17 @@ public void createConfPanel(){
     String direcTrabjPadre = text_direc_trabj_padre.getText().trim();
     String correoPadre = text_correo_padre.getText().trim();
     String tlfPadre = text_tlf_padre.getText().trim();
-    String estdCivPad = padreLegalEstdCiv.getSelection().toString();
-    String nacionalidadPad = padreLegalNac.getSelection().toString();
-    String gradoEstdPad = padreLegalInstrucc.getSelection().toString();
+    String estdCivPadre;
+    String nacionalidadPadre;
+    String gradoEstdPadre;
+    try {
+    estdCivPadre = padreLegalEstdCiv.getSelection().toString();
+    nacionalidadPadre = padreLegalNac.getSelection().toString();
+    gradoEstdPadre = padreLegalInstrucc.getSelection().toString();}
+        catch (Exception e) {System.out.println("Unable to fetch data");
+        estdCivPadre = null;
+        nacionalidadPadre = null;
+        gradoEstdPadre = null;}
     byte[] imgArrPadre = fileBytesPadre;
     
     boolean repLegalPadre = repLegalPadreCheckbox.isSelected();
@@ -4641,9 +4655,17 @@ public void createConfPanel(){
     String direcTrabjRep = text_direc_trabj_rep.getText().trim();
     String correoRep = text_correo_rep.getText().trim();
     String tlfRep = text_tlf_rep.getText().trim();
-    String estdCivRep = repLegalEstdCiv.getSelection().toString();
-    String nacionalidadRep = repLegalNac.getSelection().toString();
-    String gradoEstdRep = repLegalInstrucc.getSelection().toString();
+    String estdCivRep;
+    String nacionalidadRep;
+    String gradoEstdRep;
+    try {
+    estdCivRep = repLegalEstdCiv.getSelection().toString();
+    nacionalidadRep = repLegalNac.getSelection().toString();
+    gradoEstdRep = repLegalInstrucc.getSelection().toString();}
+    catch (Exception e) {System.out.println("Unable to fetch data");
+    estdCivRep = null;
+    nacionalidadRep = null;
+    gradoEstdRep = null;}
     byte[] imgArrRep = fileBytesRep;
     
     String parentescoRep = fieldRepresentante.getText().trim();
@@ -4949,9 +4971,9 @@ public void createConfPanel(){
         padre.setDireccionTrabj(direcTrabjPadre);
         padre.setCorreo(correoPadre);
         padre.setTlf1(tlfPadre); // Assuming tlfPadre maps to tlf1
-        padre.setEstadoCivil(estdCivPad);
-        padre.setNacionalidad(nacionalidadPad);
-        padre.setGradoEstudios(gradoEstdPad);
+        padre.setEstadoCivil(estdCivPadre);
+        padre.setNacionalidad(nacionalidadPadre);
+        padre.setGradoEstudios(gradoEstdPadre);
         madre.setImg(fileBytesPadre);
 
         // --- Datos del Representante Legal (representante) ---
@@ -4978,6 +5000,7 @@ public void createConfPanel(){
         representanteLegal.setNacionalidad(nacionalidadRep);
         representanteLegal.setGradoEstudios(gradoEstdRep);
         representanteLegal.setEstadoCivil(estdCivRep);
+        
         madre.setImg(fileBytesRep);
         
         //Evaluación representantes
@@ -5000,9 +5023,9 @@ public void createConfPanel(){
             direcTrabjRep = direcTrabjPadre;
             correoRep = correoPadre;
             tlfRep = tlfPadre;
-            estdCivRep = estdCivPad;
-            nacionalidadRep = nacionalidadPad;
-            gradoEstdRep = gradoEstdPad;
+            estdCivRep = estdCivPadre;
+            nacionalidadRep = nacionalidadPadre;
+            gradoEstdRep = gradoEstdPadre;
             
             fileBytesRep = fileBytesPadre;
     
@@ -5077,7 +5100,7 @@ public void createConfPanel(){
         try {
             padre.setFechaNac(LocalDate.of(Integer.parseInt(añoNacPadre),
                     Integer.parseInt(mesNacPadre),Integer.parseInt(diaNacPadre)));
-        } catch (DateTimeParseException e) {
+        } catch (Exception e) {
             StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en el campo Fecha de Nacimiento (padre)");;
             JOptionPane.showMessageDialog(this, message.toString(), "Error", JOptionPane.WARNING_MESSAGE);
             System.err.println("Error parsing fecNacRep: " + e.getMessage());
@@ -5104,7 +5127,7 @@ public void createConfPanel(){
         try {
             representanteLegal.setFechaNac(LocalDate.of(Integer.parseInt(añoNacRep),
                     Integer.parseInt(mesNacRep),Integer.parseInt(diaNacRep)));
-        } catch (DateTimeParseException e) {
+        } catch (Exception e) {
             StringBuilder message = new StringBuilder("Verifique que ingresó valores correctos en el campo Fecha de Nacimiento (Representante)");;
             JOptionPane.showMessageDialog(this, message.toString(), "Error", JOptionPane.WARNING_MESSAGE);
             System.err.println("Error parsing fecNacRep: " + e.getMessage());
@@ -5158,7 +5181,7 @@ public void createConfPanel(){
                 if (ciObj != null && !ciObj.toString().trim().isEmpty()) {
                     try {
                         ci = Integer.parseInt(ciObj.toString().trim());
-                    } catch (NumberFormatException e) {
+                    } catch (Exception e) {
                         System.err.println("Error parsing CI for authorized person at row " + i + ": " + e.getMessage());
                         ci = 0; // Default or error handling
                     }
@@ -5210,15 +5233,18 @@ public void createConfPanel(){
             for (familia fam : listaFamiliares){
                 connectDB.setFamilia(fam, estudiante);
             }
+                panel.removeAll();
+                panel.add(busquedaEstudiantes);
+                panel.repaint();
+                panel.validate();
             
         } else {
             
+            JOptionPane.showMessageDialog(this,
+                                    "Error insertando al archivo", "Error",
+                                    JOptionPane.ERROR_MESSAGE);              
+            
         }
-        
-        panel.removeAll();
-        panel.add(busquedaEstudiantes);
-        panel.repaint();
-        panel.validate();
 
 //    //Imprimimos en la consola
 //
@@ -5781,7 +5807,7 @@ public void createConfPanel(){
                             JOptionPane.showMessageDialog(this,
                                     "Error reading file: " + e.getMessage(),
                                     "File Read Error",
-                                    JOptionPane.ERROR_MESSAGE);
+                                    JOptionPane.ERROR_MESSAGE);                            
                             e.printStackTrace(); // Print stack trace for debugging
                         }
                     }
@@ -5805,7 +5831,7 @@ public void createConfPanel(){
                         // Read all bytes from the selected file into a byte array
                         fileBytesMad = Files.readAllBytes(filePath);
                         img_infMad.setSize(196, 196);
-                        ImageIcon iconInit = new ImageIcon(fileBytes);
+                        ImageIcon iconInit = new ImageIcon(fileBytesMad);
                         ImageIcon iconFin;
                         Image img = iconInit.getImage();
                         Image imgScaled = img.getScaledInstance(196, 196, Image.SCALE_SMOOTH);

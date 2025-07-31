@@ -1661,7 +1661,7 @@ public class connectDB {
     }
     
         public static boolean checkUsuario(acceso accesoPresente) {
-        sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
+        sql = "SELECT * WHERE hash =" + accesoPresente.getPassDB();
 
         try {
             conexion = DriverManager.getConnection(url, user, pass);

@@ -8,11 +8,13 @@ import subsystems.utils;
 public class inicio extends javax.swing.JFrame {
 
     acceso accesoPresente;
+    menuPrincipal menuMain;
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(inicio.class.getName());
 
     public inicio(acceso accesoSuper, menuPrincipal main) {
         accesoPresente = accesoSuper;
+        menuMain = main;
         initComponents();
     }
 
@@ -94,7 +96,7 @@ public class inicio extends javax.swing.JFrame {
             }
         });
 
-        btn_iniciar.setText("Iniciar secion");
+        btn_iniciar.setText("Iniciar sesion");
         btn_iniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_iniciarActionPerformed(evt);
@@ -201,9 +203,15 @@ public class inicio extends javax.swing.JFrame {
         // Setea la información en acceso
         accesoPresente.setNombre_usuario(usuario);
         accesoPresente.setContrasenaHash(hash);
-        
-        if (connectDB.checkUsuario(accesoPresente)){
-            connectDB.fetchUsuario(accesoPresente);
+        acceso accesoTemp;
+        try {
+                 connectDB.fetchUsuario(accesoTemp);
+                 if (accesoTemp.getContrasenaHash() == accesoPresente.getContrasenaHash()){
+                    
+                    }
+                        } catch (Exception e) {
+                        JOptionPane.showMessageDialog(this, "Usuario inexistente", "Error", JOptionPane.WARNING_MESSAGE);
+}
             
         } else {
             JOptionPane.showMessageDialog(this, "Usuario inexistente", "Error", JOptionPane.WARNING_MESSAGE);

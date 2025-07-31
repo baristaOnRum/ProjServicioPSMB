@@ -113,6 +113,8 @@ public class confDBF extends javax.swing.JFrame {
 
         jLabel2.setText("URL:");
 
+        jTextField1.setText("localhost:3306/mydb");
+
         jLabel4.setText("Contraseña:");
         jLabel4.setToolTipText("");
 
@@ -180,7 +182,7 @@ public class confDBF extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jTextField1.getText() != null){
-            utils.guardarVariable("url_db", "jdbc:mysql://" + jTextField1.getText());
+            utils.guardarVariable("url.db", "jdbc:mysql://" + jTextField1.getText());
             accesoChild.setConnURL("jdbc:mysql://" + jTextField1.getText());
         } else {JOptionPane.showMessageDialog(this, "Por favor ingrese una URL", "Error", JOptionPane.WARNING_MESSAGE); return;}
         
@@ -202,21 +204,18 @@ public class confDBF extends javax.swing.JFrame {
             }
         //Validamos la conexión
         
+        connectDB.connparamsinit(accesoChild);
+        
         if (!accesoChild.getPassDB().isEmpty() && !accesoChild.getUserDB().isEmpty() && !accesoChild.getConnURL().isEmpty()){
             if (checkConn(accesoChild)){
-                if (connectDB.getAllAccesos().isEmpty()){
-                    nuevoUser nuevo = new nuevoUser();
-                }
-                
-                utils.guardarVariable("user_db", accesoChild.getUserDB());
-                this.setEnabled(false);
-                connectDB.connparamsinit(accesoChild);
-                inicio ini = new inicio(accesoChild, menuMain);
-                ini.setVisible(true);
-                ini.repaint();
-                ini.validate();
-                this.dispose();
-                
+                    utils.guardarVariable("user_db", accesoChild.getUserDB());
+                    this.setEnabled(false);
+                    connectDB.connparamsinit(accesoChild);
+                    menuMain = new menuPrincipal(accesoChild);
+                    menuMain.setVisible(true);
+                    menuMain.repaint();
+                    menuMain.validate();
+                    this.dispose();
             } else{
                 JOptionPane.showMessageDialog(new javax.swing.JFrame(), "Por favor ingrese datos de conexión válidos", "Error", JOptionPane.WARNING_MESSAGE);
                 return;
