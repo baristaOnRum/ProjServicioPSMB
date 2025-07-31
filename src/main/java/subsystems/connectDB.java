@@ -1661,7 +1661,7 @@ public class connectDB {
     }
 
     public static List<acceso> getAllAccesos() {
-        String sql = "SELECT id, usuario, hash, permiso, twoFA FROM usuario";
+        String sql = "SELECT * FROM usuario";
         List<acceso> accesos = new ArrayList<>();
 
         try (Connection conn = DriverManager.getConnection(url, user, pass);
