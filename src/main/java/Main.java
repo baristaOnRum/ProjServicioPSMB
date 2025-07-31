@@ -12,6 +12,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
+import subsystems.acceso;
 
 import static java.sql.DriverManager.*;
 
@@ -28,7 +29,11 @@ public class Main {
             conf.revalidate();
         }
         else {
-            
+            //Inicializar el inicio de sesion de el usuario en la DB
+            confDBF ini = new confDBF(accesoPresente, menu);
+            ini.setVisible(true);
+            ini.repaint();
+            ini.revalidate();
         }
     }
 
