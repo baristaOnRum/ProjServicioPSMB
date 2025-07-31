@@ -4,11 +4,13 @@ import subsystems.acceso;
 
 
 public class inicio extends javax.swing.JFrame {
-    
+
+    acceso accesoPresente;
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(inicio.class.getName());
 
-    public inicio(acceso accesoChild) {
-
+    public inicio(acceso accesoSuper) {
+        accesoPresente = accesoSuper;
         initComponents();
     }
 
@@ -179,8 +181,8 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_pass_contrassActionPerformed
 
     private void btn_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarActionPerformed
-        accesoChild.setNombre_usuario(txt_usr.getText());
-        connectDB.fetchUsuario(accesoChild);
+        accesoPresente.setNombre_usuario(txt_usr.getText());
+        connectDB.fetchUsuario(accesoPresente);
     }//GEN-LAST:event_btn_iniciarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
