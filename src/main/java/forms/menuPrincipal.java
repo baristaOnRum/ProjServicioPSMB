@@ -61,6 +61,7 @@ ButtonGroup madreLegalNac = new ButtonGroup();
 ButtonGroup madreLegalInstrucc = new ButtonGroup();
 ButtonGroup padreLegalEstdCiv = new ButtonGroup();
 ButtonGroup padreLegalInstrucc = new ButtonGroup();
+ButtonGroup padreLegalNac = new ButtonGroup();
 
 byte[] fileBytes = null;
 byte[] fileBytesMad = null;
@@ -248,7 +249,7 @@ public menuPrincipal(acceso accesoPresente) {
             padreLegalEstdCiv.add(check_c_padre);
             padreLegalEstdCiv.add(check_d_padre);
             padreLegalEstdCiv.add(check_v_padre);
-            ButtonGroup padreLegalNac = new ButtonGroup();
+            
             padreLegalNac.add(check_ven_padre);
             padreLegalNac.add(check_ext_padre);
 
@@ -1079,6 +1080,11 @@ public void createConfPanel(){
         tbl_busqEstd.setColumnSelectionAllowed(true);
         tbl_busqEstd.setMinimumSize(new java.awt.Dimension(550, 250));
         tbl_busqEstd.setPreferredSize(new java.awt.Dimension(550, 250));
+        tbl_busqEstd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_busqEstdMouseClicked(evt);
+            }
+        });
         scrl_busqEstd.setViewportView(tbl_busqEstd);
 
         img_busqEstd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -5198,6 +5204,9 @@ public void createConfPanel(){
     String direcTrabjMadre = text_direc_trabj_madre.getText().trim();
     String correoMadre = text_correo_madre.getText().trim();
     String tlfMadre = text_tlf_madre.getText().trim();
+    String estdCivMad = madreLegalEstdCiv.getSelection().toString();
+    String nacionalidadMad = madreLegalNac.getSelection().toString();
+    String gradoEstdMad = madreLegalInstrucc.getSelection().toString();
     byte[] imgArrMad = fileBytesMad;
     
     boolean repLegalMadre = repLegalMadreCheckbox.isSelected();
@@ -5216,6 +5225,9 @@ public void createConfPanel(){
     String direcTrabjPadre = text_direc_trabj_padre.getText().trim();
     String correoPadre = text_correo_padre.getText().trim();
     String tlfPadre = text_tlf_padre.getText().trim();
+    String estdCivPad = padreLegalEstdCiv.getSelection().toString();
+    String nacionalidadPad = padreLegalNac.getSelection().toString();
+    String gradoEstdPad = padreLegalInstrucc.getSelection().toString();
     byte[] imgArrPadre = fileBytesPadre;
     
     boolean repLegalPadre = repLegalPadreCheckbox.isSelected();
@@ -5234,6 +5246,9 @@ public void createConfPanel(){
     String direcTrabjRep = text_direc_trabj_rep.getText().trim();
     String correoRep = text_correo_rep.getText().trim();
     String tlfRep = text_tlf_rep.getText().trim();
+    String estdCivRep = repLegalEstdCiv.getSelection().toString();
+    String nacionalidadRep = repLegalNac.getSelection().toString();
+    String gradoEstdRep = repLegalInstrucc.getSelection().toString();
     byte[] imgArrRep = fileBytesRep;
     
     String parentescoRep = fieldRepresentante.getText().trim();
@@ -5247,6 +5262,9 @@ public void createConfPanel(){
     // Ambiente Socio Familiar
     String cuidaNiñoHogar = txt_cuidaNiñoHogar.getText().trim();
     String otroConsult = txt_otroConsult.getText().trim();
+    
+    //Misc
+    
 
     //Familiares
     java.util.List<familia> listaFamiliares = new java.util.ArrayList<>();
@@ -5468,6 +5486,8 @@ public void createConfPanel(){
         diagnostico.setMedicamentoFiebre(fiebreAlta); // Assuming this is the medication for high fever
         diagnostico.setCualVacAplicada(otraVac);
         diagnostico.setConQuienDuerme(qnDuermeNino);
+        diagnostico.setCondicionExtra(rdo_siCondExtra.isSelected());
+        diagnostico.setCualExtra(condicionCual);
 
         try {
             diagnostico.setHoraDormir(LocalTime.of(cBoxHoraAc.getSelectedIndex(),cBoxMinAc.getSelectedIndex()));
@@ -5508,6 +5528,9 @@ public void createConfPanel(){
         madre.setDireccionTrabj(direcTrabjMadre);
         madre.setCorreo(correoMadre);
         madre.setTlf1(tlfMadre); // Assuming tlfMadre maps to tlf1
+        madre.setEstadoCivil(estdCivMad);
+        madre.setNacionalidad(nacionalidadMad);
+        madre.setGradoEstudios(gradoEstdMad);
         madre.setImg(fileBytesMad);
 
         // --- Datos del Padre (representante) ---
@@ -5531,6 +5554,9 @@ public void createConfPanel(){
         padre.setDireccionTrabj(direcTrabjPadre);
         padre.setCorreo(correoPadre);
         padre.setTlf1(tlfPadre); // Assuming tlfPadre maps to tlf1
+        padre.setEstadoCivil(estdCivPad);
+        padre.setNacionalidad(nacionalidadPad);
+        padre.setGradoEstudios(gradoEstdPad);
         madre.setImg(fileBytesPadre);
 
         // --- Datos del Representante Legal (representante) ---
@@ -5554,6 +5580,9 @@ public void createConfPanel(){
         representanteLegal.setDireccionTrabj(direcTrabjRep);
         representanteLegal.setCorreo(correoRep);
         representanteLegal.setTlf1(tlfRep); // Assuming tlfRep maps to tlf1
+        representanteLegal.setNacionalidad(nacionalidadRep);
+        representanteLegal.setGradoEstudios(gradoEstdRep);
+        representanteLegal.setEstadoCivil(estdCivRep);
         madre.setImg(fileBytesRep);
         
         //Evaluación representantes
@@ -5576,6 +5605,10 @@ public void createConfPanel(){
             direcTrabjRep = direcTrabjPadre;
             correoRep = correoPadre;
             tlfRep = tlfPadre;
+            estdCivRep = estdCivPad;
+            nacionalidadRep = nacionalidadPad;
+            gradoEstdRep = gradoEstdPad;
+            
             fileBytesRep = fileBytesPadre;
     
             parentescoRep = fieldParentescoPadre.getText().trim();
@@ -5595,6 +5628,10 @@ public void createConfPanel(){
             direcTrabjRep = direcTrabjMadre;
             correoRep = correoMadre;
             tlfRep = tlfMadre;
+            estdCivRep = estdCivMad;
+            nacionalidadRep = nacionalidadMad;
+            gradoEstdRep = gradoEstdMad;
+            
             fileBytesRep = fileBytesMad;
     
             parentescoRep = fieldParentescoMadre.getText().trim();
@@ -6666,6 +6703,19 @@ public void createConfPanel(){
     private void btn_eliminarBusqEstd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarBusqEstd1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_eliminarBusqEstd1ActionPerformed
+
+    private void tbl_busqEstdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_busqEstdMouseClicked
+        //CODIGO
+        try {
+        javax.swing.JLabel imgLabel = (javax.swing.JLabel) tbl_busqEstd.getValueAt(tbl_busqEstd.getSelectedRow(),0);
+        Icon ico = imgLabel.getIcon(); ImageIcon imgIco = new ImageIcon((Image) ico);
+        Image img = imgIco.getImage(); Image imgN = img.getScaledInstance(240, 240, Image.SCALE_SMOOTH);
+        ImageIcon imgIcoF = new ImageIcon(imgN); img_busqEstd.setIcon(imgIcoF);
+        } catch (Exception e){
+        System.out.println("No image found");}
+        
+        
+    }//GEN-LAST:event_tbl_busqEstdMouseClicked
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
