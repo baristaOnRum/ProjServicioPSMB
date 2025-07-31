@@ -101,39 +101,6 @@ public class connectDB {
 
     }
 
-    public static void removerRepresentante(int ci) {
-        sql = "DELETE FROM representante" +
-                " WHERE ciRepresentante = ?;";
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-            query.setInt(1, ci);
-
-            // --- Ejecución de la consulta ---
-            int columnasAfectadas = query.executeUpdate();
-
-            // --- Verificación del resultado ---
-            if (columnasAfectadas > 0) {
-                System.out.println("¡Fila insertada exitosamente!");
-            } else {
-                System.out.println("La inserción de la fila ha fallado.");
-            }
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
     public static List<representante> buscarRepresentante(String criterio, String busquedaQuery) {
         List<representante> representantes = new ArrayList<>();
         if (criterio == null) {
@@ -306,6 +273,39 @@ public class connectDB {
         }
     }
 
+    public static void removerRepresentante(int ci) {
+        sql = "DELETE FROM representante" +
+                " WHERE ciRepresentante = ?;";
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setInt(1, ci);
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     public static void updateRepresentante(representante representante) {
         sql = " UPDATE representante SET apellidos = ?," +
                 "nombres = ?, estdCiv = ?, lugarNac = ?, fechaNac = ?," +
@@ -438,77 +438,6 @@ public class connectDB {
 
 
     }
-
-    public static void updateEstudiante(estudiante estudiante) {
-    // SQL UPDATE statement with placeholders for all columns to be updated
-    // The WHERE clause uses ciEstudiante to identify the specific record.
-    String sql = "UPDATE estudiante SET " +
-            "apellidos = ?, nombres = ?, fechaNac = ?, lugarNac = ?, nacionalidad = ?, " +
-            "edad = ?, procedencia = ?, tallaCam = ?, tallaPant = ?, tallaZap = ?, " +
-            "peso = ?, estatura = ?, periodioCurso = ?, periodoCursado = ?, img = ?, " +
-            "lateralidad = ?, grupoSanguineo = ?, asegurado = ?, cualSeguro = ?, " +
-            "medicoTratante = ?, tlfMedicoTratante = ? " +
-            "WHERE ciEstudiante = ?";
-
-    // Using try-with-resources to ensure the PreparedStatement is closed automatically
-    try (Connection conn = DriverManager.getConnection(url,user,pass);
-         PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        // Set the values for each placeholder in the UPDATE clause
-        int paramIndex = 1;
-        pstmt.setString(paramIndex++, estudiante.getApellidos()); // apellidos
-        pstmt.setString(paramIndex++, estudiante.getNombres()); // nombres
-
-        if (estudiante.getFechaNac() != null) {
-            pstmt.setDate(paramIndex++, Date.valueOf(estudiante.getFechaNac())); // fechaNac
-        } else {
-            pstmt.setNull(paramIndex++, java.sql.Types.DATE);
-        }
-
-        pstmt.setString(paramIndex++, estudiante.getLugarNac()); // lugarNac
-        pstmt.setString(paramIndex++, estudiante.getNacionalidad()); // nacionalidad
-        pstmt.setInt(paramIndex++, estudiante.getEdad()); // edad
-        pstmt.setString(paramIndex++, estudiante.getProcedencia()); // procedencia
-        pstmt.setInt(paramIndex++, estudiante.getTallaCamisa()); // tallaCam
-        pstmt.setInt(paramIndex++, estudiante.getTallaPantalon()); // tallaPant
-        pstmt.setInt(paramIndex++, estudiante.getTallaZapato()); // tallaZap
-        pstmt.setInt(paramIndex++, estudiante.getPeso()); // peso
-        pstmt.setInt(paramIndex++, estudiante.getEstatura()); // estatura
-        pstmt.setInt(paramIndex++, estudiante.getPeriodoCurso()); // periodioCurso
-        pstmt.setInt(paramIndex++, estudiante.getPeriodoCursado()); // periodoCursado
-
-        if (estudiante.getImg() != null) {
-            pstmt.setBytes(paramIndex++, estudiante.getImg()); // img
-        } else {
-            pstmt.setNull(paramIndex++, java.sql.Types.BLOB);
-        }
-
-        pstmt.setBoolean(paramIndex++, estudiante.isLateralidad()); // lateralidad
-        pstmt.setString(paramIndex++, estudiante.getGrupoSanguineo()); // grupoSanguineo
-        pstmt.setBoolean(paramIndex++, estudiante.isAsegurado()); // asegurado
-        pstmt.setString(paramIndex++, estudiante.getCualSeguro()); // cualSeguro
-        pstmt.setString(paramIndex++, estudiante.getMedicoTratante()); // medicoTratante
-        pstmt.setString(paramIndex++, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
-
-        // Set the WHERE clause parameter
-        pstmt.setString(paramIndex++, estudiante.getCe()); // ciEstudiante for WHERE clause
-
-        // Execute the update query
-        int filasAfectadas = pstmt.executeUpdate();
-
-        // Check the result
-        if (filasAfectadas > 0) {
-            System.out.println("¡Registro de estudiante actualizado exitosamente para CI: " + estudiante.getCe() + "!");
-        } else {
-            System.out.println("La actualización del registro de estudiante ha fallado o el CI no existe: " + estudiante.getCe() + ".");
-        }
-
-    } catch (SQLException e) {
-        System.err.println("Error de base de datos al actualizar estudiante: " + e.getMessage());
-    } finally {
-        // Connection and PreparedStatement are automatically closed by try-with-resources
-        System.out.println("Conexión a la base de datos cerrada.");
-    }
-}
 
     public static void removerEstudiante(String ce) {
 
@@ -720,132 +649,6 @@ public class connectDB {
         } else {
             return null;
         }
-    }
-
-    public static void sendNomina(trabajador trabajador) {
-
-        sql = "INSERT INTO `mydb`.`trabajadores` (" +
-                "`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`, " +
-                "`cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
-                "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, " +
-                "`tiene1x10`, `cantPersonas1x10`, `voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`" +
-                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            query.setInt(1, trabajador.getCi()); // ci_maestra
-            query.setInt(2, trabajador.getRif()); // rif
-            query.setString(3, trabajador.getTitulo()); // titulo
-            query.setString(4, trabajador.getNombres()); // nombres
-            query.setString(5, trabajador.getApellidos()); // apellidos
-            query.setString(6, trabajador.getCargo()); // cargo
-            query.setDate(7, Date.valueOf(trabajador.getFechaNac())); // fecha_nac (formato YYYY-MM-DD es estándar)
-            query.setDate(8, Date.valueOf(trabajador.getFechaIngreso())); // fecha_ingreso
-            query.setString(9, trabajador.getDireccionCobro()); // direccion_cobro
-            query.setBoolean(10, trabajador.isEstatus()); // estatus
-            query.setString(11, trabajador.getGrado()); // grado
-            query.setBoolean(12, trabajador.isSexo()); // sexo
-            query.setString(13, trabajador.getTlf1()); // tlf1
-            query.setString(14, trabajador.getTlf2()); // tlf2
-            query.setString(15, trabajador.getMunElec()); // mun_elec
-            query.setString(16, trabajador.getParrqElec()); // parrq_elec
-            query.setString(17, trabajador.getCenVot()); // cent_vot
-            query.setString(18, trabajador.getMunRes()); // mun_res
-            query.setString(19, trabajador.getParrqRes()); // parrq_res
-            query.setString(20, trabajador.getComRes()); // com_res
-            query.setString(21, trabajador.getCalleRes()); // calle_res
-            query.setString(22, trabajador.getNombreJefeClap()); // nombre_jefe_clap
-            query.setInt(23, trabajador.getCiJefeClap()); // ci_jefe_clap
-            query.setBoolean(24, trabajador.isTiene1x10()); // tiene_1x10
-            query.setInt(25, trabajador.getCantPers1x10()); // cant_personas_1x10
-            query.setBoolean(26, trabajador.isHaVotado()); // voto
-            query.setString(27, trabajador.getObservaciones()); // observaciones
-            if (trabajador.getCiCopia() != null) {
-                query.setBytes(32, trabajador.getCiCopia());
-            } else {
-                System.err.println("Imagen no existente");
-                query.setNull(32, java.sql.Types.BLOB); // Set as NULL if file not found
-            }
-            if (trabajador.getRifCopia() != null) {
-                query.setBytes(33, trabajador.getRifCopia());
-            } else {
-                System.err.println("Imagen no existente");
-                query.setNull(33, java.sql.Types.BLOB); // Set as NULL if file not found
-            }
-            if (trabajador.getTituloCopia() != null) {
-                query.setBytes(34, trabajador.getTituloCopia());
-            } else {
-                System.err.println("Imagen no existente");
-                query.setNull(34, java.sql.Types.BLOB); // Set as NULL if file not found
-            }
-            query.setBoolean(35, trabajador.isTurno()); // turno
-            if (trabajador.getImg() != null) {
-                query.setBytes(36, trabajador.getImg());
-            } else {
-                System.err.println("Imagen no existente");
-                query.setNull(36, java.sql.Types.BLOB); // Set as NULL if file not found
-            }
-
-            // --- Ejecución de la consulta ---
-            int columnasAfectadas = query.executeUpdate();
-
-            // --- Verificación del resultado ---
-            if (columnasAfectadas > 0) {
-                System.out.println("¡Fila insertada exitosamente!");
-            } else {
-                System.out.println("La inserción de la fila ha fallado.");
-            }
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static void removerNomina(int ci) {
-
-        sql = "DELETE FROM trabajador" +
-                " WHERE ci_trabajadores = ?;";
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-            query.setInt(1, ci);
-
-            // --- Ejecución de la consulta ---
-            int columnasAfectadas = query.executeUpdate();
-
-            // --- Verificación del resultado ---
-            if (columnasAfectadas > 0) {
-                System.out.println("¡Fila insertada exitosamente!");
-            } else {
-                System.out.println("La inserción de la fila ha fallado.");
-            }
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
     }
 
     public static List<trabajador> buscarNomina(String criterio, String busquedaQuery) {
@@ -1096,6 +899,1180 @@ public class connectDB {
             }
         }
         return trabajador;
+    }
+
+    public static void sendAutorizado(autorizado autorizado) {
+
+        sql = "INSERT INTO autorizadoRetiro (ciAutorizado, apellidos, nombre, tlf1, tlf2) VALUES (?,?,?,?,?)";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connecion started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            query.setInt(1, autorizado.getCi()); // cirepresentante
+            query.setString(2, autorizado.getApellidos()); // apellidos
+            query.setString(3, autorizado.getNombres()); // nombres
+            query.setString(4, autorizado.getTlf1()); // tlf
+            query.setString(5, autorizado.getTlf2()); // tlf
+            query.setString(6, autorizado.getParentesco());
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static void removerAutorizado(autorizado autorizado) {
+
+        sql = "DELETE FROM autorizadoRetiro WHERE ciAutorizado = ?";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connecion started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            query.setInt(1, autorizado.getCi()); // cirepresentante
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static List<autorizado> buscarAutorizado(String criterio, String busquedaQuery) {
+        List<autorizado> autorizados = new ArrayList<>();
+        if (criterio == null) {
+            sql = "SELECT * FROM autorizadoretiro";
+            try {
+                conexion = DriverManager.getConnection(url, user, pass);
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+                ResultSet rs = query.executeQuery();
+
+                while (true) {
+                    try {
+                        rs.next();
+                        autorizado autor = new autorizado();
+                        autor.setCi(rs.getInt("ciAutorizado"));
+                        autor.setApellidos(rs.getString("apellidos"));
+                        autor.setNombres(rs.getString("nombres"));
+                        autor.setTlf1(rs.getString("tlf1"));
+                        autor.setTlf2(rs.getString("tlf2"));
+                        autor.setParentesco(rs.getString("parentesco"));
+                        autorizados.add(autor);
+                        System.out.println(autor.getCi());
+                    } catch (SQLException e1) {
+                        System.out.println("No more rows found");
+                        break;
+                    }
+                }
+                return autorizados;
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        } else {
+            sql = "SELECT ciAutorizado, apellidos, nombres, tlf1, tlf2 FROM autorizadoretiro WHERE " + criterio + " = ?";
+            try {
+                conexion = DriverManager.getConnection(url, user, pass);
+                System.out.println("Database connection started.");
+                PreparedStatement query = conexion.prepareStatement(sql);
+                query.setString(1, busquedaQuery);
+                ResultSet rs = query.executeQuery();
+
+                while (rs.next()) {
+                    autorizado aut = new autorizado();
+                    aut.setCi(rs.getInt("ciAutorizado"));
+                    aut.setApellidos(rs.getString("apellidos"));
+                    aut.setNombres(rs.getString("nombres"));
+                    aut.setTlf1(rs.getString("tlf1"));
+                    aut.setTlf2(rs.getString("tlf2"));
+                    aut.setParentesco(rs.getString("parentesco"));
+                    autorizados.add(aut);
+                }
+                return autorizados;
+            } catch (SQLException e) {
+                System.err.println("Cannot connect to the database!");
+                e.printStackTrace();
+            } finally {
+                if (conexion != null) {
+                    try {
+                        conexion.close();
+                        System.out.println("Database connection closed.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return autorizados;
+    }
+
+    public static autorizado fetchAutorizado(String autorizadoCi) {
+        autorizado autorizado = new autorizado();
+        sql = "SELECT ciAutorizado FROM autorizadoretiro WHERE ciAutorizado = ?";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connecion started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            query.setInt(1, autorizado.getCi());
+            
+            ResultSet rs = query.executeQuery();
+
+            rs.next();
+            autorizado.setNombres(rs.getString("nombres"));
+            autorizado.setApellidos(rs.getString("apellidos"));
+            autorizado.setCi(rs.getInt("ciAutorizado"));
+            autorizado.setTlf1(rs.getString("tlf1"));
+            autorizado.setTlf2(rs.getString("tlf2"));
+            return autorizado;
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        if (autorizado != null) {
+            return autorizado;
+        } else {
+            return null;
+        }
+
+    }
+
+    public static void sendDiagnostico(diagnostico diagnostico, estudiante estudiante) {
+
+        sql = "INSERT INTO `mydb`.`diagnostico` (`estudiante_ciEstudiante`," +
+                "`problemaParto`, `problemaMotor`, `problemaLenguaje`," +
+                "`problemaCognitivo`, `alergiaMedicamento`, `condicionExtra`," +
+                "`cualParto`, `cualMotor`, `cualLenguaje`, `cualCognitivo`," +
+                "`cualAMedicamento`, `cualExtra`, `alergia`, `cualAlergia`," +
+                "`enfermedadesPadecidas`, `edadHablar`, `edadCaminar`," +
+                "`enfermedadEmbarazo`, `cualEnfEmbarazo`, `embarazoPlanif`," +
+                "`medicamentoFiebre`, `vacBCG`, `vacTRIPLE`, `vacPOLIO`, `vacTIFUS`," +
+                "`otroVacAplicadas`, `cualVacAplicada`, `comeAyudado`, `buenApetito`," +
+                "`horaDormir`, `horaLevantarse`, `conQuienDuerme`, `chupaDedo`," +
+                "`edadDejarPañales`, `seOrinaDia`, `seOrinaNoche`, `evacuaDia`, `pideAydaAseo`)" +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?," +
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            // --- Asignación de parámetros ---
+            query.setString(1, estudiante.getCe()); // estudiante_ciEstudiante
+            query.setBoolean(2, diagnostico.isProblemaParto()); // problemaParto
+            query.setBoolean(3, diagnostico.isProblemaMotor()); // problemaMotor
+            query.setBoolean(4, diagnostico.isProblemaLenguaje()); // problemaLenguaje
+            query.setBoolean(5, diagnostico.isProblemaCognitivo()); // problemaC
+            query.setBoolean(6, diagnostico.isAlergiaMedicamento()); // alergiaMedicamento
+            query.setBoolean(7, diagnostico.isCondicionExtra()); // condicionExtra
+            query.setString(8, diagnostico.getCualParto()); // cualParto
+            query.setString(9, diagnostico.getCualMotor()); // cualMotor
+            query.setString(10, diagnostico.getCualLenguaje()); // cualLenguaje
+            query.setString(11, diagnostico.getCualCognitivo()); // cualCognitivo
+            query.setString(12, diagnostico.getCualAMedicamento()); // cualAMedicamento
+            query.setString(13, diagnostico.getCualExtra()); // cualExtra
+            query.setBoolean(14, diagnostico.isAlergia()); // alergia
+            query.setString(15, diagnostico.getCualAlergia()); // cualAlergia
+            query.setString(16, diagnostico.getEnfermedadesPadecidas()); // enfermedadesPadecidas
+            query.setInt(17, diagnostico.getEdadHablar()); // edadHablar
+            query.setInt(18, diagnostico.getEdadCaminar()); // edadCaminar
+            query.setBoolean(19, diagnostico.isEnfermedadEmbarazo()); // enfermedadEmbarazo
+            query.setString(20, diagnostico.getCualEnfEmbarazo()); // cualEnfEmbarazo
+            query.setBoolean(21, diagnostico.isEmbarazoPlanif()); // embarazoPlanif
+            query.setString(22, diagnostico.getMedicamentoFiebre()); // medicamentoFiebre
+            query.setBoolean(23, diagnostico.isVacBCG()); // vacBCG
+            query.setBoolean(24, diagnostico.isVacTRIPLE()); // vacTRIPLE
+            query.setBoolean(25, diagnostico.isVacPOLIO()); // vacPOLIO
+            query.setBoolean(26, diagnostico.isVacTIFUS()); // vacTIF
+            query.setBoolean(27, diagnostico.isOtroVacAplicadas()); // otroVacAplicadas
+            query.setString(28, diagnostico.getCualVacAplicada()); // cualVacAplicada
+            query.setBoolean(29, diagnostico.isComeAyudado()); // comeAyudado
+            query.setBoolean(30, diagnostico.isBuenApetito()); // buenApetito
+            if (diagnostico.getHoraDormir() == null) {query.setTime(31, null); }// horaDormir
+                else {query.setTime(31, Time.valueOf(diagnostico.getHoraDormir())); }// horaDormir
+            if (diagnostico.getHoraLevantarse() == null){ query.setTime(32, null);}
+            else { query.setTime(32, Time.valueOf(diagnostico.getHoraLevantarse()));}// horaLevantarse
+            query.setString(33, diagnostico.getConQuienDuerme()); // conQuienDuerme
+            query.setBoolean(34, diagnostico.isChupaDedo()); // chupaDedo
+            query.setInt(35, diagnostico.getEdadDejarPanales()); // edadDejarPañales
+            query.setBoolean(36, diagnostico.isSeOrinaDia()); // seOrinaDia
+            query.setBoolean(37, diagnostico.isSeOrinaNoche()); // seOrinaNoche
+            query.setBoolean(38, diagnostico.isEvacuaDia()); // evacuaDia
+            query.setBoolean(39, diagnostico.isPideAyudaAseo()); // pideAydaAseo
+
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static diagnostico getDiagnostico(String estudianteCi) {
+        String sql = "SELECT * FROM diagnostico WHERE estudiante_ciEstudiante = ?";
+        diagnostico diag = new diagnostico();
+        Connection conexion = null;
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setString(1, estudianteCi);
+
+            ResultSet rs = query.executeQuery();
+
+            if (rs.next()) {
+                // Set all boolean fields
+                diag.setProblemaParto(rs.getBoolean("problemaParto"));
+                diag.setProblemaMotor(rs.getBoolean("problemaMotor"));
+                diag.setProblemaLenguaje(rs.getBoolean("problemaLenguaje"));
+                diag.setProblemaCognitivo(rs.getBoolean("problemaCognitivo"));
+                diag.setAlergiaMedicamento(rs.getBoolean("alergiaMedicamento"));
+                diag.setCondicionExtra(rs.getBoolean("condicionExtra"));
+                diag.setAlergia(rs.getBoolean("alergia"));
+                diag.setEnfermedadEmbarazo(rs.getBoolean("enfermedadEmbarazo"));
+                diag.setEmbarazoPlanif(rs.getBoolean("embarazoPlanif"));
+                diag.setVacBCG(rs.getBoolean("vacBCG"));
+                diag.setVacTRIPLE(rs.getBoolean("vacTRIPLE"));
+                diag.setVacPOLIO(rs.getBoolean("vacPOLIO"));
+                diag.setVacTIFUS(rs.getBoolean("vacTIFUS"));
+                diag.setOtroVacAplicadas(rs.getBoolean("otroVacAplicadas"));
+                diag.setComeAyudado(rs.getBoolean("comeAyudado"));
+                diag.setBuenApetito(rs.getBoolean("buenApetito"));
+                diag.setChupaDedo(rs.getBoolean("chupaDedo"));
+                diag.setSeOrinaDia(rs.getBoolean("seOrinaDia"));
+                diag.setSeOrinaNoche(rs.getBoolean("seOrinaNoche"));
+                diag.setEvacuaDia(rs.getBoolean("evacuaDia"));
+                diag.setPideAyudaAseo(rs.getBoolean("pideAydaAseo"));
+
+                // Set all string fields
+                diag.setCualParto(rs.getString("cualParto"));
+                diag.setCualMotor(rs.getString("cualMotor"));
+                diag.setCualLenguaje(rs.getString("cualLenguaje"));
+                diag.setCualCoginitivo(rs.getString("cualCognitivo"));
+                diag.setCualAMedicamento(rs.getString("cualAMedicamento"));
+                diag.setCualExtra(rs.getString("cualExtra"));
+                diag.setCualAlergia(rs.getString("cualAlergia"));
+                diag.setEnfermedadesPadecidas(rs.getString("enfermedadesPadecidas"));
+                diag.setCualEnfEmbarazo(rs.getString("cualEnfEmbarazo"));
+                diag.setMedicamentoFiebre(rs.getString("medicamentoFiebre"));
+                diag.setCualVacAplicada(rs.getString("cualVacAplicada"));
+                diag.setConQuienDuerme(rs.getString("conQuienDuerme"));
+
+                // Set time fields (converting SQL Time to LocalTime)
+                Time horaDormir = rs.getTime("horaDormir");
+                if (horaDormir != null) {
+                    diag.setHoraDormir(horaDormir.toLocalTime());
+                }
+
+                Time horaLevantarse = rs.getTime("horaLevantarse");
+                if (horaLevantarse != null) {
+                    diag.setHoraLevantarse(horaLevantarse.toLocalTime());
+                }
+
+                // Set integer fields
+                diag.setEdadHablar(rs.getInt("edadHablar"));
+                diag.setEdadCaminar(rs.getInt("edadCaminar"));
+                diag.setEdadDejarPanales(rs.getInt("edadDejarPañales"));
+
+                System.out.println("Diagnostico data retrieved successfully for CI: " + estudianteCi);
+            } else {
+                System.out.println("No diagnostico found for CI: " + estudianteCi);
+                return null;
+            }
+        } catch (SQLException e) {
+            System.err.println("Error retrieving diagnostico: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return diag;
+    }
+
+    public static void removerDiagnostico(String ce) {
+
+        sql = "DELETE FROM diagnostico" +
+                " WHERE estudiante_ciEstudiante = ?;";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            query.setString(1, ce); // estudiante_ciEstudiante
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    public static void setRelRepresentado(representante representative, estudiante student, boolean rol, String relationship) {
+        String sql = "INSERT INTO representaa (representante_ciRepresentante, estudiante_ciEstudiante, rol, parentesco) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the parameters for the prepared statement
+            pstmt.setInt(1, representative.getCi()); // representante_ciRepresentante
+            pstmt.setString(2, student.getCe()); // estudiante_ciEstudiante
+            pstmt.setBoolean(3, rol); // rol (BIT(1) in MySQL maps to boolean in Java)
+            pstmt.setString(4, relationship); // parentesco
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Database error during representaa insertion: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public static void setRelAutorizado(autorizado authorized, estudiante student) {
+        String sql = "INSERT INTO puederetirar (autorizadoRetiro_ciAutorizado, estudiante_ciEstudiante, parentesco) VALUES (?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the parameters for the prepared statement
+            pstmt.setInt(1, authorized.getCi()); // autorizadoRetiro_ciAutorizado from autorizado object
+            pstmt.setString(2, student.getCe()); // estudiante_ciEstudiante from estudiante object (assuming 'ce' is the student ID)
+            pstmt.setString(3, authorized.getParentesco()); // parentesco
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Database error during puederetirar insertion: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static void setSocioFamiliar(socioFamiliar socioFamiliar){
+        String sql = "INSERT INTO socioFamiliar (" +
+                "estudiante_ciEstudiante, vivienda, tipoVivienda, cuidaNiñoHogar, estdCivilPadres, " +
+                "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng" +
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the parameters for the prepared statement using getters
+            pstmt.setString(1, socioFamiliar.getEstudiante_ciEstudiante());
+            pstmt.setString(2, socioFamiliar.getVivienda());
+            pstmt.setString(3, socioFamiliar.getTipoVivienda());
+            // Map cuidaNinoHogar from Java class to cuidaNiñoHogar in DB
+            pstmt.setString(4, socioFamiliar.getCuidaNinoHogar());
+            pstmt.setString(5, socioFamiliar.getEstdCivilPadres());
+            // Map consultaAtend from Java class to consultAtend in DB
+            pstmt.setString(6, socioFamiliar.getConsultaAtend());
+            pstmt.setBoolean(7, socioFamiliar.isVisitPsicopedagogo());
+            pstmt.setBoolean(8, socioFamiliar.isVisitPsicologo());
+            pstmt.setBoolean(9, socioFamiliar.isVisitNeurologo());
+            pstmt.setBoolean(10, socioFamiliar.isVisitTerapLeng());
+
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
+            }
+        } catch (SQLException e) {
+            System.err.println("Database error during socioFamiliar insertion: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    public static socioFamiliar fetchSocioFamiliar(String ciEstudiante) {
+        socioFamiliar sf = null;
+        String sql = "SELECT estudiante_ciEstudiante, vivienda, tipoVivienda, " +
+                "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres, " +
+                "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng " + // Added
+                "FROM socioFamiliar WHERE estudiante_ciEstudiante = ?";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass); // Use try-with-resources for connection
+            PreparedStatement pstmt = conexion.prepareStatement(sql);
+
+            pstmt.setString(1, ciEstudiante); // Set the CI parameter
+
+            try (ResultSet rs = pstmt.executeQuery()) { // Use try-with-resources for ResultSet
+                if (rs.next()) {
+                    sf = new socioFamiliar();
+                    sf.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
+                    sf.setVivienda(rs.getString("vivienda"));
+                    sf.setTipoVivienda(rs.getString("tipoVivienda"));
+                    sf.setCuidaNinoHogar(rs.getString("cuidaNiñoHogar"));
+                    sf.setRelacionAmbienteFamiliar(rs.getString("relacionAmbienteFamiliar"));
+                    sf.setEstdCivilPadres(rs.getString("estdCivilPadres"));
+                    sf.setConsultaAtend(rs.getString("consultAtend")); // Set consultAtend
+                    sf.setVisitPsicopedagogo(rs.getBoolean("visitPsicopedagogo")); // Set boolean
+                    sf.setVisitPsicologo(rs.getBoolean("visitPsicologo"));       // Set boolean
+                    sf.setVisitNeurologo(rs.getBoolean("visitNeurologo"));       // Set boolean
+                    sf.setVisitTerapLeng(rs.getBoolean("visitTerapLeng"));       // Set boolean
+                } else {
+                    System.out.println("No socioFamiliar data found for student CI: " + ciEstudiante);
+                }
+            } // ResultSet is closed automatically
+        } catch (SQLException e) {
+            System.err.println("Database error during socioFamiliar fetch: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return sf;
+    }
+    
+    public static void sendDocumentos(documentos documentos){
+                String sql = "INSERT INTO documentos (" +
+                     "estudiante_ciEstudiante, originales, fotocopias, partidaNac, certificadoVacunas, " +
+                     "cedulaMadre, cedulaPadre, cedulaRep, responsableInscripcion, personaInscribe, " +
+                     "fechaInscripcion, observaciones) " +
+                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        // Usamos try-with-resources para asegurar que la conexión y el PreparedStatement se cierren automáticamente.
+        try (Connection conexion = DriverManager.getConnection(url,user,pass);
+             PreparedStatement pstmt = conexion.prepareStatement(sql)) {
+
+            // Establece los parámetros de la consulta SQL usando los valores del objeto documentoss.
+            // Los índices de los parámetros corresponden a los '?' en la consulta SQL, empezando desde 1.
+            pstmt.setString(1, documentos.getCe());
+            pstmt.setBoolean(2, documentos.isOriginales());
+            pstmt.setBoolean(3, documentos.isFotocopias());
+            pstmt.setBoolean(4, documentos.isPartidaNac());
+            pstmt.setBoolean(5, documentos.isCertificadoVacuna());
+            pstmt.setBoolean(6, documentos.isCedulaMadre());
+            pstmt.setBoolean(7, documentos.isCedulaPadre());
+            pstmt.setBoolean(8, documentos.isCedulaRep());
+            pstmt.setString(9, documentos.getResponsableInscripcion());
+            pstmt.setString(10, documentos.getPersonaInscribe());
+
+            // Para LocalDate, usamos java.sql.Date.valueOf() para convertirlo a un tipo compatible con SQL DATE.
+            pstmt.setDate(11, java.sql.Date.valueOf(documentos.getFechaInscripcion()));
+            pstmt.setString(12, documentos.getObservaciones());
+
+            // Ejecuta la consulta de inserción.
+            // executeUpdate() devuelve el número de filas afectadas (1 si la inserción fue exitosa).
+            int rowsAffected = pstmt.executeUpdate();
+            
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into estudiante for CI: " + documentos.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for estudiante for CI: " + documentos.getCe());
+            }
+        } catch (SQLException e) {
+            // Manejo de excepciones SQL: Imprime el error y devuelve false.
+            System.err.println("Error al insertar el documentos: " + e.getMessage());
+            e.printStackTrace(); // Imprime la traza completa para depuración
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static documentos getDocumentos(String estudianteCi) {
+        String sql = "SELECT * FROM documentos WHERE estudiante_ciEstudiante = ?";
+        documentos doc = new documentos(); // Assuming default constructor exists
+        Connection conexion = null;
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            PreparedStatement pstmt = conexion.prepareStatement(sql);
+            pstmt.setString(1, estudianteCi);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                // Set all fields from the result set to the documentos object
+                doc.setCe(rs.getString("estudiante_ciEstudiante"));
+                doc.setOriginales(rs.getBoolean("originales"));
+                doc.setFotocopias(rs.getBoolean("fotocopias"));
+                doc.setPartidaNac(rs.getBoolean("partidaNac"));
+                doc.setCertificadoVacuna(rs.getBoolean("certificadoVacunas"));
+                doc.setCedulaMadre(rs.getBoolean("cedulaMadre"));
+                doc.setCedulaPadre(rs.getBoolean("cedulaPadre"));
+                doc.setCedulaRep(rs.getBoolean("cedulaRep"));
+                doc.setResponsableInscripcion(rs.getString("responsableInscripcion"));
+                doc.setPersonaInscribe(rs.getString("personaInscribe"));
+
+                // Convert SQL Date to LocalDate
+                Date fechaInscripcion = rs.getDate("fechaInscripcion");
+                if (fechaInscripcion != null) {
+                    doc.setFechaInscripcion(fechaInscripcion.toLocalDate());
+                }
+
+                doc.setObservaciones(rs.getString("observaciones"));
+
+                System.out.println("Documentos data retrieved successfully for CI: " + estudianteCi);
+            } else {
+                System.out.println("No documentos found for CI: " + estudianteCi);
+                return null;
+            }
+        } catch (SQLException e) {
+            System.err.println("Error retrieving documentos: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return doc;
+    }
+
+    public static void crearUsuario(acceso acceso) {
+
+        String sql = "INSERT INTO acceso (usuario, hash, permiso, twoFA) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the values for the prepared statement using getters from the Acceso object
+            pstmt.setInt(3, acceso.getTipo_acceso());       // Maps to 'permiso'
+            pstmt.setString(1, acceso.getNombre_usuario()); // Maps to 'usuario'
+            pstmt.setString(2, acceso.getContrasenaHash()); // Maps to 'hash'
+            pstmt.setString(4, acceso.getTwoFA());          // Maps to 'twoFA'
+
+            // Execute the insert statement
+            int rowsAffected = pstmt.executeUpdate();
+
+            // Return true if at least one row was successfully inserted
+            if (rowsAffected > 0){
+                System.out.println("Data inserted successfully into usuario for usuario: " + acceso.getNombre_usuario());
+            } else {
+                System.out.println("Data couldn't be inserted for usuario: " + acceso.getNombre_usuario());
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al insertar registro de acceso: " + e.getMessage());
+            e.printStackTrace(); // Print the stack trace for detailed debugging
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    public static void removerUsuario(String usuario) {
+        // SQL DELETE statement with a WHERE clause to target a specific user.
+        String sql = "DELETE FROM acceso WHERE usuario = ?";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set the username parameter for the WHERE clause
+            pstmt.setString(1, usuario);
+
+            // Execute the delete statement
+            int rowsAffected = pstmt.executeUpdate();
+
+            // Return true if at least one row was deleted
+            if (rowsAffected > 0){
+                System.out.println("Data deleted successfully for usuario: " + usuario);
+            } else {
+                System.out.println("Data couldn't be deleted for usuario: " + usuario);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al eliminar registro de acceso para usuario: " + usuario + " - " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static void fetchUsuario(acceso accesoPresente) {
+        sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+            try {
+                rs.next();
+                //accesoPresente.getNombre_usuario().equals(rs.getString("usuario"));
+            } catch (SQLException e1) {
+                System.out.println("USUARIO NO EXISTENTE");
+                e1.printStackTrace();
+            }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static List<acceso> getAllAccesos() {
+        String sql = "SELECT id, usuario, hash, permiso, twoFA FROM acceso";
+        List<acceso> accesos = new ArrayList<>();
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            // Iterate through the result set to fetch each row
+            try {
+            while (rs.next()) {
+                // Create a new Acceso object for each row
+                acceso acceso = new acceso();
+
+                // Set properties using setters
+                acceso.setTipo_acceso(rs.getInt("permiso"));
+                acceso.setNombre_usuario(rs.getString("usuario"));
+                acceso.setContrasenaHash(rs.getString("hash"));
+                acceso.setTwoFA(rs.getString("twoFA")); // Set the twoFA value using its setter
+
+                // Add the populated Acceso object to the list
+                accesos.add(acceso);
+            } } catch (SQLException e1){
+                System.out.println("Recuperados todos los usuarios de la base de datos");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al obtener todos los registros de acceso: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return accesos;
+    }
+
+
+    public static List<familia> fetchRelFamiliar(String cEstudiante) {
+
+        sql = "SELECT estudiante_ciEstudiante, nombre, apellido, edad, parentezco, ocupacion " +
+                "FROM `familiares extra` WHERE estudiante_ciEstudiante = \"" + cEstudiante + "\"";
+        List<familia> fams = null;
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+            fams = new ArrayList<>();
+
+            try {
+                while (rs.next()) {
+                    familia repF = new familia();
+                    repF.setCeRelacionado(rs.getString("estudiante_ciEstudiante"));
+                    repF.setNombres(rs.getString("nombre"));
+                    repF.setApellidos(rs.getString("apellido"));
+                    repF.setEdad(rs.getString("edad"));
+                    repF.setOcupacion(rs.getString("ocupacion"));
+                    repF.setParentesco(rs.getString("parentezco"));
+                    fams.add(repF);
+                }
+            } catch (SQLException e1) {
+                System.out.println("Recuperados todos los estudiantes");
+                return fams;
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return fams;
+    }
+
+    public static void setFamilia(familia familia, estudiante estudiante) {
+        // SQL INSERT statement for 'familiares extra' table
+        String sql = "INSERT INTO familiaresextra (" +
+                "nombre, apellido, edad, parentezco, ocupacion, estudiante_ciEstudiante) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
+
+        try {
+
+            conexion = DriverManager.getConnection(url, user, pass); // Use try-with-resources for connection
+            PreparedStatement pstmt = conexion.prepareStatement(sql);
+
+            // Set the parameters for the prepared statement using getters from the familia object
+            pstmt.setString(1, familia.getNombres());
+            pstmt.setString(2, familia.getApellidos());
+            pstmt.setString(3, familia.getEdad());
+            pstmt.setString(4, familia.getParentesco()); // Note 'parentezco' for the column name
+            pstmt.setString(5, familia.getOcupacion());
+            pstmt.setString(6, estudiante.getCe());
+
+            // Execute the update (insert)
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data inserted successfully into `familiares extra` for student CE: " + estudiante.getCe());
+            } else {
+                System.out.println("No rows affected. Data insertion failed for `familiares extra` for student CE: " + estudiante.getCe());
+            }
+        } catch (SQLException e) {
+            System.err.println("Database error during `familiares extra` insertion: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public static List<representaA> fetchRelRepresentante(String ciEst) {
+
+        sql = "SELECT * FROM retiraa WHERE estudiante_ciEstudiante =" + ciEst;
+        List<representaA> reps = null;
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+            reps = new ArrayList<>();
+
+            try {
+                while (rs.next()) {
+                    representaA repN = new representaA();
+                    repN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
+                    repN.setRepresentante_ciRepresentante(rs.getInt("representante_ciRepresentante"));
+                    repN.setRol(rs.getBoolean("rol"));
+                    repN.setParentesco(rs.getString("parentesco"));
+                    reps.add(repN);
+                }
+            } catch (SQLException e1) {
+                System.out.println("Recuperados todos los estudiantes");
+                return reps;
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return reps;
+    }
+
+    public static List<retiraA> fetchRelAutorizado(String ciEstudiante) {
+
+        sql = "SELECT * FROM puederetirar WHERE estudiante_ciEstudiante =" + ciEstudiante;
+        List<retiraA> rets = null;
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+            rets = new ArrayList<>();
+
+            try {
+                while (rs.next()) {
+                    retiraA retN = new retiraA();
+                    retN.setAutorizadoRetiro_ciAutorizado(rs.getInt("autorizadoRetiro_ciAutorizado"));
+                    retN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
+                    retN.setParentesco(rs.getString("parentesco"));
+                    rets.add(retN);
+                }
+            } catch (SQLException e1) {
+                System.out.println("Recuperados todos los estudiantes");
+                return rets;
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return rets;
+    }
+
+    public static void promoverAño() {
+    }
+
+    public static void aumentarNivelEstd() {
+    }
+
+
+    public static void updateEstudiante(estudiante estudiante) {
+        // SQL UPDATE statement with placeholders for all columns to be updated
+        // The WHERE clause uses ciEstudiante to identify the specific record.
+        String sql = "UPDATE estudiante SET " +
+                "apellidos = ?, nombres = ?, fechaNac = ?, lugarNac = ?, nacionalidad = ?, " +
+                "edad = ?, procedencia = ?, tallaCam = ?, tallaPant = ?, tallaZap = ?, " +
+                "peso = ?, estatura = ?, periodioCurso = ?, periodoCursado = ?, img = ?, " +
+                "lateralidad = ?, grupoSanguineo = ?, asegurado = ?, cualSeguro = ?, " +
+                "medicoTratante = ?, tlfMedicoTratante = ? " +
+                "WHERE ciEstudiante = ?";
+
+        // Using try-with-resources to ensure the PreparedStatement is closed automatically
+        try (Connection conn = DriverManager.getConnection(url,user,pass);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            // Set the values for each placeholder in the UPDATE clause
+            int paramIndex = 1;
+            pstmt.setString(paramIndex++, estudiante.getApellidos()); // apellidos
+            pstmt.setString(paramIndex++, estudiante.getNombres()); // nombres
+
+            if (estudiante.getFechaNac() != null) {
+                pstmt.setDate(paramIndex++, Date.valueOf(estudiante.getFechaNac())); // fechaNac
+            } else {
+                pstmt.setNull(paramIndex++, java.sql.Types.DATE);
+            }
+
+            pstmt.setString(paramIndex++, estudiante.getLugarNac()); // lugarNac
+            pstmt.setString(paramIndex++, estudiante.getNacionalidad()); // nacionalidad
+            pstmt.setInt(paramIndex++, estudiante.getEdad()); // edad
+            pstmt.setString(paramIndex++, estudiante.getProcedencia()); // procedencia
+            pstmt.setInt(paramIndex++, estudiante.getTallaCamisa()); // tallaCam
+            pstmt.setInt(paramIndex++, estudiante.getTallaPantalon()); // tallaPant
+            pstmt.setInt(paramIndex++, estudiante.getTallaZapato()); // tallaZap
+            pstmt.setInt(paramIndex++, estudiante.getPeso()); // peso
+            pstmt.setInt(paramIndex++, estudiante.getEstatura()); // estatura
+            pstmt.setInt(paramIndex++, estudiante.getPeriodoCurso()); // periodioCurso
+            pstmt.setInt(paramIndex++, estudiante.getPeriodoCursado()); // periodoCursado
+
+            if (estudiante.getImg() != null) {
+                pstmt.setBytes(paramIndex++, estudiante.getImg()); // img
+            } else {
+                pstmt.setNull(paramIndex++, java.sql.Types.BLOB);
+            }
+
+            pstmt.setBoolean(paramIndex++, estudiante.isLateralidad()); // lateralidad
+            pstmt.setString(paramIndex++, estudiante.getGrupoSanguineo()); // grupoSanguineo
+            pstmt.setBoolean(paramIndex++, estudiante.isAsegurado()); // asegurado
+            pstmt.setString(paramIndex++, estudiante.getCualSeguro()); // cualSeguro
+            pstmt.setString(paramIndex++, estudiante.getMedicoTratante()); // medicoTratante
+            pstmt.setString(paramIndex++, estudiante.getTlfMedicoTratante()); // tlfMedicoTratante
+
+            // Set the WHERE clause parameter
+            pstmt.setString(paramIndex++, estudiante.getCe()); // ciEstudiante for WHERE clause
+
+            // Execute the update query
+            int filasAfectadas = pstmt.executeUpdate();
+
+            // Check the result
+            if (filasAfectadas > 0) {
+                System.out.println("¡Registro de estudiante actualizado exitosamente para CI: " + estudiante.getCe() + "!");
+            } else {
+                System.out.println("La actualización del registro de estudiante ha fallado o el CI no existe: " + estudiante.getCe() + ".");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error de base de datos al actualizar estudiante: " + e.getMessage());
+        } finally {
+            // Connection and PreparedStatement are automatically closed by try-with-resources
+            System.out.println("Conexión a la base de datos cerrada.");
+        }
+    }
+
+    public static void sendNomina(trabajador trabajador) {
+
+        sql = "INSERT INTO `mydb`.`trabajadores` (" +
+                "`ci_trabajador`, `rif`, `titulo`, `nombres`, `apellidos`, " +
+                "`cargo`, `fechaNac`, `fechaIngreso`, `direccionCobro`, `estatus`, `grado`, `sexo`, `tlf1`, `tlf2`, " +
+                "`munElec`, `parrqElec`, `centVot`, `munRes`, `parrqRes`, `comRes`, `calleRes`, `nombreJefeCLAP`, `ciJefeCLAP`, " +
+                "`tiene1x10`, `cantPersonas1x10`, `voto`, `observaciones`, `ciCopia`, `rifCopia`, `tituloCopia`, `turno`, `img`" +
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            query.setInt(1, trabajador.getCi()); // ci_maestra
+            query.setInt(2, trabajador.getRif()); // rif
+            query.setString(3, trabajador.getTitulo()); // titulo
+            query.setString(4, trabajador.getNombres()); // nombres
+            query.setString(5, trabajador.getApellidos()); // apellidos
+            query.setString(6, trabajador.getCargo()); // cargo
+            query.setDate(7, Date.valueOf(trabajador.getFechaNac())); // fecha_nac (formato YYYY-MM-DD es estándar)
+            query.setDate(8, Date.valueOf(trabajador.getFechaIngreso())); // fecha_ingreso
+            query.setString(9, trabajador.getDireccionCobro()); // direccion_cobro
+            query.setBoolean(10, trabajador.isEstatus()); // estatus
+            query.setString(11, trabajador.getGrado()); // grado
+            query.setBoolean(12, trabajador.isSexo()); // sexo
+            query.setString(13, trabajador.getTlf1()); // tlf1
+            query.setString(14, trabajador.getTlf2()); // tlf2
+            query.setString(15, trabajador.getMunElec()); // mun_elec
+            query.setString(16, trabajador.getParrqElec()); // parrq_elec
+            query.setString(17, trabajador.getCenVot()); // cent_vot
+            query.setString(18, trabajador.getMunRes()); // mun_res
+            query.setString(19, trabajador.getParrqRes()); // parrq_res
+            query.setString(20, trabajador.getComRes()); // com_res
+            query.setString(21, trabajador.getCalleRes()); // calle_res
+            query.setString(22, trabajador.getNombreJefeClap()); // nombre_jefe_clap
+            query.setInt(23, trabajador.getCiJefeClap()); // ci_jefe_clap
+            query.setBoolean(24, trabajador.isTiene1x10()); // tiene_1x10
+            query.setInt(25, trabajador.getCantPers1x10()); // cant_personas_1x10
+            query.setBoolean(26, trabajador.isHaVotado()); // voto
+            query.setString(27, trabajador.getObservaciones()); // observaciones
+            if (trabajador.getCiCopia() != null) {
+                query.setBytes(32, trabajador.getCiCopia());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(32, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            if (trabajador.getRifCopia() != null) {
+                query.setBytes(33, trabajador.getRifCopia());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(33, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            if (trabajador.getTituloCopia() != null) {
+                query.setBytes(34, trabajador.getTituloCopia());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(34, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+            query.setBoolean(35, trabajador.isTurno()); // turno
+            if (trabajador.getImg() != null) {
+                query.setBytes(36, trabajador.getImg());
+            } else {
+                System.err.println("Imagen no existente");
+                query.setNull(36, java.sql.Types.BLOB); // Set as NULL if file not found
+            }
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static void removerNomina(int ci) {
+
+        sql = "DELETE FROM trabajador" +
+                " WHERE ci_trabajadores = ?;";
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+            query.setInt(1, ci);
+
+            // --- Ejecución de la consulta ---
+            int columnasAfectadas = query.executeUpdate();
+
+            // --- Verificación del resultado ---
+            if (columnasAfectadas > 0) {
+                System.out.println("¡Fila insertada exitosamente!");
+            } else {
+                System.out.println("La inserción de la fila ha fallado.");
+            }
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
     public static void sendNominaMaestra(maestro maestro) {
@@ -1406,272 +2383,6 @@ public class connectDB {
         return maestra;
     }
 
-    public static void sendAutorizado(autorizado autorizado) {
-
-        sql = "INSERT INTO autorizadoRetiro (ciAutorizado, apellidos, nombre, tlf1, tlf2) VALUES (?,?,?,?,?)";
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connecion started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            query.setInt(1, autorizado.getCi()); // cirepresentante
-            query.setString(2, autorizado.getApellidos()); // apellidos
-            query.setString(3, autorizado.getNombres()); // nombres
-            query.setString(4, autorizado.getTlf1()); // tlf
-            query.setString(5, autorizado.getTlf2()); // tlf
-            query.setString(6, autorizado.getParentesco());
-
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static void removerAutorizado(autorizado autorizado) {
-
-        sql = "DELETE FROM autorizadoRetiro WHERE ciAutorizado = ?";
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connecion started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            query.setInt(1, autorizado.getCi()); // cirepresentante
-
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static List<autorizado> buscarAutorizado(String criterio, String busquedaQuery) {
-        List<autorizado> autorizados = new ArrayList<>();
-        if (criterio == null) {
-            sql = "SELECT * FROM autorizadoretiro";
-            try {
-                conexion = DriverManager.getConnection(url, user, pass);
-                System.out.println("Database connection started.");
-                PreparedStatement query = conexion.prepareStatement(sql);
-                ResultSet rs = query.executeQuery();
-
-                while (true) {
-                    try {
-                        rs.next();
-                        autorizado autor = new autorizado();
-                        autor.setCi(rs.getInt("ciAutorizado"));
-                        autor.setApellidos(rs.getString("apellidos"));
-                        autor.setNombres(rs.getString("nombres"));
-                        autor.setTlf1(rs.getString("tlf1"));
-                        autor.setTlf2(rs.getString("tlf2"));
-                        autor.setParentesco(rs.getString("parentesco"));
-                        autorizados.add(autor);
-                        System.out.println(autor.getCi());
-                    } catch (SQLException e1) {
-                        System.out.println("No more rows found");
-                        break;
-                    }
-                }
-                return autorizados;
-            } catch (SQLException e) {
-                System.err.println("Cannot connect to the database!");
-                e.printStackTrace();
-            } finally {
-                if (conexion != null) {
-                    try {
-                        conexion.close();
-                        System.out.println("Database connection closed.");
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        } else {
-            sql = "SELECT ciAutorizado, apellidos, nombres, tlf1, tlf2 FROM autorizadoretiro WHERE " + criterio + " = ?";
-            try {
-                conexion = DriverManager.getConnection(url, user, pass);
-                System.out.println("Database connection started.");
-                PreparedStatement query = conexion.prepareStatement(sql);
-                query.setString(1, busquedaQuery);
-                ResultSet rs = query.executeQuery();
-
-                while (rs.next()) {
-                    autorizado aut = new autorizado();
-                    aut.setCi(rs.getInt("ciAutorizado"));
-                    aut.setApellidos(rs.getString("apellidos"));
-                    aut.setNombres(rs.getString("nombres"));
-                    aut.setTlf1(rs.getString("tlf1"));
-                    aut.setTlf2(rs.getString("tlf2"));
-                    aut.setParentesco(rs.getString("parentesco"));
-                    autorizados.add(aut);
-                }
-                return autorizados;
-            } catch (SQLException e) {
-                System.err.println("Cannot connect to the database!");
-                e.printStackTrace();
-            } finally {
-                if (conexion != null) {
-                    try {
-                        conexion.close();
-                        System.out.println("Database connection closed.");
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
-        return autorizados;
-    }
-
-    public static autorizado fetchAutorizado(String autorizadoCi) {
-        autorizado autorizado = new autorizado();
-        sql = "SELECT ciAutorizado FROM autorizadoretiro WHERE ciAutorizado = ?";
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connecion started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            query.setInt(1, autorizado.getCi());
-            
-            ResultSet rs = query.executeQuery();
-
-            rs.next();
-            autorizado.setNombres(rs.getString("nombres"));
-            autorizado.setApellidos(rs.getString("apellidos"));
-            autorizado.setCi(rs.getInt("ciAutorizado"));
-            autorizado.setTlf1(rs.getString("tlf1"));
-            autorizado.setTlf2(rs.getString("tlf2"));
-            return autorizado;
-
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        if (autorizado != null) {
-            return autorizado;
-        } else {
-            return null;
-        }
-
-    }
-
-    public static void sendDiagnostico(diagnostico diagnostico, estudiante estudiante) {
-
-        sql = "INSERT INTO `mydb`.`diagnostico` (`estudiante_ciEstudiante`," +
-                "`problemaParto`, `problemaMotor`, `problemaLenguaje`," +
-                "`problemaCognitivo`, `alergiaMedicamento`, `condicionExtra`," +
-                "`cualParto`, `cualMotor`, `cualLenguaje`, `cualCognitivo`," +
-                "`cualAMedicamento`, `cualExtra`, `alergia`, `cualAlergia`," +
-                "`enfermedadesPadecidas`, `edadHablar`, `edadCaminar`," +
-                "`enfermedadEmbarazo`, `cualEnfEmbarazo`, `embarazoPlanif`," +
-                "`medicamentoFiebre`, `vacBCG`, `vacTRIPLE`, `vacPOLIO`, `vacTIFUS`," +
-                "`otroVacAplicadas`, `cualVacAplicada`, `comeAyudado`, `buenApetito`," +
-                "`horaDormir`, `horaLevantarse`, `conQuienDuerme`, `chupaDedo`," +
-                "`edadDejarPañales`, `seOrinaDia`, `seOrinaNoche`, `evacuaDia`, `pideAydaAseo`)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?," +
-                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            // --- Asignación de parámetros ---
-            query.setString(1, estudiante.getCe()); // estudiante_ciEstudiante
-            query.setBoolean(2, diagnostico.isProblemaParto()); // problemaParto
-            query.setBoolean(3, diagnostico.isProblemaMotor()); // problemaMotor
-            query.setBoolean(4, diagnostico.isProblemaLenguaje()); // problemaLenguaje
-            query.setBoolean(5, diagnostico.isProblemaCognitivo()); // problemaC
-            query.setBoolean(6, diagnostico.isAlergiaMedicamento()); // alergiaMedicamento
-            query.setBoolean(7, diagnostico.isCondicionExtra()); // condicionExtra
-            query.setString(8, diagnostico.getCualParto()); // cualParto
-            query.setString(9, diagnostico.getCualMotor()); // cualMotor
-            query.setString(10, diagnostico.getCualLenguaje()); // cualLenguaje
-            query.setString(11, diagnostico.getCualCognitivo()); // cualCognitivo
-            query.setString(12, diagnostico.getCualAMedicamento()); // cualAMedicamento
-            query.setString(13, diagnostico.getCualExtra()); // cualExtra
-            query.setBoolean(14, diagnostico.isAlergia()); // alergia
-            query.setString(15, diagnostico.getCualAlergia()); // cualAlergia
-            query.setString(16, diagnostico.getEnfermedadesPadecidas()); // enfermedadesPadecidas
-            query.setInt(17, diagnostico.getEdadHablar()); // edadHablar
-            query.setInt(18, diagnostico.getEdadCaminar()); // edadCaminar
-            query.setBoolean(19, diagnostico.isEnfermedadEmbarazo()); // enfermedadEmbarazo
-            query.setString(20, diagnostico.getCualEnfEmbarazo()); // cualEnfEmbarazo
-            query.setBoolean(21, diagnostico.isEmbarazoPlanif()); // embarazoPlanif
-            query.setString(22, diagnostico.getMedicamentoFiebre()); // medicamentoFiebre
-            query.setBoolean(23, diagnostico.isVacBCG()); // vacBCG
-            query.setBoolean(24, diagnostico.isVacTRIPLE()); // vacTRIPLE
-            query.setBoolean(25, diagnostico.isVacPOLIO()); // vacPOLIO
-            query.setBoolean(26, diagnostico.isVacTIFUS()); // vacTIF
-            query.setBoolean(27, diagnostico.isOtroVacAplicadas()); // otroVacAplicadas
-            query.setString(28, diagnostico.getCualVacAplicada()); // cualVacAplicada
-            query.setBoolean(29, diagnostico.isComeAyudado()); // comeAyudado
-            query.setBoolean(30, diagnostico.isBuenApetito()); // buenApetito
-            if (diagnostico.getHoraDormir() == null) {query.setTime(31, null); }// horaDormir
-                else {query.setTime(31, Time.valueOf(diagnostico.getHoraDormir())); }// horaDormir
-            if (diagnostico.getHoraLevantarse() == null){ query.setTime(32, null);}
-            else { query.setTime(32, Time.valueOf(diagnostico.getHoraLevantarse()));}// horaLevantarse
-            query.setString(33, diagnostico.getConQuienDuerme()); // conQuienDuerme
-            query.setBoolean(34, diagnostico.isChupaDedo()); // chupaDedo
-            query.setInt(35, diagnostico.getEdadDejarPanales()); // edadDejarPañales
-            query.setBoolean(36, diagnostico.isSeOrinaDia()); // seOrinaDia
-            query.setBoolean(37, diagnostico.isSeOrinaNoche()); // seOrinaNoche
-            query.setBoolean(38, diagnostico.isEvacuaDia()); // evacuaDia
-            query.setBoolean(39, diagnostico.isPideAyudaAseo()); // pideAydaAseo
-
-
-            // --- Ejecución de la consulta ---
-            int columnasAfectadas = query.executeUpdate();
-
-            // --- Verificación del resultado ---
-            if (columnasAfectadas > 0) {
-                System.out.println("¡Fila insertada exitosamente!");
-            } else {
-                System.out.println("La inserción de la fila ha fallado.");
-            }
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
     public static void editarDiagnostico(diagnostico diagnostico) {
         sql = "UPDATE diagnostico SET problemaParto = ?, problemaMotor = ?, problemaLenguaje = ?," +
                 "problemaCognitivo = ?, alergiaMedicamento = ?, condicionExtra = ?," +
@@ -1757,570 +2468,6 @@ public class connectDB {
                 }
             }
         }
-    }
-
-    public static void removerDiagnostico(String ce) {
-
-        sql = "DELETE FROM diagnostico" +
-                " WHERE estudiante_ciEstudiante = ?;";
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            query.setString(1, ce); // estudiante_ciEstudiante
-
-            // --- Ejecución de la consulta ---
-            int columnasAfectadas = query.executeUpdate();
-
-            // --- Verificación del resultado ---
-            if (columnasAfectadas > 0) {
-                System.out.println("¡Fila insertada exitosamente!");
-            } else {
-                System.out.println("La inserción de la fila ha fallado.");
-            }
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-    }
-
-    public static void setRelRepresentado(representante representative, estudiante student, boolean rol, String relationship) {
-        String sql = "INSERT INTO representaa (representante_ciRepresentante, estudiante_ciEstudiante, rol, parentesco) VALUES (?, ?, ?, ?)";
-
-        try (Connection conn = DriverManager.getConnection(url, user, pass);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            // Set the parameters for the prepared statement
-            pstmt.setInt(1, representative.getCi()); // representante_ciRepresentante
-            pstmt.setString(2, student.getCe()); // estudiante_ciEstudiante
-            pstmt.setBoolean(3, rol); // rol (BIT(1) in MySQL maps to boolean in Java)
-            pstmt.setString(4, relationship); // parentesco
-
-            // Execute the update (insert)
-            int rowsAffected = pstmt.executeUpdate();
-
-            if (rowsAffected > 0) {
-                System.out.println("Data inserted successfully into representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
-            } else {
-                System.out.println("No rows affected. Data insertion failed for representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Database error during representaa insertion: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
-
-    public static void setRelAutorizado(autorizado authorized, estudiante student) {
-        String sql = "INSERT INTO puederetirar (autorizadoRetiro_ciAutorizado, estudiante_ciEstudiante, parentesco) VALUES (?, ?, ?)";
-
-        try (Connection conn = DriverManager.getConnection(url, user, pass);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            // Set the parameters for the prepared statement
-            pstmt.setInt(1, authorized.getCi()); // autorizadoRetiro_ciAutorizado from autorizado object
-            pstmt.setString(2, student.getCe()); // estudiante_ciEstudiante from estudiante object (assuming 'ce' is the student ID)
-            pstmt.setString(3, authorized.getParentesco()); // parentesco
-
-            // Execute the update (insert)
-            int rowsAffected = pstmt.executeUpdate();
-
-            if (rowsAffected > 0) {
-                System.out.println("Data inserted successfully into puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
-            } else {
-                System.out.println("No rows affected. Data insertion failed for puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Database error during puederetirar insertion: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static void setSocioFamiliar(socioFamiliar socioFamiliar){
-        String sql = "INSERT INTO socioFamiliar (" +
-                "estudiante_ciEstudiante, vivienda, tipoVivienda, cuidaNiñoHogar, estdCivilPadres, " +
-                "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng" +
-                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-        try (Connection conn = DriverManager.getConnection(url, user, pass);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            // Set the parameters for the prepared statement using getters
-            pstmt.setString(1, socioFamiliar.getEstudiante_ciEstudiante());
-            pstmt.setString(2, socioFamiliar.getVivienda());
-            pstmt.setString(3, socioFamiliar.getTipoVivienda());
-            // Map cuidaNinoHogar from Java class to cuidaNiñoHogar in DB
-            pstmt.setString(4, socioFamiliar.getCuidaNinoHogar());
-            pstmt.setString(5, socioFamiliar.getEstdCivilPadres());
-            // Map consultaAtend from Java class to consultAtend in DB
-            pstmt.setString(6, socioFamiliar.getConsultaAtend());
-            pstmt.setBoolean(7, socioFamiliar.isVisitPsicopedagogo());
-            pstmt.setBoolean(8, socioFamiliar.isVisitPsicologo());
-            pstmt.setBoolean(9, socioFamiliar.isVisitNeurologo());
-            pstmt.setBoolean(10, socioFamiliar.isVisitTerapLeng());
-
-
-            // Execute the update (insert)
-            int rowsAffected = pstmt.executeUpdate();
-
-            if (rowsAffected > 0) {
-                System.out.println("Data inserted successfully into socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
-            } else {
-                System.out.println("No rows affected. Data insertion failed for socioFamiliar for Student CE: " + socioFamiliar.getEstudiante_ciEstudiante());
-            }
-        } catch (SQLException e) {
-            System.err.println("Database error during socioFamiliar insertion: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-    }
-
-    public static socioFamiliar fetchSocioFamiliar(String ciEstudiante) {
-        socioFamiliar sf = null;
-        String sql = "SELECT estudiante_ciEstudiante, vivienda, tipoVivienda, " +
-                "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres, " +
-                "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng " + // Added
-                "FROM socioFamiliar WHERE estudiante_ciEstudiante = ?";
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass); // Use try-with-resources for connection
-            PreparedStatement pstmt = conexion.prepareStatement(sql);
-
-            pstmt.setString(1, ciEstudiante); // Set the CI parameter
-
-            try (ResultSet rs = pstmt.executeQuery()) { // Use try-with-resources for ResultSet
-                if (rs.next()) {
-                    sf = new socioFamiliar();
-                    sf.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
-                    sf.setVivienda(rs.getString("vivienda"));
-                    sf.setTipoVivienda(rs.getString("tipoVivienda"));
-                    sf.setCuidaNinoHogar(rs.getString("cuidaNiñoHogar"));
-                    sf.setRelacionAmbienteFamiliar(rs.getString("relacionAmbienteFamiliar"));
-                    sf.setEstdCivilPadres(rs.getString("estdCivilPadres"));
-                    sf.setConsultaAtend(rs.getString("consultAtend")); // Set consultAtend
-                    sf.setVisitPsicopedagogo(rs.getBoolean("visitPsicopedagogo")); // Set boolean
-                    sf.setVisitPsicologo(rs.getBoolean("visitPsicologo"));       // Set boolean
-                    sf.setVisitNeurologo(rs.getBoolean("visitNeurologo"));       // Set boolean
-                    sf.setVisitTerapLeng(rs.getBoolean("visitTerapLeng"));       // Set boolean
-                } else {
-                    System.out.println("No socioFamiliar data found for student CI: " + ciEstudiante);
-                }
-            } // ResultSet is closed automatically
-        } catch (SQLException e) {
-            System.err.println("Database error during socioFamiliar fetch: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return sf;
-    }
-    
-    public static void sendDocumentos(documentos documentos){
-                String sql = "INSERT INTO documentos (" +
-                     "estudiante_ciEstudiante, originales, fotocopias, partidaNac, certificadoVacunas, " +
-                     "cedulaMadre, cedulaPadre, cedulaRep, responsableInscripcion, personaInscribe, " +
-                     "fechaInscripcion, observaciones) " +
-                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-        // Usamos try-with-resources para asegurar que la conexión y el PreparedStatement se cierren automáticamente.
-        try (Connection conexion = DriverManager.getConnection(url,user,pass);
-             PreparedStatement pstmt = conexion.prepareStatement(sql)) {
-
-            // Establece los parámetros de la consulta SQL usando los valores del objeto documentoss.
-            // Los índices de los parámetros corresponden a los '?' en la consulta SQL, empezando desde 1.
-            pstmt.setString(1, documentos.getCe());
-            pstmt.setBoolean(2, documentos.isOriginales());
-            pstmt.setBoolean(3, documentos.isFotocopias());
-            pstmt.setBoolean(4, documentos.isPartidaNac());
-            pstmt.setBoolean(5, documentos.isCertificadoVacuna());
-            pstmt.setBoolean(6, documentos.isCedulaMadre());
-            pstmt.setBoolean(7, documentos.isCedulaPadre());
-            pstmt.setBoolean(8, documentos.isCedulaRep());
-            pstmt.setString(9, documentos.getResponsableInscripcion());
-            pstmt.setString(10, documentos.getPersonaInscribe());
-
-            // Para LocalDate, usamos java.sql.Date.valueOf() para convertirlo a un tipo compatible con SQL DATE.
-            pstmt.setDate(11, java.sql.Date.valueOf(documentos.getFechaInscripcion()));
-            pstmt.setString(12, documentos.getObservaciones());
-
-            // Ejecuta la consulta de inserción.
-            // executeUpdate() devuelve el número de filas afectadas (1 si la inserción fue exitosa).
-            int rowsAffected = pstmt.executeUpdate();
-            
-            if (rowsAffected > 0) {
-                System.out.println("Data inserted successfully into estudiante for CI: " + documentos.getCe());
-            } else {
-                System.out.println("No rows affected. Data insertion failed for estudiante for CI: " + documentos.getCe());
-            }
-        } catch (SQLException e) {
-            // Manejo de excepciones SQL: Imprime el error y devuelve false.
-            System.err.println("Error al insertar el documentos: " + e.getMessage());
-            e.printStackTrace(); // Imprime la traza completa para depuración
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static void crearUsuario(acceso acceso) {
-
-        String sql = "INSERT INTO acceso (usuario, hash, permiso, twoFA) VALUES (?, ?, ?, ?)";
-
-        try (Connection conn = DriverManager.getConnection(url, user, pass);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            // Set the values for the prepared statement using getters from the Acceso object
-            pstmt.setInt(3, acceso.getTipo_acceso());       // Maps to 'permiso'
-            pstmt.setString(1, acceso.getNombre_usuario()); // Maps to 'usuario'
-            pstmt.setString(2, acceso.getContrasenaHash()); // Maps to 'hash'
-            pstmt.setString(4, acceso.getTwoFA());          // Maps to 'twoFA'
-
-            // Execute the insert statement
-            int rowsAffected = pstmt.executeUpdate();
-
-            // Return true if at least one row was successfully inserted
-            if (rowsAffected > 0){
-                System.out.println("Data inserted successfully into usuario for usuario: " + acceso.getNombre_usuario());
-            } else {
-                System.out.println("Data couldn't be inserted for usuario: " + acceso.getNombre_usuario());
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Error al insertar registro de acceso: " + e.getMessage());
-            e.printStackTrace(); // Print the stack trace for detailed debugging
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-    }
-
-    public static void removerUsuario(String usuario) {
-        // SQL DELETE statement with a WHERE clause to target a specific user.
-        String sql = "DELETE FROM acceso WHERE usuario = ?";
-
-        try (Connection conn = DriverManager.getConnection(url, user, pass);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            // Set the username parameter for the WHERE clause
-            pstmt.setString(1, usuario);
-
-            // Execute the delete statement
-            int rowsAffected = pstmt.executeUpdate();
-
-            // Return true if at least one row was deleted
-            if (rowsAffected > 0){
-                System.out.println("Data deleted successfully for usuario: " + usuario);
-            } else {
-                System.out.println("Data couldn't be deleted for usuario: " + usuario);
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Error al eliminar registro de acceso para usuario: " + usuario + " - " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static void fetchUsuario(acceso accesoPresente) {
-        sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            ResultSet rs = query.executeQuery();
-            try {
-                rs.next();
-                //accesoPresente.getNombre_usuario().equals(rs.getString("usuario"));
-            } catch (SQLException e1) {
-                System.out.println("USUARIO NO EXISTENTE");
-                e1.printStackTrace();
-            }
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    public static List<acceso> getAllAccesos() {
-        String sql = "SELECT id, usuario, hash, permiso, twoFA FROM acceso";
-        List<acceso> accesos = new ArrayList<>();
-
-        try (Connection conn = DriverManager.getConnection(url, user, pass);
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-
-            // Iterate through the result set to fetch each row
-            try {
-            while (rs.next()) {
-                // Create a new Acceso object for each row
-                acceso acceso = new acceso();
-
-                // Set properties using setters
-                acceso.setTipo_acceso(rs.getInt("permiso"));
-                acceso.setNombre_usuario(rs.getString("usuario"));
-                acceso.setContrasenaHash(rs.getString("hash"));
-                acceso.setTwoFA(rs.getString("twoFA")); // Set the twoFA value using its setter
-
-                // Add the populated Acceso object to the list
-                accesos.add(acceso);
-            } } catch (SQLException e1){
-                System.out.println("Recuperados todos los usuarios de la base de datos");
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Error al obtener todos los registros de acceso: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return accesos;
-    }
-
-    public static void promoverAño() {
-    }
-
-    public static void aumentarNivelEstd() {
-    }
-
-    public static List<familia> fetchRelFamiliar(String cEstudiante) {
-
-        sql = "SELECT estudiante_ciEstudiante, nombre, apellido, edad, parentezco, ocupacion " +
-                "FROM `familiares extra` WHERE estudiante_ciEstudiante = \"" + cEstudiante + "\"";
-        List<familia> fams = null;
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            ResultSet rs = query.executeQuery();
-            fams = new ArrayList<>();
-
-            try {
-                while (rs.next()) {
-                    familia repF = new familia();
-                    repF.setCeRelacionado(rs.getString("estudiante_ciEstudiante"));
-                    repF.setNombres(rs.getString("nombre"));
-                    repF.setApellidos(rs.getString("apellido"));
-                    repF.setEdad(rs.getString("edad"));
-                    repF.setOcupacion(rs.getString("ocupacion"));
-                    repF.setParentesco(rs.getString("parentezco"));
-                    fams.add(repF);
-                }
-            } catch (SQLException e1) {
-                System.out.println("Recuperados todos los estudiantes");
-                return fams;
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return fams;
-    }
-
-    public static void setFamilia(familia familia, estudiante estudiante) {
-        // SQL INSERT statement for 'familiares extra' table
-        String sql = "INSERT INTO familiaresextra (" +
-                "nombre, apellido, edad, parentezco, ocupacion, estudiante_ciEstudiante) " +
-                "VALUES (?, ?, ?, ?, ?, ?)";
-
-        try {
-
-            conexion = DriverManager.getConnection(url, user, pass); // Use try-with-resources for connection
-            PreparedStatement pstmt = conexion.prepareStatement(sql);
-
-            // Set the parameters for the prepared statement using getters from the familia object
-            pstmt.setString(1, familia.getNombres());
-            pstmt.setString(2, familia.getApellidos());
-            pstmt.setString(3, familia.getEdad());
-            pstmt.setString(4, familia.getParentesco()); // Note 'parentezco' for the column name
-            pstmt.setString(5, familia.getOcupacion());
-            pstmt.setString(6, estudiante.getCe());
-
-            // Execute the update (insert)
-            int rowsAffected = pstmt.executeUpdate();
-
-            if (rowsAffected > 0) {
-                System.out.println("Data inserted successfully into `familiares extra` for student CE: " + estudiante.getCe());
-            } else {
-                System.out.println("No rows affected. Data insertion failed for `familiares extra` for student CE: " + estudiante.getCe());
-            }
-        } catch (SQLException e) {
-            System.err.println("Database error during `familiares extra` insertion: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
-
-    public static List<representaA> fetchRelRepresentante(int ciRep) {
-
-        sql = "SELECT * FROM retiraa WHERE representante_ciRepresentante =" + ciRep;
-        List<representaA> reps = null;
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            ResultSet rs = query.executeQuery();
-            reps = new ArrayList<>();
-
-            try {
-                while (rs.next()) {
-                    representaA repN = new representaA();
-                    repN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
-                    repN.setRepresentante_ciRepresentante(rs.getInt("representante_ciRepresentante"));
-                    repN.setRol(rs.getBoolean("rol"));
-                    repN.setParentesco(rs.getString("parentesco"));
-                    reps.add(repN);
-                }
-            } catch (SQLException e1) {
-                System.out.println("Recuperados todos los estudiantes");
-                return reps;
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return reps;
-    }
-
-    public static List<retiraA> fetchRelAutorizado(String ciAutorizado) {
-
-        sql = "SELECT * FROM puederetirar WHERE autorizadoRetiro_ciAutorizado =" + ciAutorizado;
-        List<retiraA> rets = null;
-
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
-
-            ResultSet rs = query.executeQuery();
-            rets = new ArrayList<>();
-
-            try {
-                while (rs.next()) {
-                    retiraA retN = new retiraA();
-                    retN.setAutorizadoRetiro_ciAutorizado(rs.getInt("autorizadoRetiro_ciAutorizado"));
-                    retN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
-                    retN.setParentesco(rs.getString("parentesco"));
-                    rets.add(retN);
-                }
-            } catch (SQLException e1) {
-                System.out.println("Recuperados todos los estudiantes");
-                return rets;
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
-            e.printStackTrace();
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                    System.out.println("Database connection closed.");
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return rets;
     }
 }
 
