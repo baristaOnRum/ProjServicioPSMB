@@ -186,7 +186,6 @@ public class nuevoUser extends javax.swing.JFrame {
         String hash = util.generarHash(contrasena);
 
         // Setea la información en acceso
-        acc.setTipo_acceso(3);
         acc.setNombre_usuario(usuario);
         acc.setContrasenaHash(hash);
 

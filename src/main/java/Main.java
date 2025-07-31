@@ -20,22 +20,27 @@ public class Main {
     
     private static void checkInit(acceso accesoPresente, menuPrincipal menu){
         //Verificamos existencia de DB
+        confDBF config = new confDBF(accesoPresente, menu);
+        config.setVisible(true);
+        config.repaint();
+        config.revalidate();
 
-        if (connectDB.getAllAccesos().isEmpty()){
-            String connDB = "jdbc:mysql://";
-            connDB = connDB + utils.obtenerVariable("db_url"); accesoPresente.setConnURL(connDB);
-            //Inicializar la DB
-            confDBFirst conf = new confDBFirst(accesoPresente, menu);
-            conf.setVisible(true);
-            conf.repaint();
-            conf.revalidate();
-        } else {
-            accesoPresente.setConnURL(utils.obtenerVariable("db_url"));
-            confDBF conf = new confDBF(accesoPresente, menu);
-            conf.setVisible(true);
-            conf.repaint();
-            conf.revalidate();
-        }
+
+//        System.out.println(utils.obtenerVariable("db.url"));
+//        if (utils.obtenerVariable("db.url") == null){
+//            String connDB = "jdbc:mysql://";
+//            connDB = connDB + utils.obtenerVariable("db.url"); accesoPresente.setConnURL(connDB);
+//            //Inicializar la DB
+//            confDBFirst conf = new confDBFirst(accesoPresente, menu);
+//            conf.setVisible(true);
+//            conf.repaint();
+//            conf.revalidate();
+//        } else {
+//            accesoPresente.setConnURL(utils.obtenerVariable("db.url"));
+//            confDBF conf = new confDBF(accesoPresente, menu);
+//            conf.setVisible(true);
+//            conf.repaint();
+//            conf.revalidate()
     }
 //        if (utils.obtenerVariable("db_user").isEmpty());{
 //                if (!utils.obtenerVariable("db_user").isEmpty()){

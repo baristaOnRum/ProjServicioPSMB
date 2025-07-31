@@ -9,8 +9,11 @@ import java.time.LocalDate;
 
 public class menuReportes extends javax.swing.JDialog {
     
-    public menuReportes(java.awt.Frame parent, boolean modal) {
+    String cedulaEst;
+    
+    public menuReportes(java.awt.Frame parent, boolean modal, String ciEst) {
         super(parent, modal);
+        cedulaEst = ciEst; 
         initComponents();
     }
 
@@ -436,7 +439,7 @@ public class menuReportes extends javax.swing.JDialog {
         panel.setBackground(new java.awt.Color(197, 232, 225));
         panel.setLayout(new java.awt.CardLayout());
 
-        cmb_tipoReporte.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Licencia Medica", "Constancia de retiro", "Constancia de conducta", "Constancia de estudios", " ", " " }));
+        cmb_tipoReporte.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Constancia de retiro", "Constancia de conducta", "Constancia de estudios", " ", " " }));
         cmb_tipoReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmb_tipoReporteActionPerformed(evt);
@@ -520,12 +523,12 @@ public class menuReportes extends javax.swing.JDialog {
             panel.repaint();
             panel.revalidate();
         }
-        if (cmb_tipoReporte.getSelectedItem() == "Licencia Medica"){
-            panel.removeAll();
-            panel.add(panel_licenciaMedica);
-            panel.repaint();
-            panel.revalidate();
-        }
+//        if (cmb_tipoReporte.getSelectedItem() == "Licencia Medica"){
+//            panel.removeAll();
+//            panel.add(panel_licenciaMedica);
+//            panel.repaint();
+//            panel.revalidate();
+//        }
         
         if (cmb_tipoReporte.getSelectedItem() == "Constancia de estudios"){
             panel.removeAll();
@@ -630,47 +633,6 @@ public class menuReportes extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_repRetActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menuReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menuReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menuReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menuReportes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                menuReportes dialog = new menuReportes(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_buscarReporte;

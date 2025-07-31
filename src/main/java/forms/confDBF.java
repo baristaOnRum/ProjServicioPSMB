@@ -201,15 +201,20 @@ public class confDBF extends javax.swing.JFrame {
             return;
             }
         //Validamos la conexión
+        
         if (!accesoChild.getPassDB().isEmpty() && !accesoChild.getUserDB().isEmpty() && !accesoChild.getConnURL().isEmpty()){
             if (checkConn(accesoChild)){
+                if (connectDB.getAllAccesos().isEmpty()){
+                    nuevoUser nuevo = new nuevoUser();
+                }
+                
                 utils.guardarVariable("user_db", accesoChild.getUserDB());
                 this.setEnabled(false);
                 connectDB.connparamsinit(accesoChild);
-                menuMain = new menuPrincipal(accesoChild);
-                menuMain.setVisible(true);
-                menuMain.repaint();
-                menuMain.validate();
+                inicio ini = new inicio(accesoChild, menuMain);
+                ini.setVisible(true);
+                ini.repaint();
+                ini.validate();
                 this.dispose();
                 
             } else{

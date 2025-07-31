@@ -749,14 +749,13 @@
     <Component class="javax.swing.JComboBox" name="cmb_tipoReporte">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="7">
+          <StringArray count="6">
             <StringItem index="0" value="..."/>
-            <StringItem index="1" value="Licencia Medica"/>
-            <StringItem index="2" value="Constancia de retiro"/>
-            <StringItem index="3" value="Constancia de conducta"/>
-            <StringItem index="4" value="Constancia de estudios"/>
+            <StringItem index="1" value="Constancia de retiro"/>
+            <StringItem index="2" value="Constancia de conducta"/>
+            <StringItem index="3" value="Constancia de estudios"/>
+            <StringItem index="4" value=" "/>
             <StringItem index="5" value=" "/>
-            <StringItem index="6" value=" "/>
           </StringArray>
         </Property>
       </Properties>

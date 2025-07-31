@@ -1,6 +1,8 @@
 package forms;
+import javax.swing.JOptionPane;
 import subsystems.connectDB;
 import subsystems.acceso;
+import subsystems.utils;
 
 
 public class inicio extends javax.swing.JFrame {
@@ -9,7 +11,7 @@ public class inicio extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(inicio.class.getName());
 
-    public inicio(acceso accesoSuper) {
+    public inicio(acceso accesoSuper, menuPrincipal main) {
         accesoPresente = accesoSuper;
         initComponents();
     }
@@ -181,8 +183,31 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_pass_contrassActionPerformed
 
     private void btn_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarActionPerformed
-        accesoPresente.setNombre_usuario(txt_usr.getText());
-        connectDB.fetchUsuario(accesoPresente);
+        String usuario = txt_usr.getText();
+        String passF = new String();
+        
+        try {
+        StringBuilder pass = new StringBuilder();
+        for ( char a : pass_contrass.getPassword()){
+            pass.append(a);
+            }
+        passF = pass.toString();
+        } catch (NullPointerException e){
+            JOptionPane.showMessageDialog(this, "Por favor ingrese una contraseña", "Error", JOptionPane.WARNING_MESSAGE);
+            return;
+            }
+        String hash = utils.generarHash(passF);
+
+        // Setea la información en acceso
+        accesoPresente.setNombre_usuario(usuario);
+        accesoPresente.setContrasenaHash(hash);
+        
+        if (connectDB.checkUsuario(accesoPresente)){
+            connectDB.fetchUsuario(accesoPresente);
+            
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario inexistente", "Error", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_btn_iniciarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

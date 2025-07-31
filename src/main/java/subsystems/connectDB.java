@@ -1659,6 +1659,39 @@ public class connectDB {
             }
         }
     }
+    
+        public static boolean checkUsuario(acceso accesoPresente) {
+        sql = "SELECT * WHERE usuario =" + accesoPresente.getNombre_usuario();
+
+        try {
+            conexion = DriverManager.getConnection(url, user, pass);
+            System.out.println("Database connection started.");
+            PreparedStatement query = conexion.prepareStatement(sql);
+
+            ResultSet rs = query.executeQuery();
+            try {
+                rs.next();
+                accesoPresente.setNombre_usuario(rs.getString("usuario"));
+            } catch (SQLException e1) {
+                System.out.println("USUARIO NO EXISTENTE");
+                return false;
+            }
+            return true;
+        } catch (SQLException e) {
+            System.err.println("Cannot connect to the database!");
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                    System.out.println("Database connection closed.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return false;
+    }
 
     public static List<acceso> getAllAccesos() {
         String sql = "SELECT * FROM usuario";

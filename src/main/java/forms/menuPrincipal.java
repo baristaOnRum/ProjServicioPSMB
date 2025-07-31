@@ -3784,13 +3784,14 @@ public void createConfPanel(){
                                     .addComponent(label_direc_hab_padre)
                                     .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(repLegalPadreCheckbox)
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(parentescoPadreTexto)
-                                .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(label_nacionalidad_padre)
                                     .addComponent(check_ven_padre)
-                                    .addComponent(check_ext_padre))))
+                                    .addComponent(check_ext_padre))
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(parentescoPadreTexto)
+                                    .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(7, 7, 7)
                         .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_grado_padre)
@@ -4160,13 +4161,11 @@ public void createConfPanel(){
                     madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
                     System.out.println("DEBUG: 'madre' object fetched. Nombres: " + (madre != null ? madre.getNombres() : "null") + ", Apellidos: " + (madre != null ? madre.getApellidos() : "null"));
                 }
-                // NOTE: There might be a logical error here, as 'madre' is assigned again instead of 'padre'.
-                // If this is intentional, it will overwrite the 'madre' variable if both 'madre' and 'padre' parentescos are found.
-                // If you intended to assign to 'padre', it should be 'padre = connectDB.fetchRepresentante(...)'.
+           
                 if (rep.getParentesco().equals((String) "padre")){
                     System.out.println("DEBUG: Found 'padre' parentesco. Fetching representative for 'padre' with CI: " + rep.getRepresentante_ciRepresentante());
-                    madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante()); // This line currently assigns to 'madre'
-                    System.out.println("DEBUG: 'madre' (assigned from 'padre' parentesco) object fetched. Nombres: " + (madre != null ? madre.getNombres() : "null") + ", Apellidos: " + (madre != null ? madre.getApellidos() : "null"));
+                    padre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante()); // This line currently assigns to 'padre'
+                    System.out.println("DEBUG: 'padre' (assigned from 'padre' parentesco) object fetched. Nombres: " + (padre != null ? padre.getNombres() : "null") + ", Apellidos: " + (padre != null ? padre.getApellidos() : "null"));
                 }
                 
                 // This line will assign the last representative fetched in the loop to repLegal
@@ -4200,6 +4199,7 @@ public void createConfPanel(){
         text_peso_niñ.setText(String.valueOf(est.getPeso()));
         text_estatura_niñ.setText(String.valueOf(est.getEstatura()));
         fileBytes = est.getImg(); // Assuming you have a way to set the image to a UI component
+        
         if (fileBytes != null){
             ImageIcon iconInit = new ImageIcon(fileBytes);
             ImageIcon iconFin;
@@ -5906,7 +5906,17 @@ public void createConfPanel(){
     }//GEN-LAST:event_btn_eliminarBusqEstdActionPerformed
 
     private void btn_eliminarBusqEstd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarBusqEstd1ActionPerformed
-        // TODO add your handling code here:
+
+        String ci;
+        try {
+            ci = (String) tbl_busqEstd.getValueAt(tbl_busqEstd.getSelectedRow(),0);
+            menuReportes report = new menuReportes(this, true, ci);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error seleccionando Cédula Estudiantil. Seleccione una cédula en la tabla", "Cédula no encontrada", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        
+        
     }//GEN-LAST:event_btn_eliminarBusqEstd1ActionPerformed
 
     private void tbl_busqEstdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_busqEstdMouseClicked

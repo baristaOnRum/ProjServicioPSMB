@@ -192,7 +192,7 @@ public class confDBFirst extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jTextField1.getText() != null){
-            utils.guardarVariable("url_db", "jdbc:mysql://" + jTextField1.getText());
+            utils.guardarVariable("url.db", "jdbc:mysql://" + jTextField1.getText());
             accesoChild.setConnURL("jdbc:mysql://" + jTextField1.getText());
             System.out.println("url creada");
         } else {JOptionPane.showMessageDialog(this, "Por favor ingrese una URL", "Error", JOptionPane.WARNING_MESSAGE); return;}
