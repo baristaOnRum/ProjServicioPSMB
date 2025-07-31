@@ -4797,11 +4797,14 @@ public void createConfPanel(){
         if (reps != null){
             for (representaA rep : reps){
                 if (rep.getParentesco().equals((String) "madre")){
+                    System.out.println("Hallada madre");
                     madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
                 }
                 if (rep.getParentesco().equals((String) "padre")){
-                    madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+                    System.out.println("Hallada madre");
+                    padre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
                 }
+                System.out.println("Insertando representante");
                 repLegal = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
             }
         }

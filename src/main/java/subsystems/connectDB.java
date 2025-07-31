@@ -1785,35 +1785,27 @@ public class connectDB {
 
     public static List<representaA> fetchRelRepresentante(String ciEst) {
 
-        sql = "SELECT * FROM puederetirar WHERE estudiante_ciEstudiante =" + "\"" +ciEst + "\"";
-        List<representaA> reps = null;
+        List<representaA> representantes = new ArrayList<>();
+        String sql = "SELECT * FROM representaA WHERE estudiante_ciEstudiante = ?";
 
-        try {
-            conexion = DriverManager.getConnection(url, user, pass);
-            System.out.println("Database connection started.");
-            PreparedStatement query = conexion.prepareStatement(sql);
+        try (Connection conexion = DriverManager.getConnection(url, user, pass);
+             PreparedStatement pstmt = conexion.prepareStatement(sql)) {
 
-            ResultSet rs = query.executeQuery();
-            System.out.println("Query executed.");
-            reps = new ArrayList<>();
-            while (true){
-            try {
-                    rs.next();
-                    System.out.println("inserting a rep.");
-                    representaA repN = new representaA();
-                    repN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
-                    repN.setRepresentante_ciRepresentante(rs.getInt("representante_ciRepresentante"));
-                    repN.setRol(rs.getBoolean("rol"));
-                    repN.setParentesco(rs.getString("parentesco"));
-                    reps.add(repN);
-                    } catch (SQLException e1) {
-                    System.out.println("Recuperados todos los estudiantes");
-                    return reps;
-                }
+            pstmt.setString(1, ciEst);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                representaA rep = new representaA();
+                rep.setRepresentante_ciRepresentante(rs.getInt("representante_ciRepresentante"));
+                rep.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
+                rep.setRol(rs.getBoolean("rol"));
+                rep.setParentesco(rs.getString("parentesco"));
+
+                representantes.add(rep);
             }
 
         } catch (SQLException e) {
-            System.err.println("Cannot connect to the database!");
+            System.err.println("Error fetching representantes: " + e.getMessage());
             e.printStackTrace();
         } finally {
             if (conexion != null) {
@@ -1825,7 +1817,7 @@ public class connectDB {
                 }
             }
         }
-        return reps;
+        return representantes;
     }
 
     public static List<retiraA> fetchRelAutorizado(String ciEstudiante) {
