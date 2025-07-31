@@ -268,18 +268,10 @@ public menuPrincipal(acceso accesoPresente) {
            btn_inscribirEstd.setEnabled(false);
            btn_inscribirNom.setEnabled(false);
            //solo ver
-           btn_editarBusqEstd.setEnabled(false);
-           btn_editarBusqRep.setEnabled(false);
-           btn_editarBusqAut.setEnabled(false);
-           btn_editarBusqNom.setEnabled(false);
        }
        case 2 -> {
            btn_inscribirNom.setEnabled(false);
            //solo inscribir estudiantes
-           btn_editarBusqEstd.setEnabled(false);
-           btn_editarBusqRep.setEnabled(false);
-           btn_editarBusqAut.setEnabled(false);
-           btn_editarBusqNom.setEnabled(false);          
        }
        case 3 ->{
            //edicion total
@@ -312,8 +304,6 @@ public void createConfPanel(){
         logoPreescolar = new javax.swing.JLabel();
         imgHerramienta = new javax.swing.JLabel();
         btnConfiguracion = new javax.swing.JButton();
-        imgMaletin = new javax.swing.JLabel();
-        btnPlantel = new javax.swing.JButton();
         imgEstudiante = new javax.swing.JLabel();
         btnEstudiantes = new javax.swing.JButton();
         imgFamilia = new javax.swing.JLabel();
@@ -332,9 +322,9 @@ public void createConfPanel(){
         img_busqEstd = new javax.swing.JLabel();
         btn_inscribirEstd = new javax.swing.JButton();
         btn_verBusqEstd = new javax.swing.JButton();
-        btn_editarBusqEstd = new javax.swing.JButton();
         img_logoInstitucionBusqEstd = new javax.swing.JLabel();
         btn_buscarEstd = new javax.swing.JButton();
+        btn_eliminarBusqEstd = new javax.swing.JButton();
         busquedaRepresentante = new javax.swing.JPanel();
         headderBusqRep = new javax.swing.JPanel();
         lbl_busqRepresentante = new javax.swing.JLabel();
@@ -346,7 +336,6 @@ public void createConfPanel(){
         tbl_busqRep = new javax.swing.JTable();
         img_busqRep = new javax.swing.JLabel();
         btn_verBusqRep = new javax.swing.JButton();
-        btn_editarBusqRep = new javax.swing.JButton();
         img_logoInstitucionBusqRep = new javax.swing.JLabel();
         btn_buscarRep = new javax.swing.JButton();
         busquedaAutorizados = new javax.swing.JPanel();
@@ -829,7 +818,7 @@ public void createConfPanel(){
 
         logoPreescolar.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
         logoPreescolar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoPreescolar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
+        logoPreescolar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_512.png"))); // NOI18N
         logoPreescolar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         logoPreescolar.setAlignmentY(0.0F);
         logoPreescolar.setAutoscrolls(true);
@@ -860,32 +849,6 @@ public void createConfPanel(){
         btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConfiguracionActionPerformed(evt);
-            }
-        });
-
-        imgMaletin.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
-        imgMaletin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgMaletin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set2/suitcase_256.png"))); // NOI18N
-        imgMaletin.setToolTipText("");
-        imgMaletin.setAlignmentY(0.0F);
-        imgMaletin.setAutoscrolls(true);
-        imgMaletin.setFocusable(false);
-        imgMaletin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        imgMaletin.setIconTextGap(0);
-        imgMaletin.setRequestFocusEnabled(false);
-
-        btnPlantel.setBackground(new java.awt.Color(62, 181, 157));
-        btnPlantel.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        btnPlantel.setForeground(new java.awt.Color(250, 247, 239));
-        btnPlantel.setText("PLANTEL");
-        btnPlantel.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnPlantel.setIconTextGap(25);
-        btnPlantel.setMaximumSize(new java.awt.Dimension(100, 40));
-        btnPlantel.setMinimumSize(new java.awt.Dimension(250, 56));
-        btnPlantel.setPreferredSize(new java.awt.Dimension(250, 56));
-        btnPlantel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlantelActionPerformed(evt);
             }
         });
 
@@ -972,68 +935,61 @@ public void createConfPanel(){
             .addGroup(principalLayout.createSequentialGroup()
                 .addComponent(headderMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(principalLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(principalLayout.createSequentialGroup()
-                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPlantel, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(167, 167, 167)
-                        .addComponent(logoPreescolar))
-                    .addGroup(principalLayout.createSequentialGroup()
-                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(imgEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(140, 140, 140)
                         .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(imgFamilia, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imgAutorizado, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imgHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(125, 125, 125))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
+                                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(imgEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(76, 76, 76))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
+                                .addComponent(imgFamilia, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(46, 46, 46)))
+                        .addComponent(logoPreescolar))
+                    .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(imgHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(imgAutorizado, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(94, 94, 94))
         );
         principalLayout.setVerticalGroup(
             principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(principalLayout.createSequentialGroup()
                 .addComponent(headderMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(principalLayout.createSequentialGroup()
-                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(principalLayout.createSequentialGroup()
+                            .addGap(132, 132, 132)
+                            .addComponent(logoPreescolar))
+                        .addGroup(principalLayout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(principalLayout.createSequentialGroup()
                                     .addGap(265, 265, 265)
                                     .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(imgEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(principalLayout.createSequentialGroup()
-                                .addComponent(imgFamilia)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
-                                .addComponent(imgMaletin, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnPlantel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(principalLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(logoPreescolar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(imgFamilia)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnRepresentantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(principalLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
                         .addComponent(imgAutorizado)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAutorizados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(imgHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)))
-                .addGap(21, 21, 21))
+                        .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         busquedaEstudiantes.setPreferredSize(new java.awt.Dimension(1336, 800));
@@ -1147,14 +1103,6 @@ public void createConfPanel(){
             }
         });
 
-        btn_editarBusqEstd.setBackground(new java.awt.Color(139, 208, 194));
-        btn_editarBusqEstd.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_editarBusqEstd.setForeground(new java.awt.Color(250, 247, 239));
-        btn_editarBusqEstd.setText("Editar");
-        btn_editarBusqEstd.setMaximumSize(new java.awt.Dimension(100, 20));
-        btn_editarBusqEstd.setMinimumSize(new java.awt.Dimension(100, 20));
-        btn_editarBusqEstd.setPreferredSize(new java.awt.Dimension(100, 20));
-
         img_logoInstitucionBusqEstd.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
         img_logoInstitucionBusqEstd.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         img_logoInstitucionBusqEstd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
@@ -1176,6 +1124,19 @@ public void createConfPanel(){
             }
         });
 
+        btn_eliminarBusqEstd.setBackground(new java.awt.Color(207, 207, 207));
+        btn_eliminarBusqEstd.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btn_eliminarBusqEstd.setForeground(new java.awt.Color(250, 247, 239));
+        btn_eliminarBusqEstd.setText("Eliminar");
+        btn_eliminarBusqEstd.setMaximumSize(new java.awt.Dimension(100, 20));
+        btn_eliminarBusqEstd.setMinimumSize(new java.awt.Dimension(100, 20));
+        btn_eliminarBusqEstd.setPreferredSize(new java.awt.Dimension(100, 20));
+        btn_eliminarBusqEstd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_eliminarBusqEstdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout busquedaEstudiantesLayout = new javax.swing.GroupLayout(busquedaEstudiantes);
         busquedaEstudiantes.setLayout(busquedaEstudiantesLayout);
         busquedaEstudiantesLayout.setHorizontalGroup(
@@ -1189,23 +1150,23 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_filtroBusqEstd))
                     .addComponent(scrl_busqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 934, Short.MAX_VALUE))
-                .addGroup(busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(busquedaEstudiantesLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(img_logoInstitucionBusqEstd)
-                        .addGap(61, 61, 61))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, busquedaEstudiantesLayout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(btn_verBusqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                                .addComponent(btn_editarBusqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                                .addComponent(img_busqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(img_busqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btn_eliminarBusqEstd, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
                             .addGroup(busquedaEstudiantesLayout.createSequentialGroup()
                                 .addComponent(btn_buscarEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_inscribirEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, busquedaEstudiantesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(img_logoInstitucionBusqEstd)
+                        .addGap(53, 53, 53))))
         );
         busquedaEstudiantesLayout.setVerticalGroup(
             busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1225,13 +1186,13 @@ public void createConfPanel(){
                         .addGroup(busquedaEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn_inscribirEstd)
                             .addComponent(btn_buscarEstd))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(24, 24, 24)
                         .addComponent(img_busqEstd)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_verBusqEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_editarBusqEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_eliminarBusqEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(img_logoInstitucionBusqEstd)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
@@ -1337,14 +1298,6 @@ public void createConfPanel(){
             }
         });
 
-        btn_editarBusqRep.setBackground(new java.awt.Color(139, 208, 194));
-        btn_editarBusqRep.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_editarBusqRep.setForeground(new java.awt.Color(250, 247, 239));
-        btn_editarBusqRep.setText("Editar");
-        btn_editarBusqRep.setMaximumSize(new java.awt.Dimension(100, 20));
-        btn_editarBusqRep.setMinimumSize(new java.awt.Dimension(100, 20));
-        btn_editarBusqRep.setPreferredSize(new java.awt.Dimension(100, 20));
-
         img_logoInstitucionBusqRep.setFont(new java.awt.Font("Segoe UI", 0, 4)); // NOI18N
         img_logoInstitucionBusqRep.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         img_logoInstitucionBusqRep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_256.png"))); // NOI18N
@@ -1379,18 +1332,22 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_filtroBusqRep))
                     .addComponent(scrl_busqRep))
-                .addGap(18, 18, 18)
-                .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btn_verBusqRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
-                    .addComponent(btn_editarBusqRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, busquedaRepresentanteLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(img_busqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64))
                     .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(img_busqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(img_logoInstitucionBusqRep))
-                    .addComponent(btn_buscarRep, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(20, 20, 20))
+                        .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btn_buscarRep, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btn_verBusqRep, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)))
+                            .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(img_logoInstitucionBusqRep)))
+                        .addContainerGap())))
         );
         busquedaRepresentanteLayout.setVerticalGroup(
             busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1402,19 +1359,19 @@ public void createConfPanel(){
                     .addComponent(cmb_filtroBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_filtroBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_buscarRep))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(scrl_busqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(busquedaRepresentanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scrl_busqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 680, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(24, Short.MAX_VALUE))
+                    .addGroup(busquedaRepresentanteLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
                         .addComponent(img_busqRep)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_verBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btn_editarBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(img_logoInstitucionBusqRep, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(13, 13, 13)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGap(37, 37, 37))))
         );
 
         busquedaAutorizados.setPreferredSize(new java.awt.Dimension(1336, 800));
@@ -1446,9 +1403,9 @@ public void createConfPanel(){
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderBusqAutLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_volverBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 351, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 327, Short.MAX_VALUE)
                 .addComponent(lbl_busqAutorizado)
-                .addGap(286, 286, 286)
+                .addGap(310, 310, 310)
                 .addComponent(btn_cerrarBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
@@ -2980,32 +2937,29 @@ public void createConfPanel(){
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(check_ext_madre)))))
                         .addGap(90, 90, 90))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_ocupacion_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_direc_trabaj_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_madreLayout.createSequentialGroup()
-                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, dat_madreLayout.createSequentialGroup()
-                                .addComponent(label_ocupacion_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_direc_trabaj_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(dat_madreLayout.createSequentialGroup()
-                                .addComponent(label_correo_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_tlf_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbl_ce2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt_rutImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_aggImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(label_correo_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_tlf_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_ce2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txt_rutImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_aggImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(img_infMad, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -4382,8 +4336,7 @@ public void createConfPanel(){
                                         .addGap(18, 18, 18)
                                         .addComponent(rdb_mascNomina)
                                         .addGap(18, 18, 18)
-                                        .addComponent(rdb_femNomina)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(rdb_femNomina)))
                                 .addGap(176, 176, 176)
                                 .addComponent(jCheckBox1))
                             .addGroup(datPersNominaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4731,13 +4684,6 @@ public void createConfPanel(){
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnPlantelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlantelActionPerformed
-       panel.removeAll();
-       panel.add(busquedaNomina);
-       panel.repaint();
-       panel.validate();
-    }//GEN-LAST:event_btnPlantelActionPerformed
 
     private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
         
@@ -6404,6 +6350,10 @@ public void createConfPanel(){
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_aggImgNiñ1ActionPerformed
 
+    private void btn_eliminarBusqEstdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarBusqEstdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_eliminarBusqEstdActionPerformed
+
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
     System.exit(0); // Cierra la aplicación Java
@@ -6454,7 +6404,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btnAutorizados;
     private javax.swing.JButton btnConfiguracion;
     private javax.swing.JButton btnEstudiantes;
-    private javax.swing.JButton btnPlantel;
     private javax.swing.JButton btnRepresentantes;
     private javax.swing.JButton btn_aceptarInscripcionNiño;
     private javax.swing.JButton btn_aceptarInscripcionNomina;
@@ -6472,9 +6421,8 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btn_cerrarBusqNom;
     private javax.swing.JButton btn_cerrarBusqRep;
     private javax.swing.JButton btn_editarBusqAut;
-    private javax.swing.JButton btn_editarBusqEstd;
     private javax.swing.JButton btn_editarBusqNom;
-    private javax.swing.JButton btn_editarBusqRep;
+    private javax.swing.JButton btn_eliminarBusqEstd;
     private javax.swing.JButton btn_inscribirEstd;
     private javax.swing.JButton btn_inscribirNom;
     private javax.swing.JButton btn_repEstd;
@@ -6579,7 +6527,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel imgEstudiante;
     private javax.swing.JLabel imgFamilia;
     private javax.swing.JLabel imgHerramienta;
-    private javax.swing.JLabel imgMaletin;
     private javax.swing.JLabel imgNomina;
     private javax.swing.JLabel img_busqEstd;
     private javax.swing.JLabel img_busqNomina;

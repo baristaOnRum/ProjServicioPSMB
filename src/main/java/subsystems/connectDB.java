@@ -608,12 +608,7 @@ public class connectDB {
             }
         } else {
 
-            sql = "SELECT " +
-                    "nombres, apellidos, lugarNac, fechaNac, " +
-                    "ciestudiante, edad, menores6, estdCiv, nacionalidad, " +
-                    "direccionHab, direccionTrabj, ocupacion, gradoEstudios," +
-                    "tlf1, tlf2, tlfTrabajo, tlfCasa, correo, img, periodioCurso " +
-                    "FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
+            sql = "SELECT * FROM estudiante WHERE " + criterio + " = \'" + busquedaQuery + "\'";
             try {
                 conexion = DriverManager.getConnection(url, user, pass);
                 System.out.println("Database connection started.");
