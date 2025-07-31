@@ -3,9 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package forms;
-
+import subsystems.acceso;
+import subsystems.connectDB;
+import subsystems.utils;
 /**
- *
+ *ono
  * @author Sebastian
  */
 public class nuevoUser extends javax.swing.JFrame {
@@ -169,11 +171,29 @@ public class nuevoUser extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        //        subsystems.acceso.tipo_acceso = Integer.parseInt(jTextField2.getText());
-        //        System.out.println(subsystems.acceso.tipo_acceso);
-        //        menu_principal menu = new menu_principal();
-        //        menu.setVisible(true);
-        //        dispose();
+        acceso acc = new acceso();
+        connectDB connec = new connectDB();
+        utils util = new utils();
+
+        String usuario = jTextField2.getText();
+        String contrasena = jTextField1.getText();
+
+        String hash = util.generarHash(contrasena);
+
+        // Setea la información en acceso
+        acc.setTipo_acceso(3);
+        acc.setNombre_usuario(usuario);
+        acc.setContrasenaHash(hash);
+
+        // Guarda la información en la base de datos
+        connec.crearUsuario(acc);
+
+        menuPrincipal menu = new menuPrincipal(acc);
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+        menu.repaint();
+        menu.revalidate();
+        dispose();
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed

@@ -25,7 +25,7 @@ public class Main {
             confDBFirst conf = new confDBFirst(accesoPresente, menu);
             conf.setVisible(true);
             conf.repaint();
-            conf.validate();
+            conf.revalidate();
         }
     }
 //        if (utils.obtenerVariable("db_user").isEmpty());{
