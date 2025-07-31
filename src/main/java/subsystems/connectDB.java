@@ -913,7 +913,6 @@ public class connectDB {
             query.setString(3, autorizado.getNombres()); // nombres
             query.setString(4, autorizado.getTlf1()); // tlf
             query.setString(5, autorizado.getTlf2()); // tlf
-            query.setString(6, autorizado.getParentesco());
 
         } catch (SQLException e) {
             System.err.println("Cannot connect to the database!");
@@ -1662,7 +1661,7 @@ public class connectDB {
     }
 
     public static List<acceso> getAllAccesos() {
-        String sql = "SELECT id, usuario, hash, permiso, twoFA FROM acceso";
+        String sql = "SELECT id, usuario, hash, permiso, twoFA FROM usuarios";
         List<acceso> accesos = new ArrayList<>();
 
         try (Connection conn = DriverManager.getConnection(url, user, pass);
