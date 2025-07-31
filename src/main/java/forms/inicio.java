@@ -12,140 +12,162 @@ public class inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        label1 = new java.awt.Label();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        button1 = new java.awt.Button();
+        headder = new javax.swing.JPanel();
+        icn_logoInstitucion = new javax.swing.JLabel();
+        txt_nombreInstituto = new javax.swing.JTextPane();
+        pnl_inicio = new javax.swing.JPanel();
+        lbl_usr = new javax.swing.JLabel();
+        txt_usr = new javax.swing.JTextField();
+        lbl_contras = new javax.swing.JLabel();
+        pass_contrass = new javax.swing.JPasswordField();
+        btn_iniciar = new javax.swing.JButton();
+        tgl_verContrass = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(139, 208, 194));
         setMinimumSize(new java.awt.Dimension(300, 180));
 
-        jPanel1.setBackground(new java.awt.Color(27, 120, 101));
-        jPanel1.setMinimumSize(new java.awt.Dimension(300, 100));
+        headder.setBackground(new java.awt.Color(27, 120, 101));
+        headder.setMinimumSize(new java.awt.Dimension(300, 100));
 
-        label1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        label1.setForeground(new java.awt.Color(250, 247, 239));
-        label1.setText("Inicio de sesion");
+        icn_logoInstitucion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icn_logoInstitucion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/logo_inst_128.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        txt_nombreInstituto.setEditable(false);
+        txt_nombreInstituto.setBackground(new java.awt.Color(27, 120, 101));
+        txt_nombreInstituto.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        txt_nombreInstituto.setFont(new java.awt.Font("Sitka Text", 1, 18)); // NOI18N
+        txt_nombreInstituto.setForeground(new java.awt.Color(255, 255, 255));
+        txt_nombreInstituto.setText("    Centro de Educacion Inicial\n           \"Arnoldo Gabaldo\"");
+
+        javax.swing.GroupLayout headderLayout = new javax.swing.GroupLayout(headder);
+        headder.setLayout(headderLayout);
+        headderLayout.setHorizontalGroup(
+            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headderLayout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addComponent(icn_logoInstitucion)
+                .addGap(38, 38, 38)
+                .addComponent(txt_nombreInstituto, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(label1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        headderLayout.setVerticalGroup(
+            headderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(icn_logoInstitucion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(headderLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(txt_nombreInstituto)
+                .addGap(44, 44, 44))
         );
 
-        jPanel2.setBackground(new java.awt.Color(197, 232, 225));
-        jPanel2.setMinimumSize(new java.awt.Dimension(300, 100));
+        pnl_inicio.setBackground(new java.awt.Color(197, 232, 225));
+        pnl_inicio.setMinimumSize(new java.awt.Dimension(300, 100));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Usuario");
+        lbl_usr.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbl_usr.setText("Usuario");
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txt_usr.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txt_usr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txt_usrActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Contraseña");
+        lbl_contras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbl_contras.setText("Contraseña");
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-
-        button1.setBackground(new java.awt.Color(27, 120, 101));
-        button1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        button1.setForeground(new java.awt.Color(250, 247, 239));
-        button1.setLabel("Ingresar");
-        button1.addActionListener(new java.awt.event.ActionListener() {
+        pass_contrass.setEchoChar('*');
+        pass_contrass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
+                pass_contrassActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        btn_iniciar.setText("Iniciar secion");
+
+        tgl_verContrass.setText("Ver Contraseña");
+        tgl_verContrass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tgl_verContrassActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_inicioLayout = new javax.swing.GroupLayout(pnl_inicio);
+        pnl_inicio.setLayout(pnl_inicioLayout);
+        pnl_inicioLayout.setHorizontalGroup(
+            pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_inicioLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_usr)
+                    .addComponent(lbl_contras))
+                .addGap(12, 12, 12)
+                .addGroup(pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_usr)
+                    .addComponent(pass_contrass))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_iniciar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tgl_verContrass, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
                 .addContainerGap())
         );
-
-        button1.getAccessibleContext().setAccessibleName("ingresarbut");
+        pnl_inicioLayout.setVerticalGroup(
+            pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_inicioLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_usr)
+                        .addComponent(txt_usr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_iniciar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_contras)
+                    .addComponent(tgl_verContrass)
+                    .addComponent(pass_contrass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(pnl_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(headder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(headder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnl_inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-//        subsystems.acceso.tipo_acceso = Integer.parseInt(jTextField2.getText());
-//        System.out.println(subsystems.acceso.tipo_acceso);
-//        menu_principal menu = new menu_principal();
-//        menu.setVisible(true);
-//        dispose();
-    }//GEN-LAST:event_button1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txt_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txt_usrActionPerformed
+
+    private void tgl_verContrassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tgl_verContrassActionPerformed
+        if (tgl_verContrass.isSelected()){
+            tgl_verContrass.setText("Ocultar contraseña");
+            pass_contrass.setEchoChar((char)0);
+        }else{
+            tgl_verContrass.setText("Ver contraseña");
+            pass_contrass.setEchoChar('*');
+        }
+        
+    }//GEN-LAST:event_tgl_verContrassActionPerformed
+
+    private void pass_contrassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pass_contrassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pass_contrassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,13 +195,15 @@ public class inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button button1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private java.awt.Label label1;
+    private javax.swing.JButton btn_iniciar;
+    private javax.swing.JPanel headder;
+    private javax.swing.JLabel icn_logoInstitucion;
+    private javax.swing.JLabel lbl_contras;
+    private javax.swing.JLabel lbl_usr;
+    private javax.swing.JPasswordField pass_contrass;
+    private javax.swing.JPanel pnl_inicio;
+    private javax.swing.JToggleButton tgl_verContrass;
+    private javax.swing.JTextPane txt_nombreInstituto;
+    private javax.swing.JTextField txt_usr;
     // End of variables declaration//GEN-END:variables
 }
