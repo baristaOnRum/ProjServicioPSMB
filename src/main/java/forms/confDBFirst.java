@@ -194,10 +194,12 @@ public class confDBFirst extends javax.swing.JFrame {
         if (jTextField1.getText() != null){
             utils.guardarVariable("url_db", "jdbc:mysql://" + jTextField1.getText());
             accesoChild.setConnURL("jdbc:mysql://" + jTextField1.getText());
+            System.out.println("url creada");
         } else {JOptionPane.showMessageDialog(this, "Por favor ingrese una URL", "Error", JOptionPane.WARNING_MESSAGE); return;}
         
         if (jTextField2.getText() != null){
             accesoChild.setUserDB(jTextField2.getText());
+            System.out.println("usuario creado");
         } else {JOptionPane.showMessageDialog(this, "Por favor ingrese un usuario", "Error", JOptionPane.WARNING_MESSAGE); return;}
 
         try {
@@ -208,6 +210,7 @@ public class confDBFirst extends javax.swing.JFrame {
             }
         passF = pass.toString();
         accesoChild.setPassDB(passF);
+        System.out.println("pass creada");
             } catch (NullPointerException e){
             JOptionPane.showMessageDialog(this, "Error", "Por favor ingrese una contraseña", JOptionPane.WARNING_MESSAGE);
             return;
@@ -217,12 +220,13 @@ public class confDBFirst extends javax.swing.JFrame {
             if (checkConn(accesoChild)){
                 connectDB.connparamsinit(accesoChild);
 
-                    JOptionPane.showMessageDialog(this, "No se encontraron accesos en la base de datos. Por favor, cree un usuario administrador.", "Error", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Se ha creado el acceso a la base de datos correctamente.", "Exito", JOptionPane.WARNING_MESSAGE);
                     nuevoUser nuevo = new nuevoUser();
                     nuevo.setVisible(true);
                     nuevo.setLocationRelativeTo(null);
                     nuevo.repaint();
                     nuevo.revalidate();
+                    dispose();
 
             } else{
                 JOptionPane.showMessageDialog(new javax.swing.JFrame(), "Por favor ingrese datos de conexión válidos", "Error", JOptionPane.WARNING_MESSAGE);
