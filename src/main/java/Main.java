@@ -21,22 +21,28 @@ public class Main {
     private static void checkInit(acceso accesoPresente, menuPrincipal menu){
         //Verificamos existencia de DB
 
-        if (utils.obtenerVariable("db_url") == null){
-            //Inicializar la creacion de el usuario de DB
+        if (utils.obtenerVariable("db_url") == null || utils.obtenerVariable("db_url") == ""){
+            String connDB = "jdbc:mysql://";
+            connDB = connDB + utils.obtenerVariable("db_url"); accesoPresente.setConnURL(connDB);
+            //Inicializar la DB
             confDBFirst conf = new confDBFirst(accesoPresente, menu);
             conf.setVisible(true);
             conf.repaint();
             conf.revalidate();
-        }
-        else {
-            //Inicializar el inicio de sesion de el usuario en la DB
-            confDBF ini = new confDBF(accesoPresente, menu);
-            ini.setVisible(true);
-            ini.repaint();
-            ini.revalidate();
+        } else {
+            accesoPresente.setConnURL(utils.obtenerVariable("db_url"));
+            confDBF conf = new confDBF(accesoPresente, menu);
+            conf.setVisible(true);
+            conf.repaint();
+            conf.revalidate();
         }
     }
-
+//        if (utils.obtenerVariable("db_user").isEmpty());{
+//                if (!utils.obtenerVariable("db_user").isEmpty()){
+//                    setAcceso(utils.obtenerVariable("db_url"),
+//                            utils.obtenerVariable("db_user"), accesoPresente);
+//                    }
+//                }
 
     private static acceso setAcceso(String urlDB, String userDB, acceso acceso){
         //TODO: Llamar al inicio de sesión, devolver un acceso válido;
