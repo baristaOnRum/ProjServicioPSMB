@@ -21,7 +21,7 @@ public class Main {
     private static void checkInit(acceso accesoPresente, menuPrincipal menu){
         //Verificamos existencia de DB
 
-        if (utils.obtenerVariable("db_url") == null || utils.obtenerVariable("db_url") == ""){
+        if (connectDB.getAllAccesos().isEmpty()){
             String connDB = "jdbc:mysql://";
             connDB = connDB + utils.obtenerVariable("db_url"); accesoPresente.setConnURL(connDB);
             //Inicializar la DB
