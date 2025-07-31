@@ -1557,7 +1557,7 @@ public class connectDB {
 
     public static void crearUsuario(acceso acceso) {
 
-        String sql = "INSERT INTO usuario (usuario, hash, permiso, twoFact) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO usuario (usuario, hash, permiso, twoFA) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {

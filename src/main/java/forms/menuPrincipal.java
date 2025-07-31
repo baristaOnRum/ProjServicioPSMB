@@ -557,55 +557,6 @@ public void createConfPanel(){
         img_infMad = new javax.swing.JLabel();
         lbl_ce2 = new javax.swing.JLabel();
         txt_rutImgMad = new javax.swing.JTextField();
-        dat_padre = new javax.swing.JPanel();
-        label_apellido_padre = new javax.swing.JLabel();
-        text_apellidos_padre = new javax.swing.JTextField();
-        label_nombes_padre = new javax.swing.JLabel();
-        text_nombres_padre = new javax.swing.JTextField();
-        label_ci_padre = new javax.swing.JLabel();
-        text_ci_padre = new javax.swing.JTextField();
-        label_estadociv_padre = new javax.swing.JLabel();
-        check_s_padre = new javax.swing.JCheckBox();
-        check_c_padre = new javax.swing.JCheckBox();
-        check_d_padre = new javax.swing.JCheckBox();
-        check_v_padre = new javax.swing.JCheckBox();
-        label_fec_nac_padre = new javax.swing.JLabel();
-        label_edad_padre = new javax.swing.JLabel();
-        text_edad_padre = new javax.swing.JTextField();
-        label_lugar_nac_padre = new javax.swing.JLabel();
-        text_lugar_nac_padre = new javax.swing.JTextField();
-        label_nacionalidad_padre = new javax.swing.JLabel();
-        check_ven_padre = new javax.swing.JCheckBox();
-        check_ext_padre = new javax.swing.JCheckBox();
-        label_direc_hab_padre = new javax.swing.JLabel();
-        text_direc_hab_padre = new javax.swing.JTextField();
-        label_grado_padre = new javax.swing.JLabel();
-        check_no_bachiller_padre = new javax.swing.JCheckBox();
-        chec_bachiller_padre = new javax.swing.JCheckBox();
-        check_tsu_padre = new javax.swing.JCheckBox();
-        check_superior_padre = new javax.swing.JCheckBox();
-        label_ocupacion_padre = new javax.swing.JLabel();
-        text_ocupacion_padre = new javax.swing.JTextField();
-        label_direc_trabaj_padre = new javax.swing.JLabel();
-        text_direc_trabj_padre = new javax.swing.JTextField();
-        label_correo_padre = new javax.swing.JLabel();
-        text_correo_padre = new javax.swing.JTextField();
-        label_tlf_padre = new javax.swing.JLabel();
-        text_tlf_padre = new javax.swing.JTextField();
-        repLegalPadre = new javax.swing.JLabel();
-        repLegalPadreCheckbox = new javax.swing.JCheckBox();
-        parentescoPadreTexto = new javax.swing.JLabel();
-        fieldParentescoPadre = new javax.swing.JTextField();
-        diaNacNiñLbl2 = new javax.swing.JLabel();
-        diaNacPadreField = new javax.swing.JTextField();
-        mesNacNiñLbl2 = new javax.swing.JLabel();
-        mesNacPadreField = new javax.swing.JTextField();
-        añoNacNiñLbl2 = new javax.swing.JLabel();
-        añoNacPadreField = new javax.swing.JTextField();
-        txt_rutImgPadre = new javax.swing.JTextField();
-        lbl_ce3 = new javax.swing.JLabel();
-        btn_aggImgPadre = new javax.swing.JButton();
-        img_infPadre = new javax.swing.JLabel();
         dat_rep = new javax.swing.JPanel();
         label_apellido_rep = new javax.swing.JLabel();
         text_apellidos_rep = new javax.swing.JTextField();
@@ -684,6 +635,55 @@ public void createConfPanel(){
         check_c_padres = new javax.swing.JCheckBox();
         check_d_padres = new javax.swing.JCheckBox();
         check_v_padres = new javax.swing.JCheckBox();
+        dat_padre = new javax.swing.JPanel();
+        label_apellido_padre = new javax.swing.JLabel();
+        text_apellidos_padre = new javax.swing.JTextField();
+        label_nombes_padre = new javax.swing.JLabel();
+        text_nombres_padre = new javax.swing.JTextField();
+        label_ci_padre = new javax.swing.JLabel();
+        text_ci_padre = new javax.swing.JTextField();
+        label_estadociv_padre = new javax.swing.JLabel();
+        check_s_padre = new javax.swing.JCheckBox();
+        check_c_padre = new javax.swing.JCheckBox();
+        check_d_padre = new javax.swing.JCheckBox();
+        check_v_padre = new javax.swing.JCheckBox();
+        label_fec_nac_padre = new javax.swing.JLabel();
+        label_edad_padre = new javax.swing.JLabel();
+        text_edad_padre = new javax.swing.JTextField();
+        label_lugar_nac_padre = new javax.swing.JLabel();
+        text_lugar_nac_padre = new javax.swing.JTextField();
+        label_nacionalidad_padre = new javax.swing.JLabel();
+        check_ven_padre = new javax.swing.JCheckBox();
+        check_ext_padre = new javax.swing.JCheckBox();
+        label_direc_hab_padre = new javax.swing.JLabel();
+        text_direc_hab_padre = new javax.swing.JTextField();
+        label_grado_padre = new javax.swing.JLabel();
+        check_no_bachiller_padre = new javax.swing.JCheckBox();
+        chec_bachiller_padre = new javax.swing.JCheckBox();
+        check_tsu_padre = new javax.swing.JCheckBox();
+        check_superior_padre = new javax.swing.JCheckBox();
+        label_ocupacion_padre = new javax.swing.JLabel();
+        text_ocupacion_padre = new javax.swing.JTextField();
+        label_direc_trabaj_padre = new javax.swing.JLabel();
+        text_direc_trabj_padre = new javax.swing.JTextField();
+        label_correo_padre = new javax.swing.JLabel();
+        text_correo_padre = new javax.swing.JTextField();
+        label_tlf_padre = new javax.swing.JLabel();
+        text_tlf_padre = new javax.swing.JTextField();
+        repLegalPadre = new javax.swing.JLabel();
+        repLegalPadreCheckbox = new javax.swing.JCheckBox();
+        parentescoPadreTexto = new javax.swing.JLabel();
+        fieldParentescoPadre = new javax.swing.JTextField();
+        diaNacNiñLbl2 = new javax.swing.JLabel();
+        diaNacPadreField = new javax.swing.JTextField();
+        mesNacNiñLbl2 = new javax.swing.JLabel();
+        mesNacPadreField = new javax.swing.JTextField();
+        añoNacNiñLbl2 = new javax.swing.JLabel();
+        añoNacPadreField = new javax.swing.JTextField();
+        txt_rutImgPadre = new javax.swing.JTextField();
+        lbl_ce3 = new javax.swing.JLabel();
+        btn_aggImgPadre = new javax.swing.JButton();
+        img_infPadre = new javax.swing.JLabel();
         panelDocumentosEstd = new javax.swing.JPanel();
         label_originales = new javax.swing.JLabel();
         check_originales = new javax.swing.JCheckBox();
@@ -1462,7 +1462,7 @@ public void createConfPanel(){
         informacionEstudiante.setPreferredSize(new java.awt.Dimension(1336, 800));
 
         headderEstudiante.setBackground(new java.awt.Color(27, 120, 101));
-        headderEstudiante.setPreferredSize(new java.awt.Dimension(1000, 32));
+        headderEstudiante.setPreferredSize(new java.awt.Dimension(1336, 32));
 
         lbl_headderEstudiante.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lbl_headderEstudiante.setForeground(new java.awt.Color(250, 247, 239));
@@ -1498,20 +1498,19 @@ public void createConfPanel(){
         );
         headderEstudianteLayout.setVerticalGroup(
             headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(headderEstudianteLayout.createSequentialGroup()
-                .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderEstudianteLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lbl_headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(headderEstudianteLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn_repEstd1)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headderEstudianteLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lbl_headderEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(headderEstudianteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_repEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(headderEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(headderEstudianteLayout.createSequentialGroup()
+                        .addComponent(btn_repEstd1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(9, 9, 9))
+                    .addGroup(headderEstudianteLayout.createSequentialGroup()
+                        .addComponent(btn_repEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         img_infEstudiante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1672,30 +1671,6 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txt_nacionalidadNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(datosEstdLayout.createSequentialGroup()
-                        .addComponent(label_tallas_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_camisa_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_tall_pantalon_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_tall_zapato_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_medidas_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label_peso_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(label_estatura_niñ)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(datosEstdLayout.createSequentialGroup()
                         .addComponent(lbl_nombreNiñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_nombreNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1726,7 +1701,7 @@ public void createConfPanel(){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label_edad_niñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(text_edad_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_lugarNacNiñ)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1736,7 +1711,7 @@ public void createConfPanel(){
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, datosEstdLayout.createSequentialGroup()
                                 .addComponent(lbl_edadCaminar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_edadCaminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_edadCaminar, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbl_lateralidad)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1762,8 +1737,32 @@ public void createConfPanel(){
                                 .addGap(18, 18, 18)
                                 .addComponent(radio_guarderia_niñ)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(radio_otros_niñ)))
-                .addContainerGap(116, Short.MAX_VALUE))
+                        .addComponent(radio_otros_niñ))
+                    .addGroup(datosEstdLayout.createSequentialGroup()
+                        .addComponent(label_tallas_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_camisa_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tall_camisa_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_tall_pantalon_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tall_pantalon_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_tall_zapato_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_tall_zapato_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_medidas_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_peso_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_peso_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label_estatura_niñ)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_estatura_niñ, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         datosEstdLayout.setVerticalGroup(
             datosEstdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2371,7 +2370,7 @@ public void createConfPanel(){
                                     .addComponent(rdo_orinaRopaDiaNo)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(rdo_orinaRopaDiaAvece))))))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         otrosLayout.setVerticalGroup(
             otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2647,6 +2646,16 @@ public void createConfPanel(){
                 .addContainerGap()
                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dat_madreLayout.createSequentialGroup()
+                        .addComponent(label_grado_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_no_bachiller_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chec_bachiller_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_tsu_madre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(check_superior_madre))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
                         .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(dat_madreLayout.createSequentialGroup()
                                 .addComponent(label_apellido_madre)
@@ -2708,54 +2717,52 @@ public void createConfPanel(){
                         .addComponent(repLegalLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(repLegalMadreCheckbox)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(parentescoMadreTexto)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(fieldParentescoMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dat_madreLayout.createSequentialGroup()
-                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(dat_madreLayout.createSequentialGroup()
-                                .addComponent(label_grado_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_no_bachiller_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chec_bachiller_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_tsu_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_superior_madre))
-                            .addGroup(dat_madreLayout.createSequentialGroup()
-                                .addComponent(label_ocupacion_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_direc_trabaj_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_madreLayout.createSequentialGroup()
                                 .addComponent(label_correo_madre)
+                                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(dat_madreLayout.createSequentialGroup()
+                                        .addGap(268, 268, 268)
+                                        .addComponent(label_direc_trabaj_madre))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, dat_madreLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(text_ocupacion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_madreLayout.createSequentialGroup()
+                                                .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(label_tlf_madre)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_tlf_madre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(173, 173, 173)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+                                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(text_tlf_madre, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                                    .addComponent(text_direc_trabj_madre)))
+                            .addComponent(label_ocupacion_madre))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                         .addComponent(lbl_ce2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_rutImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_aggImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_rutImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(dat_madreLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_aggImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_infMad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(img_infMad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         dat_madreLayout.setVerticalGroup(
             dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dat_madreLayout.createSequentialGroup()
-                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dat_madreLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addComponent(img_infMad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(dat_madreLayout.createSequentialGroup()
                         .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(text_apellidos_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(label_apellido_madre)
@@ -2786,7 +2793,7 @@ public void createConfPanel(){
                                 .addComponent(label_nacionalidad_madre)
                                 .addComponent(check_ven_madre)
                                 .addComponent(check_ext_madre)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(dat_madreLayout.createSequentialGroup()
                                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2796,10 +2803,12 @@ public void createConfPanel(){
                                         .addComponent(repLegalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_madreLayout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(repLegalMadreCheckbox))
+                                    .addGroup(dat_madreLayout.createSequentialGroup()
                                         .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(parentescoMadreTexto)
-                                            .addComponent(fieldParentescoMadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(repLegalMadreCheckbox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(fieldParentescoMadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(label_grado_madre)
@@ -2814,389 +2823,22 @@ public void createConfPanel(){
                                     .addComponent(label_direc_trabaj_madre)
                                     .addComponent(text_direc_trabj_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(label_tlf_madre)
-                                        .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(label_correo_madre)
-                                        .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_correo_madre)
+                                    .addComponent(text_correo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(label_tlf_madre)
+                                    .addComponent(text_tlf_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_madreLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lbl_ce2)
-                                        .addComponent(txt_rutImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(btn_aggImgMad)))))
-                    .addComponent(img_infMad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
-
-        panelRepresentanteEstd.addTab("Datos Madre", dat_madre);
-
-        dat_padre.setBackground(new java.awt.Color(204, 255, 255));
-        dat_padre.setPreferredSize(new java.awt.Dimension(600, 450));
-
-        label_apellido_padre.setText("Apellidos");
-
-        text_apellidos_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_apellidos_padreActionPerformed(evt);
-            }
-        });
-
-        label_nombes_padre.setText("Nombres");
-
-        text_nombres_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_nombres_padreActionPerformed(evt);
-            }
-        });
-
-        label_ci_padre.setText("C.I");
-
-        label_estadociv_padre.setText("Estado Civil");
-
-        check_s_padre.setText("S");
-        check_s_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_s_padreActionPerformed(evt);
-            }
-        });
-
-        check_c_padre.setText("C");
-        check_c_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_c_padreActionPerformed(evt);
-            }
-        });
-
-        check_d_padre.setText("D");
-        check_d_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_d_padreActionPerformed(evt);
-            }
-        });
-
-        check_v_padre.setText("V");
-        check_v_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_v_padreActionPerformed(evt);
-            }
-        });
-
-        label_fec_nac_padre.setText("Fecha Nacimiento");
-
-        label_edad_padre.setText("Edad");
-
-        label_lugar_nac_padre.setText("Lugar de Nacimiento");
-
-        text_lugar_nac_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_lugar_nac_padreActionPerformed(evt);
-            }
-        });
-
-        label_nacionalidad_padre.setText("Nacionalidad");
-
-        check_ven_padre.setText("V");
-        check_ven_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_ven_padreActionPerformed(evt);
-            }
-        });
-
-        check_ext_padre.setText("E");
-        check_ext_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_ext_padreActionPerformed(evt);
-            }
-        });
-
-        label_direc_hab_padre.setText("Direccion de Habitacion");
-
-        text_direc_hab_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_direc_hab_padreActionPerformed(evt);
-            }
-        });
-
-        label_grado_padre.setText("Grado de instruccion:");
-
-        check_no_bachiller_padre.setText("No Bachiller");
-        check_no_bachiller_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_no_bachiller_padreActionPerformed(evt);
-            }
-        });
-
-        chec_bachiller_padre.setText("Bachiller");
-        chec_bachiller_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chec_bachiller_padreActionPerformed(evt);
-            }
-        });
-
-        check_tsu_padre.setText("TSU");
-        check_tsu_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_tsu_padreActionPerformed(evt);
-            }
-        });
-
-        check_superior_padre.setText("Superior");
-        check_superior_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_superior_padreActionPerformed(evt);
-            }
-        });
-
-        label_ocupacion_padre.setText("Ocupacion");
-
-        label_direc_trabaj_padre.setText("Direccion de Trabajo");
-
-        label_correo_padre.setText("Correo Electronico");
-
-        text_correo_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_correo_padreActionPerformed(evt);
-            }
-        });
-
-        label_tlf_padre.setText("TLF");
-
-        text_tlf_padre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_tlf_padreActionPerformed(evt);
-            }
-        });
-
-        repLegalPadre.setText("Representante legal");
-
-        repLegalPadreCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                repLegalPadreCheckboxActionPerformed(evt);
-            }
-        });
-
-        parentescoPadreTexto.setText("Parentesco");
-
-        fieldParentescoPadre.setEditable(false);
-        fieldParentescoPadre.setText("Padre");
-        fieldParentescoPadre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldParentescoPadreActionPerformed(evt);
-            }
-        });
-
-        diaNacNiñLbl2.setText("DD:");
-
-        mesNacNiñLbl2.setText("MM:");
-
-        añoNacNiñLbl2.setText("AÑO:");
-
-        txt_rutImgPadre.setEditable(false);
-
-        lbl_ce3.setText("Ruta:");
-
-        btn_aggImgPadre.setText("Agregar Imagen");
-        btn_aggImgPadre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_aggImgPadreActionPerformed(evt);
-            }
-        });
-
-        img_infPadre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        img_infPadre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
-        img_infPadre.setMinimumSize(new java.awt.Dimension(0, 0));
-        img_infPadre.setPreferredSize(new java.awt.Dimension(196, 196));
-
-        javax.swing.GroupLayout dat_padreLayout = new javax.swing.GroupLayout(dat_padre);
-        dat_padre.setLayout(dat_padreLayout);
-        dat_padreLayout.setHorizontalGroup(
-            dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_padreLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dat_padreLayout.createSequentialGroup()
-                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dat_padreLayout.createSequentialGroup()
-                                .addComponent(label_grado_padre)
+                                .addGroup(dat_madreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txt_rutImgMad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl_ce2))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_no_bachiller_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chec_bachiller_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_tsu_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_superior_padre))
-                            .addGroup(dat_padreLayout.createSequentialGroup()
-                                .addComponent(label_direc_hab_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(repLegalPadre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(repLegalPadreCheckbox)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(parentescoPadreTexto)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(dat_padreLayout.createSequentialGroup()
-                                .addComponent(label_ocupacion_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_ocupacion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_direc_trabaj_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_direc_trabj_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(dat_padreLayout.createSequentialGroup()
-                                .addComponent(label_apellido_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_nombes_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_ci_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_estadociv_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(check_s_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_c_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_d_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_v_padre))
-                            .addGroup(dat_padreLayout.createSequentialGroup()
-                                .addComponent(label_fec_nac_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(diaNacNiñLbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(diaNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mesNacNiñLbl2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mesNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(añoNacNiñLbl2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(añoNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(label_edad_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_lugar_nac_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(label_nacionalidad_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ven_padre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(check_ext_padre)))
-                        .addGap(67, 67, 67))
-                    .addGroup(dat_padreLayout.createSequentialGroup()
-                        .addComponent(label_correo_padre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(label_tlf_padre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbl_ce3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_rutImgPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_aggImgPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(img_infPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        dat_padreLayout.setVerticalGroup(
-            dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dat_padreLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dat_padreLayout.createSequentialGroup()
-                        .addComponent(img_infPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(dat_padreLayout.createSequentialGroup()
-                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_apellido_padre)
-                            .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_nombes_padre)
-                            .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_ci_padre)
-                            .addComponent(label_estadociv_padre)
-                            .addComponent(check_s_padre)
-                            .addComponent(check_c_padre)
-                            .addComponent(check_d_padre)
-                            .addComponent(check_v_padre))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(label_edad_padre)
-                                .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(label_lugar_nac_padre)
-                                .addComponent(label_nacionalidad_padre)
-                                .addComponent(check_ven_padre)
-                                .addComponent(check_ext_padre))
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(diaNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(mesNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(añoNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(diaNacNiñLbl2)
-                                .addComponent(mesNacNiñLbl2)
-                                .addComponent(añoNacNiñLbl2))
-                            .addComponent(label_fec_nac_padre))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(repLegalPadre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label_direc_hab_padre)
-                                    .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(repLegalPadreCheckbox)
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(parentescoPadreTexto)
-                                .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(7, 7, 7)
-                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(label_grado_padre)
-                            .addComponent(check_no_bachiller_padre)
-                            .addComponent(chec_bachiller_padre)
-                            .addComponent(check_tsu_padre)
-                            .addComponent(check_superior_padre))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(text_ocupacion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_ocupacion_padre)
-                            .addComponent(label_direc_trabaj_padre)
-                            .addComponent(text_direc_trabj_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btn_aggImgPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbl_ce3)
-                                .addComponent(txt_rutImgPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(label_correo_padre)
-                                .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(label_tlf_padre)
-                                .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btn_aggImgMad)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        panelRepresentanteEstd.addTab("Datos Padre", dat_padre);
+        panelRepresentanteEstd.addTab("Datos Madre", dat_madre);
 
         dat_rep.setBackground(new java.awt.Color(204, 204, 255));
         dat_rep.setPreferredSize(new java.awt.Dimension(600, 420));
@@ -3584,12 +3226,12 @@ public void createConfPanel(){
                 .addGroup(dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_autRetiro)
                     .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(518, Short.MAX_VALUE))
+                .addContainerGap(515, Short.MAX_VALUE))
         );
         dat_autLayout.setVerticalGroup(
             dat_autLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dat_autLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(lbl_autRetiro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrl_autRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3737,14 +3379,14 @@ public void createConfPanel(){
                                 .addComponent(check_d_padres)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(check_v_padres)))
-                        .addContainerGap(198, Short.MAX_VALUE))
+                        .addContainerGap(195, Short.MAX_VALUE))
                     .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
                                 .addComponent(chk_otroConsult)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_otroConsult, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
+                                .addComponent(txt_otroConsult, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE))
                             .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
                                 .addComponent(chk_pspg)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3787,7 +3429,7 @@ public void createConfPanel(){
                     .addComponent(lbl_consultas))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrl_familiarExtra, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                    .addComponent(scrl_familiarExtra, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
                     .addGroup(dat_socioFamiliaresLayout.createSequentialGroup()
                         .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chk_pspg)
@@ -3798,11 +3440,392 @@ public void createConfPanel(){
                         .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chk_otroConsult)
                             .addComponent(txt_otroConsult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 47, Short.MAX_VALUE)))
+                        .addGap(0, 48, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         panelRepresentanteEstd.addTab("Ambiente Socio Familiar", dat_socioFamiliares);
+
+        dat_padre.setBackground(new java.awt.Color(204, 255, 255));
+        dat_padre.setPreferredSize(new java.awt.Dimension(600, 450));
+
+        label_apellido_padre.setText("Apellidos");
+
+        text_apellidos_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_apellidos_padreActionPerformed(evt);
+            }
+        });
+
+        label_nombes_padre.setText("Nombres");
+
+        text_nombres_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_nombres_padreActionPerformed(evt);
+            }
+        });
+
+        label_ci_padre.setText("C.I");
+
+        label_estadociv_padre.setText("Estado Civil");
+
+        check_s_padre.setText("S");
+        check_s_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_s_padreActionPerformed(evt);
+            }
+        });
+
+        check_c_padre.setText("C");
+        check_c_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_c_padreActionPerformed(evt);
+            }
+        });
+
+        check_d_padre.setText("D");
+        check_d_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_d_padreActionPerformed(evt);
+            }
+        });
+
+        check_v_padre.setText("V");
+        check_v_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_v_padreActionPerformed(evt);
+            }
+        });
+
+        label_fec_nac_padre.setText("Fecha Nacimiento");
+
+        label_edad_padre.setText("Edad");
+
+        label_lugar_nac_padre.setText("Lugar de Nacimiento");
+
+        text_lugar_nac_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_lugar_nac_padreActionPerformed(evt);
+            }
+        });
+
+        label_nacionalidad_padre.setText("Nacionalidad");
+
+        check_ven_padre.setText("V");
+        check_ven_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ven_padreActionPerformed(evt);
+            }
+        });
+
+        check_ext_padre.setText("E");
+        check_ext_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_ext_padreActionPerformed(evt);
+            }
+        });
+
+        label_direc_hab_padre.setText("Direccion de Habitacion");
+
+        text_direc_hab_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_direc_hab_padreActionPerformed(evt);
+            }
+        });
+
+        label_grado_padre.setText("Grado de instruccion:");
+
+        check_no_bachiller_padre.setText("No Bachiller");
+        check_no_bachiller_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_no_bachiller_padreActionPerformed(evt);
+            }
+        });
+
+        chec_bachiller_padre.setText("Bachiller");
+        chec_bachiller_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chec_bachiller_padreActionPerformed(evt);
+            }
+        });
+
+        check_tsu_padre.setText("TSU");
+        check_tsu_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_tsu_padreActionPerformed(evt);
+            }
+        });
+
+        check_superior_padre.setText("Superior");
+        check_superior_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check_superior_padreActionPerformed(evt);
+            }
+        });
+
+        label_ocupacion_padre.setText("Ocupacion");
+
+        label_direc_trabaj_padre.setText("Direccion de Trabajo");
+
+        label_correo_padre.setText("Correo Electronico");
+
+        text_correo_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_correo_padreActionPerformed(evt);
+            }
+        });
+
+        label_tlf_padre.setText("TLF");
+
+        text_tlf_padre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_tlf_padreActionPerformed(evt);
+            }
+        });
+
+        repLegalPadre.setText("Representante legal");
+
+        repLegalPadreCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                repLegalPadreCheckboxActionPerformed(evt);
+            }
+        });
+
+        parentescoPadreTexto.setText("Parentesco");
+
+        fieldParentescoPadre.setEditable(false);
+        fieldParentescoPadre.setText("Padre");
+        fieldParentescoPadre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldParentescoPadreActionPerformed(evt);
+            }
+        });
+
+        diaNacNiñLbl2.setText("DD:");
+
+        mesNacNiñLbl2.setText("MM:");
+
+        añoNacNiñLbl2.setText("AÑO:");
+
+        txt_rutImgPadre.setEditable(false);
+
+        lbl_ce3.setText("Ruta:");
+
+        btn_aggImgPadre.setText("Agregar Imagen");
+        btn_aggImgPadre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aggImgPadreActionPerformed(evt);
+            }
+        });
+
+        img_infPadre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        img_infPadre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/set1/user-line_240.png"))); // NOI18N
+        img_infPadre.setMinimumSize(new java.awt.Dimension(0, 0));
+        img_infPadre.setPreferredSize(new java.awt.Dimension(196, 196));
+
+        javax.swing.GroupLayout dat_padreLayout = new javax.swing.GroupLayout(dat_padre);
+        dat_padre.setLayout(dat_padreLayout);
+        dat_padreLayout.setHorizontalGroup(
+            dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_padreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_padreLayout.createSequentialGroup()
+                                .addComponent(label_apellido_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_nombes_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_ci_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_estadociv_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(check_s_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_c_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_d_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_v_padre))
+                            .addGroup(dat_padreLayout.createSequentialGroup()
+                                .addComponent(label_grado_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_no_bachiller_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chec_bachiller_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_tsu_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(check_superior_padre))
+                            .addGroup(dat_padreLayout.createSequentialGroup()
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(dat_padreLayout.createSequentialGroup()
+                                        .addGap(52, 52, 52)
+                                        .addComponent(label_ocupacion_padre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_ocupacion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(dat_padreLayout.createSequentialGroup()
+                                        .addGap(129, 129, 129)
+                                        .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(label_direc_trabaj_padre)
+                                    .addComponent(label_tlf_padre, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(text_direc_trabj_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(238, 238, 238))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_padreLayout.createSequentialGroup()
+                                .addComponent(label_correo_padre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 567, Short.MAX_VALUE)
+                                .addComponent(lbl_ce3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_rutImgPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_aggImgPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dat_padreLayout.createSequentialGroup()
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, dat_padreLayout.createSequentialGroup()
+                                        .addComponent(label_direc_hab_padre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(repLegalPadre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(repLegalPadreCheckbox)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(parentescoPadreTexto)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fieldParentescoPadre))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, dat_padreLayout.createSequentialGroup()
+                                        .addComponent(label_fec_nac_padre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(diaNacNiñLbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(diaNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mesNacNiñLbl2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mesNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(añoNacNiñLbl2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(añoNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(label_edad_padre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(label_lugar_nac_padre)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(dat_padreLayout.createSequentialGroup()
+                                        .addComponent(label_nacionalidad_padre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(check_ven_padre)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(check_ext_padre))
+                                    .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addComponent(img_infPadre, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        dat_padreLayout.setVerticalGroup(
+            dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dat_padreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addComponent(img_infPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(7, Short.MAX_VALUE))
+                    .addGroup(dat_padreLayout.createSequentialGroup()
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(text_apellidos_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_apellido_padre)
+                            .addComponent(text_nombres_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_nombes_padre)
+                            .addComponent(text_ci_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_ci_padre)
+                            .addComponent(label_estadociv_padre)
+                            .addComponent(check_s_padre)
+                            .addComponent(check_c_padre)
+                            .addComponent(check_d_padre)
+                            .addComponent(check_v_padre))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(text_edad_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label_edad_padre)
+                                .addComponent(text_lugar_nac_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label_lugar_nac_padre))
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(diaNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(mesNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(añoNacPadreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(diaNacNiñLbl2)
+                                .addComponent(mesNacNiñLbl2)
+                                .addComponent(añoNacNiñLbl2))
+                            .addComponent(label_fec_nac_padre))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(repLegalPadre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_direc_hab_padre)
+                                    .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(repLegalPadreCheckbox)
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(parentescoPadreTexto)
+                                .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_nacionalidad_padre)
+                                    .addComponent(check_ven_padre)
+                                    .addComponent(check_ext_padre))))
+                        .addGap(7, 7, 7)
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_grado_padre)
+                            .addComponent(check_no_bachiller_padre)
+                            .addComponent(chec_bachiller_padre)
+                            .addComponent(check_tsu_padre)
+                            .addComponent(check_superior_padre))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dat_padreLayout.createSequentialGroup()
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(text_ocupacion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(label_ocupacion_padre))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btn_aggImgPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lbl_ce3)
+                                        .addComponent(txt_rutImgPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(label_correo_padre)
+                                        .addComponent(text_correo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(dat_padreLayout.createSequentialGroup()
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_direc_trabaj_padre)
+                                    .addComponent(text_direc_trabj_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label_tlf_padre)
+                                    .addComponent(text_tlf_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+        );
+
+        panelRepresentanteEstd.addTab("Datos Padre", dat_padre);
 
         panelDocumentosEstd.setPreferredSize(new java.awt.Dimension(600, 420));
         panelDocumentosEstd.setRequestFocusEnabled(false);
@@ -3959,7 +3982,6 @@ public void createConfPanel(){
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, informacionEstudianteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(panelRepresentanteEstd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, informacionEstudianteLayout.createSequentialGroup()
                         .addGroup(informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(img_infEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3974,10 +3996,12 @@ public void createConfPanel(){
                                 .addComponent(txt_rutImgNiñ, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelDatosEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
-                    .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE))
-                .addContainerGap())
-            .addComponent(headderEstudiante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addComponent(panelDocumentosEstd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1330, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, informacionEstudianteLayout.createSequentialGroup()
+                        .addComponent(panelRepresentanteEstd, javax.swing.GroupLayout.PREFERRED_SIZE, 1321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addComponent(headderEstudiante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         informacionEstudianteLayout.setVerticalGroup(
             informacionEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
