@@ -3860,7 +3860,7 @@ public void createConfPanel(){
                 {null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido", "Edad", "Parentezco", "Ocupacion"
+                "Nombre", "Apellido", "Edad", "Parentesco", "Ocupacion"
             }
         ) {
             Class[] types = new Class [] {
@@ -4024,7 +4024,7 @@ public void createConfPanel(){
                         .addGroup(dat_socioFamiliaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chk_otroConsult)
                             .addComponent(txt_otroConsult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 47, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -4817,7 +4817,7 @@ public void createConfPanel(){
             repLegal = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
         }
         List<retiraA> auts = connectDB.fetchRelAutorizado(cEstudiante);
-        List<autorizado> autorizados = null;
+        List<autorizado> autorizados = new ArrayList<>();
         for (retiraA aut : auts){
            autorizados.add(connectDB.fetchAutorizado(String.valueOf((aut.getAutorizadoRetiro_ciAutorizado()))));
         }
@@ -4839,8 +4839,15 @@ public void createConfPanel(){
         text_tall_zapato_niñ.setText(String.valueOf(est.getTallaZapato()));
         text_peso_niñ.setText(String.valueOf(est.getPeso()));
         text_estatura_niñ.setText(String.valueOf(est.getEstatura()));
-        // imgArrNiñ = est.getImg(); // Assuming you have a way to set the image to a UI component
-
+        fileBytes = est.getImg(); // Assuming you have a way to set the image to a UI component
+        if (fileBytes != null){
+            ImageIcon iconInit = new ImageIcon(fileBytes);
+            ImageIcon iconFin;
+            Image img = iconInit.getImage();
+            Image imgScaled = img.getScaledInstance(240, 240, Image.SCALE_SMOOTH);
+            iconFin = new ImageIcon(imgScaled);
+            img_infEstudiante.setIcon(iconFin);
+        }  
         // Otros (from diagnostico)
         txt_horaAcostar.setText(diag.getHoraDormir() != null ? diag.getHoraDormir().toString() : "");
         txt_horaLevantar.setText(diag.getHoraLevantarse() != null ? diag.getHoraLevantarse().toString() : "");
@@ -4879,7 +4886,13 @@ public void createConfPanel(){
             text_direc_trabj_madre.setText(madre.getDireccionTrabj());
             text_correo_madre.setText(madre.getCorreo());
             text_tlf_madre.setText(madre.getTlf1()); // Assuming tlf1 is the primary phone
-            // imgArrMad = madre.getImg(); // Assuming you have a way to set the image to a UI component
+            fileBytesMad = madre.getImg(); // Assuming you have a way to set the image to a UI component
+                ImageIcon iconInit = new ImageIcon(fileBytesMad);
+                ImageIcon iconFin;
+                Image img = iconInit.getImage();
+                Image imgScaled = img.getScaledInstance(196, 196, Image.SCALE_SMOOTH);
+                iconFin = new ImageIcon(imgScaled);
+                img_infMad.setIcon(iconFin);
 
             // Check if mother is the legal representative
             if (repLegal != null && madre.getCi() == repLegal.getCi()) {
@@ -4905,6 +4918,13 @@ public void createConfPanel(){
             text_correo_padre.setText(padre.getCorreo());
             text_tlf_padre.setText(padre.getTlf1()); // Assuming tlf1 is the primary phone
             fileBytesPadre = padre.getImg(); // Assuming you have a way to set the image to a UI component
+                img_infPadre.setSize(196, 196);
+                ImageIcon iconInit = new ImageIcon(fileBytesPadre);
+                ImageIcon iconFin;
+                Image img = iconInit.getImage();
+                Image imgScaled = img.getScaledInstance(196, 196, Image.SCALE_SMOOTH);
+                iconFin = new ImageIcon(imgScaled);
+                img_infPadre.setIcon(iconFin);
             
 
             // Check if father is the legal representative
@@ -4930,7 +4950,14 @@ public void createConfPanel(){
             text_direc_trabj_rep.setText(repLegal.getDireccionTrabj());
             text_correo_rep.setText(repLegal.getCorreo());
             text_tlf_rep.setText(repLegal.getTlf1()); // Assuming tlf1 is the primary phone
-            // imgArrRep = repLegal.getImg(); // Assuming you have a way to set the image to a UI component
+            fileBytesRep = repLegal.getImg(); // Assuming you have a way to set the image to a UI component
+            img_infRep.setSize(196, 196);
+                ImageIcon iconInit = new ImageIcon(fileBytesRep);
+                ImageIcon iconFin;
+                Image img = iconInit.getImage();
+                Image imgScaled = img.getScaledInstance(196, 196, Image.SCALE_SMOOTH);
+                iconFin = new ImageIcon(imgScaled);
+                img_infRep.setIcon(iconFin);
 
             // Find the parentesco for the legal representative
             for (representaA repA : reps) {
@@ -4940,7 +4967,54 @@ public void createConfPanel(){
                 }
             }
         }
-
+        
+        // Populate JTable tbl_autRetiro
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Cédula");
+        model.addColumn("Nombre");
+        model.addColumn("Apellido");
+        model.addColumn("Teléfono 1");
+        model.addColumn("Teléfono 2");
+        model.addColumn("Parentesco");
+        
+        for (autorizado aut : autorizados) {
+            // Find the corresponding parentesco from the 'auts' list
+            String parentesco = "";
+            for (retiraA rA : auts) {
+                if (String.valueOf(rA.getAutorizadoRetiro_ciAutorizado()).equals(String.valueOf(aut.getCi()))) {
+                    parentesco = rA.getParentesco();
+                    break;
+                }
+            }
+            model.addRow(new Object[]{
+                aut.getCi(),
+                aut.getNombres(),
+                aut.getApellidos(),
+                aut.getTlf1(),
+                aut.getTlf2(),
+                parentesco
+            });
+        }
+        tbl_autRetiro.setModel(model);
+        
+        // Populate JTable tbl_familiarExtra
+        DefaultTableModel familiarModel = new DefaultTableModel();
+        familiarModel.addColumn("Nombre");
+        familiarModel.addColumn("Apellido");
+        familiarModel.addColumn("Edad");
+        familiarModel.addColumn("Parentesco");
+        familiarModel.addColumn("Ocupación");
+        
+        for (familia fam : fams) {
+            familiarModel.addRow(new Object[]{
+                fam.getNombres(),
+                fam.getApellidos(),
+                fam.getEdad(), // Assuming edad in familia is already a String or can be directly converted
+                fam.getParentesco(),
+                fam.getOcupacion()
+            });
+        }
+        tbl_familiarExtra.setModel(familiarModel);
         
     }//GEN-LAST:event_btn_verBusqEstdActionPerformed
 
@@ -5115,22 +5189,22 @@ public void createConfPanel(){
         Object nombreObj = modelFam.getValueAt(i, 0);
         Object apellidoObj = modelFam.getValueAt(i,1);
         Object edadObj = modelFam.getValueAt(i, 2);
-        Object parentezcoObj = modelFam.getValueAt(i, 3);
+        Object parentescoObj = modelFam.getValueAt(i, 3);
         Object ocupacionObj = modelFam.getValueAt(i, 4);
 
         String nombre = nombreObj != null ? nombreObj.toString().trim() : "";
         String apellido = apellidoObj != null ? apellidoObj.toString().trim() : "";
         String edad = edadObj != null ? edadObj.toString().trim() : "";
-        String parentezco = parentezcoObj != null ? parentezcoObj.toString().trim() : "";
+        String parentesco = parentescoObj != null ? parentescoObj.toString().trim() : "";
         String ocupacion = ocupacionObj != null ? ocupacionObj.toString().trim() : "";
 
         // Only add if at least one field is not empty
-        if (!nombre.isEmpty() || !edad.isEmpty() || !parentezco.isEmpty() || !ocupacion.isEmpty()) {
+        if (!nombre.isEmpty() || !edad.isEmpty() || !parentesco.isEmpty() || !ocupacion.isEmpty()) {
             familia familiar = new familia();
             familiar.setNombres(nombre);
             familiar.setApellidos(apellido);
             familiar.setEdad(edad);
-            familiar.setParentesco(parentezco);
+            familiar.setParentesco(parentesco);
             familiar.setOcupacion(ocupacion);
             listaFamiliares.add(familiar);
         }
