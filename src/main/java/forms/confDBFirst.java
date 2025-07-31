@@ -217,10 +217,21 @@ public class confDBFirst extends javax.swing.JFrame {
             if (checkConn(accesoChild)){
                 connectDB.connparamsinit(accesoChild);
 
-                confUsers usr = new confUsers();
-                usr.setVisible(false);
-                usr.repaint();
-                usr.revalidate();
+                if(connectDB.getAllAccesos() == null){
+                    JOptionPane.showMessageDialog(this, "No se encontraron accesos en la base de datos. Por favor, cree un usuario administrador.", "Error", JOptionPane.WARNING_MESSAGE);
+                    nuevoUser nuevo = new nuevoUser();
+                    nuevo.setVisible(true);
+                    nuevo.setLocationRelativeTo(null);
+                    nuevo.repaint();
+                    nuevo.revalidate();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Conexión exitosa. Puede proceder a iniciar sesión.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                    inicio inicio = new inicio();
+                    inicio.setVisible(true);
+                    inicio.setLocationRelativeTo(null);
+                    inicio.repaint();
+                    inicio.revalidate();
+                }
 
                 // menuMain = new menuPrincipal(accesoChild);
                 // menuMain.setVisible(true);
