@@ -1557,7 +1557,7 @@ public class connectDB {
 
     public static void crearUsuario(acceso acceso) {
 
-        String sql = "INSERT INTO usuario (usuario, hash, permiso, twoFact) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO usuario (usuario, hash, permiso, twoFA) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -1701,7 +1701,6 @@ public class connectDB {
         }
         return accesos;
     }
-
 
     public static List<familia> fetchRelFamiliar(String cEstudiante) {
 
@@ -1866,7 +1865,6 @@ public class connectDB {
 
     public static void aumentarNivelEstd() {
     }
-
 
     public static void updateEstudiante(estudiante estudiante) {
         // SQL UPDATE statement with placeholders for all columns to be updated

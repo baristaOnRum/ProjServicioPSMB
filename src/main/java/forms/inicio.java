@@ -87,6 +87,11 @@ public class inicio extends javax.swing.JFrame {
         });
 
         btn_iniciar.setText("Iniciar secion");
+        btn_iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_iniciarActionPerformed(evt);
+            }
+        });
 
         tgl_verContrass.setText("Ver Contraseña");
         tgl_verContrass.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +173,10 @@ public class inicio extends javax.swing.JFrame {
     private void pass_contrassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pass_contrassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pass_contrassActionPerformed
+
+    private void btn_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarActionPerformed
+        
+    }//GEN-LAST:event_btn_iniciarActionPerformed
 
     /**
      * @param args the command line arguments
