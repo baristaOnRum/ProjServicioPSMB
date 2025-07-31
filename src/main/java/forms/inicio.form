@@ -212,6 +212,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Iniciar secion"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_iniciarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="tgl_verContrass">
           <Properties>

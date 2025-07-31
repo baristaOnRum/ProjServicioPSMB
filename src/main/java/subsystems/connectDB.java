@@ -1702,7 +1702,6 @@ public class connectDB {
         return accesos;
     }
 
-
     public static List<familia> fetchRelFamiliar(String cEstudiante) {
 
         sql = "SELECT estudiante_ciEstudiante, nombre, apellido, edad, parentezco, ocupacion " +
@@ -1866,7 +1865,6 @@ public class connectDB {
 
     public static void aumentarNivelEstd() {
     }
-
 
     public static void updateEstudiante(estudiante estudiante) {
         // SQL UPDATE statement with placeholders for all columns to be updated
