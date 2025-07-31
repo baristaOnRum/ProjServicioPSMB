@@ -134,8 +134,9 @@ public class menuConfiguracion extends javax.swing.JFrame {
         
         confUsers confUsuarios = new confUsers();
         confUsuarios.setVisible(true);
+        confUsuarios.setAlwaysOnTop(true);
         confUsuarios.repaint();
-        confUsuarios.validate();
+        confUsuarios.revalidate();
                 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

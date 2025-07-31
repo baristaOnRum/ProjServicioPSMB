@@ -4637,13 +4637,15 @@
                                           </Group>
                                       </Group>
                                       <Component id="repLegalPadreCheckbox" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="parentescoPadreTexto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="fieldParentescoPadre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                               <Component id="label_nacionalidad_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="check_ven_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="check_ext_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="parentescoPadreTexto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fieldParentescoPadre" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>

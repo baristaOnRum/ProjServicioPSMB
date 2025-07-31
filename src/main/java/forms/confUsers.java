@@ -10,28 +10,28 @@ import javax.swing.table.DefaultTableModel;
 import subsystems.acceso;
 import subsystems.connectDB;
 
-
 /**
  *
  * @author Sebastian
  */
 public class confUsers extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(confUsers.class.getName());
 
     /**
      * Creates new form confUsers
      */
     public confUsers() {
-        initComponents();    
-    //inicializamos tablas
-        
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-    for (int i = model.getRowCount(); i > 0 ; i = i){
-        i--;
-        model.removeRow(i); }
-    List<acceso> accesos = connectDB.getAllAccesos();
-    for (acceso acc : accesos) {
+        initComponents();
+        //inicializamos tablas
+
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        for (int i = model.getRowCount(); i > 0; i = i) {
+            i--;
+            model.removeRow(i);
+        }
+        List<acceso> accesos = connectDB.getAllAccesos();
+        for (acceso acc : accesos) {
             if (acc instanceof acceso) { // Check if it's a Person object
                 acceso accActual = (acceso) acc;
                 // Create a row vector for each person
@@ -39,7 +39,7 @@ public class confUsers extends javax.swing.JFrame {
                 row.add(accActual.getNombre_usuario());
                 row.add(accActual.getTipo_acceso());
                 model.addRow(row);
-                
+
             }
         }
     }
@@ -114,16 +114,31 @@ public class confUsers extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jButton2.setForeground(new java.awt.Color(250, 247, 239));
         jButton2.setText("Salir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(62, 181, 157));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jButton3.setForeground(new java.awt.Color(250, 247, 239));
         jButton3.setText("Agregar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(250, 247, 239));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(102, 102, 102));
         jButton4.setText("Eliminar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,6 +174,56 @@ public class confUsers extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        nuevoUser usr = new nuevoUser();
+        
+        usr.setVisible(true);
+        usr.repaint();
+        usr.revalidate();
+        
+        dispose();
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        connectDB connect = new connectDB();
+        String usuario = (String) jTable1.getValueAt(jTable1.getSelectedRow(),0);
+        
+        connect.removerUsuario(usuario);
+        jTable1.revalidate();
+        
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        for (int i = model.getRowCount(); i > 0; i = i) {
+            i--;
+            model.removeRow(i);
+        }
+        List<acceso> accesos = connectDB.getAllAccesos();
+        for (acceso acc : accesos) {
+            if (acc instanceof acceso) { // Check if it's a Person object
+                acceso accActual = (acceso) acc;
+                // Create a row vector for each person
+                Vector<Object> row = new Vector<>();
+                row.add(accActual.getNombre_usuario());
+                row.add(accActual.getTipo_acceso());
+                model.addRow(row);
+
+            }
+        }
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        acceso acc = new acceso();
+        
+        menuPrincipal pr = new menuPrincipal(acc);
+        
+        pr.setVisible(true);
+        pr.repaint();
+        pr.revalidate();
+        
+        dispose(); // Cierra la ventana actual
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

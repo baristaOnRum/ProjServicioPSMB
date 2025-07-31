@@ -3784,13 +3784,14 @@ public void createConfPanel(){
                                     .addComponent(label_direc_hab_padre)
                                     .addComponent(text_direc_hab_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(repLegalPadreCheckbox)
-                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(parentescoPadreTexto)
-                                .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(label_nacionalidad_padre)
                                     .addComponent(check_ven_padre)
-                                    .addComponent(check_ext_padre))))
+                                    .addComponent(check_ext_padre))
+                                .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(parentescoPadreTexto)
+                                    .addComponent(fieldParentescoPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(7, 7, 7)
                         .addGroup(dat_padreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(label_grado_padre)
@@ -4056,6 +4057,7 @@ public void createConfPanel(){
         
         menuConfiguracion config = new menuConfiguracion();
         config.setVisible(true);
+        config.setAlwaysOnTop(true);
         config.repaint();
         config.validate();
         
