@@ -15,16 +15,16 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="imgEstudiante" max="32767" attributes="0"/>
-                                      <Component id="btnEstudiantes" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="imgEstudiante" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="imgFamilia" min="-2" pref="315" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="btnEstudiantes" max="32767" attributes="0"/>
+                                      <Component id="imgFamilia" min="-2" pref="315" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -33,15 +33,15 @@
                       <Component id="btnRepresentantes" alignment="0" min="-2" pref="315" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="imgHerramienta" min="-2" pref="256" max="-2" attributes="0"/>
-                          <Component id="btnConfiguracion" min="-2" pref="256" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnAutorizados" min="-2" pref="265" max="-2" attributes="0"/>
+                              <Component id="imgAutorizado" min="-2" pref="265" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnAutorizados" min="-2" pref="265" max="-2" attributes="0"/>
-                          <Component id="imgAutorizado" min="-2" pref="265" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="btnConfiguracion" min="-2" pref="265" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
               </Group>
@@ -352,29 +352,38 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="txt_filtroBusqEstd" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="scrl_busqEstd" alignment="0" pref="934" max="32767" attributes="0"/>
+                      <Component id="scrl_busqEstd" alignment="0" pref="947" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btn_buscarEstd" min="-2" pref="169" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btn_verBusqEstd" pref="344" max="32767" attributes="0"/>
-                                  <Component id="img_busqEstd" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btn_eliminarBusqEstd" alignment="0" pref="344" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btn_verBusqEstd" max="32767" attributes="0"/>
+                                      <Component id="img_busqEstd" alignment="0" pref="344" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="btn_eliminarBusqEstd" min="-2" pref="134" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btn_eliminarBusqEstd1" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="img_logoInstitucionBusqEstd" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="btn_buscarEstd" min="-2" pref="170" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btn_inscribirEstd" min="-2" pref="170" max="-2" attributes="0"/>
+                                  <Component id="btn_inscribirEstd" min="-2" pref="171" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="36" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="img_logoInstitucionBusqEstd" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -391,22 +400,22 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="cmb_filtroBusqEstd" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_filtroBusqEstd" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_buscarEstd" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_inscribirEstd" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="scrl_busqEstd" min="-2" pref="654" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btn_inscribirEstd" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn_buscarEstd" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           <Component id="img_busqEstd" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btn_verBusqEstd" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btn_eliminarBusqEstd" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btn_eliminarBusqEstd" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="btn_eliminarBusqEstd1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="img_logoInstitucionBusqEstd" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -432,7 +441,7 @@
                       <Component id="btn_volverBusqEst" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="427" max="-2" attributes="0"/>
                       <Component id="lbl_busqEstudiante" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="386" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="btn_cerrarBusqEst" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -440,17 +449,15 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btn_cerrarBusqEst" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btn_volverBusqEst" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="lbl_busqEstudiante" min="-2" pref="43" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_busqEstudiante" min="-2" pref="43" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="btn_cerrarBusqEst" alignment="1" max="32767" attributes="0"/>
+                          <Component id="btn_volverBusqEst" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -471,6 +478,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_cerrarBusqEst">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="15" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cerrar"/>
               </Properties>
               <Events>
@@ -479,6 +489,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_volverBusqEst">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="15" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Volver"/>
               </Properties>
               <Events>
@@ -646,7 +659,7 @@
               <Font name="Segoe UI" size="24" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ef" green="f7" red="fa" type="rgb"/>
+              <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -661,6 +674,32 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_eliminarBusqEstdActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_eliminarBusqEstd1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="c2" green="d0" red="8b" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ef" green="f7" red="fa" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Emitir Reporte"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[100, 20]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[100, 20]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[100, 20]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_eliminarBusqEstd1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

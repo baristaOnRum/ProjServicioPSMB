@@ -369,7 +369,7 @@ public class connectDB {
         String sql = "INSERT INTO estudiante (" +
                 "ciEstudiante, apellidos, nombres, fechaNac, lugarNac, nacionalidad, edad, " +
                 "procedencia, tallaCam, tallaPant, tallaZap, peso, estatura, " +
-                "turno, periodioCurso, periodoCursado, img, lateralidad, grupoSanguineo, " +
+                "periodioCurso, periodoCursado, img, lateralidad, grupoSanguineo, " +
                 "asegurado, cualSeguro, medicoTratante, tlfMedicoTratante" +
                 ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -1411,7 +1411,7 @@ public class connectDB {
         sql = "INSERT INTO autorizadoRetiro (ciAutorizado, apellidos, nombre, tlf1, tlf2) VALUES (?,?,?,?,?)";
 
         try {
-            conexion = DriverManager.getConnection(url, "root", "1234");
+            conexion = DriverManager.getConnection(url, user, pass);
             System.out.println("Database connecion started.");
             PreparedStatement query = conexion.prepareStatement(sql);
 
@@ -1799,7 +1799,7 @@ public class connectDB {
     public static void setRelRepresentado(representante representative, estudiante student, boolean rol, String relationship) {
         String sql = "INSERT INTO representaa (representante_ciRepresentante, estudiante_ciEstudiante, rol, parentesco) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "bandidito10");
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             // Set the parameters for the prepared statement
@@ -2207,7 +2207,7 @@ public class connectDB {
 
     public static void setFamilia(familia familia, estudiante estudiante) {
         // SQL INSERT statement for 'familiares extra' table
-        String sql = "INSERT INTO `familiares extra` (" +
+        String sql = "INSERT INTO familiaresextra (" +
                 "nombre, apellido, edad, parentezco, ocupacion, estudiante_ciEstudiante) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
 
