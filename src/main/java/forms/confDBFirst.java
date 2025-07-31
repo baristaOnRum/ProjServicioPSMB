@@ -199,7 +199,7 @@ public class confDBFirst extends javax.swing.JFrame {
         if (jTextField2.getText() != null){
             accesoChild.setUserDB(jTextField2.getText());
         } else {JOptionPane.showMessageDialog(this, "Por favor ingrese un usuario", "Error", JOptionPane.WARNING_MESSAGE); return;}
-        
+
         try {
         StringBuilder pass = new StringBuilder();
         String passF = new String();
@@ -217,16 +217,13 @@ public class confDBFirst extends javax.swing.JFrame {
             if (checkConn(accesoChild)){
                 connectDB.connparamsinit(accesoChild);
 
-                confUsers usr = new confUsers();
-                usr.setVisible(false);
-                usr.repaint();
-                usr.revalidate();
+                    JOptionPane.showMessageDialog(this, "No se encontraron accesos en la base de datos. Por favor, cree un usuario administrador.", "Error", JOptionPane.WARNING_MESSAGE);
+                    nuevoUser nuevo = new nuevoUser();
+                    nuevo.setVisible(true);
+                    nuevo.setLocationRelativeTo(null);
+                    nuevo.repaint();
+                    nuevo.revalidate();
 
-                // menuMain = new menuPrincipal(accesoChild);
-                // menuMain.setVisible(true);
-                // menuMain.repaint();
-                // menuMain.validate();
-                // this.dispose();
             } else{
                 JOptionPane.showMessageDialog(new javax.swing.JFrame(), "Por favor ingrese datos de conexión válidos", "Error", JOptionPane.WARNING_MESSAGE);
             }

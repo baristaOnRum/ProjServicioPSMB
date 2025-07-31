@@ -197,7 +197,7 @@ public class nuevoUser extends javax.swing.JFrame {
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
-        // TODO add your handling code here:
+        dispose(); // Cierra la ventana actual
     }//GEN-LAST:event_button2ActionPerformed
 
     /**
