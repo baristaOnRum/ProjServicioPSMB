@@ -5105,6 +5105,121 @@ public void createConfPanel(){
         panel.add(informacionEstudiante);
         panel.repaint();        
         panel.validate();
+            // Clear Niño fields
+    txt_ce.setText("");
+    txt_nombreNiñ.setText("");
+    txt_apellidoNiñ.setText("");
+    text_edad_niñ.setText("");
+    diaNacNiñField.setText("");
+    mesNacNiñField.setText("");
+    añoNacNiñField.setText("");
+    txt_lugarNacNiñ.setText("");
+    txt_estadoNiñ.setText("");
+    txt_municNiñ.setText("");
+    txt_nacionalidadNiñ.setText("");
+    text_tall_camisa_niñ.setText("");
+    text_tall_pantalon_niñ.setText("");
+    text_tall_zapato_niñ.setText("");
+    text_peso_niñ.setText("");
+    text_estatura_niñ.setText("");
+    txt_edadCaminar.setText("");
+    fileBytes = null;
+    
+    // Clear Otros fields
+    txt_qnDuermeNino.setText("");
+    txt_edadDejPan.setText("");
+
+    // Clear Salud fields
+    txt_prmPartocual.setText("");
+    text_motor_cual.setText("");
+    text_lenguaje_cual.setText("");
+    text_cognitivo_cual.setText("");
+    text_alergia_cual.setText("");
+    text_alergia_cual1.setText("");
+    text_condicion_cual.setText("");
+    txt_enfPadecidas.setText("");
+    txt_grpoSang.setText("");
+    txt_fiebreAlta.setText("");
+    txt_otraVac.setText("");
+    txt_medicoTratante.setText("");
+    txt_tlfMedicoTrat.setText("");
+
+    // Clear Madre fields
+    text_apellidos_madre.setText("");
+    text_nombres_madre.setText("");
+    text_ci_madre.setText("");
+    diaNacMadField.setText("");
+    mesNacMadField.setText("");
+    añoNacMadField.setText("");
+    text_edad_madre.setText("");
+    text_lugar_nac_madre.setText("");
+    text_direc_hab_madre.setText("");
+    text_ocupacion_madre.setText("");
+    text_direc_trabj_madre.setText("");
+    text_correo_madre.setText("");
+    text_tlf_madre.setText("");
+    madreLegalEstdCiv.clearSelection();
+    madreLegalNac.clearSelection();
+    madreLegalInstrucc.clearSelection();
+    fileBytesMad = null;
+    repLegalMadreCheckbox.setSelected(false);
+
+    // Clear Padre fields
+    text_apellidos_padre.setText("");
+    text_nombres_padre.setText("");
+    text_ci_padre.setText("");
+    diaNacPadreField.setText("");
+    mesNacPadreField.setText("");
+    añoNacPadreField.setText("");
+    text_edad_padre.setText("");
+    text_lugar_nac_padre.setText("");
+    text_direc_hab_padre.setText("");
+    text_ocupacion_padre.setText("");
+    text_direc_trabj_padre.setText("");
+    text_correo_padre.setText("");
+    text_tlf_padre.setText("");
+    padreLegalEstdCiv.clearSelection();
+    padreLegalNac.clearSelection();
+    padreLegalInstrucc.clearSelection();
+    fileBytesPadre = null;
+    repLegalPadreCheckbox.setSelected(false);
+
+    // Clear Representante Legal fields
+    text_apellidos_rep.setText("");
+    text_nombres_rep.setText("");
+    text_ci_rep.setText("");
+    diaNacRepField.setText("");
+    mesNacRepField.setText("");
+    añoNacRepField.setText("");
+    text_edad_rep.setText("");
+    text_lugar_nac_rep.setText("");
+    text_direc_hab_rep.setText("");
+    text_ocupacion_rep.setText("");
+    text_direc_trabj_rep.setText("");
+    text_correo_rep.setText("");
+    text_tlf_rep.setText("");
+    repLegalEstdCiv.clearSelection();
+    repLegalNac.clearSelection();
+    repLegalInstrucc.clearSelection();
+    fileBytesRep = null;
+    fieldRepresentante.setText("");
+
+    // Clear Documentos fields
+    text_responsable.setText("");
+    text_persona.setText("");
+    text_observaciones.setText("");
+
+    // Clear Ambiente Socio Familiar fields
+    txt_cuidaNiñoHogar.setText("");
+    txt_otroConsult.setText("");
+    
+    // Clear any images if displayed
+    // (Assuming you have ImageIcon components to clear)
+     img_infEstudiante.setIcon(null);
+     img_infMad.setIcon(null);
+     img_infPadre.setIcon(null);
+     img_infRep.setIcon(null);
+        
     }//GEN-LAST:event_btn_inscribirEstdActionPerformed
 
     private void btn_verBusqAutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verBusqAutActionPerformed
