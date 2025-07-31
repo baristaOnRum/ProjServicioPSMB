@@ -21,19 +21,17 @@ public class Main {
         //Verificamos existencia de DB
 
         if (utils.obtenerVariable("db_url") == null){
-            //Inicializar la DB
+            //Inicializar la creacion de el usuario de DB
             confDBFirst conf = new confDBFirst(accesoPresente, menu);
             conf.setVisible(true);
             conf.repaint();
             conf.revalidate();
         }
+        else {
+            
+        }
     }
-//        if (utils.obtenerVariable("db_user").isEmpty());{
-//                if (!utils.obtenerVariable("db_user").isEmpty()){
-//                    setAcceso(utils.obtenerVariable("db_url"),
-//                            utils.obtenerVariable("db_user"), accesoPresente);
-//                    }
-//                }
+
 
     private static acceso setAcceso(String urlDB, String userDB, acceso acceso){
         //TODO: Llamar al inicio de sesión, devolver un acceso válido;

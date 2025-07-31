@@ -180,43 +180,41 @@ public class confDBF extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (jTextField1.getText() != null){
-            utils.guardarVariable("url_db", "jdbc:mysql://" + jTextField1.getText());
-            accesoChild.setConnURL("jdbc:mysql://" + jTextField1.getText());
-        } else {JOptionPane.showMessageDialog(this, "Por favor ingrese una URL", "Error", JOptionPane.WARNING_MESSAGE); return;}
-        
-        if (jTextField2.getText() != null){
-            accesoChild.setUserDB(jTextField2.getText());
-        } else {JOptionPane.showMessageDialog(this, "Por favor ingrese un usuario", "Error", JOptionPane.WARNING_MESSAGE); return;}
-        
+        // Obtener los valores de los campos
+        String url = jTextField1.getText();
+        String user = jTextField2.getText();
+        String passF = new String();
+
         try {
         StringBuilder pass = new StringBuilder();
-        String passF = new String();
         for ( char a : jPasswordField1.getPassword()){
             pass.append(a);
             }
         passF = pass.toString();
-        accesoChild.setPassDB(passF);
             } catch (NullPointerException e){
             JOptionPane.showMessageDialog(this, "Error", "Por favor ingrese una contraseña", JOptionPane.WARNING_MESSAGE);
             return;
             }
-        //Validamos la conexión
-        if (!accesoChild.getPassDB().isEmpty() && !accesoChild.getUserDB().isEmpty() && !accesoChild.getConnURL().isEmpty()){
-            if (checkConn(accesoChild)){
-                this.setEnabled(false);
-                connectDB.connparamsinit(accesoChild);
-                menuMain = new menuPrincipal(accesoChild);
-                menuMain.setVisible(true);
-                menuMain.repaint();
-                menuMain.validate();
-                this.dispose();
-                
-            } else{
-                JOptionPane.showMessageDialog(new javax.swing.JFrame(), "Por favor ingrese datos de conexión válidos", "Error", JOptionPane.WARNING_MESSAGE);
-                return;
-            }
+
+        // Setear los valores en el objeto acceso
+        accesoChild.setConnURL(url);
+        accesoChild.setUserDB(user);
+        accesoChild.setPassDB(passF);
+
+        // Verificar la conexión
+        if (checkConn(accesoChild)) {
+            inicio login = new inicio();
+            login.setVisible(true);
+            login.setLocationRelativeTo(null);
+            login.repaint();
+            login.revalidate();
+            dispose();
         }
+        else{
+            JOptionPane.showMessageDialog(this, "Error al conectar a la base de datos. Por favor, verifique los datos ingresados.", "Error de conexión", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
