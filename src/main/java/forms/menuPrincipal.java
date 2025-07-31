@@ -276,9 +276,6 @@ public menuPrincipal(acceso accesoPresente) {
        case 3 ->{
            //edicion total
        }
-       case  4 ->{
-           //edicion total
-       }
  }
      
     

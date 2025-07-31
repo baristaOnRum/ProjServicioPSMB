@@ -216,12 +216,17 @@ public class confDBFirst extends javax.swing.JFrame {
         if (!accesoChild.getPassDB().isEmpty() && !accesoChild.getUserDB().isEmpty() && !accesoChild.getConnURL().isEmpty()){
             if (checkConn(accesoChild)){
                 connectDB.connparamsinit(accesoChild);
-                menuMain = new menuPrincipal(accesoChild);
-                menuMain.setVisible(true);
-                menuMain.repaint();
-                menuMain.validate();
-                this.dispose();
-                
+
+                confUsers usr = new confUsers();
+                usr.setVisible(false);
+                usr.repaint();
+                usr.revalidate();
+
+                // menuMain = new menuPrincipal(accesoChild);
+                // menuMain.setVisible(true);
+                // menuMain.repaint();
+                // menuMain.validate();
+                // this.dispose();
             } else{
                 JOptionPane.showMessageDialog(new javax.swing.JFrame(), "Por favor ingrese datos de conexión válidos", "Error", JOptionPane.WARNING_MESSAGE);
                 return;
