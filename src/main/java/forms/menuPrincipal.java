@@ -7,6 +7,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseAdapter;
 
 import subsystems.*;
 import subsystems.individuos.*;
@@ -1304,6 +1306,11 @@ public void createConfPanel(){
         tbl_busqRep.setColumnSelectionAllowed(true);
         tbl_busqRep.setMinimumSize(new java.awt.Dimension(550, 250));
         tbl_busqRep.setPreferredSize(new java.awt.Dimension(550, 250));
+        tbl_busqRep.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseClickedOnRow(evt);
+            }
+        });
         scrl_busqRep.setViewportView(tbl_busqRep);
 
         img_busqRep.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -6298,7 +6305,7 @@ public void createConfPanel(){
 
     private void btn_buscarRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarRepActionPerformed
     DefaultTableModel model = (DefaultTableModel) tbl_busqRep.getModel();
-    for (int i = model.getRowCount(); i > 0 ; i = i){
+    for (int i = model.getRowCount(); i > 0; i=i) {
         i--;
         model.removeRow(i); }
     
@@ -6325,7 +6332,7 @@ public void createConfPanel(){
                 representante repActual = (representante) rep;
                 // Create a row vector for each person
                 Vector<Object> row = new Vector<>();
-                ImageIcon icon = new ImageIcon(repActual.getImg()); //estActual.getImg()
+                ImageIcon icon = new ImageIcon(repActual.getImg());
                 javax.swing.JLabel label = new javax.swing.JLabel(); label.setIcon(icon);
                 row.add(label);
                 row.add(repActual.getNombres());
@@ -6709,15 +6716,28 @@ public void createConfPanel(){
     private void tbl_busqEstdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_busqEstdMouseClicked
         //CODIGO
         try {
-        javax.swing.JLabel imgLabel = (javax.swing.JLabel) tbl_busqEstd.getValueAt(tbl_busqEstd.getSelectedRow(),0);
-        Icon ico = imgLabel.getIcon(); ImageIcon imgIco = new ImageIcon((Image) ico);
+        javax.swing.JLabel imgLabel = (javax.swing.JLabel) tbl_busqEstd.getValueAt(tbl_busqEstd.getSelectedRow(),0); 
+        Icon ico = imgLabel.getIcon(); ImageIcon imgIco = (ImageIcon) ico;
         Image img = imgIco.getImage(); Image imgN = img.getScaledInstance(240, 240, Image.SCALE_SMOOTH);
         ImageIcon imgIcoF = new ImageIcon(imgN); img_busqEstd.setIcon(imgIcoF);
         } catch (Exception e){
-        System.out.println("No image found");}
+        System.out.println("No image found"); e.printStackTrace();}
         
         
     }//GEN-LAST:event_tbl_busqEstdMouseClicked
+
+    private void mouseClickedOnRow(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseClickedOnRow
+        
+        try {
+        javax.swing.JLabel imgLabel = (javax.swing.JLabel) tbl_busqRep.getValueAt(tbl_busqRep.getSelectedRow(),0); 
+        Icon ico = imgLabel.getIcon(); ImageIcon imgIco = (ImageIcon) ico;
+        Image img = imgIco.getImage(); Image imgN = img.getScaledInstance(240, 240, Image.SCALE_SMOOTH);
+        ImageIcon imgIcoF = new ImageIcon(imgN); img_busqRep.setIcon(imgIcoF);
+        } catch (Exception e){
+        System.out.println("No image found"); e.printStackTrace();}
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mouseClickedOnRow
 
 private void MenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {
 
