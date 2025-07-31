@@ -491,9 +491,7 @@ public void createConfPanel(){
         rdo_siBuenApetito = new javax.swing.JRadioButton();
         rdo_noBuenApetito = new javax.swing.JRadioButton();
         lbl_horaAcostar = new javax.swing.JLabel();
-        txt_horaAcostar = new javax.swing.JTextField();
         lbl_horaLevantar = new javax.swing.JLabel();
-        txt_horaLevantar = new javax.swing.JTextField();
         lbl_duermTarde = new javax.swing.JLabel();
         rdo_duermTardeSi = new javax.swing.JRadioButton();
         rdo_duermTardeNo = new javax.swing.JRadioButton();
@@ -521,6 +519,14 @@ public void createConfPanel(){
         lbl_aseaSolo = new javax.swing.JLabel();
         rdo_aseaSoloSi = new javax.swing.JRadioButton();
         rdo_aseaSoloNo = new javax.swing.JRadioButton();
+        cBoxHoraAc = new javax.swing.JComboBox<>();
+        cBoxMinAc = new javax.swing.JComboBox<>();
+        cBoxHoraLev = new javax.swing.JComboBox<>();
+        cBoxMinLev = new javax.swing.JComboBox<>();
+        lbl_horaAcostar1 = new javax.swing.JLabel();
+        lbl_horaAcostar2 = new javax.swing.JLabel();
+        lbl_horaAcostar3 = new javax.swing.JLabel();
+        lbl_horaAcostar4 = new javax.swing.JLabel();
         panelRepresentanteEstd = new javax.swing.JTabbedPane();
         dat_madre = new javax.swing.JPanel();
         label_apellido_madre = new javax.swing.JLabel();
@@ -2510,6 +2516,22 @@ public void createConfPanel(){
             }
         });
 
+        cBoxHoraAc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
+
+        cBoxMinAc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        cBoxHoraLev.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
+
+        cBoxMinLev.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+
+        lbl_horaAcostar1.setText("Hora:");
+
+        lbl_horaAcostar2.setText("Hora:");
+
+        lbl_horaAcostar3.setText("Minuto:");
+
+        lbl_horaAcostar4.setText("Minuto:");
+
         javax.swing.GroupLayout otrosLayout = new javax.swing.GroupLayout(otros);
         otros.setLayout(otrosLayout);
         otrosLayout.setHorizontalGroup(
@@ -2527,40 +2549,52 @@ public void createConfPanel(){
                         .addComponent(lbl_chupaDedoAvece))
                     .addGroup(otrosLayout.createSequentialGroup()
                         .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(lbl_cmeAyda)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rdo_siCmeAyda)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rdo_noCmeAyda))
-                            .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(lbl_buenAptito)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rdo_siBuenApetito)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rdo_noBuenApetito))
-                            .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(lbl_horaAcostar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_horaAcostar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(otrosLayout.createSequentialGroup()
-                                .addComponent(lbl_horaLevantar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_horaLevantar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(otrosLayout.createSequentialGroup()
+                                    .addComponent(lbl_cmeAyda)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_siCmeAyda)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_noCmeAyda))
+                                .addGroup(otrosLayout.createSequentialGroup()
+                                    .addComponent(lbl_buenAptito)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_siBuenApetito)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(rdo_noBuenApetito))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, otrosLayout.createSequentialGroup()
                                     .addComponent(lbl_qnDuermeNino)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(txt_qnDuermeNino))
-                                .addGroup(otrosLayout.createSequentialGroup()
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, otrosLayout.createSequentialGroup()
                                     .addComponent(lbl_duermTarde)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(rdo_duermTardeSi)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(rdo_duermTardeNo)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(rdo_duermTardeAveces))))
-                        .addGap(186, 186, 186)
+                                    .addComponent(rdo_duermTardeAveces)))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbl_horaLevantar)
+                                    .addComponent(lbl_horaAcostar))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbl_horaAcostar2)
+                                    .addComponent(lbl_horaAcostar1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cBoxHoraAc, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cBoxHoraLev, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lbl_horaAcostar3)
+                                    .addComponent(lbl_horaAcostar4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cBoxMinAc, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cBoxMinLev, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(104, 104, 104)
                         .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(otrosLayout.createSequentialGroup()
                                 .addComponent(lbl_evacDia)
@@ -2597,7 +2631,7 @@ public void createConfPanel(){
                                     .addComponent(rdo_orinaRopaDiaNo)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(rdo_orinaRopaDiaAvece))))))
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
         otrosLayout.setVerticalGroup(
             otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2617,13 +2651,26 @@ public void createConfPanel(){
                             .addComponent(rdo_siBuenApetito)
                             .addComponent(rdo_noBuenApetito))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_horaAcostar)
-                            .addComponent(txt_horaAcostar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_horaLevantar)
-                            .addComponent(txt_horaLevantar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(cBoxHoraAc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lbl_horaAcostar1))
+                                    .addComponent(lbl_horaAcostar, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cBoxHoraLev, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl_horaAcostar2)
+                                    .addComponent(lbl_horaLevantar)))
+                            .addGroup(otrosLayout.createSequentialGroup()
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cBoxMinAc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl_horaAcostar3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cBoxMinLev, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl_horaAcostar4))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl_duermTarde)
@@ -2648,7 +2695,7 @@ public void createConfPanel(){
                             .addComponent(rdo_evacDiaSi)
                             .addComponent(rdo_evacDiaNo)
                             .addComponent(rdo_evacDiaAvece))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(10, 10, 10)
                         .addGroup(otrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl_aseaSolo)
                             .addComponent(rdo_aseaSoloSi)
@@ -4870,8 +4917,10 @@ public void createConfPanel(){
             img_infEstudiante.setIcon(iconFin);
         }  
         // Otros (from diagnostico)
-        txt_horaAcostar.setText(diag.getHoraDormir() != null ? diag.getHoraDormir().toString() : "");
-        txt_horaLevantar.setText(diag.getHoraLevantarse() != null ? diag.getHoraLevantarse().toString() : "");
+        cBoxHoraAc.setSelectedItem(diag.getHoraDormir().getHour());
+        cBoxMinAc.setSelectedItem(diag.getHoraDormir().getMinute());
+        cBoxHoraLev.setSelectedItem(diag.getHoraLevantarse().getHour());
+        cBoxMinLev.setSelectedItem(diag.getHoraLevantarse().getMinute());
         txt_qnDuermeNino.setText(diag.getConQuienDuerme());
         txt_edadDejPan.setText(String.valueOf(diag.getEdadDejarPanales()));
 
@@ -5118,8 +5167,8 @@ public void createConfPanel(){
     byte[] imgArrNiñ = fileBytes;
     
         // Otros
-    String horaAcostar = txt_horaAcostar.getText().trim();
-    String horaLevantar = txt_horaLevantar.getText().trim();
+    
+    
     String qnDuermeNino = txt_qnDuermeNino.getText().trim();
     String edadDejPan = txt_edadDejPan.getText().trim();
 
@@ -5317,9 +5366,6 @@ public void createConfPanel(){
     diagnostico diagnostico = new diagnostico(); 
     documentos documentos = new documentos();
     
-    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/M-M/yyyy");
-    DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-    
     
     //Ponemos las variables
         estudiante.setCe(ceNiñ);
@@ -5427,13 +5473,13 @@ public void createConfPanel(){
         diagnostico.setConQuienDuerme(qnDuermeNino);
 
         try {
-            diagnostico.setHoraDormir(LocalTime.parse(horaAcostar, timeFormatter));
+            diagnostico.setHoraDormir(LocalTime.of(cBoxHoraAc.getSelectedIndex(),cBoxMinAc.getSelectedIndex()));
         } catch (DateTimeParseException e) {
             System.err.println("Error parsing horaAcostar: " + e.getMessage());
             diagnostico.setHoraDormir(null); // Or a default time
         }
         try {
-            diagnostico.setHoraLevantarse(LocalTime.parse(horaLevantar, timeFormatter));
+            diagnostico.setHoraLevantarse(LocalTime.of(cBoxHoraLev.getSelectedIndex(),cBoxMinLev.getSelectedIndex()));
         } catch (DateTimeParseException e) {
             System.err.println("Error parsing horaLevantar: " + e.getMessage());
             diagnostico.setHoraLevantarse(null); // Or a default time
@@ -6709,6 +6755,10 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JPanel busquedaEstudiantes;
     private javax.swing.JPanel busquedaNomina;
     private javax.swing.JPanel busquedaRepresentante;
+    private javax.swing.JComboBox<String> cBoxHoraAc;
+    private javax.swing.JComboBox<String> cBoxHoraLev;
+    private javax.swing.JComboBox<String> cBoxMinAc;
+    private javax.swing.JComboBox<String> cBoxMinLev;
     private javax.swing.JCheckBox chec_bachiller_madre;
     private javax.swing.JCheckBox chec_bachiller_padre;
     private javax.swing.JCheckBox chec_bachiller_rep;
@@ -6929,6 +6979,10 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel lbl_headderEstudiante;
     private javax.swing.JLabel lbl_headderInfNomina;
     private javax.swing.JLabel lbl_horaAcostar;
+    private javax.swing.JLabel lbl_horaAcostar1;
+    private javax.swing.JLabel lbl_horaAcostar2;
+    private javax.swing.JLabel lbl_horaAcostar3;
+    private javax.swing.JLabel lbl_horaAcostar4;
     private javax.swing.JLabel lbl_horaLevantar;
     private javax.swing.JLabel lbl_jefComNomina;
     private javax.swing.JLabel lbl_lateralidad;
@@ -7129,8 +7183,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField txt_filtroBusqNom;
     private javax.swing.JTextField txt_filtroBusqRep;
     private javax.swing.JTextField txt_grpoSang;
-    private javax.swing.JTextField txt_horaAcostar;
-    private javax.swing.JTextField txt_horaLevantar;
     private javax.swing.JTextField txt_jefComNomina;
     private javax.swing.JTextField txt_lugarNacNiñ;
     private javax.swing.JTextField txt_medicoTratante;
