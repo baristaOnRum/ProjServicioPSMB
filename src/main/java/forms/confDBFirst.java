@@ -219,23 +219,13 @@ public class confDBFirst extends javax.swing.JFrame {
         if (!accesoChild.getPassDB().isEmpty() && !accesoChild.getUserDB().isEmpty() && !accesoChild.getConnURL().isEmpty()){
             if (checkConn(accesoChild)){
                 connectDB.connparamsinit(accesoChild);
-
-                    if (connectDB.getAllAccesos().isEmpty()){
-                        JOptionPane.showMessageDialog(this, "Se ha creado el acceso a la base de datos correctamente.", "Exito", JOptionPane.WARNING_MESSAGE);
-                        nuevoUser nuevo = new nuevoUser();
-                        nuevo.setVisible(true);
-                        nuevo.setLocationRelativeTo(null);
-                        nuevo.repaint();
-                        nuevo.revalidate();
-                        dispose();
-                    } else {
-                        JOptionPane.showMessageDialog(this, "Ya existe un acceso a la base de datos. Por favor, inicie sesión.", "Acceda", JOptionPane.WARNING_MESSAGE);
-                        inicio login = new inicio();
-                        login.setVisible(true);
-                        login.setLocationRelativeTo(null);
-                        login.repaint();
-                        login.revalidate();
-                    }
+                    accesoChild.setTipo_acceso(3);
+                    nuevoUser nuevo = new nuevoUser(accesoChild);
+                    nuevo.setVisible(true);
+                    nuevo.setLocationRelativeTo(null);
+                    nuevo.repaint();
+                    nuevo.revalidate();
+                    this.dispose();
 
             } else{
                 JOptionPane.showMessageDialog(new javax.swing.JFrame(), "Por favor ingrese datos de conexión válidos", "Error", JOptionPane.WARNING_MESSAGE);

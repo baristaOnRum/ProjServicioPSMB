@@ -11,12 +11,17 @@ import subsystems.utils;
  * @author Sebastian
  */
 public class nuevoUser extends javax.swing.JFrame {
-    
+    acceso accesoSuper;
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(nuevoUser.class.getName());
 
     /**
      * Creates new form nuevoUser
      */
+    public nuevoUser(acceso Child) {
+        accesoSuper = Child;
+        initComponents();
+    }
     public nuevoUser() {
         initComponents();
     }
