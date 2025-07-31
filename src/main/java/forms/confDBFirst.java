@@ -215,7 +215,6 @@ public class confDBFirst extends javax.swing.JFrame {
         //Validamos la conexión
         if (!accesoChild.getPassDB().isEmpty() && !accesoChild.getUserDB().isEmpty() && !accesoChild.getConnURL().isEmpty()){
             if (checkConn(accesoChild)){
-                this.setEnabled(false);
                 connectDB.connparamsinit(accesoChild);
                 menuMain = new menuPrincipal(accesoChild);
                 menuMain.setVisible(true);

@@ -513,15 +513,14 @@ public class connectDB {
                         estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
                         estudiante.setLateralidad(rs.getBoolean("lateralidad"));
                         estudiante.setAsegurado(rs.getBoolean("asegurado"));
-                        estudiante.setTurno(rs.getByte("turno"));
                         estudiante.setImg(rs.getBytes("img"));
                         estudiantes.add(estudiante);
                         System.out.println(estudiante.getCe());
                     } catch (SQLException e) {
-                        break;
+                        System.out.println("Recopilados todos los estudiantes");
+                        return estudiantes;
                     }
                 }
-                return estudiantes;
             } catch (SQLException e) {
                 System.err.println("Cannot connect to the database!");
                 e.printStackTrace();
@@ -568,7 +567,6 @@ public class connectDB {
                     estudiante.setPeriodoCursado(rs.getInt("periodoCursado"));
                     estudiante.setLateralidad(rs.getBoolean("lateralidad"));
                     estudiante.setAsegurado(rs.getBoolean("asegurado"));
-                    estudiante.setTurno(rs.getByte("turno"));
                     estudiante.setImg(rs.getBytes("img"));
                     estudiantes.add(estudiante);
 
@@ -1406,7 +1404,7 @@ public class connectDB {
     public static socioFamiliar fetchSocioFamiliar(String ciEstudiante) {
         socioFamiliar sf = null;
         String sql = "SELECT estudiante_ciEstudiante, vivienda, tipoVivienda, " +
-                "cuidaNiñoHogar, relacionAmbienteFamiliar, estdCivilPadres, " +
+                "cuidaNiñoHogar, estdCivilPadres, " +
                 "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng " + // Added
                 "FROM socioFamiliar WHERE estudiante_ciEstudiante = ?";
 
@@ -1423,7 +1421,6 @@ public class connectDB {
                     sf.setVivienda(rs.getString("vivienda"));
                     sf.setTipoVivienda(rs.getString("tipoVivienda"));
                     sf.setCuidaNinoHogar(rs.getString("cuidaNiñoHogar"));
-                    sf.setRelacionAmbienteFamiliar(rs.getString("relacionAmbienteFamiliar"));
                     sf.setEstdCivilPadres(rs.getString("estdCivilPadres"));
                     sf.setConsultaAtend(rs.getString("consultAtend")); // Set consultAtend
                     sf.setVisitPsicopedagogo(rs.getBoolean("visitPsicopedagogo")); // Set boolean
@@ -1710,7 +1707,7 @@ public class connectDB {
     public static List<familia> fetchRelFamiliar(String cEstudiante) {
 
         sql = "SELECT estudiante_ciEstudiante, nombre, apellido, edad, parentezco, ocupacion " +
-                "FROM `familiares extra` WHERE estudiante_ciEstudiante = \"" + cEstudiante + "\"";
+                "FROM `familiaresextra` WHERE estudiante_ciEstudiante = \"" + cEstudiante + "\"";
         List<familia> fams = null;
 
         try {
@@ -1788,7 +1785,7 @@ public class connectDB {
 
     public static List<representaA> fetchRelRepresentante(String ciEst) {
 
-        sql = "SELECT * FROM retiraa WHERE estudiante_ciEstudiante =" + ciEst;
+        sql = "SELECT * FROM puederetirar WHERE estudiante_ciEstudiante =" + "\"" +ciEst + "\"";
         List<representaA> reps = null;
 
         try {
@@ -1831,7 +1828,7 @@ public class connectDB {
 
     public static List<retiraA> fetchRelAutorizado(String ciEstudiante) {
 
-        sql = "SELECT * FROM puederetirar WHERE estudiante_ciEstudiante =" + ciEstudiante;
+        sql = "SELECT * FROM puederetirar WHERE estudiante_ciEstudiante =" + "\"" + ciEstudiante + "\"";
         List<retiraA> rets = null;
 
         try {
