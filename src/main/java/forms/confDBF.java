@@ -42,6 +42,7 @@ public class confDBF extends javax.swing.JFrame {
         initComponents();
         accesoChild = acceso;
         menuMain = main;
+        jTextField1.setText(acceso.getConnURL());
     }
 
     /**
@@ -111,8 +112,6 @@ public class confDBF extends javax.swing.JFrame {
         );
 
         jLabel2.setText("URL:");
-
-        jTextField1.setText("localhost:3306/mydb");
 
         jLabel4.setText("Contraseña:");
         jLabel4.setToolTipText("");
@@ -204,6 +203,7 @@ public class confDBF extends javax.swing.JFrame {
         //Validamos la conexión
         if (!accesoChild.getPassDB().isEmpty() && !accesoChild.getUserDB().isEmpty() && !accesoChild.getConnURL().isEmpty()){
             if (checkConn(accesoChild)){
+                utils.guardarVariable("user_db", accesoChild.getUserDB());
                 this.setEnabled(false);
                 connectDB.connparamsinit(accesoChild);
                 menuMain = new menuPrincipal(accesoChild);

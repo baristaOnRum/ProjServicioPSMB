@@ -20,9 +20,17 @@ public class Main {
     private static void checkInit(acceso accesoPresente, menuPrincipal menu){
         //Verificamos existencia de DB
 
-        if (utils.obtenerVariable("db_url") == null){
+        if (utils.obtenerVariable("db_url") == null || utils.obtenerVariable("db_url") == ""){
+            String connDB = "jdbc:mysql://";
+            connDB = connDB + utils.obtenerVariable("db_url"); accesoPresente.setConnURL(connDB);
             //Inicializar la DB
             confDBFirst conf = new confDBFirst(accesoPresente, menu);
+            conf.setVisible(true);
+            conf.repaint();
+            conf.revalidate();
+        } else {
+            accesoPresente.setConnURL(utils.obtenerVariable("db_url"));
+            confDBF conf = new confDBF(accesoPresente, menu);
             conf.setVisible(true);
             conf.repaint();
             conf.revalidate();

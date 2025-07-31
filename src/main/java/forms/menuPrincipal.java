@@ -4839,11 +4839,16 @@ public void createConfPanel(){
         
         estudiante est = connectDB.fetchEstudiante(cEstudiante);
         socioFamiliar socFam = connectDB.fetchSocioFamiliar(cEstudiante);
+        documentos docs = connectDB.getDocumentos(cEstudiante);
+        diagnostico diag = connectDB.getDiagnostico(cEstudiante);
+        List<retiraA> auts = connectDB.fetchRelAutorizado(cEstudiante);
+        List<autorizado> autorizados = new ArrayList<>();
+        List<familia> fams = connectDB.fetchRelFamiliar(cEstudiante);
+        List<representaA> reps = connectDB.fetchRelRepresentante(cEstudiante);
         representante madre = null;
         representante padre = null;
         representante repLegal = null;
-        List<familia> fams = connectDB.fetchRelFamiliar(cEstudiante);
-        List<representaA> reps = connectDB.fetchRelRepresentante(cEstudiante);
+
         if (reps != null){
             for (representaA rep : reps){
                 if (rep.getParentesco().equals((String) "madre")){
@@ -4885,15 +4890,12 @@ public void createConfPanel(){
         } else {
             System.out.println("DEBUG: 'reps' list is null. No representatives to process.");
         }
-        List<retiraA> auts = connectDB.fetchRelAutorizado(cEstudiante);
-        List<autorizado> autorizados = new ArrayList<>();
         if (auts != null){
         for (retiraA aut : auts){
                 autorizados.add(connectDB.fetchAutorizado(String.valueOf((aut.getAutorizadoRetiro_ciAutorizado()))));
             }
         }
-        documentos docs = connectDB.getDocumentos(cEstudiante);
-        diagnostico diag = connectDB.getDiagnostico(cEstudiante);
+
         
                 // Datos del Niño/Niña
         txt_ce.setText(est.getCe());
