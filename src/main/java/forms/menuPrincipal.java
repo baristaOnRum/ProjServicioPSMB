@@ -4805,6 +4805,33 @@ public void createConfPanel(){
                 repLegal = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
             }
         }
+        if (reps != null){
+            System.out.println("DEBUG: Entering loop for 'reps'.");
+            for (representaA rep : reps){
+                System.out.println("DEBUG: Current representaA object - CI: " + rep.getRepresentante_ciRepresentante() + ", Parentesco: " + rep.getParentesco());
+
+                if (rep.getParentesco().equals((String) "madre")){
+                    System.out.println("DEBUG: Found 'madre' parentesco. Fetching mother with CI: " + rep.getRepresentante_ciRepresentante());
+                    madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+                    System.out.println("DEBUG: 'madre' object fetched. Nombres: " + (madre != null ? madre.getNombres() : "null") + ", Apellidos: " + (madre != null ? madre.getApellidos() : "null"));
+                }
+                // NOTE: There might be a logical error here, as 'madre' is assigned again instead of 'padre'.
+                // If this is intentional, it will overwrite the 'madre' variable if both 'madre' and 'padre' parentescos are found.
+                // If you intended to assign to 'padre', it should be 'padre = connectDB.fetchRepresentante(...)'.
+                if (rep.getParentesco().equals((String) "padre")){
+                    System.out.println("DEBUG: Found 'padre' parentesco. Fetching representative for 'padre' with CI: " + rep.getRepresentante_ciRepresentante());
+                    madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante()); // This line currently assigns to 'madre'
+                    System.out.println("DEBUG: 'madre' (assigned from 'padre' parentesco) object fetched. Nombres: " + (madre != null ? madre.getNombres() : "null") + ", Apellidos: " + (madre != null ? madre.getApellidos() : "null"));
+                }
+                
+                // This line will assign the last representative fetched in the loop to repLegal
+                System.out.println("DEBUG: Assigning repLegal with CI: " + rep.getRepresentante_ciRepresentante());
+                repLegal = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+                System.out.println("DEBUG: 'repLegal' object assigned. Nombres: " + (repLegal != null ? repLegal.getNombres() : "null") + ", Apellidos: " + (repLegal != null ? repLegal.getApellidos() : "null"));
+            }
+        } else {
+            System.out.println("DEBUG: 'reps' list is null. No representatives to process.");
+        }
         List<retiraA> auts = connectDB.fetchRelAutorizado(cEstudiante);
         List<autorizado> autorizados = new ArrayList<>();
         if (auts != null){

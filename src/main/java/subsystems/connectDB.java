@@ -1794,20 +1794,22 @@ public class connectDB {
             PreparedStatement query = conexion.prepareStatement(sql);
 
             ResultSet rs = query.executeQuery();
+            System.out.println("Query executed.");
             reps = new ArrayList<>();
-
+            while (true){
             try {
-                while (rs.next()) {
+                    rs.next();
+                    System.out.println("inserting a rep.");
                     representaA repN = new representaA();
                     repN.setEstudiante_ciEstudiante(rs.getString("estudiante_ciEstudiante"));
                     repN.setRepresentante_ciRepresentante(rs.getInt("representante_ciRepresentante"));
                     repN.setRol(rs.getBoolean("rol"));
                     repN.setParentesco(rs.getString("parentesco"));
                     reps.add(repN);
+                    } catch (SQLException e1) {
+                    System.out.println("Recuperados todos los estudiantes");
+                    return reps;
                 }
-            } catch (SQLException e1) {
-                System.out.println("Recuperados todos los estudiantes");
-                return reps;
             }
 
         } catch (SQLException e) {
