@@ -1,4 +1,7 @@
 package forms;
+import subsystems.connectDB;
+import subsystems.acceso;
+
 
 public class inicio extends javax.swing.JFrame {
     
@@ -175,7 +178,8 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_pass_contrassActionPerformed
 
     private void btn_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarActionPerformed
-        
+        String accs = acceso.setNombre_usuario(txt_usr.getText());
+        connectDB.fetchUsuario();
     }//GEN-LAST:event_btn_iniciarActionPerformed
 
     /**
