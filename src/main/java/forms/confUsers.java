@@ -10,28 +10,28 @@ import javax.swing.table.DefaultTableModel;
 import subsystems.acceso;
 import subsystems.connectDB;
 
-
 /**
  *
  * @author Sebastian
  */
 public class confUsers extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(confUsers.class.getName());
 
     /**
      * Creates new form confUsers
      */
     public confUsers() {
-        initComponents();    
-    //inicializamos tablas
-        
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-    for (int i = model.getRowCount(); i > 0 ; i = i){
-        i--;
-        model.removeRow(i); }
-    List<acceso> accesos = connectDB.getAllAccesos();
-    for (acceso acc : accesos) {
+        initComponents();
+        //inicializamos tablas
+
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        for (int i = model.getRowCount(); i > 0; i = i) {
+            i--;
+            model.removeRow(i);
+        }
+        List<acceso> accesos = connectDB.getAllAccesos();
+        for (acceso acc : accesos) {
             if (acc instanceof acceso) { // Check if it's a Person object
                 acceso accActual = (acceso) acc;
                 // Create a row vector for each person
@@ -39,7 +39,7 @@ public class confUsers extends javax.swing.JFrame {
                 row.add(accActual.getNombre_usuario());
                 row.add(accActual.getTipo_acceso());
                 model.addRow(row);
-                
+
             }
         }
     }
@@ -176,15 +176,53 @@ public class confUsers extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        nuevoUser usr = new nuevoUser();
+        
+        usr.setVisible(true);
+        usr.repaint();
+        usr.revalidate();
+        
+        dispose();
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        connectDB connect = new connectDB();
+        String usuario = (String) jTable1.getValueAt(jTable1.getSelectedRow(),0);
+        
+        connect.removerUsuario(usuario);
+        jTable1.revalidate();
+        
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        for (int i = model.getRowCount(); i > 0; i = i) {
+            i--;
+            model.removeRow(i);
+        }
+        List<acceso> accesos = connectDB.getAllAccesos();
+        for (acceso acc : accesos) {
+            if (acc instanceof acceso) { // Check if it's a Person object
+                acceso accActual = (acceso) acc;
+                // Create a row vector for each person
+                Vector<Object> row = new Vector<>();
+                row.add(accActual.getNombre_usuario());
+                row.add(accActual.getTipo_acceso());
+                model.addRow(row);
+
+            }
+        }
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        acceso acc = new acceso();
+        
+        menuPrincipal pr = new menuPrincipal(acc);
+        
+        pr.setVisible(true);
+        pr.repaint();
+        pr.revalidate();
+        
+        dispose(); // Cierra la ventana actual
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

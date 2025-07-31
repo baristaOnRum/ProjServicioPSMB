@@ -1596,7 +1596,7 @@ public class connectDB {
 
     public static void removerUsuario(String usuario) {
         // SQL DELETE statement with a WHERE clause to target a specific user.
-        String sql = "DELETE FROM acceso WHERE usuario = ?";
+        String sql = "DELETE FROM usuario WHERE usuario = ?";
 
         try (Connection conn = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {

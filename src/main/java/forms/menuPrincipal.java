@@ -4057,6 +4057,7 @@ public void createConfPanel(){
         
         menuConfiguracion config = new menuConfiguracion();
         config.setVisible(true);
+        config.setAlwaysOnTop(true);
         config.repaint();
         config.validate();
         

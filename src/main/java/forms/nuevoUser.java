@@ -192,15 +192,23 @@ public class nuevoUser extends javax.swing.JFrame {
         // Guarda la información en la base de datos
         connec.crearUsuario(acc);
 
-        menuPrincipal menu = new menuPrincipal(acc);
-        menu.setVisible(true);
-        menu.setLocationRelativeTo(null);
-        menu.repaint();
-        menu.revalidate();
-        dispose();
+        confUsers usr = new confUsers();
+        
+        usr.setVisible(true);
+        usr.repaint();
+        usr.revalidate();
+        
+        dispose(); // Cierra la ventana actual
+        
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        confUsers usr = new confUsers();
+        
+        usr.setVisible(true);
+        usr.repaint();
+        usr.revalidate();
+        
         dispose(); // Cierra la ventana actual
     }//GEN-LAST:event_button2ActionPerformed
 
