@@ -13,11 +13,13 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
+import static java.sql.DriverManager.*;
+
 public class Main {
     
     private static void checkInit(acceso accesoPresente, menuPrincipal menu){
         //Verificamos existencia de DB
-        
+
         if (utils.obtenerVariable("db_url") == null){
             //Inicializar la DB
             confDBFirst conf = new confDBFirst(accesoPresente, menu);
@@ -56,6 +58,6 @@ public class Main {
                 //menu_reportes main = new menu_reportes();
         acceso accesoPresente = new acceso();
         checkInit(accesoPresente, main);
-        
+
     }
 }

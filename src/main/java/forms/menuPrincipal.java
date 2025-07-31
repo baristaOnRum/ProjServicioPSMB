@@ -346,7 +346,6 @@ public void createConfPanel(){
         scrl_busqAut = new javax.swing.JScrollPane();
         tbl_busqAut = new javax.swing.JTable();
         btn_verBusqAut = new javax.swing.JButton();
-        btn_editarBusqAut = new javax.swing.JButton();
         btn_buscarAut = new javax.swing.JButton();
         busquedaNomina = new javax.swing.JPanel();
         headderBusqNomina = new javax.swing.JPanel();
@@ -1479,14 +1478,6 @@ public void createConfPanel(){
             }
         });
 
-        btn_editarBusqAut.setBackground(new java.awt.Color(231, 231, 231));
-        btn_editarBusqAut.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_editarBusqAut.setForeground(new java.awt.Color(102, 102, 102));
-        btn_editarBusqAut.setText("Eliminar");
-        btn_editarBusqAut.setMaximumSize(new java.awt.Dimension(100, 20));
-        btn_editarBusqAut.setMinimumSize(new java.awt.Dimension(100, 20));
-        btn_editarBusqAut.setPreferredSize(new java.awt.Dimension(100, 20));
-
         btn_buscarAut.setBackground(new java.awt.Color(27, 120, 101));
         btn_buscarAut.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btn_buscarAut.setForeground(new java.awt.Color(250, 247, 239));
@@ -1507,11 +1498,6 @@ public void createConfPanel(){
                 .addContainerGap()
                 .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
-                        .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btn_verBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, busquedaAutorizadosLayout.createSequentialGroup()
                         .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(scrl_busqAut, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
@@ -1520,7 +1506,10 @@ public void createConfPanel(){
                                 .addComponent(txt_filtroBusqAut)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btn_buscarAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(15, 15, 15))))
+                        .addGap(15, 15, 15))
+                    .addGroup(busquedaAutorizadosLayout.createSequentialGroup()
+                        .addComponent(btn_verBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         busquedaAutorizadosLayout.setVerticalGroup(
             busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1534,9 +1523,7 @@ public void createConfPanel(){
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scrl_busqAut, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(busquedaAutorizadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_editarBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_verBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btn_verBusqAut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9))
         );
 
@@ -4804,19 +4791,53 @@ public void createConfPanel(){
         representante repLegal = null;
         List<familia> fams = connectDB.fetchRelFamiliar(cEstudiante);
         List<representaA> reps = connectDB.fetchRelRepresentante(cEstudiante);
-        for (representaA rep : reps){
-            if (rep.getParentesco().equals((String) "madre")){
-                madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+        if (reps != null){
+            for (representaA rep : reps){
+                if (rep.getParentesco().equals((String) "madre")){
+                    System.out.println("Hallada madre");
+                    madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+                }
+                if (rep.getParentesco().equals((String) "padre")){
+                    System.out.println("Hallada madre");
+                    padre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+                }
+                System.out.println("Insertando representante");
+                repLegal = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
             }
-            if (rep.getParentesco().equals((String) "padre")){
-                madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+        }
+        if (reps != null){
+            System.out.println("DEBUG: Entering loop for 'reps'.");
+            for (representaA rep : reps){
+                System.out.println("DEBUG: Current representaA object - CI: " + rep.getRepresentante_ciRepresentante() + ", Parentesco: " + rep.getParentesco());
+
+                if (rep.getParentesco().equals((String) "madre")){
+                    System.out.println("DEBUG: Found 'madre' parentesco. Fetching mother with CI: " + rep.getRepresentante_ciRepresentante());
+                    madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+                    System.out.println("DEBUG: 'madre' object fetched. Nombres: " + (madre != null ? madre.getNombres() : "null") + ", Apellidos: " + (madre != null ? madre.getApellidos() : "null"));
+                }
+                // NOTE: There might be a logical error here, as 'madre' is assigned again instead of 'padre'.
+                // If this is intentional, it will overwrite the 'madre' variable if both 'madre' and 'padre' parentescos are found.
+                // If you intended to assign to 'padre', it should be 'padre = connectDB.fetchRepresentante(...)'.
+                if (rep.getParentesco().equals((String) "padre")){
+                    System.out.println("DEBUG: Found 'padre' parentesco. Fetching representative for 'padre' with CI: " + rep.getRepresentante_ciRepresentante());
+                    madre = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante()); // This line currently assigns to 'madre'
+                    System.out.println("DEBUG: 'madre' (assigned from 'padre' parentesco) object fetched. Nombres: " + (madre != null ? madre.getNombres() : "null") + ", Apellidos: " + (madre != null ? madre.getApellidos() : "null"));
+                }
+                
+                // This line will assign the last representative fetched in the loop to repLegal
+                System.out.println("DEBUG: Assigning repLegal with CI: " + rep.getRepresentante_ciRepresentante());
+                repLegal = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+                System.out.println("DEBUG: 'repLegal' object assigned. Nombres: " + (repLegal != null ? repLegal.getNombres() : "null") + ", Apellidos: " + (repLegal != null ? repLegal.getApellidos() : "null"));
             }
-            repLegal = connectDB.fetchRepresentante(rep.getRepresentante_ciRepresentante());
+        } else {
+            System.out.println("DEBUG: 'reps' list is null. No representatives to process.");
         }
         List<retiraA> auts = connectDB.fetchRelAutorizado(cEstudiante);
         List<autorizado> autorizados = new ArrayList<>();
+        if (auts != null){
         for (retiraA aut : auts){
-           autorizados.add(connectDB.fetchAutorizado(String.valueOf((aut.getAutorizadoRetiro_ciAutorizado()))));
+                autorizados.add(connectDB.fetchAutorizado(String.valueOf((aut.getAutorizadoRetiro_ciAutorizado()))));
+            }
         }
         documentos docs = connectDB.getDocumentos(cEstudiante);
         diagnostico diag = connectDB.getDiagnostico(cEstudiante);
@@ -6666,7 +6687,6 @@ private void menuItemConfiguracionActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JButton btn_cerrarBusqEst;
     private javax.swing.JButton btn_cerrarBusqNom;
     private javax.swing.JButton btn_cerrarBusqRep;
-    private javax.swing.JButton btn_editarBusqAut;
     private javax.swing.JButton btn_editarBusqNom;
     private javax.swing.JButton btn_eliminarBusqEstd;
     private javax.swing.JButton btn_eliminarBusqEstd1;
