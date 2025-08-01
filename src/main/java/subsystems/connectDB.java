@@ -1,11 +1,25 @@
 package subsystems;
 
-import java.sql.*;
-import java.time.LocalDate;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
-import subsystems.individuos.*;
+import subsystems.individuos.autorizado;
+import subsystems.individuos.diagnostico;
+import subsystems.individuos.documentos;
+import subsystems.individuos.estudiante;
+import subsystems.individuos.familia;
+import subsystems.individuos.representaA;
+import subsystems.individuos.representante;
+import subsystems.individuos.retiraA;
+import subsystems.individuos.socioFamiliar;
 
 public class connectDB {
 
@@ -1041,7 +1055,7 @@ public class connectDB {
     }
 
     public static void setRelRepresentado(representante representative, estudiante student, boolean rol, String relationship) {
-        String sql = "INSERT INTO representaa (representante_ciRepresentante, estudiante_ciEstudiante, rol, parentesco) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO representaA (representante_ciRepresentante, estudiante_ciEstudiante, rol, parentesco) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -1056,19 +1070,19 @@ public class connectDB {
             int rowsAffected = pstmt.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Data inserted successfully into representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
+                System.out.println("Data inserted successfully into representaA for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
             } else {
-                System.out.println("No rows affected. Data insertion failed for representaa for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
+                System.out.println("No rows affected. Data insertion failed for representaA for Representative CI: " + representative.getCi() + " and Student CE: " + student.getCe());
             }
 
         } catch (SQLException e) {
-            System.err.println("Database error during representaa insertion: " + e.getMessage());
+            System.err.println("Database error during representaA insertion: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     public static void setRelAutorizado(autorizado authorized, estudiante student) {
-        String sql = "INSERT INTO puederetirar (autorizadoRetiro_ciAutorizado, estudiante_ciEstudiante, parentesco) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO puedeRetirar (autorizadoRetiro_ciAutorizado, estudiante_ciEstudiante, parentesco) VALUES (?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -1082,13 +1096,13 @@ public class connectDB {
             int rowsAffected = pstmt.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Data inserted successfully into puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
+                System.out.println("Data inserted successfully into puedeRetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
             } else {
-                System.out.println("No rows affected. Data insertion failed for puederetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
+                System.out.println("No rows affected. Data insertion failed for puedeRetirar for CI: " + authorized.getCi() + " and Student CE: " + student.getCe());
             }
 
         } catch (SQLException e) {
-            System.err.println("Database error during puederetirar insertion: " + e.getMessage());
+            System.err.println("Database error during puedeRetirar insertion: " + e.getMessage());
             e.printStackTrace();
         } finally {
             if (conexion != null) {
@@ -1103,7 +1117,7 @@ public class connectDB {
     }
 
     public static void setSocioFamiliar(socioFamiliar socioFamiliar){
-        String sql = "INSERT INTO sociofamiliar (" +
+        String sql = "INSERT INTO socioFamiliar (" +
                 "estudiante_ciEstudiante, vivienda, tipoVivienda, cuidaNiñoHogar, estdCivilPadres, " +
                 "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng" +
                 ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -1155,7 +1169,7 @@ public class connectDB {
         String sql = "SELECT estudiante_ciEstudiante, vivienda, tipoVivienda, " +
                 "cuidaNiñoHogar, estdCivilPadres, " +
                 "consultAtend, visitPsicopedagogo, visitPsicologo, visitNeurologo, visitTerapLeng " + // Added
-                "FROM sociofamiliar WHERE estudiante_ciEstudiante = ?";
+                "FROM socioFamiliar WHERE estudiante_ciEstudiante = ?";
 
         try {
             conexion = DriverManager.getConnection(url, user, pass); // Use try-with-resources for connection
@@ -1488,7 +1502,7 @@ public class connectDB {
     public static List<familia> fetchRelFamiliar(String cEstudiante) {
 
         sql = "SELECT estudiante_ciEstudiante, nombre, apellido, edad, parentezco, ocupacion " +
-                "FROM `familiaresextra` WHERE estudiante_ciEstudiante = \"" + cEstudiante + "\"";
+                "FROM `familiaresExtra` WHERE estudiante_ciEstudiante = \"" + cEstudiante + "\"";
         List<familia> fams = null;
 
         try {
@@ -1533,7 +1547,7 @@ public class connectDB {
 
     public static void setFamilia(familia familia, estudiante estudiante) {
         // SQL INSERT statement for 'familiares extra' table
-        String sql = "INSERT INTO familiaresextra (" +
+        String sql = "INSERT INTO familiaresExtra (" +
                 "nombre, apellido, edad, parentezco, ocupacion, estudiante_ciEstudiante) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -1567,7 +1581,7 @@ public class connectDB {
     public static List<representaA> fetchRelRepresentante(String ciEst) {
 
         List<representaA> representantes = new ArrayList<>();
-        String sql = "SELECT * FROM representaa WHERE estudiante_ciEstudiante = ?";
+        String sql = "SELECT * FROM representaA WHERE estudiante_ciEstudiante = ?";
 
         try (Connection conexion = DriverManager.getConnection(url, user, pass);
              PreparedStatement pstmt = conexion.prepareStatement(sql)) {
@@ -1603,7 +1617,7 @@ public class connectDB {
 
     public static List<retiraA> fetchRelAutorizado(String ciEstudiante) {
 
-        sql = "SELECT * FROM puederetirar WHERE estudiante_ciEstudiante =" + "\"" + ciEstudiante + "\"";
+        sql = "SELECT * FROM puedeRetirar WHERE estudiante_ciEstudiante =" + "\"" + ciEstudiante + "\"";
         List<retiraA> rets = null;
 
         try {
