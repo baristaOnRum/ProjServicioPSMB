@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jpackage" name="servProj3">
+    <output-path>$PROJECT_DIR$/out/artifacts/servProj3</output-path>
+    <root id="root">
+      <element id="archive" name="servProj3.jar">
+        <element id="module-output" name="servProj3" />
+      </element>
+    </root>
+  </artifact>
+</component>

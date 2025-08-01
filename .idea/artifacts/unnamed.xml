@@ -1,0 +1,49 @@
+<component name="ArtifactManager">
+  <artifact name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+    <root id="root">
+      <element id="directory" name="folder">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="docx4j.JAXB.MOXy" />
+          <element id="library" level="project" name="javax.xml.bind.jaxb.api" />
+          <element id="library" level="project" name="jcalendar-1.4" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: com.google.errorprone:error_prone_annotations:2.3.3" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:4.29.0" />
+          <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:9.3.0" />
+          <element id="library" level="project" name="Maven: com.thoughtworks.qdox:qdox:1.12" />
+          <element id="library" level="project" name="Maven: com.toedter:jcalendar:1.4" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.16.0" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.15.1" />
+          <element id="library" level="project" name="Maven: javax.mail:javax.mail-api:1.6.2" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.0" />
+          <element id="library" level="project" name="Maven: net.arnx:wmf2svg:0.9.11" />
+          <element id="library" level="project" name="Maven: net.engio:mbassador:1.3.2" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr-runtime:3.5.3" />
+          <element id="library" level="project" name="Maven: org.antlr:stringtemplate:3.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-compress:1.27.1" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.14.0" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:2.0.30" />
+          <element id="library" level="project" name="Maven: org.apache.xmlgraphics:xmlgraphics-commons:2.9" />
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:2.8.1" />
+          <element id="library" level="project" name="Maven: org.docx4j.org.apache:xalan-interpretive:8.0.0" />
+          <element id="library" level="project" name="Maven: org.docx4j.org.apache:xalan-metainf:8.0.0" />
+          <element id="library" level="project" name="Maven: org.docx4j.org.apache:xalan-serializer:8.0.0" />
+          <element id="library" level="project" name="Maven: org.docx4j:docx4j-core:8.3.14" />
+          <element id="library" level="project" name="Maven: org.docx4j:docx4j-JAXB-MOXy:8.3.14" />
+          <element id="library" level="project" name="Maven: org.docx4j:docx4j-openxml-objects-pml:8.3.14" />
+          <element id="library" level="project" name="Maven: org.docx4j:docx4j-openxml-objects-sml:8.3.14" />
+          <element id="library" level="project" name="Maven: org.docx4j:docx4j-openxml-objects:8.3.14" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.7.4" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.7.4" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.moxy:2.7.4" />
+          <element id="library" level="project" name="Maven: org.plutext:jaxb-svg11:1.0.2" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:2.0.12" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.13" />
+          <element id="library" level="project" name="slf4j.simple" />
+        </element>
+        <element id="module-output" name="servProj3" />
+      </element>
+    </root>
+  </artifact>
+</component>

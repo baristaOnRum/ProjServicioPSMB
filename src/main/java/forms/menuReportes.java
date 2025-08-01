@@ -6,14 +6,18 @@ package forms;
 import subsystems.docGen;
 import subsystems.individuos.*;
 import java.time.LocalDate;
+import java.util.List;
+import subsystems.connectDB;
 
 public class menuReportes extends javax.swing.JDialog {
     
-    String cedulaEst;
+    estudiante Est;
     
-    public menuReportes(java.awt.Frame parent, boolean modal, String ciEst) {
+    public menuReportes(java.awt.Frame parent, boolean modal, estudiante estEst) {
         super(parent, modal);
-        cedulaEst = ciEst; 
+        Est = estEst;
+        txt_persReporte.setText(Est.getNombres() + " " +Est.getApellidos());
+        txt_ciPersReporte.setText(Est.getCe());
         initComponents();
     }
 
@@ -573,25 +577,23 @@ public class menuReportes extends javax.swing.JDialog {
 
     private void btn_estudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_estudioActionPerformed
         String ce = txt_ciPersReporte.getText().trim();
-        estudiante est = new estudiante();
-        est.setCe(ce);
+        estudiante est = Est;
         docGen.generarConstanciaEstudios(est, txt_direcEstdio.getText().trim(), txt_lapso.getText().trim(), txt_finLapso.getText().trim(), chk_maternalEstdio.isSelected());
     }//GEN-LAST:event_btn_estudioActionPerformed
 
     private void btn_retiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_retiroActionPerformed
         String ce = txt_ciPersReporte.getText().trim();
         int ci = Integer.parseInt(txt_repRet.getText().trim());
-        estudiante est = new estudiante();
-        est.setCe(ce);
-        representante rep = new representante();
+        estudiante est = Est;
+        List<representaA> repAs = connectDB.fetchRelRepresentante(est.getCe());
+        representante rep = connectDB.fetchRepresentante(repAs.getFirst().getRepresentante_ciRepresentante());
         rep.setCi(ci);
         docGen.generarConstanciaRetiro(est, rep, txt_direcRet.getText().trim());
     }//GEN-LAST:event_btn_retiroActionPerformed
 
     private void btn_conductaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_conductaActionPerformed
         String ce = txt_ciPersReporte.getText().trim();
-        estudiante est = new estudiante();
-        est.setCe(ce);
+        estudiante est = Est;
         
         Boolean maternal;
         if(chk_maternal.isEnabled()){

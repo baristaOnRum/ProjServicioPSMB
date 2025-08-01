@@ -5937,7 +5937,8 @@ public void createConfPanel(){
         String ci;
         try {
             ci = (String) tbl_busqEstd.getValueAt(tbl_busqEstd.getSelectedRow(),0);
-            menuReportes report = new menuReportes(this, true, ci);
+            estudiante est = connectDB.fetchEstudiante(ci);
+            menuReportes report = new menuReportes(this, true, est);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error seleccionando Cédula Estudiantil. Seleccione una cédula en la tabla", "Cédula no encontrada", JOptionPane.WARNING_MESSAGE);
         }
